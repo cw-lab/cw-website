@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<title>輸入框 Text-field／元件 Components｜《天下雜誌》網站設計系統 (Web Design System)</title>
+		<!--
+				天下CSS: main.css
+				Design System: style.css
+		-->
+		<link rel="stylesheet" href="../assets/css/main.css">
+		<link rel="stylesheet" href="../assets/css/style.css">
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<section>
+				<div class="container">
+					<div class="flex">
+						<div class="select-side">
+							<ul class="menu list-reset componentsList"></ul>
+						</div>
+						<div class="content-side">
+							<div class="flex">
+								<div class="col col-2-3">
+									<h1>
+										輸入框 Text-field
+									</h1>
+									<p>
+										使用者可以在輸入框中輸入或編輯多種文本格式，包括數字。
+									</p>
+								</div>
+							</div>
+							<hr>
+							<h2>
+								Filled text fields
+							</h2>
+							<div class="flex">
+								<div class="col col-1-3">
+									<h3>Default</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default">
+										</div>
+									</form>
+									<h3>Disabled</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" disabled="disabled">
+										</div>
+									</form>
+									<h3>Helper text</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled">
+											<label for="#!" class="label">請輸入 e-mail*</label>
+											<input type="email" class="form__group__input form__group__input--default">
+											<i class="form__group__help">* 此為必填欄位</i>
+										</div>
+									</form>
+									<h3>Character counter</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled form__group--countletter">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" maxlength="30">
+											<i class="form__group__help text-right"><span>0</span>/30</i>
+										</div>
+									</form>
+								</div>
+								<div class="col col-1-3">
+									<h3>Password</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled form__group--hasicon">
+											<label for="#!" class="label">請輸入密碼</label>
+											<input type="password" class="form__group__input form__group__input--default">
+											<i class="form__group__icon icon icon-eyeoff"></i>
+										</div>
+									</form>
+									<h3>Correct</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled form__group--hasicon form__group--correct">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+											<i class="form__group__icon icon icon-check-circle"></i>
+										</div>
+									</form>
+									<h3>Error</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--filled form__group--hasicon form__group--error">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+											<i class="form__group form__group--filled__icon icon icon-exclamation-circle"></i>
+											<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+										</div>
+									</form>
+									<h3>Dropdown</h3>
+									<form action="#!" class="form">
+										<div class="select__group select__group--filled">
+											<select>
+												<option class="select__group__item" selected>請選擇</option>
+												<option class="select__group__item" value="1">假字假字</option>
+												<option class="select__group__item" value="2">假字假</option>
+												<option class="select__group__item" value="3">假字</option>
+												<option class="select__group__item" value="4">假字假</option>
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+							<hr>
+							<h2>
+								Outlined text fields
+							</h2>
+							<div class="flex">
+								<div class="col col-1-3">
+									<h3>Default</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default">
+										</div>
+									</form>
+									<h3>Disabled</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--disabled" disabled="disabled">
+										</div>
+									</form>
+									<h3>Helper text</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined">
+											<label for="#!" class="label">請輸入 e-mail*</label>
+											<input type="email" class="form__group__input form__group__input--default">
+											<i class="form__group__help">* 此為必填欄位</i>
+										</div>
+									</form>
+									<h3>Character counter</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined form__group--countletter">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" maxlength="30">
+											<i class="form__group__help text-right"><span>0</span>/30</i>
+										</div>
+									</form>
+								</div>
+								<div class="col col-1-3">
+									<h3>Password</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined form__group--hasicon">
+											<label for="#!" class="label">請輸入密碼</label>
+											<input type="password" class="form__group__input form__group__input--default">
+											<i class="form__group__icon icon icon-eyeoff"></i>
+										</div>
+									</form>
+									<h3>Correct</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined form__group--hasicon form__group--correct">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+											<i class="form__group__icon icon icon-check-circle"></i>
+										</div>
+									</form>
+									<h3>Error</h3>
+									<form action="#!" class="form">
+										<div class="form__group form__group--outlined form__group--hasicon form__group--error">
+											<label for="#!" class="label">請輸入 e-mail</label>
+											<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+											<i class="form__group form__group--filled__icon icon icon-exclamation-circle"></i>
+											<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+										</div>
+									</form>
+									<h3>Dropdown</h3>
+									<form action="#!" class="form">
+										<div class="select__group select__group--outlined">
+											<select>
+												<option class="select__group__item" selected>請選擇</option>
+												<option class="select__group__item" value="1">假字假字</option>
+												<option class="select__group__item" value="2">假字假</option>
+												<option class="select__group__item" value="3">假字</option>
+												<option class="select__group__item" value="4">假字假</option>
+											</select>
+										</div>
+									</form>
+								</div>
+							</div>
+							<hr>
+							<h2>如何使用</h2>
+							<div class="flex code--block">
+								<div class="col col-1-3">
+									<h6>HTML</h6>
+									<div class="code--block__text code--block__html">
+										<pre class="bg-white"></pre>
+									</div>
+								</div>
+								<div class="col col-1-3">
+									<h6>SCSS</h6>
+									<div class="code--block__text code--block__css">
+										<pre class="bg-white"></pre>
+									</div>
+								</div>
+								<div class="col col-1-3">
+									<h6>JS</h6>
+									<div class="code--block__text code--block__js">
+										<pre class="bg-white"></pre>
+									</div>
+								</div>
+								<div class="col col-3-3">
+									<h6>畫面</h6>
+									<div class="code code--block__html"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer></footer>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/main.js"></script>
+		<script type="text/javascript" src="../assets/js/style.js"></script>
+	</body>
+</html>

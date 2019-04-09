@@ -417,6 +417,7 @@ section .select-side ul.menu li a > * {
   color: #394148;
   font-size: 18px;
   line-height: 50px;
+  white-space: nowrap;
 }
 @media (min-width: 992px) {
   section .select-side ul.menu li a > * {

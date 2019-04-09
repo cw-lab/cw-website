@@ -680,6 +680,9 @@ form.form .form__group--filled.form__group--correct:hover .label, form.form .for
 form.form .form__group--filled.form__group--correct:hover .form__group__input, form.form .form__group--filled.form__group--correct.hasValue .form__group__input {
   border-color: #006CB0;
 }
+form.form .form__group--filled.form__group--error .form__group__input {
+  color: #D60C18;
+}
 form.form .form__group--filled.form__group--error:hover .label, form.form .form__group--filled.form__group--error.hasValue .label {
   color: #D60C18;
 }
@@ -709,6 +712,9 @@ form.form .form__group--outlined.form__group--correct:hover .label, form.form .f
 form.form .form__group--outlined.form__group--correct:hover .form__group__input, form.form .form__group--outlined.form__group--correct.hasValue .form__group__input {
   border-color: #006CB0;
 }
+form.form .form__group--outlined.form__group--error .form__group__input {
+  color: #D60C18;
+}
 form.form .form__group--outlined.form__group--error:hover .label, form.form .form__group--outlined.form__group--error.hasValue .label {
   color: #D60C18;
 }
@@ -723,7 +729,7 @@ form.form .form__group--defalt:hover .label {
 }
 form.form .form__group--hasicon i.icon {
   position: absolute;
-  top: 1rem;
+  top: 1.25rem;
   right: 1rem;
   font-size: 1rem;
   -moz-transition: all 0.3s;

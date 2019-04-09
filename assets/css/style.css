@@ -364,6 +364,10 @@ header .content-side ul.menu li.now::before {
   background-color: #D60C18;
 }
 
+main {
+  padding-top: 1em;
+}
+
 @media (min-width: 992px) {
   section .select-side {
     padding-right: 30px;
@@ -389,6 +393,10 @@ section .select-side ul.menu li {
   section .select-side ul.menu li {
     padding-left: 35px;
   }
+}
+section .select-side ul.menu li.hr {
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #fcfcfc;
 }
 @media (min-width: 992px) {
   section .select-side ul.menu li + li {

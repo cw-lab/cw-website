@@ -689,8 +689,13 @@ form.form .form__group--filled.form__group--error:hover .form__group__input, for
 form.form .form__group--filled.form__group--hasicon .form__group__input {
   padding: 1.5rem 3rem 0.4rem 1rem;
 }
-form.form .form__group--filled.form__group--hasicon:hover i.icon, form.form .form__group--filled.form__group--hasicon.hasValue i.icon {
+form.form .form__group--filled.form__group--hasicon i.icon {
   top: 1.5rem;
+}
+form.form .form__group--outlined .form__group__input {
+  padding: 1.1rem 1rem 0.7rem;
+  background-color: transparent;
+  border-width: 1px;
 }
 form.form .form__group--outlined.form__group--defalt:hover .label, form.form .form__group--outlined.form__group--defalt.hasValue .label {
   top: -0.8em;
@@ -710,13 +715,8 @@ form.form .form__group--outlined.form__group--error:hover .label, form.form .for
 form.form .form__group--outlined.form__group--error:hover .form__group__input, form.form .form__group--outlined.form__group--error.hasValue .form__group__input {
   border-color: #D60C18;
 }
-form.form .form__group--outlined.form__group--hasicon:hover i.icon, form.form .form__group--outlined.form__group--hasicon.hasValue i.icon {
-  top: 1.3rem;
-}
-form.form .form__group--outlined .form__group__input {
-  padding: 1.1rem 1rem 0.8rem;
-  background-color: transparent;
-  border-width: 1px;
+form.form .form__group--outlined.form__group--hasicon .form__group__input {
+  padding: 1.1rem 3rem 0.7rem 1rem;
 }
 form.form .form__group--defalt:hover .label {
   color: #006CB0;

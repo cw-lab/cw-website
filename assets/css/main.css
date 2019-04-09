@@ -614,6 +614,13 @@ i.icon:before {
   content: "\e907";
 }
 
+input, select {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 input:focus, select:focus {
   outline: 0;
 }
@@ -766,11 +773,6 @@ form.form .select__group select {
   padding: 1rem;
   line-height: 1;
   border: 1px solid;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   cursor: pointer;
 }
 form.form .select__group--filled select {

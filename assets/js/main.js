@@ -19,7 +19,7 @@ $(function(){
 		$(this).siblings('i').children('span').html(this.value.length);
 	});
 	// 是否顯示密碼
-	$('.form__group .icon').click(function () {
+	$('.form__group .icon-eye').click(function () {
 		$(this).siblings('input').attr('type',
 			$(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
 		);

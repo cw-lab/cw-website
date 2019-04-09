@@ -594,7 +594,7 @@ i.icon:before {
   content: "\e902";
 }
 
-.icon-input:before {
+.icon-textfield:before {
   content: "\e903";
 }
 
@@ -663,9 +663,21 @@ form.form .form__group--filled .form__group__input {
   background-color: #EEEEEE;
   border-width: 0px 0px 1px;
 }
-form.form .form__group--filled:hover .label, form.form .form__group--filled.hasValue .label {
+form.form .form__group--filled.form__group--defalt:hover .label, form.form .form__group--filled.form__group--defalt.hasValue .label {
   top: 0.2em;
   font-size: 12px;
+}
+form.form .form__group--filled.form__group--correct:hover .label, form.form .form__group--filled.form__group--correct.hasValue .label {
+  color: #006CB0;
+}
+form.form .form__group--filled.form__group--correct:hover .form__group__input, form.form .form__group--filled.form__group--correct.hasValue .form__group__input {
+  border-color: #006CB0;
+}
+form.form .form__group--filled.form__group--error:hover .label, form.form .form__group--filled.form__group--error.hasValue .label {
+  color: #D60C18;
+}
+form.form .form__group--filled.form__group--error:hover .form__group__input, form.form .form__group--filled.form__group--error.hasValue .form__group__input {
+  border-color: #D60C18;
 }
 form.form .form__group--filled.form__group--hasicon .form__group__input {
   padding: 1.5rem 3rem 0.4rem 1rem;
@@ -673,28 +685,34 @@ form.form .form__group--filled.form__group--hasicon .form__group__input {
 form.form .form__group--filled.form__group--hasicon:hover i.icon, form.form .form__group--filled.form__group--hasicon.hasValue i.icon {
   top: 1.5rem;
 }
-form.form .form__group--outlined .form__group__input {
-  padding: 1.1rem 1rem 0.8rem;
-  background-color: transparent;
-  border-width: 1px;
-}
-form.form .form__group--outlined:hover .label, form.form .form__group--outlined.hasValue .label {
+form.form .form__group--outlined.form__group--defalt:hover .label, form.form .form__group--outlined.form__group--defalt.hasValue .label {
   top: -0.8em;
   padding: 0 2px;
   font-size: 12px;
   background-color: #fff;
 }
+form.form .form__group--outlined.form__group--correct:hover .label, form.form .form__group--outlined.form__group--correct.hasValue .label {
+  color: #006CB0;
+}
+form.form .form__group--outlined.form__group--correct:hover .form__group__input, form.form .form__group--outlined.form__group--correct.hasValue .form__group__input {
+  border-color: #006CB0;
+}
+form.form .form__group--outlined.form__group--error:hover .label, form.form .form__group--outlined.form__group--error.hasValue .label {
+  color: #D60C18;
+}
+form.form .form__group--outlined.form__group--error:hover .form__group__input, form.form .form__group--outlined.form__group--error.hasValue .form__group__input {
+  border-color: #D60C18;
+}
 form.form .form__group--outlined.form__group--hasicon:hover i.icon, form.form .form__group--outlined.form__group--hasicon.hasValue i.icon {
   top: 1.3rem;
 }
+form.form .form__group--outlined .form__group__input {
+  padding: 1.1rem 1rem 0.8rem;
+  background-color: transparent;
+  border-width: 1px;
+}
 form.form .form__group--defalt:hover .label {
   color: #006CB0;
-}
-form.form .form__group--correct .label, form.form .form__group--correct .icon {
-  color: #006CB0;
-}
-form.form .form__group--correct input {
-  border-color: #006CB0;
 }
 form.form .form__group--hasicon i.icon {
   position: absolute;
@@ -705,6 +723,12 @@ form.form .form__group--hasicon i.icon {
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+form.form .form__group--correct .label, form.form .form__group--correct .icon {
+  color: #006CB0;
+}
+form.form .form__group--correct input {
+  border-color: #006CB0;
 }
 form.form .form__group--error .label, form.form .form__group--error .icon, form.form .form__group--error .form__group__help {
   color: #D60C18;
@@ -765,12 +789,11 @@ form.form .select__group--outlined select {
   background-color: #fff;
 }
 form.form .select__group--outlined:hover::before {
-  color: #fff;
+  color: #006CB0;
 }
 form.form .select__group--outlined:hover select {
-  color: #fff;
+  color: #006CB0;
   border-color: #006CB0;
-  background-color: #006CB0;
 }
 
 .flex {

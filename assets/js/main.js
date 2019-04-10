@@ -17,7 +17,7 @@ $(function(){
 		}
 	});
 	// 統計字數
-	$('.form__group__help--count input').keyup(function() {
+	$('.form__group--countletter input').keyup(function() {
 		$(this).siblings('i').children('span').html(this.value.length);
 	});
 	// 是否顯示密碼

@@ -15,7 +15,7 @@ $(function(){
 		}
 	});
 	// 統計字數
-	$('.form__group--countletter input').keyup(function() {
+	$('.form__group__help--count input').keyup(function() {
 		$(this).siblings('i').children('span').html(this.value.length);
 	});
 	// 是否顯示密碼
@@ -27,4 +27,11 @@ $(function(){
 	});
 	$("input").parent().addClass('form__group--defalt');
 	$("input[disabled*='disabled']").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+	// tabs
+	$(".tab__nav > ul li").click(function () {
+		var tabsIndex = $(this).index();
+		$(this).addClass('active').siblings('.active').removeClass('active');
+		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
+		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
+	});
 });

@@ -232,21 +232,13 @@ th {
 }
 
 html {
-  /* Load system fonts */
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
-  /* Make type rendering look crisper */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Disable auto-enlargement of small text in Safari */
   text-size-adjust: 100%;
-  /* Enable kerning and optional ligatures */
   text-rendering: optimizeLegibility;
 }
 
-/**
- * Form elements render using OS defaults,
- * so font-family inheritance must be specifically declared
- */
 button, input, optgroup, select, textarea {
   font-family: inherit;
 }
@@ -285,6 +277,14 @@ a {
 
 img {
   display: block;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .bg-red-100 {
@@ -335,18 +335,6 @@ img {
 .bg-gray-500 {
   color: #fff;
   background-color: #48545D;
-}
-
-.bg-white {
-  color: #394148;
-  background-color: #fff;
-  border: 1px solid #D3D5D7;
-}
-
-.bg-black {
-  color: #fff;
-  background-color: #394148;
-  border: 1px solid #394148;
 }
 
 .bg-surface {
@@ -646,10 +634,10 @@ form.form .form__group .label {
 form.form .form__group .form__group__input {
   min-width: 280px;
   color: #006CB0;
-  -moz-text-fill-color: #394148;
-  -ms-text-fill-color: #394148;
-  -webkit-text-fill-color: #394148;
-  text-fill-color: #394148;
+  -moz-text-fill-color: #171717;
+  -ms-text-fill-color: #171717;
+  -webkit-text-fill-color: #171717;
+  text-fill-color: #171717;
   border-style: solid;
   border-color: #939EA7;
 }
@@ -804,12 +792,39 @@ form.form .select__group--outlined:hover select {
   border-color: #006CB0;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.tab__nav {
+  border: 1px solid #D3D5D7;
+}
+.tab__nav > ul {
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  margin: -1px;
+}
+.tab__nav > ul li {
+  position: relative;
+  display: flex;
+  width: calc(100% / 5);
+  padding: 5px 25px;
+  line-height: 2.6rem;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+.tab__nav > ul li:hover {
+  color: #D60C18;
+}
+.tab__nav > ul li:active {
+  color: #9D0505;
+}
+.tab__nav > ul li.active {
+  color: #D60C18;
+  border-color: #D60C18;
+}
+.tab__content__pane {
+  display: none;
+}
+.tab__content__pane.active {
+  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

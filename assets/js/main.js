@@ -37,9 +37,18 @@ $(function(){
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
 	});
 	// 當裝置大於等於768時，將tab__nav寬度設為等份
-	if (width >= 768) {
+	function tabNavWidth (width){
 		$(".tab__nav > ul").each(function(){
-			$(this).children("li").css( "width", (100 / $(this).children("li").length) + "%" );
+			if (width >= 768) {
+				$(this).children("li").css( "width", (100 / $(this).children("li").length) + "%" );
+			} else {
+				$(this).children("li").css( "width", "" );
+			}
 		});
 	}
+	tabNavWidth (width);
+	$(window).resize(function(width) {
+		var width = $(window).width();
+		tabNavWidth (width);
+	})
 });

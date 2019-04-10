@@ -273,6 +273,11 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+@media (max-width: 374px) {
+  section > .container {
+    padding: 0;
+  }
+}
 @media (min-width: 992px) {
   section .select-side {
     padding-right: 30px;
@@ -285,9 +290,14 @@ h1, h2, h3, h4, h5, h6, p {
 }
 section .select-side a.logo {
   display: block;
-  padding: 1rem 0;
+  padding: 1rem;
   color: #394148;
   font-size: 24px;
+}
+@media (min-width: 375px) {
+  section .select-side a.logo {
+    padding: 1rem 0;
+  }
 }
 @media (min-width: 992px) {
   section .select-side a.logo {
@@ -386,9 +396,14 @@ section .select-side ul.menu ul li a:hover, section .select-side ul.menu ul li a
   color: #D60C18;
 }
 section .content-side {
-  padding: 30px;
+  padding: 15px;
   background-color: #fff;
   border: 1px solid #EEEEEE;
+}
+@media (min-width: 375px) {
+  section .content-side {
+    padding: 30px;
+  }
 }
 @media (min-width: 1200px) {
   section .content-side {

@@ -793,16 +793,35 @@ form.form .select__group--outlined:hover select {
 }
 
 .tab__nav {
-  border: 1px solid #D3D5D7;
+  border: solid #D3D5D7;
+  border-width: 1px 1px 0;
+}
+@media (min-width: 768px) {
+  .tab__nav {
+    border-width: 1px;
+  }
+}
+@media (max-width: 767px) {
+  .tab__nav {
+    overflow: scroll;
+  }
 }
 .tab__nav > ul {
   display: flex;
-  margin: -1px;
+}
+@media (min-width: 768px) {
+  .tab__nav > ul {
+    margin: -1px;
+  }
+}
+@media (max-width: 767px) {
+  .tab__nav > ul {
+    padding-left: 50px;
+  }
 }
 .tab__nav > ul li {
   position: relative;
   display: flex;
-  width: calc(100% / 5);
   padding: 5px 25px;
   line-height: 2.6rem;
   justify-content: center;

@@ -267,10 +267,6 @@ h1, h2, h3, h4, h5, h6, p {
   width: 100%;
 }
 
-main {
-  padding-top: 1em;
-}
-
 @media (min-width: 992px) {
   section .select-side {
     padding-right: 30px;
@@ -283,6 +279,7 @@ main {
 }
 section .select-side a.logo {
   display: block;
+  padding: 1rem 0;
   color: #394148;
   font-size: 24px;
 }
@@ -295,10 +292,7 @@ section .select-side a.logo {
 }
 @media (max-width: 991px) {
   section .select-side ul.menu {
-    display: flex;
-    overflow: scroll;
-    padding-left: 30px;
-    padding-right: 30px;
+    display: none;
   }
 }
 section .select-side ul.menu > li {

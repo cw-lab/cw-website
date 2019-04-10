@@ -1,4 +1,6 @@
 $(function(){
+	var width = $(window).width(),
+		height = $(window).height();
 	// 判斷有沒有值
 	$("input").on('change keyup copy paste cut', function(){
 		if(!this.value) {
@@ -34,4 +36,10 @@ $(function(){
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
 	});
+	// 當裝置大於等於768時，將tab__nav寬度設為等份
+	if (width >= 768) {
+		$(".tab__nav > ul").each(function(){
+			$(this).children("li").css( "width", (100 / $(this).children("li").length) + "%" );
+		});
+	}
 });

@@ -268,6 +268,12 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 @media (min-width: 992px) {
+  main {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 992px) {
   section .select-side {
     padding-right: 30px;
   }

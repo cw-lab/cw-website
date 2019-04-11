@@ -494,7 +494,11 @@ section .content-side .color-bar li {
 }
 section .content-side .tab__content__pane {
   width: 100%;
-  flex-direction: column;
+}
+@media (max-width: 767px) {
+  section .content-side .tab__content__pane {
+    flex-direction: column;
+  }
 }
 section .content-side .tab__content__pane.active {
   display: flex;

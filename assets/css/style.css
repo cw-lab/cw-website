@@ -494,12 +494,18 @@ section .content-side .color-bar li {
 }
 section .content-side .tab__content__pane {
   width: 100%;
+  flex-direction: column;
 }
 section .content-side .tab__content__pane.active {
   display: flex;
 }
 section .content-side .tab__content__pane .code__block--text {
-  width: 33.333333333%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  section .content-side .tab__content__pane .code__block--text {
+    width: 33.333333333%;
+  }
 }
 section .content-side .tab__content__pane .code__block--text + .code__block--text {
   border-left: 1px solid #fff;

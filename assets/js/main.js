@@ -36,7 +36,7 @@ $(function(){
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
 	});
-	// 當裝置大於等於768時，將tab__nav寬度設為等份
+	// 當裝置大於等於768時，將tab__nav寬度設為等分
 	function tabNavWidth (width){
 		$(".tab__nav > ul").each(function(){
 			if (width >= 768) {

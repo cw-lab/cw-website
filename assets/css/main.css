@@ -279,6 +279,16 @@ img {
   display: block;
 }
 
+button.btn::before, button.btn::after {
+  content: '';
+  display: block;
+}
+
+button.btn::before, button.btn::after {
+  content: '';
+  display: block;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -616,11 +626,15 @@ input:focus, select:focus {
 form.form .form__group {
   position: relative;
   display: table;
+  width: 280px;
 }
 form.form .form__group > * {
   display: block;
 }
 form.form .form__group .label {
+  position: relative;
+}
+form.form .form__group .form__group__placeholder {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -658,29 +672,29 @@ form.form .form__group--filled .form__group__input {
   background-color: #EEEEEE;
   border-width: 0px 0px 1px;
 }
-form.form .form__group--filled.form__group--defalt:hover .label, form.form .form__group--filled.form__group--defalt.hasValue .label {
+form.form .form__group--filled .form__group--defalt:hover .form__group__placeholder, form.form .form__group--filled .form__group--defalt.hasValue .form__group__placeholder {
   top: 0.2em;
   font-size: 12px;
 }
-form.form .form__group--filled.form__group--correct:hover .label, form.form .form__group--filled.form__group--correct.hasValue .label {
+form.form .form__group--filled .form__group--correct:hover .form__group__placeholder, form.form .form__group--filled .form__group--correct.hasValue .form__group__placeholder {
   color: #006CB0;
 }
-form.form .form__group--filled.form__group--correct:hover .form__group__input, form.form .form__group--filled.form__group--correct.hasValue .form__group__input {
+form.form .form__group--filled .form__group--correct:hover .form__group__input, form.form .form__group--filled .form__group--correct.hasValue .form__group__input {
   border-color: #006CB0;
 }
-form.form .form__group--filled.form__group--error .form__group__input {
+form.form .form__group--filled .form__group--error .form__group__input {
   color: #D60C18;
 }
-form.form .form__group--filled.form__group--error:hover .label, form.form .form__group--filled.form__group--error.hasValue .label {
+form.form .form__group--filled .form__group--error:hover .form__group__placeholder, form.form .form__group--filled .form__group--error.hasValue .form__group__placeholder {
   color: #D60C18;
 }
-form.form .form__group--filled.form__group--error:hover .form__group__input, form.form .form__group--filled.form__group--error.hasValue .form__group__input {
+form.form .form__group--filled .form__group--error:hover .form__group__input, form.form .form__group--filled .form__group--error.hasValue .form__group__input {
   border-color: #D60C18;
 }
-form.form .form__group--filled.form__group--hasicon .form__group__input {
+form.form .form__group--filled .form__group--hasicon .form__group__input {
   padding: 1.5rem 3rem 0.4rem 1rem;
 }
-form.form .form__group--filled.form__group--hasicon i.icon {
+form.form .form__group--filled .form__group--hasicon i.icon {
   top: 1.5rem;
 }
 form.form .form__group--outlined .form__group__input {
@@ -688,31 +702,22 @@ form.form .form__group--outlined .form__group__input {
   background-color: transparent;
   border-width: 1px;
 }
-form.form .form__group--outlined.form__group--defalt:hover .label, form.form .form__group--outlined.form__group--defalt.hasValue .label {
+form.form .form__group--outlined .form__group--defalt:hover .form__group__placeholder, form.form .form__group--outlined .form__group--defalt.hasValue .form__group__placeholder {
   top: -0.8em;
   padding: 0 2px;
   font-size: 12px;
   background-color: #fff;
 }
-form.form .form__group--outlined.form__group--correct:hover .label, form.form .form__group--outlined.form__group--correct.hasValue .label {
+form.form .form__group--outlined .form__group--correct:hover .form__group__placeholder, form.form .form__group--outlined .form__group--correct.hasValue .form__group__placeholder {
   color: #006CB0;
 }
-form.form .form__group--outlined.form__group--correct:hover .form__group__input, form.form .form__group--outlined.form__group--correct.hasValue .form__group__input {
+form.form .form__group--outlined .form__group--correct:hover .form__group__input, form.form .form__group--outlined .form__group--correct.hasValue .form__group__input {
   border-color: #006CB0;
 }
-form.form .form__group--outlined.form__group--error .form__group__input {
-  color: #D60C18;
-}
-form.form .form__group--outlined.form__group--error:hover .label, form.form .form__group--outlined.form__group--error.hasValue .label {
-  color: #D60C18;
-}
-form.form .form__group--outlined.form__group--error:hover .form__group__input, form.form .form__group--outlined.form__group--error.hasValue .form__group__input {
-  border-color: #D60C18;
-}
-form.form .form__group--outlined.form__group--hasicon .form__group__input {
+form.form .form__group--outlined .form__group--hasicon .form__group__input {
   padding: 1.1rem 3rem 0.7rem 1rem;
 }
-form.form .form__group--defalt:hover .label {
+form.form .form__group--defalt:hover .form__group__placeholder {
   color: #006CB0;
 }
 form.form .form__group--hasicon i.icon {
@@ -725,17 +730,18 @@ form.form .form__group--hasicon i.icon {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-form.form .form__group--correct .label, form.form .form__group--correct .icon {
+form.form .form__group--correct .form__group__placeholder, form.form .form__group--correct .icon {
   color: #006CB0;
 }
-form.form .form__group--correct input {
+form.form .form__group--correct .form__group__input {
   border-color: #006CB0;
 }
-form.form .form__group--error .label, form.form .form__group--error .icon, form.form .form__group--error .form__group__help {
-  color: #D60C18;
+form.form .form__group--error .form__group__placeholder, form.form .form__group--error .icon, form.form .form__group--error .form__group__help {
+  color: #D60C18 !important;
 }
-form.form .form__group--error input {
-  border-color: #D60C18;
+form.form .form__group--error .form__group__input {
+  color: #D60C18;
+  border-color: #D60C18 !important;
 }
 form.form .form__group--disabled > * {
   cursor: not-allowed;
@@ -790,6 +796,130 @@ form.form .select__group--outlined:hover::before {
 form.form .select__group--outlined:hover select {
   color: #006CB0;
   border-color: #006CB0;
+}
+
+button {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+button:focus {
+  outline: 0;
+}
+button[disabled*='disabled'] {
+  cursor: not-allowed;
+}
+button.btn {
+  position: relative;
+  display: block;
+  min-width: 144px;
+  padding: 0 1rem;
+  line-height: 3rem;
+  background-color: transparent;
+  overflow: hidden;
+}
+button.btn::before, button.btn::after {
+  position: absolute;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: -1;
+}
+button.btn::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+button.btn::after {
+  left: 50%;
+  top: 50%;
+  padding: 55%;
+  width: 32px;
+  height: 32px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -moz-transition: opacity 2s, -moz-transform 0.5s;
+  -o-transition: opacity 2s, -o-transform 0.5s;
+  -webkit-transition: opacity 2s, -webkit-transform 0.5s;
+  transition: opacity 2s, transform 0.5s;
+}
+button.btn:hover::before {
+  opacity: 0.04;
+}
+button.btn:hover:focus::before {
+  opacity: 0.16;
+}
+button.btn:focus::before {
+  opacity: 0.12;
+}
+button.btn:active::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0s;
+}
+button.btn:disabled {
+  background-color: transparent;
+  cursor: initial;
+}
+button.btn:disabled::before {
+  opacity: 0;
+}
+button.btn:disabled::after {
+  opacity: 0;
+}
+button.btn--outlined {
+  color: #006CB0;
+  border: 1px solid #006CB0;
+  z-index: 1;
+}
+button.btn--outlined::-moz-focus-inner {
+  border: none;
+}
+button.btn--outlined:hover {
+  color: #9D0505;
+  border-color: #9D0505;
+}
+button.btn--outlined::before {
+  background-color: #FEEBEC;
+}
+button.btn--outlined::after {
+  background-color: #FEEBEC;
+}
+button.btn--contained {
+  color: #fff;
+  background-color: #006CB0;
+  border: 1px solid #006CB0;
+  z-index: 1;
+}
+button.btn--contained::-moz-focus-inner {
+  border: none;
+}
+button.btn--contained:hover {
+  background-color: #9D0505;
+  border-color: #9D0505;
+}
+button.btn--contained::before {
+  background-color: #D60C18;
+}
+button.btn--contained::after {
+  background-color: #D60C18;
+}
+button.btn[disabled*='disabled'] {
+  color: #fff;
+  background: #D3D5D7;
+  border: 1px solid #D3D5D7;
+  cursor: not-allowed;
 }
 
 .tab__nav {

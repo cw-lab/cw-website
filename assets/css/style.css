@@ -426,6 +426,64 @@ section .content-side hr {
 section .content-side > .flex {
   margin-bottom: 50px;
 }
+section .content-side .spec--highlight {
+  position: relative;
+  padding-left: 20px;
+}
+section .content-side .spec--highlight span.detail {
+  position: absolute;
+  display: block;
+  min-width: 13px;
+  color: #D60C18;
+  font-size: 12px;
+  letter-spacing: -0.025rem;
+  border: dashed #939EA7;
+  z-index: 3;
+}
+section .content-side .spec--highlight span.detail i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-style: normal;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+section .content-side .spec--highlight span.detail.height {
+  top: 0;
+  left: 0;
+  border-width: 1px 0;
+}
+section .content-side .spec--highlight span.detail.helperSpace {
+  left: 50%;
+  border-width: 1px 0;
+}
+section .content-side .spec--highlight span.detail.helperSpace i {
+  left: 100%;
+  margin-left: 5px;
+}
+section .content-side .spec--highlight span.detail[class*='space'] {
+  border-width: 0 1px;
+}
+section .content-side .spec--highlight span.detail.space {
+  top: 50%;
+  left: 21px;
+  margin-top: -13px;
+}
+section .content-side .spec--highlight span.detail.space-0 {
+  margin-top: -8px;
+}
+section .content-side .spec--highlight span.detail.space-1 {
+  top: 50%;
+  right: 23px;
+  margin-top: -8px;
+}
+section .content-side .spec--highlight span.detail.space-2 {
+  top: 50%;
+  right: 1px;
+  margin-top: -8px;
+}
 section .content-side .color-bar {
   margin-bottom: 50px;
 }
@@ -434,12 +492,24 @@ section .content-side .color-bar li {
   justify-content: space-between;
   padding: 15px;
 }
-section .content-side .code--block h6 {
+section .content-side .tab__content__pane {
+  width: 100%;
+}
+section .content-side .tab__content__pane.active {
+  display: flex;
+}
+section .content-side .tab__content__pane .code__block--text {
+  width: 33.333333333%;
+}
+section .content-side .tab__content__pane .code__block--text + .code__block--text {
+  border-left: 1px solid #fff;
+}
+section .content-side .tab__content__pane .code__block h6 {
   margin-left: 10px;
 }
 section .content-side pre {
   width: 100%;
-  overflow-x: hidden;
+  height: 400px;
   padding: 10px;
   margin: 0;
   font-family: monospace;
@@ -448,14 +518,37 @@ section .content-side pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
+  overflow: scroll;
+}
+section .content-side pre span.comment {
+  color: #939EA7;
 }
 section .content-side pre span.highlight {
-  color: #171717;
-  background: #fc0;
+  color: #fc0;
 }
 section .content-side pre span.mis {
-  color: #171717;
-  background: #0ff;
+  color: #0ff;
+}
+section .content-side .direction {
+  display: flex;
+  padding: 10px 0;
+}
+section .content-side .direction li {
+  padding-right: 1em;
+  color: #939EA7;
+  font-size: 13px;
+}
+section .content-side .direction li i {
+  display: inline-block;
+  margin-right: 3px;
+  width: 10px;
+  height: 10px;
+}
+section .content-side .direction li i.highlight {
+  background-color: #fc0;
+}
+section .content-side .direction li i.mis {
+  background-color: #0ff;
 }
 
 footer {

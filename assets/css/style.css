@@ -511,15 +511,22 @@ section .content-side .tab__content__pane .code__block--text {
     width: 33.333333333%;
   }
 }
-section .content-side .tab__content__pane .code__block--text + .code__block--text {
-  border-left: 1px solid #fff;
+@media (max-width: 767px) {
+  section .content-side .tab__content__pane .code__block--text + .code__block--text {
+    border-top: 1px solid #fff;
+  }
+}
+@media (min-width: 768px) {
+  section .content-side .tab__content__pane .code__block--text + .code__block--text {
+    border-left: 1px solid #fff;
+  }
 }
 section .content-side .tab__content__pane .code__block h6 {
   margin-left: 10px;
 }
 section .content-side pre {
   width: 100%;
-  height: 400px;
+  height: 200px;
   padding: 10px;
   margin: 0;
   font-family: monospace;
@@ -529,6 +536,11 @@ section .content-side pre {
   white-space: -o-pre-wrap;
   word-wrap: break-word;
   overflow: scroll;
+}
+@media (min-width: 768px) {
+  section .content-side pre {
+    height: 400px;
+  }
 }
 section .content-side pre span.comment {
   color: #939EA7;

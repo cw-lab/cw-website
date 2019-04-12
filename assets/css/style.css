@@ -325,8 +325,21 @@ section .select-side ul.menu > li.hr {
 }
 @media (min-width: 992px) {
   section .select-side ul.menu > li + li {
-    margin-top: 27px;
+    margin-top: 1rem;
   }
+}
+section .select-side ul.menu > li ul {
+  display: none;
+}
+section .select-side ul.menu > li ul li a {
+  display: block;
+  padding: 5px 0 5px 35px;
+  color: #939EA7;
+  font-size: 1rem;
+  line-height: 25px;
+}
+section .select-side ul.menu > li ul li a:hover, section .select-side ul.menu > li ul li a.active {
+  color: #D60C18;
 }
 section .select-side ul.menu > li a {
   display: flex;
@@ -340,13 +353,14 @@ section .select-side ul.menu > li a {
 }
 section .select-side ul.menu > li a > * {
   color: #394148;
-  font-size: 18px;
-  line-height: 50px;
+  font-size: 14px;
+  line-height: 30px;
   white-space: nowrap;
 }
 @media (min-width: 992px) {
   section .select-side ul.menu > li a > * {
-    line-height: 45px;
+    font-size: 16px;
+    line-height: 40px;
   }
 }
 section .select-side ul.menu > li a > i {
@@ -380,20 +394,8 @@ section .select-side ul.menu > li.now a > * {
     border-bottom: 3px solid #D60C18;
   }
 }
-@media (max-width: 991px) {
-  section .select-side ul.menu ul {
-    display: none;
-  }
-}
-section .select-side ul.menu ul li a {
+section .select-side ul.menu > li.now ul {
   display: block;
-  padding: 5px 0 5px 35px;
-  color: #939EA7;
-  font-size: 1rem;
-  line-height: 25px;
-}
-section .select-side ul.menu ul li a:hover, section .select-side ul.menu ul li a.active {
-  color: #D60C18;
 }
 section .content-side {
   padding: 15px;
@@ -469,7 +471,7 @@ section .content-side .spec--highlight span.detail[class*='space'] {
 section .content-side .spec--highlight span.detail.space {
   top: 50%;
   left: 21px;
-  margin-top: -13px;
+  margin-top: -16px;
 }
 section .content-side .spec--highlight span.detail.space-0 {
   margin-top: -8px;

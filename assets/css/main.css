@@ -544,6 +544,22 @@ i.icon:before {
   content: "\e908";
 }
 
+.icon-menu:before {
+  content: "\e912";
+}
+
+.icon-message:before {
+  content: "\e913";
+}
+
+.icon-selection:before {
+  content: "\e914";
+}
+
+.icon-list:before {
+  content: "\e915";
+}
+
 .icon-caret-down:before {
   content: "\e910";
 }
@@ -626,7 +642,7 @@ input:focus, select:focus {
 form.form .form__group {
   position: relative;
   display: table;
-  width: 280px;
+  max-width: 280px;
 }
 form.form .form__group > * {
   display: block;
@@ -816,7 +832,7 @@ button.btn {
   display: block;
   min-width: 144px;
   padding: 0 1rem;
-  line-height: 3rem;
+  line-height: 2.875rem;
   background-color: transparent;
   overflow: hidden;
 }

@@ -39,27 +39,43 @@
 							<hr>
 							<h2>如何使用</h2>
 							<div class="flex code--block">
-								<div class="col col-1-3">
-									<h6>HTML</h6>
-									<div class="code--block__text code--block__html">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
-								<div class="col col-1-3">
-									<h6>SCSS</h6>
-									<div class="code--block__text code--block__css">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
-								<div class="col col-1-3">
-									<h6>JS</h6>
-									<div class="code--block__text code--block__js">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
 								<div class="col col-3-3">
-									<h6>畫面</h6>
-									<div class="code code--block__html"></div>
+									<div class="tab">
+										<div class="tab__nav">
+											<ul class="list-reset">
+												<li class="active"><span>Default</span></li>
+												<li><span>Disabled</span></li>
+											</ul>
+										</div>
+										<div class="tab__content">
+											<div class="tab__content__pane active">
+												<div class="code__block--text code__block--html bg-black">
+													<pre></pre>
+												</div>
+												<div class="code__block--text code__block--scss bg-black">
+													<pre></pre>
+												</div>
+												<div class="code__block--text code__block--js bg-black">
+													<pre><span class="comment">// 沒有JS </span></pre>
+												</div>
+											</div>
+											<div class="tab__content__pane">
+												<div class="code__block--text code__block--html bg-black">
+													<pre></pre>
+												</div>
+												<div class="code__block--text code__block--scss bg-black">
+													<pre></pre>
+												</div>
+												<div class="code__block--text code__block--js bg-black">
+													<pre><span class="comment">// 沒有JS </span></pre>
+												</div>
+											</div>
+											<ul class="direction list-reset">
+												<li><i class="highlight"></i>前端添加</li>
+												<li><i class="mis"></i>後端判斷</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

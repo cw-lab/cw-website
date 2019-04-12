@@ -34,7 +34,7 @@
 								</div>
 							</div>
 							<hr>
-							<h2 id="filled">
+							<h2>
 								Spec
 							</h2>
 							<div class="flex">
@@ -71,6 +71,7 @@
 									</form>
 								</div>
 							</div>
+              <hr>
 							<h2 id="filled">
 								Filled text fields
 							</h2>
@@ -200,7 +201,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -217,7 +218,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -258,7 +259,7 @@ form {
   &lt;div class="form__group form__group--filled"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">disabled="disabled"</span>&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
@@ -276,7 +277,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -293,7 +294,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -372,7 +373,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -389,7 +390,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -478,7 +479,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -495,7 +496,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -595,7 +596,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -612,7 +613,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -926,7 +927,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -943,7 +944,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -986,7 +987,7 @@ form {
   &lt;div class="form__group form__group--outlined"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">disabled="disabled"</span>&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
     &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
@@ -1004,7 +1005,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -1021,7 +1022,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -1102,7 +1103,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -1119,7 +1120,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -1210,7 +1211,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -1227,7 +1228,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;
@@ -1326,7 +1327,7 @@ form {
     .form__group {
       position: relative;
       display: table;
-      width: 280px;
+      max-width: 280px;
       > * {
         display: block;
       }
@@ -1343,7 +1344,7 @@ form {
           @include transition(all 0.3s);
         }
         &__input {
-          min-width: 280px;
+          min-max-width: 280px;
           color: $surface;
           @include text-fill-color($black);
           border-style: solid;

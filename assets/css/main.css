@@ -349,7 +349,7 @@ button.btn::before, button.btn::after {
 
 .bg-surface {
   color: #fff;
-  background-color: #006CB0;
+  background-color: #00519f;
 }
 
 .bg-primary {
@@ -472,7 +472,7 @@ p {
 }
 
 .summary {
-  color: #006CB0;
+  color: #00519f;
 }
 
 blockquote {
@@ -647,7 +647,7 @@ form.form .form__group .form__group__placeholder {
 }
 form.form .form__group .form__group__input {
   min-width: 280px;
-  color: #006CB0;
+  color: #00519f;
   -moz-text-fill-color: #171717;
   -ms-text-fill-color: #171717;
   -webkit-text-fill-color: #171717;
@@ -656,7 +656,7 @@ form.form .form__group .form__group__input {
   border-color: #939EA7;
 }
 form.form .form__group .form__group__input:focus {
-  border-color: #006CB0;
+  border-color: #00519f;
 }
 form.form .form__group .form__group__help {
   padding-left: 1rem;
@@ -677,10 +677,10 @@ form.form .form__group--filled .form__group--defalt:hover .form__group__placehol
   font-size: 12px;
 }
 form.form .form__group--filled .form__group--correct:hover .form__group__placeholder, form.form .form__group--filled .form__group--correct.hasValue .form__group__placeholder {
-  color: #006CB0;
+  color: #00519f;
 }
 form.form .form__group--filled .form__group--correct:hover .form__group__input, form.form .form__group--filled .form__group--correct.hasValue .form__group__input {
-  border-color: #006CB0;
+  border-color: #00519f;
 }
 form.form .form__group--filled .form__group--error .form__group__input {
   color: #D60C18;
@@ -709,16 +709,16 @@ form.form .form__group--outlined .form__group--defalt:hover .form__group__placeh
   background-color: #fff;
 }
 form.form .form__group--outlined .form__group--correct:hover .form__group__placeholder, form.form .form__group--outlined .form__group--correct.hasValue .form__group__placeholder {
-  color: #006CB0;
+  color: #00519f;
 }
 form.form .form__group--outlined .form__group--correct:hover .form__group__input, form.form .form__group--outlined .form__group--correct.hasValue .form__group__input {
-  border-color: #006CB0;
+  border-color: #00519f;
 }
 form.form .form__group--outlined .form__group--hasicon .form__group__input {
   padding: 1.1rem 3rem 0.7rem 1rem;
 }
 form.form .form__group--defalt:hover .form__group__placeholder {
-  color: #006CB0;
+  color: #00519f;
 }
 form.form .form__group--hasicon i.icon {
   position: absolute;
@@ -731,10 +731,10 @@ form.form .form__group--hasicon i.icon {
   transition: all 0.3s;
 }
 form.form .form__group--correct .form__group__placeholder, form.form .form__group--correct .icon {
-  color: #006CB0;
+  color: #00519f;
 }
 form.form .form__group--correct .form__group__input {
-  border-color: #006CB0;
+  border-color: #00519f;
 }
 form.form .form__group--error .form__group__placeholder, form.form .form__group--error .icon, form.form .form__group--error .form__group__help {
   color: #D60C18 !important;
@@ -784,18 +784,18 @@ form.form .select__group--filled:hover::before {
 }
 form.form .select__group--filled:hover select {
   color: #fff;
-  background-color: #006CB0;
+  background-color: #00519f;
 }
 form.form .select__group--outlined select {
   border-color: #939EA7;
   background-color: #fff;
 }
 form.form .select__group--outlined:hover::before {
-  color: #006CB0;
+  color: #00519f;
 }
 form.form .select__group--outlined:hover select {
-  color: #006CB0;
-  border-color: #006CB0;
+  color: #00519f;
+  border-color: #00519f;
 }
 
 button {
@@ -879,8 +879,8 @@ button.btn:disabled::after {
   opacity: 0;
 }
 button.btn--outlined {
-  color: #006CB0;
-  border: 1px solid #006CB0;
+  color: #00519f;
+  border: 1px solid #00519f;
   z-index: 1;
 }
 button.btn--outlined::-moz-focus-inner {
@@ -898,8 +898,8 @@ button.btn--outlined::after {
 }
 button.btn--contained {
   color: #fff;
-  background-color: #006CB0;
-  border: 1px solid #006CB0;
+  background-color: #00519f;
+  border: 1px solid #00519f;
   z-index: 1;
 }
 button.btn--contained::-moz-focus-inner {

@@ -280,12 +280,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 @media (min-width: 992px) {
   section .select-side {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    bottom: 1rem;
     padding-right: 30px;
-    height: 100vh;
   }
 }
 @media (min-width: 1630px) {

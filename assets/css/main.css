@@ -919,6 +919,7 @@ form.form .form__group .form__group__input:focus {
   border-color: #00519f;
 }
 form.form .form__group .form__group__help {
+  display: block;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-top: 5px;

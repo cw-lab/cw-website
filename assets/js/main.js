@@ -47,6 +47,10 @@ $(function(){
 		});
 	}
 	tabNavWidth (width);
+	$(".hamburger").click(function(event) {
+		event.stopPropagation();
+		$(this).toggleClass("opened");
+	});
 	$(window).resize(function(width) {
 		var width = $(window).width();
 		tabNavWidth (width);

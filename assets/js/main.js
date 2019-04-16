@@ -47,6 +47,12 @@ $(function(){
 		});
 	}
 	tabNavWidth (width);
+	// 當tooltips大於等於15字
+	$(".tooltips").each(function(){
+		if ($(this).data("tooltips").length >= 15 ) {
+			$(this).addClass("tooltips-wrap");
+		}
+	});
 	$(".hamburger").click(function(event) {
 		event.stopPropagation();
 		$(this).toggleClass("opened");

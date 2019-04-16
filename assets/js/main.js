@@ -57,10 +57,10 @@ $(function(){
 		event.stopPropagation();
 		$(this).toggleClass("opened");
 	});
-	$("nav.sidebar > ul > li > i.more").click(function(event) {
-		$(this).parent().siblings().children("i.more").removeClass("active");
-		$(this).parent().siblings().children("ul").slideUp();
-		$(this).siblings("ul").slideToggle();
+	$("nav.sidebar > ul > li > .li__group > i.more").click(function(event) {
+		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
+		$(this).parent().parent().siblings().children("ul").slideUp();
+		$(this).parent().siblings("ul").slideToggle();
 		$(this).toggleClass("active");
 	});
 	$(window).resize(function(width) {

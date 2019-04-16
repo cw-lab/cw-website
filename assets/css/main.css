@@ -887,47 +887,45 @@ nav.sidebar ul {
   list-style: none;
 }
 nav.sidebar ul li {
+  line-height: 1;
+}
+nav.sidebar ul li .li__group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  line-height: 1;
 }
-nav.sidebar ul li a {
+nav.sidebar ul li .li__group a {
   color: #171717;
 }
-nav.sidebar ul li:hover > a {
+nav.sidebar ul li .li__group:hover a, nav.sidebar ul li .li__group:hover i {
   color: #D60C18;
-}
-nav.sidebar ul li:hover > i {
-  color: #D60C18;
-}
-nav.sidebar ul li:hover > i:hover {
-  color: #9D0505;
 }
 nav.sidebar ul li.now {
-  color: #fff;
   background-color: #D60C18;
 }
-nav.sidebar ul li.now > a, nav.sidebar ul li.now > i {
-  color: #fff;
-}
-nav.sidebar ul li.now > a:hover, nav.sidebar ul li.now > i:hover {
+nav.sidebar ul li.now > .li__group > a, nav.sidebar ul li.now > .li__group > i {
   color: #fff;
 }
 nav.sidebar > ul + ul {
   border-top: 1px solid #D3D5D7;
 }
-nav.sidebar > ul > li > a {
+nav.sidebar > ul > li .li__group {
+  position: relative;
+}
+nav.sidebar > ul > li .li__group > a {
   display: flex;
-  width: 230px;
+  width: 100%;
   padding: 17px 25px;
   align-items: center;
 }
-nav.sidebar > ul > li > a.sns i + span {
+nav.sidebar > ul > li .li__group > a.sns i + span {
   margin-left: 5px;
 }
-nav.sidebar > ul > li > i.more {
+nav.sidebar > ul > li .li__group > i.more {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 17px 25px;
   font-weight: bold;
   cursor: pointer;
@@ -936,7 +934,7 @@ nav.sidebar > ul > li > i.more {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-nav.sidebar > ul > li > i.more.active {
+nav.sidebar > ul > li .li__group > i.more.active {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -944,16 +942,10 @@ nav.sidebar > ul > li > i.more.active {
 }
 nav.sidebar > ul > li > ul {
   display: none;
-  width: 100%;
   background-color: #EEEEEE;
 }
-nav.sidebar > ul > li > ul > li > a {
-  display: block;
-  width: 100%;
+nav.sidebar > ul > li > ul > li .li__group > a {
   padding: 17px 50px;
-}
-nav.sidebar > ul > li > ul > li > a:hover {
-  color: #D60C18;
 }
 
 input, select {

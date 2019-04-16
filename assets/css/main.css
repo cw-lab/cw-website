@@ -539,12 +539,6 @@ i.icon {
   -moz-osx-font-smoothing: grayscale;
 }
 
-i.icon:before {
-  position: relative;
-  top: 2px;
-  line-height: 1;
-}
-
 .icon-bookmark-outlined:before {
   content: "\e922";
 }
@@ -797,6 +791,19 @@ a.sns {
 a.sns-facebook:hover, a.sns-facebook.active {
   color: #475993;
 }
+a.sns-instagram:hover, a.sns-instagram.active {
+  color: transparent !important;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../img/instagram-bg@3x-100.jpg);
+}
 a.sns-instagram:hover i::before, a.sns-instagram.active i::before {
   color: transparent !important;
   -moz-background-clip: text;
@@ -866,6 +873,87 @@ a.bookmark-btn > i {
 }
 a.bookmark-btn i:hover, a.bookmark-btn i.active {
   color: #fff;
+}
+
+nav.sidebar {
+  width: 300px;
+  font-size: 1rem;
+  border: 1px solid #D3D5D7;
+  background-color: #fff;
+}
+nav.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav.sidebar ul li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1;
+}
+nav.sidebar ul li a {
+  color: #171717;
+}
+nav.sidebar ul li:hover > a {
+  color: #D60C18;
+}
+nav.sidebar ul li:hover > i {
+  color: #D60C18;
+}
+nav.sidebar ul li:hover > i:hover {
+  color: #9D0505;
+}
+nav.sidebar ul li.now {
+  color: #fff;
+  background-color: #D60C18;
+}
+nav.sidebar ul li.now > a, nav.sidebar ul li.now > i {
+  color: #fff;
+}
+nav.sidebar ul li.now > a:hover, nav.sidebar ul li.now > i:hover {
+  color: #fff;
+}
+nav.sidebar > ul + ul {
+  border-top: 1px solid #D3D5D7;
+}
+nav.sidebar > ul > li > a {
+  display: flex;
+  width: 230px;
+  padding: 17px 25px;
+  align-items: center;
+}
+nav.sidebar > ul > li > a.sns i + span {
+  margin-left: 5px;
+}
+nav.sidebar > ul > li > i.more {
+  padding: 17px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+nav.sidebar > ul > li > i.more.active {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+nav.sidebar > ul > li > ul {
+  display: none;
+  width: 100%;
+  background-color: #EEEEEE;
+}
+nav.sidebar > ul > li > ul > li > a {
+  display: block;
+  width: 100%;
+  padding: 17px 50px;
+}
+nav.sidebar > ul > li > ul > li > a:hover {
+  color: #D60C18;
 }
 
 input, select {

@@ -1061,6 +1061,7 @@ form.form .select__group--outlined:hover select {
 }
 
 button {
+  background-color: transparent;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -1080,7 +1081,6 @@ button.btn {
   padding: 0 1rem;
   font-size: 1rem;
   line-height: 2.875rem;
-  background-color: transparent;
   overflow: hidden;
 }
 button.btn + button.btn {

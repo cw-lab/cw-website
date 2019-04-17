@@ -733,7 +733,7 @@ section .content-side pre {
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-  overflow: scroll;
+  overflow: hidden scroll;
 }
 @media (min-width: 768px) {
   section .content-side pre {

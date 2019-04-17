@@ -53,11 +53,23 @@ $(function(){
 			$(this).addClass("tooltips-wrap");
 		}
 	});
-	$(".hamburger").click(function(event) {
-		event.stopPropagation();
-		$(this).toggleClass("opened");
+	// 漢堡
+	$('body').append('<div class="black"></div>');
+	$('.hamburger, .black').click(function () {
+		$('.menubar--left').toggleClass('opened');
+		$('.black').toggleClass('opened');
 	});
-	$("nav.sidebar > ul > li > .li__group > i.more").click(function(event) {
+	// menu寬度平分
+	$("nav.menubar--belt > ul > li").each(function(){
+		$(this).css({
+			"width": $(this).parent().parent().outerWidth() / $(this).length + "px"
+		});
+	});
+	// 當有第三層時，加上classname
+	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
+	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
+	// sidemenu-left
+	$("nav.menubar--left > ul > li > .li__group > i.more").click(function(event) {
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();
 		$(this).parent().siblings("ul").slideToggle();

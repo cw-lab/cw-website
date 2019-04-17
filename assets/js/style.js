@@ -27,7 +27,7 @@ $(function(){
 	});
 	$("footer").load("footer.html");
 	$("span.detail").each(function(){
-		$(this).children().text($(this).attr("data-val"));
+		$(this).children().html($(this).attr("data-val"));
 	});
 }, function(){
 	"use strict";

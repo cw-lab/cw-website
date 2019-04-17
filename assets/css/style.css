@@ -1,126 +1,229 @@
-.bg-red-100 {
-  color: #394148;
-  background-color: #FEEBEC;
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
 }
 
-.bg-red-200 {
-  color: #394148;
-  background-color: #EE969B;
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
 }
 
-.bg-red-300 {
-  color: #fff;
-  background-color: #D60C18;
+audio:not([controls]) {
+  display: none;
+  height: 0;
 }
 
-.bg-red-400 {
-  color: #fff;
-  background-color: #BE0B15;
+[hidden],
+template {
+  display: none;
 }
 
-.bg-red-500 {
-  color: #fff;
-  background-color: #9D0505;
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
-.bg-gray-100 {
-  color: #394148;
-  background-color: #EEEEEE;
+body {
+  margin: 0;
 }
 
-.bg-gray-200 {
-  color: #394148;
-  background-color: #D3D5D7;
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a {
+  background: transparent;
 }
 
-.bg-gray-300 {
-  color: #fff;
-  background-color: #939EA7;
+a:active,
+a:hover {
+  outline: 0;
 }
 
-.bg-gray-400 {
-  color: #fff;
-  background-color: #6B7780;
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+abbr[title] {
+  border-bottom: 1px dotted;
 }
 
-.bg-gray-500 {
-  color: #fff;
-  background-color: #48545D;
+b,
+strong {
+  font-weight: bold;
 }
 
-.bg-surface {
-  color: #fff;
-  background-color: #00519f;
+dfn {
+  font-style: italic;
 }
 
-.bg-primary {
-  color: #fff;
-  background-color: #D60C18;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
-.bg-primary-variant {
-  color: #fff;
-  background-color: #9D0505;
+mark {
+  background: #ff0;
+  color: #000;
 }
 
-.bg-secondary {
-  color: #fff;
-  background-color: #939EA7;
+small {
+  font-size: 80%;
 }
 
-.bg-secondary-variant {
-  color: #fff;
-  background-color: #48545D;
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
-.bg-error {
-  color: #fff;
-  background-color: #9D0505;
+sup {
+  top: -0.5em;
 }
 
-.bg-background {
-  color: #fff;
-  background-color: #fff;
+sub {
+  bottom: -0.25em;
 }
 
-.red-100 {
-  color: #FEEBEC;
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+  border: 0;
 }
 
-.red-200 {
-  color: #EE969B;
+svg:not(:root) {
+  overflow: hidden;
 }
 
-.red-300 {
-  color: #D60C18;
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure {
+  margin: 1em 40px;
 }
 
-.red-400 {
-  color: #BE0B15;
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
 }
 
-.red-500 {
-  color: #9D0505;
+pre {
+  overflow: auto;
 }
 
-.gray-100 {
-  color: #EEEEEE;
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
 }
 
-.gray-200 {
-  color: #D3D5D7;
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
 }
 
-.gray-300 {
-  color: #939EA7;
+button {
+  overflow: visible;
 }
 
-.gray-400 {
-  color: #6B7780;
+button,
+select {
+  text-transform: none;
 }
 
-.gray-500 {
-  color: #48545D;
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 section .select-side ul.menu > li::before {
@@ -219,6 +322,10 @@ h1, h2, h3, h4, h5, h6, p {
   .content-side {
     width: calc(100% - 260px);
   }
+}
+
+[class*='col'] {
+  position: relative;
 }
 
 .col {
@@ -575,6 +682,9 @@ section .content-side .spec--highlight span.detail.space-2 {
   margin-top: -8px;
   border-width: 0 1px;
 }
+section .content-side .spec--highlight--group {
+  position: relative;
+}
 section .content-side .color-bar li {
   display: flex;
   justify-content: space-between;
@@ -636,6 +746,9 @@ section .content-side pre span.comment {
 section .content-side pre span.highlight {
   color: #fc0;
 }
+section .content-side pre span.js {
+  color: #f0c;
+}
 section .content-side pre span.mis {
   color: #0ff;
 }
@@ -656,6 +769,9 @@ section .content-side .direction li i {
 }
 section .content-side .direction li i.highlight {
   background-color: #fc0;
+}
+section .content-side .direction li i.js {
+  background-color: #f0c;
 }
 section .content-side .direction li i.mis {
   background-color: #0ff;
@@ -721,6 +837,25 @@ section .content-side .tooltips--spec {
   font-size: 14px;
   background: #48545D;
   white-space: nowrap;
+}
+section .content-side .form__group__help {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #939EA7;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1;
+}
+section .content-side nav.menubar--left {
+  display: block;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
 }
 
 footer {

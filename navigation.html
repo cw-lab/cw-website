@@ -39,76 +39,88 @@
 							<h2>Spec</h2>
 							<div class="flex">
 								<div class="col col-3-3">
-									<div class="black"></div>
-									<nav class="sidebar sidebar--left">
-										<ul>
-											<li>
-												<div class="li__group">
-													<a href="#!">天下雜誌，您好</a>
-												</div>
-											</li>
-											<li>
-												<div class="li__group">
-													<a href="#!">登出</a>
-												</div>
-											</li>
-										</ul>
-										<ul>
-											<li>
-												<div class="li__group">
-													<a href="#!">首頁</a>
-												</div>
-											</li>
-											<li class="now">
-												<div class="li__group">
-													<a href="#!">今日最新</a>
-												</div>
-											</li>
-											<li>
-												<div class="li__group">
-													<a href="#!">企業突圍</a>
-													<i class="icon icon-down more active"></i>
-												</div>
-												<ul style="display: block;">
+									<div class="spec--highlight" style="width: 75%;">
+										<i class="form__group__help">width：300px</i>
+										<div class="spec--highlight--group">
+											<div class="black"></div>
+											<nav class="menubar menubar--left">
+												<ul>
 													<li>
 														<div class="li__group">
-															<a href="#!">傳承接班</a>
+															<a href="#!">天下雜誌，您好</a>
 														</div>
 													</li>
 													<li>
 														<div class="li__group">
-															<a href="#!">數位轉型</a>
+															<a href="#!">登出</a>
 														</div>
 													</li>
+												</ul>
+												<ul>
 													<li>
 														<div class="li__group">
-															<a href="#!">創新突圍</a>
+															<a href="#!">首頁</a>
 														</div>
 													</li>
 													<li class="now">
 														<div class="li__group">
-															<a href="#!">經營管理</a>
+															<a href="#!">今日最新</a>
+														</div>
+													</li>
+													<li>
+														<div class="li__group">
+															<a href="#!">企業突圍</a>
+															<i class="icon icon-down more active"></i>
+														</div>
+														<ul style="display: block;">
+															<li>
+																<div class="li__group">
+																	<a href="#!">傳承接班</a>
+																</div>
+															</li>
+															<li>
+																<div class="li__group">
+																	<a href="#!">數位轉型</a>
+																</div>
+															</li>
+															<li>
+																<div class="li__group">
+																	<a href="#!">創新突圍</a>
+																</div>
+															</li>
+															<li class="now">
+																<div class="li__group">
+																	<a href="#!">經營管理</a>
+																</div>
+															</li>
+														</ul>
+													</li>
+													<li>
+														<div class="li__group">
+															<a href="#!">雜誌</a>
+														</div>
+													</li>
+													<li>
+														<div class="li__group">
+															<a href="#!">English</a>
+														</div>
+													</li>
+													<li>
+														<div class="li__group">
+															<a href="#!">論壇活動</a>
 														</div>
 													</li>
 												</ul>
-											</li>
-											<li>
-												<div class="li__group">
-													<a href="#!">雜誌</a>
-												</div>
-											</li>
-											<li>
-												<div class="li__group">
-													<a href="#!">English</a>
-												</div>
-											</li>
-											<li>
-												<div class="li__group">
-													<a href="#!">論壇活動</a>
-												</div>
-											</li>
-										</ul>
-									</nav>
+											</nav>
+											<span class="detail" data-val="alpha 40%<br/>點擊此區域可收合" style="height: 57px;width: 115px;border-width: 0 0 0 1px;top: -40px;left: 320px;"><i style="width: 100%;padding: 0px 0 25px 15px;"></i></span>
+											<span class="detail" data-val="50" style="height: 50px;width: 20px;border-width: 1px 0;top: 1px;left: -20px;"><i></i></span>
+											<span class="detail" data-val="1" style="height: 1px;width: 20px;border-width: 1px 0;top: 101px;left: -20px;"><i></i></span>
+											<span class="detail" data-val="25" style="height: 20px;width: 25px;border-width: 0 1px;top: 116px;left: 1px;"><i></i></span>
+											<span class="detail" data-val="25" style="height: 20px;width: 25px;border-width: 0 1px;top: 217px;left: 275px;"><i></i></span>
+											<span class="detail" data-val="45" style="height: 20px;width: 45px;border-width: 0 1px;top: 217px;left: 215px;"><i></i></span>
+											<span class="detail" data-val="50" style="height: 20px;width: 50px;border-width: 0 1px;top: 267px;left: 1px;"><i></i></span>
+										</div>
+									</div>
 								</div>
 							</div>
 							<hr>
@@ -116,7 +128,7 @@
 							<div class="flex">
 								<div class="col col-3-3">
 									<div class="black"></div>
-									<nav class="sidebar sidebar--left">
+									<nav class="menubar menubar--left">
 										<ul>
 											<li><div class="li__group"><a href="#!">天下雜誌，您好</a></div></li>
 											<li><div class="li__group"><a href="#!">登出</a></div></li>
@@ -339,15 +351,18 @@
       &lt;/ul&gt;
     &lt;/li&gt;
   &lt;/ul&gt;
-&lt;/nav&gt;</pre>
+&lt;/nav&gt;
+<span class="js">&lt;div class="black"&gt;&lt;/div&gt;</span></pre>
 												</div>
 												<div class="code__block--text code__block--scss bg-black">
 													<pre>nav {
   &.sidebar {
+    position: relative;
     width: 300px;
     font-size: 1rem;
     border: 1px solid $gray-200;
     background-color: $white;
+    z-index: 1;
     ul {
       padding: 0;
       margin: 0;
@@ -423,6 +438,13 @@
       }
     }
   }
+}
+.black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($black, 0.4);
+  z-index: 0;
 }</pre>
 												</div>
 												<div class="code__block--text code__block--js bg-black">
@@ -437,7 +459,7 @@
 												</div>
 											</div>
 											<ul class="direction list-reset">
-												<li><i class="highlight"></i>前端添加</li>
+												<li><i class="js"></i>前端js添加</li>
 												<li><i class="mis"></i>後端判斷</li>
 											</ul>
 										</div>

@@ -231,7 +231,7 @@ th {
   padding: 0;
 }
 
-nav.menubar--sub ul.menubar__user::before, nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::after, nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::before, button.btn::before, button.btn::after {
+nav.menubar--sub ul.menubar__user::before, button.btn::before, button.btn::after {
   content: '';
   display: block;
 }
@@ -567,7 +567,7 @@ i.icon {
   content: "\e923";
 }
 
-.icon-email:before {
+.icon-mail:before {
   content: "\e924";
 }
 
@@ -904,12 +904,17 @@ nav.menubar--left {
   font-size: 1rem;
   border: 1px solid #D3D5D7;
   background-color: #fff;
-  overflow: hidden scroll;
+  overflow: hidden;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 2;
+  z-index: 102;
+}
+@media (min-width: 1024px) {
+  nav.menubar--left {
+    overflow: hidden scroll;
+  }
 }
 nav.menubar--left ul {
   padding: 0;
@@ -982,7 +987,22 @@ nav.menubar--left.opened {
 }
 nav.menubar--sub {
   font-size: 14px;
-  background-color: #6B7780;
+}
+@media (min-width: 1024px) {
+  nav.menubar--sub {
+    background-color: #6B7780;
+  }
+}
+@media (max-width: 1023px) {
+  nav.menubar--sub {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 nav.menubar--sub > .container {
   justify-content: flex-end;
@@ -993,6 +1013,11 @@ nav.menubar--sub > .container ul {
 nav.menubar--sub > .container > ul {
   justify-content: flex-end;
 }
+@media (max-width: 1023px) {
+  nav.menubar--sub > .container > ul:first-child {
+    display: none;
+  }
+}
 nav.menubar--sub > .container > ul > li {
   margin-left: 16px;
 }
@@ -1000,36 +1025,32 @@ nav.menubar--sub > .container > ul > li > a {
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: #fff;
+  color: #171717;
   line-height: 1rem;
   align-items: flex-end;
+}
+@media (min-width: 1024px) {
+  nav.menubar--sub > .container > ul > li > a {
+    color: #fff;
+  }
 }
 nav.menubar--sub > .container > ul > li > a i {
   margin-left: 7px;
   height: 0.875em;
   font-weight: bold;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+nav.menubar--sub > .container > ul > li > a i.deg {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 nav.menubar--sub > .container > ul > li > a:hover {
   color: #171717;
-}
-nav.menubar--sub > .container > ul > li > a:hover i {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-nav.menubar--sub > .container > ul > li:hover {
-  color: #171717;
-}
-nav.menubar--sub > .container > ul > li:hover i {
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 nav.menubar--sub ul.menubar__user {
   margin-left: 16px;
@@ -1038,15 +1059,16 @@ nav.menubar--sub ul.menubar__user::before {
   position: absolute;
   top: 10px;
   left: 0px;
-  width: 1px;
-  height: 1rem;
   background-color: #fff;
+}
+@media (min-width: 1024px) {
+  nav.menubar--sub ul.menubar__user::before {
+    width: 1px;
+    height: 1rem;
+  }
 }
 nav.menubar--sub ul.menubar__user > li {
   position: relative;
-}
-nav.menubar--sub ul.menubar__user > li > a:hover {
-  color: #fff;
 }
 nav.menubar--sub ul.menubar__user > li .menubar__user__slide {
   display: none;
@@ -1054,49 +1076,22 @@ nav.menubar--sub ul.menubar__user > li .menubar__user__slide {
   left: -10px;
   min-width: calc(100% + 20px);
   width: 100%;
-  padding-top: 10px;
   z-index: 100;
 }
 nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul {
-  padding: 5px 0;
   background-color: #fff;
   border: 1px solid #D3D5D7;
 }
-nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::after, nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::before {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  height: 0;
-  width: 0;
-  pointer-events: none;
-}
-nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::after {
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: #fff;
-  border-width: 10px;
-  margin-left: -10px;
-}
-nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul::before {
-  border-color: rgba(211, 213, 215, 0);
-  border-bottom-color: #D3D5D7;
-  border-width: 11px;
-  margin-left: -11px;
-}
 nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul li a {
-  padding: 7px 20px;
+  padding: 15px 20px;
   color: #171717;
 }
 nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul li a:hover {
   color: #D60C18;
 }
 nav.menubar--sub ul.menubar__user > li .menubar__user__slide ul li.hr {
-  margin: 5px 10px;
   height: 1px;
   background-color: #D3D5D7;
-}
-nav.menubar--sub ul.menubar__user > li:hover .menubar__user__slide {
-  display: block;
 }
 nav.menubar--belt ul {
   display: none;
@@ -1182,12 +1177,23 @@ nav.menubar--belt--third > ul > li > ul {
   left: 0;
 }
 
-.black {
+.opacity, .black {
   position: fixed;
-  width: 0;
-  height: 0;
   top: 0;
   left: 0;
+  width: 0;
+  height: 0;
+}
+.opacity.opened, .black.opened {
+  width: 100%;
+  height: 100%;
+}
+
+.opacity {
+  z-index: 99;
+}
+
+.black {
   background-color: rgba(23, 23, 23, 0.4);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -1195,11 +1201,9 @@ nav.menubar--belt--third > ul > li > ul {
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-  z-index: 1;
+  z-index: 101;
 }
 .black.opened {
-  width: 100%;
-  height: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }

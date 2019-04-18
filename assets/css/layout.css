@@ -263,11 +263,15 @@ body {
 }
 
 .ad img {
+  max-width: 100%;
+  height: auto;
   margin: auto;
 }
 
 header {
+  position: relative;
   background-color: #fff;
+  z-index: 10;
 }
 header .flex {
   align-items: center;
@@ -276,8 +280,21 @@ header .flex a.logo {
   margin-left: 10px;
   margin-right: 10px;
 }
+header .flex a.logo img {
+  height: 30px;
+}
+@media (min-width: 1024px) {
+  header .flex a.logo img {
+    height: 50px;
+  }
+}
 header > .container-fluid {
   border-bottom: 1px solid #D3D5D7;
+}
+@media (max-width: 1023px) {
+  header .header__belt {
+    display: none;
+  }
 }
 
 main {
@@ -287,7 +304,12 @@ main > * > h3 {
   margin: 0;
 }
 main article {
-  width: 620px;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  main article {
+    width: 620px;
+  }
 }
 main article .article__group {
   margin-bottom: 10px;

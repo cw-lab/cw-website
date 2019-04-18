@@ -65,7 +65,7 @@ $(function(){
 			"width": $(this).parent().parent().outerWidth() / $(this).length + "px"
 		});
 	});
-	// 當有第三層時，加上classname
+	// 當導覽menu有第三層時，加上classname
 	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
 	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
 	// sidemenu-left
@@ -73,7 +73,13 @@ $(function(){
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();
 		$(this).parent().siblings("ul").slideToggle();
-		$(this).toggleClass("active");
+	});
+	// 第二層
+	$('body').append('<div class="opacity"></div>');
+	$("nav.menubar--sub ul.menubar__user > li, .opacity").click(function(){
+		$(".menubar__user__slide").slideToggle();
+		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
+		$('.opacity').toggleClass('opened');
 	});
 	$(window).resize(function(width) {
 		var width = $(window).width();

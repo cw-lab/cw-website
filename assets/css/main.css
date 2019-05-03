@@ -1943,6 +1943,9 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 .message p + p {
   margin-top: 1em;
 }
+.message__btn {
+  font-size: 0;
+}
 .message--banner {
   position: fixed;
   top: 0;
@@ -1960,7 +1963,6 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   align-items: flex-end;
 }
 .message--banner .message__txt {
-  width: calc(100% - 354px);
   padding: 10px 50px 10px 0;
 }
 .message--banner .message__txt p a {
@@ -1973,8 +1975,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   }
 }
 .message--banner .message__btn {
-  display: table;
-  word-break: keep-all;
+  display: flex;
 }
 .message--notification {
   display: table;

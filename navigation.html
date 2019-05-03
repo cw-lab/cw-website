@@ -24,7 +24,7 @@
 						<aside class="select-side"></aside>
 						<div class="content-side">
 							<div class="flex">
-								<div class="col col-2-3">
+								<div class="col-md-8">
 									<h1>
 										導覽 Navigation
 									</h1>
@@ -34,11 +34,8 @@
 										《天下雜誌》使用顏色來傳達界面中的功能。這有助於我們建立系統性視覺模式，使我們的數位產品與讀者的互動更容易。
 									</p>
 								</div>
-							</div>
-							<hr>
-							<h2>Spec</h2>
-							<div class="flex">
-								<div class="col col-3-3">
+								<h2 class="col-md-12">Spec</h2>
+								<div class="col-md-10">
 									<div class="spec--highlight" style="width: 75%;">
 										<i class="form__group__help">width：300px</i>
 										<div class="spec--highlight--group">
@@ -122,12 +119,9 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<hr>
-							<h2>States</h2>
-							<div class="flex">
-								<div class="col col-3-3">
-									<div class="black"></div>
+								<h2 class="col-md-12">States</h2>
+								<div class="col-md-7">
+									<div class="black opened" style="position: absolute;left: auto;"></div>
 									<nav class="menubar menubar--left">
 										<ul>
 											<li><div class="li__group"><a href="#!">天下雜誌，您好</a></div></li>
@@ -284,21 +278,17 @@
 										</ul>
 									</nav>
 								</div>
-							</div>
-							<hr>
-							<h2>How to Use</h2>
-							<div class="flex code--block">
-								<div class="col col-3-3">
-									<div class="tab">
-										<div class="tab__nav">
-											<ul class="list-reset">
-												<li class="active"><span>Default</span></li>
-											</ul>
-										</div>
-										<div class="tab__content">
-											<div class="tab__content__pane active">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;nav class="sidebar sidebar--left"&gt;
+								<h2 class="col-md-12">How to Use</h2>
+								<div class="tab col-md-12">
+									<div class="tab__nav">
+										<ul class="list-reset">
+											<li class="active"><span>Default</span></li>
+										</ul>
+									</div>
+									<div class="tab__content">
+										<div class="tab__content__pane active">
+											<div class="code__block--text code__block--html bg-black">
+												<pre>&lt;nav class="sidebar sidebar--left"&gt;
   &lt;ul&gt;
     &lt;li&gt;
       &lt;div class="li__group"&gt;
@@ -353,9 +343,9 @@
   &lt;/ul&gt;
 &lt;/nav&gt;
 <span class="js">&lt;div class="black"&gt;&lt;/div&gt;</span></pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>nav {
+											</div>
+											<div class="code__block--text code__block--scss bg-black">
+												<pre>nav {
   &.sidebar {
     position: relative;
     width: 300px;
@@ -446,23 +436,22 @@
   background-color: rgba($black, 0.4);
   z-index: 0;
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre>$(function(){
-  $("nav.sidebar > ul > li > .li__group > i.more").click(function(event) {
+											</div>
+											<div class="code__block--text code__block--js bg-black">
+												<pre>$(function(){
+  $("nav.menubar--left > ul > li > .li__group > i.more").click(function() {
+    $(this).toggleClass("active");
     $(this).parent().parent().siblings().children().children("i.more").removeClass("active");
     $(this).parent().parent().siblings().children("ul").slideUp();
     $(this).parent().siblings("ul").slideToggle();
-    $(this).toggleClass("active");
   });
 });</pre>
-												</div>
 											</div>
-											<ul class="direction list-reset">
-												<li><i class="js"></i>前端js添加</li>
-												<li><i class="mis"></i>後端判斷</li>
-											</ul>
 										</div>
+										<ul class="direction list-reset">
+											<li><i class="js"></i>前端js添加</li>
+											<li><i class="mis"></i>後端判斷</li>
+										</ul>
 									</div>
 								</div>
 							</div>

@@ -60,16 +60,17 @@ $(function(){
 		$('.black').toggleClass('opened');
 	});
 	// menu寬度平分
-	$("nav.menubar--belt > ul > li").each(function(){
-		$(this).css({
-			"width": $(this).parent().parent().outerWidth() / $(this).length + "px"
+	$("nav.menubar--belt").each(function(){
+		$(this).children().children().css({
+			"width": ($(this).outerWidth() / $(this).children().children().length) + "px"
 		});
 	});
 	// 當導覽menu有第三層時，加上classname
 	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
 	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
 	// sidemenu-left
-	$("nav.menubar--left > ul > li > .li__group > i.more").click(function(event) {
+	$("nav.menubar--left > ul > li > .li__group > i.more").click(function() {
+		$(this).toggleClass("active");
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();
 		$(this).parent().siblings("ul").slideToggle();
@@ -80,6 +81,13 @@ $(function(){
 		$(".menubar__user__slide").slideToggle();
 		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
 		$('.opacity').toggleClass('opened');
+	});
+	$(".tab__nav").each(function(){
+		if ($(this).offsetWidth < $(this).scrollWidth) {
+			$(this).addClass("overflow");
+		} else {
+			$(this).removeClass("overflow");
+		}
 	});
 	$(window).resize(function(width) {
 		var width = $(window).width();

@@ -24,7 +24,7 @@
 						<aside class="select-side"></aside>
 						<div class="content-side">
 							<div class="flex">
-								<div class="col col-2-3">
+								<div class="col-md-8">
 									<h1>
 										輸入框 Text-field
 									</h1>
@@ -32,318 +32,335 @@
 										使用者可以在輸入框中輸入或編輯多種文本格式，包括數字。
 									</p>
 								</div>
-							</div>
-							<hr>
-							<h2>
-								Spec
-							</h2>
-							<div class="flex">
-								<div class="col col-1-3">
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled spec--highlight">
-											<label for="#!" class="label">
-												<span class="form__group__placeholder">請輸入 e-mail</span>
-												<input type="email" class="form__group__input form__group__input--default">
-											</label>
-											<span class="detail space" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
-											<span class="detail height" data-val="50" style="height: 50px;"><i></i></span>
-											<span class="detail helperSpace" data-val="5" style="height: 5px;"><i></i></span>
-											<i class="form__group__help text-center">min-width：144px</i>
+								<div class="col-md-12">
+									<hr>
+									<h2>
+										Spec
+									</h2>
+									<div class="row">
+										<div class="col-md-4">
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled spec--highlight">
+													<label for="#!" class="label">
+														<span class="form__group__placeholder">請輸入 e-mail</span>
+														<input type="email" class="form__group__input form__group__input--default">
+													</label>
+													<span class="detail space" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
+													<span class="detail height" data-val="50" style="height: 50px;"><i></i></span>
+													<span class="detail helperSpace" data-val="5" style="height: 5px;"><i></i></span>
+													<i class="form__group__help text-center">min-width：144px</i>
+												</div>
+											</form>
+											<br>
 										</div>
-									</form>
-									<br>
-								</div>
-								<div class="col col-1-3">
-									<form action="#!" class="form">
-										<div class="select__group select__group--filled spec--highlight">
-											<select>
-												<option class="select__group__item" selected>請選擇選擇</option>
-												<option class="select__group__item" value="1">假字假字</option>
-												<option class="select__group__item" value="2">假字假</option>
-												<option class="select__group__item" value="3">假字</option>
-												<option class="select__group__item" value="4">假字假</option>
-											</select>
-											<span class="detail space space-0" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
-											<span class="detail space-1" data-val="20" style="width: 20px; height: 16px;"><i></i></span>
-											<span class="detail space-2" data-val="16" style="width: 16px;  height: 16px;"><i></i></span>
-											<span class="detail height" data-val="50" style="height: 50px;"><i></i></span>
+										<div class="col-md-4">
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--hasicon form__group--error spec--highlight">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<i class="form__group__icon icon icon-check-circle"></i>
+													</label>
+													<span class="detail space" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
+													<span class="detail space" data-val="16" style="left: auto; right: 0; width: 16px; height: 16px;"><i></i></span>
+													<span class="detail" data-val="6" style="width: 100px;height: 6px;border-width: 1px 0;top: 19px;left: 40px;"><i></i></span>
+													<span class="detail helperSpace" data-val="5" style="height: 5px;"><i></i></span>
+													<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+												</div>
+											</form>
+											<br>
 										</div>
-									</form>
-								</div>
-							</div>
-							<hr>
-							<h2 id="filled">
-								Filled text fields
-							</h2>
-							<div class="flex">
-								<div class="col col-1-3">
-									<h3>Default</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default">
-											</label>
+										<div class="col-md-4">
+											<form action="#!" class="form">
+												<div class="select__group select__group--filled spec--highlight">
+													<select>
+														<option class="select__group__item" selected>請選擇選擇</option>
+														<option class="select__group__item" value="1">假字假字</option>
+														<option class="select__group__item" value="2">假字假</option>
+														<option class="select__group__item" value="3">假字</option>
+														<option class="select__group__item" value="4">假字假</option>
+													</select>
+													<span class="detail space space-0" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
+													<span class="detail space-1" data-val="20" style="width: 20px; height: 16px;"><i></i></span>
+													<span class="detail space-2" data-val="16" style="width: 16px;  height: 16px;"><i></i></span>
+													<span class="detail height" data-val="50" style="height: 50px;"><i></i></span>
+												</div>
+											</form>
 										</div>
-									</form>
-									<h3>Disabled</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" disabled="disabled">
-											</label>
+									</div>
+									<hr>
+									<h2 id="filled">
+										Filled text fields
+									</h2>
+									<div class="row">
+										<div class="col-md-4">
+											<h3>Default</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+													</label>
+												</div>
+											</form>
+											<h3>Disabled</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" disabled="disabled">
+													</label>
+												</div>
+											</form>
+											<h3>Helper: Helper text</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+														<i class="form__group__help">* 此為必填欄位</i>
+													</label>
+												</div>
+											</form>
+											<h3>Helper: Character counter</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--countletter">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" maxlength="30">
+														<i class="form__group__help text-right"><span>0</span>/30</i>
+													</label>
+												</div>
+											</form>
 										</div>
-									</form>
-									<h3>Helper: Helper text</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default">
-												<i class="form__group__help">* 此為必填欄位</i>
-											</label>
+										<div class="col-md-4">
+											<h3>Password</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--hasicon">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="password" class="form__group__input form__group__input--default">
+														<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
+													</label>
+												</div>
+											</form>
+											<h3>Status: correct</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--hasicon form__group--correct">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<i class="form__group__icon icon icon-check-circle"></i>
+													</label>
+												</div>
+											</form>
+											<h3>Status: error</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--hasicon form__group--error">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<i class="form__group--filled__icon icon icon-exclamation-circle"></i>
+														<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+													</label>
+												</div>
+											</form>
+											<h3>Dropdown</h3>
+											<form action="#!" class="form">
+												<div class="select__group select__group--filled">
+													<select>
+														<option class="select__group__item" selected>請選擇</option>
+														<option class="select__group__item" value="1">假字假字</option>
+														<option class="select__group__item" value="2">假字假</option>
+														<option class="select__group__item" value="3">假字</option>
+														<option class="select__group__item" value="4">假字假</option>
+													</select>
+												</div>
+											</form>
 										</div>
-									</form>
-									<h3>Helper: Character counter</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled form__group--countletter">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" maxlength="30">
-												<i class="form__group__help text-right"><span>0</span>/30</i>
-											</label>
-										</div>
-									</form>
-								</div>
-								<div class="col col-1-3">
-									<h3>Password</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled form__group--hasicon">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="password" class="form__group__input form__group__input--default">
-												<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
-											</label>
-										</div>
-									</form>
-									<h3>Status: correct</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled form__group--hasicon form__group--correct">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
-												<i class="form__group__icon icon icon-check-circle"></i>
-											</label>
-										</div>
-									</form>
-									<h3>Status: error</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--filled form__group--hasicon form__group--error">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
-												<i class="form__group--filled__icon icon icon-exclamation-circle"></i>
-												<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
-											</label>
-										</div>
-									</form>
-									<h3>Dropdown</h3>
-									<form action="#!" class="form">
-										<div class="select__group select__group--filled">
-											<select>
-												<option class="select__group__item" selected>請選擇</option>
-												<option class="select__group__item" value="1">假字假字</option>
-												<option class="select__group__item" value="2">假字假</option>
-												<option class="select__group__item" value="3">假字</option>
-												<option class="select__group__item" value="4">假字假</option>
-											</select>
-										</div>
-									</form>
-								</div>
-							</div>
-							<h2>How to Use</h2>
-							<div class="flex code--block">
-								<div class="col col-3-3">
-									<div class="tab">
-										<div class="tab__nav">
-											<ul class="list-reset">
-												<li class="active"><span>Default</span></li>
-												<li><span>Disabled</span></li>
-												<li><span>Helper</span></li>
-												<li><span>Password</span></li>
-												<li><span>Status</span></li>
-												<li><span>Dropdown</span></li>
-											</ul>
-										</div>
-										<div class="tab__content">
-											<div class="tab__content__pane active">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+									</div>
+									<h2>How to Use</h2>
+									<div class="row">
+										<div class="col-md-12 code--block">
+											<div class="tab">
+												<div class="tab__nav">
+													<ul class="list-reset">
+														<li class="active"><span>Default</span></li>
+														<li><span>Disabled</span></li>
+														<li><span>Helper</span></li>
+														<li><span>Password</span></li>
+														<li><span>Status</span></li>
+														<li><span>Dropdown</span></li>
+													</ul>
+												</div>
+												<div class="tab__content">
+													<div class="tab__content__pane active">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default"&gt;
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default"&gt;
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+  outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--filled {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		}
-	  }
-	}
+  .form__group {
+    position: relative;
+    display: table;
+    max-width: 280px;
+    > * {
+    display: block;
+    }
+    .label {
+    position: relative;
+    }
+    .form__group {
+    &__placeholder {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      color: $secondary;
+      font-size: 14px;
+      @include transition(all 0.3s);
+    }
+    &__input {
+      min-max-width: 280px;
+      color: $surface;
+      @include text-fill-color($black);
+      border-style: solid;
+      border-color: $secondary;
+      &:focus {
+      border-color: $surface;
+      }
+    }
+    }
+    &--filled {
+    .form__group__input {
+      padding: 1.5rem 1rem 0.4rem;
+      background-color: $gray-100;
+      border-width: 0px 0px 1px;
+    }
+    .form__group {
+      &--defalt {
+      &:hover, &.hasValue {
+        .form__group__placeholder {
+        top: 0.2em;
+        font-size: 12px;
+        }
+      }
+      }
+    }
+    }
+  }
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+  outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--filled {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		  <span class="highlight">&--disabled {
-			> * {
-			  cursor: not-allowed;
-			}
-			.form__group__input {
-			  background-color: $gray-200;
-			  border-color: $gray-200;
-			}
-		  }</span>
-		}
-	  }
-	}
+  .form__group {
+    position: relative;
+    display: table;
+    max-width: 280px;
+    > * {
+    display: block;
+    }
+    .label {
+    position: relative;
+    }
+    .form__group {
+    &__placeholder {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      color: $secondary;
+      font-size: 14px;
+      @include transition(all 0.3s);
+    }
+    &__input {
+      min-max-width: 280px;
+      color: $surface;
+      @include text-fill-color($black);
+      border-style: solid;
+      border-color: $secondary;
+      &:focus {
+      border-color: $surface;
+      }
+    }
+    }
+    &--filled {
+    .form__group__input {
+      padding: 1.5rem 1rem 0.4rem;
+      background-color: $gray-100;
+      border-width: 0px 0px 1px;
+    }
+    .form__group {
+      &--defalt {
+      &:hover, &.hasValue {
+        .form__group__placeholder {
+        top: 0.2em;
+        font-size: 12px;
+        }
+      }
+      }
+      <span class="highlight">&--disabled {
+      > * {
+        cursor: not-allowed;
+      }
+      .form__group__input {
+        background-color: $gray-200;
+        border-color: $gray-200;
+      }
+      }</span>
+    }
+    }
+  }
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>$(function(){
   $("input").parent().addClass('form__group--defalt');
   $("input[disabled*='disabled']").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -359,9 +376,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -429,9 +446,9 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre>$(function(){
   <span class="comment">// 判斷有沒有值</span>
   $("input").on('change keyup copy paste cut', function(){
 	if(!this.value) {
@@ -452,11 +469,11 @@ form {
 	$(this).siblings('i').children('span').html(this.value.length);
   });
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled <span class="highlight">form__group--hasicon</span>"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -465,9 +482,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -550,9 +567,9 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre>$(function(){
   <span class="comment">// 是否顯示密碼</span>
   $('.form__group .icon-eye').click(function () {
 	$(this).siblings('input').attr('type',
@@ -561,11 +578,11 @@ form {
 	$(this).toggleClass('icon-eyeoff icon-eyeon');
   });
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -582,9 +599,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -716,14 +733,14 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="select__group select__group--filled"&gt;
 	&lt;select&gt;
 	  &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
@@ -734,9 +751,9 @@ form {
 	&lt;/select&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>select {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>select {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -784,128 +801,128 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<ul class="direction list-reset">
+														<li><i class="highlight"></i>前端添加</li>
+														<li><i class="mis"></i>後端判斷</li>
+													</ul>
 												</div>
 											</div>
-											<ul class="direction list-reset">
-												<li><i class="highlight"></i>前端添加</li>
-												<li><i class="mis"></i>後端判斷</li>
-											</ul>
 										</div>
 									</div>
-								</div>
-							</div>
-							<hr>
-							<h2 id="outlined">
-								Outlined text fields
-							</h2>
-							<div class="flex">
-								<div class="col col-1-3">
-									<h3>Default</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default">
-											</label>
+									<hr>
+									<h2 id="outlined">
+										Outlined text fields
+									</h2>
+									<div class="row">
+										<div class="col-md-4">
+											<h3>Default</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+													</label>
+												</div>
+											</form>
+											<h3>Disabled</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--disabled" disabled="disabled">
+													</label>
+												</div>
+											</form>
+											<h3>Helper: Helper text</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+														<i class="form__group__help">* 此為必填欄位</i>
+													</label>
+												</div>
+											</form>
+											<h3>Helper: Character counter</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined form__group--countletter">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" maxlength="30">
+														<i class="form__group__help text-right"><span>0</span>/30</i>
+													</label>
+												</div>
+											</form>
 										</div>
-									</form>
-									<h3>Disabled</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--disabled" disabled="disabled">
-											</label>
+										<div class="col-md-4">
+											<h3>Password</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined form__group--hasicon">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="password" class="form__group__input form__group__input--default">
+														<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
+													</label>
+												</div>
+											</form>
+											<h3>Status: correct</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined form__group--hasicon form__group--correct">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<i class="form__group__icon icon icon-check-circle"></i>
+													</label>
+												</div>
+											</form>
+											<h3>Status: error</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined form__group--hasicon form__group--error">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<i class="form__group--outlined__icon icon icon-exclamation-circle"></i>
+														<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+													</label>
+												</div>
+											</form>
+											<h3>Dropdown</h3>
+											<form action="#!" class="form">
+												<div class="select__group select__group--outlined">
+													<select>
+														<option class="select__group__item" selected>請選擇</option>
+														<option class="select__group__item" value="1">假字假字</option>
+														<option class="select__group__item" value="2">假字假</option>
+														<option class="select__group__item" value="3">假字</option>
+														<option class="select__group__item" value="4">假字假</option>
+													</select>
+												</div>
+											</form>
 										</div>
-									</form>
-									<h3>Helper: Helper text</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default">
-												<i class="form__group__help">* 此為必填欄位</i>
-											</label>
-										</div>
-									</form>
-									<h3>Helper: Character counter</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined form__group--countletter">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" maxlength="30">
-												<i class="form__group__help text-right"><span>0</span>/30</i>
-											</label>
-										</div>
-									</form>
-								</div>
-								<div class="col col-1-3">
-									<h3>Password</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined form__group--hasicon">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="password" class="form__group__input form__group__input--default">
-												<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
-											</label>
-										</div>
-									</form>
-									<h3>Status: correct</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined form__group--hasicon form__group--correct">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
-												<i class="form__group__icon icon icon-check-circle"></i>
-											</label>
-										</div>
-									</form>
-									<h3>Status: error</h3>
-									<form action="#!" class="form">
-										<div class="form__group form__group--outlined form__group--hasicon form__group--error">
-											<label for="#!" class="label">
-												<div class="form__group__placeholder">請輸入 e-mail</div>
-												<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
-												<i class="form__group--outlined__icon icon icon-exclamation-circle"></i>
-												<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
-											</label>
-										</div>
-									</form>
-									<h3>Dropdown</h3>
-									<form action="#!" class="form">
-										<div class="select__group select__group--outlined">
-											<select>
-												<option class="select__group__item" selected>請選擇</option>
-												<option class="select__group__item" value="1">假字假字</option>
-												<option class="select__group__item" value="2">假字假</option>
-												<option class="select__group__item" value="3">假字</option>
-												<option class="select__group__item" value="4">假字假</option>
-											</select>
-										</div>
-									</form>
-								</div>
-							</div>
-							<h2>How to Use</h2>
-							<div class="flex code--block">
-								<div class="col col-3-3">
-									<div class="tab">
-										<div class="tab__nav">
-											<ul class="list-reset">
-												<li class="active"><span>Default</span></li>
-												<li><span>Disabled</span></li>
-												<li><span>Helper</span></li>
-												<li><span>Password</span></li>
-												<li><span>Status</span></li>
-												<li><span>Dropdown</span></li>
-											</ul>
-										</div>
-										<div class="tab__content">
-											<div class="tab__content__pane active">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+									</div>
+									<h2>How to Use</h2>
+									<div class="row">
+										<div class="col-md-12 code--block">
+											<div class="tab">
+												<div class="tab__nav">
+													<ul class="list-reset">
+														<li class="active"><span>Default</span></li>
+														<li><span>Disabled</span></li>
+														<li><span>Helper</span></li>
+														<li><span>Password</span></li>
+														<li><span>Status</span></li>
+														<li><span>Dropdown</span></li>
+													</ul>
+												</div>
+												<div class="tab__content">
+													<div class="tab__content__pane active">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -913,9 +930,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -976,14 +993,14 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -991,9 +1008,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -1063,17 +1080,17 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>$(function(){
   $("input").parent().addClass('form__group--defalt');
   $("input[disabled*='disabled']").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -1089,9 +1106,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -1161,9 +1178,9 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre>$(function(){
   <span class="comment">// 判斷有沒有值</span>
   $("input").on('change keyup copy paste cut', function(){
 	if(!this.value) {
@@ -1184,11 +1201,11 @@ form {
 	$(this).siblings('i').children('span').html(this.value.length);
   });
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined <span class="highlight">form__group--hasicon</span>"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -1197,9 +1214,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -1281,9 +1298,9 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre>$(function(){
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre>$(function(){
   <span class="comment">// 是否顯示密碼</span>
   $('.form__group .icon-eye').click(function () {
 	$(this).siblings('input').attr('type',
@@ -1292,11 +1309,11 @@ form {
 	$(this).toggleClass('icon-eyeoff icon-eyeon');
   });
 });</pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
 	&lt;label for="#!" class="label"&gt;
 	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
@@ -1313,9 +1330,9 @@ form {
 	&lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>input {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>input {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -1431,14 +1448,14 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
-												</div>
-											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre>&lt;form action="#!" class="form"&gt;
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<div class="tab__content__pane">
+														<div class="code__block--text code__block--html bg-black">
+															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="select__group select__group--outlined"&gt;
 	&lt;select&gt;
 	  &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
@@ -1449,9 +1466,9 @@ form {
 	&lt;/select&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre>select {
+														</div>
+														<div class="code__block--text code__block--scss bg-black">
+															<pre>select {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -1499,15 +1516,17 @@ form {
 	}
   }
 }</pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+														<div class="code__block--text code__block--js bg-black">
+															<pre><span class="comment">// 沒有JS </span></pre>
+														</div>
+													</div>
+													<ul class="direction list-reset">
+														<li><i class="highlight"></i>前端添加</li>
+														<li><i class="mis"></i>後端判斷</li>
+													</ul>
 												</div>
 											</div>
-											<ul class="direction list-reset">
-												<li><i class="highlight"></i>前端添加</li>
-												<li><i class="mis"></i>後端判斷</li>
-											</ul>
 										</div>
 									</div>
 								</div>

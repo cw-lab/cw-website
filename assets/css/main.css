@@ -903,6 +903,9 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
   color: #fff;
 }
 
+nav a {
+  display: block;
+}
 nav.menubar--left {
   position: fixed;
   top: 0;
@@ -1583,6 +1586,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 
 .tab__nav {
+  position: relative;
   border: solid #D3D5D7;
   border-width: 1px 1px 0;
 }
@@ -1597,6 +1601,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   }
 }
 .tab__nav > ul {
+  position: relative;
   display: flex;
 }
 @media (min-width: 768px) {
@@ -1604,16 +1609,11 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
     margin: -1px;
   }
 }
-@media (max-width: 767px) {
-  .tab__nav > ul {
-    padding-left: 50px;
-  }
-}
 .tab__nav > ul li {
   position: relative;
   display: flex;
   min-width: 110px;
-  padding: 5px 25px;
+  padding: 5px;
   line-height: 2.6rem;
   justify-content: center;
   align-items: center;
@@ -1630,6 +1630,27 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 .tab__nav > ul li.active {
   color: #D60C18;
   border-color: #D60C18;
+}
+.tab__nav__next {
+  display: none;
+  width: 60px;
+  padding-left: 10px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.tab__nav--desktop .tab__nav__next {
+  display: flex;
+}
+.tab__nav--mobile .tab__nav__next {
+  display: none;
+}
+.tab__nav--overflow {
+  display: flex;
+}
+.tab__nav--overflow > ul {
+  padding-left: 50px;
+  overflow: scroll;
 }
 .tab__content__pane {
   display: none;
@@ -1648,6 +1669,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 .article__group .article__group__item__img a {
   position: relative;
+  display: block;
   width: 100%;
   height: 0;
   padding-top: 66.984126984126984%;
@@ -1706,6 +1728,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   line-height: 1;
 }
 .article__group .article__group__item__text h1 a, .article__group .article__group__item__text h2 a {
+  display: block;
   color: #171717;
 }
 .article__group .article__group__item__text h1 a:hover, .article__group .article__group__item__text h2 a:hover {
@@ -1713,11 +1736,13 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 .article__group .article__group__item__text h4 a {
   color: #D60C18;
+  display: block;
 }
 .article__group .article__group__item__text h4 a:hover {
   color: #9D0505;
 }
 .article__group .article__group__item__text h5 a {
+  display: block;
   color: #939EA7;
 }
 .article__group .article__group__item--main {

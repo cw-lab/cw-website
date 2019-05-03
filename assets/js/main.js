@@ -47,6 +47,19 @@ $(function(){
 		});
 	}
 	tabNavWidth (width);
+	$(".tab__nav").each(function(){
+		if ( ($(this).outerWidth() / $(this).children().children("li").length) < 110) {
+			$(this).addClass("tab__nav--overflow");
+			$(this).append("<div class='tab__nav__next'><i class='icon icon-right'></i></div>");
+			if (width >= 768) {
+				$(this).addClass("tab__nav--desktop");
+			} else {
+				$(this).addClass("tab__nav--mobile");
+			}
+		} else {
+			$(this).removeClass("tab__nav--overflow");
+		}
+	});
 	// 當tooltips大於等於15字
 	$(".tooltips").each(function(){
 		if ($(this).data("tooltips").length >= 15 ) {
@@ -81,13 +94,6 @@ $(function(){
 		$(".menubar__user__slide").slideToggle();
 		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
 		$('.opacity').toggleClass('opened');
-	});
-	$(".tab__nav").each(function(){
-		if ($(this).offsetWidth < $(this).scrollWidth) {
-			$(this).addClass("overflow");
-		} else {
-			$(this).removeClass("overflow");
-		}
 	});
 	$(window).resize(function(width) {
 		var width = $(window).width();

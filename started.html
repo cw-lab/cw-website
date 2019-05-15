@@ -24,42 +24,123 @@
 						<aside class="select-side"></aside>
 						<div class="content-side">
 							<div class="flex">
-								<div class="col col-2-3">
-									<h1>
-										開始吧
-									</h1>
-									<h2>我們的元件是一系列界面元素，可以在天下網站系統中重複使用。</h2>
+								<div class="col-md-8">
+									<h1>開始吧</h1>
 									<p>
-										可以組合元件以幫助任何人為天下構建數位產品，有效地提供讀者一致的設計體驗。
+										我們的元件是一系列的界面元素，可以在《天下》數位產品中重複使用。此外，他們可以組合任一《天下》數位產品，有效地為使用者提供一致的體驗。這樣我們能專注於解決不同的挑戰，而不是重新發明已經在使用的界面元素。
 									</p>
 								</div>
+								<div class="col-md-12">
+									<hr>
+									<h2>開始前</h2>
+									<p>
+										《天下》元件庫是幫助數位設計能快速的建立《天下》數位產品良好的體驗。每個元件都包含一些訊息，協助大家組合元件：
+										<ul>
+											<li>解釋使用者可能會遇到的問題，並運用介面去解決；</li>
+											<li>提供互動式的範例，讓數位設計們可以知道元件的任何動作；</li>
+											<li>提供 code，及各個元件原則，讓數位設計們可以正確使用它們。</li>
+										</ul>
+										此外，我們在命名及定位點上更加嚴謹。
+									</p>
+								</div>
+								<div class="col-md-10">
+									<h3>命名</h3>
+									<p>
+										<span style="width: 100px;display: inline-block;">使用原則</span><a href="http://getbem.com/faq/" target="_blank">BEM (Block Element Modify)</a><br>
+										<span style="width: 100px;display: inline-block;">Block</span>區塊<br>
+										<span style="width: 100px;display: inline-block;">Element</span>元素<br>
+										<span style="width: 100px;display: inline-block;">Modify</span>修飾符<br>
+										<span style="width: 100px;display: inline-block;">優勢</span>透過 class 名稱就可以告訴開發者它們之間的依賴關係，讓維護上更加方便；透過觀察 class 就能夠了解架構。											
+									</p>
+									<div class="code__block--text bg-black">
+										<pre style="height: auto;"><span class="tag">&lt;</span><span class="tag">nav</span> <span class="attribute">class</span>=<span class="string">"nav"</span><span class="tag">&gt;</span></span>
+&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag">ul</span> <span class="attribute">class</span>=<span class="string">"nav__menu nav__menu--member"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/</span><span class="tag">ul</span><span class="tag">&gt;</span></span>
+&nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag">div</span> <span class="attribute">class</span>=<span class="string">"nav__member nav__menu--common"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">&gt;</span></span>
+<span class="tag">&lt;/</span><span class="tag">nav</span><span class="tag">&gt;</span></span></pre>
+									</div>
+									<p>
+										<span style="width: 100px;display: inline-block;">Block</span><span style="width: 200px;display: inline-block;">.nav</span>（導覽列）<br>
+										<span style="width: 100px;display: inline-block;">Element</span><span style="width: 200px;display: inline-block;">.nav__menu</span>（導覽列中的 menu 功能）<br>
+										<span style="width: 100px;display: inline-block;">Modify</span><span style="width: 200px;display: inline-block;">.nav__menu--member</span>（導覽列中的 menu 為 member 功能 vs. 導覽列中的 menu 為共通功能）<br>
+									</p>
+									<p>
+										modify 應以功能來做命名<br>
+										Example：
+										<ul>
+											<li>.product--main</li>
+											<li>.product--sale</li>
+										</ul>
+									</p>
+								</div>
+								<div class="col-md-10">
+									<h3>定位點</h3>
+									<div class="code__block--text bg-black">
+										<pre style="height: auto;">//Small devices (portrait phones, 375 and Up)
+//ex. iPhone 5/SE
+@media screen and (min-width: 375px) { ... }
+
+//Small devices (portrait phones, 414 and Up)
+@media screen and (min-width: 414px) { ... }
+
+//Medium devices (portrait tablets, landscape phone, 768px and Up)
+@media screen and (min-width: 768px) { ... }
+
+//Large devices (landscape tablets, 1200 and Up)
+@media screen and (min-width: 1200px) { ... }</pre>
+									</div>
+									<br>
+								</div>
+								<div class="col-md-10">
+										<h2>安裝及組合</h2>
+									<p>元件庫，我們將使用 HTML、CSS 及 jQuery 來組合。</p>
+									<ol>
+										<li>
+											如果只是單純要組合元件，可以直接嵌入這三隻檔案
+											<div class="code__block--text bg-black">
+													<pre style="height: auto;">&lt;link rel="stylesheet" href="https://www.cw.com.tw/assets/1.0.0/css/main.min.css" /&gt;
+&lt;script src="https://www.cw.com.tw/assets/js/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://www.cw.com.tw/assets/1.0.0/js/main.min.js"&gt;&lt;/script&gt;</pre>
+											</div><br>
+										</li>
+										<li>
+											如果想要修改元件，我們提供SCSS原始碼<br>
+											所有的SCSS檔名將對應各項元件
+											<div class="code__block--text bg-black">
+													<pre style="height: auto;">assets/
+├── 1.0.0/
+│   ├── sass/
+│   │   ├── _code.scss
+│   │   ├── _basic.scss
+│   │   ├── _sheet.scss
+│   │   ├── _columns.scss
+│   │   ├── _button.scss
+│   │   ├── _color.scss
+│   │   ├── _font.scss
+│   │   ├── _iconography.scss
+│   │   ├── _list.scss
+│   │   ├── _message.scss
+│   │   ├── _navigation.scss
+│   │   ├── _selection.scss
+│   │   ├── _space.scss
+│   │   ├── _tabs.scss
+│   │   ├── _textfield.scss
+│   │   ├── _tooltips.scss
+│   │   ├── _typography.scss
+│   │   ├── layout.scss
+│   │   └── main.scss
+│   └── js/
+│          └── main.min.js
+├── img/
+├── fonts/
+└── js/
+     └── jquery-1.12.4.min.js</pre>
+											</div>
+										</li>
+									</ol>
+								</div>
+								<div class="col-md-12">
+								</div>
 							</div>
-							<hr>
-							<!-- <h2>如何使用</h2>
-							<div class="flex code--block">
-								<div class="col col-1-3">
-									<h6>HTML</h6>
-									<div class="code--block__text code--block__html">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
-								<div class="col col-1-3">
-									<h6>SCSS</h6>
-									<div class="code--block__text code--block__css">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
-								<div class="col col-1-3">
-									<h6>JS</h6>
-									<div class="code--block__text code--block__js">
-										<pre class="bg-white"></pre>
-									</div>
-								</div>
-								<div class="col col-3-3">
-									<h6>畫面</h6>
-									<div class="code code--block__html"></div>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div>

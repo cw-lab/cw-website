@@ -181,6 +181,17 @@
 													</label>
 												</div>
 											</form>
+											<h3>Status: undone</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--filled form__group--undone">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+													</label>
+												</div>
+											</form>
+										</div>
+										<div class="col-md-4">
 											<h3>Dropdown</h3>
 											<form action="#!" class="form">
 												<div class="select__group select__group--filled">
@@ -227,59 +238,59 @@
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-  outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-  .form__group {
-    position: relative;
-    display: table;
-    max-width: 280px;
-    > * {
-    display: block;
-    }
-    .label {
-    position: relative;
-    }
     .form__group {
-    &__placeholder {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      color: $secondary;
-      font-size: 14px;
-      @include transition(all 0.3s);
-    }
-    &__input {
-      min-max-width: 280px;
-      color: $surface;
-      @include text-fill-color($black);
-      border-style: solid;
-      border-color: $secondary;
-      &:focus {
-      border-color: $surface;
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
       }
-    }
-    }
-    &--filled {
-    .form__group__input {
-      padding: 1.5rem 1rem 0.4rem;
-      background-color: $gray-100;
-      border-width: 0px 0px 1px;
-    }
-    .form__group {
-      &--defalt {
-      &:hover, &.hasValue {
-        .form__group__placeholder {
-        top: 0.2em;
-        font-size: 12px;
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+           border-color: $surface;
+          }
         }
       }
+      &--filled {
+        .form__group__input {
+          padding: 1.5rem 1rem 0.4rem;
+          background-color: $gray-100;
+          border-width: 0px 0px 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+                top: 0.2em;
+                font-size: 12px;
+              }
+            }
+          }
+        }
       }
     }
-    }
-  }
   }
 }</pre>
 														</div>
@@ -303,68 +314,68 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-  outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-  .form__group {
-    position: relative;
-    display: table;
-    max-width: 280px;
-    > * {
-    display: block;
-    }
-    .label {
-    position: relative;
-    }
     .form__group {
-    &__placeholder {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      color: $secondary;
-      font-size: 14px;
-      @include transition(all 0.3s);
-    }
-    &__input {
-      min-max-width: 280px;
-      color: $surface;
-      @include text-fill-color($black);
-      border-style: solid;
-      border-color: $secondary;
-      &:focus {
-      border-color: $surface;
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
       }
-    }
-    }
-    &--filled {
-    .form__group__input {
-      padding: 1.5rem 1rem 0.4rem;
-      background-color: $gray-100;
-      border-width: 0px 0px 1px;
-    }
-    .form__group {
-      &--defalt {
-      &:hover, &.hasValue {
-        .form__group__placeholder {
-        top: 0.2em;
-        font-size: 12px;
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+            border-color: $surface;
+          }
         }
       }
+      &--filled {
+        .form__group__input {
+          padding: 1.5rem 1rem 0.4rem;
+          background-color: $gray-100;
+          border-width: 0px 0px 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+              top: 0.2em;
+              font-size: 12px;
+              }
+            }
+          }
+          <span class="highlight">&--disabled {
+            > * {
+              cursor: not-allowed;
+            }
+            .form__group__input {
+              background-color: $gray-200;
+              border-color: $gray-200;
+            }
+          }</span>
+        }
       }
-      <span class="highlight">&--disabled {
-      > * {
-        cursor: not-allowed;
-      }
-      .form__group__input {
-        background-color: $gray-200;
-        border-color: $gray-200;
-      }
-      }</span>
     }
-    }
-  }
   }
 }</pre>
 														</div>
@@ -379,18 +390,18 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default"&gt;
-	  <span class="highlight">&lt;i class="form__group__help"&gt;* 此為必填欄位&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default"&gt;
+    <span class="highlight">&lt;i class="form__group__help"&gt;* 此為必填欄位&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="form__group form__group--filled <span class="highlight">form__group--countletter</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">maxlength="30"</span>&gt;
-	  <span class="highlight">&lt;i class="form__group__help text-right"&gt;&lt;span&gt;0&lt;/span&gt;/30&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">maxlength="30"</span>&gt;
+    <span class="highlight">&lt;i class="form__group__help text-right"&gt;&lt;span&gt;0&lt;/span&gt;/30&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -399,68 +410,68 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-		<span class="highlight">&__help {
-		  padding-left: 1rem;
-		  padding-right: 1rem;
-		  margin-top: 5px;
-		  color: $secondary;
-		  font-size: 12px;
-		  font-style: normal;
-		  line-height: 1;
-		}</span>
-	  }
-	  &--filled {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		}
-	  }
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+        <span class="highlight">&__help {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-top: 5px;
+          color: $secondary;
+          font-size: 12px;
+          font-style: normal;
+          line-height: 1;
+        }</span>
+      }
+      &--filled {
+        .form__group__input {
+          padding: 1.5rem 1rem 0.4rem;
+          background-color: $gray-100;
+          border-width: 0px 0px 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+              top: 0.2em;
+              font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }</pre>
 														</div>
@@ -468,22 +479,22 @@ form {
 															<pre>$(function(){
   <span class="comment">// 判斷有沒有值</span>
   $("input").on('change keyup copy paste cut', function(){
-	if(!this.value) {
-	  $(this).parent().removeClass('hasValue');
-	} else {
-	  $(this).parent().addClass('hasValue');
-	}
+    if(!this.value) {
+      $(this).parent().removeClass('hasValue');
+    } else {
+      $(this).parent().addClass('hasValue');
+    }
   });
   $("input").each(function(){
-	if(!this.value) {
-	  $(this).parent().removeClass('hasValue');
-	} else {
-	  $(this).parent().addClass('hasValue');
-	}
+    if(!this.value) {
+      $(this).parent().removeClass('hasValue');
+    } else {
+      $(this).parent().addClass('hasValue');
+    }
   });
   <span class="comment">// 統計字數</span>
   $('.form__group--countletter input').keyup(function() {
-	$(this).siblings('i').children('span').html(this.value.length);
+    $(this).siblings('i').children('span').html(this.value.length);
   });
 });</pre>
 														</div>
@@ -492,11 +503,11 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled <span class="highlight">form__group--hasicon</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="password" class="form__group__input form__group__input--default"&gt;
-	  <span class="highlight">&lt;i class="form__group__icon icon icon-eye icon-eyeoff"&gt;&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="password" class="form__group__input form__group__input--default"&gt;
+    <span class="highlight">&lt;i class="form__group__icon icon icon-eye icon-eyeoff"&gt;&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -505,83 +516,83 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--filled {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		  &--hasicon {
-			.form__group__input {
-			  padding: 1.5rem 3rem 0.4rem 1rem;
-			}
-			i.icon {
-			  top: 1.5rem;
-			}
-		  }
-		}
-	  }
-	  &--defalt {
-		&:hover {
-		  .form__group__placeholder {
-			color: $surface;
-		  }
-		}
-	  }
-	  <span class="highlight">&--hasicon {
-		i.icon {
-		  position: absolute;
-		  top: 1.25rem;
-		  right: 1rem;
-		  font-size: 1rem;
-		  @include transition(all 0.3s);
-		}
-	  }</span>
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+      }
+      &--filled {
+        .form__group__input {
+          padding: 1.5rem 1rem 0.4rem;
+          background-color: $gray-100;
+          border-width: 0px 0px 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+              top: 0.2em;
+              font-size: 12px;
+              }
+            }
+          }
+          &--hasicon {
+            .form__group__input {
+              padding: 1.5rem 3rem 0.4rem 1rem;
+            }
+            i.icon {
+              top: 1.5rem;
+            }
+          }
+        }
+      }
+      &--defalt {
+        &:hover {
+          .form__group__placeholder {
+          color: $surface;
+          }
+        }
+      }
+      <span class="highlight">&--hasicon {
+        i.icon {
+          position: absolute;
+          top: 1.25rem;
+          right: 1rem;
+          font-size: 1rem;
+          @include transition(all 0.3s);
+        }
+      }</span>
+    }
   }
 }</pre>
 														</div>
@@ -589,10 +600,10 @@ form {
 															<pre>$(function(){
   <span class="comment">// 是否顯示密碼</span>
   $('.form__group .icon-eye').click(function () {
-	$(this).siblings('input').attr('type',
-	  $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
-	);
-	$(this).toggleClass('icon-eyeoff icon-eyeon');
+    $(this).siblings('input').attr('type',
+      $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
+    );
+    $(this).toggleClass('icon-eyeoff icon-eyeon');
   });
 });</pre>
 														</div>
@@ -601,19 +612,19 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--filled <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
-	  <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+    <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="form__group form__group--filled <span class="mis">form__group--hasicon form__group--error</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
-	  <span class="mis">&lt;i class="form__group form__group--filled__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;</span>
-	  <span class="mis">&lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+    <span class="mis">&lt;i class="form__group form__group--filled__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;</span>
+    <span class="mis">&lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -622,132 +633,132 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-		&__help {
-		  padding-left: 1rem;
-		  padding-right: 1rem;
-		  margin-top: 5px;
-		  color: $secondary;
-		  font-size: 12px;
-		  font-style: normal;
-		  line-height: 1;
-		}
-	  }
-	  &--filled {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		  <span class="highlight">&--correct {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				color: $surface;
-			  }
-			  .form__group__input {
-				border-color: $surface;
-			  }
-			}
-		  }
-		  &--error {
-			.form__group__input {
-			  color: $primary;
-			}
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				color: $primary;
-			  }
-			  .form__group__input {
-				border-color: $primary;
-			  }
-			}
-		  }
-		  &--hasicon {
-			.form__group__input {
-			  padding: 1.5rem 3rem 0.4rem 1rem;
-			}
-			i.icon {
-			  top: 1.5rem;
-			}
-		  }</span>
-		}
-	  }
-	  &--defalt {
-		&:hover {
-		  .form__group__placeholder {
-			color: $surface;
-		  }
-		}
-	  }
-	 <span class="highlight"> &--hasicon {
-		i.icon {
-		  position: absolute;
-		  top: 1.25rem;
-		  right: 1rem;
-		  font-size: 1rem;
-		  @include transition(all 0.3s);
-		}
-	  }
-	  &--correct {
-		.form__group__placeholder, .icon {
-		  color: $surface;
-		}
-		.form__group__input {
-		  border-color: $surface;
-		}
-	  }
-	  &--error {
-		.form__group__placeholder, .icon, .form__group__help {
-		  color: $primary !important;
-		}
-		.form__group__input {
-		  color: $primary;
-		  border-color: $primary !important;
-		}
-	  }</span>
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+        &__help {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-top: 5px;
+          color: $secondary;
+          font-size: 12px;
+          font-style: normal;
+          line-height: 1;
+        }
+      }
+      &--filled {
+      .form__group__input {
+        padding: 1.5rem 1rem 0.4rem;
+        background-color: $gray-100;
+        border-width: 0px 0px 1px;
+      }
+      .form__group {
+        &--defalt {
+          &:hover, &.hasValue {
+            .form__group__placeholder {
+            top: 0.2em;
+            font-size: 12px;
+            }
+          }
+        }
+        <span class="highlight">&--correct {
+          &:hover, &.hasValue {
+            .form__group__placeholder {
+              color: $surface;
+            }
+            .form__group__input {
+             border-color: $surface;
+            }
+          }
+        }
+        &--error {
+          .form__group__input {
+            color: $primary;
+          }
+          &:hover, &.hasValue {
+            .form__group__placeholder {
+              color: $primary;
+            }
+            .form__group__input {
+             border-color: $primary;
+            }
+          }
+        }
+        &--hasicon {
+          .form__group__input {
+            padding: 1.5rem 3rem 0.4rem 1rem;
+          }
+          i.icon {
+            top: 1.5rem;
+          }
+        }</span>
+      }
+      }
+      &--defalt {
+        &:hover {
+          .form__group__placeholder {
+            color: $surface;
+          }
+        }
+      }
+      <span class="highlight"> &--hasicon {
+        i.icon {
+          position: absolute;
+          top: 1.25rem;
+          right: 1rem;
+          font-size: 1rem;
+          @include transition(all 0.3s);
+        }
+      }
+      &--correct {
+        .form__group__placeholder, .icon {
+          color: $surface;
+        }
+        .form__group__input {
+          border-color: $surface;
+        }
+      }
+      &--error {
+        .form__group__placeholder, .icon, .form__group__help {
+          color: $primary !important;
+        }
+        .form__group__input {
+          color: $primary;
+          border-color: $primary !important;
+        }
+      }</span>
+    }
   }
 }</pre>
 														</div>
@@ -774,48 +785,48 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.select__group {
-	  position: relative;
-	  display: table;
-	  &::before {
-		content: "\e910";
-		position: absolute;
-		display: block;
-		top: 50%;
-		right: 1rem;
-		color: #000;
-		font-family: 'icomoon';
-		font-size: 12px;
-		@include translateY(-50%);
-	  }
-	  select {
-		min-width: 140px;
-		padding: 1rem;
-		line-height: 1;
-		border: 1px solid;
-		cursor: pointer;
-	  }
-	  &--filled {
-		select {
-		  border-color: $gray-100;
-		  background-color: $gray-100;
-		}
-		&:hover {
-		  &::before {
-			color: $white;
-		  }
-		  select {
-			color: $white;
-			background-color: $surface;
-		  }
-		}
-	  }
-	}
+    .select__group {
+      position: relative;
+      display: table;
+      &::before {
+        content: "\e910";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1rem;
+        color: #000;
+        font-family: 'icomoon';
+        font-size: 12px;
+        @include translateY(-50%);
+      }
+      select {
+        min-width: 140px;
+        padding: 1rem;
+        line-height: 1;
+        border: 1px solid;
+        cursor: pointer;
+      }
+      &--filled {
+        select {
+          border-color: $gray-100;
+          background-color: $gray-100;
+        }
+        &:hover {
+          &::before {
+            color: $white;
+          }
+          select {
+            color: $white;
+            background-color: $surface;
+          }
+        }
+      }
+    }
   }
 }</pre>
 														</div>
@@ -913,6 +924,17 @@ form {
 													</label>
 												</div>
 											</form>
+											<h3>Status: undone</h3>
+											<form action="#!" class="form">
+												<div class="form__group form__group--outlined form__group--undone">
+													<label for="#!" class="label">
+														<div class="form__group__placeholder">請輸入 e-mail</div>
+														<input type="email" class="form__group__input form__group__input--default">
+													</label>
+												</div>
+											</form>
+										</div>
+										<div class="col-md-4">
 											<h3>Dropdown</h3>
 											<form action="#!" class="form">
 												<div class="select__group select__group--outlined">
@@ -959,61 +981,61 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--outlined {
-		.form__group__input {
-		  padding: 1.1rem 1rem 0.7rem;
-		  background-color: transparent;
-		  border-width: 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: -0.8em;
-				padding: 0 2px;
-				font-size: 12px;
-				background-color: $white;
-			  }
-			}
-		  }
-		}
-	  }
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+      }
+      &--outlined {
+        .form__group__input {
+          padding: 1.1rem 1rem 0.7rem;
+          background-color: transparent;
+          border-width: 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+                top: -0.8em;
+                padding: 0 2px;
+                font-size: 12px;
+                background-color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }</pre>
 														</div>
@@ -1025,10 +1047,10 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
-	&lt;/label&gt;
+    &lt;label for="#!" class="label"&gt;
+      &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" <span class="mis">disabled="disabled"</span>&gt;
+    &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -1037,70 +1059,70 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--outlined {
-		.form__group__input {
-		  padding: 1.1rem 1rem 0.7rem;
-		  background-color: transparent;
-		  border-width: 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: -0.8em;
-				padding: 0 2px;
-				font-size: 12px;
-				background-color: $white;
-			  }
-			}
-		  }
-		  <span class="highlight">&--disabled {
-			> * {
-			  cursor: not-allowed;
-			}
-			.form__group__input {
-			  background-color: $gray-200;
-			  border-color: $gray-200;
-			}
-		  }</span>
-		}
-	  }
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+      }
+      &--outlined {
+        .form__group__input {
+          padding: 1.1rem 1rem 0.7rem;
+          background-color: transparent;
+          border-width: 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+                top: -0.8em;
+                padding: 0 2px;
+                font-size: 12px;
+                background-color: $white;
+              }
+            }
+          }
+          <span class="highlight">&--disabled {
+            > * {
+              cursor: not-allowed;
+            }
+            .form__group__input {
+              background-color: $gray-200;
+              border-color: $gray-200;
+            }
+          }</span>
+        }
+      }
+    }
   }
 }</pre>
 														</div>
@@ -1115,18 +1137,18 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default"&gt;
-	  <span class="highlight">&lt;i class="form__group__help"&gt;* 此為必填欄位&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default"&gt;
+    <span class="highlight">&lt;i class="form__group__help"&gt;* 此為必填欄位&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="form__group form__group--outlined <span class="highlight">form__group--countletter</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">maxlength="30"</span>&gt;
-	  <span class="highlight">&lt;i class="form__group__help text-right"&gt;&lt;span&gt;0&lt;/span&gt;/30&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" <span class="highlight">maxlength="30"</span>&gt;
+    <span class="highlight">&lt;i class="form__group__help text-right"&gt;&lt;span&gt;0&lt;/span&gt;/30&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -1135,70 +1157,70 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-		<span class="highlight">&__help {
-		  padding-left: 1rem;
-		  padding-right: 1rem;
-		  margin-top: 5px;
-		  color: $secondary;
-		  font-size: 12px;
-		  font-style: normal;
-		  line-height: 1;
-		}</span>
-	  }
-	  &--outlined {
-		.form__group__input {
-		  padding: 1.1rem 1rem 0.7rem;
-		  background-color: transparent;
-		  border-width: 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: -0.8em;
-				padding: 0 2px;
-				font-size: 12px;
-				background-color: $white;
-			  }
-			}
-		  }
-		}
-	  }
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+            border-color: $surface;
+          }
+        }
+        <span class="highlight">&__help {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-top: 5px;
+          color: $secondary;
+          font-size: 12px;
+          font-style: normal;
+          line-height: 1;
+        }</span>
+      }
+      &--outlined {
+        .form__group__input {
+          padding: 1.1rem 1rem 0.7rem;
+          background-color: transparent;
+          border-width: 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+                top: -0.8em;
+                padding: 0 2px;
+                font-size: 12px;
+                background-color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }</pre>
 														</div>
@@ -1206,22 +1228,22 @@ form {
 															<pre>$(function(){
   <span class="comment">// 判斷有沒有值</span>
   $("input").on('change keyup copy paste cut', function(){
-	if(!this.value) {
-	  $(this).parent().removeClass('hasValue');
-	} else {
-	  $(this).parent().addClass('hasValue');
-	}
+    if(!this.value) {
+      $(this).parent().removeClass('hasValue');
+    } else {
+      $(this).parent().addClass('hasValue');
+    }
   });
   $("input").each(function(){
-	if(!this.value) {
-	  $(this).parent().removeClass('hasValue');
-	} else {
-	  $(this).parent().addClass('hasValue');
-	}
+    if(!this.value) {
+      $(this).parent().removeClass('hasValue');
+    } else {
+      $(this).parent().addClass('hasValue');
+    }
   });
   <span class="comment">// 統計字數</span>
   $('.form__group--countletter input').keyup(function() {
-	$(this).siblings('i').children('span').html(this.value.length);
+    $(this).siblings('i').children('span').html(this.value.length);
   });
 });</pre>
 														</div>
@@ -1230,11 +1252,11 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined <span class="highlight">form__group--hasicon</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="password" class="form__group__input form__group__input--default"&gt;
-	  <span class="highlight">&lt;i class="form__group__icon icon icon-eye icon-eyeoff"&gt;&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="password" class="form__group__input form__group__input--default"&gt;
+    <span class="highlight">&lt;i class="form__group__icon icon icon-eye icon-eyeoff"&gt;&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -1243,82 +1265,82 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-	  }
-	  &--outlined {
-		.form__group__input {
-		  padding: 1.1rem 1rem 0.7rem;
-		  background-color: transparent;
-		  border-width: 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: -0.8em;
-				padding: 0 2px;
-				font-size: 12px;
-				background-color: $white;
-			  }
-			}
-		  }
-		  &--hasicon {
-			.form__group__input {
-			  padding: 1.1rem 3rem 0.7rem 1rem;
-			}
-		  }
-		}
-	  }
-	  &--defalt {
-		&:hover {
-		  .form__group__placeholder {
-			color: $surface;
-		  }
-		}
-	  }
-	  <span class="highlight">&--hasicon {
-		i.icon {
-		  position: absolute;
-		  top: 1.25rem;
-		  right: 1rem;
-		  font-size: 1rem;
-		  @include transition(all 0.3s);
-		}
-	  }</span>
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+          border-color: $surface;
+          }
+        }
+      }
+      &--outlined {
+        .form__group__input {
+          padding: 1.1rem 1rem 0.7rem;
+          background-color: transparent;
+          border-width: 1px;
+        }
+        .form__group {
+          &--defalt {
+          &:hover, &.hasValue {
+            .form__group__placeholder {
+            top: -0.8em;
+            padding: 0 2px;
+            font-size: 12px;
+            background-color: $white;
+            }
+          }
+          }
+          &--hasicon {
+            .form__group__input {
+              padding: 1.1rem 3rem 0.7rem 1rem;
+            }
+          }
+        }
+      }
+      &--defalt {
+        &:hover {
+          .form__group__placeholder {
+            color: $surface;
+          }
+        }
+      }
+      <span class="highlight">&--hasicon {
+        i.icon {
+          position: absolute;
+          top: 1.25rem;
+          right: 1rem;
+          font-size: 1rem;
+          @include transition(all 0.3s);
+        }
+      }</span>
+    }
   }
 }</pre>
 														</div>
@@ -1326,10 +1348,10 @@ form {
 															<pre>$(function(){
   <span class="comment">// 是否顯示密碼</span>
   $('.form__group .icon-eye').click(function () {
-	$(this).siblings('input').attr('type',
-	  $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
-	);
-	$(this).toggleClass('icon-eyeoff icon-eyeon');
+    $(this).siblings('input').attr('type',
+      $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
+    );
+    $(this).toggleClass('icon-eyeoff icon-eyeon');
   });
 });</pre>
 														</div>
@@ -1338,19 +1360,19 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="form__group form__group--outlined <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
-	  <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+    <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
   &lt;div class="form__group form__group--outlined <span class="mis">form__group--hasicon form__group--error</span>"&gt;
-	&lt;label for="#!" class="label"&gt;
-	  &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-	  &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
-	  <span class="mis">&lt;i class="form__group form__group--outlined__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;</span>
-	  <span class="mis">&lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
-	&lt;/label&gt;
+  &lt;label for="#!" class="label"&gt;
+    &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
+    &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+    <span class="mis">&lt;i class="form__group form__group--outlined__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;</span>
+    <span class="mis">&lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
+  &lt;/label&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -1359,116 +1381,116 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.form__group {
-	  position: relative;
-	  display: table;
-	  max-width: 280px;
-	  > * {
-		display: block;
-	  }
-	  .label {
-		position: relative;
-	  }
-	  .form__group {
-		&__placeholder {
-		  position: absolute;
-		  top: 1rem;
-		  left: 1rem;
-		  color: $secondary;
-		  font-size: 14px;
-		  @include transition(all 0.3s);
-		}
-		&__input {
-		  min-max-width: 280px;
-		  color: $surface;
-		  @include text-fill-color($black);
-		  border-style: solid;
-		  border-color: $secondary;
-		  &:focus {
-			border-color: $surface;
-		  }
-		}
-		&__help {
-		  padding-left: 1rem;
-		  padding-right: 1rem;
-		  margin-top: 5px;
-		  color: $secondary;
-		  font-size: 12px;
-		  font-style: normal;
-		  line-height: 1;
-		}
-	  }
-	  &--outlined {
-		.form__group__input {
-		  padding: 1.5rem 1rem 0.4rem;
-		  background-color: $gray-100;
-		  border-width: 0px 0px 1px;
-		}
-		.form__group {
-		  &--defalt {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				top: 0.2em;
-				font-size: 12px;
-			  }
-			}
-		  }
-		  <span class="highlight">&--correct {
-			&:hover, &.hasValue {
-			  .form__group__placeholder {
-				color: $surface;
-			  }
-			  .form__group__input {
-				border-color: $surface;
-			  }
-			}
-		  }
-		  &--hasicon {
-			.form__group__input {
-			  padding: 1.1rem 3rem 0.7rem 1rem;
-			}
-		  }</span>
-		}
-	  }
-	  &--defalt {
-		&:hover {
-		  .form__group__placeholder {
-			color: $surface;
-		  }
-		}
-	  }
-	 <span class="highlight"> &--hasicon {
-		i.icon {
-		  position: absolute;
-		  top: 1.25rem;
-		  right: 1rem;
-		  font-size: 1rem;
-		  @include transition(all 0.3s);
-		}
-	  }
-	  &--correct {
-		.form__group__placeholder, .icon {
-		  color: $surface;
-		}
-		.form__group__input {
-		  border-color: $surface;
-		}
-	  }
-	  &--error {
-		.form__group__placeholder, .icon, .form__group__help {
-		  color: $primary !important;
-		}
-		.form__group__input {
-		  color: $primary;
-		  border-color: $primary !important;
-		}
-	  }</span>
-	}
+    .form__group {
+      position: relative;
+      display: table;
+      max-width: 280px;
+      > * {
+        display: block;
+      }
+      .label {
+        position: relative;
+      }
+      .form__group {
+        &__placeholder {
+          position: absolute;
+          top: 1rem;
+          left: 1rem;
+          color: $secondary;
+          font-size: 14px;
+          @include transition(all 0.3s);
+        }
+        &__input {
+          min-max-width: 280px;
+          color: $surface;
+          @include text-fill-color($black);
+          border-style: solid;
+          border-color: $secondary;
+          &:focus {
+            border-color: $surface;
+          }
+        }
+        &__help {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          margin-top: 5px;
+          color: $secondary;
+          font-size: 12px;
+          font-style: normal;
+          line-height: 1;
+        }
+      }
+      &--outlined {
+        .form__group__input {
+          padding: 1.5rem 1rem 0.4rem;
+          background-color: $gray-100;
+          border-width: 0px 0px 1px;
+        }
+        .form__group {
+          &--defalt {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+              top: 0.2em;
+              font-size: 12px;
+              }
+            }
+          }
+          <span class="highlight">&--correct {
+            &:hover, &.hasValue {
+              .form__group__placeholder {
+              color: $surface;
+              }
+              .form__group__input {
+              border-color: $surface;
+              }
+            }
+          }
+          &--hasicon {
+            .form__group__input {
+              padding: 1.1rem 3rem 0.7rem 1rem;
+            }
+          }</span>
+        }
+      }
+      &--defalt {
+        &:hover {
+          .form__group__placeholder {
+            color: $surface;
+          }
+        }
+      }
+     <span class="highlight"> &--hasicon {
+        i.icon {
+          position: absolute;
+          top: 1.25rem;
+          right: 1rem;
+          font-size: 1rem;
+          @include transition(all 0.3s);
+        }
+      }
+      &--correct {
+        .form__group__placeholder, .icon {
+          color: $surface;
+        }
+        .form__group__input {
+          border-color: $surface;
+        }
+      }
+      &--error {
+        .form__group__placeholder, .icon, .form__group__help {
+          color: $primary !important;
+        }
+        .form__group__input {
+          color: $primary;
+          border-color: $primary !important;
+        }
+      }</span>
+    }
   }
 }</pre>
 														</div>
@@ -1480,13 +1502,13 @@ form {
 														<div class="code__block--text code__block--html bg-black">
 															<pre>&lt;form action="#!" class="form"&gt;
   &lt;div class="select__group select__group--outlined"&gt;
-	&lt;select&gt;
-	  &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
-	  &lt;option class="select__group__item" value="1"&gt;假字假字&lt;/option&gt;
-	  &lt;option class="select__group__item" value="2"&gt;假字假&lt;/option&gt;
-	  &lt;option class="select__group__item" value="3"&gt;假字&lt;/option&gt;
-	  &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
-	&lt;/select&gt;
+  &lt;select&gt;
+    &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
+    &lt;option class="select__group__item" value="1"&gt;假字假字&lt;/option&gt;
+    &lt;option class="select__group__item" value="2"&gt;假字假&lt;/option&gt;
+    &lt;option class="select__group__item" value="3"&gt;假字&lt;/option&gt;
+    &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
+  &lt;/select&gt;
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
@@ -1495,48 +1517,48 @@ form {
   @include border-radius(0);
   @include appearance(none);
   &:focus {
-	outline: 0;
+    outline: 0;
   }
 }
 form {
   &.form {
-	.select__group {
-	  position: relative;
-	  display: table;
-	  &::before {
-		content: "\e910";
-		position: absolute;
-		display: block;
-		top: 50%;
-		right: 1rem;
-		color: #000;
-		font-family: 'icomoon';
-		font-size: 12px;
-		@include translateY(-50%);
-	  }
-	  select {
-		min-width: 140px;
-		padding: 1rem;
-		line-height: 1;
-		border: 1px solid;
-		cursor: pointer;
-	  }
-	  &--outlined {
-		select {
-		  border-color: $gray-100;
-		  background-color: $gray-100;
-		}
-		&:hover {
-		  &::before {
-			color: $white;
-		  }
-		  select {
-			color: $white;
-			background-color: $surface;
-		  }
-		}
-	  }
-	}
+    .select__group {
+      position: relative;
+      display: table;
+      &::before {
+        content: "\e910";
+        position: absolute;
+        display: block;
+        top: 50%;
+        right: 1rem;
+        color: #000;
+        font-family: 'icomoon';
+        font-size: 12px;
+        @include translateY(-50%);
+      }
+      select {
+        min-width: 140px;
+        padding: 1rem;
+        line-height: 1;
+        border: 1px solid;
+        cursor: pointer;
+      }
+      &--outlined {
+        select {
+          border-color: $gray-100;
+          background-color: $gray-100;
+        }
+        &:hover {
+          &::before {
+            color: $white;
+          }
+          select {
+            color: $white;
+            background-color: $surface;
+          }
+        }
+      }
+    }
   }
 }</pre>
 														</div>

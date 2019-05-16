@@ -769,6 +769,22 @@ form {
           color: $primary;
           border-color: $primary !important;
         }
+      }
+      &--undone {
+        .form__group__placeholder {
+          color: $primary;
+        }
+        .form__group__input {
+          border-color: $primary;
+        }
+        &:hover, .hasValue {
+          .form__group__placeholder {
+            color: $surface;
+          }
+          .form__group__input {
+            border-color: $surface;
+          }
+        }
       }</span>
     }
   }
@@ -1500,6 +1516,22 @@ form {
         .form__group__input {
           color: $primary;
           border-color: $primary !important;
+        }
+      }
+      &--undone {
+        .form__group__placeholder {
+          color: $primary;
+        }
+        .form__group__input {
+          border-color: $primary;
+        }
+        &:hover, .hasValue {
+          .form__group__placeholder {
+            color: $surface;
+          }
+          .form__group__input {
+            border-color: $surface;
+          }
         }
       }</span>
     }

@@ -126,7 +126,7 @@
 										<span class="detail dark" data-val="30" style="width: 16px;height: 30px;top: 1px;left: 65px;border-width: 1px 0;"><i></i></span>
 										<span class="detail dark" data-val="35" style="width: 35px;height: 30px;top: 25px;left: 0px;border-width: 0 1px;"><i></i></span>
 									</div>
-									<i class="form__group__help form__group__help--notice">使用者不需做任何動作，自動消失</i>
+									<i class="form__group__help form__group__help--notice">使用者不需做任何動作，5 秒後自動消失</i>
 									<h3>Usage</h3>
 									<div class="message message--notification">
 										<div class="message__txt">
@@ -365,7 +365,12 @@
 }</pre>
 													</div>
 													<div class="code__block--text code__block--js bg-black">
-														<pre><span class="comment">// 沒有JS </span></pre>
+														<pre>$(function(){
+  <span class="comment">// Notification 5秒後關閉</span>
+  setTimeout(function(){
+    $(".message--notification").fadeOut();
+  }, 5000);
+});</pre>
 													</div>
 												</div>
 												<div class="tab__content__pane">
@@ -445,9 +450,11 @@
       }
       &__close {
         position: absolute;
-        top: 5px;
-        right: 0px;
+        top: -5px;
+        right: -10px;
         font-weight: bold;
+        padding: 10px;
+        cursor: pointer;
       }
       &__txt {
         padding-bottom: 30px;
@@ -464,7 +471,12 @@
 }</pre>
 													</div>
 													<div class="code__block--text code__block--js bg-black">
-														<pre><span class="comment">// 沒有JS </span></pre>
+														<pre>$(function(){
+  <span class="comment">// message: Dialogs 點擊X關閉</span>
+  $(".message__close").on("click", function(){
+    $(this).parent().parent().fadeOut();
+  });
+});</pre>
 													</div>
 												</div>
 												<ul class="direction list-reset">

@@ -29,6 +29,8 @@ $(function(){
 	$("span.detail").each(function(){
 		$(this).children().html($(this).attr("data-val"));
 	});
-}, function(){
-	"use strict";
+	// Notification 5秒後關閉
+	setTimeout(function(){
+		$(".message--notification").show();
+	}, 5400);
 });

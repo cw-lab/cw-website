@@ -95,6 +95,14 @@ $(function(){
 		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
 		$('.opacity').toggleClass('opened');
 	});
+	// message: Notification 5秒後關閉
+	setTimeout(function(){
+		$(".message--notification").fadeOut();
+	}, 5000);
+	// message: Dialogs 點擊X關閉
+	$(".message__close").on("click", function(){
+		$(this).parent().parent().fadeOut();
+	});
 	$(window).resize(function(width) {
 		var width = $(window).width();
 		tabNavWidth (width);

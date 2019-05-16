@@ -128,28 +128,28 @@
 												<div class="tab__content__pane active">
 													<div class="code__block--text code__block--html bg-black">
 														<pre>&lt;div class="article__group"&gt;
-  &lt;div class="article__group__item article__group__item--sub"&gt;
+  &lt;div class="article__group__item article__group__item--main"&gt;
     &lt;div class="article__group__item__img"&gt;
-      &lt;a href="#!"&gt;&lt;img src="https://storage.googleapis.com/www-cw-com-tw/article/201904/article-5cb2a3f43accd.jpg" alt="天下財經週報：台灣人愛存錢卻不借錢，問題大了！"&gt;&lt;/a&gt;
+      &lt;a href="文章連結"&gt;&lt;img src="文章主圖" alt="文章標題"&gt;&lt;/a&gt;
       &lt;div class="info flex"&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="article__group__item__text"&gt;
       &lt;h4&gt;&lt;a href="#!"&gt;財經時事&lt;/a&gt;&lt;/h4&gt;
-      &lt;h5&gt;2019-04-14&lt;/h5&gt;
-      &lt;h2&gt;&lt;a href="#!"&gt;天下財經週報：台灣人愛存錢卻不借錢，問題大了！&lt;/a&gt;&lt;/h2&gt;
-      &lt;p&gt;本週對全球金融市場來說相當重要，不只美國財報週進入高潮，各大美國金融業將接力發布財報，並發表對景氣的看法，美國聯準會（Fed）也將公布經濟褐皮書，跟全球聊聊聯準會對經濟的看法。另外，印尼人要不要讓佐科威繼續改革，本週三將揭曉結果。最後，節儉雖然是美德，但只存錢不投資可能對經濟不太好。以下是本週重要的財經大事：&lt;/p&gt;
+      &lt;h5&gt;文章上線時間&lt;/h5&gt;
+      &lt;h2&gt;&lt;a href="文章連結"&gt;文章標題&lt;/a&gt;&lt;/h2&gt;
+      &lt;p&gt;文章前言&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="article__group__item article__group__item--sub"&gt;
     &lt;div class="article__group__item__img"&gt;
-      &lt;a href="#!"&gt;&lt;img src="https://storage.googleapis.com/www-cw-com-tw/article/201904/article-5cb2a3f43accd.jpg" alt="天下財經週報：台灣人愛存錢卻不借錢，問題大了！"&gt;&lt;/a&gt;
+      &lt;a href="文章連結"&gt;&lt;img src="文章主圖" alt="文章標題"&gt;&lt;/a&gt;
       &lt;div class="info flex"&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="article__group__item__text"&gt;
       &lt;h4&gt;&lt;a href="#!"&gt;財經時事&lt;/a&gt;&lt;/h4&gt;
-      &lt;h5&gt;2019-04-14&lt;/h5&gt;
-      &lt;h2&gt;&lt;a href="#!"&gt;天下財經週報：台灣人愛存錢卻不借錢，問題大了！&lt;/a&gt;&lt;/h2&gt;
-      &lt;p&gt;本週對全球金融市場來說相當重要，不只美國財報週進入高潮，各大美國金融業將接力發布財報，並發表對景氣的看法，美國聯準會（Fed）也將公布經濟褐皮書，跟全球聊聊聯準會對經濟的看法。另外，印尼人要不要讓佐科威繼續改革，本週三將揭曉結果。最後，節儉雖然是美德，但只存錢不投資可能對經濟不太好。以下是本週重要的財經大事：&lt;/p&gt;
+      &lt;h5&gt;文章上線時間&lt;/h5&gt;
+      &lt;h2&gt;&lt;a href="文章連結"&gt;文章標題&lt;/a&gt;&lt;/h2&gt;
+      &lt;p&gt;文章前言&lt;/p&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
@@ -165,6 +165,7 @@
       &__img {
         a {
           position: relative;
+          display: block;
           width: 100%;
           height: 0;
           padding-top: 66.984126984126984%;
@@ -210,8 +211,10 @@
           width: 100%;
           margin-top: 5px;
           margin-bottom: 5px;
+          line-height: 1;
           a {
             @extend %ellipsis;
+            display: block;
             color: $black;
             &:hover {
               color: $primary;
@@ -221,6 +224,7 @@
         h4 {
           a {
             color: $primary;
+            display: block;
             &:hover {
               color: $primary-variant;
             }
@@ -228,7 +232,25 @@
         }
         h5 {
           a {
+            display: block;
             color: $secondary;
+          }
+        }
+      }
+      &--main {
+        flex-direction: column;
+        .article__group {
+          &__item {
+            &__text {
+              width: 100%;
+              padding: 15px 10px;
+              p {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+              }
+            }
           }
         }
       }

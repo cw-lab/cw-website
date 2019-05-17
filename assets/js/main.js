@@ -1,6 +1,7 @@
 $(function(){
 	var width = $(window).width(),
-		height = $(window).height();
+		height = $(window).height(),
+		container = $(".header__logo .container").outerWidth();
 	// 判斷有沒有值
 	$("input").on('change keyup copy paste cut', function(){
 		if(!this.value) {
@@ -95,16 +96,40 @@ $(function(){
 		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
 		$('.opacity').toggleClass('opened');
 	});
-	// message: Notification 5秒後關閉
+	// message: Notification 3 秒後關閉
 	setTimeout(function(){
 		$(".message--notification").fadeOut();
-	}, 5000);
+	}, 3000);
 	// message: Dialogs 點擊X關閉
 	$(".message__close").on("click", function(){
 		$(this).parent().parent().fadeOut();
 	});
+	// menubar--sub 絕對定位
+	function menubarSub (width, container){
+		$(".article-page .menubar--sub").css({
+			"right": ( (width - container) / 2 )
+		});
+	}
+	menubarSub (width, container);
+	console.log(width, container, (width - container) / 2);
+	// 文章頁
+	// youtube 16:9
+	var articleTextWidth =  $(".article__text").outerWidth();
+	$(".article__text iframe[src*='youtube']").css({
+		"width": articleTextWidth,
+		"height": articleTextWidth * 0.5625
+	});
+	$('.article__edit__info__type').hide();
+	$('.article__edit__info__type').each(function(){
+		if ($(this).text().length > 0) {
+			$(this).show();
+		}
+	});
 	$(window).resize(function(width) {
-		var width = $(window).width();
+		var width = $(window).width(),
+			height = $(window).height(),
+			container = $(".header__logo .container").outerWidth();
 		tabNavWidth (width);
+		menubarSub (width, container);
 	})
 });

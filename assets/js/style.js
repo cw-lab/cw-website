@@ -32,5 +32,5 @@ $(function(){
 	// Notification 5秒後關閉
 	setTimeout(function(){
 		$(".message--notification").show();
-	}, 5400);
+	}, 3500);
 });

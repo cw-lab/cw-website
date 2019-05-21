@@ -111,7 +111,6 @@ $(function(){
 		});
 	}
 	menubarSub (width, container);
-	console.log(width, container, (width - container) / 2);
 	// 文章頁
 	// youtube 16:9
 	var articleTextWidth =  $(".article__text").outerWidth();
@@ -125,17 +124,68 @@ $(function(){
 			$(this).show();
 		}
 	});
-	// 複製網址
-	function copyToClipboard(element) {
-		var $temp = $("<input>");
-		$("body").append($temp);
-		$temp.val($(element).data("link")).select();
-		document.execCommand("copy");
-		$temp.remove();
+	// 複製社群群組
+	if (width < 1025){
+		$('.article__text').after('<div class="article__function bottom"></div>');
+		$('div.article__function.bottom').append($('.article__function__sns').clone());
+		$('div.article__function.bottom a').attr("id", "shareCopyBottom")
 	}
-	$(".copy-text").on("click", function(){
-		copyToClipboard($(this));
-	});
+	// 複製網址
+	$("#shareCopy, #shareCopyBottom").click(function(){
+		copyToClipboard(document.getElementById("copyTarget"));
+		$(this).siblings().fadeIn();
+		setTimeout(function(){
+			$(".article__function--success").fadeOut();
+		}, 1500);
+		return false;
+	})
+	function copyToClipboard(elem) {
+		// create hidden text element, if it doesn't already exist
+		var targetId = "_hiddenCopyText_";
+		var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+		var origSelectionStart, origSelectionEnd;
+		if (isInput) {
+			// can just use the original source element for the selection and copy
+			target = elem;
+			origSelectionStart = elem.selectionStart;
+			origSelectionEnd = elem.selectionEnd;
+		} else {
+			// must use a temporary form element for the selection and copy
+			target = document.getElementById(targetId);
+			if (!target) {
+				var target = document.createElement("textarea");
+				target.style.position = "absolute";
+				target.style.left = "-9999px";
+				target.style.top = "0";
+				target.id = targetId;
+				document.body.appendChild(target);
+			}
+			target.textContent = elem.textContent;
+		}
+		// select the content
+		var currentFocus = document.activeElement;
+		target.focus();
+		target.setSelectionRange(0, target.value.length);
+		// copy the selection
+		var succeed;
+		try {
+			succeed = document.execCommand("copy");
+		} catch (e) {
+			succeed = false;
+		}
+		// restore original focus
+		if (currentFocus && typeof currentFocus.focus === "function") {
+			currentFocus.focus();
+		}
+		if (isInput) {
+			// restore prior selection
+			elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+		} else {
+			// clear temporary content
+			target.textContent = "";
+		}
+		return succeed;
+	}
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),

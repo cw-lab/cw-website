@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+	<meta charSet="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	<title>複製測試</title>
+</head>
+
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<p id="p1">P1: I am paragraph 1</p>
+	<p id="p2">P2: I am a second paragraph</p>
+	<button onclick="copyToClipboard('#p1')">Copy P1</button>
+	<button onclick="copyToClipboard('#p2')">Copy P2</button>
+	<input type="text" placeholder="Paste here for test" width="100%" />
+	<script type="text/javascript">
+		function copyToClipboard(element) {
+			$("body").append($("<input>"));
+			$("<input>").val($(element).text()).select();
+			document.execCommand("copy");
+			$("<input>").remove();
+		}
+	</script>
+</body>
+
+</html>

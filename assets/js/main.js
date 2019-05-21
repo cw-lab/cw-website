@@ -125,6 +125,17 @@ $(function(){
 			$(this).show();
 		}
 	});
+	// 複製網址
+	function copyToClipboard(element) {
+		var $temp = $("<input>");
+		$("body").append($temp);
+		$temp.val($(element).data("link")).select();
+		document.execCommand("copy");
+		$temp.remove();
+	}
+	$(".copy-text").on("click", function(){
+		copyToClipboard($(this));
+	});
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),

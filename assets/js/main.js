@@ -9,25 +9,25 @@ $(function(){
 		} else {
 			$(this).parent().addClass('hasValue');
 		}
-	});
+	})
 	$("input").each(function(){
 		if(!this.value) {
 			$(this).parent().removeClass('hasValue');
 		} else {
 			$(this).parent().addClass('hasValue');
 		}
-	});
+	})
 	// 統計字數
 	$('.form__group--countletter input').keyup(function() {
 		$(this).siblings('i').children('span').html(this.value.length);
-	});
+	})
 	// 是否顯示密碼
 	$('.form__group .icon-eye').click(function () {
 		$(this).siblings('input').attr('type',
 			$(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
 		);
 		$(this).toggleClass('icon-eyeoff icon-eyeon');
-	});
+	})
 	$("input").parent().addClass('form__group--defalt');
 	$("input[disabled*='disabled']").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
 	// tabs
@@ -36,7 +36,7 @@ $(function(){
 		$(this).addClass('active').siblings('.active').removeClass('active');
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
 		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
-	});
+	})
 	// 當裝置大於等於768時，將tab__nav寬度設為等分
 	function tabNavWidth (width){
 		$(".tab__nav > ul").each(function(){
@@ -45,7 +45,7 @@ $(function(){
 			} else {
 				$(this).children("li").css( "width", "" );
 			}
-		});
+		})
 	}
 	tabNavWidth (width);
 	$(".tab__nav").each(function(){
@@ -60,13 +60,13 @@ $(function(){
 		} else {
 			$(this).removeClass("tab__nav--overflow");
 		}
-	});
+	})
 	// 當tooltips大於等於15字
 	$(".tooltips").each(function(){
 		if ($(this).data("tooltips").length >= 15 ) {
 			$(this).addClass("tooltips-wrap");
 		}
-	});
+	})
 	// 漢堡
 	$('body').append('<div class="black"></div>');
 	$('.hamburger, .black').click(function () {
@@ -78,7 +78,7 @@ $(function(){
 		$(this).children().children().css({
 			"width": ($(this).outerWidth() / $(this).children().children().length) + "px"
 		});
-	});
+	})
 	// 當導覽menu有第三層時，加上classname
 	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
 	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
@@ -88,14 +88,14 @@ $(function(){
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();
 		$(this).parent().siblings("ul").slideToggle();
-	});
+	})
 	// 第二層
 	$('body').append('<div class="opacity"></div>');
 	$("nav.menubar--sub ul.menubar__user > li, .opacity").click(function(){
 		$(".menubar__user__slide").slideToggle();
 		$("nav.menubar--sub ul.menubar__user > li > a > i").toggleClass("deg");
 		$('.opacity').toggleClass('opened');
-	});
+	})
 	// message: Notification 3 秒後關閉
 	setTimeout(function(){
 		$(".message--notification").fadeOut();
@@ -103,7 +103,7 @@ $(function(){
 	// message: Dialogs 點擊X關閉
 	$(".message__close").on("click", function(){
 		$(this).parent().parent().fadeOut();
-	});
+	})
 	// menubar--sub 絕對定位
 	function menubarSub (width, container){
 		$(".article-page .menubar--sub").css({
@@ -117,27 +117,26 @@ $(function(){
 	$(".article__text iframe[src*='youtube']").css({
 		"width": articleTextWidth,
 		"height": articleTextWidth * 0.5625
-	});
+	})
 	$('.article__edit__info__type').hide();
 	$('.article__edit__info__type').each(function(){
 		if ($(this).text().length > 0) {
 			$(this).show();
 		}
-	});
-	// 複製社群群組
-	if (width < 1025){
-		$('.article__text').after('<div class="article__function bottom"></div>');
-		$('div.article__function.bottom').append($('.article__function__sns').clone());
-		$('div.article__function.bottom a').attr("id", "shareCopyBottom")
-		$('div.article__function.bottom input').attr("id", "copyTargetBottom")
-	}
+	})
 	// 複製網址
-	document.getElementById("shareCopy").addEventListener("click", function() {
-		copyToClipboard(document.getElementById("copyTarget"));
-	});
-	document.getElementById("shareCopyBottom").addEventListener("click", function() {
-		copyToClipboard(document.getElementById("copyTargetBottom"));
-	});
+	var shareCopy = document.getElementById("shareCopy"),
+		shareCopyBottom = document.getElementById("shareCopyBottom");
+	if(shareCopy){
+		shareCopy.addEventListener("click", function() {
+			copyToClipboard(document.getElementById("copyTarget"));
+		})
+	}
+	if(shareCopyBottom){
+		shareCopyBottom.addEventListener("click", function() {
+			copyToClipboard(document.getElementById("copyTargetBottom"));
+		})
+	}
 	$("#shareCopy, #shareCopyBottom").click(function(){
 		$(this).siblings().fadeIn();
 		setTimeout(function(){

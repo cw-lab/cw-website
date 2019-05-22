@@ -131,8 +131,13 @@ $(function(){
 		$('div.article__function.bottom a').attr("id", "shareCopyBottom")
 	}
 	// 複製網址
-	$("#shareCopy, #shareCopyBottom").click(function(){
+	document.getElementById("shareCopy").addEventListener("click", function() {
 		copyToClipboard(document.getElementById("copyTarget"));
+	});
+	document.getElementById("shareCopyBottom").addEventListener("click", function() {
+		copyToClipboard(document.getElementById("copyTarget"));
+	});
+	$("#shareCopy, #shareCopyBottom").click(function(){
 		$(this).siblings().fadeIn();
 		setTimeout(function(){
 			$(".article__function--success").fadeOut();

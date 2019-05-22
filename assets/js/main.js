@@ -129,13 +129,14 @@ $(function(){
 		$('.article__text').after('<div class="article__function bottom"></div>');
 		$('div.article__function.bottom').append($('.article__function__sns').clone());
 		$('div.article__function.bottom a').attr("id", "shareCopyBottom")
+		$('div.article__function.bottom input').attr("id", "copyTargetBottom")
 	}
 	// 複製網址
 	document.getElementById("shareCopy").addEventListener("click", function() {
 		copyToClipboard(document.getElementById("copyTarget"));
 	});
 	document.getElementById("shareCopyBottom").addEventListener("click", function() {
-		copyToClipboard(document.getElementById("copyTarget"));
+		copyToClipboard(document.getElementById("copyTargetBottom"));
 	});
 	$("#shareCopy, #shareCopyBottom").click(function(){
 		$(this).siblings().fadeIn();

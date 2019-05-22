@@ -131,14 +131,17 @@ $(function(){
 		$('div.article__function.bottom a').attr("id", "shareCopyBottom")
 	}
 	// 複製網址
-	$("#shareCopy, #shareCopyBottom").click(function(){
+	// $("#shareCopy, #shareCopyBottom").click(function(){
+	// 	copyToClipboard(document.getElementById("copyTarget"));
+	// 	$(this).siblings().fadeIn();
+	// 	setTimeout(function(){
+	// 		$(".article__function--success").fadeOut();
+	// 	}, 1500);
+	// 	return false;
+	// })
+	document.getElementById("shareCopy").addEventListener("click", function() {
 		copyToClipboard(document.getElementById("copyTarget"));
-		$(this).siblings().fadeIn();
-		setTimeout(function(){
-			$(".article__function--success").fadeOut();
-		}, 1500);
-		return false;
-	})
+	});
 	function copyToClipboard(elem) {
 		// create hidden text element, if it doesn't already exist
 		var targetId = "_hiddenCopyText_";

@@ -1,7 +1,8 @@
 $(function(){
 	var width = $(window).width(),
 		height = $(window).height(),
-		container = $(".header__logo .container").outerWidth();
+		container = $(".header__logo .container").outerWidth(),
+		articleTextWidth =  $(".article__text").outerWidth();
 	// 判斷有沒有值
 	$("input").on('change keyup copy paste cut', function(){
 		if(!this.value) {
@@ -113,7 +114,6 @@ $(function(){
 	menubarSub (width, container);
 	// 文章頁
 	// youtube 16:9
-	var articleTextWidth =  $(".article__text").outerWidth();
 	$(".article__text iframe[src*='youtube']").css({
 		"width": articleTextWidth,
 		"height": articleTextWidth * 0.5625
@@ -124,6 +124,17 @@ $(function(){
 			$(this).show();
 		}
 	})
+	// 字體大小放大縮小
+	var $fz = $('.article__edit__font');
+	var fzLevel = 0;
+	var fzClass = 'article__level--' + fzLevel;
+	$fz.click(function () {
+		fzLevel < 2 ? fzLevel++ : fzLevel = 0;
+		fzClass = 'article__level--' + fzLevel;
+		$('article').attr("class", "");
+		$('article').addClass(fzClass);
+		return false;
+	});
 	// 複製網址
 	var shareCopy = document.getElementById("shareCopy"),
 		shareCopyBottom = document.getElementById("shareCopyBottom");
@@ -144,6 +155,12 @@ $(function(){
 		}, 1500);
 		return false;
 	})
+	// width <= 1024，點擊後出現 tooltips
+	if( width <= 1024 ){
+		$(".tooltips").click(function(){
+			$(this).toggleClass("active");
+		})
+	}
 	function copyToClipboard(elem) {
 		// create hidden text element, if it doesn't already exist
 		var targetId = "_hiddenCopyText_";
@@ -194,8 +211,13 @@ $(function(){
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),
-			container = $(".header__logo .container").outerWidth();
+			container = $(".header__logo .container").outerWidth(),
+			articleTextWidth =  $(".article__text").outerWidth();
 		tabNavWidth (width);
 		menubarSub (width, container);
+		$(".article__text iframe[src*='youtube']").css({
+			"width": articleTextWidth,
+			"height": articleTextWidth * 0.5625
+		})
 	})
 });

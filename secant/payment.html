@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>結帳頁</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../assets/css/main.css">
+	</head>
+	<body class="webaccess-page">
+		<header class="container"></header>
+		<main class="container flex">
+			<article>
+				<section class="group"></section>
+				<section class="group">
+					<h3>付款資料</h3>
+					<div class="flex-container flex credit">
+						<form action="#!" class="form">
+							<div class="form__group form__group--filled">
+								<div class="form__group__title">信用卡卡號</div>
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入信用卡卡號</div>
+									<input type="text" class="form__group__input form__group__input--default" id="creditCardNumber" maxlength="22">
+								</label>
+							</div>
+							<div class="form__group form__group--filled">
+								<div class="form__group__title">有效期限</div>
+								<div class="select__group-col2">
+									<div class="select__group select__group--filled">
+										<select id="expMonth">
+											<option class="select__group__item" value="0" selected="">月</option>
+											<option class="select__group__item" value="01">01</option>
+											<option class="select__group__item" value="02">02</option>
+											<option class="select__group__item" value="03">03</option>
+											<option class="select__group__item" value="04">04</option>
+											<option class="select__group__item" value="05">05</option>
+											<option class="select__group__item" value="06">06</option>
+											<option class="select__group__item" value="07">07</option>
+											<option class="select__group__item" value="08">08</option>
+											<option class="select__group__item" value="09">09</option>
+											<option class="select__group__item" value="10">10</option>
+											<option class="select__group__item" value="11">11</option>
+											<option class="select__group__item" value="12">12</option>
+										</select>
+									</div>
+									<div class="select__group select__group--filled">
+										<select id="expYear">
+											<option class="select__group__item" value="0" selected="">年</option>
+											<option class="select__group__item" value="19">2019</option>
+											<option class="select__group__item" value="20">2020</option>
+											<option class="select__group__item" value="21">2021</option>
+											<option class="select__group__item" value="22">2022</option>
+											<option class="select__group__item" value="23">2023</option>
+											<option class="select__group__item" value="24">2024</option>
+											<option class="select__group__item" value="25">2025</option>
+											<option class="select__group__item" value="26">2026</option>
+											<option class="select__group__item" value="27">2027</option>
+											<option class="select__group__item" value="28">2028</option>
+											<option class="select__group__item" value="29">2029</option>
+											<option class="select__group__item" value="30">2030</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form__group form__group--filled">
+								<div class="form__group__title">安全碼</div>
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入安全碼</div>
+									<input pattern="[0-9.]+" maxlength="3" type="text" class="form__group__input form__group__input--default" id="securityCode">
+								</label>
+							</div>
+						</form>
+						<form action="#!" class="card__group">
+							<div class="form__group__title">可刷卡別</div>
+							<ul class="card__use">
+								<li>
+									<img src="../assets/img/icon-visa@3x.png" alt="VISA">
+								</li>
+								<li>
+									<img src="../assets/img/icon-master@3x.png" alt="MASTER CARD">
+								</li>
+								<li>
+									<img src="../assets/img/icon-jcb@3x.png" alt="JCB">
+								</li>
+							</ul>
+							<div class="card">
+								<div class="card__type"></div>
+								<div class="card__input">
+									<input class="card__input--number" type="text" value="" readonly>
+									<input class="card__input--month" type="text" value="" readonly>
+									<input class="card__input--year" type="text" value="" readonly>
+									<input class="card__input--code" type="text" value="" readonly>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+			</article>
+		</main>
+		<footer></footer>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+		<script type="text/javascript" src="../assets/js/main.js"></script>
+	</body>
+</html>

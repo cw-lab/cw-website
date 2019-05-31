@@ -187,7 +187,7 @@ section .select-side ul.menu > li::before {
 }
 
 ul, ol {
-  padding-left: 1.5em;
+  padding-left: 1.15em;
 }
 
 [class*="col"] {
@@ -764,7 +764,7 @@ section .select-side ul.menu > li a {
   }
 }
 section .select-side ul.menu > li a > * {
-  color: #394148;
+  color: #171717;
   font-size: 14px;
   line-height: 30px;
   white-space: nowrap;
@@ -1189,6 +1189,13 @@ section .content-side .message--notification .message__icon i {
 }
 section .content-side .message--alert, section .content-side .message--dialogs {
   padding: 30px 24px 24px;
+}
+section .message {
+  display: block !important;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
 }
 
 footer {

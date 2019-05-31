@@ -182,51 +182,24 @@ th {
   padding: 0;
 }
 
-main .article__info__breadcrumb, main .article__function .article__function__sns, main .article__edit__info ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+main .tab--list .tab__content__pane li a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 ul, ol {
-  padding-left: 1.5em;
+  padding-left: 1.15em;
 }
 
 body {
   background-color: #fff;
 }
 
-.container {
-  margin: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-@media (min-width: 768px) {
-  .index-page .container {
-    width: 740px;
-  }
-}
-@media (min-width: 1024px) {
-  .index-page .container {
-    width: 1000px;
-  }
-}
-@media (min-width: 1366px) {
-  .index-page .container {
-    width: 1280px;
-  }
-}
-
-@media (min-width: 768px) {
-  .article-page .container {
-    width: 740px;
-  }
-}
-@media (min-width: 1024px) {
-  .article-page .container {
-    width: 960px;
-  }
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .ad {
@@ -269,9 +242,6 @@ header > .container-fluid {
 
 main {
   justify-content: space-between;
-}
-main > * > h3 {
-  margin: 0;
 }
 main article {
   width: 100%;
@@ -410,26 +380,26 @@ main .article__function input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-main .article__function .article__function__sns {
+main .article__function__sns {
   display: flex;
 }
-main .article__function .article__function__sns li {
+main .article__function__sns li {
   position: relative;
   margin-right: 5px;
 }
 @media (min-width: 768px) {
-  main .article__function .article__function__sns li {
+  main .article__function__sns li {
     margin-right: 10px;
   }
 }
-main .article__function .article__function--success {
+main .article__function--success {
   display: none;
   position: absolute;
   top: 100%;
   left: 50%;
   padding: 6px 8px;
   margin-top: 10px;
-  width: 180px;
+  width: 200px;
   color: #fff;
   line-height: 1.45;
   text-align: center;
@@ -534,17 +504,17 @@ main .article__text blockquote::before, main .article__text blockquote::after {
   font-size: 2em;
   font-family: 'icomoon';
   line-height: 2em;
-  text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+  text-shadow: 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff;
 }
 main .article__text blockquote::before {
   content: "\e92b";
-  top: -1em;
+  top: -1.1em;
   left: 0;
   color: #003a9f;
 }
 main .article__text blockquote::after {
   content: "\e92c";
-  bottom: -1.25em;
+  bottom: -1.1em;
   right: 0;
   color: #939EA7;
 }
@@ -560,8 +530,77 @@ main .article__text hr {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary",endColorstr="$surface",GradientType=1);
   border: 0;
 }
+main .tab--list .tab__nav li {
+  width: 100%;
+}
+main .tab--list .tab__content__pane ol, main .tab--list .tab__content__pane ul {
+  margin: 0;
+  padding: 0;
+  border: solid #D3D5D7;
+  border-width: 0 1px;
+}
+main .tab--list .tab__content__pane ol {
+  list-style-position: inside;
+}
+main .tab--list .tab__content__pane ol li a {
+  padding: 10px 0 10px 3px;
+}
+main .tab--list .tab__content__pane ul {
+  list-style-position: inside;
+}
+main .tab--list .tab__content__pane ul li a {
+  padding: 10px 0;
+}
+main .tab--list .tab__content__pane li {
+  padding: 0 15px;
+  border: solid #D3D5D7;
+  border-width: 0 0 1px;
+}
+main .tab--list .tab__content__pane li a {
+  position: relative;
+  display: inline-block;
+  top: -1px;
+  width: calc(100% - 1.4em);
+  color: #171717;
+  vertical-align: middle;
+}
+main .tab--list .tab__content__pane li a:hover {
+  color: #D60C18;
+}
+main .tab--list.tab--one .tab__nav {
+  position: relative;
+  border: solid #D3D5D7;
+  border-width: 1px 1px 0;
+}
+@media (min-width: 768px) {
+  main .tab--list.tab--one .tab__nav {
+    border-width: 1px;
+  }
+}
+main .tab--list.tab--one .tab__nav > ul {
+  position: relative;
+  display: flex;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  main .tab--list.tab--one .tab__nav > ul {
+    margin: -1px;
+  }
+}
+main .tab--list.tab--one .tab__nav > ul li {
+  position: relative;
+  width: 100%;
+  padding: 5px 1em;
+  line-height: 2.6rem;
+  background-color: #D3D5D7;
+}
 main aside {
-  width: 300px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main aside {
+    width: 300px;
+  }
 }
 @media (max-width: 767px) {
   main aside {
@@ -571,6 +610,9 @@ main aside {
 }
 main aside > * {
   margin-bottom: 20px;
+}
+main > * > h3 {
+  margin: 0;
 }
 
 /*# sourceMappingURL=layout.css.map */

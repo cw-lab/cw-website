@@ -49,19 +49,19 @@ $(function(){
 		})
 	}
 	tabNavWidth (width);
-	$(".tab__nav").each(function(){
-		if ( ($(this).outerWidth() / $(this).children().children("li").length) < 110) {
-			$(this).addClass("tab__nav--overflow");
-			$(this).append("<div class='tab__nav__next'><i class='icon icon-right'></i></div>");
-			if (width >= 768) {
-				$(this).addClass("tab__nav--desktop");
-			} else {
-				$(this).addClass("tab__nav--mobile");
-			}
-		} else {
-			$(this).removeClass("tab__nav--overflow");
-		}
-	})
+	// $(".tab__nav").each(function(){
+	// 	if ( ($(this).outerWidth() / $(this).children().children("li").length) < 100) {
+	// 		$(this).addClass("tab__nav--overflow");
+	// 		$(this).append("<div class='tab__nav__next'><i class='icon icon-right'></i></div>");
+	// 		if (width >= 768) {
+	// 			$(this).addClass("tab__nav--desktop");
+	// 		} else {
+	// 			$(this).addClass("tab__nav--mobile");
+	// 		}
+	// 	} else {
+	// 		$(this).removeClass("tab__nav--overflow");
+	// 	}
+	// })
 	// 當tooltips大於等於15字
 	$(".tooltips").each(function(){
 		if ($(this).data("tooltips").length >= 15 ) {
@@ -70,9 +70,13 @@ $(function(){
 	})
 	// 漢堡
 	$('body').append('<div class="black"></div>');
-	$('.hamburger, .black').click(function () {
-		$('.menubar--left').toggleClass('opened');
-		$('.black').toggleClass('opened');
+	$('.hamburger').click(function () {
+		$('.menubar--left').addClass('opened');
+		$('.black').addClass('opened');
+	});
+	$('.black').click(function () {
+		$('.menubar--left, .black').removeClass('opened');
+		$('.message').fadeOut(200);
 	});
 	// menu寬度平分
 	$("nav.menubar--belt").each(function(){
@@ -101,9 +105,16 @@ $(function(){
 	setTimeout(function(){
 		$(".message--notification").fadeOut();
 	}, 3000);
+	// message: 點擊 message__open 開啟
+	$(".message__open").on("click", function(){
+		var messageID = $(this).attr("id");
+		$('.black').toggleClass('opened');
+		$(".message." + messageID).fadeIn();
+	})
 	// message: Dialogs 點擊X關閉
-	$(".message__close").on("click", function(){
+	$(".click__close").on("click", function(){
 		$(this).parent().parent().fadeOut();
+		$('.black').toggleClass('opened');
 	})
 	// menubar--sub 絕對定位
 	function menubarSub (width, container){
@@ -208,6 +219,40 @@ $(function(){
 		}
 		return succeed;
 	}
+	// 全閱讀 secant project
+	// 信用卡Keyup同步
+	if (location.href.match(/payment/)) {
+		$("#creditCardNumber").on('keyup', function(){
+			$(this).val(function (index, value) {
+				return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');
+			});
+			$(".card__input--number").attr("value", this.value);
+		})
+		$("#expMonth").on('change', function(){
+			$(".card__input--month").attr("value", this.value);
+		})
+		$("#expYear").on('change', function(){
+			$(".card__input--year").attr("value", this.value);
+		})
+		$("#securityCode").on('keyup', function(){
+			$(".card__input--code").attr("value", this.value);
+		})
+		$("#creditCardNumber").validateCreditCard(function(result) {
+			$(".card__type").attr("class", "card__type");
+			$(".card__type").addClass("card__type--" + result.card_type.name);
+		})
+	}
+	$("#chageInvoicing").on("click", function(){
+		$(this).parent().parent().slideUp();
+		$(this).parent().parent().siblings(".select-invoicing").slideDown();
+	})
+	$(window).scroll(function(){
+		// message: 定位在目前畫面之中
+		var scroll = $(window).scrollTop();
+		$(".message").animate({
+			"top": scroll + (height / 2)
+		}, 10);
+	})
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),

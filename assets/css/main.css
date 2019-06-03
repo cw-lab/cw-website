@@ -2461,6 +2461,22 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   justify-content: space-between;
 }
 
+@media (min-width: 768px) {
+  .flex-md {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .flex-lg {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .flex-xl {
+    display: flex;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -2470,9 +2486,6 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 @media (min-width: 768px) {
   .container {
     width: 740px;
-  }
-  .container .flex-md {
-    display: flex;
   }
 }
 @media (min-width: 1024px) {

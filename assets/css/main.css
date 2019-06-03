@@ -2040,7 +2040,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 .label--radio span.label__radio__txt {
   padding-left: 0.5em;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .label--radio span.label__radio__helper {
   display: block;
@@ -2147,7 +2147,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 .label--check span.label__radio__txt {
   width: calc(100% - 20px - .5em);
   padding-left: 0.5em;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 .label--check span.label__radio__helper {
   display: block;

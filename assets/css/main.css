@@ -2753,6 +2753,13 @@ main .plan .plan__item__img {
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 767px) {
+  main .plan .plan__item__option {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 main .plan .plan__item__option li {
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -2766,6 +2773,7 @@ main .plan .plan__item__option label .label__radio__txt strong {
   font-weight: 500;
 }
 main .plan .plan__item__option label .label__radio__txt--complement {
+  display: block;
   padding-left: calc(20px + 1rem);
   color: #939EA7;
   font-size: 14px;

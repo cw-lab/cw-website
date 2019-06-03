@@ -2996,6 +2996,11 @@ footer a:hover {
 .webaccess-page section .credit .input__group:first-child {
   margin-top: 0;
 }
+@media (min-width: 768px) {
+  .webaccess-page section .credit .input__group:first-child {
+    width: calc(100% - 281px);
+  }
+}
 .webaccess-page section .credit .input__group__title {
   margin-bottom: 5px;
   font-size: 1rem;

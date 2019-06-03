@@ -41,7 +41,7 @@ $(function(){
 	// 當裝置大於等於768時，將tab__nav寬度設為等分
 	function tabNavWidth (width){
 		$(".tab__nav > ul").each(function(){
-			if (width >= 768) {
+			if ( (width >= 768) || ($(this).children("li").length <= 3) ) {
 				$(this).children("li").css( "width", (100 / $(this).children("li").length) + "%" );
 			} else {
 				$(this).children("li").css( "width", "" );

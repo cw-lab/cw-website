@@ -6,16 +6,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="robots" content="noindex">
 		<meta name="googlebot" content="noindex">
-		<title>方案選擇 - 請選擇你想看天下的方式｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<title>填寫基本資料 - 請選擇你想看天下的方式｜天下雜誌｜華文世界最優質的財經雜誌</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" href="../assets/css/main.css">
 	</head>
 	<body class="webaccess-page">
-		<header class="container"></header>
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<ul class="list-reset flex member-list">
+						<li><a href="#!">登入</a></li>
+						<li><a href="#!">註冊</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
 		<main>
 			<article>
+				<div class="step__group flex">
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">填寫資料</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">付款資料</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">訂購完成</span>
+					</div>
+				</div>
 				<form action="payment.html">
 					<h2>請填寫資料：</h2>
 					<section class="group">
@@ -33,7 +59,7 @@
 							</ul>
 							<div class="content__total">
 								<div class="content__total__reelect">
-									<a href="#!" class="link-btn">重選</a>
+									<a onclick="window.history.back();" class="link-btn">重選</a>
 								</div>
 								<div class="content__total__amount">
 									總金額<span>399</span>元
@@ -71,7 +97,7 @@
 						</div>
 						<div class="flex flex-container justify-between">
 							<div class="col--left">
-								<p>
+								<p class="mtb0">
 									嗨，bilylin66@gmail.com<br>
 									當你訂單付款完成後，我們需要你以此email為帳號註冊，並登入天下雜誌！
 								</p>
@@ -215,7 +241,7 @@
 						<h3>發票資料</h3>
 						<div class="flex flex-container justify-between">
 							<div class="col--left">
-								<p>
+								<p class="mtb0">
 									會員載具
 									<span class="h5">電子發票若中獎將寄送至收件地址</span>
 								</p>
@@ -326,7 +352,7 @@
 					<section class="group">
 						<h3>自動續訂方案</h3>
 						<div class="flex-container">
-							<p>
+							<p class="mt0">
 								若您勾選同意自動續訂，當您購買的商品到期，天下雜誌會自動續訂，將以您提供的付款方式扣款。您完成訂閱後可以隨時在我的帳戶中解除自動續訂。
 							</p>
 							<label class="label--radio">
@@ -348,7 +374,7 @@
 								<span class="label__radio__mark"></span>
 								<span class="label__radio__txt">我同意辦理退貨時，由天下雜誌網路書店代為處理發票及銷貨退回證明單，以加速退貨退款作業。</span>
 							</label>
-							<p>
+							<p class="mb0">
 								當您訂購雜誌即代表您已經詳閱並同意遵守《天下雜誌群會員服務條款》與特別聲明。
 							</p>
 						</div>

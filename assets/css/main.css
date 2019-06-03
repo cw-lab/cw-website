@@ -186,12 +186,12 @@ th {
   padding: 0;
 }
 
-nav.menubar--sub ul.menubar__user::before, button.btn::before, button.btn::after, a.btn::before, a.btn::after, .article__group .article__group__item__img > a::before, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .board::before, .container::before, .container::after, main .plan .plan__item__spec::before {
+nav.menubar--sub ul.menubar__user::before, button.btn::before, button.btn::after, a.btn::before, a.btn::after, .article__group .article__group__item__img > a::before, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .board::before, .container::before, .container::after, header ul.member-list::before, main form::before, main form::after, main .plan .plan__item__spec::before {
   content: '';
   display: block;
 }
 
-nav.menubar--sub > .container ul, nav.menubar--belt ul, .list-reset, main .plan .plan__item__option, .webaccess-page section.group .content__group .content__list, .webaccess-page section .credit .card__group .card__use {
+nav.menubar--sub > .container ul, nav.menubar--belt ul, .list-reset, main .plan .plan__item__option, .webaccess-page section.group .content__group .content__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -412,6 +412,12 @@ h1 .heading__icon, .h1 .heading__icon {
   font-size: 0.9em;
   vertical-align: sub;
 }
+h1 .heading__icon--correct, .h1 .heading__icon--correct {
+  color: #003a9f;
+}
+h1 .heading__icon--error, .h1 .heading__icon--error {
+  color: #D60C18;
+}
 
 h2, .h2 {
   margin-top: 1em;
@@ -423,6 +429,12 @@ h2 .heading__icon, .h2 .heading__icon {
   margin-right: 10px;
   font-size: 0.9em;
   vertical-align: sub;
+}
+h2 .heading__icon--correct, .h2 .heading__icon--correct {
+  color: #003a9f;
+}
+h2 .heading__icon--error, .h2 .heading__icon--error {
+  color: #D60C18;
 }
 
 h3, .h3 {
@@ -436,6 +448,12 @@ h3 .heading__icon, .h3 .heading__icon {
   font-size: 0.9em;
   vertical-align: sub;
 }
+h3 .heading__icon--correct, .h3 .heading__icon--correct {
+  color: #003a9f;
+}
+h3 .heading__icon--error, .h3 .heading__icon--error {
+  color: #D60C18;
+}
 
 h4, .h4 {
   margin-top: 1em;
@@ -448,6 +466,12 @@ h4 .heading__icon, .h4 .heading__icon {
   font-size: 0.9em;
   vertical-align: sub;
 }
+h4 .heading__icon--correct, .h4 .heading__icon--correct {
+  color: #003a9f;
+}
+h4 .heading__icon--error, .h4 .heading__icon--error {
+  color: #D60C18;
+}
 
 h5, .h5 {
   margin-top: 1em;
@@ -459,6 +483,12 @@ h5 .heading__icon, .h5 .heading__icon {
   margin-right: 10px;
   font-size: 0.9em;
   vertical-align: sub;
+}
+h5 .heading__icon--correct, .h5 .heading__icon--correct {
+  color: #003a9f;
+}
+h5 .heading__icon--error, .h5 .heading__icon--error {
+  color: #D60C18;
 }
 
 h1, .h1 {
@@ -616,6 +646,10 @@ i.icon {
 
 .icon-cancel:before {
   content: "\e92d";
+}
+
+.icon-error-solid:before {
+  content: "\e934";
 }
 
 .icon-coin:before {
@@ -2198,7 +2232,6 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 
 .message p {
-  margin: 0;
   font-size: 1.125rem;
   line-height: 1.25;
 }
@@ -2207,6 +2240,28 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 .message__btn {
   font-size: 0;
+}
+.message--remark {
+  width: 100%;
+  background-color: #EEEEEE;
+}
+.message--remark .message__container {
+  position: relative;
+  max-width: 940px;
+  margin: auto;
+  padding: 20px;
+}
+.message--remark .message__txt p {
+  font-size: 1rem;
+}
+.message--remark .message__txt p a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+@media (min-width: 1024px) {
+  .message--remark .message__txt p a:hover {
+    color: #9D0505;
+  }
 }
 .message--banner {
   width: 100%;
@@ -2341,8 +2396,40 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   color: #D60C18;
 }
 
+.mtb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt0-mb1 {
+  margin-top: 0;
+  margin-bottom: 1em !important;
+}
+
+.mt0-mb05 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .container {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -2385,26 +2472,10 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 p {
   font-size: 1em;
 }
-p.mtb0 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-p.mt0-mb1 {
-  margin-top: 0;
-  margin-bottom: 1em !important;
-}
-p.mt0-mb05 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
-}
-p.md0 {
-  margin-bottom: 0;
-}
-p.mt0 {
-  margin-top: 0;
-}
 p.emphasis {
   color: #939EA7;
+}
+p.emphasis--small {
   font-size: 0.875em;
 }
 
@@ -2416,7 +2487,41 @@ hr {
   border-color: #EEEEEE;
 }
 
+header {
+  border-bottom: 1px solid #D3D5D7;
+}
+header .container > .flex {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+header ul.member-list {
+  position: relative;
+  padding-left: 15px;
+}
+header ul.member-list::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #D3D5D7;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+header ul.member-list a {
+  display: block;
+  padding: 0 15px;
+  color: #171717;
+}
+header ul.member-list a:hover {
+  color: #D60C18;
+}
+
 main {
+  margin-top: 40px;
   justify-content: space-between;
 }
 main article {
@@ -2434,6 +2539,44 @@ main article {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+main article .step__group {
+  padding-bottom: 40px;
+}
+main article .step__item {
+  position: relative;
+  padding-right: calc((100% - (65px * 3)) / 2);
+  color: #939EA7;
+}
+main article .step__item--past {
+  color: #D60C18;
+}
+main article .step__item--now {
+  color: #D60C18;
+}
+main article .step__item span {
+  display: block;
+}
+main article .step__item::before {
+  content: "\e932";
+  font-family: 'icomoon';
+  position: absolute;
+  top: 50%;
+  left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px );
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+main article .step__item:last-child {
+  padding-right: 0;
+}
+main article .step__item:last-child::before {
+  display: none;
+}
+main form::before, main form::after {
+  display: table;
+  clear: both;
 }
 main .plan {
   margin-bottom: 2.5em;
@@ -2551,10 +2694,11 @@ main .plan .plan__item__option li {
 }
 main .plan .plan__item__option label .label__radio__txt {
   font-size: 22px;
+  font-weight: 500;
 }
 main .plan .plan__item__option label .label__radio__txt strong {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 500;
 }
 main .plan .plan__item__option label .label__radio__txt--complement {
   padding-left: calc(20px + 1rem);
@@ -2584,6 +2728,7 @@ main .plan .plan__gift {
 }
 main .plan .plan__gift .gift__item {
   margin-top: 0.5em;
+  font-size: 1rem;
   border: 1px solid #EEEEEE;
 }
 @media (max-width: 767px) {
@@ -2664,54 +2809,47 @@ footer a:hover {
 .webaccess-page section.group {
   margin-bottom: 40px;
 }
-.webaccess-page section.group .flex-container .label + .label, .webaccess-page section.group .tab__content .label + .label {
+.webaccess-page section.group .flex-container .label + .label, .webaccess-page section.group .tab__content .label + .label, .webaccess-page section.group .content__group .label + .label {
   margin-top: 1.25rem;
 }
-.webaccess-page section.group .flex-container .form__group, .webaccess-page section.group .tab__content .form__group {
+.webaccess-page section.group .flex-container .form__group, .webaccess-page section.group .tab__content .form__group, .webaccess-page section.group .content__group .form__group {
   max-width: none;
 }
-.webaccess-page section.group .flex-container .form__group > a, .webaccess-page section.group .tab__content .form__group > a {
+.webaccess-page section.group .flex-container .form__group > a, .webaccess-page section.group .tab__content .form__group > a, .webaccess-page section.group .content__group .form__group > a {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label {
+.webaccess-page section.group .flex-container .form__group.form__group--selection > .label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label, .webaccess-page section.group .content__group .form__group.form__group--selection > .label {
   margin-top: 10px;
   margin-left: calc(20px + 0.575rem);
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set {
+.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set, .webaccess-page section.group .content__group .form__group.form__group--selection > .label--set {
   display: flex;
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set label {
+.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set label, .webaccess-page section.group .content__group .form__group.form__group--selection > .label--set label {
   margin-right: 20px;
   width: calc(100% - 167px);
 }
-.webaccess-page section.group .flex-container .form__group.form__group--divide > .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label {
+.webaccess-page section.group .flex-container .form__group.form__group--divide > .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label {
   margin-left: 1rem;
   width: calc( (100% - 140px - 2rem) / 2);
 }
-.webaccess-page section.group .flex-container .form__group.form__group--divide > .label + .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label + .label {
+.webaccess-page section.group .flex-container .form__group.form__group--divide > .label + .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label + .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label + .label {
   margin-top: 0;
 }
-.webaccess-page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label .form__group__input {
+.webaccess-page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label .form__group__input, .webaccess-page section.group .content__group .form__group.form__group--divide > .label .form__group__input {
   min-width: auto;
 }
-.webaccess-page section.group .flex-container .col--left, .webaccess-page section.group .tab__content .col--left {
+.webaccess-page section.group .flex-container .col--left, .webaccess-page section.group .tab__content .col--left, .webaccess-page section.group .content__group .col--left {
   width: calc(100% - 200px);
 }
 .webaccess-page section.group .flex-container {
   padding: 20px;
   border: 1px solid #D3D5D7;
 }
-.webaccess-page section.group .flex-container.justify-between {
-  justify-content: space-between;
-}
 .webaccess-page section.group .flex-container p span.h5 {
   display: block;
   margin-top: 0.5em;
-  margin-bottom: 0;
-}
-.webaccess-page section.group .flex-container p:first-child {
-  margin-top: 0;
   margin-bottom: 0;
 }
 .webaccess-page section.group .flex-container .label--radio {
@@ -2721,10 +2859,14 @@ footer a:hover {
   margin-left: 2.5rem;
 }
 .webaccess-page section.group .content__group {
+  font-size: 1rem;
   border: 1px solid #D3D5D7;
 }
 .webaccess-page section.group .content__group .content__list {
   padding: 15px 20px;
+}
+.webaccess-page section.group .content__group .content__list + .content__list {
+  border-top: 1px solid #D3D5D7;
 }
 .webaccess-page section.group .content__group .content__item {
   display: flex;
@@ -2739,11 +2881,13 @@ footer a:hover {
 .webaccess-page section.group .content__group .content__item:hover {
   background-color: #fafafa;
 }
+.webaccess-page section.group .content__group .content__item--title {
+  margin-bottom: 1rem;
+}
 .webaccess-page section.group .content__group .content__total {
   display: flex;
   padding: 20px;
   border-top: 1px solid #D3D5D7;
-  align-items: center;
   justify-content: space-between;
 }
 .webaccess-page section.group .content__group .content__total__amount {
@@ -2759,33 +2903,34 @@ footer a:hover {
 .webaccess-page section.group .mb-20 {
   margin-bottom: 1rem;
 }
-.webaccess-page section .credit form.form {
-  width: 347px;
-  padding-right: 50px;
-}
-.webaccess-page section .credit form .form__group {
+.webaccess-page section .credit .input__group {
   margin-top: 20px;
 }
-.webaccess-page section .credit form .form__group:first-child {
+.webaccess-page section .credit .input__group:first-child {
   margin-top: 0;
 }
-.webaccess-page section .credit form .form__group__title {
+.webaccess-page section .credit .input__group__title {
   margin-bottom: 5px;
   font-size: 1rem;
 }
-.webaccess-page section .credit form .form__group input {
+.webaccess-page section .credit .input__group input {
   width: 100%;
 }
-.webaccess-page section .credit form .form__group .select__group-col2 {
+.webaccess-page section .credit .input__group .select__group-col2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.webaccess-page section .credit form .form__group .select__group-col2 .select__group {
+.webaccess-page section .credit .input__group .select__group-col2 .select__group {
   display: block;
 }
 .webaccess-page section .credit .card__group {
   width: 231px;
+}
+@media (max-width: 767px) {
+  .webaccess-page section .credit .card__group {
+    display: none;
+  }
 }
 .webaccess-page section .credit .card__group .card {
   position: relative;
@@ -2808,7 +2953,7 @@ footer a:hover {
   height: 20px;
 }
 .webaccess-page section .credit .card__group .card__use li + li {
-  margin-left: 5px;
+  margin-left: 0.5em;
 }
 .webaccess-page section .credit .card__group .card__type {
   position: absolute;

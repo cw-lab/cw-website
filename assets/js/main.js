@@ -221,7 +221,7 @@ $(function(){
 	}
 	// 全閱讀 secant project
 	// 信用卡Keyup同步
-	if (location.href.match(/payment/)) {
+	if ( (location.href.match(/payment/)) && (width >= 768) ) {
 		$("#creditCardNumber").on('keyup', function(){
 			$(this).val(function (index, value) {
 				return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');

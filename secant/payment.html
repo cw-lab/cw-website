@@ -13,96 +13,175 @@
 		<link rel="stylesheet" href="../assets/css/main.css">
 	</head>
 	<body class="webaccess-page">
-		<header class="container"></header>
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<ul class="list-reset flex member-list">
+						<li><a href="#!">登入</a></li>
+						<li><a href="#!">註冊</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
 		<main class="container flex">
 			<article>
-				<section class="group"></section>
+				<div class="step__group flex">
+					<div class="step__item step__item--past">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">填寫資料</span>
+					</div>
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">付款資料</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">訂購完成</span>
+					</div>
+				</div>
 				<section class="group">
-					<h3>付款資料</h3>
-					<div class="flex-container flex credit">
-						<form action="#!" class="form">
-							<div class="form__group form__group--filled">
-								<div class="form__group__title">信用卡卡號</div>
-								<label for="#!" class="label">
-									<div class="form__group__placeholder">請輸入信用卡卡號</div>
-									<input type="text" class="form__group__input form__group__input--default" id="creditCardNumber" maxlength="22">
-								</label>
+					<h3>訂單資料</h3>
+					<div class="content__group">
+						<ul class="content__list">
+							<li class="content__item">
+								<div class="content__item__title">Email(帳號)</div>
+								<div class="content__item__amount">bilylin66@gmail.com</div>
+							</li>
+							<li class="content__item">
+								<div class="content__item__title">收件地址</div>
+								<div class="content__item__amount">台北市中山區南京東路二段139號</div>
+							</li>
+							<li class="content__item">
+								<div class="content__item__title">發票資料</div>
+								<div class="content__item__amount">會員載具</div>
+							</li>
+							<li class="content__item">
+								<div class="content__item__title">續訂方案</div>
+								<div class="content__item__amount">同意自動續訂</div>
+							</li>
+						</ul>
+						<div class="content__total">
+							<div class="content__total__reelect">
+								<a onclick="window.history.back();" class="link-btn">修改資料</a>
 							</div>
-							<div class="form__group form__group--filled">
-								<div class="form__group__title">有效期限</div>
-								<div class="select__group-col2">
-									<div class="select__group select__group--filled">
-										<select id="expMonth">
-											<option class="select__group__item" value="0" selected="">月</option>
-											<option class="select__group__item" value="01">01</option>
-											<option class="select__group__item" value="02">02</option>
-											<option class="select__group__item" value="03">03</option>
-											<option class="select__group__item" value="04">04</option>
-											<option class="select__group__item" value="05">05</option>
-											<option class="select__group__item" value="06">06</option>
-											<option class="select__group__item" value="07">07</option>
-											<option class="select__group__item" value="08">08</option>
-											<option class="select__group__item" value="09">09</option>
-											<option class="select__group__item" value="10">10</option>
-											<option class="select__group__item" value="11">11</option>
-											<option class="select__group__item" value="12">12</option>
-										</select>
-									</div>
-									<div class="select__group select__group--filled">
-										<select id="expYear">
-											<option class="select__group__item" value="0" selected="">年</option>
-											<option class="select__group__item" value="19">2019</option>
-											<option class="select__group__item" value="20">2020</option>
-											<option class="select__group__item" value="21">2021</option>
-											<option class="select__group__item" value="22">2022</option>
-											<option class="select__group__item" value="23">2023</option>
-											<option class="select__group__item" value="24">2024</option>
-											<option class="select__group__item" value="25">2025</option>
-											<option class="select__group__item" value="26">2026</option>
-											<option class="select__group__item" value="27">2027</option>
-											<option class="select__group__item" value="28">2028</option>
-											<option class="select__group__item" value="29">2029</option>
-											<option class="select__group__item" value="30">2030</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="form__group form__group--filled">
-								<div class="form__group__title">安全碼</div>
-								<label for="#!" class="label">
-									<div class="form__group__placeholder">請輸入安全碼</div>
-									<input pattern="[0-9.]+" maxlength="3" type="text" class="form__group__input form__group__input--default" id="securityCode">
-								</label>
-							</div>
-						</form>
-						<form action="#!" class="card__group">
-							<div class="form__group__title">可刷卡別</div>
-							<ul class="card__use">
-								<li>
-									<img src="../assets/img/icon-visa@3x.png" alt="VISA">
-								</li>
-								<li>
-									<img src="../assets/img/icon-master@3x.png" alt="MASTER CARD">
-								</li>
-								<li>
-									<img src="../assets/img/icon-jcb@3x.png" alt="JCB">
-								</li>
-							</ul>
-							<div class="card">
-								<div class="card__type"></div>
-								<div class="card__input">
-									<input class="card__input--number" type="text" value="" readonly>
-									<input class="card__input--month" type="text" value="" readonly>
-									<input class="card__input--year" type="text" value="" readonly>
-									<input class="card__input--code" type="text" value="" readonly>
-								</div>
-							</div>
-						</form>
+						</div>
 					</div>
 				</section>
+				<form action="password.html" class="form">
+					<section class="group">
+						<h3>付款資料</h3>
+						<div class="content__group credit">
+							<ul class="content__list list-reset">
+								<li class="content__item--title">
+									<div class="content__total__amount">
+										訂單應付總金額<span>399</span>元
+									</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">全閱讀季訂</div>
+									<div class="content__item__amount">399元</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">2019空白筆記本-PANTONE束帶</div>
+									<div class="content__item__amount">0元</div>
+								</li>
+							</ul>
+							<div class="content__total flex align-items-start">
+								<div class="input__group">
+									<div class="label form__group form__group--filled">
+										<div class="input__group__title">信用卡卡號</div>
+										<label for="#!" class="label">
+											<div class="form__group__placeholder">請輸入信用卡卡號</div>
+											<input type="text" class="form__group__input form__group__input--default" id="creditCardNumber" maxlength="22">
+										</label>
+									</div>
+									<div class="label form__group form__group--filled">
+										<div class="input__group__title">有效期限</div>
+										<div class="select__group-col2">
+											<div class="select__group select__group--filled">
+												<select id="expMonth">
+													<option class="select__group__item" value="0" selected="">月</option>
+													<option class="select__group__item" value="01">01</option>
+													<option class="select__group__item" value="02">02</option>
+													<option class="select__group__item" value="03">03</option>
+													<option class="select__group__item" value="04">04</option>
+													<option class="select__group__item" value="05">05</option>
+													<option class="select__group__item" value="06">06</option>
+													<option class="select__group__item" value="07">07</option>
+													<option class="select__group__item" value="08">08</option>
+													<option class="select__group__item" value="09">09</option>
+													<option class="select__group__item" value="10">10</option>
+													<option class="select__group__item" value="11">11</option>
+													<option class="select__group__item" value="12">12</option>
+												</select>
+											</div>
+											<div class="select__group select__group--filled">
+												<select id="expYear">
+													<option class="select__group__item" value="0" selected="">年</option>
+													<option class="select__group__item" value="19">2019</option>
+													<option class="select__group__item" value="20">2020</option>
+													<option class="select__group__item" value="21">2021</option>
+													<option class="select__group__item" value="22">2022</option>
+													<option class="select__group__item" value="23">2023</option>
+													<option class="select__group__item" value="24">2024</option>
+													<option class="select__group__item" value="25">2025</option>
+													<option class="select__group__item" value="26">2026</option>
+													<option class="select__group__item" value="27">2027</option>
+													<option class="select__group__item" value="28">2028</option>
+													<option class="select__group__item" value="29">2029</option>
+													<option class="select__group__item" value="30">2030</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="label form__group form__group--filled">
+										<div class="input__group__title">安全碼</div>
+										<label for="#!" class="label">
+											<div class="form__group__placeholder">請輸入安全碼</div>
+											<input pattern="[0-9.]+" maxlength="3" type="text" class="form__group__input form__group__input--default" id="securityCode">
+										</label>
+									</div>
+								</div>
+								<div class="card__group">
+									<div class="input__group__title">可刷卡別</div>
+									<ul class="card__use list-reset">
+										<li>
+											<img src="../assets/img/icon-visa@3x.png" alt="VISA">
+										</li>
+										<li>
+											<img src="../assets/img/icon-master@3x.png" alt="MASTER CARD">
+										</li>
+										<li>
+											<img src="../assets/img/icon-jcb@3x.png" alt="JCB">
+										</li>
+									</ul>
+									<div class="card">
+										<div class="card__type"></div>
+										<div class="card__input">
+											<input class="card__input--number" type="text" value="" readonly>
+											<input class="card__input--month" type="text" value="" readonly>
+											<input class="card__input--year" type="text" value="" readonly>
+											<input class="card__input--code" type="text" value="" readonly>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="text-right">
+						<button class="btn btn--contained">付款</button>
+					</div>
+				</form>
 			</article>
 		</main>
-		<footer></footer>
+		<footer>
+			<div class="container">
+				如有問題歡迎致電客服專線 <a href="tel:886226620332">886-2-2662-0332</a><br>（週一～週五 9:00～17:30 例假日除外）
+			</div>
+		</footer>
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script type="text/javascript" src="../assets/js/main.js"></script>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>結帳頁</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../assets/css/main.css">
+	</head>
+	<body class="webaccess-page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<ul class="list-reset flex member-list">
+						<li><a href="#!">登入</a></li>
+						<li><a href="#!">註冊</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main class="container flex">
+			<form action="payment.html">
+				<article>
+					<div class="step__group flex">
+						<div class="step__item step__item--past">
+							<span class="stap__number">STEP 1</span>
+							<span class="stap__txt">填寫資料</span>
+						</div>
+						<div class="step__item step__item--now">
+							<span class="stap__number">STEP 2</span>
+							<span class="stap__txt">付款資料</span>
+						</div>
+						<div class="step__item">
+							<span class="stap__number">STEP 3</span>
+							<span class="stap__txt">訂購完成</span>
+						</div>
+					</div>
+					<section class="group">
+						<h1><i class="icon icon-error-solid heading__icon heading__icon--error"></i>付款失敗！</h1>
+						<p>您的付款已失敗，請點擊下方按鈕重新付款。</p>
+						<p class="emphasis">
+							如有問題歡迎致電客服專線886-2-2662-0332<br>
+							(週一~週五9:00~17:30例假日除外)
+						</p>
+					</section>
+					<section class="group">
+						<div class="flex-container">
+							<h3 class="mt0">付款失敗可能原因如下：</h3>
+							<ol class="mtb0">
+								<li>信用卡卡號、末3碼、期限輸入錯誤。</li>
+								<li>信用卡額度 / 餘額不足。</li>
+								<li>信用卡尚未開卡。</li>
+								<li>信用卡已過期。</li>
+								<li>信用卡發卡銀行系統相關問題。</li>
+								<li>該信用卡卡號同時刷卡授權中而導致失敗。</li>
+								<li>網路斷線。</li>
+								<li>若持續刷卡交易失敗，請立即與您的信用卡發卡銀行進行聯繫。</li>
+							</ol>
+						</div>
+					</section>
+					<div class="text-right">
+						<button class="btn btn--contained">重新付款</button>
+					</div>
+				</article>
+			</form>
+		</main>
+		<footer>
+			<div class="container">
+				如有問題歡迎致電客服專線 <a href="tel:886226620332">886-2-2662-0332</a><br>（週一～週五 9:00～17:30 例假日除外）
+			</div>
+		</footer>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+		<script type="text/javascript" src="../assets/js/main.js"></script>
+	</body>
+</html>

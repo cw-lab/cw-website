@@ -2630,12 +2630,14 @@ main form::before, main form::after {
   display: table;
   clear: both;
 }
-main form .select__group--col2 {
-  width: calc( ( 100% - 1rem) / 2 );
-}
-main form .select__group--col2 select {
-  min-width: auto;
-  width: 100%;
+@media (max-width: 767px) {
+  main form .select__group--col2 {
+    width: calc( ( 100% - 1rem) / 2 );
+  }
+  main form .select__group--col2 select {
+    min-width: auto;
+    width: 100%;
+  }
 }
 main form .form__group .form__group__input {
   min-width: auto;

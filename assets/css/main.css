@@ -2584,7 +2584,7 @@ main article {
     margin-right: auto;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   main article {
     padding-left: 10px;
     padding-right: 10px;

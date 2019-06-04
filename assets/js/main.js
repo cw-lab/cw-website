@@ -221,13 +221,13 @@ $(function(){
 	}
 	// 全閱讀 secant project
 	// 信用卡Keyup同步
+	$("#creditCardNumber").on('keyup', function(){
+		$(this).val(function (index, value) {
+			return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');
+		});
+		$(".card__input--number").attr("value", this.value);
+	})
 	if ( (location.href.match(/payment/)) && (width >= 768) ) {
-		$("#creditCardNumber").on('keyup', function(){
-			$(this).val(function (index, value) {
-				return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');
-			});
-			$(".card__input--number").attr("value", this.value);
-		})
 		$("#expMonth").on('change', function(){
 			$(".card__input--month").attr("value", this.value);
 		})

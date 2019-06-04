@@ -3203,6 +3203,7 @@ footer .imglink__app__img li + li {
   margin-bottom: 20px;
 }
 .webaccess__page section.group .flex-container .form__group.form__group--selection > .label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label {
+  display: none;
   margin-top: 10px;
   margin-left: calc(20px + 0.575rem);
 }
@@ -3286,7 +3287,6 @@ footer .imglink__app__img li + li {
   border-top: 1px solid #D3D5D7;
 }
 .webaccess__page section.group .content__group .content__item {
-  display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
   justify-content: space-between;
@@ -3295,6 +3295,11 @@ footer .imglink__app__img li + li {
   -webkit-transition: background-color, 0.3s;
   transition: background-color, 0.3s;
 }
+@media (min-width: 375px) {
+  .webaccess__page section.group .content__group .content__item {
+    display: flex;
+  }
+}
 .webaccess__page section.group .content__group .content__item:hover {
   background-color: #fafafa;
 }
@@ -3302,9 +3307,13 @@ footer .imglink__app__img li + li {
   margin-bottom: 1rem;
 }
 .webaccess__page section.group .content__group .content__item__amount {
-  width: calc(100% - 150px);
-  text-align: right;
   word-break: break-all;
+}
+@media (min-width: 375px) {
+  .webaccess__page section.group .content__group .content__item__amount {
+    width: calc(100% - 150px);
+    text-align: right;
+  }
 }
 .webaccess__page section.group .content__group .content__total {
   display: flex;

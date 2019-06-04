@@ -246,6 +246,14 @@ $(function(){
 		$(this).parent().parent().slideUp();
 		$(this).parent().parent().siblings(".select-invoicing").slideDown();
 	})
+	$(".form__group--radio--input").on("click", function(){
+		$(this).siblings().children(".form__group--input").css({
+			"display" : "none"
+		});
+		$(this).children(".form__group--input").css({
+			"display" : "block"
+		});
+	})
 	$(window).scroll(function(){
 		// message: 定位在目前畫面之中
 		var scroll = $(window).scrollTop();

@@ -2558,7 +2558,12 @@ header .container > .flex {
 }
 header ul.member-list {
   position: relative;
-  padding-left: 15px;
+  padding-left: 0.5rem;
+}
+@media (min-width: 414px) {
+  header ul.member-list {
+    padding-left: 1rem;
+  }
 }
 header ul.member-list::before {
   position: absolute;
@@ -2572,10 +2577,25 @@ header ul.member-list::before {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+@media (max-width: 350px) {
+  header ul.member-list::before {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  header ul.member-list li.login {
+    display: none;
+  }
+}
 header ul.member-list a {
   display: block;
-  padding: 0 15px;
+  padding: 0 0.5rem;
   color: #171717;
+}
+@media (min-width: 414px) {
+  header ul.member-list a {
+    padding: 0 1rem;
+  }
 }
 header ul.member-list a:hover {
   color: #D60C18;
@@ -2930,6 +2950,66 @@ main .plan .plan__gift .gift__item__text {
     margin-bottom: 0.5em;
   }
 }
+main .app__group {
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  main .app__group {
+    padding: 1.25em;
+  }
+}
+main .app__group--left {
+  margin-right: 2.5em;
+}
+@media (max-width: 767px) {
+  main .app__group--left {
+    display: none;
+  }
+}
+main .app__title {
+  align-items: center;
+}
+main .app__title--icon {
+  height: 53px;
+}
+@media (min-width: 768px) {
+  main .app__title--icon {
+    height: 48px;
+  }
+}
+main .app__title--text {
+  margin-left: 0.5em;
+}
+@media (min-width: 768px) {
+  main .app__title--text {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 767px) {
+  main .app__title--text {
+    width: calc(100% - 0.5em - 53px);
+  }
+}
+main .app__title--text h3 {
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  line-height: 1;
+}
+main .app__img {
+  margin-top: 1.25em;
+}
+main .app__img li + li {
+  margin-left: 1em;
+}
+main .app__img img {
+  height: 35px;
+}
+@media (min-width: 768px) {
+  main .app__img img {
+    height: 44px;
+  }
+}
 
 footer {
   margin-top: 3.75em;
@@ -3224,6 +3304,7 @@ footer .imglink__app__img li + li {
 .webaccess__page section.group .content__group .content__item__amount {
   width: calc(100% - 150px);
   text-align: right;
+  word-break: break-all;
 }
 .webaccess__page section.group .content__group .content__total {
   display: flex;

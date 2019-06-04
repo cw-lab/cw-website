@@ -2817,7 +2817,7 @@ main .plan .plan__item__title.h3 {
   margin-top: 0;
   margin-bottom: 0;
 }
-@media (max-width: 929px) {
+@media screen and (min-width: 768px) and (max-width: 929px) {
   main .plan .plan__item__title span {
     display: block;
   }

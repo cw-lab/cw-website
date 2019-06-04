@@ -12,7 +12,7 @@
 		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
 		<link rel="stylesheet" href="../assets/css/main.css">
 	</head>
-	<body class="webaccess-page">
+	<body class="webaccess__page webaccess__page--index">
 		<header>
 			<div class="container">
 				<div class="flex justify-between">
@@ -33,7 +33,7 @@
 					<div class="plan__item">
 						<div class="plan__description plan__description--main">
 							<img src="../assets/img/webaccess@2x.png" alt="線上閱讀" class="plan__item__img">
-							<div class="plan__item__title h1 text-center">線上閱讀</div>
+							<div class="plan__item__title h1 text-center"><span>線上閱讀</span></div>
 							<ul class="plan__item__option">
 								<li>
 									<label class="label--radio">
@@ -70,7 +70,7 @@
 						<div class="plan__description plan__description--main">
 							<div class="plan__item__spec"><span>最優惠</span></div>
 							<img src="../assets/img/webaccess__cw@2x.png" alt="線上+紙本閱讀" class="plan__item__img">
-							<div class="plan__item__title h1 text-center">線上+紙本閱讀</div>
+							<div class="plan__item__title h1 text-center"><span>線上+紙本</span><span>閱讀</span></div>
 							<ul class="plan__item__option">
 								<li>
 									<label class="label--radio">
@@ -105,7 +105,7 @@
 					<div class="plan__item">
 						<div class="plan__description plan__description--main">
 							<img src="../assets/img/webaccess@2x.png" alt="紙本閱讀" class="plan__item__img">
-							<div class="plan__item__title h1 text-center">紙本閱讀</div>
+							<div class="plan__item__title h1 text-center"><span>紙本閱讀</span></div>
 							<ul class="plan__item__option">
 								<li>
 									<label class="label--radio">
@@ -185,11 +185,11 @@
 						</label>
 					</div>
 				</div>
-				<hr>
-				<div class="price--total h2 text-right">
-					總金額<span>399</span>元
-				</div>
-				<div class="text-right">
+				<div class="price--fixed text-right">
+					<hr>
+					<div class="price--total h2">
+						總金額<span>399</span>元
+					</div>
 					<button class="btn btn--contained">下一步，填寫資料</button>
 				</div>
 			</form>
@@ -259,7 +259,56 @@
 		</main>
 		<footer>
 			<div class="container">
-				如有問題歡迎致電客服專線 <a href="tel:886226620332">886-2-2662-0332</a><br>（週一～週五 9:00～17:30 例假日除外）
+				<div class="flex justify-between">
+					<div class="copyright">
+						<ul class="copyright__cwlink flex list-reset">
+							<li><a href="https://www.cw.com.tw/about/" target="_blank">關於天下雜誌群</a></li>
+							<li><a href="https://www.cwbook.com.tw/member/mcntr/MemberHome!redirect.shtml" target="_blank">顧客服務</a></li>
+							<li><a href="https://www.cw.com.tw/subscriptions">雜誌訂閱</a></li>
+							<li><a href="https://www.cw.com.tw/saleskit/" target="_blank">廣告刊登</a></li>
+							<li><a href="https://www.cw.com.tw/recruit/index.php" target="_blank">人才招募</a></li>
+							<li><a href="https://www.cw.com.tw/privacy" target="_blank">隱私權政策與使用條款</a></li>
+						</ul>
+						<div class="copyright__contact">
+							<span>讀者服務專線：886-2-2662-0332</span>
+							<span>傳真電話：886-2-2662-6048</span>
+							<span>服務時間：週一～週五 09:00~17:30</span>
+							<span>台北市104南京東路二段139號11樓</span>
+							<span>Copyright © 2019天下雜誌</span>
+						</div>
+					</div>
+					<div class="imglink flex">
+						<ul class="imglink__sns list-reset flex">
+							<li>
+								<a href="#!" class="sns sns-facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+							</li>
+							<li>
+								<a href="#!" class="sns sns-instagram" target="_blank"><i class="icon icon-instagram"></i></a>
+							</li>
+							<li>
+								<a href="#!" class="sns sns-line" target="_blank"><i class="icon icon-line"></i></a>
+							</li>
+							<li>
+								<a href="#!" class="sns sns-rss" target="_blank"><i class="icon icon-rss"></i></a>
+							</li>
+						</ul>
+						<div class="imglink__app">
+							<div class="imglink__app__title">下載天下雜誌APP</div>
+							<ul class="imglink__app__img list-reset flex">
+								<li>
+									<a href="https://itunes.apple.com/app/apple-store/id1367378245?pt=390304&ct=webfooter1015&mt=8" target="_blank">
+										<img src="../assets/img/icon-apple-store@3x.png" alt="apple-store" height="35">
+									</a>
+								</li>
+								<li>
+									<a href="https://play.google.com/store/apps/details?id=tw.com.cw.commonwealth.cwapp&referrer=utm_source%3Dwebsite%26utm_medium%3Dbutton%26utm_campaign%3Dwebfooter1015" target="_blank">
+										<img src="../assets/img/icon-google-play@3x.png" alt="google-play" height="35">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>

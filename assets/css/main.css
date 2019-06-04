@@ -191,7 +191,7 @@ nav.menubar--sub ul.menubar__user::before, button.btn::before, button.btn::after
   display: block;
 }
 
-nav.menubar--sub > .container ul, nav.menubar--belt ul, .list-reset, main .plan .plan__item__option, .webaccess-page section.group .content__group .content__list {
+nav.menubar--sub > .container ul, nav.menubar--belt ul, .list-reset, main .plan .plan__item__option, .webaccess__page section.group .content__group .content__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -645,6 +645,11 @@ i.icon {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+i.icon:before {
+  position: relative;
+  top: 0.125em;
 }
 
 .icon-caret-right:before {
@@ -1676,10 +1681,15 @@ button.btn, a.btn {
   min-width: 144px;
   padding: 0 1rem;
   font-size: 1rem;
-  line-height: 2.875rem;
+  line-height: 2.65rem;
   text-align: center;
   word-break: keep-all;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  button.btn, a.btn {
+    line-height: 2.875rem;
+  }
 }
 button.btn + button.btn, button.btn + a.btn, a.btn + button.btn, a.btn + a.btn {
   margin-left: 1rem;
@@ -2430,6 +2440,14 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   color: #D60C18;
 }
 
+@media (min-width: 768px) {
+  html, body {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+  }
+}
+
 .mtb0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -2483,9 +2501,10 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   padding-left: 10px;
   padding-right: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 375px) {
   .container {
-    width: 740px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (min-width: 1024px) {
@@ -2576,18 +2595,22 @@ main {
 }
 main article {
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 375px) {
+  main article {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 @media (min-width: 1024px) {
   main article {
     width: 620px;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-@media (max-width: 1023px) {
-  main article {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 main article .step__group {
@@ -2652,8 +2675,32 @@ main .plan {
   }
 }
 main .plan .plan__description {
-  padding-right: 65px;
-  padding-left: 65px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+@media (min-width: 375px) {
+  main .plan .plan__description {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  main .plan .plan__description {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 930px) {
+  main .plan .plan__description {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  main .plan .plan__description {
+    padding-right: 65px;
+    padding-left: 65px;
+  }
 }
 main .plan .plan__description--main {
   padding-top: 25px;
@@ -2664,7 +2711,12 @@ main .plan .plan__description--main {
     padding-bottom: 10px;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 929px) {
+  main .plan .plan__description--main {
+    height: 460px;
+  }
+}
+@media (min-width: 930px) {
   main .plan .plan__description--main {
     height: 440px;
   }
@@ -2739,9 +2791,24 @@ main .plan .plan__item__title {
 main .plan .plan__item__title.h1 {
   margin-top: 1rem;
 }
+@media screen and (min-width: 768px) and (max-width: 929px) {
+  main .plan .plan__item__title.h1 {
+    height: 2.3em;
+  }
+}
+@media (max-width: 767px) {
+  main .plan .plan__item__title.h1 {
+    margin-bottom: 1rem;
+  }
+}
 main .plan .plan__item__title.h3 {
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (max-width: 929px) {
+  main .plan .plan__item__title span {
+    display: block;
+  }
 }
 main .plan .plan__item__connect {
   font-size: 1rem;
@@ -2753,9 +2820,15 @@ main .plan .plan__item__img {
   margin-left: auto;
   margin-right: auto;
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 929px) {
+  main .plan .plan__item__img {
+    height: 100px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 1279px) {
   main .plan .plan__item__option {
-    display: table;
+    width: 205px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -2788,10 +2861,19 @@ main .plan .plan__gift {
 }
 @media (min-width: 768px) {
   main .plan .plan__gift {
+    width: calc( (100% - 40px) / 3 );
+    margin-left: 20px;
+  }
+  main .plan .plan__gift:nth-child(3n+1) {
+    margin-left: 0;
+  }
+}
+@media (min-width: 930px) {
+  main .plan .plan__gift {
     width: calc( (100% - 60px) / 4 );
   }
-  main .plan .plan__gift + .plan__gift {
-    margin-left: 20px;
+  main .plan .plan__gift:nth-child(4n+1) {
+    margin-left: 0;
   }
 }
 @media (max-width: 767px) {
@@ -2859,108 +2941,275 @@ main .plan .plan__gift .gift__item__text {
 
 footer {
   margin-top: 3.75em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 14px;
-  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 0.8125rem;
   background-color: #EEEEEE;
 }
+@media (min-width: 768px) {
+  footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  footer > .container > .flex {
+    flex-direction: column;
+  }
+}
 footer a {
-  color: #003a9f;
+  display: block;
+  color: #171717;
   text-decoration: underline;
 }
 footer a:hover {
   color: #D60C18;
 }
+@media (min-width: 768px) {
+  footer .copyright {
+    width: calc(100% - 410px);
+  }
+}
+@media (max-width: 767px) {
+  footer .copyright {
+    order: 2;
+  }
+}
+footer .copyright__cwlink {
+  margin-bottom: 1.5em;
+  margin-right: -275px;
+}
+@media (max-width: 767px) {
+  footer .copyright__cwlink {
+    display: none;
+  }
+}
+footer .copyright__cwlink li {
+  padding: 0 1em;
+  line-height: 1;
+  border-left: 1px solid #171717;
+}
+footer .copyright__cwlink li:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+footer .copyright__contact span {
+  display: block;
+  padding-right: 1em;
+}
+@media (min-width: 768px) {
+  footer .copyright__contact span {
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  footer .copyright__contact span:nth-child(4) {
+    margin-top: 1em;
+  }
+}
+footer .imglink {
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  footer .imglink {
+    width: 410px;
+  }
+}
+@media (max-width: 767px) {
+  footer .imglink {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+footer .imglink__sns {
+  font-size: 30px;
+}
+footer .imglink__sns li {
+  margin-left: 0.33333em;
+  line-height: 1;
+}
+footer .imglink__sns li:first-child {
+  margin-left: 0;
+}
+footer .imglink__sns li a {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  footer .imglink__app {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 767px) {
+  footer .imglink__app {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+footer .imglink__app__title {
+  margin-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  footer .imglink__app__title {
+    margin-bottom: 0.75em;
+    text-align: center;
+  }
+}
+footer .imglink__app__img li + li {
+  margin-left: 0.5em;
+}
 
-.webaccess-page main {
+@media (min-width: 768px) {
+  .webaccess__page {
+    padding-bottom: 220px;
+  }
+}
+.webaccess__page--index {
+  padding-bottom: 66px;
+}
+@media (min-width: 375px) {
+  .webaccess__page--index {
+    padding-bottom: 76px;
+  }
+}
+@media (min-width: 768px) {
+  .webaccess__page--index {
+    padding-bottom: 0;
+  }
+}
+.webaccess__page main {
   justify-content: center;
 }
-.webaccess-page main .price--total span {
+@media (max-width: 767px) {
+  .webaccess__page main .price--fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid #D3D5D7;
+    z-index: 1;
+  }
+  .webaccess__page main .price--fixed hr {
+    display: none;
+  }
+}
+@media (max-width: 374px) {
+  .webaccess__page main .price--fixed {
+    padding: 10px;
+  }
+}
+.webaccess__page main .price--total span {
   margin-left: 1rem;
 }
-.webaccess-page section.group {
+@media (max-width: 767px) {
+  .webaccess__page main .price--total {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
+.webaccess__page section.group {
   margin-bottom: 40px;
 }
-.webaccess-page section.group .flex-container .label + .label, .webaccess-page section.group .tab__content .label + .label, .webaccess-page section.group .content__group .label + .label {
+.webaccess__page section.group .flex-container .label + .label, .webaccess__page section.group .tab__content .label + .label, .webaccess__page section.group .content__group .label + .label {
   margin-top: 1.25rem;
 }
-.webaccess-page section.group .flex-container .form__group, .webaccess-page section.group .tab__content .form__group, .webaccess-page section.group .content__group .form__group {
+.webaccess__page section.group .flex-container .form__group, .webaccess__page section.group .tab__content .form__group, .webaccess__page section.group .content__group .form__group {
   max-width: none;
 }
-.webaccess-page section.group .flex-container .form__group > a, .webaccess-page section.group .tab__content .form__group > a, .webaccess-page section.group .content__group .form__group > a {
+.webaccess__page section.group .flex-container .form__group > a, .webaccess__page section.group .tab__content .form__group > a, .webaccess__page section.group .content__group .form__group > a {
   margin-top: 10px;
   margin-bottom: 20px;
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label, .webaccess-page section.group .content__group .form__group.form__group--selection > .label {
+.webaccess__page section.group .flex-container .form__group.form__group--selection > .label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label {
   margin-top: 10px;
   margin-left: calc(20px + 0.575rem);
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set, .webaccess-page section.group .content__group .form__group.form__group--selection > .label--set {
+.webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set, .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set {
   display: flex;
 }
-.webaccess-page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess-page section.group .tab__content .form__group.form__group--selection > .label--set label, .webaccess-page section.group .content__group .form__group.form__group--selection > .label--set label {
-  margin-right: 20px;
-  width: calc(100% - 167px);
+@media (max-width: 767px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set, .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set {
+    display: block;
+  }
 }
-.webaccess-page section.group .flex-container .form__group.form__group--divide > .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label {
+.webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set label {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set label {
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set label {
+    margin-right: 20px;
+    width: calc(100% - 167px);
+  }
+}
+.webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .webaccess-page section.group .flex-container .form__group.form__group--divide > .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label {
+  .webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
     margin-left: 1rem;
     width: calc( (100% - 140px - 2rem) / 2);
   }
 }
 @media (max-width: 767px) {
-  .webaccess-page section.group .flex-container .form__group.form__group--divide > .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label {
+  .webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
     margin-top: 1rem;
   }
 }
 @media (min-width: 768px) {
-  .webaccess-page section.group .flex-container .form__group.form__group--divide > .label + .label, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label + .label, .webaccess-page section.group .content__group .form__group.form__group--divide > .label + .label {
+  .webaccess__page section.group .flex-container .form__group.form__group--divide > .label + .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label + .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label + .label {
     margin-top: 0;
   }
 }
-.webaccess-page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess-page section.group .tab__content .form__group.form__group--divide > .label .form__group__input, .webaccess-page section.group .content__group .form__group.form__group--divide > .label .form__group__input {
+.webaccess__page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .content__group .form__group.form__group--divide > .label .form__group__input {
   min-width: auto;
 }
 @media (max-width: 767px) {
-  .webaccess-page section.group .flex-container .col--left p, .webaccess-page section.group .tab__content .col--left p, .webaccess-page section.group .content__group .col--left p {
+  .webaccess__page section.group .flex-container .col--left p, .webaccess__page section.group .tab__content .col--left p, .webaccess__page section.group .content__group .col--left p {
     margin-bottom: 1em;
   }
 }
 @media (min-width: 768px) {
-  .webaccess-page section.group .flex-container .col--left, .webaccess-page section.group .tab__content .col--left, .webaccess-page section.group .content__group .col--left {
+  .webaccess__page section.group .flex-container .col--left, .webaccess__page section.group .tab__content .col--left, .webaccess__page section.group .content__group .col--left {
     width: calc(100% - 200px);
   }
 }
-.webaccess-page section.group .flex-container {
+.webaccess__page section.group .flex-container {
   padding: 20px;
   border: 1px solid #D3D5D7;
 }
-.webaccess-page section.group .flex-container p span.h5 {
+.webaccess__page section.group .flex-container p span.h5 {
   display: block;
   margin-top: 0.5em;
   margin-bottom: 0;
 }
-.webaccess-page section.group .flex-container .label--radio {
+.webaccess__page section.group .flex-container .label--radio {
   display: inline-block;
 }
-.webaccess-page section.group .flex-container .label--radio + .label--radio {
+.webaccess__page section.group .flex-container .label--radio + .label--radio {
   margin-left: 2.5rem;
 }
-.webaccess-page section.group .content__group {
+.webaccess__page section.group .content__group {
   font-size: 1rem;
   border: 1px solid #D3D5D7;
 }
-.webaccess-page section.group .content__group .content__list {
+.webaccess__page section.group .content__group .content__list {
   padding: 15px 20px;
 }
-.webaccess-page section.group .content__group .content__list + .content__list {
+.webaccess__page section.group .content__group .content__list + .content__list {
   border-top: 1px solid #D3D5D7;
 }
-.webaccess-page section.group .content__group .content__item {
+.webaccess__page section.group .content__group .content__item {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -2970,77 +3219,77 @@ footer a:hover {
   -webkit-transition: background-color, 0.3s;
   transition: background-color, 0.3s;
 }
-.webaccess-page section.group .content__group .content__item:hover {
+.webaccess__page section.group .content__group .content__item:hover {
   background-color: #fafafa;
 }
-.webaccess-page section.group .content__group .content__item--title {
+.webaccess__page section.group .content__group .content__item--title {
   margin-bottom: 1rem;
 }
-.webaccess-page section.group .content__group .content__item__amount {
+.webaccess__page section.group .content__group .content__item__amount {
   width: calc(100% - 150px);
   text-align: right;
 }
-.webaccess-page section.group .content__group .content__total {
+.webaccess__page section.group .content__group .content__total {
   display: flex;
   padding: 20px;
   border-top: 1px solid #D3D5D7;
   justify-content: space-between;
 }
-.webaccess-page section.group .content__group .content__total__amount {
+.webaccess__page section.group .content__group .content__total__amount {
   font-size: 1.125em;
   font-weight: 500;
 }
-.webaccess-page section.group .content__group .content__total__amount span {
+.webaccess__page section.group .content__group .content__total__amount span {
   padding-left: 1em;
 }
-.webaccess-page section.group > h3, .webaccess-page section.group > .h3 {
+.webaccess__page section.group > h3, .webaccess__page section.group > .h3 {
   margin-bottom: 5px;
 }
-.webaccess-page section.group .mb-20 {
+.webaccess__page section.group .mb-20 {
   margin-bottom: 1rem;
 }
-.webaccess-page section .credit .input__group {
+.webaccess__page section .credit .input__group {
   margin-top: 20px;
   width: 100%;
 }
-.webaccess-page section .credit .input__group:first-child {
+.webaccess__page section .credit .input__group:first-child {
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  .webaccess-page section .credit .input__group:first-child {
+  .webaccess__page section .credit .input__group:first-child {
     width: calc(100% - 281px);
   }
 }
-.webaccess-page section .credit .input__group__title {
+.webaccess__page section .credit .input__group__title {
   margin-bottom: 5px;
   font-size: 1rem;
 }
-.webaccess-page section .credit .input__group input {
+.webaccess__page section .credit .input__group input {
   min-width: auto;
   width: 100%;
 }
-.webaccess-page section .credit .input__group .select__group-col2 {
+.webaccess__page section .credit .input__group .select__group-col2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.webaccess-page section .credit .input__group .select__group-col2 .select__group {
+.webaccess__page section .credit .input__group .select__group-col2 .select__group {
   display: block;
   width: calc( (100% - 1rem) / 2 );
 }
-.webaccess-page section .credit .input__group .select__group-col2 .select__group select {
+.webaccess__page section .credit .input__group .select__group-col2 .select__group select {
   min-width: auto;
   width: 100%;
 }
-.webaccess-page section .credit .card__group {
+.webaccess__page section .credit .card__group {
   width: 231px;
 }
 @media (max-width: 767px) {
-  .webaccess-page section .credit .card__group {
+  .webaccess__page section .credit .card__group {
     display: none;
   }
 }
-.webaccess-page section .credit .card__group .card {
+.webaccess__page section .credit .card__group .card {
   position: relative;
   width: 231px;
   height: 146px;
@@ -3052,18 +3301,18 @@ footer a:hover {
   -webkit-background-size: cover;
   background-size: cover;
 }
-.webaccess-page section .credit .card__group .card__use {
+.webaccess__page section .credit .card__group .card__use {
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
 }
-.webaccess-page section .credit .card__group .card__use li img {
+.webaccess__page section .credit .card__group .card__use li img {
   height: 20px;
 }
-.webaccess-page section .credit .card__group .card__use li + li {
+.webaccess__page section .credit .card__group .card__use li + li {
   margin-left: 0.5em;
 }
-.webaccess-page section .credit .card__group .card__type {
+.webaccess__page section .credit .card__group .card__type {
   position: absolute;
   right: 15px;
   top: 15px;
@@ -3076,21 +3325,21 @@ footer a:hover {
   -webkit-background-size: contain;
   background-size: contain;
 }
-.webaccess-page section .credit .card__group .card__type--visa {
+.webaccess__page section .credit .card__group .card__type--visa {
   background-image: url("../img/icon-visa@3x.png");
 }
-.webaccess-page section .credit .card__group .card__type--mastercard {
+.webaccess__page section .credit .card__group .card__type--mastercard {
   background-image: url("../img/icon-master@3x.png");
 }
-.webaccess-page section .credit .card__group .card__type--jcb {
+.webaccess__page section .credit .card__group .card__type--jcb {
   background-image: url("../img/icon-jcb@3x.png");
 }
-.webaccess-page section .credit .card__group .card__input {
+.webaccess__page section .credit .card__group .card__input {
   position: relative;
   width: 100%;
   height: 100%;
 }
-.webaccess-page section .credit .card__group .card__input input {
+.webaccess__page section .credit .card__group .card__input input {
   position: absolute;
   color: #48545D;
   font-size: 1rem;
@@ -3098,7 +3347,7 @@ footer a:hover {
   border: 0;
   background-color: transparent;
 }
-.webaccess-page section .credit .card__group .card__input input.card__input--number {
+.webaccess__page section .credit .card__group .card__input input.card__input--number {
   top: 85px;
   left: 15px;
   width: 201px;
@@ -3106,20 +3355,28 @@ footer a:hover {
   text-align: center;
   letter-spacing: 0.025em;
 }
-.webaccess-page section .credit .card__group .card__input input.card__input--month {
+.webaccess__page section .credit .card__group .card__input input.card__input--month {
   top: 110px;
   left: 60px;
   width: 30px;
 }
-.webaccess-page section .credit .card__group .card__input input.card__input--year {
+.webaccess__page section .credit .card__group .card__input input.card__input--year {
   top: 110px;
   left: 88px;
   width: 20px;
 }
-.webaccess-page section .credit .card__group .card__input input.card__input--code {
+.webaccess__page section .credit .card__group .card__input input.card__input--code {
   top: 110px;
   left: 187px;
   width: 35px;
+}
+@media (min-width: 768px) {
+  .webaccess__page footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -2440,14 +2440,6 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   color: #D60C18;
 }
 
-@media (min-width: 768px) {
-  html, body {
-    position: relative;
-    min-height: 100%;
-    height: 100%;
-  }
-}
-
 .mtb0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -3059,9 +3051,13 @@ footer .imglink__app__img li + li {
   margin-left: 0.5em;
 }
 
+.webaccess__page {
+  position: relative;
+  min-height: 100vh;
+}
 @media (min-width: 768px) {
   .webaccess__page {
-    padding-bottom: 220px;
+    padding-bottom: 225px;
   }
 }
 .webaccess__page--index {
@@ -3070,11 +3066,6 @@ footer .imglink__app__img li + li {
 @media (min-width: 375px) {
   .webaccess__page--index {
     padding-bottom: 76px;
-  }
-}
-@media (min-width: 768px) {
-  .webaccess__page--index {
-    padding-bottom: 0;
   }
 }
 .webaccess__page main {

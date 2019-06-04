@@ -237,14 +237,33 @@ $(function(){
 		$("#securityCode").on('keyup', function(){
 			$(".card__input--code").attr("value", this.value);
 		})
-		$("#creditCardNumber").validateCreditCard(function(result) {
-			$(".card__type").attr("class", "card__type");
-			$(".card__type").addClass("card__type--" + result.card_type.name);
-		})
+		var creditCard = $('#creditCardNumber');
+		function validateCard() {
+			var cardHolder = $('div.card__type');
+			creditCard.validateCreditCard(function(result) {
+				var paymentIcons = $(this).hasClass('*[class*="card__type-"]'),
+					removeIcon = $(this).removeClass(function(index, css) {
+					return (css.match(/\bcard-\S+/g) || []).join(' ');
+				});
+				if (result.card_type !== null) {
+					cardHolder.attr('class', 'card__type');
+					cardHolder.addClass('card__type--' + result.card_type.name);
+					$(".card__note--error").hide();
+				} else {
+					cardHolder.attr('class', 'card__type');
+					$(".card__note--error").show();
+				}
+			}, {
+				accept: ['visa', 'mastercard', 'jcb']
+			});
+		}
+		if (creditCard.data('creditcard') == true) {
+			validateCard();
+		}
 	}
 	$("#chageInvoicing").on("click", function(){
-		$(this).parent().parent().slideUp();
-		$(this).parent().parent().siblings(".select-invoicing").slideDown();
+		$(this).parent().parent().parent().slideUp();
+		$(this).parent().parent().parent().siblings(".select-invoicing").slideDown();
 	})
 	$(".tab__content__pane.active > .label").on("click", function(){
 		$(this).siblings().children(".form__group--input").css({

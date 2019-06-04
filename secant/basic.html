@@ -73,7 +73,7 @@
 							<div class="form__group form__group--filled">
 								<label class="label">
 									<div class="form__group__placeholder">請輸入 e-mail</div>
-									<input type="email" class="form__group__input form__group__input--default">
+									<input type="email" class="form__group__input">
 									<i class="form__group__help form__group__help--strong">你將使用此email登入天下雜誌，如果您未曾使用此email註冊，稍後將請您填寫密碼</i>
 								</label>
 								<a href="#!" class="link-btn message__open" id="noemail">我沒有email怎麼辦？</a>
@@ -85,7 +85,7 @@
 							<div class="label form__group form__group--filled form__group--hasicon">
 								<label class="label form__group--defalt">
 									<div class="form__group__placeholder">請輸入 e-mail</div>
-									<input type="password" class="form__group__input form__group__input--default">
+									<input type="password" class="form__group__input">
 									<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
 								</label>
 								<a href="#!" class="link-btn">忘記密碼</a>
@@ -113,11 +113,11 @@
 							<div class="form__group form__group--filled">
 								<label class="label">
 									<div class="form__group__placeholder">請輸入姓名</div>
-									<input type="text" class="form__group__input form__group__input--default">
+									<input type="text" class="form__group__input">
 								</label>
 								<label class="label">
 									<div class="form__group__placeholder">請輸入手機號碼</div>
-									<input type="text" name="telphone" class="form__group__input form__group__input--default">
+									<input type="text" name="telphone" class="form__group__input">
 								</label>
 							</div>
 						</div>
@@ -174,7 +174,7 @@
 									<div class="form__group form__group--filled">
 										<label class="label">
 											<div class="form__group__placeholder">請輸入詳細地址</div>
-											<input type="text" name="address" class="form__group__input form__group__input--default">
+											<input type="text" name="address" class="form__group__input">
 										</label>
 										<label class="label label--check">
 											<input type="checkbox" name="checkbox">
@@ -214,17 +214,17 @@
 										</div>
 										<label class="label">
 											<div class="form__group__placeholder">請輸入城市</div>
-											<input type="text" name="city" class="form__group__input form__group__input--default">
+											<input type="text" name="city" class="form__group__input">
 										</label>
 										<label class="label">
 											<div class="form__group__placeholder">請輸入郵遞區號</div>
-											<input type="text" name="zip" class="form__group__input form__group__input--default">
+											<input type="text" name="zip" class="form__group__input">
 										</label>
 									</div>
 									<div class="form__group form__group--filled">
 										<label class="label">
 											<div class="form__group__placeholder">請輸入詳細地址</div>
-											<input type="text" name="address" class="form__group__input form__group__input--default">
+											<input type="text" name="address" class="form__group__input">
 											<i class="form__group__help form__group__help--strong">請正確填寫您的海外地址，我們將為您計算運費，運費另計</i>
 										</label>
 										<label class="label label--check">
@@ -239,15 +239,72 @@
 					</section>
 					<section class="group">
 						<h3>發票資料</h3>
-						<div class="flex flex-container justify-between">
-							<div class="col--left">
-								<p class="mtb0">
-									會員載具
-									<span class="h5">電子發票若中獎將寄送至收件地址</span>
-								</p>
+						<div class="flex-container">
+							<div class="label flex justify-between">
+								<div class="col--left">
+									<p class="mtb0">
+										會員載具
+										<span class="h5">電子發票若中獎將寄送至收件地址</span>
+									</p>
+								</div>
+								<div class="col--right">
+									<a href="#!" class="btn btn--outlined" id="chageInvoicing">變更</a>
+								</div>
 							</div>
-							<div class="col--right">
-								<a href="#!" class="btn btn--outlined" id="chageInvoicing">變更</a>
+						</div>
+						<div class="flex-container">
+							<div class="label flex justify-between">
+								<div class="col--left">
+									<p class="mtb0">
+										會員載具
+										<span class="h5">電子發票若中獎將寄送至下方地址</span>
+									</p>
+								</div>
+								<div class="col--right">
+									<a href="#!" class="btn btn--outlined" id="chageInvoicing">變更</a>
+								</div>
+							</div>
+							<div class="flex label form__group form__group--filled form__group--inline">
+								<div class="select__group select__group--filled">
+									<select name="country">
+										<option selected="">請選擇縣市</option>
+										<option value="基隆市">基隆市</option>
+										<option value="臺北市">臺北市</option>
+										<option value="新北市">新北市</option>
+										<option value="桃園市">桃園市</option>
+										<option value="新竹市">新竹市</option>
+										<option value="新竹縣">新竹縣</option>
+										<option value="苗栗縣">苗栗縣</option>
+										<option value="臺中市">臺中市</option>
+										<option value="彰化縣">彰化縣</option>
+										<option value="南投縣">南投縣</option>
+										<option value="雲林縣">雲林縣</option>
+										<option value="嘉義市">嘉義市</option>
+										<option value="嘉義縣">嘉義縣</option>
+										<option value="臺南市">臺南市</option>
+										<option value="高雄市">高雄市</option>
+										<option value="屏東縣">屏東縣</option>
+										<option value="臺東縣">臺東縣</option>
+										<option value="花蓮縣">花蓮縣</option>
+										<option value="宜蘭縣">宜蘭縣</option>
+										<option value="澎湖縣">澎湖縣</option>
+										<option value="金門縣">金門縣</option>
+										<option value="連江縣">連江縣</option>
+									</select>
+								</div>
+								<div class="select__group select__group--filled">
+									<select disabled>
+										<option class="select__group__item" selected="">鄉鎮市區</option>
+										<option class="select__group__item" value="1">假字假字</option>
+										<option class="select__group__item" value="2">假字假</option>
+										<option class="select__group__item" value="3">假字</option>
+										<option class="select__group__item" value="4">假字假</option>
+									</select>
+								</div>
+								<label class="label">
+									<div class="form__group__placeholder">請輸入詳細地址</div>
+									<input type="text" name="address" class="form__group__input">
+								</label>
 							</div>
 						</div>
 						<div class="tab tab--hide select-invoicing">
@@ -277,7 +334,7 @@
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入手機條碼</div>
-											<input type="text" name="barcode" class="form__group__input form__group__input--default">
+											<input type="text" name="barcode" class="form__group__input">
 										</label>
 									</div>
 									<div class="label form__group form__group--selection form__group--filled">
@@ -289,7 +346,7 @@
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入自然人憑證條碼</div>
-											<input type="text" name="cdc" class="form__group__input form__group__input--default">
+											<input type="text" name="cdc" class="form__group__input">
 										</label>
 									</div>
 									<label class="label label--radio">
@@ -304,14 +361,14 @@
 										<p class="mt0-mb05">統一號碼</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入統一編號，限數字</div>
-											<input type="text" name="vat" class="form__group__input form__group__input--default">
+											<input type="text" name="vat" class="form__group__input">
 										</label>
 									</div>
 									<div class="label form__group form__group--filled">
 										<p class="mt0-mb05">發票抬頭</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入發票抬頭，限22個全形文字</div>
-											<input type="text" name="company" class="form__group__input form__group__input--default">
+											<input type="text" name="company" class="form__group__input">
 										</label>
 									</div>
 								</div>
@@ -340,7 +397,7 @@
 										<div class="label label--set">
 											<label class="label">
 												<div class="form__group__placeholder">請輸入愛心碼，限數字</div>
-												<input type="text" name="donate" class="form__group__input form__group__input--default">
+												<input type="text" name="donate" class="form__group__input">
 											</label>
 											<a href="#!" class="btn btn--outlined">前往財政部查詢</a>
 										</div>

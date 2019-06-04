@@ -1678,7 +1678,7 @@ button[disabled*='disabled'], a[disabled*='disabled'] {
 button.btn, a.btn {
   position: relative;
   display: inline-block;
-  min-width: 144px;
+  min-width: 120px;
   padding: 0 1rem;
   font-size: 1rem;
   line-height: 2.65rem;
@@ -1686,13 +1686,24 @@ button.btn, a.btn {
   word-break: keep-all;
   overflow: hidden;
 }
+@media (min-width: 375px) {
+  button.btn, a.btn {
+    min-width: 135px;
+  }
+}
 @media (min-width: 768px) {
   button.btn, a.btn {
+    min-width: 144px;
     line-height: 2.875rem;
   }
 }
 button.btn + button.btn, button.btn + a.btn, a.btn + button.btn, a.btn + a.btn {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+}
+@media (min-width: 768px) {
+  button.btn + button.btn, button.btn + a.btn, a.btn + button.btn, a.btn + a.btn {
+    margin-left: 1rem;
+  }
 }
 button.btn::before, button.btn::after, a.btn::before, a.btn::after {
   position: absolute;

@@ -3068,6 +3068,11 @@ footer .imglink__app__img li + li {
     padding-bottom: 76px;
   }
 }
+@media (min-width: 768px) {
+  .webaccess__page--index {
+    padding-bottom: 225px;
+  }
+}
 .webaccess__page main {
   justify-content: center;
 }

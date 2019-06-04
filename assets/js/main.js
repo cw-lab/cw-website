@@ -246,7 +246,7 @@ $(function(){
 		$(this).parent().parent().slideUp();
 		$(this).parent().parent().siblings(".select-invoicing").slideDown();
 	})
-	$(".form__group--radio--input").on("click", function(){
+	$(".tab__content__pane.active > .label").on("click", function(){
 		$(this).siblings().children(".form__group--input").css({
 			"display" : "none"
 		});

@@ -182,6 +182,12 @@ th {
   padding: 0;
 }
 
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 main .tab--list .tab__content__pane li a {
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -190,6 +196,53 @@ main .tab--list .tab__content__pane li a {
 
 ul, ol {
   padding-left: 1.15em;
+}
+
+.mtb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt0-mb1 {
+  margin-top: 0;
+  margin-bottom: 1em !important;
+}
+
+.mt0-mb05 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .flex-md {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .flex-lg {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .flex-xl {
+    display: flex;
+  }
 }
 
 body {
@@ -269,6 +322,13 @@ main article.article__level--0 h2 {
 main article.article__level--0 p {
   font-size: 1.125rem;
 }
+main article.article__level--0 p a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+main article.article__level--0 p a:hover {
+  color: #D60C18;
+}
 main article.article__level--0 .article__info__breadcrumb li {
   font-size: 0.875em;
 }
@@ -347,12 +407,15 @@ main .article__info__breadcrumb li + li::before {
   vertical-align: middle;
 }
 main .article__info h1 {
-  margin: 0.25em 0 0.5em;
+  margin: 0.5em 0 0.25em;
 }
 @media (min-width: 768px) {
   main .article__info h1 {
     padding-right: 150px;
   }
+}
+main .article__set {
+  margin-bottom: 1rem;
 }
 main .article__set .article__set__img {
   width: 100%;
@@ -364,7 +427,7 @@ main .article__set .article__set__caption {
 main .article__function {
   display: flex;
   width: 100%;
-  margin: 1rem 0;
+  margin: 0 0 1rem;
   padding: 1rem 0;
   border: solid #D3D5D7;
   border-width: 1px 0;
@@ -482,7 +545,7 @@ main .article__text p .source {
   display: flex;
   width: 100%;
   padding: 0.5em 0;
-  font-size: 0.875em;
+  font-size: 0.875rem;
 }
 main .article__text blockquote {
   position: relative;
@@ -530,14 +593,37 @@ main .article__text hr {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary",endColorstr="$surface",GradientType=1);
   border: 0;
 }
+main .article__keyword {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+main .article__keyword ul {
+  width: calc(100% - 80px);
+}
+main .article__keyword ul li {
+  display: flex;
+}
+main .article__keyword ul li::after {
+  content: '、';
+}
+main .article__keyword ul li:last-child::after {
+  content: '';
+}
+main .article__keyword ul li a {
+  color: #003a9f;
+  text-decoration: underline;
+  align-self: center;
+  line-height: 1.7;
+}
+main .article__keyword ul li a:hover {
+  color: primary;
+}
 main .tab--list .tab__nav li {
   width: 100%;
 }
 main .tab--list .tab__content__pane ol, main .tab--list .tab__content__pane ul {
   margin: 0;
   padding: 0;
-  border: solid #D3D5D7;
-  border-width: 0 1px;
 }
 main .tab--list .tab__content__pane ol {
   list-style-position: inside;
@@ -555,6 +641,9 @@ main .tab--list .tab__content__pane li {
   padding: 0 15px;
   border: solid #D3D5D7;
   border-width: 0 0 1px;
+}
+main .tab--list .tab__content__pane li:last-child {
+  border-width: 0;
 }
 main .tab--list .tab__content__pane li a {
   position: relative;
@@ -593,6 +682,8 @@ main .tab--list.tab--one .tab__nav > ul li {
   padding: 5px 1em;
   line-height: 2.6rem;
   background-color: #D3D5D7;
+  justify-content: flex-start;
+  border-bottom: 0;
 }
 main aside {
   width: 100%;

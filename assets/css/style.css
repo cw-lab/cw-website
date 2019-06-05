@@ -186,8 +186,61 @@ section .select-side ul.menu > li::before {
   display: block;
 }
 
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 ul, ol {
   padding-left: 1.15em;
+}
+
+.mtb0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mt0-mb1 {
+  margin-top: 0;
+  margin-bottom: 1em !important;
+}
+
+.mt0-mb05 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .flex-md {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .flex-lg {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .flex-xl {
+    display: flex;
+  }
 }
 
 [class*="col"] {

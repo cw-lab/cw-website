@@ -3,6 +3,12 @@ $(function(){
 		height = $(window).height(),
 		container = $(".header__logo .container").outerWidth(),
 		articleTextWidth =  $(".article__text").outerWidth();
+	// 判斷瀏覽器
+	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+	if(isChrome) {
+		$("body").addClass("chrome");
+	}
 	// 判斷有沒有值
 	$("input").on('change keyup copy paste cut', function(){
 		if(!this.value) {
@@ -220,6 +226,14 @@ $(function(){
 		return succeed;
 	}
 	// 全閱讀 secant project
+	if ( width >= 768 ) {
+		var highestCol = Math.max(
+			$('.plan__item:nth-child(1) > .plan__description--main').outerHeight(),
+			$('.plan__item:nth-child(2) > .plan__description--main').outerHeight(),
+			$('.plan__item:nth-child(3) > .plan__description--main').outerHeight()
+		);
+	}
+	$(".plan__description--main").css("height", highestCol);
 	// 信用卡Keyup同步
 	if ( (location.href.match(/payment/)) && (width >= 768) ) {
 		$("#expMonth").on('change', function(){

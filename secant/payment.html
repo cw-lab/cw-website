@@ -70,7 +70,7 @@
 						</div>
 					</div>
 				</section>
-				<form action="password.html" class="form">
+				<form class="form">
 					<section class="group">
 						<h3>付款資料</h3>
 						<div class="content__group credit">
@@ -172,10 +172,16 @@
 							</div>
 						</div>
 					</section>
-					<div class="text-right">
-						<button class="btn btn--contained">付款</button>
-					</div>
 				</form>
+				<div class="text-right">
+					<button class="btn btn--contained">付款</button>
+				</div>
+				<div class="loader">
+					<div class="loader__animate">
+						<div class="loader__icon"></div>
+						<div class="loader__text text-center">付款資料送出中，請勿關閉視窗</div>
+					</div>
+				</div>
 			</article>
 		</main>
 		<footer>
@@ -204,5 +210,15 @@
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script type="text/javascript" src="../assets/js/main.js"></script>
+		<script>
+			$(function (){
+				$("button").on("click", function(){
+					$(".loader").fadeIn();
+					setTimeout(function(){
+						$(location). attr('href', 'success.html');
+					}, 2000);
+				})
+			});
+		</script>
 	</body>
 </html>

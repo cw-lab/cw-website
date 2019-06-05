@@ -226,13 +226,16 @@ $(function(){
 		return succeed;
 	}
 	// 全閱讀 secant project
-	if ( width >= 768 ) {
-		var highestCol = Math.max(
-			$('.plan__item:nth-child(1) > .plan__description--main').outerHeight(),
-			$('.plan__item:nth-child(2) > .plan__description--main').outerHeight(),
-			$('.plan__item:nth-child(3) > .plan__description--main').outerHeight()
-		);
+	function highestCol(width){
+		if ( width >= 768 ) {
+			var highestCol = Math.max(
+				$('.plan__item:nth-child(1) > .plan__description--main').outerHeight(),
+				$('.plan__item:nth-child(2) > .plan__description--main').outerHeight(),
+				$('.plan__item:nth-child(3) > .plan__description--main').outerHeight()
+			);
+		}
 	}
+	highestCol(width);
 	$(".plan__description--main").css("height", highestCol);
 	// 信用卡Keyup同步
 	if ( (location.href.match(/payment/)) && (width >= 768) ) {
@@ -301,6 +304,7 @@ $(function(){
 			articleTextWidth =  $(".article__text").outerWidth();
 		tabNavWidth (width);
 		menubarSub (width, container);
+		highestCol(width);
 		$(".article__text iframe[src*='youtube']").css({
 			"width": articleTextWidth,
 			"height": articleTextWidth * 0.5625

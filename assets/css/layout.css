@@ -425,7 +425,6 @@ main .article__set .article__set__caption {
   padding: 0.5em;
 }
 main .article__function {
-  display: flex;
   width: 100%;
   margin: 0 0 1rem;
   padding: 1rem 0;
@@ -433,6 +432,11 @@ main .article__function {
   border-width: 1px 0;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  main .article__function {
+    display: flex;
+  }
 }
 main .article__function input {
   -moz-appearance: none;
@@ -471,6 +475,63 @@ main .article__function--success {
   -ms-transform: translateX(-50%) translateY(-2px);
   -webkit-transform: translateX(-50%) translateY(-2px);
   transform: translateX(-50%) translateY(-2px);
+}
+@media (max-width: 767px) {
+  main .article__function .readway {
+    justify-content: space-around;
+  }
+}
+main .article__function .readway > * {
+  align-items: center;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  main .article__function .readway > * {
+    margin-right: 50px;
+  }
+}
+@media (max-width: 767px) {
+  main .article__function .readway > * {
+    padding: 0.5em 1em;
+  }
+}
+main .article__function .readway > * > span {
+  margin-right: 0.5em;
+}
+main .article__function .readway > * > span span {
+  color: #003a9f;
+}
+main .article__function .next__article {
+  color: #171717;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  main .article__function .next__article {
+    width: calc(100% - 295px);
+  }
+}
+@media (max-width: 767px) {
+  main .article__function .next__article {
+    padding: 0.5em 1em;
+  }
+}
+main .article__function .next__article--icon {
+  margin-left: 0.5em;
+  font-size: 1.5em;
+}
+main .article__function .next__article--icon i {
+  display: block;
+}
+main .article__function .next__article--text {
+  width: calc(100% - 2em);
+  flex-direction: row;
+}
+main .article__function .next__article--text span:first-child {
+  margin-right: 0.5em;
+  color: #003a9f;
+}
+main .article__function .next__article--text span:last-child {
+  width: calc(100% - 55px - 0.5em);
 }
 main .article__edit {
   display: flex;
@@ -685,6 +746,16 @@ main .tab--list.tab--one .tab__nav > ul li {
   justify-content: flex-start;
   border-bottom: 0;
 }
+main .aside__group {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  main .aside__group {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+  }
+}
 main aside {
   width: 100%;
 }
@@ -701,9 +772,6 @@ main aside {
 }
 main aside > * {
   margin-bottom: 20px;
-}
-main > * > h3 {
-  margin: 0;
 }
 
 /*# sourceMappingURL=layout.css.map */

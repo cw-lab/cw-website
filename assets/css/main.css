@@ -1554,7 +1554,8 @@ form .form__group .form__group__help {
 form .form__group .form__group__help--strong {
   padding-left: 0;
   padding-right: 0;
-  margin-top: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 20px;
   color: #48545D;
   font-size: 14px;
 }
@@ -2579,7 +2580,7 @@ footer a:hover {
 }
 @media (min-width: 768px) {
   footer .copyright {
-    width: calc(100% - 410px);
+    width: calc(100% - 460px);
   }
 }
 @media (max-width: 767px) {
@@ -2691,6 +2692,11 @@ footer .imglink__app__img li + li {
 @media (min-width: 1280px) {
   .index__page .container {
     width: 1140px;
+  }
+}
+@media (min-width: 1366px) {
+  .index__page .container {
+    width: 1280px;
   }
 }
 
@@ -3102,11 +3108,26 @@ hr {
   padding-left: 15px;
   padding-right: 15px;
 }
+.webaccess__page main .plan .plan__gift .gift__item__text p {
+  position: relative;
+  padding-left: 2em;
+}
+.webaccess__page main .plan .plan__gift .gift__item__text p span.label__radio__mark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.webaccess__page main .plan .plan__gift .gift__item__text > .gift__item__detail {
+  padding-left: 2em;
+}
 @media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift .gift__item__text {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+  }
+  .webaccess__page main .plan .plan__gift .gift__item__text p {
+    min-height: 50px;
   }
 }
 @media (max-width: 767px) {

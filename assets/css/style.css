@@ -883,6 +883,13 @@ section .content-side {
 section .content-side p {
   font-size: 18px;
 }
+section .content-side p a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+section .content-side p a:hover {
+  color: #D60C18;
+}
 section .content-side hr {
   margin-top: 3.125em;
   margin-bottom: 3.125em;
@@ -1249,26 +1256,6 @@ section .message {
   top: auto !important;
   left: auto !important;
   transform: none !important;
-}
-
-footer {
-  padding: 1em 0 50px;
-  font-size: 14px;
-}
-@media (max-width: 991px) {
-  footer {
-    text-align: center;
-  }
-}
-footer .content-side {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-@media (min-width: 1200px) {
-  footer .content-side {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

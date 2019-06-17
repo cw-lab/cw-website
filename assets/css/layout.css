@@ -544,6 +544,7 @@ main .article__edit__update {
   display: flex;
   flex-wrap: wrap;
   padding-right: 50px;
+  align-items: center;
 }
 main .article__edit__update > * {
   margin-left: 1em;

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>填寫基本資料 - 請選擇你想看天下的方式｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../../assets/css/main.css">
+	</head>
+	<body class="webaccess__page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<ul class="list-reset flex member-list">
+						<li><a href="#!">登入</a></li>
+						<li><a href="#!">註冊</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<article>
+				<div class="step__group flex">
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">填寫資料</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">付款資料</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">訂購完成</span>
+					</div>
+				</div>
+				<form action="payment.html">
+					<h2>請填寫資料：</h2>
+					<section class="group">
+						<h3>訂單商品</h3>
+						<div class="content__group">
+							<ul class="content__list">
+								<li class="content__item">
+									<div class="content__item__title">線上閱讀季訂</div>
+									<div class="content__item__amount">399元</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">2019空白筆記本-PANTONE束帶</div>
+									<div class="content__item__amount">贈品</div>
+								</li>
+							</ul>
+							<div class="content__total">
+								<div class="content__total__reelect">
+									<a onclick="window.history.back();" class="link-btn">重選</a>
+								</div>
+								<div class="content__total__amount">
+									總金額<span>399</span>元
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="group">
+						<h3>聯絡E-mail</h3>
+						<div class="flex-container">
+							<div class="form__group form__group--filled">
+								<label class="label">
+									<div class="form__group__placeholder">請輸入E-mail</div>
+									<input type="email" class="form__group__input">
+									<i class="form__group__help form__group__help--strong">您將以此E-mail登入天下雜誌，如果您未曾用此Email註冊，付款完成後需請您設定密碼</i>
+								</label>
+							</div>
+							<button class="btn btn--contained">下一步</button>
+						</div>
+						<div class="flex-container">
+							<p class="mt0-mb1">我們發現您已經使用 bilylin66@gmail.com 註冊天下雜誌，請輸入密碼，登入後繼續訂閱流程吧！</p>
+							<div class="label form__group form__group--filled form__group--hasicon">
+								<label class="label form__group--defalt">
+									<div class="form__group__placeholder">請輸入密碼</div>
+									<input type="password" class="form__group__input">
+									<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
+								</label>
+								<a href="#!" class="link-btn">忘記密碼</a>
+							</div>
+							<div class="label form__group">
+								<button class="btn btn--contained">登入</button>
+								<button class="btn btn--outlined">更換E-mail</button>
+							</div>
+						</div>
+					</section>
+					<section class="group">
+						<h3>聯絡資料</h3>
+						<div class="flex-container">
+							<div class="form__group form__group--filled">
+								<label class="label">
+									<div class="form__group__placeholder">請輸入姓名</div>
+									<input type="text" class="form__group__input" value="Bily Lin">
+								</label>
+								<label class="label">
+									<div class="form__group__placeholder">請輸入手機號碼</div>
+									<input type="text" name="telphone" class="form__group__input" value="0912345678">
+								</label>
+							</div>
+						</div>
+					</section>
+					<section class="group">
+						<h3>發票資料</h3>
+						<div class="flex-container">
+							<div class="label flex justify-between">
+								<div class="col--left">
+									<p class="mtb0">
+										會員載具
+										<span class="h5">電子發票若中獎將寄送至下方地址</span>
+									</p>
+								</div>
+								<div class="col--right">
+									<a href="#!" class="btn btn--outlined" id="chageInvoicing">變更</a>
+								</div>
+							</div>
+							<div class="flex label form__group form__group--filled form__group--inline">
+								<div class="select__group select__group--filled">
+									<select name="country">
+										<option selected="">請選擇縣市</option>
+										<option value="基隆市">基隆市</option>
+										<option value="臺北市">臺北市</option>
+										<option value="新北市">新北市</option>
+										<option value="桃園市">桃園市</option>
+										<option value="新竹市">新竹市</option>
+										<option value="新竹縣">新竹縣</option>
+										<option value="苗栗縣">苗栗縣</option>
+										<option value="臺中市">臺中市</option>
+										<option value="彰化縣">彰化縣</option>
+										<option value="南投縣">南投縣</option>
+										<option value="雲林縣">雲林縣</option>
+										<option value="嘉義市">嘉義市</option>
+										<option value="嘉義縣">嘉義縣</option>
+										<option value="臺南市">臺南市</option>
+										<option value="高雄市">高雄市</option>
+										<option value="屏東縣">屏東縣</option>
+										<option value="臺東縣">臺東縣</option>
+										<option value="花蓮縣">花蓮縣</option>
+										<option value="宜蘭縣">宜蘭縣</option>
+										<option value="澎湖縣">澎湖縣</option>
+										<option value="金門縣">金門縣</option>
+										<option value="連江縣">連江縣</option>
+									</select>
+								</div>
+								<div class="select__group select__group--filled">
+									<select disabled>
+										<option class="select__group__item" selected="">鄉鎮市區</option>
+										<option class="select__group__item" value="1">假字假字</option>
+										<option class="select__group__item" value="2">假字假</option>
+										<option class="select__group__item" value="3">假字</option>
+										<option class="select__group__item" value="4">假字假</option>
+									</select>
+								</div>
+								<label class="label">
+									<div class="form__group__placeholder">請輸入詳細地址</div>
+									<input type="text" name="address" class="form__group__input">
+								</label>
+							</div>
+						</div>
+						<div class="tab tab--hide select-invoicing">
+							<div class="tab__nav">
+								<ul class="list-reset">
+									<li class="active"><span>個人電子發票</span></li>
+									<li><span>公司電子發票</span></li>
+									<li><span>捐贈發票</span></li>
+								</ul>
+							</div>
+							<div class="tab__content">
+								<div class="tab__content__pane tab__content__pane--p20 active">
+									<label class="label label--radio">
+										<input type="radio" name="individ" value="member" checked>
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">會員載具</span>
+										<span class="label__radio__helper">
+											電子發票若中獎將寄送至收件地址
+										</span>
+									</label>
+									<div class="label form__group form__group--selection form__group--filled">
+										<label class="label--radio">
+											<input type="radio" name="individ" value="mobile">
+											<span class="label__radio__mark"></span>
+											<span class="label__radio__txt">手機條碼載具</span>
+											<span class="label__radio__helper">手機條碼為“/"開頭之條碼，共8碼</span>
+										</label>
+										<label class="label form__group--input">
+											<div class="form__group__placeholder">請輸入手機條碼</div>
+											<input type="text" name="barcode" class="form__group__input">
+										</label>
+									</div>
+									<div class="label form__group form__group--selection form__group--filled">
+										<label class="label--radio">
+											<input type="radio" name="individ" value="citizen">
+											<span class="label__radio__mark"></span>
+											<span class="label__radio__txt">自然人憑證載具</span>
+											<span class="label__radio__helper">自然人憑證條碼為卡片正面右下方，共16碼英數字</span>
+										</label>
+										<label class="label form__group--input">
+											<div class="form__group__placeholder">請輸入自然人憑證條碼</div>
+											<input type="text" name="cdc" class="form__group__input">
+										</label>
+									</div>
+									<label class="label label--radio">
+										<input type="radio" name="individ" value="paper">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">我仍需索取紙本發票</span>
+										<span class="label__radio__helper">電子發票若中獎將寄送至收件地址，本公司將不再為您主動對獎，請妥善保管電子發票證明聯正本，遺失補印之發票將無法進行兌領獎。</span>
+									</label>
+								</div>
+								<div class="tab__content__pane tab__content__pane--p20">
+									<div class="label form__group form__group--filled">
+										<p class="mt0-mb05">統一號碼</p>
+										<label class="label form__group--defalt">
+											<div class="form__group__placeholder">請輸入統一編號，限數字</div>
+											<input type="text" name="vat" class="form__group__input">
+										</label>
+									</div>
+									<div class="label form__group form__group--filled">
+										<p class="mt0-mb05">發票抬頭</p>
+										<label class="label form__group--defalt">
+											<div class="form__group__placeholder">請輸入發票抬頭，限22個全形文字</div>
+											<input type="text" name="company" class="form__group__input">
+										</label>
+									</div>
+								</div>
+								<div class="tab__content__pane tab__content__pane--p20">
+									<label class="label label--radio">
+										<input type="radio" name="individ" value="goDreamer">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">台灣一起夢想公益協會</span>
+									</label>
+									<label class="label label--radio">
+										<input type="radio" name="individ" value="eden">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">財團法人伊甸社會福利基金會</span>
+									</label>
+									<label class="label label--radio">
+										<input type="radio" name="individ" value="sunshine">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">財團法人陽光社會福利基金會</span>
+									</label>
+									<div class="label form__group form__group--selection form__group--filled">
+										<label class="label--radio">
+											<input type="radio" name="individ" value="other">
+											<span class="label__radio__mark"></span>
+											<span class="label__radio__txt">其他</span>
+										</label>
+										<div class="label label--set">
+											<label class="label">
+												<div class="form__group__placeholder">請輸入愛心碼，限數字</div>
+												<input type="text" name="donate" class="form__group__input">
+											</label>
+											<a href="#!" class="btn btn--outlined">前往財政部查詢</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="group">
+						<h3>自動續訂</h3>
+						<div class="flex-container">
+							<label class="label--check">
+								<input type="checkbox" name="checkbox" checked>
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">請協助我做自動續訂</span>
+							</label>
+							<div class="align-label-text">
+								<p>我們將在第二季以699元為您自動續訂，直到您取消訂閱為止。</p>
+								<p class="mb0">
+									注意事項：
+								</p>
+								<ul class="mtb0">
+									<li>系統將以您初次訂購的付款方式扣款</li>
+									<li>您可以隨時在我的帳戶中解除自動續訂</li>
+									<li>若您此次訂閱包含贈品，下次續訂時將不再贈送此次的贈品</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<section class="group">
+						<h3>退貨說明</h3>
+						<div class="flex-container">
+							<label class="label--check">
+								<input type="checkbox" name="checkbox" checked>
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">我同意辦理退貨時，由天下雜誌網路書店代為處理發票及銷貨退回證明單。</span>
+							</label>
+						</div>
+					</section>
+					<section class="group">
+						<div class="message message--remark">
+							<div class="message__container">
+								<div class="message__txt">
+									<p class="mtb0">
+										當您訂購雜誌即代表您已經詳閱並同意遵守《<a href="https://www.cw.com.tw/privacy" target="_blank">天下雜誌群會員服務條款</a>》與特別聲明。
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<div class="text-right">
+						<button class="btn btn--contained">下一步</button>
+					</div>
+				</form>
+			</article>
+			<div class="message message--dialogs noemail">
+				<div class="message__container">
+					<div class="icon-btn normal-status message__close click__close">
+						<i class="icon icon-cancel"></i>
+					</div>
+					<div class="message__txt">
+						<h2>我沒有E-mail</h2>
+						<p>
+							天下雜誌提供電話訂購雜誌服務<br>
+							請撥打：886-2-2662-0332<br>
+							服務時間：週一～週五 09:00~17:30
+						</p>
+					</div>
+					<div class="message__btn click__close">
+						<a href="#!" class="btn btn--contained">我知道了</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="flex justify-between">
+					<div class="copyright">
+						<ul class="copyright__cwlink flex list-reset">
+							<li><a href="https://www.cw.com.tw/about/" target="_blank">關於天下雜誌群</a></li>
+							<li><a href="https://www.cwbook.com.tw/member/mcntr/MemberHome!redirect.shtml" target="_blank">顧客服務</a></li>
+							<li><a href="https://www.cw.com.tw/subscriptions">雜誌訂閱</a></li>
+							<li><a href="https://www.cw.com.tw/saleskit/" target="_blank">廣告刊登</a></li>
+							<li><a href="https://www.cw.com.tw/recruit/index.php" target="_blank">人才招募</a></li>
+							<li><a href="https://www.cw.com.tw/privacy" target="_blank">隱私權政策與使用條款</a></li>
+						</ul>
+						<div class="copyright__contact">
+							<span>讀者服務專線：886-2-2662-0332</span>
+							<span>傳真電話：886-2-2662-6048</span>
+							<span>服務時間：週一～週五 09:00~17:30</span>
+							<span>台北市104南京東路二段139號11樓</span>
+							<span>Copyright © 2019天下雜誌</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
+		<script type="text/javascript" src="../../assets/js/main.js"></script>
+	</body>
+</html>

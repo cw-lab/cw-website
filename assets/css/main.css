@@ -2337,6 +2337,10 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   opacity: 1;
 }
 
+.align-label-text {
+  padding-left: calc(20px + 0.5em);
+}
+
 .message p {
   font-size: 1rem;
   line-height: 1.5;
@@ -3323,6 +3327,7 @@ hr {
 @media (min-width: 375px) {
   .webaccess__page section.group .content__group .content__item {
     display: flex;
+    line-height: 1.5;
   }
 }
 .webaccess__page section.group .content__group .content__item:hover {

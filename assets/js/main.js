@@ -97,8 +97,8 @@ $(function(){
 				switch_item();
 			});
 		}
-		$(".slider__navi--next").click(switch_next);
-		$(".slider__navi--prev").click(switch_prev);
+		$slider_navi_next.click(switch_next);
+		$slider_navi_prev.click(switch_prev);
 		// var sid = setInterval(switch_next, 2000);
 		// $slider.hover(function() {
 		// 	clearInterval(sid);

@@ -250,6 +250,14 @@ ul, ol {
   }
 }
 
+main .article__text p a, main .story__set p a, main .article__text ul a, main .story__set ul a, main .article__text ol a, main .story__set ol a, main .article__text blockquote a, main .story__set blockquote a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+main .article__text p a:hover, main .story__set p a:hover, main .article__text ul a:hover, main .story__set ul a:hover, main .article__text ol a:hover, main .story__set ol a:hover, main .article__text blockquote a:hover, main .story__set blockquote a:hover {
+  color: #D60C18;
+}
+
 body {
   background-color: #fff;
 }
@@ -309,9 +317,20 @@ header > .container-fluid {
   }
 }
 
+body:not(.index__page) header .flex {
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  body:not(.index__page) header .flex a.logo img {
+    height: 36px;
+  }
+}
 body.chrome main .article__info__breadcrumb li + li::before {
   position: relative;
   top: 0.125em;
+}
+body.story__page footer {
+  margin-top: 0;
 }
 
 main {
@@ -397,6 +416,10 @@ main article.article__level--2 .article__function .article__function--success {
 main article.article__level--2 .article__edit {
   font-size: 0.875em;
 }
+main article .article__function {
+  border: solid #D3D5D7;
+  border-width: 1px 0;
+}
 main .article__info {
   width: 100%;
 }
@@ -454,8 +477,6 @@ main .article__function {
   width: 100%;
   margin: 0 0 1rem;
   padding: 1rem 0;
-  border: solid #D3D5D7;
-  border-width: 1px 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -475,6 +496,7 @@ main .article__function input {
 }
 main .article__function__sns {
   display: flex;
+  align-items: center;
 }
 main .article__function__sns li {
   position: relative;
@@ -602,13 +624,6 @@ main .article__edit a.article__edit__type {
 }
 main .article__text h2 {
   margin-top: 2em;
-}
-main .article__text p a, main .article__text ul a, main .article__text ol a, main .article__text blockquote a {
-  color: #003a9f;
-  text-decoration: underline;
-}
-main .article__text p a:hover, main .article__text ul a:hover, main .article__text ol a:hover, main .article__text blockquote a:hover {
-  color: #D60C18;
 }
 main .article__text p {
   margin-top: 1.5em;
@@ -998,6 +1013,109 @@ main .aside__group {
     justify-content: space-between;
     width: 620px;
   }
+}
+main .story__set {
+  position: relative;
+}
+main .story__set--content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main .story__set:last-child {
+  padding-bottom: 0;
+}
+@media (max-width: 767px) {
+  main .story__set--header {
+    height: 90vh;
+    overflow: hidden;
+  }
+}
+main .story__background {
+  width: auto;
+  height: 90vh;
+}
+@media (min-width: 768px) {
+  main .story__background {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  main .story__background {
+    position: absolute;
+    left: 50%;
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+main .story__w100 {
+  width: 100%;
+  height: auto;
+}
+main .story__title {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  min-width: 290px;
+  max-width: 500px;
+  padding: 1rem;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  main .story__title {
+    top: 50px;
+  }
+}
+@media (max-width: 767px) {
+  main .story__title {
+    width: 100%;
+  }
+}
+main .story__title--dark {
+  color: #fff;
+  background-color: rgba(57, 65, 72, 0.25);
+}
+main .story__title--dark h1, main .story__title--dark p {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(57, 65, 72, 0.25);
+}
+main .story__title--dark .article__info__breadcrumb li a {
+  color: #fff;
+}
+main .story__title--dark .article__info__breadcrumb li a:hover {
+  color: #D60C18;
+}
+main .story__title h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  main .story__title h1 {
+    margin-top: 0.5em;
+  }
+}
+@media (min-width: 768px) {
+  main .story__title h1 {
+    font-size: 48px;
+  }
+}
+main .story__title h1 span {
+  display: inline-block;
+}
+main .story__title .article__info__breadcrumb {
+  justify-content: center;
+}
+main .story__title .article__info__breadcrumb li a {
+  text-decoration: none;
+}
+main .story__function .article__function {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 main aside {
   width: 100%;

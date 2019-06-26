@@ -3020,7 +3020,6 @@ hr {
 }
 @media (max-width: 767px) {
   .webaccess__page main .plan .plan__item {
-    order: 1;
     margin-bottom: 10px;
   }
 }
@@ -3032,11 +3031,6 @@ hr {
 .webaccess__page main .plan .plan__item--highlight {
   position: relative;
   background-color: #fff;
-}
-@media (max-width: 767px) {
-  .webaccess__page main .plan .plan__item--highlight {
-    order: 0;
-  }
 }
 .webaccess__page main .plan .plan__item__complement {
   display: block;

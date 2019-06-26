@@ -3025,7 +3025,7 @@ hr {
   background-color: #fff;
 }
 .webaccess__page main .plan .plan__item__complement {
-  display: none;
+  display: block;
   padding-top: 5px;
   color: #003a9f;
   font-size: 14px;

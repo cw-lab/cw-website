@@ -363,9 +363,13 @@
 					$("select option:selected").each(function() {
 						string = $(this).data("average");
 						if($(this).val() == "699") {
-							$(".plan__item__complement").show();
+							$(".plan__item__complement").animate({
+								"opacity": 1
+							}, 100);
 						} else {
-							$(".plan__item__complement").hide();
+							$(".plan__item__complement").animate({
+								"opacity": 0
+							}, 100);
 						}
 					});
 					$(this).parent().siblings(".plan__item__option").children().text(string);

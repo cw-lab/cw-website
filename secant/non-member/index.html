@@ -293,15 +293,18 @@
 		<script type="text/javascript" src="../../assets/js/main.js"></script>
 		<script type="text/javascript">
 			$(function () {
+				$(".gift__section h2").hide();
 				$(".emphasis--small").hide();
 				$(".plan__gift").parent().hide();
 				$(".price--fixed").hide();
 				$(".plan__item--pe a.btn, .plan__item--p a.btn").on('click', function(){
+					$(".gift__section h2").show();
 					$(".price--fixed").show();
 					$(".plan__gift").parent().show();
 					$(".emphasis--small").hide();
 				})
 				$(".plan__item--e a.btn").on('click', function(){
+					$(".gift__section h2").show();
 					$(".price--fixed").show();
 					$(".emphasis--small").show();
 					$(".plan__gift").parent().hide();

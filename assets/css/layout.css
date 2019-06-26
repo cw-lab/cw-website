@@ -334,7 +334,22 @@ body.story__page footer {
 }
 
 main {
+  position: relative;
   justify-content: space-between;
+}
+main .couplet--wide {
+  position: relative;
+  top: -10px;
+}
+main .couplet--left {
+  position: absolute;
+  top: 0;
+  right: 100%;
+}
+main .couplet--right {
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 main p img {
   max-width: 100%;

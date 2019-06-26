@@ -916,7 +916,7 @@ body.chrome i.icon:before {
   content: "\e934";
 }
 
-.icon-erro-solid:before {
+.icon-error-solid:before {
   content: "\e935";
 }
 
@@ -1778,10 +1778,10 @@ form .select__group::before {
   position: absolute;
   display: block;
   top: 50%;
-  right: 1rem;
+  right: 0.85rem;
   color: #000;
   font-family: 'icomoon';
-  font-size: 12px;
+  font-size: 1.25rem;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -3027,7 +3027,7 @@ hr {
 .webaccess__page main .plan .plan__item__complement {
   display: block;
   padding-top: 5px;
-  color: #003a9f;
+  color: #D60C18;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.5;
@@ -3141,8 +3141,9 @@ hr {
 }
 @media (min-width: 939px) {
   .webaccess__page main .plan .plan__item__right {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
   }
 }
 .webaccess__page main .plan .plan__item__right li {

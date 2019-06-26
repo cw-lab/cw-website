@@ -3123,13 +3123,11 @@ hr {
   line-height: 1.3;
   background-color: #fff;
 }
-.webaccess__page main .plan .plan__item button {
+.webaccess__page main .plan .plan__item .btn {
   width: 100%;
 }
 .webaccess__page main .plan .plan__item__right {
   min-height: 4.5em;
-  margin-top: 0;
-  margin-bottom: 40px;
   font-size: 1rem;
   list-style: none;
 }
@@ -3147,8 +3145,13 @@ hr {
   display: block;
   position: absolute;
   top: 3px;
-  left: -1.25em;
+  left: -1.35em;
   font-family: 'icomoon';
+}
+.webaccess__page main .plan .plan__item__right--narrow li {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
 }
 .webaccess__page main .plan .plan__option__txt {
   display: block;

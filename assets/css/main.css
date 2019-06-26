@@ -663,11 +663,11 @@ ul.keyword li a:hover {
   color: #9D0505;
 }
 
-body.index__page p {
+body:not(.article__page) p {
   font-size: 1rem;
   line-height: 1.6;
 }
-body:not(.index__page) p {
+body.article__page p {
   font-size: 1.125rem;
   line-height: 1.8;
 }
@@ -694,6 +694,14 @@ i.icon {
 body.chrome i.icon:before {
   position: relative;
   top: 0.125em;
+}
+
+.icon-minus:before {
+  content: "\e936";
+}
+
+.icon-plus:before {
+  content: "\e937";
 }
 
 .icon-images:before {
@@ -1830,11 +1838,11 @@ button.btn, a.btn {
   position: relative;
   display: inline-block;
   min-width: 120px;
-  padding: 0 1rem;
+  padding: 0.6875rem 1rem;
   font-size: 1rem;
-  line-height: 2.65rem;
+  line-height: 1.25;
   text-align: center;
-  word-break: keep-all;
+  word-break: break-word;
   overflow: hidden;
 }
 @media (min-width: 375px) {
@@ -1845,7 +1853,7 @@ button.btn, a.btn {
 @media (min-width: 768px) {
   button.btn, a.btn {
     min-width: 144px;
-    line-height: 2.875rem;
+    padding: 0.8125rem 1rem;
   }
 }
 button.btn + button.btn, button.btn + a.btn, a.btn + button.btn, a.btn + a.btn {
@@ -2872,7 +2880,7 @@ hr {
   border-bottom: 1px solid #D3D5D7;
 }
 .webaccess__page main {
-  margin-top: 40px;
+  margin-top: 20px;
   justify-content: center;
 }
 .webaccess__page main article {
@@ -2896,7 +2904,7 @@ hr {
   }
 }
 .webaccess__page main article .step__group {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .webaccess__page main article .step__item {
   position: relative;
@@ -3318,7 +3326,7 @@ hr {
   }
 }
 .webaccess__page section.group {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .webaccess__page section.group .flex-container .label + .label, .webaccess__page section.group .tab__content .label + .label, .webaccess__page section.group .content__group .label + .label {
   margin-top: 1.25rem;
@@ -3450,12 +3458,17 @@ hr {
 .webaccess__page section.group .content__group .content__item--title {
   margin-bottom: 1rem;
 }
+@media (min-width: 375px) {
+  .webaccess__page section.group .content__group .content__item--title {
+    width: 50%;
+  }
+}
 .webaccess__page section.group .content__group .content__item__amount {
   word-break: break-all;
 }
 @media (min-width: 375px) {
   .webaccess__page section.group .content__group .content__item__amount {
-    width: calc(100% - 150px);
+    width: 50%;
     text-align: right;
   }
 }

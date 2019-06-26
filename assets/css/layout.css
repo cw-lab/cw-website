@@ -182,7 +182,7 @@ th {
   padding: 0;
 }
 
-main .article__text .article__box::before, main .article__text .article__box::after, main .tab--recommend .card__group::after, main .tab--recommend .card .card__img::before, main .tab--recommend .card .card__img::after, .slideshow .slider__wrap::before, .slideshow .slider__wrap::after {
+main .article__text .article__box::before, main .article__text .article__box::after, main .tab--recommend .card__group::after, main .tab--recommend .card .card__img::before, main .tab--recommend .card .card__img::after, main .accordion__item::before, main .accordion__item::after, main .accordion__item__header::before, main .accordion__item__header::after, main .accordion__item__panel::before, main .accordion__item__panel::after, main .card__item a.card__img::before, .slideshow .slider__wrap::before, .slideshow .slider__wrap::after {
   content: '';
   display: block;
 }
@@ -336,6 +336,15 @@ body.story__page footer {
 main {
   justify-content: space-between;
 }
+main p img {
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+main p iframe {
+  display: block;
+}
 main article {
   width: 100%;
 }
@@ -343,15 +352,6 @@ main article {
   main article {
     width: 620px;
   }
-}
-main article p img {
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-main article p iframe {
-  display: block;
 }
 main article.article__level--0 {
   font-size: 1.125rem;
@@ -1021,14 +1021,14 @@ main .story__set--content {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-main .story__set:last-child {
-  padding-bottom: 0;
-}
 @media (max-width: 767px) {
   main .story__set--header {
     height: 90vh;
     overflow: hidden;
   }
+}
+main .story__set a.btn {
+  margin-bottom: 40px;
 }
 main .story__background {
   width: auto;
@@ -1116,6 +1116,139 @@ main .story__title .article__info__breadcrumb li a {
 main .story__function .article__function {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+main .accordion__item {
+  margin: 0 0 1em;
+}
+main .accordion__item::before, main .accordion__item::after {
+  clear: both;
+}
+main .accordion__item:last-child .accordion__item__header {
+  border-width: 1px 0;
+}
+main .accordion__item__header {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border: solid #939EA7;
+  border-width: 1px;
+  background-color: #939EA7;
+  -moz-transition: background-color, 0.3s;
+  -o-transition: background-color, 0.3s;
+  -webkit-transition: background-color, 0.3s;
+  transition: background-color, 0.3s;
+}
+main .accordion__item__header::before, main .accordion__item__header::after {
+  clear: both;
+}
+main .accordion__item__header.active {
+  background-color: #48545D;
+  border-color: #48545D;
+}
+main .accordion__item__header p {
+  color: #fff;
+}
+main .accordion__item__header i.icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 1rem;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+main .accordion__item__panel {
+  display: none;
+  position: relative;
+  padding: 1rem;
+  border: solid #939EA7;
+  border-width: 0 1px 1px;
+}
+main .accordion__item__panel::before, main .accordion__item__panel::after {
+  clear: both;
+}
+main .card__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .card__group--3col .card__item {
+  width: calc( (100% - (2rem)) / 3 );
+}
+main .card__group--3col .card__item:nth-child(3n) {
+  margin-right: 0;
+}
+main .card__item {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border: 1px solid #D3D5D7;
+}
+main .card__item a.card__img {
+  position: relative;
+  display: block;
+}
+main .card__item a.card__img img {
+  width: 100%;
+}
+main .card__item a.card__img::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 23, 23, 0);
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#00171717', endColorstr='#80171717');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3MTcxNyIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNzE3MTciIHN0b3Atb3BhY2l0eT0iMC41Ii8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, rgba(23, 23, 23, 0) 0%, rgba(23, 23, 23, 0.5) 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, rgba(23, 23, 23, 0) 0%, rgba(23, 23, 23, 0.5) 100%);
+  background-image: radial-gradient(ellipse cover at center, rgba(23, 23, 23, 0) 0%, rgba(23, 23, 23, 0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+main .card__item a.card__img:hover::before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+main .card__item .card__body {
+  padding: 1rem;
+}
+main .card__item .card__body a {
+  color: #003a9f;
+}
+main .card__item .card__body a:hover {
+  color: #D60C18;
+}
+main .card__item .card__body .card__title {
+  position: relative;
+  display: block;
+  height: 2.5em;
+  font-size: 1.25em;
+  overflow: hidden;
+}
+main .card__item .card__body .card__title::after {
+  content: '...';
+  background-color: #fff;
+}
+main .card__item .card__body .card__info {
+  align-items: center;
+  justify-content: space-between;
+}
+main .card__item .card__body p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main aside {
   width: 100%;

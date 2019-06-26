@@ -53,7 +53,7 @@
 									<div class="content__item__amount">399元</div>
 								</li>
 								<li class="content__item">
-									<div class="content__item__title">2019空白筆記本-PANTONE束帶</div>
+									<div class="content__item__title">2019天下筆記本-PANTONE色</div>
 									<div class="content__item__amount">贈品</div>
 								</li>
 							</ul>
@@ -74,7 +74,7 @@
 								<label class="label">
 									<div class="form__group__placeholder">請輸入E-mail</div>
 									<input type="email" class="form__group__input">
-									<i class="form__group__help form__group__help--strong">您將以此E-mail登入天下雜誌，如果您未曾用此Email註冊，付款完成後需請您設定密碼</i>
+									<i class="form__group__help form__group__help--strong">您將用此E-mail登入天下雜誌</i>
 								</label>
 							</div>
 							<button class="btn btn--contained">下一步</button>
@@ -112,62 +112,7 @@
 					</section>
 					<section class="group">
 						<h3>發票資料</h3>
-						<div class="flex-container">
-							<div class="label flex justify-between">
-								<div class="col--left">
-									<p class="mtb0">
-										會員載具
-										<span class="h5">電子發票若中獎將寄送至下方地址</span>
-									</p>
-								</div>
-								<div class="col--right">
-									<a href="#!" class="btn btn--outlined" id="chageInvoicing">變更</a>
-								</div>
-							</div>
-							<div class="flex label form__group form__group--filled form__group--inline">
-								<div class="select__group select__group--filled">
-									<select name="country">
-										<option selected="">請選擇縣市</option>
-										<option value="基隆市">基隆市</option>
-										<option value="臺北市">臺北市</option>
-										<option value="新北市">新北市</option>
-										<option value="桃園市">桃園市</option>
-										<option value="新竹市">新竹市</option>
-										<option value="新竹縣">新竹縣</option>
-										<option value="苗栗縣">苗栗縣</option>
-										<option value="臺中市">臺中市</option>
-										<option value="彰化縣">彰化縣</option>
-										<option value="南投縣">南投縣</option>
-										<option value="雲林縣">雲林縣</option>
-										<option value="嘉義市">嘉義市</option>
-										<option value="嘉義縣">嘉義縣</option>
-										<option value="臺南市">臺南市</option>
-										<option value="高雄市">高雄市</option>
-										<option value="屏東縣">屏東縣</option>
-										<option value="臺東縣">臺東縣</option>
-										<option value="花蓮縣">花蓮縣</option>
-										<option value="宜蘭縣">宜蘭縣</option>
-										<option value="澎湖縣">澎湖縣</option>
-										<option value="金門縣">金門縣</option>
-										<option value="連江縣">連江縣</option>
-									</select>
-								</div>
-								<div class="select__group select__group--filled">
-									<select disabled>
-										<option class="select__group__item" selected="">鄉鎮市區</option>
-										<option class="select__group__item" value="1">假字假字</option>
-										<option class="select__group__item" value="2">假字假</option>
-										<option class="select__group__item" value="3">假字</option>
-										<option class="select__group__item" value="4">假字假</option>
-									</select>
-								</div>
-								<label class="label">
-									<div class="form__group__placeholder">請輸入詳細地址</div>
-									<input type="text" name="address" class="form__group__input">
-								</label>
-							</div>
-						</div>
-						<div class="tab tab--hide select-invoicing">
+						<div class="tab select-invoicing">
 							<div class="tab__nav">
 								<ul class="list-reset">
 									<li class="active"><span>二聯電子發票</span></li>
@@ -266,24 +211,65 @@
 							</div>
 						</div>
 					</section>
+					<section class="group address">
+						<h3>發票寄送地址</h3>
+						<div class="flex-container">
+							<div class="flex label form__group form__group--filled form__group--inline">
+								<div class="select__group select__group--filled">
+									<select name="country">
+										<option selected="">請選擇縣市</option>
+										<option value="基隆市">基隆市</option>
+										<option value="臺北市">臺北市</option>
+										<option value="新北市">新北市</option>
+										<option value="桃園市">桃園市</option>
+										<option value="新竹市">新竹市</option>
+										<option value="新竹縣">新竹縣</option>
+										<option value="苗栗縣">苗栗縣</option>
+										<option value="臺中市">臺中市</option>
+										<option value="彰化縣">彰化縣</option>
+										<option value="南投縣">南投縣</option>
+										<option value="雲林縣">雲林縣</option>
+										<option value="嘉義市">嘉義市</option>
+										<option value="嘉義縣">嘉義縣</option>
+										<option value="臺南市">臺南市</option>
+										<option value="高雄市">高雄市</option>
+										<option value="屏東縣">屏東縣</option>
+										<option value="臺東縣">臺東縣</option>
+										<option value="花蓮縣">花蓮縣</option>
+										<option value="宜蘭縣">宜蘭縣</option>
+										<option value="澎湖縣">澎湖縣</option>
+										<option value="金門縣">金門縣</option>
+										<option value="連江縣">連江縣</option>
+									</select>
+								</div>
+								<div class="select__group select__group--filled">
+									<select disabled>
+										<option class="select__group__item" selected="">鄉鎮市區</option>
+										<option class="select__group__item" value="1">假字假字</option>
+										<option class="select__group__item" value="2">假字假</option>
+										<option class="select__group__item" value="3">假字</option>
+										<option class="select__group__item" value="4">假字假</option>
+									</select>
+								</div>
+								<label class="label">
+									<div class="form__group__placeholder">請輸入詳細地址</div>
+									<input type="text" name="address" class="form__group__input">
+								</label>
+							</div>
+						</div>
+					</section>
 					<section class="group">
 						<h3>自動續訂</h3>
 						<div class="flex-container">
 							<label class="label--check">
 								<input type="checkbox" name="checkbox" checked>
 								<span class="label__radio__mark"></span>
-								<span class="label__radio__txt">我同意天下雜誌自動延續訂閱期限</span>
+								<span class="label__radio__txt">我同意自動延續訂閱期限</span>
 							</label>
 							<div>
-								<p>我們將在第二季以699元為您自動續訂，直到您取消訂閱為止。</p>
 								<p class="mb0">
-									注意事項：
+									我們將在三個月後以699元為您自動續訂，您可隨時取消自動續訂。
 								</p>
-								<ul class="mtb0">
-									<li>系統將以您初次訂購的付款方式扣款</li>
-									<li>您可以在我的帳戶中解除自動續訂</li>
-									<li>若您此次訂閱包含贈品，下次續訂時將不再贈送此次的贈品</li>
-								</ul>
 							</div>
 						</div>
 					</section>
@@ -359,5 +345,25 @@
 		<script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 		<script type="text/javascript" src="../../assets/js/main.js"></script>
+		<script type="text/javascript">
+			$("section.address").hide();
+			$(".tab .tab__nav > ul li:nth-child(2), .tab .tab__nav > ul li:nth-child(3)").click(function () {
+				$("section.address").hide();
+			})
+			$(".tab .tab__nav > ul li:nth-child(1)").click(function () {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			})
+			$(".label--radio input").change(function() {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			}).change();
+		</script>
 	</body>
 </html>

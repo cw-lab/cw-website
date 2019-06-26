@@ -317,7 +317,19 @@
 						}, 600);
 						return false;
 					})
+					$(this).on('click', function(){
+						$(this).text("您已選擇此方案").addClass("active");
+						$(this).parent().parent().parent().siblings().children().children().children("a.btn").text("改選為此方案").removeClass("active");
+						// .siblings().children().children().children(".btn").text("改選為此方案");
+					})
 				})
+				$("select").change(function() {
+					var string = "";
+					$("select option:selected").each(function() {
+						string = $(this).data("average");
+					});
+					$(this).parent().siblings(".plan__item__option").children().text(string);
+				}).change();
 			})
 		</script>
 	</body>

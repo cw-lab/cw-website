@@ -205,9 +205,12 @@ $(function(){
 	menubarSub (width, container);
 	// 文章頁
 	// youtube 16:9
-	$("iframe[src*='youtube']").css({
-		"width": articleTextWidth,
-		"height": articleTextWidth * 0.5625
+	$("iframe[src*='youtube']").each(function () {
+		var youtube_width = $(this).parent().outerWidth();
+		$(this).css({
+			"width": youtube_width,
+			"height": youtube_width * 0.5625
+		})
 	})
 	$('.article__edit__info__type').hide();
 	$('.article__edit__info__type').each(function(){
@@ -252,6 +255,16 @@ $(function(){
 			$(this).toggleClass("active");
 		})
 	}
+	$(".accordion__item__header").on("click", function () {
+		$(this).parent().siblings().children(".accordion__item__panel").slideUp();
+		$(this).parent().siblings().children(".accordion__item__header").removeClass("active");
+		$(this).parent().siblings().children(".accordion__item__header").children("i.icon").addClass("icon-plus");
+		$(this).parent().siblings().children(".accordion__item__header").children("i.icon").removeClass("icon-minus");
+		$(this).toggleClass("active");
+		$(this).children("i.icon").toggleClass("icon-plus");
+		$(this).children("i.icon").toggleClass("icon-minus");
+		$(this).siblings(".accordion__item__panel").slideToggle();
+	})
 	function copyToClipboard(elem) {
 		// create hidden text element, if it doesn't already exist
 		var targetId = "_hiddenCopyText_";
@@ -303,12 +316,12 @@ $(function(){
 	function highestCol (width){
 		if ( width >= 768 ) {
 			var highestCol = Math.max(
-				$('.plan__item:nth-child(1) > .plan__description--main').outerHeight(),
-				$('.plan__item:nth-child(2) > .plan__description--main').outerHeight(),
-				$('.plan__item:nth-child(3) > .plan__description--main').outerHeight()
+				$('.plan__item:nth-child(1) .plan__item__right').outerHeight(),
+				$('.plan__item:nth-child(2) .plan__item__right').outerHeight(),
+				$('.plan__item:nth-child(3) .plan__item__right').outerHeight()
 			);
 		}
-		$(".plan__description--main").css("height", highestCol);
+		$(".plan__item__right").css("height", highestCol);
 	}
 	highestCol (width);
 	// 信用卡Keyup同步

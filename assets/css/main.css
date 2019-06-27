@@ -1778,10 +1778,10 @@ form .select__group::before {
   position: absolute;
   display: block;
   top: 50%;
-  right: 0.85rem;
-  color: #000;
+  right: 1rem;
+  color: #394148;
   font-family: 'icomoon';
-  font-size: 1.25rem;
+  font-size: 1rem;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -3114,6 +3114,10 @@ hr {
 }
 .webaccess__page main .plan .plan__item .select__group {
   width: 100%;
+}
+.webaccess__page main .plan .plan__item .select__group::before {
+  right: 0.85rem;
+  font-size: 1.25em;
 }
 .webaccess__page main .plan .plan__item .select__group select.plan__item__select {
   width: 100%;

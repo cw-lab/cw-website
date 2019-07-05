@@ -10,7 +10,8 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
-		<link rel="stylesheet" href="../../assets/css/main.css">
+		<link rel="stylesheet" href="../../assets/css/cw.css">
+		<link rel="stylesheet" href="../../assets/css/secant.css">
 	</head>
 	<body class="webaccess__page">
 		<header>
@@ -19,10 +20,17 @@
 					<a href="https://www.cw.com.tw" class="logo">
 						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
 					</a>
-					<ul class="list-reset flex member-list">
-						<li><a href="#!">登入</a></li>
-						<li><a href="#!">註冊</a></li>
-					</ul>
+					<div class="list__group flex">
+						<ul class="list-reset flex member__list member__list--desktop">
+							<li><a href="#!">雜誌訂閱</a></li>
+							<li><a href="#!">天下全閱讀</a></li>
+							<li><a href="#!">常見問題</a></li>
+						</ul>
+						<ul class="list-reset flex member__list">
+							<li><a href="#!">登入</a></li>
+							<li><a href="#!">註冊</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -344,7 +352,7 @@
 		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-		<script type="text/javascript" src="../../assets/js/main.js"></script>
+		<script type="text/javascript" src="../../assets/js/cw.js"></script>
 		<script type="text/javascript">
 			$("section.address").hide();
 			$(".tab .tab__nav > ul li:nth-child(2), .tab .tab__nav > ul li:nth-child(3)").click(function () {

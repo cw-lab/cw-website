@@ -105,7 +105,8 @@ $(function(){
 		// },function() {
 		// 	sid = setInterval(switch_next, 2000);
 		// });
-	})	// 當不是首頁時
+	})
+	// 當不是首頁時
 	if (!$("body").hasClass("index__page")) {
 		$("header nav.menubar--sub").addClass("menubar--sub2").removeClass("menubar--sub");
 	}

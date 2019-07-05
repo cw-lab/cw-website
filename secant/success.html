@@ -6,11 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="robots" content="noindex">
 		<meta name="googlebot" content="noindex">
-		<title>訂閱成功！</title>
+		<title>訂閱成功</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
-		<link rel="stylesheet" href="../assets/css/main.css">
+		<link rel="stylesheet" href="../assets/css/cw.css">
+		<link rel="stylesheet" href="../assets/css/secant.css">
 	</head>
 	<body class="webaccess__page">
 		<header>
@@ -19,10 +20,17 @@
 					<a href="https://www.cw.com.tw" class="logo">
 						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
 					</a>
-					<ul class="list-reset flex member-list">
+					<div class="list__group flex">
+						<ul class="list-reset flex member__list member__list--desktop">
+							<li><a href="#!">雜誌訂閱</a></li>
+							<li><a href="#!">天下全閱讀</a></li>
+							<li><a href="#!">常見問題</a></li>
+						</ul>
+						<ul class="list-reset flex member__list">
 						<li class="login"><a href="#!">您好，王小明</a></li>
 						<li><a href="#!">登出</a></li>
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -44,7 +52,7 @@
 						</div>
 					</div>
 					<section class="group">
-						<h1 class="mt0"><i class="icon icon-check-solid heading__icon heading__icon--correct"></i>訂閱成功！</h1>
+						<h1 class="mt0"><i class="icon icon-check-solid heading__icon heading__icon--correct"></i>訂閱完成</h1>
 						<p>您已刷卡付款成功，訂單明細已寄至您的E-mail中</p>
 						<p class="emphasis">
 							如有問題歡迎致電客服專線886-2-2662-0332<br>
@@ -61,7 +69,7 @@
 								</li>
 								<li class="content__item">
 									<div class="content__item__title">訂單方案</div>
-									<div class="content__item__amount">線上+紙本閱讀</div>
+									<div class="content__item__amount">線上閱讀季訂</div>
 								</li>
 								<li class="content__item">
 									<div class="content__item__title">E-mail</div>
@@ -78,69 +86,39 @@
 							</ul>
 							<ul class="content__list">
 								<li class="content__item">
-									<div class="content__item__title">此次訂閱金額</div>
+									<div class="content__item__title">訂閱金額</div>
 									<div class="content__item__amount">399元</div>
 								</li>
 								<li class="content__item">
-									<div class="content__item__title">此次訂閱到期</div>
+									<div class="content__item__title">訂閱到期日</div>
 									<div class="content__item__amount">2019/11/01</div>
 								</li>
-								<li class="content__item">
-									<div class="content__item__title">下次扣款金額</div>
-									<div class="content__item__amount">699元</div>
-								</li>
 							</ul>
-						</div>
-					</section>
-					<section class="group">
-						<div class="message message--remark">
-							<div class="message__container">
-								<div class="message__txt">
-									<p class="mt0">
-										當您此次的訂閱到期後，系統將為您自動續訂一年的線上+紙本閱讀，加贈一季線上+紙本閱讀，費用每年3480元，直到您主動取消訂閱為止。
-									</p>
-									<p class="mb0">
-										您可以隨時在<a href="#!">我的帳戶</a>中解除自動續訂
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="message message--remark">
-							<div class="message__container">
-								<div class="message__txt">
-									<p class="mt0">
-										當您此次的訂閱到期後，系統將為您自動續訂一季的線上閱讀，費用每季699元，直到您主動取消訂閱為止。
-									</p>
-									<p class="mb0">
-										您可以隨時在<a href="#!">我的帳戶</a>中解除自動續訂
-									</p>
-								</div>
-							</div>
 						</div>
 					</section>
 					<section class="group">
 						<div class="flex-container">
 							<div class="app__group flex">
 								<div class="app__group--left">
-									<img src="https://www.cw.com.tw/assets_new/img/navbar_QRCODE.png" alt="天下雜誌app QRCode" height="115" class="app__qrcode">
+									<img src="../assets/images/common/lazyload.png" data-src="https://www.cw.com.tw/assets_new/img/navbar_QRCODE.png" alt="天下雜誌app QRCode" height="115" class="app__qrcode">
 								</div>
 								<div class="app__group--right">
 									<div class="app__title flex">
-										<img src="../assets/img/icon-app@3x.png" alt="天下雜誌app" class="app__title--icon">
+										<img src="../assets/images/common/lazyload.png" data-src="../assets/images/common/icon-app@3x.png" alt="天下雜誌app" class="app__title--icon">
 										<div class="app__title--text">
-											<h3>立刻下載天下雜誌APP</h3>
-											<p class="mtb0">隨時提供您最好的數位閱讀體驗</p>
+											<p class="mtb0">享受最佳閱讀體驗</p>
+											<h3>立即下載天下雜誌APP</h3>
 										</div>
 									</div>
 									<ul class="app__img flex list-reset">
 										<li>
 											<a href="https://itunes.apple.com/app/apple-store/id1367378245?pt=390304&ct=webfooter1015&mt=8" target="_blank" class="app__img--ios">
-												<img src="../assets/img/icon-apple-store@3x.png" alt="">
+												<img src="../assets/images/common/lazyload.png" data-src="../assets/images/common/icon-apple-store@3x.png" alt="ios">
 											</a>
 										</li>
 										<li>
 											<a href="https://play.google.com/store/apps/details?id=tw.com.cw.commonwealth.cwapp&referrer=utm_source%3Dwebsite%26utm_medium%3Dbutton%26utm_campaign%3Dwebfooter1015" target="_blank" class="app__img--android">
-												<img src="../assets/img/icon-google-play@3x.png" alt="">
+												<img src="../assets/images/common/lazyload.png" data-src="../assets/images/common/icon-google-play@3x.png" alt="google play">
 											</a>
 										</li>
 									</ul>
@@ -148,17 +126,8 @@
 							</div>
 						</div>
 					</section>
-					<section class="group">
-						<div class="message message--remark">
-							<div class="message__container">
-								<div class="message__txt">
-									<p class="mt0">
-										您現在正以 bilylin@gmail.com 登入
-									</p>
-									<a href="#!" class="btn btn--contained">繼續閱讀天下</a>
-								</div>
-							</div>
-						</div>
+					<section class="group text-right">
+						<a href="#!" class="btn btn--contained">繼續閱讀天下</a>
 					</section>
 				</article>
 			</form>
@@ -189,6 +158,6 @@
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-		<script type="text/javascript" src="../assets/js/main.js"></script>
+		<script type="text/javascript" src="../assets/js/cw.js"></script>
 	</body>
 </html>

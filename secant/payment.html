@@ -10,7 +10,8 @@
 		<meta name="keywords" content="">
 		<meta name="description" content="">
 		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
-		<link rel="stylesheet" href="../assets/css/main.css">
+		<link rel="stylesheet" href="../assets/css/cw.css">
+		<link rel="stylesheet" href="../assets/css/secant.css">
 	</head>
 	<body class="webaccess__page">
 		<header>
@@ -19,10 +20,17 @@
 					<a href="https://www.cw.com.tw" class="logo">
 						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
 					</a>
-					<ul class="list-reset flex member-list">
-						<li><a href="#!">登入</a></li>
-						<li><a href="#!">註冊</a></li>
-					</ul>
+					<div class="list__group flex">
+						<ul class="list-reset flex member__list member__list--desktop">
+							<li><a href="#!">雜誌訂閱</a></li>
+							<li><a href="#!">天下全閱讀</a></li>
+							<li><a href="#!">常見問題</a></li>
+						</ul>
+						<ul class="list-reset flex member__list">
+							<li><a href="#!">登入</a></li>
+							<li><a href="#!">註冊</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</header>
@@ -81,11 +89,11 @@
 									</div>
 								</li>
 								<li class="content__item">
-									<div class="content__item__title">全閱讀季訂</div>
+									<div class="content__item__title">線上閱讀季訂</div>
 									<div class="content__item__amount">399元</div>
 								</li>
 								<li class="content__item">
-									<div class="content__item__title">2019空白筆記本-PANTONE束帶</div>
+									<div class="content__item__title">2019天下筆記本-PANTONE色</div>
 									<div class="content__item__amount">0元</div>
 								</li>
 							</ul>
@@ -149,13 +157,13 @@
 									<div class="input__group__title">可刷卡別</div>
 									<ul class="card__use list-reset">
 										<li>
-											<img src="../assets/img/icon-visa@3x.png" alt="VISA">
+											<img src="../assets/images/secant/icon-visa@3x.png" alt="VISA">
 										</li>
 										<li>
-											<img src="../assets/img/icon-master@3x.png" alt="MASTER CARD">
+											<img src="../assets/images/secant/icon-master@3x.png" alt="MASTER CARD">
 										</li>
 										<li>
-											<img src="../assets/img/icon-jcb@3x.png" alt="JCB">
+											<img src="../assets/images/secant/icon-jcb@3x.png" alt="JCB">
 										</li>
 									</ul>
 									<div class="card">
@@ -210,7 +218,7 @@
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-		<script type="text/javascript" src="../assets/js/main.js"></script>
+		<script type="text/javascript" src="../assets/js/cw.js"></script>
 		<script>
 			$(function (){
 				$("button").on("click", function(){

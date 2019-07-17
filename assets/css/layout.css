@@ -948,17 +948,38 @@ main .card__group {
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  main .card__group--3col {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 main .card__group--3col .card__item {
   width: calc( (100% - (2rem)) / 3 );
 }
-main .card__group--3col .card__item:nth-child(3n) {
-  margin-right: 0;
+@media (min-width: 768px) {
+  main .card__group--3col .card__item {
+    width: calc( (100% - (2rem)) / 3 );
+  }
+  main .card__group--3col .card__item:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  main .card__group--3col .card__item {
+    width: 100%;
+  }
 }
 main .card__item {
-  margin-right: 1rem;
   margin-bottom: 1rem;
   background-color: #fff;
   border: 1px solid #D3D5D7;
+}
+@media (min-width: 768px) {
+  main .card__item {
+    margin-right: 1rem;
+  }
 }
 main .card__item a.card__img {
   position: relative;
@@ -1004,14 +1025,13 @@ main .card__item .card__body a:hover {
 }
 main .card__item .card__body .card__title {
   position: relative;
-  display: block;
-  height: 2.5em;
+  display: -webkit-box;
+  height: 3em;
   font-size: 1.25em;
+  line-height: 1.5;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-}
-main .card__item .card__body .card__title::after {
-  content: '...';
-  background-color: #fff;
 }
 main .card__item .card__body .card__info {
   align-items: center;

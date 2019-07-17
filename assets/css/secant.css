@@ -1,4 +1,4 @@
-.webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page main form::before, .webaccess__page main form::after, .webaccess__page main .plan .plan__item__spec::before, .loader::before, .loader__icon::before, .loader__icon::after {
+.webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page main form::before, .webaccess__page main form::after, .webaccess__page main .plan .plan__item__spec::before {
   content: '';
   display: block;
 }
@@ -66,7 +66,7 @@
   }
 }
 .webaccess__page main article .step__group {
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .webaccess__page main article .step__item {
   position: relative;
@@ -831,77 +831,5 @@
     bottom: 0;
     left: 0;
     width: 100%;
-  }
-}
-
-.loader {
-  position: fixed;
-  display: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
-.loader::before {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(23, 23, 23, 0.5);
-}
-.loader__text {
-  color: #fff;
-  font-size: 0.75em;
-  font-weight: 500;
-}
-.loader__animate {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.loader__icon {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  margin: auto;
-}
-.loader__icon::before, .loader__icon::after {
-  position: absolute;
-  top: 15px;
-  width: 20px;
-  height: 20px;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-}
-.loader__icon::before {
-  background: linear-gradient(90deg, #003a9f, #003186);
-  animation: rotation1 1s linear infinite;
-}
-.loader__icon::after {
-  background: linear-gradient(90deg, #d60c18, #9d0505);
-  animation: rotation2 1s linear infinite;
-}
-
-@keyframes rotation1 {
-  from {
-    left: 5px;
-    z-index: 1;
-  }
-  to {
-    left: 25px;
-  }
-}
-@keyframes rotation2 {
-  from {
-    right: 5px;
-  }
-  to {
-    right: 25px;
   }
 }

@@ -99,12 +99,6 @@ $(function(){
 		}
 		$slider_navi_next.click(switch_next);
 		$slider_navi_prev.click(switch_prev);
-		// var sid = setInterval(switch_next, 2000);
-		// $slider.hover(function() {
-		// 	clearInterval(sid);
-		// },function() {
-		// 	sid = setInterval(switch_next, 2000);
-		// });
 	})
 	// 當不是首頁時
 	if (!$("body").hasClass("index__page")) {
@@ -130,19 +124,6 @@ $(function(){
 		})
 	}
 	tabNavWidth (width);
-	// $(".tab__nav").each(function(){
-	// 	if ( ($(this).outerWidth() / $(this).children().children("li").length) < 100) {
-	// 		$(this).addClass("tab__nav--overflow");
-	// 		$(this).append("<div class='tab__nav__next'><i class='icon icon-right'></i></div>");
-	// 		if (width >= 768) {
-	// 			$(this).addClass("tab__nav--desktop");
-	// 		} else {
-	// 			$(this).addClass("tab__nav--mobile");
-	// 		}
-	// 	} else {
-	// 		$(this).removeClass("tab__nav--overflow");
-	// 	}
-	// })
 	// 當tooltips大於等於15字
 	$(".tooltips").each(function(){
 		if ($(this).data("tooltips").length >= 15 ) {
@@ -153,11 +134,17 @@ $(function(){
 	$('body').append('<div class="black"></div>');
 	$('.hamburger').click(function () {
 		$('.menubar--left').addClass('opened');
-		$('.black').addClass('opened');
+		$('.black').addClass('opened menubar--left');
 	});
 	$('.black').click(function () {
-		$('.menubar--left, .black').removeClass('opened');
-		$('.message--dialogs').fadeOut(200);
+		if ($(this).hasClass("menubar--left")) {
+			$('.menubar--left').removeClass('opened');
+			$('.black').removeClass('opened menubar--left');
+		}
+		if ($(this).hasClass("message--dialogs")) {
+			$('.black').removeClass('opened message--dialogs');
+			$('.message--dialogs').fadeOut(200);
+		}
 	});
 	// menu寬度平分
 	$("nav.menubar--belt").each(function(){
@@ -197,6 +184,10 @@ $(function(){
 		$(this).parent().parent().fadeOut();
 		$('.black').toggleClass('opened');
 	})
+	// message--alert, .message--dialogs 絕對定位
+	$(".message--alert, .message--dialogs").animate({
+		"top": (height / 2)
+	}, 10);
 	// menubar--sub 絕對定位
 	function menubarSub (width, container){
 		$(".menubar--sub2").css({
@@ -381,7 +372,7 @@ $(function(){
 	$(window).scroll(function(){
 		// message: 定位在目前畫面之中
 		var scroll = $(window).scrollTop();
-		$(".message").animate({
+		$(".message--alert, .message--dialogs").animate({
 			"top": scroll + (height / 2)
 		}, 10);
 	})

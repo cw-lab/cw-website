@@ -1,0 +1,101 @@
+.tab {
+	&--hide {
+		display: none;
+	}
+	.tab {
+		&__nav {
+			position: relative;
+			border: solid $gray-200;
+			border-width: 1px;
+			@include breakpoint(max-width 767px) {
+				overflow-x: scroll;
+				overflow-y: hidden;
+			}
+			> ul {
+				position: relative;
+				display: flex;
+				padding: 0;
+				margin: 0;
+				@include breakpoint(768px) {
+					margin: 0 0 -1px;
+				}
+				&::before {
+					@extend %before-after;
+					position: absolute;
+					bottom: -1px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: $gray-200;
+					@include breakpoint(768px) {
+						bottom: 0px;
+					}
+				}
+				li {
+					position: relative;
+					display: flex;
+					min-width: 110px;
+					padding: 5px;
+					line-height: 2.6rem;
+					justify-content: center;
+					align-items: center;
+					word-break: keep-all;
+					border-bottom: 3px solid transparent;
+					cursor: pointer;
+					&:hover {
+						color: $primary;
+					}
+					&:active {
+						color: $primary-variant;
+					}
+					&.active {
+						color: $primary;
+						border-color: $primary;
+					}
+				}
+			}
+			&__next {
+				display: none;
+				width: 60px;
+				padding-left: 10px;
+				background-color: $white;
+				align-items: center;
+				justify-content: center;
+			}
+			&--desktop {
+				.tab__nav {
+					&__next {
+						display: flex;
+					}
+				}
+			}
+			&--mobile {
+				.tab__nav {
+					&__next {
+						display: none;
+					}
+				}
+			}
+			&--overflow {
+				display: flex;
+				> ul {
+					padding-left: 50px;
+					overflow: scroll;
+				}
+			}
+		}
+		&__content {
+			&__pane {
+				display: none;
+				border: solid $gray-200;
+				border-width: 0 1px 1px;
+				&--p20 {
+					padding: 20px;
+				}
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+}

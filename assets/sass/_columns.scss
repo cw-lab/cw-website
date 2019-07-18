@@ -1,0 +1,68 @@
+$col: 12;
+$width: 100% / $col;
+$column: () !default;
+$column: map-merge((
+	"1": ($width * 1),
+	"2": ($width * 2),
+	"3": ($width * 3),
+	"4": ($width * 4),
+	"5": ($width * 5),
+	"6": ($width * 6),
+	"7": ($width * 7),
+	"8": ($width * 8),
+	"9": ($width * 9),
+	"10": ($width * 10),
+	"11": ($width * 11),
+	"12": ($width * 12)
+), $column);
+[class*="col"] {
+	position: relative;
+	width: 100%;
+}
+@for $i from 1 through 12 {
+	.col-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i},  .col-xl-#{$i} {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+@each $number, $value in $column {
+	.col-#{$number} {
+		width: nth($value, 1);
+	}
+}
+@include breakpoint(768px) {
+	@for $i from 1 through 12 {
+		.col-md-#{$i}, .col-lg-#{$i},  .col-xl-#{$i}, .col-sm-#{$i}, .col-#{$i} {
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+	}
+}
+@include breakpoint(576px) {
+	@each $number, $value in $column {
+		.col-sm-#{$number} {
+			width: nth($value, 1);
+		}
+	}
+}
+@include breakpoint(768px) {
+	@each $number, $value in $column {
+		.col-md-#{$number} {
+			width: nth($value, 1);
+		}
+	}
+}
+@include breakpoint(992px) {
+	@each $number, $value in $column {
+		.col-lg-#{$number} {
+			width: nth($value, 1);
+		}
+	}
+}
+@include breakpoint(1200px) {
+	@each $number, $value in $column {
+		.col-xl-#{$number} {
+			width: nth($value, 1);
+		}
+	}
+}

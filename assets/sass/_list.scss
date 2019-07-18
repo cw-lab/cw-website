@@ -1,0 +1,217 @@
+.article__group {
+	@include breakpoint(768px) {
+		margin-bottom: 20px;
+		background-color: $white;
+		border: 1px solid $gray-200;
+	}
+}
+.article__group {
+	&__item {
+		display: flex;
+		width: 100%;
+		&__img {
+			position: relative;
+			overflow: hidden;
+			> a {
+				position: relative;
+				display: block;
+				width: 100%;
+				img {
+					width: 100%;
+					height: auto;
+				}
+				&::before, &::after {
+					@include transition(all 0.3s);
+				}
+				&::before {
+					@extend %before-after;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($black, 0);
+					@include filter-gradient(rgba($black, 0), rgba($black, 0.5), horizontal);
+					@include background-image(radial-gradient(center, ellipse farthest-corner, rgba($black, 0) 0%, rgba($black, 0.5) 100%));
+					@include opacity(0);
+					z-index: 1;
+				}
+				&:hover {
+					&::before {
+						@include opacity(1);
+					}
+				}
+			}
+			.article__function__sns {
+				position: absolute;
+				bottom: -74px;
+				width: 100%;
+				padding: 15px;
+				background-color: rgba($black, 0.75);
+				@include transition(bottom, 0.3s);
+				z-index: 1;
+			}
+			&:hover {
+				.article__function__sns {
+					bottom: 0px;
+				}
+			}
+		}
+		&__text {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			> * {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			h1, h2, .h3 {
+				width: 100%;
+				margin-top: 5px;
+				// margin-bottom: 5px;
+				a {
+					display: block;
+					color: $black;
+					&:hover {
+						color: $primary;
+					}
+				}
+				@include breakpoint(max-width 767px) {
+					font-size: 22px;
+				}
+			}
+			h1, h2 {
+				a {
+					@extend %ellipsis;
+				}
+			}
+			.h3 {
+				line-height: 1.35;
+			}
+			a.h4 {
+				display: block;
+				&:hover {
+					color: $primary-variant;
+				}
+			}
+			h5 {
+				a {
+					display: block;
+					color: $secondary;
+				}
+			}
+		}
+		&--video {
+			.article__group__item__img > a {
+				&::after {
+					display: block;
+					content: '\e91d';
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					color: $white;
+					font-family: 'icomoon';
+					font-size: 3rem;
+					font-weight: bold;
+					line-height: 1;
+					text-shadow: 0 0 20px rgba($black, 0.25);
+					z-index: 5;
+				}
+			}
+		}
+		&--aside {
+			flex-direction: column;
+			background-color: $white;
+			border: 1px solid $gray-200;
+			.article__group {
+				&__item {
+					&__text {
+						width: 100%;
+						padding: 15px 10px;
+					}
+				}
+			}
+		}
+		&--main {
+			flex-direction: column;
+			@include breakpoint(max-width 767px) {
+				margin-bottom: 20px;
+				background-color: $white;
+				border: 1px solid $gray-200;
+			}
+			.article__group {
+				&__item {
+					&__img {
+						a {
+							&::after {
+								font-size: 4rem;
+								@include breakpoint(768px) {
+									font-size: 5rem;
+								}
+							}
+							&:hover {
+								&::after {
+									bottom: 80px;
+								}
+							}
+						}
+					}
+					&__text {
+						width: 100%;
+						padding: 15px 10px;
+						p {
+							display: -webkit-box;
+							-webkit-line-clamp: 2;
+							-webkit-box-orient: vertical;
+							overflow: hidden;
+						}
+					}
+				}
+			}
+		}
+		&--sub {
+			@include breakpoint(max-width 767px) {
+				flex-direction: column;
+				margin-bottom: 20px;
+				background-color: $white;
+				border: 1px solid $gray-200;
+			}
+			@include breakpoint(768px) {
+				padding: 1rem;
+			}
+			.article__group {
+				&__item {
+					&__img {
+						@include breakpoint(768px) {
+							width: 120px;
+						}
+					}
+					&__text {
+						@include breakpoint(768px) {
+							width: calc(100% - 120px);
+							padding-left: 1rem;
+							p {
+								white-space: nowrap;
+								text-overflow: ellipsis;
+								overflow: hidden;
+							}
+						}
+						@include breakpoint(max-width 767px) {
+							width: 100%;
+							padding: 15px 10px;
+							p {
+								display: -webkit-box;
+								-webkit-line-clamp: 2;
+								-webkit-box-orient: vertical;
+								overflow: hidden;
+							}
+						}
+					}
+				}
+			}
+			.article__function__sns {
+				display: none;
+			}
+		}
+	}
+}

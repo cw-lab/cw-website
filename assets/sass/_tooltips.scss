@@ -1,0 +1,47 @@
+$cubic: cubic-bezier(.64,.09,.08,1);
+.tooltips {
+	position: relative;
+	&:before {
+		content: attr(data-tooltips);
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		padding: 6px 8px;
+		margin-top: 10px;
+		max-width: 200px;
+		color: $white;
+		font-size: 14px;
+		line-height: 1.45;
+		background: $gray-500;
+		white-space: nowrap;
+		visibility: hidden;
+		@include opacity(0);
+		@include transform(translateX(-50%) translateY(-2px));
+		@include transition(opacity 0.2s $cubic, transform 0.2s $cubic);
+		z-index: 2;
+	}
+	&-wrap {
+		&:before {
+			width: 200px;
+			white-space: normal;
+		}
+	}
+	&:hover {
+		&:before {
+			@include breakpoint(768px) {
+				display: block;
+				visibility: visible;
+				@include opacity(1);
+				@include transform(translateX(-50%) translateY(0));
+			}
+		}
+	}
+	&.active {
+		&:before {
+			display: block;
+			visibility: visible;
+			@include opacity(1);
+			@include transform(translateX(-50%) translateY(0));
+		}
+	}
+}

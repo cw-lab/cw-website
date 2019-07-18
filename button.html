@@ -10,13 +10,12 @@
 	<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
 	<title>按鈕 Button｜《天下雜誌》網站設計系統 CommonWealth Magazine Web Design System</title>
 	<!--
-				天下CSS: cw.css
-				Design System: style.css
-		-->
+		天下CSS: cw.css
+		Design System: style.css
+	-->
 	<link rel="stylesheet" href="assets/css/cw.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 	<header></header>
 	<main>
@@ -100,10 +99,11 @@
 												<div class="tab__content">
 													<div class="tab__content__pane active">
 														<div class="code__block--text code__block--html bg-black">
-															<pre>&lt;button class="btn btn--outlined"&gt;搜尋網站的內容&lt;/button&gt;</pre>
+															<pre>&lt;button class="btn btn--outlined" &gt;搜尋網站的內容&lt;/button&gt;</pre>
 														</div>
 														<div class="code__block--text code__block--scss bg-black">
-															<pre>button {
+															<pre>button, a {
+  background-color: transparent;
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -114,12 +114,27 @@
   }
   &.btn {
     position: relative;
-    display: block;
-    min-width: 144px;
-    padding: 0 1rem;
-    line-height: 2.875rem;
-    background-color: transparent;
+    display: inline-block;
+    min-width: 120px;
+    padding: 0.6875rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
     overflow: hidden;
+    @include breakpoint(375px) {
+      min-width: 135px;
+    }
+    @include breakpoint(768px) {
+      min-width: 144px;
+      padding: 0.8125rem 1rem;
+    }
+    + button.btn, + a.btn {
+      margin-left: 0.5rem;
+      @include breakpoint(768px) {
+        margin-left: 1rem;
+      }
+    }
     &::before, &::after {
       @extend %before-after;
       position: absolute;
@@ -165,8 +180,19 @@
         transition: transform 0s;
       }
     }
+    &:disabled {
+      background-color: transparent;
+      cursor: initial;
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 0;
+      }
+    }
     &--outlined {
       color: $surface;
+      background-color: $white;
       border: 1px solid $surface;
       z-index: 1;
       &::-moz-focus-inner {
@@ -182,6 +208,12 @@
       &::after {
         background-color: $red-100;
       }
+    }
+    &[disabled*='disabled'] {
+      color: $white;
+      background: $gray-200;
+      border: 1px solid $gray-200;
+      cursor: not-allowed;
     }
   }
 }</pre>
@@ -192,10 +224,13 @@
 													</div>
 													<div class="tab__content__pane">
 														<div class="code__block--text code__block--html bg-black">
-															<pre>&lt;button class="btn btn--outlined" <span class="mis">disabled="disabled"</span>&gt;搜尋網站的內容&lt;/button&gt;</pre>
+															<pre>&lt;button class="btn btn--outlined" <span class="mis">disabled="disabled"</span>&gt;
+  搜尋網站的內容
+&lt;/button&gt;</pre>
 														</div>
 														<div class="code__block--text code__block--scss bg-black">
-															<pre>button {
+															<pre>button, a {
+  background-color: transparent;
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -206,91 +241,33 @@
   }
   &.btn {
     position: relative;
-    display: block;
-    min-width: 144px;
-    padding: 0 1rem;
-    line-height: 2.875rem;
-    background-color: transparent;
+    display: inline-block;
+    min-width: 120px;
+    padding: 0.6875rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
     overflow: hidden;
-    &::before, &::after {
-      @extend %before-after;
-      position: absolute;
-      @include opacity(0);
-      z-index: -1;
+    @include breakpoint(375px) {
+      min-width: 135px;
     }
-    &::before {
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      @include transition(opacity 0.2s);
+    @include breakpoint(768px) {
+      min-width: 144px;
+      padding: 0.8125rem 1rem;
     }
-    &::after {
-      left: 50%;
-      top: 50%;
-      padding: 55%;
-      width: 32px;
-      height: 32px;
-      @include border-radius(50%);
-      @include transform(translate(-50%, -50%) scale(1));
-      @include transition(opacity 2s, transform 0.5s);
-    }
-    &:hover {
-      &::before {
-        opacity: 0.04;
-      }
-      &:focus {
-        &::before {
-          opacity: 0.16;
-        }
+    + button.btn, + a.btn {
+      margin-left: 0.5rem;
+      @include breakpoint(768px) {
+        margin-left: 1rem;
       }
     }
-    &:focus {
-      &::before {
-        opacity: 0.12;
-      }
-    }
-    &:active {
-      &::after {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 0s;
-      }
-    }
-    <span class="highlight">&:disabled {
-      background-color: transparent;
-      cursor: initial;
-      &::before {
-        opacity: 0;
-      }
-      &::after {
-        opacity: 0;
-      }
-    }</span>
-    &--outlined {
-      color: $surface;
-      border: 1px solid $surface;
-      z-index: 1;
-      &::-moz-focus-inner {
-        border: none;
-      }
-      &:hover {
-        color: $primary-variant;
-        border-color: $primary-variant;
-      }
-      &::before {
-        background-color: $red-100;
-      }
-      &::after {
-        background-color: $red-100;
-      }
-    }
-    <span class="highlight">&[disabled*='disabled'] {
+    &[disabled*='disabled'] {
       color: $white;
       background: $gray-200;
       border: 1px solid $gray-200;
       cursor: not-allowed;
-    }</span>
+    }
   }
 }</pre>
 														</div>
@@ -333,7 +310,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12 code--block">
+							<div class="col-md-12">
 								<hr>
 								<h2>How to Use</h2>
 								<div class="tab">
@@ -346,10 +323,11 @@
 									<div class="tab__content">
 										<div class="tab__content__pane active">
 											<div class="code__block--text code__block--html bg-black">
-												<pre>&lt;button class="btn btn--outlined"&gt;搜尋網站的內容&lt;/button&gt;</pre>
+												<pre>&lt;button class="btn btn--contained"&gt;搜尋網站的內容&lt;/button&gt;</pre>
 											</div>
 											<div class="code__block--text code__block--scss bg-black">
-												<pre>button {
+												<pre>button, a {
+  background-color: transparent;
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -360,12 +338,27 @@
   }
   &.btn {
     position: relative;
-    display: block;
-    min-width: 144px;
-    padding: 0 1rem;
-    line-height: 2.875rem;
-    background-color: transparent;
+    display: inline-block;
+    min-width: 120px;
+    padding: 0.6875rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
     overflow: hidden;
+    @include breakpoint(375px) {
+      min-width: 135px;
+    }
+    @include breakpoint(768px) {
+      min-width: 144px;
+      padding: 0.8125rem 1rem;
+    }
+    + button.btn, + a.btn {
+      margin-left: 0.5rem;
+      @include breakpoint(768px) {
+        margin-left: 1rem;
+      }
+    }
     &::before, &::after {
       @extend %before-after;
       position: absolute;
@@ -409,6 +402,16 @@
         opacity: 1;
         transform: translate(-50%, -50%) scale(0);
         transition: transform 0s;
+      }
+    }
+    &:disabled {
+      background-color: transparent;
+      cursor: initial;
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 0;
       }
     }
     &--contained {
@@ -439,10 +442,13 @@
 										</div>
 										<div class="tab__content__pane">
 											<div class="code__block--text code__block--html bg-black">
-												<pre>&lt;button class="btn btn--outlined" <span class="mis">disabled="disabled"</span>&gt;搜尋網站的內容&lt;/button&gt;</pre>
+												<pre>&lt;button class="btn btn--contained" <span class="mis">disabled="disabled"</span>&gt;
+  搜尋網站的內容
+&lt;/button&gt;</pre>
 											</div>
 											<div class="code__block--text code__block--scss bg-black">
-												<pre>button {
+												<pre>button, a {
+  background-color: transparent;
   @include border-radius(0);
   @include appearance(none);
   &:focus {
@@ -453,92 +459,33 @@
   }
   &.btn {
     position: relative;
-    display: block;
-    min-width: 144px;
-    padding: 0 1rem;
-    line-height: 2.875rem;
-    background-color: transparent;
+    display: inline-block;
+    min-width: 120px;
+    padding: 0.6875rem 1rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-align: center;
+    word-break: keep-all;
     overflow: hidden;
-    &::before, &::after {
-      @extend %before-after;
-      position: absolute;
-      @include opacity(0);
-      z-index: -1;
+    @include breakpoint(375px) {
+      min-width: 135px;
     }
-    &::before {
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      @include transition(opacity 0.2s);
+    @include breakpoint(768px) {
+      min-width: 144px;
+      padding: 0.8125rem 1rem;
     }
-    &::after {
-      left: 50%;
-      top: 50%;
-      padding: 55%;
-      width: 32px;
-      height: 32px;
-      @include border-radius(50%);
-      @include transform(translate(-50%, -50%) scale(1));
-      @include transition(opacity 2s, transform 0.5s);
-    }
-    &:hover {
-      &::before {
-        opacity: 0.04;
-      }
-      &:focus {
-        &::before {
-          opacity: 0.16;
-        }
+    + button.btn, + a.btn {
+      margin-left: 0.5rem;
+      @include breakpoint(768px) {
+        margin-left: 1rem;
       }
     }
-    &:focus {
-      &::before {
-        opacity: 0.12;
-      }
-    }
-    &:active {
-      &::after {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 0s;
-      }
-    }
-    <span class="highlight">&:disabled {
-      background-color: transparent;
-      cursor: initial;
-      &::before {
-        opacity: 0;
-      }
-      &::after {
-        opacity: 0;
-      }
-    }</span>
-    &--contained {
-      color: $white;
-      background-color: $surface;
-      border: 1px solid $surface;
-      z-index: 1;
-      &::-moz-focus-inner {
-        border: none;
-      }
-      &:hover {
-        background-color: $primary-variant;
-        border-color: $primary-variant;
-      }
-      &::before {
-        background-color: $primary;
-      }
-      &::after {
-        background-color: $primary;
-      }
-    }
-    <span class="highlight">&[disabled*='disabled'] {
+    &[disabled*='disabled'] {
       color: $white;
       background: $gray-200;
       border: 1px solid $gray-200;
       cursor: not-allowed;
-    }</span>
+    }
   }
 }</pre>
 											</div>

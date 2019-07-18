@@ -1,0 +1,267 @@
+input, select {
+	@include border-radius(0);
+	@include appearance(none);
+	&:focus {
+		outline: 0;
+	}
+}
+form {
+	&.form {
+		font-size: 0;
+	}
+	.form__group {
+		position: relative;
+		max-width: 290px;
+		> * {
+			display: block;
+		}
+		.label {
+			position: relative;
+			display: block;
+		}
+		.form__group {
+			&__placeholder {
+				position: absolute;
+				top: 1rem;
+				left: 1rem;
+				color: $secondary;
+				font-size: 14px;
+				@include transition(all 0.3s);
+			}
+			&__input {
+				min-width: 144px;
+				width: 100%;
+				color: $surface;
+				font-size: 1rem;
+				@include text-fill-color($black);
+				border-style: solid;
+				border-color: $secondary;
+				&:focus {
+					border-color: $surface;
+				}
+			}
+			&__help {
+				display: block;
+				padding-left: 1rem;
+				padding-right: 1rem;
+				margin-top: 5px;
+				color: $secondary;
+				font-size: 12px;
+				font-style: normal;
+				line-height: 1;
+				&--strong {
+					padding-left: 0;
+					padding-right: 0;
+					margin-top: 10px;
+					margin-bottom: 20px;
+					color: $secondary-variant;
+					font-size: 14px;
+				}
+			}
+		}
+		&--filled {
+			.form__group__input {
+				padding: 1.5rem 1rem 0.4rem;
+				background-color: $gray-100;
+				border-width: 0px 0px 1px;
+			}
+			&.form__group {
+				&--correct {
+					&:hover, &.hasValue {
+						.form__group__placeholder {
+							color: $surface;
+						}
+						.form__group__input {
+							border-color: $surface;
+						}
+					}
+				}
+				&--error {
+					.form__group__input {
+						color: $primary;
+					}
+					&:hover, &.hasValue {
+						.form__group__placeholder {
+							color: $primary;
+						}
+						.form__group__input {
+							border-color: $primary;
+						}
+					}
+				}
+				&--hasicon {
+					.form__group__input {
+						padding: 1.5rem 3rem 0.4rem 1rem;
+					}
+					i.icon {
+						top: 1.5rem;
+					}
+				}
+			}
+			.form__group {
+				&--defalt {
+					&:hover, &.hasValue {
+						.form__group__placeholder {
+							top: 0.2em;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+		&--outlined {
+			.form__group__input {
+				padding: 1.1rem 1rem 0.7rem;
+				background-color: transparent;
+				border-width: 1px;
+			}
+			.form__group {
+				&--defalt {
+					&:hover, &.hasValue {
+						.form__group__placeholder {
+							top: -0.8em;
+							padding: 0 2px;
+							font-size: 12px;
+							background-color: $white;
+						}
+					}
+				}
+				&--correct {
+					&:hover, &.hasValue {
+						.form__group__placeholder {
+							color: $surface;
+						}
+						.form__group__input {
+							border-color: $surface;
+						}
+					}
+				}
+				&--hasicon {
+					.form__group__input {
+						padding: 1.1rem 3rem 0.7rem 1rem;
+					}
+				}
+			}
+		}
+		&--defalt {
+			&:hover {
+				.form__group__placeholder {
+					color: $surface;
+				}
+			}
+		}
+		&--hasicon {
+			i.icon {
+				position: absolute;
+				top: 1.25rem;
+				right: 1rem;
+				font-size: 1rem;
+				@include transition(all 0.3s);
+			}
+		}
+		&--correct {
+			.form__group__placeholder, .icon {
+				color: $surface;
+			}
+			.form__group__input {
+				border-color: $surface;
+			}
+		}
+		&--error {
+			.form__group__placeholder, .icon, .form__group__help {
+				color: $primary !important;
+			}
+			.form__group__input {
+				color: $primary;
+				border-color: $primary !important;
+			}
+			.select__group::before {
+				color: $primary;
+			}
+		}
+		&--undone {
+			.form__group__placeholder {
+				color: $primary;
+			}
+			.form__group__input {
+				border-color: $primary;
+			}
+			&:hover, .hasValue {
+				.form__group__placeholder {
+					color: $surface;
+				}
+				.form__group__input {
+					border-color: $surface;
+				}
+			}
+		}
+		&--disabled {
+			> * {
+				cursor: not-allowed;
+			}
+			.form__group__placeholder {
+				color: $gray-200;
+			}
+			.form__group__input {
+				background-color: $gray-100;
+				border-color: $gray-100;
+			}
+		}
+	}
+	.select__group {
+		position: relative;
+		display: table;
+		font-size: 1rem;
+		&::before {
+			content: "\e911";
+			position: absolute;
+			display: block;
+			top: 50%;
+			right: 1rem;
+			color: $dark;
+			font-family: 'icomoon';
+			font-size: 1rem;
+			@include translateY(-50%);
+		}
+		+ .select__group {
+			margin-left: 1rem;
+		}
+		select {
+			min-width: 140px;
+			padding: 1rem;
+			line-height: 1;
+			border: 1px solid;
+			cursor: pointer;
+		}
+		&--filled {
+			select {
+				border-color: $gray-100;
+				background-color: $gray-100;
+			}
+			&:hover {
+				&::before {
+					color: $white;
+				}
+				select {
+					color: $white;
+					background-color: $surface;
+				}
+			}
+		}
+		&--outlined {
+			select {
+				border-color: $secondary;
+				background-color: $white;
+			}
+			&:hover {
+				&::before {
+					color: $surface;
+				}
+				select {
+					color: $surface;
+					border-color: $surface;
+				}
+			}
+		}
+	}
+}

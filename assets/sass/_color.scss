@@ -1,0 +1,28 @@
+@each $color, $value in $reds {
+	.bg-red-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $grays {
+	.bg-gray-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $cw-colors {
+	.bg-#{$color} {
+		color: nth($value, 2);
+		background-color: nth($value, 1);
+	}
+}
+@each $color, $value in $reds {
+	.red-#{$color} {
+		color: nth($value, 1);
+	}
+}
+@each $color, $value in $grays {
+	.gray-#{$color} {
+		color: nth($value, 1);
+	}
+}

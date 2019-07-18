@@ -93,23 +93,37 @@ body.story__page footer {
   margin-top: 0;
 }
 
+@media (max-width: 1888px) {
+  .couplet {
+    display: none;
+  }
+}
+.couplet--wide {
+  position: relative;
+  top: 0px;
+  left: 50%;
+  width: 1288px;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.couplet--left {
+  position: absolute;
+  top: -200px;
+  left: -304px;
+  width: 300px;
+}
+.couplet--right {
+  position: absolute;
+  top: -200px;
+  right: -304px;
+  width: 300px;
+}
+
 main {
   position: relative;
   justify-content: space-between;
-}
-main .couplet--wide {
-  position: relative;
-  top: -10px;
-}
-main .couplet--left {
-  position: absolute;
-  top: 0;
-  right: 100%;
-}
-main .couplet--right {
-  position: absolute;
-  top: 0;
-  left: 100%;
 }
 main p img {
   max-width: 100%;
@@ -593,10 +607,6 @@ main .article__keyword ul li a:hover {
 }
 main .tab--list .tab__nav li, main .tab--recommend .tab__nav li, main .tab--video .tab__nav li {
   width: 100%;
-  cursor: auto;
-}
-main .tab--list .tab__nav li:hover, main .tab--list .tab__nav li.active, main .tab--recommend .tab__nav li:hover, main .tab--recommend .tab__nav li.active, main .tab--video .tab__nav li:hover, main .tab--video .tab__nav li.active {
-  color: #171717;
 }
 main .tab--list.tab--one .tab__nav, main .tab--recommend.tab--one .tab__nav, main .tab--video.tab--one .tab__nav {
   position: relative;
@@ -626,6 +636,10 @@ main .tab--list.tab--one .tab__nav > ul li, main .tab--recommend.tab--one .tab__
   background-color: #D3D5D7;
   justify-content: flex-start;
   border-bottom: 0;
+  cursor: auto;
+}
+main .tab--list.tab--one .tab__nav li:hover, main .tab--list.tab--one .tab__nav li.active, main .tab--recommend.tab--one .tab__nav li:hover, main .tab--recommend.tab--one .tab__nav li.active, main .tab--video.tab--one .tab__nav li:hover, main .tab--video.tab--one .tab__nav li.active {
+  color: #171717;
 }
 main .tab--list .tab__content__pane ol, main .tab--list .tab__content__pane ul {
   margin: 0;
@@ -1122,3 +1136,5 @@ main aside > * {
 .slideshow .slider .slider__item img {
   width: 100%;
 }
+
+/*# sourceMappingURL=layout.css.map */

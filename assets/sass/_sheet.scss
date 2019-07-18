@@ -1,0 +1,70 @@
+$gray-100: #EEEEEE !default;
+$gray-200: #D3D5D7 !default;
+$gray-300: #939EA7 !default; //secondary
+$gray-400: #6B7780 !default;
+$gray-500: #48545D !default; //secondary-variant
+
+$red-100: #FEEBEC !default;
+$red-200: #EE969B !default;
+$red-300: #D60C18 !default; //primary
+$red-400: #BE0B15 !default;
+$red-500: #9D0505 !default; //primary-variant
+
+$white: #fff !default; //background
+$gray: #fafafa !default; //background
+$black: #171717 !default;
+$dark: #394148 !default;
+// $black: #252525 !default;
+
+// $surface:			#006CB0;
+// $surface:			#00519f;
+$surface:			#003a9f;
+$primary:			$red-300 !default;
+$primary-variant:	$red-500 !default;
+$secondary:			$gray-300 !default;
+$secondary-variant:	$gray-500 !default;
+$error:				$red-500 !default;
+$background:		$white !default;
+
+$text:				$black !default;
+
+$facebook:	#1877F2 !default;
+$instagram:	#7024C4 !default;
+$line:		#00C200 !default;
+$rss:		#FF5700 !default;
+$mail:		$surface !default;
+
+$grays: () !default;
+$grays: map-merge((
+	"100": ($gray-100, $dark),
+	"200": ($gray-200, $dark),
+	"300": ($gray-300, $white),
+	"400": ($gray-400, $white),
+	"500": ($gray-500, $white)
+), $grays);
+
+$reds: () !default;
+$reds: map-merge((
+	"100": ($red-100, $dark),
+	"200": ($red-200, $dark),
+	"300": ($red-300, $white),
+	"400": ($red-400, $white),
+	"500": ($red-500, $white)
+), $reds);
+
+$bks: () !default;
+$bks: map-merge((
+	"white": ($white, $dark, $gray-200),
+	"black": ($black, $white, $black)
+), $bks);
+
+$cw-colors: () !default;
+$cw-colors: map-merge((
+	"surface":				($surface, $white),
+	"primary":				($primary, $white),
+	"primary-variant":		($primary-variant, $white),
+	"secondary":			($secondary, $white),
+	"secondary-variant":	($secondary-variant, $white),
+	"error":				($error, $white),
+	"background":			($background, $white)
+), $cw-colors);

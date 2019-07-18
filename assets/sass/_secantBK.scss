@@ -1,0 +1,772 @@
+.webaccess__page {
+	position: relative;
+	min-height: 100vh;
+	@include breakpoint(768px) {
+		padding-bottom: 225px;
+	}
+	&index__page {
+		padding-bottom: 66px;
+		@include breakpoint(375px) {
+			padding-bottom: 76px;
+		}
+		@include breakpoint(768px) {
+			padding-bottom: 225px;
+		}
+	}
+	.container {
+		@include breakpoint(375px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&::before, &::after {
+			@extend %before-after;
+			display: table;
+			clear: both;
+		}
+	}
+	header {
+		border-bottom: 1px solid $gray-200;
+	}
+	main {
+		margin-top: 40px;
+		justify-content: center;
+		article {
+			width: 100%;
+			padding-left: 10px;
+			padding-right: 10px;
+			@include breakpoint(375px) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			@include breakpoint(1024px) {
+				width: 620px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			.step {
+				&__group {
+					// padding-top: 40px;
+					padding-bottom: 40px;
+				}
+				&__item {
+					position: relative;
+					padding-right: calc((100% - (65px * 3)) / 2);
+					color: $secondary;
+					&--past {
+						color: $primary;
+						font-weight: 500;
+					}
+					&--now {
+						color: $primary;
+						font-weight: 500;
+					}
+					span {
+						display: block;
+					}
+					&::before {
+						content: "\e932";
+						font-family: 'icomoon';
+						position: absolute;
+						top: 50%;
+						left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px );
+						@include translateY(-50%);
+					}
+					&:last-child {
+						padding-right: 0;
+						&::before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		form {
+			&::before, &::after {
+				@extend %before-after;
+				display: table;
+				clear: both;
+			}
+			.select__group {
+				&--col2 {
+					@include breakpoint(max-width 767px){
+						width: calc( ( 100% - 1rem) / 2 );
+						select {
+							min-width: auto;
+							width: 100%;
+						}
+					}
+				}
+			}
+			.form__group .form__group__input {
+				min-width: auto;
+				width: 100%;
+			}
+		}
+		.price {
+			&--fixed {
+				@include breakpoint(max-width 767px) {
+					hr {
+						display: none;
+					}
+					position: fixed;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					padding: 15px;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					background-color: $white;
+					border: 1px solid $gray-200;
+					z-index: 1;
+				}
+				@include breakpoint(max-width 374px) {
+					padding: 10px;
+				}
+			}
+			&--total {
+				span {
+					margin-left: 1rem;
+				}
+				@include breakpoint(max-width 767px) {
+					margin: 0;
+					font-size: 1rem;
+					font-weight: 500;
+				}
+			}
+		}
+		.plan {
+			margin-bottom: 2.5em;
+			@include breakpoint(max-width 767px) {
+				flex-direction: column;
+			}
+			.plan {
+				&__description {
+					padding-right: 30px;
+					padding-left: 30px;
+					@include breakpoint(375px) {
+						padding-right: 50px;
+						padding-left: 50px;
+					}
+					@include breakpoint(768px) {
+						padding-right: 20px;
+						padding-left: 20px;
+					}
+					@include breakpoint(930px) {
+						padding-right: 30px;
+						padding-left: 30px;
+					}
+					@include breakpoint(1280px) {
+						padding-right: 65px;
+						padding-left: 65px;
+					}
+					&--main {
+						padding-top: 25px;
+						padding-bottom: 10px;
+						border-bottom: 1px solid $gray-200;
+					}
+					&--complement {
+						padding-top: 25px;
+						padding-bottom: 25px;
+						line-height: 1.875;
+					}
+					a.link-btn {
+						font-size: 1rem;
+					}
+				}
+				&__item {
+					width: 100%;
+					border: 1px solid $gray-100;
+					background-color: $gray;
+					@include breakpoint(max-width 767px) {
+						order: 1;
+						margin-bottom: 10px;
+					}
+					@include breakpoint(768px) {
+						width: 33.3333333%;
+					}
+					&--highlight {
+						position: relative;
+						background-color: $white;
+						@include breakpoint(max-width 767px) {
+							order: 0;
+						}
+					}
+					&__spec {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 75px;
+						height: 75px;
+						span {
+							position: absolute;
+							display: block;
+							top: 50%;
+							left: 50%;
+							width: 100%;
+							color: $white;
+							font-size: 0.875em;
+							text-align: center;
+							@include transform(rotate(-45deg) translate(-25%, -255%));
+						}
+						&::before {
+							@extend %before-after;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 75px 75px 0 0;
+							border-color: $surface transparent transparent transparent;
+						}
+					}
+					&__title {
+						font-weight: 500;
+						&.h1 {
+							margin-top: 1rem;
+							@media screen and (min-width: 768px) and (max-width: 929px) {
+								height: 2.3em;
+							}
+							@include breakpoint(max-width 767px) {
+								margin-bottom: 1rem;
+							}
+						}
+						&.h3 {
+							margin-top: 0;
+							margin-bottom: 0;
+						}
+						@media screen and (min-width: 768px) and (max-width: 929px) {
+							span {
+								display: block;
+							}
+						}
+					}
+					&__group {
+						+ .plan__item__group {
+							&::before {
+								content: '＋';
+								display: block;
+								font-size: 1rem;
+								font-weight: 600;
+								text-align: center;
+							}
+						}
+					}
+					&__img {
+						height: 125px;
+						margin-top: 15px;
+						margin-left: auto;
+						margin-right: auto;
+						@media screen and (min-width: 768px) and (max-width: 929px) {
+							height: 100px;
+							margin-top: 30px;
+						}
+					}
+					&__option {
+						@extend %list-reset;
+						@include breakpoint(max-width 1279px) {
+							width: 205px;
+							margin-left: auto;
+							margin-right: auto;
+						}
+						li {
+							margin-bottom: 1rem;
+							margin-top: 1rem;
+						}
+						label {
+							.label__radio__txt {
+								font-size: 22px;
+								font-weight: 500;
+								strong {
+									font-size: 32px;
+									font-weight: 500;
+								}
+								&--complement {
+									display: block;
+									padding-left: calc(20px + 1rem);
+									color: $secondary;
+									font-size: 14px;
+								}
+							}
+						}
+					}
+					&__right {
+						margin-top: 0;
+						margin-bottom: 0;
+						font-size: 1rem;
+					}
+				}
+				&__gift {
+					width: 100%;
+					@include breakpoint(768px) {
+						width: calc( (100% - 40px) / 3 );
+						margin-left: 20px;
+						&:nth-child(3n+1) {
+							margin-left: 0;
+						}
+					}
+					@include breakpoint(930px) {
+						width: calc( (100% - 60px) / 4 );
+						&:nth-child(4n+1) {
+							margin-left: 0;
+						}
+					}
+					@include breakpoint(max-width 767px) {
+						+ .plan__gift {
+							margin-top: 1em;
+						}
+					}
+					.gift {
+						&__item {
+							margin-top: 0.5em;
+							font-size: 1rem;
+							border: 1px solid $gray-100;
+							@include breakpoint(max-width 767px) {
+								display: flex;
+								align-items: center;
+							}
+							@include breakpoint(768px) {
+								margin-top: 1em;
+							}
+							&__img {
+								overflow: hidden;
+								@include breakpoint(max-width 767px) {
+									width: 135px;
+									height: 100px;
+								}
+								img {
+									display: block;
+									margin-left: auto;
+									margin-right: auto;
+									width: auto;
+									height: 100px;
+									@include breakpoint(768px) {
+										height: 200px;
+									}
+								}
+							}
+							&__text {
+								padding-left: 15px;
+								padding-right: 15px;
+								@include breakpoint(768px) {
+									padding-left: 20px;
+									padding-right: 20px;
+									padding-bottom: 20px;
+								}
+								@include breakpoint(max-width 767px) {
+									width: calc(100% - 135px);
+									p {
+										margin-top: 0;
+										margin-bottom: 0.5em;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.app {
+			&__group {
+				justify-content: center;
+				align-items: center;
+				@include breakpoint(768px) {
+					padding: 1.25em;
+				}
+				&--left {
+					margin-right: 2.5em;
+					@include breakpoint(max-width 767px) {
+						display: none;
+					}
+				}
+			}
+			&__title {
+				align-items: center;
+				&--icon {
+					height: 53px;
+					@include breakpoint(768px) {
+						height: 48px;
+					}
+				}
+				&--text {
+					margin-left: 0.5em;
+					@include breakpoint(768px) {
+						margin-left: 1em;
+					}
+					@include breakpoint(max-width 767px) {
+						width: calc(100% - 0.5em - 53px);
+					}
+					h3 {
+						margin-top: 0;
+						margin-bottom: 0.25em;
+						line-height: 1;
+					}
+				}
+			}
+			&__img {
+				margin-top: 1.25em;
+				li + li {
+					margin-left: 1em;
+				}
+				img {
+					height: 35px;
+					@include breakpoint(768px) {
+						height: 44px;
+					}
+				}
+			}
+		}
+	}
+	section {
+		&.group {
+			margin-bottom: 40px;
+			.flex-container, .tab__content, .content__group {
+				.label + .label {
+					margin-top: 1.25rem;
+				}
+				.form__group {
+					max-width: none;
+					> a {
+						margin-top: 10px;
+						margin-bottom: 20px;
+					}
+					&--inline {
+						width: 100%;
+						label {
+							@include breakpoint(768px) {
+								margin-left: 1rem;
+								width: calc(100% - 280px - 2rem);
+							}
+							@include breakpoint(max-width 767px) {
+								width: 100%;
+								margin-top: 1rem;
+							}
+						}
+					}
+					&.form__group--selection {
+						> .label {
+							display: none;
+							margin-top: 10px;
+							margin-left: calc(20px + 0.575rem);
+							&--set {
+								display: flex;
+								@include breakpoint(max-width 767px) {
+									display: block;
+								}
+								label {
+									width: 100%;
+									@include breakpoint(max-width 767px) {
+										margin-bottom: 10px;
+									}
+									@include breakpoint(768px) {
+										margin-right: 20px;
+										width: calc(100% - 167px);
+									}
+								}
+							}
+						}
+					}
+					&.form__group--divide {
+						> .label {
+							width: 100%;
+							@include breakpoint(768px) {
+								margin-left: 1rem;
+								width: calc( (100% - 140px - 2rem) / 2);
+							}
+							@include breakpoint(max-width 767px) {
+								margin-top: 1rem;
+							}
+							+ .label {
+								@include breakpoint(768px) {
+									margin-top: 0;
+								}
+							}
+							.form__group__input {
+								min-width: auto;
+							}
+						}
+					}
+				}
+				.col--left {
+					@include breakpoint(max-width 767px) {
+						p {
+							margin-bottom: 1em;
+						}
+					}
+					@include breakpoint(768px) {
+						width: calc(100% - 200px);
+					}
+				}
+			}
+			.flex-container {
+				padding: 20px;
+				border: 1px solid $gray-200;
+				p {
+					span.h5 {
+						display: block;
+						margin-top: 0.5em;
+						margin-bottom: 0;
+					}
+				}
+				.label--radio {
+					display: inline-block;
+					+ .label--radio {
+						margin-left: 2.5rem;
+					}
+				}
+			}
+			.content__group {
+				font-size: 1rem;
+				border: 1px solid $gray-200;
+				.content {
+					&__list {
+						@extend %list-reset;
+						padding: 15px 20px;
+						+ .content__list {
+							border-top: 1px solid $gray-200;
+						}
+					}
+					&__item {
+						padding-top: 5px;
+						padding-bottom: 5px;
+						justify-content: space-between;
+						@include transition(background-color, 0.3s);
+						@include breakpoint(375px) {
+							display: flex;
+						}
+						&:hover {
+							background-color: $gray;
+						}
+						&--title {
+							margin-bottom: 1rem;
+						}
+						&__amount {
+							word-break: break-all;
+							@include breakpoint(375px) {
+								width: calc(100% - 150px);
+								text-align: right;
+							}
+						}
+					}
+					&__total {
+						display: flex;
+						padding: 20px;
+						border-top: 1px solid $gray-200;
+						justify-content: space-between;
+						&__amount {
+							font-size: 1.125em;
+							font-weight: 500;
+							span {
+								padding-left: 1em;
+							}
+						}
+					}
+				}
+			}
+			> h3, > .h3 {
+				margin-bottom: 5px;
+			}
+			.mb-20 {
+				margin-bottom: 1rem;
+			}
+		}
+		.credit {
+			.input__group {
+				margin-top: 20px;
+				width: 100%;
+				&:first-child {
+					margin-top: 0;
+					@include breakpoint(max-width 767px){
+						order: 2;
+					}
+					@include breakpoint(768px){
+						width: calc(100% - 281px);
+					}
+				}
+				&__title {
+					margin-bottom: 5px;
+					font-size: 1rem;
+				}
+				input {
+					min-width: auto;
+					width: 100%;
+				}
+				.select__group-col2 {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					.select__group {
+						display: block;
+						width: calc( (100% - 1rem) / 2 );
+						select {
+							min-width: auto;
+							width: 100%;
+						}
+					}
+				}
+			}
+			.card__group {
+				width: 100%;
+				@include breakpoint(768px){
+					width: 231px;
+				}
+				.card {
+					position: relative;
+					width: 231px;
+					height: 146px;
+					background-image: url("../img/credit@3x.png");
+					background-repeat: no-repeat;
+					background-position: center;
+					@include background-size(cover);
+					&__use {
+						margin-bottom: 20px;
+						display: flex;
+						flex-direction: row;
+						li {
+							img {
+								height: 20px;
+							}
+							+ li {
+								margin-left: 0.5em;
+							}
+						}
+					}
+					&__type {
+						position: absolute;
+						right: 15px;
+						top: 15px;
+						width: 55px;
+						height: 30px;
+						background-repeat: no-repeat;
+						background-position: center right;
+						@include background-size(contain);
+						&--visa {
+							background-image: url("../img/icon-visa@3x.png");
+						}
+						&--mastercard {
+							background-image: url("../img/icon-master@3x.png");
+						}
+						&--jcb {
+							background-image: url("../img/icon-jcb@3x.png");
+						}
+					}
+					&__input {
+						position: relative;
+						width: 100%;
+						height: 100%;
+						input {
+							position: absolute;
+							color: $secondary-variant;
+							font-size: 1rem;
+							font-weight: 500;
+							border: 0;
+							background-color: transparent;
+							&.card__input {
+								&--number {
+									top: 85px;
+									left: 15px;
+									width: 201px;
+									font-size: 1.125em;
+									text-align: center;
+									letter-spacing: 0.025em;
+								}
+								&--month {
+									top: 110px;
+									left: 60px;
+									width: 30px;
+								}
+								&--year {
+									top: 110px;
+									left: 88px;
+									width: 20px;
+								}
+								&--code {
+									top: 110px;
+									left: 187px;
+									width: 35px;
+								}
+							}
+						}
+					}
+					&__note {
+						display: none;
+						color: $primary;
+						font-size: 0.75em;
+					}
+					@include breakpoint(max-width 767px){
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	footer {
+		@include breakpoint(768px) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+}
+.loader {
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	&::before {
+		@extend %before-after;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($black, 0.5);
+	}
+	&__text {
+		color: $white;
+		font-size: 0.75em;
+		font-weight: 500;
+	}
+	&__animate {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include translate(-50%, -50%);
+	}
+	&__icon {
+		position: relative;
+		width: 50px;
+		height: 50px;
+		margin: auto;
+		&::before, &::after {
+			@extend %before-after;
+			position: absolute;
+			top: 15px;
+			width: 20px;
+			height: 20px;
+			@include border-radius(50%);
+		}
+		&::before {
+			background: linear-gradient(90deg, $surface, darken($surface, 5%));
+			animation: rotation1 1s linear infinite
+		}
+		&::after {
+			background: linear-gradient(90deg, $primary, $primary-variant);
+			animation: rotation2 1s linear infinite
+		}
+	}
+}
+@keyframes rotation1 {
+	from {left: 5px; z-index: 1;}
+	to {left: 25px;}
+}
+@keyframes rotation2 {
+	from {right: 5px;}
+	to {right: 25px;}
+}

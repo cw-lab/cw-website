@@ -14,19 +14,17 @@ $(function(){
 		effect : "fadeIn"
 	});
 	// 判斷有沒有值
-	$("input").on('change keyup copy paste cut', function(){
-		if(!this.value) {
-			$(this).parent().removeClass('hasValue');
-		} else {
-			$(this).parent().addClass('hasValue');
-		}
-	})
 	$("input").each(function(){
-		if(!this.value) {
-			$(this).parent().removeClass('hasValue');
-		} else {
+		if(this.value) {
 			$(this).parent().addClass('hasValue');
 		}
+		$(this).on('change keyup copy paste cut', function(){
+			if(!this.value) {
+				$(this).parent().removeClass('hasValue');
+			} else {
+				$(this).parent().addClass('hasValue');
+			}
+		})
 	})
 	// 統計字數
 	$('.form__group--countletter input').keyup(function() {

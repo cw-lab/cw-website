@@ -56,10 +56,12 @@ $(function(){
 	// tabs
 	$(".tab__nav > ul li").click(function () {
 		var tabsIndex = $(this).index();
-		$(this).addClass('active').siblings('.active').removeClass('active');
-		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
-		$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
-	})
+		if ( !$(this).parent().parent().parent().parent(".group").hasClass("group--disabled") ) {
+			$(this).addClass('active').siblings('.active').removeClass('active');
+			$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
+			$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
+		}
+	});
 	// slideshow
 	$(".slideshow").each(function () {
 		var $slider = $(this).children(".slider"),
@@ -374,12 +376,14 @@ $(function(){
 		$(this).parent().parent().parent().siblings(".select-invoicing").slideDown();
 	})
 	$(".tab__content__pane.active > .label").on("click", function(){
-		$(this).siblings().children(".form__group--input").css({
-			"display" : "none"
-		});
-		$(this).children(".form__group--input").css({
-			"display" : "block"
-		});
+		if ( !$(this).parent().parent().parent().parent(".group").hasClass("group--disabled") ) {
+			$(this).siblings().children(".form__group--input").css({
+				"display" : "none"
+			});
+			$(this).children(".form__group--input").css({
+				"display" : "block"
+			});
+		}
 	})
 	$(window).scroll(function(){
 		// message: 定位在目前畫面之中

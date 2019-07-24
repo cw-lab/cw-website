@@ -683,6 +683,9 @@
 .webaccess__page section.group .mb-20 {
   margin-bottom: 1rem;
 }
+.webaccess__page section.group[class*='--disabled'] h3, .webaccess__page section.group[class*='--disabled'] .h3, .webaccess__page section.group[class*='--disabled'] p, .webaccess__page section.group[class*='--disabled'] span, .webaccess__page section.group[class*='--disabled'] a, .webaccess__page section.group[class*='--disabled'] i {
+  color: #D3D5D7 !important;
+}
 .webaccess__page section .credit .input__group {
   margin-top: 20px;
   width: 100%;

@@ -1889,9 +1889,6 @@ button, a {
 button:focus, a:focus {
   outline: 0;
 }
-button[disabled*='disabled'], a[disabled*='disabled'] {
-  cursor: not-allowed;
-}
 button.btn, a.btn {
   position: relative;
   display: inline-block;
@@ -1970,16 +1967,6 @@ button.btn:active::after, a.btn:active::after {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0s;
 }
-button.btn:disabled, a.btn:disabled {
-  background-color: transparent;
-  cursor: initial;
-}
-button.btn:disabled::before, a.btn:disabled::before {
-  opacity: 0;
-}
-button.btn:disabled::after, a.btn:disabled::after {
-  opacity: 0;
-}
 button.btn--outlined, a.btn--outlined {
   color: #003a9f;
   background-color: #fff;
@@ -2018,11 +2005,22 @@ button.btn--contained::before, a.btn--contained::before {
 button.btn--contained::after, a.btn--contained::after {
   background-color: #D60C18;
 }
-button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
-  color: #fff;
-  background: #D3D5D7;
-  border: 1px solid #D3D5D7;
+button.btn[disabled], a.btn[disabled] {
+  color: #D3D5D7;
+  background: #EEEEEE;
+  border: 1px solid #EEEEEE;
   cursor: not-allowed;
+}
+button.btn[disabled]::before, a.btn[disabled]::before {
+  opacity: 0;
+}
+button.btn[disabled]::after, a.btn[disabled]::after {
+  opacity: 0;
+}
+button.btn[disabled]:hover, a.btn[disabled]:hover {
+  color: #D3D5D7;
+  background: #EEEEEE;
+  border: 1px solid #EEEEEE;
 }
 
 .tooltips {
@@ -2172,6 +2170,17 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 }
 .tab .tab__content__pane.active {
   display: block;
+}
+
+[class*='--disabled'] .tab .tab__nav > ul li:hover {
+  color: #D3D5D7;
+}
+[class*='--disabled'] .tab .tab__nav > ul li:active {
+  color: #D3D5D7;
+}
+[class*='--disabled'] .tab .tab__nav > ul li.active {
+  color: #D3D5D7;
+  border-color: #D3D5D7;
 }
 
 @media (min-width: 768px) {
@@ -2593,6 +2602,47 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
 
 .align-label-text {
   padding-left: calc(20px + 0.5em);
+}
+
+[class*='--disabled'] .label--radio span.label__radio__helper {
+  color: #D3D5D7;
+}
+[class*='--disabled'] .label--radio span.label__radio__mark {
+  border: 2px solid #D3D5D7;
+}
+[class*='--disabled'] .label--radio span.label__radio__mark::before {
+  background: #fff;
+}
+[class*='--disabled'] .label--radio span.label__radio__mark::after {
+  background: #D3D5D7;
+}
+[class*='--disabled'] .label--radio input {
+  cursor: pointer;
+}
+[class*='--disabled'] .label--radio input:checked ~ span.label__radio__mark {
+  border-color: #D3D5D7;
+}
+[class*='--disabled'] .label--radio:hover input ~ span.label__radio__mark, [class*='--disabled'] .label--radio.active input ~ span.label__radio__mark {
+  border-color: #D3D5D7;
+}
+[class*='--disabled'] .label--check span.label__radio__helper {
+  color: #D3D5D7;
+}
+[class*='--disabled'] .label--check span.label__radio__mark {
+  border: 2px solid #D3D5D7;
+}
+[class*='--disabled'] .label--check span.label__radio__mark::before {
+  background: #fff;
+}
+[class*='--disabled'] .label--check span.label__radio__mark::after {
+  color: #fff;
+}
+[class*='--disabled'] .label--check input:checked ~ span.label__radio__mark {
+  border-color: #D3D5D7;
+  background-color: #D3D5D7;
+}
+[class*='--disabled'] .label--check:hover input ~ span.label__radio__mark, [class*='--disabled'] .label--check.active input ~ span.label__radio__mark {
+  border-color: #D3D5D7;
 }
 
 .message p {

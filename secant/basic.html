@@ -88,7 +88,7 @@
 						</div>
 					</section>
 					<section class="group">
-						<h3>聯絡E-mail</h3>
+						<h3>登入帳號</h3>
 						<div class="flex-container">
 							<div class="social_login social_login--facebook">
 								<i class="icon icon-facebook"></i>以 Facebook 帳號繼續
@@ -130,22 +130,22 @@
 							</div>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<h3>聯絡資料</h3>
 						<div class="flex-container">
 							<div class="form__group form__group--filled">
 								<label class="label">
 									<div class="form__group__placeholder">請輸入姓名</div>
-									<input type="text" class="form__group__input">
+									<input type="text" class="form__group__input" disabled>
 								</label>
 								<label class="label">
 									<div class="form__group__placeholder">請輸入手機號碼</div>
-									<input type="text" name="telphone" class="form__group__input">
+									<input type="text" name="telphone" class="form__group__input" disabled>
 								</label>
 							</div>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<h3>郵寄地址</h3>
 						<div class="tab">
 							<div class="tab__nav">
@@ -158,7 +158,7 @@
 								<div class="tab__content__pane tab__content__pane--p20 active">
 									<div class="flex mb-20">
 										<div class="select__group select__group--col2 select__group--filled">
-											<select name="country">
+											<select name="country" disabled>
 												<option selected="">請選擇縣市</option>
 												<option value="基隆市">基隆市</option>
 												<option value="臺北市">臺北市</option>
@@ -209,7 +209,7 @@
 								<div class="tab__content__pane tab__content__pane--p20">
 									<div class="flex mb-20 form__group form__group--divide form__group--filled">
 										<div class="select__group select__group--filled">
-											<select name="nation">
+											<select name="nation" disabled>
 												<option selected="">請選擇國家</option>
 												<option value="基隆市">基隆市</option>
 												<option value="臺北市">臺北市</option>
@@ -237,17 +237,17 @@
 										</div>
 										<label class="label">
 											<div class="form__group__placeholder">請輸入城市</div>
-											<input type="text" name="city" class="form__group__input">
+											<input type="text" name="city" class="form__group__input" disabled>
 										</label>
 										<label class="label">
 											<div class="form__group__placeholder">請輸入郵遞區號</div>
-											<input type="text" name="zip" class="form__group__input">
+											<input type="text" name="zip" class="form__group__input" disabled>
 										</label>
 									</div>
 									<div class="form__group form__group--filled">
 										<label class="label">
 											<div class="form__group__placeholder">請輸入詳細地址</div>
-											<input type="text" name="address" class="form__group__input">
+											<input type="text" name="address" class="form__group__input" disabled>
 											<i class="form__group__help form__group__help--strong">請正確填寫您的海外地址，我們將為您計算運費，運費另計</i>
 										</label>
 										<label class="label label--check">
@@ -260,7 +260,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<h3>發票資料</h3>
 						<div class="tab select-invoicing">
 							<div class="tab__nav">
@@ -289,7 +289,7 @@
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入手機條碼</div>
-											<input type="text" name="barcode" class="form__group__input">
+											<input type="text" name="barcode" class="form__group__input" disabled>
 										</label>
 									</div>
 									<div class="label form__group form__group--selection form__group--filled">
@@ -301,7 +301,7 @@
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入自然人憑證條碼</div>
-											<input type="text" name="cdc" class="form__group__input">
+											<input type="text" name="cdc" class="form__group__input" disabled>
 										</label>
 									</div>
 									<label class="label label--radio">
@@ -316,14 +316,14 @@
 										<p class="mt0-mb05">統一號碼</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入統一編號，限數字</div>
-											<input type="text" name="vat" class="form__group__input">
+											<input type="text" name="vat" class="form__group__input" disabled>
 										</label>
 									</div>
 									<div class="label form__group form__group--filled">
 										<p class="mt0-mb05">發票抬頭</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入發票抬頭，限22個全形文字</div>
-											<input type="text" name="company" class="form__group__input">
+											<input type="text" name="company" class="form__group__input" disabled>
 										</label>
 									</div>
 								</div>
@@ -352,21 +352,21 @@
 										<div class="label label--set">
 											<label class="label">
 												<div class="form__group__placeholder">請輸入愛心碼，限數字</div>
-												<input type="text" name="donate" class="form__group__input">
+												<input type="text" name="donate" class="form__group__input" disabled>
 											</label>
-											<a href="#!" class="btn btn--outlined">前往財政部查詢</a>
+											<a href="#!" class="btn btn--outlined" disabled>前往財政部查詢</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</section>
-					<section class="group address">
+					<section class="group group--disabled">
 						<h3>發票寄送地址</h3>
 						<div class="flex-container">
 							<div class="flex label form__group form__group--filled form__group--inline">
 								<div class="select__group select__group--filled">
-									<select name="country">
+									<select name="country" disabled>
 										<option selected="">請選擇縣市</option>
 										<option value="基隆市">基隆市</option>
 										<option value="臺北市">臺北市</option>
@@ -408,7 +408,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<h3>自動續訂</h3>
 						<div class="flex-container">
 							<label class="label--check">
@@ -423,7 +423,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<h3>退貨說明</h3>
 						<div class="flex-container">
 							<label class="label--check">
@@ -433,7 +433,7 @@
 							</label>
 						</div>
 					</section>
-					<section class="group">
+					<section class="group group--disabled">
 						<div class="message message--remark">
 							<div class="message__container">
 								<div class="message__txt">
@@ -445,7 +445,7 @@
 						</div>
 					</section>
 					<div class="text-right">
-						<button class="btn btn--contained">下一步</button>
+						<button class="btn btn--contained" disabled>下一步</button>
 					</div>
 				</form>
 			</article>

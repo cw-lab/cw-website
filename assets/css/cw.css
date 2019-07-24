@@ -700,6 +700,11 @@ i.icon {
   font-smoothing: antialiased;
 }
 
+body.chrome i.icon:before {
+  display: inline-block;
+  vertical-align: sub;
+}
+
 .icon-minus:before {
   content: "\e936";
 }

@@ -37,8 +37,22 @@ $(function(){
 		);
 		$(this).toggleClass('icon-eyeoff icon-eyeon');
 	})
-	$("input").parent().addClass('form__group--defalt');
-	$("input[disabled*='disabled']").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+	function input() {
+		$("input").parent().addClass('form__group--defalt');
+		$("input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+	}
+	function select() {
+		$("select").parent().addClass('select__group--defalt');
+		$("select[disabled]").parent().removeClass('select__group--defalt').addClass('select__group--disabled');
+	}
+	input();
+	select();
+	$("input").change(function() {
+		input();
+	})
+	$("select").change(function() {
+		select();
+	})
 	// tabs
 	$(".tab__nav > ul li").click(function () {
 		var tabsIndex = $(this).index();

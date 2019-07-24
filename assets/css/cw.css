@@ -315,57 +315,6 @@ img {
   flex-wrap: wrap;
 }
 
-ul, ol {
-  padding-left: 1.15em;
-}
-
-.mtb0 {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-.mt0-mb1 {
-  margin-top: 0 !important;
-  margin-bottom: 1em !important;
-}
-
-.mt0-mb05 {
-  margin-top: 0 !important;
-  margin-bottom: 0.5em !important;
-}
-
-.mb0 {
-  margin-bottom: 0 !important;
-}
-
-.mt0 {
-  margin-top: 0 !important;
-}
-
-.mt40 {
-  margin-top: 40px !important;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .flex-md {
-    display: flex;
-  }
-}
-@media (min-width: 1024px) {
-  .flex-lg {
-    display: flex;
-  }
-}
-@media (min-width: 1280px) {
-  .flex-xl {
-    display: flex;
-  }
-}
-
 .margin-0 {
   margin: 0;
 }
@@ -715,7 +664,7 @@ body:not(.article__page) h1, body:not(.article__page) .h1 {
   font-size: 28px;
   line-height: 1.5;
 }
-body:not(.article__page) p {
+body:not(.article__page) main p {
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -724,7 +673,7 @@ body.article__page h1, body.article__page .h1 {
   font-size: 32px;
   line-height: 1.5;
 }
-body.article__page p {
+body.article__page main p {
   font-size: 1.125rem;
   line-height: 1.8;
 }
@@ -1859,27 +1808,39 @@ form .select__group select {
   border: 1px solid;
   cursor: pointer;
 }
-form .select__group--filled select {
+form .select__group--defalt.select__group--filled select {
   border-color: #EEEEEE;
   background-color: #EEEEEE;
 }
-form .select__group--filled:hover::before {
+form .select__group--defalt.select__group--filled:hover::before {
   color: #fff;
 }
-form .select__group--filled:hover select {
+form .select__group--defalt.select__group--filled:hover select {
   color: #fff;
   background-color: #003a9f;
 }
-form .select__group--outlined select {
-  border-color: #939EA7;
-  background-color: #fff;
+form .select__group--defalt.select__group--filled select {
+  border-color: #EEEEEE;
+  background-color: #EEEEEE;
 }
-form .select__group--outlined:hover::before {
-  color: #003a9f;
+form .select__group--defalt.select__group--filled:hover::before {
+  color: #fff;
 }
-form .select__group--outlined:hover select {
-  color: #003a9f;
-  border-color: #003a9f;
+form .select__group--defalt.select__group--filled:hover select {
+  color: #fff;
+  background-color: #003a9f;
+}
+form .select__group--disabled {
+  cursor: not-allowed;
+}
+form .select__group--disabled::before {
+  color: #D3D5D7;
+}
+form .select__group--disabled select {
+  color: #D3D5D7;
+  background-color: #EEEEEE;
+  border-color: #EEEEEE;
+  cursor: not-allowed;
 }
 
 button, a {
@@ -2227,7 +2188,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
   opacity: 0;
   z-index: 1;
 }
-.article__group__item__img > a:hover::before {
+.article__group__item__img:hover > a::before {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
@@ -2325,7 +2286,7 @@ button.btn[disabled*='disabled'], a.btn[disabled*='disabled'] {
     font-size: 5rem;
   }
 }
-.article__group__item--main .article__group__item__img a:hover::after {
+.article__group__item--main .article__group__item__img:hover a::after {
   bottom: 80px;
 }
 .article__group__item--main .article__group__item__text {
@@ -2947,7 +2908,7 @@ footer .imglink__app__img li + li {
 }
 @media (min-width: 1024px) {
   .container {
-    width: 960px;
+    width: 950px;
   }
 }
 

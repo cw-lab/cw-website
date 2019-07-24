@@ -204,6 +204,18 @@
 													</select>
 												</div>
 											</form>
+											<h3>Disabled</h3>
+											<form action="#!" class="form">
+												<div class="select__group select__group--filled">
+													<select disabled>
+														<option class="select__group__item" selected>請選擇</option>
+														<option class="select__group__item" value="1">假字假字</option>
+														<option class="select__group__item" value="2">假字假</option>
+														<option class="select__group__item" value="3">假字</option>
+														<option class="select__group__item" value="4">假字假</option>
+													</select>
+												</div>
+											</form>
 										</div>
 									</div>
 									<hr>
@@ -871,6 +883,16 @@ form {
       &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
+  <span class="comment">// disabled </span>
+  &lt;div class="select__group select__group--filled"&gt;
+    &lt;select disabled&gt;
+      &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
+      &lt;option class="select__group__item" value="1"&gt;假字假字&lt;/option&gt;
+      &lt;option class="select__group__item" value="2"&gt;假字假&lt;/option&gt;
+      &lt;option class="select__group__item" value="3"&gt;假字&lt;/option&gt;
+      &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
 &lt;/form&gt;</pre>
 														</div>
 														<div class="code__block--text code__block--scss bg-black">
@@ -910,18 +932,49 @@ form {
       border: 1px solid;
       cursor: pointer;
     }
-    &--filled {
-      select {
-        border-color: $gray-100;
-        background-color: $gray-100;
+    &--disabled {
+      cursor: not-allowed;
+      &::before {
+        color: $gray-200;
       }
-      &:hover {
-        &::before {
-          color: $white;
+      select {
+        color: $gray-200;
+        background-color: $gray-100;
+        border-color: $gray-100;
+        cursor: not-allowed;
+      }
+    }
+    &--defalt {
+      &.select__group {
+        &--filled {
+          select {
+            border-color: $gray-100;
+            background-color: $gray-100;
+          }
+          &:hover {
+            &::before {
+              color: $white;
+            }
+            select {
+              color: $white;
+              background-color: $surface;
+            }
+          }
         }
-        select {
-          color: $white;
-          background-color: $surface;
+        &--filled {
+          select {
+            border-color: $gray-100;
+            background-color: $gray-100;
+          }
+          &:hover {
+            &::before {
+              color: $white;
+            }
+            select {
+              color: $white;
+              background-color: $surface;
+            }
+          }
         }
       }
     }
@@ -1037,6 +1090,18 @@ form {
 											<form action="#!" class="form">
 												<div class="select__group select__group--outlined">
 													<select>
+														<option class="select__group__item" selected>請選擇</option>
+														<option class="select__group__item" value="1">假字假字</option>
+														<option class="select__group__item" value="2">假字假</option>
+														<option class="select__group__item" value="3">假字</option>
+														<option class="select__group__item" value="4">假字假</option>
+													</select>
+												</div>
+											</form>
+											<h3>Disabled</h3>
+											<form action="#!" class="form">
+												<div class="select__group select__group--outlined">
+													<select disabled>
 														<option class="select__group__item" selected>請選擇</option>
 														<option class="select__group__item" value="1">假字假字</option>
 														<option class="select__group__item" value="2">假字假</option>
@@ -1688,7 +1753,18 @@ form {
       &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
     &lt;/select&gt;
   &lt;/div&gt;
-&lt;/form&gt;</pre>
+  <span class="comment">// disabled </span>
+  &lt;div class="select__group select__group--outlined"&gt;
+    &lt;select disabled&gt;
+      &lt;option class="select__group__item" selected&gt;請選擇&lt;/option&gt;
+      &lt;option class="select__group__item" value="1"&gt;假字假字&lt;/option&gt;
+      &lt;option class="select__group__item" value="2"&gt;假字假&lt;/option&gt;
+      &lt;option class="select__group__item" value="3"&gt;假字&lt;/option&gt;
+      &lt;option class="select__group__item" value="4"&gt;假字假&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
 														</div>
 														<div class="code__block--text code__block--scss bg-black">
 															<pre>select {
@@ -1727,18 +1803,49 @@ form {
       border: 1px solid;
       cursor: pointer;
     }
-    &--outlined {
-      select {
-        border-color: $secondary;
-        background-color: $white;
+    &--disabled {
+      cursor: not-allowed;
+      &::before {
+        color: $gray-200;
       }
-      &:hover {
-        &::before {
-          color: $surface;
+      select {
+        color: $gray-200;
+        background-color: $gray-100;
+        border-color: $gray-100;
+        cursor: not-allowed;
+      }
+    }
+    &--defalt {
+      &.select__group {
+        &--filled {
+          select {
+            border-color: $gray-100;
+            background-color: $gray-100;
+          }
+          &:hover {
+            &::before {
+              color: $white;
+            }
+            select {
+              color: $white;
+              background-color: $surface;
+            }
+          }
         }
-        select {
-          color: $surface;
-          border-color: $surface;
+        &--filled {
+          select {
+            border-color: $gray-100;
+            background-color: $gray-100;
+          }
+          &:hover {
+            &::before {
+              color: $white;
+            }
+            select {
+              color: $white;
+              background-color: $surface;
+            }
+          }
         }
       }
     }

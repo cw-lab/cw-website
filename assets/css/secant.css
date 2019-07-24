@@ -66,7 +66,7 @@
   }
 }
 .webaccess__page main article .step__group {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 .webaccess__page main article .step__item {
   position: relative;
@@ -85,7 +85,7 @@
   display: block;
 }
 .webaccess__page main article .step__item::before {
-  content: "\e91f";
+  content: "\e933";
   font-family: 'icomoon';
   position: absolute;
   top: 50%;

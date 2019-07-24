@@ -655,11 +655,6 @@
 .webaccess__page section.group .content__group .content__item--title {
   margin-bottom: 1rem;
 }
-@media (min-width: 375px) {
-  .webaccess__page section.group .content__group .content__item--title {
-    width: 50%;
-  }
-}
 .webaccess__page section.group .content__group .content__item__amount {
   word-break: break-all;
 }

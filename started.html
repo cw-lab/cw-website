@@ -45,24 +45,40 @@
 								</div>
 								<div class="col-md-10">
 									<h3>命名</h3>
-									<p>
-										<span style="width: 100px;display: inline-block;">使用原則</span><a href="http://getbem.com/faq/" target="_blank">BEM (Block Element Modify)</a><br>
-										<span style="width: 100px;display: inline-block;">Block</span>區塊<br>
-										<span style="width: 100px;display: inline-block;">Element</span>元素<br>
-										<span style="width: 100px;display: inline-block;">Modify</span>修飾符<br>
-										<span style="width: 100px;display: inline-block;">優勢</span>透過 class 名稱就可以告訴開發者它們之間的依賴關係，讓維護上更加方便；透過觀察 class 就能夠了解架構。											
-									</p>
+									<ul class="list-reset pt10 pb10">
+										<li>
+											<span style="width: 100px;display: inline-block;">使用原則</span><span style="width: calc(100% - 100px);display: inline-block;"><a href="http://getbem.com/faq/" target="_blank">BEM (Block Element Modify)</a></span>
+										</li>
+										<li>
+											<span style="width: 100px;display: inline-block;">Block</span><span style="width: calc(100% - 100px);display: inline-block;">區塊</span>
+										</li>
+										<li>
+											<span style="width: 100px;display: inline-block;">Element</span><span style="width: calc(100% - 100px);display: inline-block;">元素</span>
+										</li>
+										<li>
+											<span style="width: 100px;display: inline-block;">Modify</span><span style="width: calc(100% - 100px);display: inline-block;">修飾符</span>
+										</li>
+										<li class="mt0-mb1">
+											<span style="width: 100px;display: inline-block; vertical-align: top;">優勢</span><span style="width: calc(100% - 100px);display: inline-block;">透過 class 名稱就可以告訴開發者它們之間的依賴關係，讓維護上更加方便；透過觀察 class 就能夠了解架構。</span>
+										</li>
+									</ul>
 									<div class="code__block--text bg-black">
 										<pre style="height: auto;"><span class="tag">&lt;</span><span class="tag">nav</span> <span class="attribute">class</span>=<span class="string">"nav"</span><span class="tag">&gt;</span></span>
 &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag">ul</span> <span class="attribute">class</span>=<span class="string">"nav__menu nav__menu--member"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/</span><span class="tag">ul</span><span class="tag">&gt;</span></span>
 &nbsp;&nbsp;<span class="tag">&lt;</span><span class="tag">div</span> <span class="attribute">class</span>=<span class="string">"nav__member nav__menu--common"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/</span><span class="tag">div</span><span class="tag">&gt;</span></span>
 <span class="tag">&lt;/</span><span class="tag">nav</span><span class="tag">&gt;</span></span></pre>
 									</div>
-									<p>
-										<span style="width: 100px;display: inline-block;">Block</span><span style="width: 200px;display: inline-block;">.nav</span>（導覽列）<br>
-										<span style="width: 100px;display: inline-block;">Element</span><span style="width: 200px;display: inline-block;">.nav__menu</span>（導覽列中的 menu 功能）<br>
-										<span style="width: 100px;display: inline-block;">Modify</span><span style="width: 200px;display: inline-block;">.nav__menu--member</span>（導覽列中的 menu 為 member 功能 vs. 導覽列中的 menu 為共通功能）<br>
-									</p>
+									<ul class="list-reset pt10 pb10">
+										<li>
+											<span style="width: 100px;display: inline-block;">Block</span><span style="width: 200px;display: inline-block;">.nav</span><span style="width: calc(100% - 300px);display: inline-block;">（導覽列）</span>
+										</li>
+										<li>
+											<span style="width: 100px;display: inline-block;">Element</span><span style="width: 200px;display: inline-block;">.nav__menu</span><span style="width: calc(100% - 300px);display: inline-block;">（導覽列中的 menu 功能）</span>
+										</li>
+										<li class="mt0-mb1">
+											<span style="width: 100px;display: inline-block;vertical-align: top;">Modify</span><span style="width: 200px;display: inline-block;vertical-align: top;">.nav__menu--member</span><span style="width: calc(100% - 300px);display: inline-block;">（導覽列中的 menu 為 member 功能 vs. 導覽列中的 menu 為共通功能）</span>
+										</li>
+									</ul>
 									<p>
 										modify 應以功能來做命名<br>
 										Example：
@@ -95,7 +111,9 @@
 									<p>元件庫，我們將使用 HTML、CSS 及 jQuery 來組合。</p>
 									<ol>
 										<li>
-											如果只是單純要組合元件，可以直接嵌入這三隻檔案
+											<p class="mt0">
+												如果只是單純要組合元件，可以直接嵌入這三隻檔案
+											</p>
 											<div class="code__block--text bg-black">
 													<pre style="height: auto;">&lt;link rel="stylesheet" href="https://www.cw.com.tw/assets/1.0.0/css/main.min.css" /&gt;
 &lt;script src="https://www.cw.com.tw/assets/js/jquery-1.12.4.min.js"&gt;&lt;/script&gt;
@@ -103,13 +121,14 @@
 											</div><br>
 										</li>
 										<li>
-											如果想要修改元件，我們提供SCSS原始碼<br>
-											所有的SCSS檔名將對應各項元件
+											<p class="mt0">
+												如果想要修改元件，我們提供SCSS原始碼<br>所有的SCSS檔名將對應各項元件
+											</p>
 											<div class="code__block--text bg-black">
 													<pre style="height: auto;">assets/
 ├── 1.0.0/
 │   ├── sass/
-│   │   ├── _code.scss
+│   │   ├── _general.scss
 │   │   ├── _basic.scss
 │   │   ├── _sheet.scss
 │   │   ├── _columns.scss
@@ -126,11 +145,11 @@
 │   │   ├── _textfield.scss
 │   │   ├── _tooltips.scss
 │   │   ├── _typography.scss
-│   │   ├── layout.scss
-│   │   └── main.scss
+│   │   ├── cw.scss
+│   │   └── layout.scss
 │   └── js/
-│          └── main.min.js
-├── img/
+│          └── cw.min.js
+├── images/
 ├── fonts/
 └── js/
      └── jquery-1.12.4.min.js</pre>

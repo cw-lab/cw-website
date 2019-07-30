@@ -1,4 +1,5 @@
 .tab {
+	position: relative;
 	&--hide {
 		display: none;
 	}
@@ -78,9 +79,15 @@
 			}
 			&--overflow {
 				display: flex;
+				overflow: scroll;
+				@include breakpoint(768px) {
+					overflow: hidden;
+				}
 				> ul {
 					padding-left: 50px;
-					overflow: scroll;
+					@include breakpoint(768px) {
+						padding-right: 50px;
+					}
 				}
 			}
 		}
@@ -94,6 +101,39 @@
 				}
 				&.active {
 					display: block;
+				}
+			}
+		}
+	}
+	.click-right {
+		display: flex;
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		width: 48px;
+		height: 53px;
+		justify-content: center;
+		align-items: center;
+		background-color: $white;
+	}
+}
+[class*='--disabled'] {
+	.tab {
+		.tab {
+			&__nav {
+				> ul {
+					li {
+						&:hover {
+							color: $gray-200;
+						}
+						&:active {
+							color: $gray-200;
+						}
+						&.active {
+							color: $gray-200;
+							border-color: $gray-200;
+						}
+					}
 				}
 			}
 		}

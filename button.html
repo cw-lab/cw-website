@@ -25,24 +25,24 @@
 					<aside class="select-side"></aside>
 					<div class="content-side">
 						<div class="flex">
-							<div class="col-md-8">
+							<div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
 								<h1>
 									按鈕 Button
 								</h1>
 								<p>
-									按鈕（Button）讓使用者只需要點擊一下，行動呼籲（Call to Action，以下簡稱cta）及做出選擇。
+									按鈕（Button）讓使用者只需要點擊一下，行動呼籲（Call to Action，以下簡稱 cta）及做出選擇。
 								</p>
 							</div>
-							<div class="col-md-12">
+							<div class="col-12">
 								<h2>原則</h2>
-								<p>
+								<p class="mb0">
 									按鈕應該以能識別功能，易於找到和狀態清楚為原則。
-									<ul>
-										<li>識別功能：要清楚地讓使用者知道，點擊按鈕時會發瘋什麼動作；</li>
-										<li>易於找到：要在畫面之中，能讓使用者容易找到按鈕，當然也包括其他動作的按鈕；</li>
-										<li>狀態清楚：一個完整的按鈕，應該要清楚地具備它所有的互動狀態。</li>
-									</ul>
 								</p>
+								<ul class="mt0">
+									<li>識別功能：要清楚地讓使用者知道，點擊按鈕時會發瘋什麼動作；</li>
+									<li>易於找到：要在畫面之中，能讓使用者容易找到按鈕，當然也包括其他動作的按鈕；</li>
+									<li>狀態清楚：一個完整的按鈕，應該要清楚地具備它所有的互動狀態。</li>
+								</ul>
 							</div>
 							<div class="col-md-12">
 								<hr>
@@ -52,7 +52,7 @@
 								<div class="row">
 									<div class="col-md-4">
 										<form action="#!" class="form">
-											<div class="form__group spec--highlight">
+											<div class="form__group spec spec--highlight">
 												<button class="btn btn--outlined btn--pec">搜尋網站的內容</button>
 												<span class="detail space" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
 												<span class="detail height" data-val="48" style="height: 48px;"><i></i></span>
@@ -67,17 +67,18 @@
 											<h2 id="outlined">
 												Outlined Button
 											</h2>
-											<p>Outlined buttons 是中強度的按鈕。在網頁中，雖然它仍是重要的cta，但重要程度並不是最高。</p>
+											<p class="mb0">Outlined buttons 是中強度的按鈕。</p>
+											<p class="mt0">在網頁中，雖然它仍是重要的 cta，但重要程度並不是最高。</p>
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-md-4">
+											<div class="col-xl-4 col-lg-4 col-md-4">
 												<h3>Default</h3>
 												<form action="#!" class="form">
 													<button class="btn btn--outlined">搜尋網站的內容</button>
 												</form>
 											</div>
-											<div class="col-md-4">
+											<div class="col-xl-4 col-lg-4 col-md-4">
 												<h3>Disabled</h3>
 												<form action="#!" class="form">
 													<button class="btn btn--outlined" disabled="disabled">搜尋網站的內容</button>
@@ -292,17 +293,18 @@
 										<h2 id="contained">
 											Contained Button
 										</h2>
-										<p>Contained buttons 是高強度的按鈕，夠過較大面積的顏色讓使用者易於找到按鈕。是網頁中重要程度最高的按鈕。</p>
+										<p class="mb0">Contained buttons 是高強度的按鈕，夠過較大面積的顏色讓使用者易於找到按鈕。</p>
+										<p class="mt0">是網頁中重要程度最高的按鈕。</p>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-xl-4 col-lg-4 col-md-4">
 										<h3>Default</h3>
 										<form action="#!" class="form">
 											<button class="btn btn--contained">搜尋網站的內容</button>
 										</form>
 									</div>
-									<div class="col-md-4">
+									<div class="col-xl-4 col-lg-4 col-md-4">
 										<h3>Disabled</h3>
 										<form action="#!" class="form">
 											<button class="btn btn--contained" disabled="disabled">搜尋網站的內容</button>
@@ -504,43 +506,43 @@
 								<hr class="notice">
 								<h2 class="notice">Don't Do</h2>
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-xl-3 col-lg-3 col-md-4">
 										<div class="row">
 											<div class="col-md-12">
 												<form action="#!" class="form">
 													<button class="btn btn--contained" style="min-width: auto;width: 100px;white-space: nowrap;">搜尋網站的內容</button>
 												</form>
-												<i class="form__group__help form__group__help--notice">不要截斷文字內容</i>
+												<i class="form__group__help form__group__help--notice pt10">不要截斷文字內容</i>
 												<br><br>
 											</div>
 											<div class="col-md-12">
 												<form action="#!" class="form">
-													<button class="btn btn--contained" style="min-width: auto;padding: 0.7rem 1rem;width: 100px;line-height: 1.5;">搜尋網站的內容</button>
+													<button class="btn btn--contained" style="min-width: auto;padding: 0.7rem 1rem;width: 100px;line-height: 1.5; word-break: break-all;">搜尋網站的內容</button>
 												</form>
-												<i class="form__group__help form__group__help--notice">文字內容不換行</i>
+												<i class="form__group__help form__group__help--notice pt10">文字內容不換行</i>
 												<br><br>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-xl-4 col-lg-4 col-md-5">
 										<div class="row">
 											<div class="col-md-12">
 												<form action="#!" class="form">
 													<button class="btn btn--contained" style="box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);">搜尋網站的內容</button>
 												</form>
-												<i class="form__group__help form__group__help--notice">請不要在按鈕加上陰影</i>
+												<i class="form__group__help form__group__help--notice pt10">請不要在按鈕加上陰影</i>
 												<br><br>
 											</div>
 											<div class="col-md-12">
 												<form action="#!" class="form">
 													<button class="btn btn--contained"><i class="icon icon-search" style="display: inline-block;margin-right: 0.5rem;vertical-align: middle;"></i>搜尋網站的內容</button>
 												</form>
-												<i class="form__group__help form__group__help--notice">請不要在按鈕中加icon</i>
+												<i class="form__group__help form__group__help--notice pt10">請不要在按鈕中加icon</i>
 												<br><br>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-4">
+									<div class="col-xl-4 col-lg-4 col-md-5">
 										<div class="row">
 											<div class="col-md-12">
 												<form action="#!" class="form">
@@ -548,7 +550,7 @@
 													<div style="height: 10px"></div>
 													<button class="btn btn--contained">搜尋網站的內容</button>
 												</form>
-												<i class="form__group__help form__group__help--notice">如果有空間並排，<br>不要將按鈕垂直擺放</i>
+												<i class="form__group__help form__group__help--notice pt10">如果有空間並排，<br>不要將按鈕垂直擺放</i>
 											</div>
 										</div>
 									</div>

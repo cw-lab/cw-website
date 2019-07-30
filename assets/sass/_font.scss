@@ -16,16 +16,19 @@ i.icon {
 	font-variant: normal;
 	line-height: 1;
 	text-decoration: inherit;
-	text-rendering: optimizeLegibility;
+	text-rendering: auto;
 	text-transform: none;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
-// body.chrome i.icon:before {
-// 	position: relative;
-// 	top: 0.125em;
-// }
+body.chrome i.icon:before {
+	display: inline;
+	vertical-align: middle;
+	line-height: 1;
+}
 .icon-minus:before {
 	content: "\e936";
 }

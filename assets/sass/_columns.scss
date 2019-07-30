@@ -15,14 +15,14 @@ $column: map-merge((
 	"11": ($width * 11),
 	"12": ($width * 12)
 ), $column);
-[class*="col"] {
+[class*="col-"] {
 	position: relative;
 	width: 100%;
-}
-@for $i from 1 through 12 {
-	.col-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i},  .col-xl-#{$i} {
-		padding-left: 15px;
-		padding-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+	@include breakpoint(768px) {
+		padding-left: 25px;
+		padding-right: 25px;
 	}
 }
 @each $number, $value in $column {
@@ -30,36 +30,28 @@ $column: map-merge((
 		width: nth($value, 1);
 	}
 }
-@include breakpoint(768px) {
-	@for $i from 1 through 12 {
-		.col-md-#{$i}, .col-lg-#{$i},  .col-xl-#{$i}, .col-sm-#{$i}, .col-#{$i} {
-			padding-left: 25px;
-			padding-right: 25px;
-		}
-	}
-}
-@include breakpoint(576px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
 	@each $number, $value in $column {
 		.col-sm-#{$number} {
 			width: nth($value, 1);
 		}
 	}
 }
-@include breakpoint(768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
 	@each $number, $value in $column {
 		.col-md-#{$number} {
 			width: nth($value, 1);
 		}
 	}
 }
-@include breakpoint(992px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
 	@each $number, $value in $column {
 		.col-lg-#{$number} {
 			width: nth($value, 1);
 		}
 	}
 }
-@include breakpoint(1200px) {
+@media screen and (min-width: 1200px) {
 	@each $number, $value in $column {
 		.col-xl-#{$number} {
 			width: nth($value, 1);

@@ -12,7 +12,6 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 ul, ol {
-	// padding-left: 1.5em;
 	padding-left: 1.15em;
 }
 .mtb0 {
@@ -35,6 +34,12 @@ ul, ol {
 }
 .mt40 {
 	margin-top: 40px !important;
+}
+.pt10 {
+	padding-top: 10px !important;
+}
+.pb10 {
+	padding-bottom: 10px !important;
 }
 .list-reset {
 	@extend %list-reset;
@@ -105,52 +110,4 @@ img {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-}
-ul, ol {
-	// padding-left: 1.5em;
-	padding-left: 1.15em;
-}
-.mtb0 {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-.mt0-mb1 {
-	margin-top: 0 !important;
-	margin-bottom: 1em !important;
-}
-.mt0-mb05 {
-	margin-top: 0 !important;
-	margin-bottom: 0.5em !important;
-}
-.mb0 {
-	margin-bottom: 0 !important;
-}
-.mt0 {
-	margin-top: 0 !important;
-}
-.mt40 {
-	margin-top: 40px !important;
-}
-.list-reset {
-	@extend %list-reset;
-}
-.justify-between {
-	justify-content: space-between;
-}
-.flex {
-	@include breakpoint(768px) {
-		&-md {
-			display: flex;
-		}
-	}
-	@include breakpoint(1024px) {
-		&-lg {
-			display: flex;
-		}
-	}
-	@include breakpoint(1280px) {
-		&-xl {
-			display: flex;
-		}
-	}
 }

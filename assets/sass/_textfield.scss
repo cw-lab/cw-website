@@ -212,17 +212,6 @@ form {
 		position: relative;
 		display: table;
 		font-size: 1rem;
-		&::before {
-			content: "\e911";
-			position: absolute;
-			display: block;
-			top: 50%;
-			right: 1rem;
-			color: $dark;
-			font-family: 'icomoon';
-			font-size: 1rem;
-			@include translateY(-50%);
-		}
 		+ .select__group {
 			margin-left: 1rem;
 		}
@@ -232,35 +221,49 @@ form {
 			line-height: 1;
 			border: 1px solid;
 			cursor: pointer;
+			@include background-size(0.78125rem);
+			background-position: calc(100% - 0.78125rem) center;
+			background-repeat: no-repeat;
 		}
-		&--filled {
+		&--defalt {
+			&.select__group {
+				&--filled {
+					select {
+						background-color: $gray-100;
+						background-image: url(../images/common/down.svg);
+						border-color: $gray-100;
+					}
+					&:hover {
+						select {
+							color: $white;
+							background-color: $surface;
+							background-image: url(../images/common/down--white.svg);
+						}
+					}
+				}
+				&--outlined {
+					select {
+						background-color: $white;
+						background-image: url(../images/common/down.svg);
+						border-color: $secondary;
+					}
+					&:hover {
+						select {
+							color: $surface;
+							background-image: url(../images/common/down--surface.svg);
+						}
+					}
+				}
+			}
+		}
+		&--disabled {
+			cursor: not-allowed;
 			select {
-				border-color: $gray-100;
+				color: $gray-200;
 				background-color: $gray-100;
-			}
-			&:hover {
-				&::before {
-					color: $white;
-				}
-				select {
-					color: $white;
-					background-color: $surface;
-				}
-			}
-		}
-		&--outlined {
-			select {
-				border-color: $secondary;
-				background-color: $white;
-			}
-			&:hover {
-				&::before {
-					color: $surface;
-				}
-				select {
-					color: $surface;
-					border-color: $surface;
-				}
+				background-image: url(../images/common/down--disable.svg);
+				border-color: $gray-100;
+				cursor: not-allowed;
 			}
 		}
 	}

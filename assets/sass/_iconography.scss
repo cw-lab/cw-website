@@ -215,3 +215,26 @@ a {
 		}
 	}
 }
+.social_login {
+	width: 100%;
+	font-size: 1em;
+	cursor: pointer;
+	@include transition(all 0.3s);
+	i.icon {
+		font-size: 1.5em;
+	}
+	&--facebook {
+		display: flex;
+		height: 50px;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		background-color: $facebook;
+		i.icon {
+			margin-right: 0.375em;
+		}
+		&:hover {
+			background-color: darken($facebook, 5%);
+		}
+	}
+}

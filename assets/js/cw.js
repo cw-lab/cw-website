@@ -85,7 +85,6 @@ $(function(){
 		});
 		console.log(slider_item_width);
 		$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
-		// $sliderCountDiv.html("<i class='icon icon-images'></i>" + slider_count);
 		function switch_next() {
 			if ($slider_wrap.is(":animated")) return;
 			$slider_wrap.animate({left: "-="+slider_item_width}, function() {
@@ -129,13 +128,34 @@ $(function(){
 	})
 	// 當裝置大於等於768時，將tab__nav寬度設為等分
 	function tabNavWidth (width){
-		$(".tab__nav > ul").each(function(){
-			if ( (width >= 768) || ($(this).children("li").length <= 3) ) {
-				$(this).children("li").css( "width", (100 / $(this).children("li").length) + "%" );
-			} else {
-				$(this).children("li").css( "width", "" );
+		$(".tab").each(function(){
+			var tabLength = $(this).children(".tab__nav").children("ul").children("li").length,
+				tabWidth = $(this).width(),
+				tabLiWidth = $(this).width() / tabLength,
+				tabUlWidth = (110 * (tabLength)),
+				scrollWidth = Math.floor((tabWidth - 100) / 110),
+				tab_index = 0,
+				index = 0;
+			$(this).children(".tab__nav").children("ul").children("li").css("width", tabLiWidth);
+			if ( tabLiWidth < 100 ) {
+				$(this).children(".tab__nav").addClass("tab__nav--overflow");
 			}
-		})
+			if ( width >= 768 ) {
+				var tabUlWidth = (110 * (tabLength + 1));
+				if ( tabLiWidth < 100 ) {
+					$(this).append("<i class='icon icon-right click-right'></i>");
+				}
+				$(this).children(".click-right").click(function(){
+					$(this).siblings(".tab__nav").children("ul").animate({left: "-="+(110 * scrollWidth)}, function() {
+						if (index >= scrollWidth - 1) {
+							index = -1;
+							$(this).animate({"left": 0}, 300);
+						}
+						index++;
+					});
+				});
+			}
+		});
 	}
 	tabNavWidth (width);
 	// 當tooltips大於等於15字

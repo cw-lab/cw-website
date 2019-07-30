@@ -22,12 +22,6 @@ body {
 	@include breakpoint(1200px) {
 		width: 1170px;
 	}
-	@include breakpoint(1330px) {
-		width: 1300px;
-	}
-	@include breakpoint(1630px) {
-		width: 1600px;
-	}
 }
 .row {
 	display: -webkit-box;
@@ -164,7 +158,7 @@ section {
 						font-size: 14px;
 						line-height: 30px;
 						white-space: nowrap;
-						@include breakpoint(992px) {
+						@include breakpoint(1200px) {
 							font-size: 16px;
 							line-height: 40px;
 						}
@@ -246,14 +240,16 @@ section {
 			margin-bottom: 50px;
 		}
 		.last-row {
-			@include breakpoint(768px) {
-				margin-top: 50px;
+			.color-bar {
+				margin-bottom: 50px;
 			}
 		}
-		.spec--highlight {
+		.spec {
 			position: relative;
 			display: table;
-			padding-left: 20px;
+			&--highlight {
+				padding-left: 20px;
+			}
 			span {
 				&.detail {
 					position: absolute;
@@ -364,10 +360,22 @@ section {
 			li {
 				display: flex;
 				justify-content: space-between;
-				padding: 15px;
+				padding: 12.5px 10px;
+				border: 1px solid transparent;
+				&.bg-white {
+					border-color: $gray-200;
+				}
+				&.bg-black {
+					border-color: $black;
+				}
 			}
 			@include breakpoint(max-width 767px) {
 				margin-bottom: 30px;
+			}
+		}
+		.tab--demo {
+			.tab__nav > ul::before {
+				display: none;
 			}
 		}
 		.tab__content__pane {
@@ -546,8 +554,6 @@ section {
 		}
 		.form__group__help {
 			display: block;
-			margin-top: 10px;
-			margin-bottom: 5px;
 			color: $secondary;
 			font-size: 12px;
 			font-style: normal;

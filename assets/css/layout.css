@@ -281,19 +281,6 @@ main .article__function input {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-main .article__function__sns {
-  display: flex;
-  align-items: center;
-}
-main .article__function__sns li {
-  position: relative;
-  margin-right: 5px;
-}
-@media (min-width: 768px) {
-  main .article__function__sns li {
-    margin-right: 10px;
-  }
-}
 main .article__function--success {
   display: none;
   position: absolute;
@@ -1154,5 +1141,3 @@ main aside > * {
 .slideshow--book .slider .slider__item > a:hover {
   color: #D60C18;
 }
-
-/*# sourceMappingURL=layout.css.map */

@@ -24,7 +24,7 @@
 						<aside class="select-side"></aside>
 						<div class="content-side">
 							<div class="flex">
-								<div class="col-md-8">
+								<div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
 									<h1>
 										輸入框 Text-field
 									</h1>
@@ -32,7 +32,7 @@
 										輸入框（Text-field）讓使用者可以在此輸入或編輯各種文字格式，包括數字。
 									</p>
 								</div>
-								<div class="col-md-12">
+								<div class="col-12">
 									<h2>原則</h2>
 									<p>
 										輸入框應該以可發現的，明確區分和高效率為原則。
@@ -51,7 +51,7 @@
 									<div class="row">
 										<div class="col-xl-4 col-lg-6">
 											<form action="#!" class="form">
-												<div class="form__group form__group--filled spec--highlight">
+												<div class="form__group form__group--filled spec spec--highlight">
 													<label for="#!" class="label">
 														<span class="form__group__placeholder">請輸入 e-mail</span>
 														<input type="email" class="form__group__input form__group__input--default">
@@ -66,24 +66,24 @@
 										</div>
 										<div class="col-xl-4 col-lg-6">
 											<form action="#!" class="form">
-												<div class="form__group form__group--filled form__group--hasicon form__group--error spec--highlight">
+												<div class="form__group form__group--filled form__group--hasicon form__group--error spec spec--highlight">
 													<label for="#!" class="label">
 														<div class="form__group__placeholder">請輸入 e-mail</div>
-														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw">
 														<i class="form__group__icon icon icon-check-circle"></i>
 													</label>
 													<span class="detail space" data-val="16" style="width: 16px; height: 16px;"><i></i></span>
 													<span class="detail space" data-val="16" style="left: auto; right: 0; width: 16px; height: 16px;"><i></i></span>
 													<span class="detail" data-val="6" style="width: 100px;height: 6px;border-width: 1px 0;top: 19px;left: 40px;"><i></i></span>
 													<span class="detail helperSpace" data-val="5" style="height: 5px;"><i></i></span>
-													<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+													<i class="form__group__help">信箱已使用，請試試其他信箱</i>
 												</div>
 											</form>
 											<br>
 										</div>
 										<div class="col-xl-4 col-lg-6">
 											<form action="#!" class="form">
-												<div class="select__group select__group--filled spec--highlight">
+												<div class="select__group select__group--filled spec spec--highlight">
 													<select>
 														<option class="select__group__item" selected>請選擇選擇</option>
 														<option class="select__group__item" value="1">假字假字</option>
@@ -109,7 +109,7 @@
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Default</h3>
 											<form action="#!" class="form">
 												<div class="form__group form__group--filled">
@@ -149,7 +149,7 @@
 												</div>
 											</form>
 										</div>
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Password</h3>
 											<form action="#!" class="form">
 												<div class="form__group form__group--filled form__group--hasicon">
@@ -165,7 +165,7 @@
 												<div class="form__group form__group--filled form__group--hasicon form__group--correct">
 													<label for="#!" class="label">
 														<div class="form__group__placeholder">請輸入 e-mail</div>
-														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw">
 														<i class="form__group__icon icon icon-check-circle"></i>
 													</label>
 												</div>
@@ -175,9 +175,9 @@
 												<div class="form__group form__group--filled form__group--hasicon form__group--error">
 													<label for="#!" class="label">
 														<div class="form__group__placeholder">請輸入 e-mail</div>
-														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw">
 														<i class="form__group--filled__icon icon icon-exclamation-circle"></i>
-														<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+														<i class="form__group__help">信箱已使用，請試試其他信箱</i>
 													</label>
 												</div>
 											</form>
@@ -191,7 +191,7 @@
 												</div>
 											</form>
 										</div>
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Dropdown</h3>
 											<form action="#!" class="form">
 												<div class="select__group select__group--filled">
@@ -680,7 +680,7 @@ form {
   &lt;div class="form__group form__group--filled <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw"&gt;
       <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
     &lt;/label&gt;
   &lt;/div&gt;
@@ -688,9 +688,9 @@ form {
   &lt;div class="form__group form__group--filled <span class="mis">form__group--hasicon form__group--error</span>"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw"&gt;
       <span class="mis">&lt;i class="form__group--filled__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;
-      &lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
+      &lt;i class="form__group__help"&gt;信箱已使用，請試試其他信箱&lt;/i&gt;</span>
     &lt;/label&gt;
   &lt;/div&gt;
   <span class="comment">// Status: undone </span>
@@ -1003,7 +1003,7 @@ form {
 										</div>
 									</div>
 									<div class="row">
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Default</h3>
 											<form action="#!" class="form">
 												<div class="form__group form__group--outlined">
@@ -1043,7 +1043,7 @@ form {
 												</div>
 											</form>
 										</div>
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Password</h3>
 											<form action="#!" class="form">
 												<div class="form__group form__group--outlined form__group--hasicon">
@@ -1059,7 +1059,7 @@ form {
 												<div class="form__group form__group--outlined form__group--hasicon form__group--correct">
 													<label for="#!" class="label">
 														<div class="form__group__placeholder">請輸入 e-mail</div>
-														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw">
 														<i class="form__group__icon icon icon-check-circle"></i>
 													</label>
 												</div>
@@ -1069,9 +1069,9 @@ form {
 												<div class="form__group form__group--outlined form__group--hasicon form__group--error">
 													<label for="#!" class="label">
 														<div class="form__group__placeholder">請輸入 e-mail</div>
-														<input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw">
+														<input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw">
 														<i class="form__group--outlined__icon icon icon-exclamation-circle"></i>
-														<i class="form__group__help">這個信箱已有人使用，請試試其他信箱</i>
+														<i class="form__group__help">信箱已使用，請試試其他信箱</i>
 													</label>
 												</div>
 											</form>
@@ -1085,7 +1085,7 @@ form {
 												</div>
 											</form>
 										</div>
-										<div class="col-md-4">
+										<div class="col-xl-4 col-lg-4 col-md-4">
 											<h3>Dropdown</h3>
 											<form action="#!" class="form">
 												<div class="select__group select__group--outlined">
@@ -1564,7 +1564,7 @@ form {
   &lt;div class="form__group form__group--outlined <span class="mis">form__group--hasicon form__group--correct</span>"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw"&gt;
       <span class="mis">&lt;i class="form__group__icon icon icon-check-circle"&gt;&lt;/i&gt;</span>
     &lt;/label&gt;
   &lt;/div&gt;
@@ -1572,9 +1572,9 @@ form {
   &lt;div class="form__group form__group--outlined <span class="mis">form__group--hasicon form__group--error</span>"&gt;
     &lt;label for="#!" class="label"&gt;
       &lt;div class="form__group__placeholder"&gt;請輸入 e-mail&lt;/div&gt;
-      &lt;input type="email" class="form__group__input form__group__input--default" value="cw-id-name@cw.com.tw"&gt;
+      &lt;input type="email" class="form__group__input form__group__input--default" value="user@cw.com.tw"&gt;
       <span class="mis">&lt;i class="form__group--filled__icon icon icon-exclamation-circle"&gt;&lt;/i&gt;
-      &lt;i class="form__group__help"&gt;這個信箱已有人使用，請試試其他信箱&lt;/i&gt;</span>
+      &lt;i class="form__group__help"&gt;信箱已使用，請試試其他信箱&lt;/i&gt;</span>
     &lt;/label&gt;
   &lt;/div&gt;
   <span class="comment">// Status: undone </span>

@@ -20,7 +20,7 @@
 					width: 100%;
 					height: auto;
 				}
-				&::before, &::after {
+				&::before, > i.icon {
 					@include transition(all 0.3s);
 				}
 				&::before {
@@ -36,13 +36,15 @@
 					@include opacity(0);
 					z-index: 1;
 				}
-				&:hover {
-					&::before {
-						@include opacity(1);
-					}
+			}
+			&:hover {
+				> a::before {
+					@include opacity(1);
 				}
 			}
 			.article__function__sns {
+				display: flex;
+				align-items: center;
 				position: absolute;
 				bottom: -74px;
 				width: 100%;
@@ -50,6 +52,13 @@
 				background-color: rgba($black, 0.75);
 				@include transition(bottom, 0.3s);
 				z-index: 1;
+				li {
+					position: relative;
+					margin-right: 5px;
+					@include breakpoint(768px) {
+						margin-right: 10px;
+					}
+				}
 			}
 			&:hover {
 				.article__function__sns {
@@ -102,16 +111,17 @@
 			}
 		}
 		&--video {
-			.article__group__item__img > a {
-				&::after {
-					display: block;
+			.article__group__item__img {
+				 > a > i.icon {
+					display: inline-block;
+					vertical-align: sub;
 					content: '\e91d';
 					position: absolute;
-					bottom: 10px;
-					left: 10px;
+					width: 3rem;
+					height: 3rem;
 					color: $white;
-					font-family: 'icomoon';
 					font-size: 3rem;
+					font-family: 'icomoon';
 					font-weight: bold;
 					line-height: 1;
 					text-shadow: 0 0 20px rgba($black, 0.25);
@@ -142,17 +152,23 @@
 			.article__group {
 				&__item {
 					&__img {
-						a {
-							&::after {
+						> a {
+							> i.icon {
+								bottom: 10px;
+								left: 10px;
+								width: 4rem;
+								height: 4rem;
 								font-size: 4rem;
 								@include breakpoint(768px) {
+									width: 5rem;
+									height: 5rem;
 									font-size: 5rem;
 								}
 							}
-							&:hover {
-								&::after {
-									bottom: 80px;
-								}
+						}
+						&:hover {
+							> a > i.icon {
+								bottom: 80px;
 							}
 						}
 					}
@@ -184,6 +200,17 @@
 					&__img {
 						@include breakpoint(768px) {
 							width: 120px;
+						}
+						> a {
+							> i.icon {
+								bottom: 5px;
+								left: 5px;
+								@include breakpoint(768px) {
+									width: 2rem;
+									height: 2rem;
+									font-size: 2rem;
+								}
+							}
 						}
 					}
 					&__text {

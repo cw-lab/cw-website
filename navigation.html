@@ -24,41 +24,43 @@
 						<aside class="select-side"></aside>
 						<div class="content-side">
 							<div class="flex">
-								<div class="col-md-8">
+								<div class="col-xl-8 col-lg-10 col-md-10 col-sm-12">
 									<h1>
 										導覽 Navigation drawers
 									</h1>
 									<p>
 										導覽（Navigation drawers）提供使用者路徑，到達想要前往的目的地。導覽也提供對目的地和應用功能的路徑，例如登入註冊、切換帳戶。 通過漢堡選單圖示（☰），使用者可以自由控制是否出現。
-									</p><p>
-										當超過畫面時，將出現捲動軸（scroll bar）。
-									</p><p>
-										導覽推薦用於：
-										<ul>
-											<li>具有五個或更多目標的應用</li>
-											<li>具有兩個或更多級別導覽層次的應用</li>
-											<li>在不相關的目的地之間快速導覽</li>
-										</ul>
 									</p>
-								</div>
-								<div class="col-md-12">
-									<h2>原則</h2>
 									<p>
-										導覽要能被識別的，排序分類和開關式的。
-										<ul>
-											<li>能被識別：導覽的位置和列表樣式的內容，應該清楚地被使用者識別出其為導覽；</li>
-											<li>排序分類：導覽依據對使用者的重要性進行排序，例如：優先排序使用者最常前往的目的地，相關的目的地分組；</li>
-											<li>開關式：使用者可以自由控制導覽是否出現，在不同頁面中提供不同排版。</li>
-										</ul>
+										當超過畫面時，將出現捲動軸（scroll bar）。
 									</p>
+									<p class="mb0">
+										導覽推薦用於：
+									</p>
+									<ul class="mt0">
+										<li>具有五個或更多目標的應用</li>
+										<li>具有兩個或更多級別導覽層次的應用</li>
+										<li>在不相關的目的地之間快速導覽</li>
+									</ul>
+								</div>
+								<div class="col-12">
+									<h2>原則</h2>
+									<p class="mb0">
+										導覽要能被識別的，排序分類和開關式的。
+									</p>
+									<ul class="mt0">
+										<li>能被識別：導覽的位置和列表樣式的內容，應該清楚地被使用者識別出其為導覽；</li>
+										<li>排序分類：導覽依據對使用者的重要性進行排序，例如：優先排序使用者最常前往的目的地，相關的目的地分組；</li>
+										<li>開關式：使用者可以自由控制導覽是否出現，在不同頁面中提供不同排版。</li>
+									</ul>
 								</div>
 								<div class="col-md-12">
 									<hr>
 									<h2>Spec</h2>
 									<div class="row">
 										<div class="col-md-10">
-											<div class="spec--highlight" style="width: 75%;">
-												<i class="form__group__help">width：300px</i>
+											<div class="spec" style="width: 75%; margin-top: 1em">
+												<i class="form__group__help" style="position: absolute; bottom: calc(100% + 5px);">width：300px</i>
 												<div class="spec--highlight--group">
 													<div class="black opened" style="position: absolute;"></div>
 													<nav class="menubar menubar--left">
@@ -145,7 +147,7 @@
 									<h2>States</h2>
 									<div class="row">
 										<div class="col-md-7">
-											<div class="black opened" style="position: absolute;left: auto;"></div>
+											<div class="black opened" style="position: absolute;left: auto;width: calc(100% - 50px);"></div>
 											<nav class="menubar menubar--left">
 												<ul>
 													<li><div class="li__group"><a href="#!">天下雜誌，您好</a></div></li>

@@ -308,9 +308,11 @@ nav {
 				display: none;
 				li {
 					position: relative;
+					height: 54px;
 					text-align: center;
 					a {
-						padding: 19px 10px;
+						display: block;
+						padding: 18px 10px;
 						line-height: 1rem;
 						@include transition(all 0.15s);
 					}

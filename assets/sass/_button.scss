@@ -1,12 +1,10 @@
 button, a {
 	background-color: transparent;
+	align-self: baseline;
 	@include border-radius(0);
 	@include appearance(none);
 	&:focus {
 		outline: 0;
-	}
-	&[disabled*='disabled'] {
-		cursor: not-allowed;
 	}
 	&.btn {
 		position: relative;
@@ -77,16 +75,6 @@ button, a {
 				transition: transform 0s;
 			}
 		}
-		&:disabled {
-			background-color: transparent;
-			cursor: initial;
-			&::before {
-				opacity: 0;
-			}
-			&::after {
-				opacity: 0;
-			}
-		}
 		&--outlined {
 			color: $surface;
 			background-color: $white;
@@ -125,11 +113,22 @@ button, a {
 				background-color: $primary;
 			}
 		}
-		&[disabled*='disabled'] {
-			color: $white;
-			background: $gray-200;
-			border: 1px solid $gray-200;
+		&[disabled] {
+			color: $gray-200;
+			background: $gray-100;
+			border: 1px solid $gray-100;
 			cursor: not-allowed;
+			&::before {
+				opacity: 0;
+			}
+			&::after {
+				opacity: 0;
+			}
+			&:hover {
+				color: $gray-200;
+				background: $gray-100;
+				border: 1px solid $gray-100;
+			}
 		}
 	}
 }

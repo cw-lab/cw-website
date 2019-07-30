@@ -3,69 +3,17 @@ section .select-side ul.menu > li::before {
   display: block;
 }
 
-[class*="col"] {
+[class*="col-"] {
   position: relative;
   width: 100%;
-}
-
-.col-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xl-1 {
   padding-left: 15px;
   padding-right: 15px;
 }
-
-.col-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xl-2 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xl-3 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xl-4 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xl-5 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xl-6 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xl-7 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xl-8 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xl-9 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xl-10 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xl-11 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.col-12, .col-sm-12, .col-md-12, .col-lg-12, .col-xl-12 {
-  padding-left: 15px;
-  padding-right: 15px;
+@media (min-width: 768px) {
+  [class*="col-"] {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 .col-1 {
@@ -116,68 +64,7 @@ section .select-side ul.menu > li::before {
   width: 100%;
 }
 
-@media (min-width: 768px) {
-  .col-md-1, .col-lg-1, .col-xl-1, .col-sm-1, .col-1 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-2, .col-lg-2, .col-xl-2, .col-sm-2, .col-2 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-3, .col-lg-3, .col-xl-3, .col-sm-3, .col-3 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-4, .col-lg-4, .col-xl-4, .col-sm-4, .col-4 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-5, .col-lg-5, .col-xl-5, .col-sm-5, .col-5 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-6, .col-lg-6, .col-xl-6, .col-sm-6, .col-6 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-7, .col-lg-7, .col-xl-7, .col-sm-7, .col-7 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-8, .col-lg-8, .col-xl-8, .col-sm-8, .col-8 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-9, .col-lg-9, .col-xl-9, .col-sm-9, .col-9 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-10, .col-lg-10, .col-xl-10, .col-sm-10, .col-10 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-11, .col-lg-11, .col-xl-11, .col-sm-11, .col-11 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .col-md-12, .col-lg-12, .col-xl-12, .col-sm-12, .col-12 {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) and (max-width: 767px) {
   .col-sm-1 {
     width: 8.33333%;
   }
@@ -226,7 +113,7 @@ section .select-side ul.menu > li::before {
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .col-md-1 {
     width: 8.33333%;
   }
@@ -275,7 +162,7 @@ section .select-side ul.menu > li::before {
     width: 100%;
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .col-lg-1 {
     width: 8.33333%;
   }
@@ -324,7 +211,7 @@ section .select-side ul.menu > li::before {
     width: 100%;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .col-xl-1 {
     width: 8.33333%;
   }
@@ -402,16 +289,6 @@ body {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
-  }
-}
-@media (min-width: 1330px) {
-  .container {
-    width: 1300px;
-  }
-}
-@media (min-width: 1630px) {
-  .container {
-    width: 1600px;
   }
 }
 
@@ -582,7 +459,7 @@ section .select-side ul.menu > li a > * {
   line-height: 30px;
   white-space: nowrap;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   section .select-side ul.menu > li a > * {
     font-size: 16px;
     line-height: 40px;
@@ -666,17 +543,17 @@ section .content-side hr.notice {
 section .content-side > .flex {
   margin-bottom: 50px;
 }
-@media (min-width: 768px) {
-  section .content-side .last-row {
-    margin-top: 50px;
-  }
+section .content-side .last-row .color-bar {
+  margin-bottom: 50px;
 }
-section .content-side .spec--highlight {
+section .content-side .spec {
   position: relative;
   display: table;
+}
+section .content-side .spec--highlight {
   padding-left: 20px;
 }
-section .content-side .spec--highlight span.detail {
+section .content-side .spec span.detail {
   position: absolute;
   display: block;
   min-width: 13px;
@@ -686,7 +563,7 @@ section .content-side .spec--highlight span.detail {
   border: dashed #939EA7;
   z-index: 3;
 }
-section .content-side .spec--highlight span.detail i {
+section .content-side .spec span.detail i {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -697,33 +574,33 @@ section .content-side .spec--highlight span.detail i {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-section .content-side .spec--highlight span.detail.dark {
+section .content-side .spec span.detail.dark {
   border-color: #fff;
 }
-section .content-side .spec--highlight span.detail.dark i {
+section .content-side .spec span.detail.dark i {
   color: #fff;
   text-shadow: none;
 }
-section .content-side .spec--highlight span.detail.height {
+section .content-side .spec span.detail.height {
   top: 0;
   left: 0;
   border-width: 1px 0;
 }
-section .content-side .spec--highlight span.detail.helperSpace {
+section .content-side .spec span.detail.helperSpace {
   left: 50%;
   border-width: 1px 0;
 }
-section .content-side .spec--highlight span.detail.helperSpace i {
+section .content-side .spec span.detail.helperSpace i {
   left: 100%;
   margin-left: 5px;
 }
-section .content-side .spec--highlight span.detail.space {
+section .content-side .spec span.detail.space {
   top: 50%;
   left: 21px;
   margin-top: -16px;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight span.detail.space-left-top {
+section .content-side .spec span.detail.space-left-top {
   right: 0;
   top: 0;
   left: 0;
@@ -732,7 +609,7 @@ section .content-side .spec--highlight span.detail.space-left-top {
   margin-top: 0;
   border-width: 1px 0;
 }
-section .content-side .spec--highlight span.detail.space-left-bottom {
+section .content-side .spec span.detail.space-left-bottom {
   right: 0;
   top: auto;
   bottom: 0;
@@ -742,7 +619,7 @@ section .content-side .spec--highlight span.detail.space-left-bottom {
   margin-top: 0;
   border-width: 1px 0;
 }
-section .content-side .spec--highlight span.detail.space-bottom-left {
+section .content-side .spec span.detail.space-bottom-left {
   right: 0;
   top: 100%;
   left: 20px;
@@ -752,7 +629,7 @@ section .content-side .spec--highlight span.detail.space-bottom-left {
   min-width: auto;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight span.detail.space-bottom-right {
+section .content-side .spec span.detail.space-bottom-right {
   right: 0;
   top: 100%;
   left: auto;
@@ -762,34 +639,44 @@ section .content-side .spec--highlight span.detail.space-bottom-right {
   min-width: auto;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight span.detail.space-0 {
+section .content-side .spec span.detail.space-0 {
   margin-top: -8px;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight span.detail.space-1 {
+section .content-side .spec span.detail.space-1 {
   top: 50%;
   right: 23px;
   margin-top: -8px;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight span.detail.space-2 {
+section .content-side .spec span.detail.space-2 {
   top: 50%;
   right: 1px;
   margin-top: -8px;
   border-width: 0 1px;
 }
-section .content-side .spec--highlight--group {
+section .content-side .spec--group {
   position: relative;
 }
 section .content-side .color-bar li {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  padding: 12.5px 10px;
+  border: 1px solid transparent;
+}
+section .content-side .color-bar li.bg-white {
+  border-color: #D3D5D7;
+}
+section .content-side .color-bar li.bg-black {
+  border-color: #171717;
 }
 @media (max-width: 767px) {
   section .content-side .color-bar {
     margin-bottom: 30px;
   }
+}
+section .content-side .tab--demo .tab__nav > ul::before {
+  display: none;
 }
 section .content-side .tab__content__pane {
   width: 100%;
@@ -962,8 +849,6 @@ section .content-side .tooltips--spec {
 }
 section .content-side .form__group__help {
   display: block;
-  margin-top: 10px;
-  margin-bottom: 5px;
   color: #939EA7;
   font-size: 12px;
   font-style: normal;
@@ -1017,5 +902,3 @@ section .message {
   left: auto !important;
   transform: none !important;
 }
-
-/*# sourceMappingURL=style.css.map */

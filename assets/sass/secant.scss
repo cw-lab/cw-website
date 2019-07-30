@@ -51,7 +51,7 @@
 			.step {
 				&__group {
 					// padding-top: 20px;
-					padding-bottom: 40px;
+					padding-bottom: 20px;
 				}
 				&__item {
 					position: relative;
@@ -69,7 +69,7 @@
 						display: block;
 					}
 					&::before {
-						content: "\e91f";
+						content: "\e933";
 						font-family: 'icomoon';
 						position: absolute;
 						top: 50%;
@@ -558,6 +558,7 @@
 					&.form__group--divide {
 						> .label {
 							width: 100%;
+							margin-bottom: 0px;
 							@include breakpoint(768px) {
 								margin-left: 1rem;
 								width: calc( (100% - 140px - 2rem) / 2);
@@ -572,6 +573,11 @@
 							}
 							.form__group__input {
 								min-width: auto;
+							}
+						}
+						.select__group select {
+							@include breakpoint(768px) {
+								width: 140px;
 							}
 						}
 					}
@@ -629,9 +635,6 @@
 						}
 						&--title {
 							margin-bottom: 1rem;
-							@include breakpoint(375px) {
-								width: 50%;
-							}
 						}
 						&__amount {
 							word-break: break-all;
@@ -661,6 +664,11 @@
 			}
 			.mb-20 {
 				margin-bottom: 1rem;
+			}
+			&[class*='--disabled'] {
+				h3, .h3, p, span, a, i {
+					color: $gray-200 !important;
+				}
 			}
 		}
 		.credit {

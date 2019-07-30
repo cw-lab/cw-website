@@ -579,6 +579,7 @@
 }
 .webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
   width: 100%;
+  margin-bottom: 0px;
 }
 @media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
@@ -598,6 +599,11 @@
 }
 .webaccess__page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .content__group .form__group.form__group--divide > .label .form__group__input {
   min-width: auto;
+}
+@media (min-width: 768px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--divide .select__group select, .webaccess__page section.group .tab__content .form__group.form__group--divide .select__group select, .webaccess__page section.group .content__group .form__group.form__group--divide .select__group select {
+    width: 140px;
+  }
 }
 @media (max-width: 767px) {
   .webaccess__page section.group .flex-container .col--left p, .webaccess__page section.group .tab__content .col--left p, .webaccess__page section.group .content__group .col--left p {
@@ -831,5 +837,3 @@
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=secant.css.map */

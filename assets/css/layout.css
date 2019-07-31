@@ -137,7 +137,7 @@ main article {
 }
 @media (min-width: 1024px) {
   main article {
-    width: 620px;
+    width: 610px;
   }
 }
 main article.article__level--0 {
@@ -280,6 +280,19 @@ main .article__function input {
   left: -10000em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+}
+main .article__function__sns {
+  display: flex;
+  align-items: center;
+}
+main .article__function__sns li {
+  position: relative;
+  margin-right: 5px;
+}
+@media (min-width: 768px) {
+  main .article__function__sns li {
+    margin-right: 10px;
+  }
 }
 main .article__function--success {
   display: none;
@@ -469,7 +482,7 @@ main .article__text blockquote::after {
 main .article__text hr {
   position: relative;
   width: 100%;
-  height: 2px;
+  height: 1px;
   margin: 2.5em 0;
   background: #D60C18;
   background: -moz-linear-gradient(90deg, #D60C18 0%, #003a9f 100%);

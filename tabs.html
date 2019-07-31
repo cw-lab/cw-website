@@ -36,14 +36,14 @@
 								</div>
 								<div class="col-12">
 									<h2>原則</h2>
-									<p>
+									<p class="mb0">
 										分頁標籤應具有可擴充性，提供訊息性和平行標籤原則。
-										<ul>
-											<li>可擴充性：更多可擴展由於標籤可以水平滾動，因此UI可以根據需要包含多個標籤；</li>
-											<li>提供訊息性：應將內容分在不同類別中，以幫助使用者輕鬆查找不同類別的信息；</li>
-											<li>平行標籤：相同的重要類別，應該要在同一層級並相鄰顯示。</li>
-										</ul>
 									</p>
+									<ul class="mt0">
+										<li>可擴充性：更多可擴展由於標籤可以水平滾動，因此 UI 可以根據需要包含多個標籤；</li>
+										<li>提供訊息性：應將內容分在不同類別中，以幫助使用者輕鬆查找不同類別的信息；</li>
+										<li>平行標籤：相同的重要類別，應該要在同一層級並相鄰顯示。</li>
+									</ul>
 								</div>
 								<div class="col-md-12">
 									<hr>
@@ -87,7 +87,30 @@
 								<div class="col-md-12">
 									<hr>
 									<h2>Usage</h2>
-									<div class="row"></div>
+									<div class="row">
+										<div class="col-xl-6 col-lg-8 col-md-10 col-12">
+											<div class="tab">
+												<div class="tab__nav">
+													<ul class="list-reset">
+														<li class="active"><span>第一項</span></li>
+														<li><span>第二項</span></li>
+														<li><span>第三項</span></li>
+													</ul>
+												</div>
+												<div class="tab__content">
+													<div class="tab__content__pane active">
+														<h2 style="margin-left: auto; margin-right: auto;">1</h2>
+													</div>
+													<div class="tab__content__pane">
+														<h2 style="margin-left: auto; margin-right: auto;">2</h2>
+													</div>
+													<div class="tab__content__pane">
+														<h2 style="margin-left: auto; margin-right: auto;">3</h2>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="col-12 code--block">
 									<hr>
@@ -96,36 +119,195 @@
 										<div class="tab__nav">
 											<ul class="list-reset">
 												<li class="active"><span>Default</span></li>
-												<li><span>Disabled</span></li>
 											</ul>
 										</div>
 										<div class="tab__content">
 											<div class="tab__content__pane active">
 												<div class="code__block--text code__block--html bg-black">
-													<pre></pre>
+													<pre>&lt;div class="tab"&gt;
+  &lt;div class="tab__nav"&gt;
+    &lt;ul class="list-reset"&gt;
+      &lt;li class="active"&gt;
+        &lt;span&gt;
+          <span class="comment">// 內容</span>
+        &lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class="tab__content"&gt;
+    &lt;div class="tab__content__pane active"&gt;
+      <span class="comment">// 內容</span>
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
 												</div>
 												<div class="code__block--text code__block--scss bg-black">
-													<pre></pre>
+													<pre>.tab {
+  position: relative;
+  &--hide {
+    display: none;
+  }
+  .tab {
+    &__nav {
+      position: relative;
+      border: solid $gray-200;
+      border-width: 1px;
+      @include breakpoint(max-width 767px) {
+        overflow-x: scroll;
+        overflow-y: hidden;
+      }
+      > ul {
+        position: relative;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        @include breakpoint(768px) {
+          margin: 0 0 -1px;
+        }
+        &::before {
+          @extend %before-after;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $gray-200;
+          @include breakpoint(768px) {
+            bottom: 0px;
+          }
+        }
+        li {
+          position: relative;
+          display: flex;
+          min-width: 110px;
+          padding: 5px;
+          line-height: 2.6rem;
+          justify-content: center;
+          align-items: center;
+          word-break: keep-all;
+          border-bottom: 3px solid transparent;
+          cursor: pointer;
+          &:hover {
+            color: $primary;
+          }
+          &:active {
+            color: $primary-variant;
+          }
+          &.active {
+            color: $primary;
+            border-color: $primary;
+          }
+        }
+      }
+      &__next {
+        display: none;
+        width: 60px;
+        padding-left: 10px;
+        background-color: $white;
+        align-items: center;
+        justify-content: center;
+      }
+      &--desktop {
+        .tab__nav {
+          &__next {
+            display: flex;
+          }
+        }
+      }
+      &--mobile {
+        .tab__nav {
+          &__next {
+            display: none;
+          }
+        }
+      }
+      &--overflow {
+        display: flex;
+        overflow: scroll;
+        @include breakpoint(768px) {
+          overflow: hidden;
+        }
+        > ul {
+          padding-left: 50px;
+          @include breakpoint(768px) {
+            padding-right: 50px;
+          }
+        }
+      }
+    }
+    &__content {
+      &__pane {
+        display: none;
+        border: solid $gray-200;
+        border-width: 0 1px 1px;
+        &--p20 {
+          padding: 20px;
+        }
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .click-right {
+    display: flex;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 48px;
+    height: 53px;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+  }
+}</pre>
 												</div>
 												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
+													<pre>$(function(){
+  // tabs
+  $(".tab__nav &gt; ul li").click(function () {
+    var tabsIndex = $(this).index();
+    if ( !$(this).parent().parent().parent().parent(".group").hasClass("group--disabled") ) {
+      $(this).addClass('active').siblings('.active').removeClass('active');
+      $(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').removeClass('active');
+      $(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
+    }
+  });
+  // 當裝置大於等於768時，將tab__nav寬度設為等分
+  function tabNavWidth (width){
+    $(".tab").each(function(){
+      var tabLength = $(this).children(".tab__nav").children("ul").children("li").length,
+        tabWidth = $(this).width(),
+        tabLiWidth = $(this).width() / tabLength,
+        tabUlWidth = (110 * (tabLength)),
+        scrollWidth = Math.floor((tabWidth - 100) / 110),
+        tab_index = 0,
+        index = 0;
+      $(this).children(".tab__nav").children("ul").children("li").css("width", tabLiWidth);
+      if ( tabLiWidth &lt; 100 ) {
+        $(this).children(".tab__nav").addClass("tab__nav--overflow");
+      }
+      if ( width &gt;= 768 ) {
+        var tabUlWidth = (110 * (tabLength + 1));
+        if ( tabLiWidth &lt; 100 ) {
+          $(this).append("&lt;i class='icon icon-right click-right'&gt;&lt;/i&gt;");
+        }
+        $(this).children(".click-right").click(function(){
+          $(this).siblings(".tab__nav").children("ul").animate({left: "-="+(110 * scrollWidth)}, function() {
+            if (index &gt;= scrollWidth - 1) {
+              index = -1;
+              $(this).animate({"left": 0}, 300);
+            }
+            index++;
+          });
+        });
+      }
+    });
+  }
+  tabNavWidth (width);
+})</pre>
 												</div>
 											</div>
-											<div class="tab__content__pane">
-												<div class="code__block--text code__block--html bg-black">
-													<pre></pre>
-												</div>
-												<div class="code__block--text code__block--scss bg-black">
-													<pre></pre>
-												</div>
-												<div class="code__block--text code__block--js bg-black">
-													<pre><span class="comment">// 沒有JS </span></pre>
-												</div>
-											</div>
-											<ul class="direction list-reset">
-												<li><i class="highlight"></i>前端添加</li>
-												<li><i class="mis"></i>後端判斷</li>
-											</ul>
 										</div>
 									</div>
 								</div>

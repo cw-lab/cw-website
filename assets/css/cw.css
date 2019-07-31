@@ -2785,7 +2785,8 @@ button.btn[disabled]:hover, a.btn[disabled]:hover {
 .message--alert {
   position: absolute;
   left: 50%;
-  width: 560px;
+  max-width: 560px;
+  width: calc(100% - 30px);
   padding: 30px 24px 24px;
   background-color: #fff;
   z-index: 12;

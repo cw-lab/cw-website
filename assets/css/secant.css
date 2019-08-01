@@ -300,19 +300,15 @@
   border-color: #D60C18;
 }
 .webaccess__page main .plan .plan__item__right {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 1rem;
   list-style: none;
 }
 @media (min-width: 768px) {
   .webaccess__page main .plan .plan__item__right {
     min-height: 4.5em;
-  }
-}
-@media (min-width: 939px) {
-  .webaccess__page main .plan .plan__item__right {
-    margin-left: auto;
-    margin-right: auto;
-    display: table;
   }
 }
 .webaccess__page main .plan .plan__item__right li {
@@ -550,6 +546,13 @@
     margin-top: 1rem;
   }
 }
+@media (max-width: 357px) {
+  .webaccess__page section.group .flex-container .form__group--inline .select__group + .select__group, .webaccess__page section.group .tab__content .form__group--inline .select__group + .select__group, .webaccess__page section.group .content__group .form__group--inline .select__group + .select__group {
+    margin-top: 1rem;
+    margin-left: 0;
+    margin-right: 1em;
+  }
+}
 .webaccess__page section.group .flex-container .form__group.form__group--selection > .label, .webaccess__page section.group .tab__content .form__group.form__group--selection > .label, .webaccess__page section.group .content__group .form__group.form__group--selection > .label {
   display: none;
   margin-top: 10px;
@@ -584,7 +587,7 @@
 @media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide > .label, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label, .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
     margin-left: 1rem;
-    width: calc( (100% - 140px - 2rem) / 2);
+    width: calc( (100% - 2rem) / 2);
   }
 }
 @media (max-width: 767px) {
@@ -600,9 +603,15 @@
 .webaccess__page section.group .flex-container .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .tab__content .form__group.form__group--divide > .label .form__group__input, .webaccess__page section.group .content__group .form__group.form__group--divide > .label .form__group__input {
   min-width: auto;
 }
+@media (max-width: 767px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--divide .form__group, .webaccess__page section.group .tab__content .form__group.form__group--divide .form__group, .webaccess__page section.group .content__group .form__group.form__group--divide .form__group {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
 @media (min-width: 768px) {
-  .webaccess__page section.group .flex-container .form__group.form__group--divide .select__group select, .webaccess__page section.group .tab__content .form__group.form__group--divide .select__group select, .webaccess__page section.group .content__group .form__group.form__group--divide .select__group select {
-    width: 140px;
+  .webaccess__page section.group .flex-container .form__group.form__group--divide .form__group, .webaccess__page section.group .tab__content .form__group.form__group--divide .form__group, .webaccess__page section.group .content__group .form__group.form__group--divide .form__group {
+    margin-left: 1rem;
   }
 }
 @media (max-width: 767px) {

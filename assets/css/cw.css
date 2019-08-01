@@ -468,6 +468,7 @@ h1 .heading__icon, .h1 .heading__icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 h1 .heading__icon--correct, .h1 .heading__icon--correct {
   color: #003a9f;
@@ -491,6 +492,7 @@ h2 .heading__icon, .h2 .heading__icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 h2 .heading__icon--correct, .h2 .heading__icon--correct {
   color: #003a9f;
@@ -514,6 +516,7 @@ h3 .heading__icon, .h3 .heading__icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 h3 .heading__icon--correct, .h3 .heading__icon--correct {
   color: #003a9f;
@@ -537,6 +540,7 @@ h4 .heading__icon, .h4 .heading__icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 h4 .heading__icon--correct, .h4 .heading__icon--correct {
   color: #003a9f;
@@ -560,6 +564,7 @@ h5 .heading__icon, .h5 .heading__icon {
   display: inline-block;
   margin-right: 10px;
   font-size: 0.9em;
+  vertical-align: middle;
 }
 h5 .heading__icon--correct, .h5 .heading__icon--correct {
   color: #003a9f;
@@ -1656,6 +1661,9 @@ input, select {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
+input::-ms-expand, select::-ms-expand {
+  display: none;
+}
 input:focus, select:focus {
   outline: 0;
 }
@@ -1829,7 +1837,7 @@ form .select__group + .select__group {
 }
 form .select__group select {
   min-width: 140px;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   line-height: 1;
   border: 1px solid;
   cursor: pointer;
@@ -1859,13 +1867,35 @@ form .select__group--defalt.select__group--outlined:hover select {
   color: #003a9f;
   background-image: url(../images/common/down--surface.svg);
 }
+form .select__group--undone.select__group--filled select {
+  color: #D60C18;
+  background-color: #EEEEEE;
+  background-image: url(../images/common/down--primary.svg);
+  border-color: #EEEEEE;
+}
+form .select__group--undone.select__group--filled:hover select {
+  color: #fff;
+  background-color: #003a9f;
+  background-image: url(../images/common/down--white.svg);
+}
+form .select__group--undone.select__group--outlined select {
+  color: #D60C18;
+  background-color: #fff;
+  background-image: url(../images/common/down--primary.svg);
+  border-color: #D60C18;
+}
+form .select__group--undone.select__group--outlined:hover select {
+  color: #003a9f;
+  border-color: #003a9f;
+  background-image: url(../images/common/down--surface.svg);
+}
 form .select__group--disabled {
   cursor: not-allowed;
 }
 form .select__group--disabled select {
   color: #D3D5D7;
   background-color: #EEEEEE;
-  background-image: url(../images/common/down--disable.svg);
+  background-image: url(../images/common/down--disable.svg) !important;
   border-color: #EEEEEE;
   cursor: not-allowed;
 }

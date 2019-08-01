@@ -53,6 +53,9 @@ $(function(){
 	$("select").change(function() {
 		select();
 	})
+	$(".select__group--undone").click(function () {
+		$(this).removeClass("select__group--undone")
+	})
 	// tabs
 	$(".tab__nav > ul li").click(function () {
 		var tabsIndex = $(this).index();

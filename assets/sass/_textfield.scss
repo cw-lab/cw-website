@@ -227,6 +227,8 @@ form {
 			@include background-size(0.78125rem);
 			background-position: calc(100% - 0.78125rem) center;
 			background-repeat: no-repeat;
+			background-size: 36px \9;
+			background-position: 100% center \9;
 		}
 		&--defalt {
 			&.select__group {

@@ -1847,8 +1847,12 @@ form .select__group select {
   background-size: 0.78125rem;
   background-position: calc(100% - 0.78125rem) center;
   background-repeat: no-repeat;
-  background-size: 36px \9;
-  background-position: 100% center \9;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  form .select__group select {
+    background-size: 36px;
+    background-position: 100% center;
+  }
 }
 form .select__group--defalt.select__group--filled select {
   background-color: #EEEEEE;

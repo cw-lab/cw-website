@@ -1668,6 +1668,12 @@ input:focus, select:focus {
   outline: 0;
 }
 
+input[type*='number']::-webkit-inner-spin-button,
+input[type*='number']::-webkit-outer-spin-button {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
 form.form {
   font-size: 0;
 }
@@ -1725,6 +1731,9 @@ form .form__group .form__group__help--strong {
   margin-bottom: 20px;
   color: #48545D;
   font-size: 14px;
+}
+form .form__group .form__group__help + .form__group__help {
+  margin-top: -10px;
 }
 form .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
@@ -1795,7 +1804,7 @@ form .form__group--correct .form__group__placeholder, form .form__group--correct
 form .form__group--correct .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--error .form__group__placeholder, form .form__group--error .icon, form .form__group--error .form__group__help {
+form .form__group--error .form__group__placeholder, form .form__group--error .icon, form .form__group--error .form__group__help--highlight {
   color: #D60C18 !important;
 }
 form .form__group--error .form__group__input {
@@ -1850,8 +1859,8 @@ form .select__group select {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   form .select__group select {
-    background-size: 36px;
-    background-position: 100% center;
+    background-size: 28px;
+    background-position: calc(100% - 3.5px) center;
   }
 }
 form .select__group--defalt.select__group--filled select {
@@ -2802,6 +2811,7 @@ button.btn[disabled]:hover, a.btn[disabled]:hover {
 .message--notification {
   display: table;
   max-width: 500px;
+  width: calc(100% - 30px);
   padding: 29px 35px;
   color: #fff;
   font-size: 1.125rem;
@@ -2842,7 +2852,7 @@ button.btn[disabled]:hover, a.btn[disabled]:hover {
   position: absolute;
   left: 50%;
   max-width: 560px;
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
   padding: 30px 24px 24px;
   background-color: #fff;
   z-index: 12;

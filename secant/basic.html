@@ -94,10 +94,11 @@
 								<i class="icon icon-facebook"></i>以 Facebook 帳號繼續
 							</div>
 							<div class="separation separation--or"><span>或</span></div>
-							<div class="form__group form__group--filled">
+							<div class="form__group form__group--filled form__group--error">
 								<label class="label">
 									<div class="form__group__placeholder">請輸入E-mail</div>
 									<input type="email" class="form__group__input">
+									<i class="form__group__help form__group__help--strong form__group__help--highlight">請輸入正確格式</i>
 									<i class="form__group__help form__group__help--strong">您將用此E-mail登入天下雜誌</i>
 								</label>
 							</div>
@@ -894,7 +895,7 @@
 							</div>
 						</div>
 					</section>
-					<section class="group group--disabled">
+					<section class="group">
 						<h3>發票資料</h3>
 						<div class="tab select-invoicing">
 							<div class="tab__nav">
@@ -907,7 +908,7 @@
 							<div class="tab__content">
 								<div class="tab__content__pane tab__content__pane--p20 active">
 									<label class="label label--radio">
-										<input type="radio" name="individ" value="member" checked disabled>
+										<input type="radio" name="individ" value="member" checked>
 										<span class="label__radio__mark"></span>
 										<span class="label__radio__txt">會員載具</span>
 										<span class="label__radio__helper">
@@ -916,30 +917,30 @@
 									</label>
 									<div class="label form__group form__group--selection form__group--filled">
 										<label class="label--radio">
-											<input type="radio" name="individ" value="mobile" disabled>
+											<input type="radio" name="individ" value="mobile">
 											<span class="label__radio__mark"></span>
 											<span class="label__radio__txt">手機條碼載具</span>
 											<span class="label__radio__helper">手機條碼為“/"開頭之條碼，共8碼</span>
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入手機條碼</div>
-											<input type="text" name="barcode" class="form__group__input" disabled>
+											<input type="text" name="barcode" class="form__group__input">
 										</label>
 									</div>
 									<div class="label form__group form__group--selection form__group--filled">
 										<label class="label--radio">
-											<input type="radio" name="individ" value="citizen" disabled>
+											<input type="radio" name="individ" value="citizen">
 											<span class="label__radio__mark"></span>
 											<span class="label__radio__txt">自然人憑證載具</span>
 											<span class="label__radio__helper">自然人憑證條碼為卡片正面右下方，共16碼英數字</span>
 										</label>
 										<label class="label form__group--input">
 											<div class="form__group__placeholder">請輸入自然人憑證條碼</div>
-											<input type="text" name="cdc" class="form__group__input" disabled>
+											<input type="text" name="cdc" class="form__group__input">
 										</label>
 									</div>
 									<label class="label label--radio">
-										<input type="radio" name="individ" value="paper" disabled>
+										<input type="radio" name="individ" value="paper">
 										<span class="label__radio__mark"></span>
 										<span class="label__radio__txt">我仍需索取紙本發票</span>
 										<span class="label__radio__helper">電子發票若中獎將寄送至收件地址，本公司將不再為您主動對獎，請妥善保管電子發票證明聯正本，遺失補印之發票將無法進行兌領獎。</span>
@@ -950,14 +951,14 @@
 										<p class="mt0-mb05">統一號碼</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入統一編號，限數字</div>
-											<input type="text" name="vat" class="form__group__input" disabled>
+											<input type="tel" name="vat" class="form__group__input">
 										</label>
 									</div>
 									<div class="label form__group form__group--filled">
 										<p class="mt0-mb05">發票抬頭</p>
 										<label class="label form__group--defalt">
 											<div class="form__group__placeholder">請輸入發票抬頭，限22個全形文字</div>
-											<input type="text" name="company" class="form__group__input" disabled>
+											<input type="text" name="company" class="form__group__input">
 										</label>
 									</div>
 								</div>

@@ -1859,6 +1859,7 @@ form .select__group select {
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   form .select__group select {
+    height: 50px;
     background-size: 28px;
     background-position: calc(100% - 3.5px) center;
   }

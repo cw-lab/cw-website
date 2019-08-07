@@ -386,9 +386,14 @@ $(function(){
 		}
 	}
 	$("#creditCardNumber").on('keyup', function(){
-		$(this).val(function (index, value) {
-			return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1  ');
-		});
+		var val = $(this).val();
+		var newval = '';
+			val = val.replace(/\s/g, '');
+		for(var i=0; i < val.length; i++) {
+			if(i%4 == 0 && i > 0) newval = newval.concat('  ');
+			newval = newval.concat(val[i]);
+		}
+		$(this).val(newval);
 		$(".card__input--number").attr("value", this.value);
 		if (creditCard.data('creditcard') == true) {
 			validateCard();

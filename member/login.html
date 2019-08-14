@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>登入｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../assets/css/cw.css">
+		<link rel="stylesheet" href="../assets/css/secant.css">
+	</head>
+	<body class="webaccess__page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+				</div>
+			</div>
+		</header>
+		<main class="mb40">
+			<article>
+				<h1>登入</h1>
+				<form action="payment.html">
+					<section class="group">
+						<div class="social_login social_login--facebook">
+							<i class="icon icon-facebook"></i>以 Facebook 帳號繼續
+						</div>
+						<div class="separation separation--or"><span>或</span></div>
+						<div class="flex-container">
+							<div class="label form__group form__group--filled">
+								<label class="label">
+									<div class="form__group__placeholder">請輸入 Email（會員帳號）</div>
+									<input type="email" class="form__group__input">
+									<!-- <i class="form__group__help form__group__help--strong form__group__help--highlight">請輸入正確格式</i>
+									<i class="form__group__help form__group__help--strong">您將用此E-mail登入天下雜誌</i> -->
+								</label>
+							</div>
+							<div class="label form__group form__group--filled form__group--hasicon">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入密碼（8-12碼英數字）</div>
+									<input type="password" class="form__group__input form__group__input--default">
+									<i class="form__group__icon icon icon-eye icon-eyeoff"></i>
+								</label>
+								<a href="forget.html" class="link-btn">忘記密碼</a>
+							</div>
+							<button class="btn btn--100 btn--contained">下一步</button>
+						</div>
+					</section>
+					<div class="text-center">
+						我還不是會員 <a href="register.html" class="btn--text">註冊</a>
+					</div>
+				</form>
+			</article>
+		</main>
+		<div class="message message--alert" style="display: none;">
+			<div class="message__container">
+				<div class="message__txt">
+					<p class="mtb0">您正在其他裝置上閱讀，要換成這台嗎？</p>
+				</div>
+				<div class="message__btn">
+					<button class="btn btn--outlined">取消</button>
+					<button class="btn btn--contained">確定</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+		<script type="text/javascript" src="../assets/js/cw.js"></script>
+		<script type="text/javascript">
+			$('main').click(function () {
+				$('.message').show();
+				$('.black').addClass('opened');
+			});
+			$('.message__btn > button').click(function () {
+				$('.message').hide();
+				$('.black').removeClass('opened');
+			});
+		</script>
+	</body>
+</html>

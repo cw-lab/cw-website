@@ -75,6 +75,14 @@ button, a {
 				transition: transform 0s;
 			}
 		}
+		&--text {
+			display: inline-block;
+			color: $surface;
+			text-decoration: underline;
+			&:hover {
+				color: $primary;
+			}
+		}
 		&--outlined {
 			color: $surface;
 			background-color: $white;
@@ -113,6 +121,9 @@ button, a {
 				background-color: $primary;
 			}
 		}
+		&--100 {
+			width: 100%;
+		}
 		&[disabled] {
 			color: $gray-200;
 			background: $gray-100;
@@ -128,6 +139,9 @@ button, a {
 				color: $gray-200;
 				background: $gray-100;
 				border: 1px solid $gray-100;
+			}
+			&.btn--animate {
+				color: $secondary-variant;
 			}
 		}
 	}

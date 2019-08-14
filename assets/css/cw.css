@@ -234,6 +234,15 @@ ul, ol {
   margin-top: 40px !important;
 }
 
+.mb40 {
+  margin-bottom: 40px !important;
+}
+
+.mt10-mb20 {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
 .pt10 {
   padding-top: 10px !important;
 }
@@ -1714,27 +1723,6 @@ form .form__group .form__group__input {
 form .form__group .form__group__input:focus {
   border-color: #003a9f;
 }
-form .form__group .form__group__help {
-  display: block;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 5px;
-  color: #939EA7;
-  font-size: 12px;
-  font-style: normal;
-  line-height: 1;
-}
-form .form__group .form__group__help--strong {
-  padding-left: 0;
-  padding-right: 0;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #48545D;
-  font-size: 14px;
-}
-form .form__group .form__group__help + .form__group__help {
-  margin-top: -10px;
-}
 form .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
   background-color: #EEEEEE;
@@ -1835,6 +1823,27 @@ form .form__group--disabled .form__group__placeholder {
 form .form__group--disabled .form__group__input {
   background-color: #EEEEEE;
   border-color: #EEEEEE;
+}
+form .form__group__help {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 5px;
+  color: #939EA7;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 1;
+}
+form .form__group__help--strong {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #48545D;
+  font-size: 14px;
+}
+form .form__group__help + .form__group__help {
+  margin-top: -10px;
 }
 form .select__group {
   position: relative;
@@ -2006,6 +2015,14 @@ button.btn:active::after, a.btn:active::after {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0s;
 }
+button.btn--text, a.btn--text {
+  display: inline-block;
+  color: #003a9f;
+  text-decoration: underline;
+}
+button.btn--text:hover, a.btn--text:hover {
+  color: #D60C18;
+}
 button.btn--outlined, a.btn--outlined {
   color: #003a9f;
   background-color: #fff;
@@ -2044,6 +2061,9 @@ button.btn--contained::before, a.btn--contained::before {
 button.btn--contained::after, a.btn--contained::after {
   background-color: #D60C18;
 }
+button.btn--100, a.btn--100 {
+  width: 100%;
+}
 button.btn[disabled], a.btn[disabled] {
   color: #D3D5D7;
   background: #EEEEEE;
@@ -2060,6 +2080,9 @@ button.btn[disabled]:hover, a.btn[disabled]:hover {
   color: #D3D5D7;
   background: #EEEEEE;
   border: 1px solid #EEEEEE;
+}
+button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
+  color: #48545D;
 }
 
 .tooltips {

@@ -248,6 +248,11 @@ ul, ol {
   margin-bottom: 10px !important;
 }
 
+.mt20-mb0 {
+  margin-top: 20px !important;
+  margin-bottom: 0px !important;
+}
+
 .pt10 {
   padding-top: 10px !important;
 }
@@ -681,23 +686,43 @@ ul.keyword li a:hover {
   color: #9D0505;
 }
 
-body:not(.article__page) h1, body:not(.article__page) .h1 {
+body:not(.article__page) h1, body:not(.article__page) .h1, body:not(.feature__page) h1, body:not(.feature__page) .h1 {
   color: #171717;
   font-size: 28px;
   line-height: 1.5;
 }
-body:not(.article__page) main p {
+body:not(.article__page) main p, body:not(.feature__page) main p {
   font-size: 1rem;
   line-height: 1.6;
+}
+body.feature__page main p, body.feature__page main p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+body.feature__page h1, body.feature__page .h1 {
+  color: #171717;
+  font-size: 28px;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  body.feature__page h1, body.feature__page .h1 {
+    font-size: 40px;
+  }
+}
+body.feature__page h2, body.feature__page .h2 {
+  color: #171717;
+  font-size: 22px;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  body.feature__page h2, body.feature__page .h2 {
+    font-size: 24px;
+  }
 }
 body.article__page h1, body.article__page .h1 {
   color: #171717;
   font-size: 32px;
   line-height: 1.5;
-}
-body.article__page main p {
-  font-size: 1.125rem;
-  line-height: 1.8;
 }
 
 @font-face {
@@ -723,11 +748,18 @@ i.icon {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+@media (max-width: 767px) {
+  i.icon::before {
+    display: inline;
+    vertical-align: sub;
+    line-height: 0;
+  }
+}
 
 body.chrome i.icon:before {
   display: inline;
-  vertical-align: middle;
-  line-height: 1;
+  vertical-align: sub;
+  line-height: 0;
 }
 
 .icon-minus:before {
@@ -1001,7 +1033,6 @@ body.chrome i.icon:before {
 
 .icon-btn {
   display: inline-flex;
-  padding: 2px 0 0;
   width: 40px;
   height: 40px;
   font-size: 1.125rem;
@@ -1451,18 +1482,18 @@ nav.menubar--sub2 > .container {
 nav.menubar--sub2 > .container ul {
   position: relative;
 }
-nav.menubar--sub2 > .container > ul {
+nav.menubar--sub2 > .container > ul:not(.sns__group) {
   justify-content: flex-end;
 }
 @media (max-width: 1023px) {
-  nav.menubar--sub2 > .container > ul:first-child {
+  nav.menubar--sub2 > .container > ul:not(.sns__group):first-child {
     display: none;
   }
 }
-nav.menubar--sub2 > .container > ul > li {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li {
   margin-left: 16px;
 }
-nav.menubar--sub2 > .container > ul > li > a {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a {
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1470,7 +1501,7 @@ nav.menubar--sub2 > .container > ul > li > a {
   line-height: 1rem;
   align-items: center;
 }
-nav.menubar--sub2 > .container > ul > li > a i {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a i {
   margin-left: 7px;
   height: 0.875em;
   font-weight: bold;
@@ -1479,13 +1510,13 @@ nav.menubar--sub2 > .container > ul > li > a i {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
-nav.menubar--sub2 > .container > ul > li > a i.deg {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a i.deg {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-nav.menubar--sub2 > .container > ul > li > a:hover {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a:hover {
   color: #D60C18;
 }
 nav.menubar--sub2 ul.menubar__user {
@@ -2990,7 +3021,6 @@ main {
 }
 
 footer {
-  margin-top: 3.75em;
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 0.8125rem;
@@ -3105,6 +3135,19 @@ footer .imglink__app__title {
 }
 footer .imglink__app__img li + li {
   margin-left: 0.5em;
+}
+
+.ad {
+  background-color: #fff;
+}
+.ad a {
+  display: block;
+  width: 100%;
+}
+.ad img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 
 .container {
@@ -3257,3 +3300,5 @@ hr {
     right: 25px;
   }
 }
+
+/*# sourceMappingURL=cw.css.map */

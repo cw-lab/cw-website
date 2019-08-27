@@ -217,7 +217,7 @@ $(function(){
 		$(".message." + messageID).fadeIn();
 	})
 	// message: Dialogs 點擊X關閉
-	$(".click__close").on("click", function(){
+	$(".message__close").on("click", function(){
 		$(this).parent().parent().fadeOut();
 		$('.black').toggleClass('opened');
 	})
@@ -233,14 +233,6 @@ $(function(){
 	}
 	menubarSub (width, container);
 	// 文章頁
-	// youtube 16:9
-	$("iframe[src*='youtube']").each(function () {
-		var youtube_width = $(this).parent().outerWidth();
-		$(this).css({
-			"width": youtube_width,
-			"height": youtube_width * 0.5625
-		})
-	})
 	$('.article__edit__info__type').hide();
 	$('.article__edit__info__type').each(function(){
 		if ($(this).text().length > 0) {

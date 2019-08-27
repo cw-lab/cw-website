@@ -1,0 +1,51 @@
+// $baseLineHeight: 10px;
+// @function padding($count: 1) {
+//  @return $baseLineHeight * $count;
+// }
+// 標題
+$h-color: $text, $text, $text, $primary, $secondary;
+$h-size: 38px, 24px, 18px, 1rem, 14px;
+$h-lh: 1.5, 1.5, 2, 1.2, 1;
+@for $i from 1 through 5 {
+	h#{$i} {
+		font-weight: 700;
+	}
+	h#{$i}, .h#{$i} {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		font-family: 'Noto Serif TC', serif;
+		color: nth($h-color, $i);
+		font-size: nth($h-size, $i);
+		line-height: nth($h-lh, $i);
+		word-break: break-word;
+	}
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+p {
+	color: $text;
+	font-size: 1.125em;
+	line-height: 1.8;
+	word-break: break-word;
+	a.link-btn {
+		color: $surface;
+		text-decoration: underline;
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+.summary {
+	color: $surface;
+}
+blockquote {
+	color: $text;
+	font-weight: 500;
+}

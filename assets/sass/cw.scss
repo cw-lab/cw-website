@@ -74,7 +74,6 @@ main {
 	justify-content: space-between;
 }
 footer {
-	margin-top: 3.75em;
 	padding-top: 30px;
 	padding-bottom: 20px;
 	font-size: 0.8125rem;
@@ -176,6 +175,18 @@ footer {
 				}
 			}
 		}
+	}
+}
+.ad {
+	background-color: $white;
+	a {
+		display: block;
+		width: 100%;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		margin: auto;
 	}
 }
 .container {
@@ -311,7 +322,6 @@ hr {
 		left: 25px;
 	}
 }
-
 @keyframes rotation2 {
 	from {
 		right: 5px;

@@ -1,0 +1,60 @@
+.message {
+	p {
+		@include breakpoint(1024px) {
+			font-size: 0.875rem;
+			line-height: 1.75;
+		}
+		@include breakpoint(max-width 1023px) {
+			font-size: 13px;
+			line-height: 1.45;
+			letter-spacing: 0.01em;
+		}
+		+ p {
+			margin-top: 1em;
+		}
+	}
+	&__btn {
+		font-size: 0;
+	}
+	&--banner {
+		width: 100%;
+		background-color: #95ffff;
+		.message {
+			&__container {
+				position: relative;
+				margin: auto;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				@include breakpoint(1024px) {
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: flex-end;
+				}
+			}
+			&__txt {
+				@include breakpoint(1024px) {
+					width: 80%;
+				}
+				p {
+					a {
+						color: $surface;
+						text-decoration: underline;
+						@include breakpoint(1024px) {
+							&:hover {
+								color: $primary-variant;
+							}
+						};
+					}
+				}
+			}
+			&__btn {
+				display: flex;
+				@include breakpoint(max-width 1023px) {
+					margin-top: 1rem;
+				}
+			}
+		}
+	}
+}

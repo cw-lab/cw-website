@@ -41,10 +41,8 @@
 							</div>
 							<div class="label form__group form__group--filled">
 								<label class="label">
-									<div class="form__group__placeholder">請輸入 Email（會員帳號）</div>
+									<div class="form__group__placeholder">請輸入 Email，未來這會是您的會員帳號</div>
 									<input type="email" class="form__group__input">
-									<!-- <i class="form__group__help form__group__help--strong form__group__help--highlight">請輸入正確格式</i>
-									<i class="form__group__help form__group__help--strong">您將用此E-mail登入天下雜誌</i> -->
 								</label>
 							</div>
 							<div class="label form__group form__group--filled form__group--error">
@@ -71,7 +69,7 @@
 								</label>
 							</div>
 							<div class="mt10-mb20 form__group__help--strong text-center">
-								繼續註冊代表你同意天下雜誌的<a href="#!" target="_blank" class="btn--text">服務條款</a>與<a href="#!" target="_blank" class="btn--text">隱私權政策</a>
+								繼續註冊代表你同意天下雜誌的<a href="https://www.cw.com.tw/privacy" target="_blank" class="btn--text">服務條款</a>與<a href="https://www.cw.com.tw/privacy" target="_blank" class="btn--text">隱私權政策</a>
 							</div>
 							<button class="btn btn--100 btn--contained">註冊</button>
 						</div>
@@ -82,9 +80,38 @@
 				</form>
 			</article>
 		</main>
+		<div class="message message--dialogs" style="display: none;">
+			<div class="message__container">
+				<i class="icon icon-cancel message__close"></i>
+				<div class="message__txt">
+					<h2>註冊發生錯誤，請重新註冊</h2>
+					<p class="mtb0">
+						若有問題請提供錯誤代碼給天下客服。（錯誤代碼：0003）
+					</p>
+					<p class="mb0">
+						客服信箱：bill@service.cw.com.tw<br>
+						讀者服務專線：886-2-2662-0332<br>
+						服務時間：週一～週五 09:00~17:30
+					</p>
+				</div>
+				<div class="message__btn">
+					<button class="btn btn--contained">我知道了</button>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 		<script type="text/javascript" src="../assets/js/cw.js"></script>
+		<script type="text/javascript">
+			$('main').click(function () {
+				$('.message').show();
+				$('.black').addClass('opened');
+			});
+			$('.message__btn > button').click(function () {
+				$('.message').hide();
+				$('.black').removeClass('opened');
+			});
+		</script>
 	</body>
 </html>

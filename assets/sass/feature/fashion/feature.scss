@@ -10,8 +10,10 @@
         background-color: $surface;
     }
     nav.menubar--sub2 {
-        top: 30px;
-        @include transform(none);
+        @include breakpoint (768px) {
+            top: 30px;
+            @include transform(none);
+        }
         >.container>ul:not(.sns__group)>li>a {
             color: $white;
         }
@@ -29,8 +31,12 @@
         z-index: 10;
         .header__logo {
             >.container {
-                padding-top: 30px;
-                padding-bottom: 30px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                @include breakpoint (768px) {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
                 .logoSet {
                     a {
                         display: inline-block;
@@ -38,7 +44,7 @@
                         &.channelLogo {
                             margin-left: 15px;
                             img {
-                                height: 60px;
+                                height: 35px;
                                 @include breakpoint(1024px) {
                                     height: 90px;
                                 }

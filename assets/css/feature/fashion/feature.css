@@ -176,12 +176,14 @@ button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
 .feature__page .hamburger span {
   background-color: #d1b156;
 }
-.feature__page nav.menubar--sub2 {
-  top: 30px;
-  -moz-transform: none;
-  -ms-transform: none;
-  -webkit-transform: none;
-  transform: none;
+@media (min-width: 768px) {
+  .feature__page nav.menubar--sub2 {
+    top: 30px;
+    -moz-transform: none;
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 .feature__page nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a {
   color: #fff;
@@ -199,8 +201,14 @@ button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
   z-index: 10;
 }
 .feature__page header .header__logo > .container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .feature__page header .header__logo > .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 .feature__page header .header__logo > .container .logoSet a {
   display: inline-block;
@@ -210,7 +218,7 @@ button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
   margin-left: 15px;
 }
 .feature__page header .header__logo > .container .logoSet a.channelLogo img {
-  height: 60px;
+  height: 35px;
 }
 @media (min-width: 1024px) {
   .feature__page header .header__logo > .container .logoSet a.channelLogo img {

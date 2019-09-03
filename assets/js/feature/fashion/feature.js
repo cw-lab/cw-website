@@ -128,4 +128,17 @@ $(function() {
         $(this).siblings("p").removeClass('hidden');
         $(this).remove();
     });
+    if (width < 1024) {
+        $("nav .sns__group").animate({
+            "top": height - 115
+        }, 20);
+    }
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (width < 1024) {
+            $("nav .sns__group").animate({
+                "top": scroll + height - 115
+            }, 20);
+        }
+    })
 })

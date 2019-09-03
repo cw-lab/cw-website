@@ -11,8 +11,12 @@
   margin-left: auto;
   margin-right: auto;
 }
+.member__page--authorize form p {
+  font-weight: 500;
+}
 .member__page--authorize form .h5 {
-  color: #171717;
+  color: #48545D;
+  font-weight: 400;
   line-height: 1.5;
 }
 .member__page--authorize .logo--circle {

@@ -1,0 +1,44 @@
+@import "_basic";
+@import "_sheet";
+.member__page {
+	&--authorize {
+		&.flex {
+			min-height: 100vh;
+			align-items: center;
+			justify-content: center;
+		}
+		form {
+			width: 100%;
+			max-width: 768px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			.h5 {
+				color: $black;
+				line-height: 1.5;
+			}
+		}
+		.logo--circle {
+			position: relative;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100px;
+			height: 100px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color: $primary;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}

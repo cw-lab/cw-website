@@ -1,0 +1,40 @@
+.member__page--authorize.flex {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.member__page--authorize form {
+  width: 100%;
+  max-width: 768px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.member__page--authorize form .h5 {
+  color: #171717;
+  line-height: 1.5;
+}
+.member__page--authorize .logo--circle {
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #D60C18;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.member__page--authorize .logo--circle img {
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=member.css.map */

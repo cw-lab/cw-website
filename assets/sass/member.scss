@@ -1,9 +1,14 @@
 @import "_basic";
 @import "_sheet";
+html {
+	height: 100%;
+	min-height: 100%;
+}
 .member__page {
 	&--authorize {
+		height: 100%;
+		min-height: 100%;
 		&.flex {
-			min-height: 100vh;
 			align-items: center;
 			justify-content: center;
 		}

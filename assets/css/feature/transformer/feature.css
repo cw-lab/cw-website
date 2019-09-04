@@ -433,7 +433,7 @@ a.btn[disabled].btn--animate {
 }
 @media (min-width: 768px) {
   .feature__page section .card__item {
-    width: calc( (100% - 50px) / 3);
+    width: calc((100% - 50px) / 3);
     margin-left: 25px;
     margin-bottom: 50px;
   }
@@ -516,7 +516,6 @@ a.btn[disabled].btn--animate {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .feature__page section .slideshow .container {
   width: 100%;

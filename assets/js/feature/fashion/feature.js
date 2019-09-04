@@ -151,7 +151,7 @@ $(function() {
     });
     if (width < 1024) {
         $("nav .sns__group").animate({
-            "top": height - 115
+            "top": height - 115 - $('.message--banner').outerHeight()
         }, 20);
     }
     $(window).resize(function() {
@@ -161,7 +161,7 @@ $(function() {
         var scroll = $(window).scrollTop();
         if (width < 1024) {
             $("nav .sns__group").animate({
-                "top": scroll + height - 115
+                "top": scroll + height - 115 - $('.message--banner').outerHeight()
             }, 20);
             if (scroll >= height) {
                 $("nav .sns__group").css('opacity', 1);

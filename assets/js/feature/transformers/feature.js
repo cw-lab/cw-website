@@ -151,7 +151,7 @@ $(function() {
     });
     if (width < 1024) {
         $("nav .sns__group").animate({
-            "top": height - 115
+            "top": height - 115 - $('.message--banner').outerHeight()
         }, 20);
     }
     $(window).resize(function() {

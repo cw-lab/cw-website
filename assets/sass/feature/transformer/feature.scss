@@ -2,23 +2,33 @@
 @import "_sheet";
 @import "_button";
 .feature__page {
-    nav.menubar--sub2>.container>ul:not(.sns__group)>li>a {
-        color: $white;
-    }
-    nav.menubar--sub2 ul.menubar__user::before {
-        width: 1px;
-        height: 1rem;
-        background-color: transparent;
-        @include breakpoint(1024px) {
-            background-color: $white;
+    nav.menubar--sub2 {
+        >.container>ul:not(.sns__group)>li>a {
+            @include breakpoint(1024px) {
+                color: $white;
+            }
+        }
+        ul.menubar__user::before {
+            width: 1px;
+            height: 1rem;
+            background-color: transparent;
+            @include breakpoint(1024px) {
+                background-color: $white;
+            }
         }
     }
     header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
+        @include breakpoint(max-width 1023px) {
+            position: relative;
+            background-color: $white;
+        }
+        @include breakpoint(1024px) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
         .flex {
             align-items: center;
             .logoSet {
@@ -42,6 +52,16 @@
                     &.channelLogo {
                         img {
                             width: 60px;
+                            &.channelLogo--white {
+                                @include breakpoint(max-width 1023px) {
+                                    display: none
+                                }
+                            }
+                            &.channelLogo--dark {
+                                @include breakpoint(1024px) {
+                                    display: none
+                                }
+                            }
                             @include breakpoint(1024px) {
                                 width: 100px;
                             }
@@ -57,6 +77,7 @@
                     position: fixed;
                     flex-direction: column;
                     transform: initial;
+                    @include opacity(0);
                 }
                 li {
                     +li {
@@ -111,8 +132,11 @@
             max-width: 1260px;
         }
     }
+    main {
+        position: relative;
+    }
     section {
-        border-top: 1px solid $gray-200;
+        border-bottom: 1px solid $gray-200;
         &:first-child {
             border-top: 0;
         }
@@ -309,12 +333,7 @@
                 position: relative;
                 overflow: hidden;
                 &__thumbnail {
-                    @include breakpoint (max-width 1023px) {
-                        overflow: scroll;
-                    }
-                    @include breakpoint(1024px) {
-                        overflow: hidden;
-                    }
+                    overflow: hidden;
                 }
                 &__wrap__thumbnail {
                     position: relative;
@@ -348,38 +367,38 @@
                     }
                 }
                 .slider__item {
-                    float: left;
-                    @include breakpoint(1024px) {
-                        width: 940px;
-                    }
-                    img {
-                        width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    @include opacity(0);
+                    @include transition(all 0.3s);
+                    z-index: 0;
+                    &.active {
+                        @include opacity(1);
+                        z-index: 2;
                     }
                     >span {
                         display: block;
-                        padding-top: 30px;
-                        padding-bottom: 30px;
+                        padding-top: 0.4em;
+                        padding-bottom: 1.4em;
                         color: $secondary;
                         font-size: 0.875rem;
-                        @include breakpoint(1024px) {
-                            padding-top: 50px;
-                            padding-bottom: 50px;
-                        }
                         @include breakpoint (max-width 767px) {
                             padding-left: 20px;
                             padding-right: 20px;
                         }
                         span {
                             display: block;
-                            &.h1 {
-                                color: $surface;
-                            }
                         }
                     }
                 }
             }
             &--column {
                 .slider {
+                    &__wrap {
+                        height: calc(100vh - 70px);
+                    }
                     &__navi {
                         .icon-btn {
                             width: 30px;
@@ -393,6 +412,31 @@
                         }
                     }
                     .slider__item {
+                        >img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        &::before {
+                            @extend %before-after;
+                            position: absolute;
+                            width: 100%;
+                            height: 200px;
+                            @include filter-gradient(rgba($black,
+                            0),
+                            $black,
+                            vertical);
+                            @include background-image(linear-gradient(top,
+                            rgba($black,
+                            0) 0%,
+                            $black 100%));
+                            @include opacity(0.75);
+                            @include transition(all 0.3s);
+                            z-index: 2;
+                        }
                         &::after {
                             @extend %before-after;
                             position: absolute;
@@ -400,6 +444,19 @@
                             height: 100%;
                             background-image: url('https://www.cw.com.tw/assets_new/img/dot.png');
                             z-index: 1;
+                        }
+                        &:hover {
+                            &::before {
+                                @include opacity(1);
+                            }
+                        }
+                        >span {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            @include breakpoint(1024px) {
+                                padding-top: 50px;
+                                padding-bottom: 50px;
+                            }
                         }
                     }
                     .slider__title {
@@ -410,7 +467,7 @@
                             overflow: hidden;
                         }
                         .h1 {
-                            color: $white;
+                            color: $surface;
                             font-weight: 400;
                         }
                         .h2 {
@@ -425,6 +482,7 @@
                             left: 50%;
                             width: auto;
                             max-width: none;
+                            height: calc(100vh - 70px);
                             filter: blur(7px) brightness(75%) contrast(125%);
                             @include translateX(-50%);
                             z-index: -2;
@@ -435,44 +493,11 @@
             &--column2 {
                 .slider {
                     .slider__item {
-                        position: relative;
                         display: flex;
                         align-items: flex-end;
                         height: calc(100vh - 70px);
-                        >img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
                         span {
                             display: block;
-                        }
-                        &::before {
-                            @extend %before-after;
-                            position: absolute;
-                            width: 100%;
-                            @include opacity(0.5);
-                            @include transition(opacity 0.3s);
-                            @include filter-gradient(rgba($black,
-                            0.5),
-                            $black,
-                            horizontal);
-                            @include background-image(linear-gradient(left,
-                            $black 0%,
-                            rgba($black,
-                            0.5) 100%));
-                            z-index: 1;
-                            @include breakpoint(1024px) {
-                                height: 100%;
-                            }
-                        }
-                        &:hover {
-                            &::before {
-                                @include opacity(0.75);
-                            }
                         }
                         .slider__title {
                             >* {
@@ -502,25 +527,9 @@
             &--column1 {
                 .slider {
                     .slider__item {
-                        position: relative;
                         display: flex;
                         align-items: flex-end;
                         height: calc(100vh - 70px);
-                        &::before {
-                            @extend %before-after;
-                            position: absolute;
-                            width: 100%;
-                            height: 200px;
-                            @include filter-gradient(rgba($black,
-                            0),
-                            $black,
-                            vertical);
-                            @include background-image(linear-gradient(top,
-                            rgba($black,
-                            0) 0%,
-                            $black 100%));
-                            z-index: 2;
-                        }
                         >img {
                             position: absolute;
                             top: 0;

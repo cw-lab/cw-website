@@ -1,9 +1,14 @@
 @import "_basic";
 @import "_sheet";
 .feature__page {
-	nav.menubar--sub2 ul.menubar__user::before {
-		width: 1px;
-		height: 1rem;
+	nav.menubar--sub2 {
+		ul.menubar__user::before {
+			width: 1px;
+			height: 1rem;
+			@include breakpoint(max-width 1023px) {
+				background-color: transparent;
+			}
+		}
 	}
 	header {
 		position: relative;
@@ -25,9 +30,57 @@
 				@extend %list-reset;
 				display: flex;
 				font-size: 2em;
+				@include breakpoint(max-width 1023px) {
+					position: fixed;
+					flex-direction: column;
+					transform: initial;
+					@include opacity(0);
+				}
 				li {
-					+ li {
-						margin-left: 1rem;
+					+li {
+						@include breakpoint(1024px) {
+							margin-left: 1rem;
+						}
+						@include breakpoint(max-width 1023px) {
+							margin-top: 0.5rem;
+						}
+					}
+					>a.sns {
+						display: block;
+						@include breakpoint(1024px) {
+							width: 1em;
+							height: 1em;
+							@include background-size(1em);
+						}
+						@include breakpoint(max-width 1023px) {
+							width: 1.4em;
+							height: 1.4em;
+							@include background-size(1.4em);
+						}
+						background-position: center;
+						background-repeat: no-repeat;
+						&-facebook {
+							@include breakpoint(1024px) {
+								background-image: url('../images/common/facebook--secondary.svg')
+							}
+							@include breakpoint(max-width 1023px) {
+								background-image: url('../images/common/facebook--brand.svg')
+							}
+							&:hover {
+								background-image: url('../images/common/facebook--brand.svg')
+							}
+						}
+						&-line {
+							@include breakpoint(1024px) {
+								background-image: url('../images/common/line--secondary.svg')
+							}
+							@include breakpoint(max-width 1023px) {
+								background-image: url('../images/common/line--brand.svg')
+							}
+							&:hover {
+								background-image: url('../images/common/line--brand.svg')
+							}
+						}
 					}
 				}
 			}

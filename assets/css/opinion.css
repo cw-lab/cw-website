@@ -1793,6 +1793,10 @@ footer p a:hover {
 .feature__page header .flex {
   align-items: center;
 }
+.feature__page header .flex a.logo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .feature__page header .flex a.logo img {
   height: 40px;
 }

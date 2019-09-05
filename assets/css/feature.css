@@ -13,6 +13,11 @@
   width: 1px;
   height: 1rem;
 }
+@media (max-width: 1023px) {
+  .feature__page nav.menubar--sub2 ul.menubar__user::before {
+    background-color: transparent;
+  }
+}
 .feature__page header {
   position: relative;
   background-color: #fff;
@@ -37,8 +42,75 @@
   display: flex;
   font-size: 2em;
 }
-.feature__page header .flex .sns__group li + li {
-  margin-left: 1rem;
+@media (max-width: 1023px) {
+  .feature__page header .flex .sns__group {
+    position: fixed;
+    flex-direction: column;
+    transform: initial;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .feature__page header .flex .sns__group li + li {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 1023px) {
+  .feature__page header .flex .sns__group li + li {
+    margin-top: 0.5rem;
+  }
+}
+.feature__page header .flex .sns__group li > a.sns {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1024px) {
+  .feature__page header .flex .sns__group li > a.sns {
+    width: 1em;
+    height: 1em;
+    -moz-background-size: 1em;
+    -o-background-size: 1em;
+    -webkit-background-size: 1em;
+    background-size: 1em;
+  }
+}
+@media (max-width: 1023px) {
+  .feature__page header .flex .sns__group li > a.sns {
+    width: 1.4em;
+    height: 1.4em;
+    -moz-background-size: 1.4em;
+    -o-background-size: 1.4em;
+    -webkit-background-size: 1.4em;
+    background-size: 1.4em;
+  }
+}
+@media (min-width: 1024px) {
+  .feature__page header .flex .sns__group li > a.sns-facebook {
+    background-image: url("../images/common/facebook--secondary.svg");
+  }
+}
+@media (max-width: 1023px) {
+  .feature__page header .flex .sns__group li > a.sns-facebook {
+    background-image: url("../images/common/facebook--brand.svg");
+  }
+}
+.feature__page header .flex .sns__group li > a.sns-facebook:hover {
+  background-image: url("../images/common/facebook--brand.svg");
+}
+@media (min-width: 1024px) {
+  .feature__page header .flex .sns__group li > a.sns-line {
+    background-image: url("../images/common/line--secondary.svg");
+  }
+}
+@media (max-width: 1023px) {
+  .feature__page header .flex .sns__group li > a.sns-line {
+    background-image: url("../images/common/line--brand.svg");
+  }
+}
+.feature__page header .flex .sns__group li > a.sns-line:hover {
+  background-image: url("../images/common/line--brand.svg");
 }
 .feature__page header > .container-fluid {
   border-bottom: 1px solid #EEEEEE;

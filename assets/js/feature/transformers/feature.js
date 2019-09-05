@@ -131,6 +131,8 @@ $(function() {
 		}
 		$slider_navi_next.click(switch_next_horizon);
 		$slider_navi_prev.click(switch_prev_horizon);
+		$slider_navi_next.css('top', ($slider_item.children('img').outerHeight() / 2));
+		$slider_navi_prev.css('top', ($slider_item.children('img').outerHeight() / 2));
 	}
 	$(".slideshow").each(slideshow);
 	$("p.preface").each(function() {

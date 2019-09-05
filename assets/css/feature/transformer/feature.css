@@ -208,35 +208,19 @@ a.btn[disabled].btn--animate {
   color: #48545D;
 }
 
-@media (min-width: 1024px) {
-  .feature__page nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a {
-    color: #fff;
-  }
-}
 .feature__page nav.menubar--sub2 ul.menubar__user::before {
   width: 1px;
   height: 1rem;
-  background-color: transparent;
-}
-@media (min-width: 1024px) {
-  .feature__page nav.menubar--sub2 ul.menubar__user::before {
-    background-color: #fff;
-  }
 }
 @media (max-width: 1023px) {
-  .feature__page header {
-    position: relative;
-    background-color: #fff;
+  .feature__page nav.menubar--sub2 ul.menubar__user::before {
+    background-color: transparent;
   }
 }
-@media (min-width: 1024px) {
-  .feature__page header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-  }
+.feature__page header {
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
 }
 .feature__page header .flex {
   align-items: center;
@@ -265,16 +249,6 @@ a.btn[disabled].btn--animate {
 }
 .feature__page header .flex .logoSet a.channelLogo img {
   width: 60px;
-}
-@media (max-width: 1023px) {
-  .feature__page header .flex .logoSet a.channelLogo img.channelLogo--white {
-    display: none;
-  }
-}
-@media (min-width: 1024px) {
-  .feature__page header .flex .logoSet a.channelLogo img.channelLogo--dark {
-    display: none;
-  }
 }
 @media (min-width: 1024px) {
   .feature__page header .flex .logoSet a.channelLogo img {
@@ -331,7 +305,7 @@ a.btn[disabled].btn--animate {
 }
 @media (min-width: 1024px) {
   .feature__page header .flex .sns__group li > a.sns-facebook {
-    background-image: url("../../../images/common/facebook--white.svg");
+    background-image: url("../../../images/common/facebook--secondary.svg");
   }
 }
 @media (max-width: 1023px) {
@@ -344,7 +318,7 @@ a.btn[disabled].btn--animate {
 }
 @media (min-width: 1024px) {
   .feature__page header .flex .sns__group li > a.sns-line {
-    background-image: url("../../../images/common/line--white.svg");
+    background-image: url("../../../images/common/line--secondary.svg");
   }
 }
 @media (max-width: 1023px) {
@@ -354,6 +328,9 @@ a.btn[disabled].btn--animate {
 }
 .feature__page header .flex .sns__group li > a.sns-line:hover {
   background-image: url("../../../images/common/line--brand.svg");
+}
+.feature__page header > .container-fluid {
+  border-bottom: 1px solid #D3D5D7;
 }
 .feature__page header .container {
   max-width: 1260px;

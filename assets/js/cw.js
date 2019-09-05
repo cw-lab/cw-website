@@ -88,7 +88,7 @@ $(function() {
             $slider_item.css({
                 "width": slider_item_width
             });
-            console.log(slider_item_width);
+            // console.log(slider_item_width);
             $sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
 
             function switch_next() {

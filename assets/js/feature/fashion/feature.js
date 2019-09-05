@@ -131,11 +131,13 @@ $(function() {
 		}
 		$slider_navi_next.click(switch_next_horizon);
 		$slider_navi_prev.click(switch_prev_horizon);
+		$slider_navi_next.css('top', ($slider_item.children('img').outerHeight() / 2));
+		$slider_navi_prev.css('top', ($slider_item.children('img').outerHeight() / 2));
 	}
 	$(".slideshow").each(slideshow);
 	$("p.preface").each(function() {
 		var preface_height = $(this).outerHeight();
-		console.log(preface_height);
+		// console.log(preface_height);
 		if ((preface_height > 162) && (width < 1024)) {
 			$(this).addClass('hidden');
 			$(this).after('<button class="btn btn--outlined btn--preface">展開</button>');
@@ -150,10 +152,11 @@ $(function() {
 			"top": height - 115 - $('.message--banner').outerHeight()
 		}, 20);
 	}
-	$(window).resize(function() {
-	});
 	$(window).scroll(function() {
-		var scroll = $(window).scrollTop();
+		var width = $(window).width(),
+			scroll = $(window).scrollTop(),
+			container = $(".header__logo .container").outerWidth();
+		menubarSub(width, container);
 		if (width < 1024) {
 			$("nav .sns__group").css({
 				"top": scroll + height - 115 - $('.message--banner').outerHeight()

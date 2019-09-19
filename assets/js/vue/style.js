@@ -21,14 +21,9 @@ $(function(){
 		});
 	}
 	pageScroll();
-	$("aside").load("aside.html", function(){
+	$("aside").load("vue-aside.html", function(){
 		$('a[href*="' + (url.slice(url.lastIndexOf('/') + 1)) + '"]').parent().addClass('now');
 		pageScroll();
-		$('.hamburger').click(function() {
-			$('.componentsList').toggleClass('opend');
-			$('body').toggleClass('opend');
-			console.log('a');
-		});
 	});
 	$("footer").load("footer.html");
 	$("span.detail").each(function(){

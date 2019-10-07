@@ -14,320 +14,337 @@
 @import "_selection";
 @import "_message";
 header {
-	.container {
-		> .flex {
-			padding-top: 10px;
-			padding-bottom: 10px;
-			align-items: center;
-		}
-	}
-	ul {
-		&.member__list {
-			position: relative;
-			padding-left: 0.5rem;
-			@include breakpoint(414px) {
-				padding-left: 1rem;
-			}
-			&--desktop {
-				@include breakpoint(max-width 767px) {
-					display: none;
-				}
-			}
-			+ .member__list {
-				margin-left: 1rem;
-				&::before {
-					@extend %before-after;
-					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 1px;
-					height: 100%;
-					background-color: $gray-200;
-					@include translateY(-50%);
-					@include breakpoint(max-width 767px) {
-						display: none;
-					}
-				}
-			}
-			li {
-				@include breakpoint(max-width 350px) {
-					&.login {
-						display: none;
-					}
-				}
-			}
-			a {
-				display: block;
-				padding: 0 0.5rem;
-				color: $text;
-				@include breakpoint(414px) {
-					padding: 0 1rem;
-				}
-				&:hover {
-					color: $primary;
-				}
-			}
-		}
-	}
+    .container {
+        >.flex {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+        }
+    }
+    ul {
+        &.member__list {
+            position: relative;
+            padding-left: 0.5rem;
+            @include breakpoint(414px) {
+                padding-left: 1rem;
+            }
+            &--desktop {
+                @include breakpoint(max-width 767px) {
+                    display: none;
+                }
+            }
+            +.member__list {
+                margin-left: 1rem;
+                &::before {
+                    @extend %before-after;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: $gray-200;
+                    @include translateY(-50%);
+                    @include breakpoint(max-width 767px) {
+                        display: none;
+                    }
+                }
+            }
+            li {
+                @include breakpoint(max-width 350px) {
+                    &.login {
+                        display: none;
+                    }
+                }
+            }
+            a {
+                display: block;
+                padding: 0 0.5rem;
+                color: $text;
+                @include breakpoint(414px) {
+                    padding: 0 1rem;
+                }
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
 }
+
 main {
-	justify-content: space-between;
+    justify-content: space-between;
 }
+
 footer {
-	padding-top: 30px;
-	padding-bottom: 20px;
-	font-size: 0.8125rem;
-	background-color: $gray-100;
-	@include breakpoint(768px) {
-		padding-top: 50px;
-		padding-bottom: 50px;
-	}
-	@include breakpoint(max-width 767px) {
-		> .container > .flex {
-			flex-direction: column;
-		}
-	}
-	a {
-		color: $text;
-		&:hover {
-			color: $primary;
-		}
-	}
-	.copyright {
-		@include breakpoint(768px) {
-			width: calc(100% - 460px);
-		}
-		@include breakpoint(max-width 767px) {
-			order: 2;
-		}
-		&__cwlink {
-			margin-bottom: 1.5em;
-			margin-right: -275px;
-			@include breakpoint(max-width 767px) {
-				display: none;
-			}
-			li {
-				padding: 0 1em;
-				line-height: 1;
-				border-left: 1px solid $text;
-				&:first-child {
-					padding-left: 0;
-					border-left: 0;
-				}
-			}
-		}
-		&__contact {
-			span {
-				display: block;
-				padding-right: 1em;
-				@include breakpoint(768px) {
-					display: inline-block;
-				}
-				@include breakpoint(max-width 767px) {
-					&:nth-child(4) {
-						margin-top: 1em;
-					}
-				}
-			}
-		}
-	}
-	.imglink {
-		align-items: flex-end;
-		@include breakpoint(768px) {
-			width: 410px;
-		}
-		@include breakpoint(max-width 767px) {
-			order: 1;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		&__sns {
-			font-size: 30px;
-			li {
-				margin-left: 0.33333em;
-				line-height: 1;
-				&:first-child {
-					margin-left: 0;
-				}
-				a {
-					text-decoration: none;
-				}
-			}
-		}
-		&__app {
-			@include breakpoint(768px) {
-				margin-left: 1em;
-			}
-			@include breakpoint(max-width 767px) {
-				margin-top: 1em;
-				margin-bottom: 1em;
-			}
-			&__title {
-				margin-bottom: 0.5em;
-				@include breakpoint(768px) {
-					margin-bottom: 0.75em;
-					text-align: center;
-				}
-			}
-			&__img {
-				li + li {
-					margin-left: 0.5em;
-				}
-			}
-		}
-	}
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 0.8125rem;
+    background-color: $gray-100;
+    @include breakpoint(768px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    @include breakpoint(max-width 767px) {
+        >.container>.flex {
+            flex-direction: column;
+        }
+    }
+    a {
+        color: $text;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .copyright {
+        @include breakpoint(768px) {
+            width: calc(100% - 460px);
+        }
+        @include breakpoint(max-width 767px) {
+            order: 2;
+        }
+        &__cwlink {
+            margin-bottom: 1.5em;
+            margin-right: -275px;
+            @include breakpoint(max-width 767px) {
+                display: none;
+            }
+            li {
+                padding: 0 1em;
+                line-height: 1;
+                border-left: 1px solid $text;
+                &:first-child {
+                    padding-left: 0;
+                    border-left: 0;
+                }
+            }
+        }
+        &__contact {
+            span {
+                display: block;
+                padding-right: 1em;
+                @include breakpoint(768px) {
+                    display: inline-block;
+                }
+                @include breakpoint(max-width 767px) {
+                    &:nth-child(4) {
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+    }
+    .imglink {
+        align-items: flex-end;
+        @include breakpoint(768px) {
+            width: 410px;
+        }
+        @include breakpoint(max-width 767px) {
+            order: 1;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__sns {
+            font-size: 30px;
+            li {
+                margin-left: 0.33333em;
+                line-height: 1;
+                &:first-child {
+                    margin-left: 0;
+                }
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+        &__app {
+            @include breakpoint(768px) {
+                margin-left: 1em;
+            }
+            @include breakpoint(max-width 767px) {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+            &__title {
+                margin-bottom: 0.5em;
+                @include breakpoint(768px) {
+                    margin-bottom: 0.75em;
+                    text-align: center;
+                }
+            }
+            &__img {
+                li+li {
+                    margin-left: 0.5em;
+                }
+            }
+        }
+    }
 }
+
 .ad {
-	background-color: $white;
-	a {
-		display: block;
-		width: 100%;
-	}
-	img {
-		max-width: 100%;
-		height: auto;
-		margin: auto;
-	}
+    background-color: $white;
+    a {
+        display: block;
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+    }
 }
+
 .container {
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	@include breakpoint(1024px) {
-		width: 950px;
-	}
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(1024px) {
+        width: 950px;
+    }
 }
+
 .index__page {
-	.container {
-		@include breakpoint(1024px) {
-			width: 1000px;
-		}
-		@include breakpoint(1280px) {
-			width: 1140px;
-		}
-		@include breakpoint(1366px) {
-			width: 1280px;
-		}
-	}
+    .container {
+        @include breakpoint(1024px) {
+            width: 1000px;
+        }
+        @include breakpoint(1280px) {
+            width: 1140px;
+        }
+        @include breakpoint(1366px) {
+            width: 1280px;
+        }
+    }
 }
+
 p {
-	font-size: 1em;
-	&.emphasis {
-		color: $secondary;
-		&--small {
-			font-size: 0.875em;
-		}
-	}
+    font-size: 1em;
+    &.emphasis {
+        color: $secondary;
+        a {
+            color: $secondary;
+            &:hover {
+                color: $secondary-variant;
+            }
+        }
+        &--small {
+            font-size: 0.875em;
+        }
+    }
 }
+
 hr {
-	margin-top: 2em;
-	margin-bottom: 1em;
-	border-width: 0 0 1px;
-	border-style: solid;
-	border-color: $gray-100;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $gray-100;
 }
+
 .link-btn {
-	color: $surface;
-	text-decoration: underline;
-	cursor: pointer;
-	&:hover {
-		color: $primary;
-	}
+    color: $surface;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+        color: $primary;
+    }
 }
+
 .loader {
-	position: fixed;
-	// display: none;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 100;
-	&::before {
-		@extend %before-after;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: rgba($black, 0.5);
-	}
-	&__text {
-		color: $white;
-		font-size: 0.75em;
-		font-weight: 500;
-	}
-	&__animate {
-		display: block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		@include translate(-50%, -50%);
-	}
-	&__icon {
-		position: relative;
-		width: 50px;
-		height: 50px;
-		margin: auto;
-		&::before, &::after {
-			@extend %before-after;
-			position: absolute;
-			top: 15px;
-			width: 20px;
-			height: 20px;
-			@include border-radius(50%);
-		}
-		&::before {
-			background: linear-gradient(90deg, $surface, darken($surface, 5%));
-			animation: rotation1 1s linear infinite
-		}
-		&::after {
-			background: linear-gradient(90deg, $primary, $primary-variant);
-			animation: rotation2 1s linear infinite
-		}
-	}
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    &::before {
+        @extend %before-after;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+    }
+    &__text {
+        color: $white;
+        font-size: 0.75em;
+        font-weight: 500;
+    }
+    &__animate {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+    }
+    &__icon {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        &::before,
+        &::after {
+            @extend %before-after;
+            position: absolute;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            @include border-radius(50%);
+        }
+        &::before {
+            background: linear-gradient(90deg, $surface, darken($surface, 5%));
+            animation: rotation1 1s linear infinite
+        }
+        &::after {
+            background: linear-gradient(90deg, $primary, $primary-variant);
+            animation: rotation2 1s linear infinite
+        }
+    }
 }
+
 .separation {
-	position: relative;
-	width: 100%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	> * {
-		position: relative;
-	}
-	&--or {
-		&::before {
-			@extend %before-after;
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			height: 1px;
-			background-color: $gray-200;
-		}
-		span {
-			display: table;
-			margin-left: auto;
-			margin-right: auto;
-			padding-left: 1.5em;
-			padding-right: 1.5em;
-			background-color: $white;
-		}
-	}
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    >* {
+        position: relative;
+    }
+    &--or {
+        &::before {
+            @extend %before-after;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: $gray-200;
+        }
+        span {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            background-color: $white;
+        }
+    }
 }
+
 @keyframes rotation1 {
-	from {
-		left: 5px;
-		z-index: 1;
-	}
-
-	to {
-		left: 25px;
-	}
+    from {
+        left: 5px;
+        z-index: 1;
+    }
+    to {
+        left: 25px;
+    }
 }
-@keyframes rotation2 {
-	from {
-		right: 5px;
-	}
 
-	to {
-		right: 25px;
-	}
+@keyframes rotation2 {
+    from {
+        right: 5px;
+    }
+    to {
+        right: 25px;
+    }
 }

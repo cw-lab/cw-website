@@ -2899,7 +2899,7 @@ a.btn[disabled].btn--animate {
 }
 @media (min-width: 970px) {
   .message--banner .message__container {
-    padding: 30px 10px;
+    padding: 30px;
     flex-direction: row;
   }
 }
@@ -3238,6 +3238,12 @@ p {
 }
 p.emphasis {
   color: #939EA7;
+}
+p.emphasis a {
+  color: #939EA7;
+}
+p.emphasis a:hover {
+  color: #48545D;
 }
 p.emphasis--small {
   font-size: 0.875em;

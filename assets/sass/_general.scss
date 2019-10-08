@@ -11,118 +11,166 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
-ul, ol {
-	padding-left: 1.15em;
+ul,
+ol {
+    padding-left: 1.15em;
 }
+
 .mtb0 {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
+
 .mt0-mb1 {
-	margin-top: 0 !important;
-	margin-bottom: 1em !important;
+    margin-top: 0 !important;
+    margin-bottom: 1em !important;
 }
+
 .mt0-mb05 {
-	margin-top: 0 !important;
-	margin-bottom: 0.5em !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.5em !important;
 }
+
 .mb0 {
-	margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
+
 .mt0 {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
 }
+
 .mt40 {
-	margin-top: 40px !important;
+    margin-top: 40px !important;
 }
+
 .mb40 {
-	margin-bottom: 40px !important;
+    margin-bottom: 40px !important;
 }
+
 .mt10-mb20 {
-	margin-top: 10px !important;
-	margin-bottom: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
 }
+
 .mt20-mb10 {
-	margin-top: 20px !important;
-	margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
 }
+
 .mt20-mb0 {
-	margin-top: 20px !important;
-	margin-bottom: 0px !important;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
 }
+
 .pt10 {
-	padding-top: 10px !important;
+    padding-top: 10px !important;
 }
+
 .pb10 {
-	padding-bottom: 10px !important;
+    padding-bottom: 10px !important;
 }
+
+.m0 {
+    margin: 0;
+}
+
+.ptb0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.p10 {
+    padding: 10px;
+}
+
 .list-reset {
-	@extend %list-reset;
+    @extend %list-reset;
 }
+
 .justify-between {
-	justify-content: space-between;
+    justify-content: space-between;
 }
+
 .flex {
-	@include breakpoint(768px) {
-		&-md {
-			display: flex;
-		}
-	}
-	@include breakpoint(1024px) {
-		&-lg {
-			display: flex;
-		}
-	}
-	@include breakpoint(1280px) {
-		&-xl {
-			display: flex;
-		}
-	}
+    @include breakpoint(768px) {
+        &-md {
+            display: flex;
+        }
+    }
+    @include breakpoint(1024px) {
+        &-lg {
+            display: flex;
+        }
+    }
+    @include breakpoint(1280px) {
+        &-xl {
+            display: flex;
+        }
+    }
 }
+
 html {
-	font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-size-adjust: 100%;
-	text-rendering: optimizeLegibility;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
 }
-button, input, optgroup, select, textarea {
-	font-family: inherit;
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
 }
+
 .sr-only {
-	position: absolute!important;
-	padding: 0!important;
-	margin: 0!important;
-	width: 0!important;
-	height: 0!important;
-	font-size: 0!important;
+    position: absolute!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: 0!important;
+    height: 0!important;
+    font-size: 0!important;
 }
-*, *::before, *::after {
-	@include box-sizing(border-box);
+
+*,
+*::before,
+*::after {
+    @include box-sizing(border-box);
 }
+
 body {
-	font-family: Roboto, 'Noto Sans TC', sans-serif;
+    font-family: Roboto, 'Noto Sans TC', sans-serif;
 }
+
 .serif {
-	font-family: 'Roboto Slab', 'Noto Serif TC', serif;
+    font-family: 'Roboto Slab', 'Noto Serif TC', serif;
 }
+
 a {
-	text-decoration: none;
-	@include breakpoint(1024px) {
-		transition: color .2s, background-color .2s;
-	};
+    text-decoration: none;
+    @include breakpoint(1024px) {
+        transition: color .2s, background-color .2s;
+    }
+    ;
 }
+
 img {
-	display: block;
+    display: block;
 }
-.clearfix, .clearfix::before, .clearfix::after {
-	display: table;
-	clear: both;
+
+.clearfix,
+.clearfix::before,
+.clearfix::after {
+    display: table;
+    clear: both;
 }
+
 .flex {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }

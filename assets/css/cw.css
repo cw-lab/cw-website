@@ -205,7 +205,8 @@ th {
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 1.15em;
 }
 
@@ -263,6 +264,19 @@ ul, ol {
   padding-bottom: 10px !important;
 }
 
+.m0 {
+  margin: 0;
+}
+
+.ptb0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.p10 {
+  padding: 10px;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -291,7 +305,11 @@ html {
   text-rendering: optimizeLegibility;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
 }
 
@@ -304,7 +322,9 @@ button, input, optgroup, select, textarea {
   font-size: 0 !important;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -331,7 +351,9 @@ img {
   display: block;
 }
 
-.clearfix, .clearfix::before, .clearfix::after {
+.clearfix,
+.clearfix::before,
+.clearfix::after {
   display: table;
   clear: both;
 }
@@ -342,14 +364,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.margin-0 {
-  margin: 0;
-}
-
-.p-10 {
-  padding: 10px;
 }
 
 .bg-red-100 {
@@ -1701,17 +1715,20 @@ nav.menubar--belt--third > ul > li > ul {
   background-color: #171717;
 }
 
-input, select {
+input,
+select {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-input::-ms-expand, select::-ms-expand {
+input::-ms-expand,
+select::-ms-expand {
   display: none;
 }
-input:focus, select:focus {
+input:focus,
+select:focus {
   outline: 0;
 }
 
@@ -1824,13 +1841,21 @@ form .form__group--hasicon i.icon {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-form .form__group--correct .form__group__placeholder, form .form__group--correct .icon {
+form .form__group--correct .form__group__placeholder,
+form .form__group--correct .icon,
+form .form__group--correct .form__group__help--highlight {
+  color: #003a9f !important;
+}
+form .form__group--correct .form__group__placeholder,
+form .form__group--correct .icon {
   color: #003a9f;
 }
 form .form__group--correct .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--error .form__group__placeholder, form .form__group--error .icon, form .form__group--error .form__group__help--highlight {
+form .form__group--error .form__group__placeholder,
+form .form__group--error .icon,
+form .form__group--error .form__group__help--highlight {
   color: #D60C18 !important;
 }
 form .form__group--error .form__group__input {
@@ -1846,10 +1871,12 @@ form .form__group--undone .form__group__placeholder {
 form .form__group--undone .form__group__input {
   border-color: #D60C18;
 }
-form .form__group--undone:hover .form__group__placeholder, form .form__group--undone .hasValue .form__group__placeholder {
+form .form__group--undone:hover .form__group__placeholder,
+form .form__group--undone .hasValue .form__group__placeholder {
   color: #003a9f;
 }
-form .form__group--undone:hover .form__group__input, form .form__group--undone .hasValue .form__group__input {
+form .form__group--undone:hover .form__group__input,
+form .form__group--undone .hasValue .form__group__input {
   border-color: #003a9f;
 }
 form .form__group--disabled > * {

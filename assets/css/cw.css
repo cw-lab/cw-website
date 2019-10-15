@@ -3040,7 +3040,7 @@ a.btn[disabled].btn--animate {
   z-index: -1;
 }
 
-header .container > .flex {
+header .container-fluid > .flex {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;

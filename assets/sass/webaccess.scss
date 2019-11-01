@@ -448,13 +448,14 @@
 			&__header {
 				position: relative;
 				padding: 0.65em 1.125em;
+				cursor: pointer;
 				@include transition(background-color, 0.3s);
 				&::before,
 				&::after {
 					@extend %before-after;
 					clear: both;
 				}
-				&.active {
+				&.active, &:hover {
 					color: $primary;
 				}
 				span {

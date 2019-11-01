@@ -190,7 +190,7 @@
 }
 @media (min-width: 768px) {
   .feature__page section .card__item {
-    width: calc( (100% - 50px) / 3 );
+    width: calc( (100% - 50px) / 3);
     margin-left: 25px;
     margin-bottom: 50px;
   }
@@ -447,19 +447,16 @@
 .feature__page section .slideshow .slider__wrap::before, .feature__page section .slideshow .slider__wrap::after {
   clear: both;
 }
-@media (max-width: 1023px) {
-  .feature__page section .slideshow .slider__thumbnail {
-    overflow: scroll;
-  }
-}
-@media (min-width: 1024px) {
-  .feature__page section .slideshow .slider__thumbnail {
-    overflow: hidden;
-  }
+.feature__page section .slideshow .slider__thumbnail {
+  overflow: hidden;
 }
 .feature__page section .slideshow .slider__wrap__thumbnail {
   position: relative;
   font-size: 0;
+  -moz-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
 }
 @media (max-width: 1023px) {
   .feature__page section .slideshow .slider__wrap__thumbnail {
@@ -485,14 +482,16 @@
   background-color: #171717;
 }
 .feature__page section .slideshow .slider__wrap__thumbnail li .thumbnail__img img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .feature__page section .slideshow .slider__wrap__thumbnail li.active .thumbnail__img img {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
 .feature__page section .slideshow .slider .slider__item {
   float: left;

@@ -210,6 +210,14 @@ ol {
   padding-left: 1.15em;
 }
 
+.upper-latin {
+  list-style-type: upper-alpha;
+}
+
+.disc {
+  list-style-type: disc;
+}
+
 .mtb0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -235,6 +243,10 @@ ol {
 
 .mt40 {
   margin-top: 40px !important;
+}
+
+.mb30 {
+  margin-bottom: 30px !important;
 }
 
 .mb40 {
@@ -281,6 +293,10 @@ ol {
   justify-content: space-between;
 }
 
+.align-items-center {
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   .flex-md {
     display: flex;
@@ -295,14 +311,6 @@ ol {
   .flex-xl {
     display: flex;
   }
-}
-
-html {
-  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
 }
 
 button,
@@ -611,6 +619,13 @@ h5 .heading__icon--error, .h5 .heading__icon--error {
   color: #D60C18;
 }
 
+h1, .h1 {
+  color: #171717;
+  font-size: 32px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
 h2, .h2 {
   color: #171717;
   font-size: 22px;
@@ -702,18 +717,9 @@ ul.keyword li a:hover {
   color: #9D0505;
 }
 
-body:not(.article__page) h1, body:not(.article__page) .h1, body:not(.feature__page) h1, body:not(.feature__page) .h1 {
-  color: #171717;
-  font-size: 28px;
-  line-height: 1.5;
-}
-body:not(.article__page) main p, body:not(.feature__page) main p {
+body:not(.feature__page) main p {
   font-size: 1rem;
   line-height: 1.6;
-}
-body.feature__page main p, body.feature__page main p {
-  font-size: 1.125rem;
-  line-height: 1.8;
 }
 body.feature__page h1, body.feature__page .h1 {
   color: #171717;
@@ -735,10 +741,9 @@ body.feature__page h2, body.feature__page .h2 {
     font-size: 24px;
   }
 }
-body.article__page h1, body.article__page .h1 {
-  color: #171717;
-  font-size: 32px;
-  line-height: 1.5;
+body.feature__page main p {
+  font-size: 1.125rem;
+  line-height: 1.8;
 }
 
 @font-face {
@@ -774,7 +779,7 @@ i.icon {
 
 body.chrome i.icon:before {
   display: inline;
-  vertical-align: sub;
+  vertical-align: middle;
   line-height: 0;
 }
 
@@ -3040,7 +3045,7 @@ a.btn[disabled].btn--animate {
   z-index: -1;
 }
 
-header .container-fluid > .flex {
+header > .container-fluid > .flex, header > .container > .flex {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;

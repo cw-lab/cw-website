@@ -1,3 +1,8 @@
+.member__page--authorize form .authorize__data ul li + li::before {
+  content: '';
+  display: block;
+}
+
 html {
   height: 100%;
   min-height: 100%;
@@ -7,25 +12,37 @@ html {
   height: 100%;
   min-height: 100%;
 }
-.member__page--authorize.flex {
-  align-items: center;
-  justify-content: center;
-}
 .member__page--authorize form {
+  position: relative;
   width: 100%;
   max-width: 768px;
-  padding-left: 20px;
-  padding-right: 20px;
+  height: calc(100% - 20px);
+  padding: 20px 20px 44px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+  overflow: scroll;
 }
 .member__page--authorize form p {
   font-weight: 500;
 }
-.member__page--authorize form .h5 {
-  color: #48545D;
-  font-weight: 400;
-  line-height: 1.5;
+.member__page--authorize form .btn {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: calc(100% - 40px);
+}
+.member__page--authorize form .authorize__data ul li {
+  position: relative;
+  padding: 11px 0 10px;
+}
+.member__page--authorize form .authorize__data ul li + li::before {
+  position: absolute;
+  top: 0;
+  left: -1.15em;
+  width: calc(100% + 1.15em);
+  height: 1px;
+  background-color: #D3D5D7;
 }
 .member__page--authorize .logo--circle {
   position: relative;

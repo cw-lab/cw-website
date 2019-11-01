@@ -43,6 +43,7 @@ $(function() {
 			thumbnail_item_width = $thumbnail_item.outerWidth(), //每張slide寬度
 			slider_count = $slider_item.length,
 			thumbnail_count = $thumbnail_item.length,
+			thumbnail_shot_count = Math.floor(slider_item_width / thumbnail_item_width),
 			slider_item_index = 0, //預宣告slide為0
 			index = 0;
 		if (slider_count <= 1) {
@@ -54,10 +55,9 @@ $(function() {
 			}, 5000)
 		}
 		if ($(this).hasClass("slideshow--curating")) {
-			$thumbnail_item.clone().appendTo($thumbnail_wrap);
 			$thumbnail_item.first().addClass('active');
 			$thumbnail_wrap.css({
-				"width": thumbnail_item_width * (thumbnail_count * 2) + 15 * (thumbnail_count * 2),
+				"width": (thumbnail_item_width * thumbnail_count) + (15 * (thumbnail_count - 1)),
 				"left": 0,
 			})
 			$thumbnail_wrap.children("li").click(function() {
@@ -117,16 +117,26 @@ $(function() {
 			switch_item_horizon();
 		}
 		function switch_item_horizon() {
-			$thumbnail_wrap.children("li.active").removeClass();
-			$thumbnail_wrap.children("li").eq(index).addClass("active");
-			if (width >= 1024) {
-				$thumbnail_wrap.css({
-					"left": -((thumbnail_item_width + 15) * index)
-				})
+			$thumbnail_item.removeClass('active').eq(index).addClass('active');
+			if (index >= (Math.floor(thumbnail_shot_count / 2))) {
+				if (width >= 1024) {
+					$thumbnail_wrap.css({
+						"left": -((thumbnail_item_width + 15) * (index - (Math.floor(thumbnail_shot_count / 2))))
+					});
+				} else {
+					$thumbnail_wrap.css({
+						"left": -((thumbnail_item_width + 10) * (index - (Math.floor(thumbnail_shot_count / 2))))
+					});
+				}
 			} else {
 				$thumbnail_wrap.css({
-					"left": -((thumbnail_item_width + 10) * index)
-				})
+					"left": 0
+				});
+			}
+			if (index >= (thumbnail_count - (Math.floor(thumbnail_shot_count / 2) + 1))) {
+				$thumbnail_wrap.css({
+					"left": $('.slider__thumbnail').outerWidth() - $thumbnail_wrap.outerWidth()
+				});
 			}
 		}
 		$slider_navi_next.click(switch_next_horizon);
@@ -152,8 +162,7 @@ $(function() {
 			"top": height - 115 - $('.message--banner').outerHeight()
 		}, 20);
 	}
-	$(window).resize(function() {
-	});
+	$(window).resize(function() {});
 	$(window).scroll(function() {
 		var scroll = $(window).scrollTop();
 		if (width < 1024) {

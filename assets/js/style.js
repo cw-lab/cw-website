@@ -30,6 +30,7 @@ $(function(){
 			console.log('a');
 		});
 	});
+	$("header").load("header.html");
 	$("footer").load("footer.html");
 	$("span.detail").each(function(){
 		$(this).children().html($(this).attr("data-val"));

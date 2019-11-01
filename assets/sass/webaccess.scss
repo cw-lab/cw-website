@@ -1,0 +1,461 @@
+@import "_basic";
+@import "_sheet";
+.bodyTouchBlock {
+	position: fixed;
+	width: 0%;
+	height: 0%;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	&.show {
+		width: 100%;
+		height: 100%;
+	}
+}
+.sideMenu {
+	position: fixed;
+	top: 0;
+	width: 318px;
+	height: 100%;
+	left: -100%;
+	font-size: 15px;
+	font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+	background-color: #777;
+	@include transition(.3s);
+	overflow: auto;
+	z-index: 10005;
+	@include breakpoint(max-width 767px) {
+		width: 80vw;
+		overflow: auto;
+	}
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	>ul>li {
+		+li a {
+			border-top: 1px solid #55565b;
+		}
+		padding: 0px 15px;
+		a {
+			display: block;
+			padding: 16px 0px;
+		}
+	}
+	.moreItem {
+		ul {
+			background-color: #666;
+			margin: 0 -15px;
+			padding: 0 15px 0 30px;
+			display: none;
+		}
+		>a {
+			display: block;
+			position: relative;
+			&:after {
+				content: url('https://www.cw.com.tw/assets_new/img/side_menu_arrow.png');
+				display: block;
+				position: absolute;
+				right: 10px;
+				top: 13px;
+				@include transition(.5s);
+				@include rotate(0deg);
+			}
+			&.open:after {
+				@include rotate(90deg);
+			}
+		}
+	}
+	.sideMenuMain {
+		line-height: 1;
+	}
+	.sideMenuSocial {
+		background-color: #4c4c4c;
+		li {
+			a {
+				padding-top: 6px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+	a {
+		color: #fff;
+	}
+	&.show {
+		left: 0;
+	}
+}
+.webaccess__page {
+	position: relative;
+	min-height: 100vh;
+	@include breakpoint(768px) {
+		padding-bottom: 225px;
+	}
+	.container {
+		&::before,
+		&::after {
+			@extend %before-after;
+			display: table;
+			clear: both;
+		}
+	}
+	h1 {
+		margin-bottom: 5px;
+		@include breakpoint(max-width 767px) {
+			font-size: 22px;
+		}
+	}
+	.h1 {
+		margin-bottom: 10px;
+		font-weight: 500;
+		@include breakpoint(max-width 767px) {
+			font-size: 22px;
+		}
+	}
+	p {
+		@include breakpoint(768px) {
+			font-size: 1.125rem !important;
+			span.mark {
+				display: block;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+			}
+		}
+	}
+	header {
+		border-bottom: 1px solid $gray-200;
+		.align-items-center {
+			a.logo {
+				margin-left: 10px;
+			}
+		}
+	}
+	main {
+		justify-content: center;
+		section {
+			padding-top: 40px;
+			padding-bottom: 40px;
+			@include breakpoint(768px) {
+				padding-top: 100px;
+				padding-bottom: 100px;
+			}
+			.container {
+				padding-left: 20px;
+				padding-right: 20px;
+				@include breakpoint(1024px) {
+					width: 784px;
+				}
+			}
+			&#edit,
+			&#award {
+				background-color: $gray;
+			}
+			&#edit .container {
+				@include breakpoint(max-width 767px) {
+					text-align: center;
+					a.btn {
+						margin-bottom: 40px;
+					}
+				}
+				@include breakpoint(768px) {
+					display: flex;
+					align-items: center;
+				}
+				@include breakpoint(1200px) {
+					width: 1080px;
+				}
+				.edit__text {
+					width: 100%;
+					@include breakpoint(768px) {
+						padding-right: 30px;
+						width: 320px;
+					}
+					@include breakpoint(1200px) {
+						padding-right: 50px;
+						width: 400px;
+					}
+				}
+				.edit__img {
+					width: 100%;
+					@include breakpoint(768px) {
+						width: calc(100% - 320px);
+					}
+					@include breakpoint(1200px) {
+						width: calc(100% - 400px);
+					}
+					img {
+						display: block;
+					}
+				}
+			}
+			&#faq .container {
+				@include breakpoint(max-width 374px) {
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+	.slideshow {
+		position: relative;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		@include breakpoint(1024px) {
+			overflow: hidden;
+		}
+		@include breakpoint(max-width 1023px) {
+			width: 240px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&::before {
+			@extend %before-after;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 240px;
+			height: 0;
+			padding-top: 480px;
+			background-image: url(../images/webaccess/phone.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			@include background-size(contain);
+			@include translateX(-50%);
+			z-index: 5;
+		}
+		.slider {
+			position: relative;
+			margin-left: auto;
+			margin-right: auto;
+			@include breakpoint(max-width 1023px) {
+				overflow: hidden;
+			}
+			&__navi {
+				position: absolute;
+				top: 50%;
+				@include translateY(-50%);
+				z-index: 5;
+				@include breakpoint(1024px) {
+					display: none;
+				}
+				&.slider__navi--prev {
+					right: 100%;
+					@include breakpoint(375px) {
+						right: 105%;
+					}
+					@include breakpoint(414px) {
+						right: 110%;
+					}
+				}
+				&.slider__navi--next {
+					left: 100%;
+					@include breakpoint(375px) {
+						left: 105%;
+					}
+					@include breakpoint(414px) {
+						left: 110%;
+					}
+				}
+				a.icon-btn {
+					width: 40px;
+					height: 60px;
+					color: $secondary;
+					@include breakpoint(1024px) {
+						width: 60px;
+						height: 80px;
+					}
+				}
+				&:hover a {
+					color: $surface;
+				}
+				i {
+					font-size: 1.5rem;
+					@include breakpoint(1024px) {
+						font-size: 2.25rem;
+					}
+				}
+			}
+			&__wrap {
+				position: relative;
+				&::before,
+				&::after {
+					@extend %before-after;
+					clear: both;
+				}
+			}
+			.slider__item {
+				float: left;
+				position: relative;
+				width: 240px;
+				padding-left: 14px;
+				padding-right: 14px;
+				img {
+					border: 1px solid $gray-200;
+				}
+			}
+		}
+	}
+	.globel {
+		position: relative;
+		&__item {
+			position: absolute;
+			color: $white;
+			font-weight: 300;
+			line-height: 1;
+			text-align: center;
+			word-break: break-all;
+			background-color: $black;
+			border: 1px solid $white;
+			@include breakpoint(768px) {
+				width: calc(1em + 16px);
+				padding: 15px 8px;
+			}
+			@include breakpoint(max-width 767px) {
+				padding: 6px 1px;
+				width: calc(1em + 6px);
+				font-size: 14px;
+			}
+			&:nth-child(1) {
+				top: 35%;
+				left: 12%;
+				@include breakpoint(768px) {
+					top: 34%;
+					left: 15%;
+				}
+			}
+			&:nth-child(2) {
+				top: 14%;
+				left: 32%;
+				@include breakpoint(768px) {
+					top: 19%;
+				}
+			}
+			&:nth-child(3) {
+				top: 43%;
+				left: 42%;
+				@include breakpoint(768px) {
+					top: 39%;
+					left: 40%;
+				}
+			}
+			&:nth-child(4) {
+				top: 25%;
+				left: 60%;
+				@include breakpoint(768px) {
+					top: 27%;
+					left: 59%;
+				}
+			}
+			&:nth-child(5) {
+				top: 33%;
+				left: 80%;
+				@include breakpoint(768px) {
+					top: 32%;
+					left: 79%;
+				}
+			}
+		}
+	}
+	.award {
+		width: 100%;
+		@include breakpoint(768px) {
+			width: 33.333333%;
+		}
+		@include breakpoint(max-width 767px) {
+			margin-bottom: 20px;
+		}
+		.award__img {
+			width: 196px;
+			margin: 0 auto 10px;
+			padding: 20px 0;
+			color: #CCA86A;
+			background-image: url('../images/webaccess/award.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			@include background-size(contain);
+			>div {
+				display: table;
+				margin: auto;
+			}
+			.award__name {
+				border-top: 1px solid rgba(204, 168, 106, 0.4);
+			}
+		}
+		.award__txt {
+			color: $secondary;
+			span {
+				display: inline-block;
+				&::after {
+					content: '、';
+				}
+				&:last-child::after {
+					content: '';
+				}
+			}
+		}
+	}
+	.accordion {
+		&__item {
+			@include breakpoint(768px) {
+				font-size: 1.125rem;
+			}
+			&::before,
+			&::after {
+				@extend %before-after;
+				clear: both;
+			}
+			&:nth-child(odd) {
+				background-color: $gray;
+			}
+			&__header {
+				position: relative;
+				padding: 0.65em 1.125em;
+				@include transition(background-color, 0.3s);
+				&::before,
+				&::after {
+					@extend %before-after;
+					clear: both;
+				}
+				&.active {
+					color: $primary;
+				}
+				span {
+					display: inline-block;
+					&.number {
+						width: 1.5rem;
+					}
+				}
+				p {
+					color: $white;
+				}
+				i.icon {
+					position: absolute;
+					top: 50%;
+					right: 0;
+					padding: 1rem;
+					@include translateY(-50%);
+				}
+			}
+			&__panel {
+				display: none;
+				position: relative;
+				padding: 1rem 1rem 1rem 2.5rem;
+				&::before,
+				&::after {
+					@extend %before-after;
+					clear: both;
+				}
+			}
+		}
+	}
+	footer {
+		@include breakpoint(768px) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+}

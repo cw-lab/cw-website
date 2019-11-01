@@ -8,24 +8,43 @@ html {
 	&--authorize {
 		height: 100%;
 		min-height: 100%;
-		&.flex {
-			align-items: center;
-			justify-content: center;
-		}
 		form {
+			position: relative;
 			width: 100%;
 			max-width: 768px;
-			padding-left: 20px;
-			padding-right: 20px;
+			height: calc(100% - 20px);
+			padding: 20px 20px 44px;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 20px;
+			overflow: scroll;
 			p {
 				font-weight: 500;
 			}
-			.h5 {
-				color: $secondary-variant;
-				font-weight: 400;
-				line-height: 1.5;
+			.btn {
+				position: absolute;
+				bottom: 20px;
+				left: 20px;
+				width: calc(100% - 40px);
+			}
+			.authorize__data {
+				ul {
+					li {
+						position: relative;
+						padding: 11px 0 10px;
+						+ li {
+							&::before {
+								@extend %before-after;
+								position: absolute;
+								top: 0;
+								left: -1.15em;
+								width: calc(100% + 1.15em);
+								height: 1px;
+								background-color: $gray-200;
+							}
+						}
+					}
+				}
 			}
 		}
 		.logo--circle {

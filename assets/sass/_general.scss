@@ -16,6 +16,13 @@ ol {
     padding-left: 1.15em;
 }
 
+.upper-latin {
+    list-style-type: upper-alpha;
+}
+.disc {
+    list-style-type: disc;
+}
+
 .mtb0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -41,6 +48,10 @@ ol {
 
 .mt40 {
     margin-top: 40px !important;
+}
+
+.mb30 {
+    margin-bottom: 30px !important;
 }
 
 .mb40 {
@@ -90,7 +101,9 @@ ol {
 .justify-between {
     justify-content: space-between;
 }
-
+.align-items-center {
+    align-items: center;
+}
 .flex {
     @include breakpoint(768px) {
         &-md {
@@ -109,13 +122,13 @@ ol {
     }
 }
 
-html {
-    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-}
+// html {
+//     font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     text-size-adjust: 100%;
+//     text-rendering: optimizeLegibility;
+// }
 
 button,
 input,

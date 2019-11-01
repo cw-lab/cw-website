@@ -540,6 +540,10 @@ a.btn[disabled].btn--animate {
 .feature__page section .slideshow .slider__wrap__thumbnail {
   position: relative;
   font-size: 0;
+  -moz-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  -webkit-transition: left 0.3s;
+  transition: left 0.3s;
 }
 @media (max-width: 1023px) {
   .feature__page section .slideshow .slider__wrap__thumbnail {
@@ -565,14 +569,16 @@ a.btn[disabled].btn--animate {
   background-color: #171717;
 }
 .feature__page section .slideshow .slider__wrap__thumbnail li .thumbnail__img img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
   -moz-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .feature__page section .slideshow .slider__wrap__thumbnail li.active .thumbnail__img img {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
 .feature__page section .slideshow .slider .slider__item {
   position: absolute;

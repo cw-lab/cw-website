@@ -4,7 +4,7 @@
 // }
 // 標題
 $h-color: $text, $text, $text, $primary, $secondary;
-$h-size: 28px, 22px, 18px, 1rem, 14px;
+$h-size: 32px, 22px, 18px, 1rem, 14px;
 $h-lh: 1.5, 1.5, 2, 1.2, 1;
 @for $i from 1 through 5 {
 	h#{$i} {
@@ -30,7 +30,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1;
 		}
 	}
 }
-@for $i from 2 through 5 {
+@for $i from 1 through 5 {
 	h#{$i}, .h#{$i} {
 		color: nth($h-color, $i);
 		font-size: nth($h-size, $i);
@@ -97,21 +97,10 @@ ul.keyword {
 	}
 }
 body {
-	&:not(.article__page), &:not(.feature__page) {
-		h1, .h1 {
-			color: $text;
-			font-size: 28px;
-			line-height: 1.5;
-		}
+	&:not(.feature__page) {
 		main p {
 			font-size: 1rem;
 			line-height: 1.6;
-		}
-	}
-	&.feature__page, &.feature__page {
-		main p {
-			font-size: 1.125rem;
-			line-height: 1.8;
 		}
 	}
 	&.feature__page {
@@ -131,12 +120,9 @@ body {
 				font-size: 24px;
 			}
 		}
-	}
-	&.article__page {
-		h1, .h1 {
-			color: $text;
-			font-size: 32px;
-			line-height: 1.5;
+		main p {
+			font-size: 1.125rem;
+			line-height: 1.8;
 		}
 	}
 }

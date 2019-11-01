@@ -1,209 +1,265 @@
 @font-face {
-	font-family: 'icomoon';
-	src: url('../fonts/cw_icon.eot?6ln93m');
-	src: url('../fonts/cw_icon.eot?6ln93m#iefix') format('embedded-opentype'),
-		 url('../fonts/cw_icon.ttf?6ln93m') format('truetype'),
-		 url('../fonts/cw_icon.woff?6ln93m') format('woff'),
-		 url('../fonts/cw_icon.svg?6ln93m#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'icomoon';
+    src: url('../../fonts/cw_icon.eot?6ln93m');
+    src: url('../../fonts/cw_icon.eot?6ln93m#iefix') format('embedded-opentype'), url('../../fonts/cw_icon.ttf?6ln93m') format('truetype'), url('../../fonts/cw_icon.woff?6ln93m') format('woff'), url('../../fonts/cw_icon.svg?6ln93m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
+
 i.icon {
-	display: inline-block;
-	font-family: "icomoon";
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	line-height: 1;
-	text-decoration: inherit;
-	text-rendering: auto;
-	text-transform: none;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	@include breakpoint(max-width 767px) {
-		&::before {
-			display: inline;
-			vertical-align: sub;
-			line-height: 0;
-		}
-	}
+    display: inline-block;
+    font-family: "icomoon";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: auto;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    @include breakpoint(max-width 767px) {
+        &::before {
+            display: inline;
+            vertical-align: sub;
+            line-height: 0;
+        }
+    }
 }
+
 body.chrome i.icon:before {
-	display: inline;
-	vertical-align: sub;
-	line-height: 0;
+    display: inline;
+    vertical-align: sub;
+    line-height: 0;
 }
+
 .icon-minus:before {
-	content: "\e936";
+    content: "\e936";
 }
+
 .icon-plus:before {
-	content: "\e937";
+    content: "\e937";
 }
+
 .icon-images:before {
-	content: "\e900";
+    content: "\e900";
 }
+
 .icon-button:before {
-	content: "\e901";
+    content: "\e901";
 }
+
 .icon-color:before {
-	content: "\e902";
+    content: "\e902";
 }
+
 .icon-iconography:before {
-	content: "\e903";
+    content: "\e903";
 }
+
 .icon-textfield:before {
-	content: "\e904";
+    content: "\e904";
 }
+
 .icon-navigation:before {
-	content: "\e905";
+    content: "\e905";
 }
+
 .icon-tabs:before {
-	content: "\e906";
+    content: "\e906";
 }
+
 .icon-tooltips:before {
-	content: "\e907";
+    content: "\e907";
 }
+
 .icon-typography:before {
-	content: "\e908";
+    content: "\e908";
 }
+
 .icon-logo-text:before {
-	content: "\e909";
+    content: "\e909";
 }
+
 .icon-phrase:before {
-	content: "\e90a";
+    content: "\e90a";
 }
+
 .icon-eyeoff:before {
-	content: "\e90b";
+    content: "\e90b";
 }
+
 .icon-eyeon:before {
-	content: "\e90c";
+    content: "\e90c";
 }
+
 .icon-check-circle:before {
-	content: "\e90d";
+    content: "\e90d";
 }
+
 .icon-exclamation-circle:before {
-	content: "\e90e";
+    content: "\e90e";
 }
+
 .icon-question-circle:before {
-	content: "\e90f";
+    content: "\e90f";
 }
+
 .icon-sort:before {
-	content: "\e910";
+    content: "\e910";
 }
+
 .icon-caret-down:before {
-	content: "\e911";
+    content: "\e911";
 }
+
 .icon-caret-up:before {
-	content: "\e912";
+    content: "\e912";
 }
+
 .icon-menu:before {
-	content: "\e913";
+    content: "\e913";
 }
+
 .icon-message:before {
-	content: "\e914";
+    content: "\e914";
 }
+
 .icon-selection:before {
-	content: "\e915";
+    content: "\e915";
 }
+
 .icon-list:before {
-	content: "\e916";
+    content: "\e916";
 }
+
 .icon-search:before {
-	content: "\e917";
+    content: "\e917";
 }
+
 .icon-user-filled:before {
-	content: "\e918";
+    content: "\e918";
 }
+
 .icon-user-outlined:before {
-	content: "\e919";
+    content: "\e919";
 }
+
 .icon-facebook:before {
-	content: "\e91a";
+    content: "\e91a";
 }
+
 .icon-instagram:before {
-	content: "\e91b";
+    content: "\e91b";
 }
+
 .icon-line:before {
-	content: "\e91c";
+    content: "\e91c";
 }
+
 .icon-play:before {
-	content: "\e91d";
+    content: "\e91d";
 }
+
 .icon-left:before {
-	content: "\e91e";
+    content: "\e91e";
 }
+
 .icon-right:before {
-	content: "\e91f";
+    content: "\e91f";
 }
+
 .icon-down:before {
-	content: "\e920";
+    content: "\e920";
 }
+
 .icon-rss:before {
-	content: "\e921";
+    content: "\e921";
 }
+
 .icon-up:before {
-	content: "\e922";
+    content: "\e922";
 }
+
 .icon-bookmark-outlined:before {
-	content: "\e923";
+    content: "\e923";
 }
+
 .icon-share:before {
-	content: "\e924";
+    content: "\e924";
 }
+
 .icon-mail:before {
-	content: "\e925";
+    content: "\e925";
 }
+
 .icon-edit:before {
-	content: "\e926";
+    content: "\e926";
 }
+
 .icon-caret-right:before {
-	content: "\e927";
+    content: "\e927";
 }
+
 .icon-caret-left:before {
-	content: "\e928";
+    content: "\e928";
 }
+
 .icon-check:before {
-	content: "\e929";
+    content: "\e929";
 }
+
 .icon-check-solid:before {
-	content: "\e92a";
+    content: "\e92a";
 }
+
 .icon-copy:before {
-	content: "\e92b";
+    content: "\e92b";
 }
+
 .icon-quote-left:before {
-	content: "\e92c";
+    content: "\e92c";
 }
+
 .icon-quote-right:before {
-	content: "\e92d";
+    content: "\e92d";
 }
+
 .icon-cancel:before {
-	content: "\e92e";
+    content: "\e92e";
 }
+
 .icon-coin:before {
-	content: "\e92f";
+    content: "\e92f";
 }
+
 .icon-fontsize:before {
-	content: "\e930";
+    content: "\e930";
 }
+
 .icon-logo:before {
-	content: "\e931";
+    content: "\e931";
 }
+
 .icon-bookmark-filled:before {
-	content: "\e932";
+    content: "\e932";
 }
+
 .icon-arrow-right:before {
-	content: "\e933";
+    content: "\e933";
 }
+
 .icon-arrow-left:before {
-	content: "\e934";
+    content: "\e934";
 }
+
 .icon-error-solid:before {
-	content: "\e935";
+    content: "\e935";
 }
+
 .icon-exclamation-solid:before {
-	content: "\e938";
+    content: "\e938";
 }

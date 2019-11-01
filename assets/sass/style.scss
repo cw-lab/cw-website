@@ -20,7 +20,13 @@ body {
 		width: 100%;
 	}
 	@include breakpoint(1200px) {
-		// width: 1170px;
+		width: 1170px;
+	}
+	@include breakpoint(1600px) {
+		width: 1570px;
+	}
+	@include breakpoint(1920px) {
+		width: 1890px;
 	}
 }
 .row {
@@ -76,6 +82,56 @@ h2 {
 		width: calc(100% - 270px);
 	}
 }
+header {
+	padding-top: 1rem;
+	a.logo {
+		display: table;
+		padding: 1rem;
+		color: $dark;
+		font-size: 30px;
+		@include breakpoint(375px) {
+			padding: 1rem 0;
+		}
+		@include breakpoint(992px) {
+			display: block;
+			padding: 10px 0 10px 35px;
+		}
+	}
+	.hamburger {
+		position: absolute;
+		top: 20px;
+		right: 0;
+		@include breakpoint(992px) {
+			display: none;
+		}
+		span {
+			background-color: $secondary-variant;
+		}
+	}
+	> .container {
+		> .flex {
+			align-items: center;
+		}
+	}
+	.subMenuList {
+		li {
+			display: inline-block;
+			a {
+				display: block;
+				padding: 10px;
+				color: $dark;
+				&:hover {
+					color: $primary;
+				}
+			}
+			&.active {
+				a {
+					color: $primary;
+				}
+			}
+		}
+	}
+}
 main {
 	@include transition(all 0.3s);
 	@include breakpoint(992px) {
@@ -94,37 +150,13 @@ section {
 			position: sticky;
 			top: 0;
 			bottom: 1rem;
+			padding-top: 50px;
 			padding-right: 30px;
 			height: 100vh;
 			overflow: scroll;
 		}
 		@include breakpoint(1630px) {
 			padding-right: 50px;
-		}
-		a.logo {
-			display: table;
-			padding: 1rem;
-			color: $dark;
-			font-size: 30px;
-			@include breakpoint(375px) {
-				padding: 1rem 0;
-			}
-			@include breakpoint(992px) {
-				display: block;
-				padding: 10px 0 10px 35px;
-				margin: 55px 0 20px;
-			}
-		}
-		.hamburger {
-			position: absolute;
-			top: 20px;
-			right: 0;
-			@include breakpoint(992px) {
-				display: none;
-			}
-			span {
-				background-color: $secondary-variant;
-			}
 		}
 		ul.menu {
 			@include breakpoint(max-width 991px) {
@@ -198,6 +230,11 @@ section {
 						text-align: center;
 						@include breakpoint(max-width 991px) {
 							display: none;
+						}
+					}
+					&:hover {
+						> * {
+							color: $primary;
 						}
 					}
 				}

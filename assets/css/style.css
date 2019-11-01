@@ -286,6 +286,21 @@ body {
     width: 100%;
   }
 }
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1570px;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    width: 1890px;
+  }
+}
 
 .row {
   display: -webkit-box;
@@ -359,6 +374,57 @@ h2.notice {
   }
 }
 
+header {
+  padding-top: 1rem;
+}
+header a.logo {
+  display: table;
+  padding: 1rem;
+  color: #394148;
+  font-size: 30px;
+}
+@media (min-width: 375px) {
+  header a.logo {
+    padding: 1rem 0;
+  }
+}
+@media (min-width: 992px) {
+  header a.logo {
+    display: block;
+    padding: 10px 0 10px 35px;
+  }
+}
+header .hamburger {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+@media (min-width: 992px) {
+  header .hamburger {
+    display: none;
+  }
+}
+header .hamburger span {
+  background-color: #48545D;
+}
+header > .container > .flex {
+  align-items: center;
+}
+header .subMenuList li {
+  display: inline-block;
+}
+header .subMenuList li a {
+  display: block;
+  padding: 10px;
+  color: #394148;
+}
+header .subMenuList li a:hover {
+  color: #D60C18;
+}
+header .subMenuList li.active a {
+  color: #D60C18;
+}
+
 main {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -382,6 +448,7 @@ main {
     position: sticky;
     top: 0;
     bottom: 1rem;
+    padding-top: 50px;
     padding-right: 30px;
     height: 100vh;
     overflow: scroll;
@@ -391,37 +458,6 @@ main {
   section .select-side {
     padding-right: 50px;
   }
-}
-section .select-side a.logo {
-  display: table;
-  padding: 1rem;
-  color: #394148;
-  font-size: 30px;
-}
-@media (min-width: 375px) {
-  section .select-side a.logo {
-    padding: 1rem 0;
-  }
-}
-@media (min-width: 992px) {
-  section .select-side a.logo {
-    display: block;
-    padding: 10px 0 10px 35px;
-    margin: 55px 0 20px;
-  }
-}
-section .select-side .hamburger {
-  position: absolute;
-  top: 20px;
-  right: 0;
-}
-@media (min-width: 992px) {
-  section .select-side .hamburger {
-    display: none;
-  }
-}
-section .select-side .hamburger span {
-  background-color: #48545D;
 }
 @media (max-width: 991px) {
   section .select-side ul.menu {
@@ -510,6 +546,9 @@ section .select-side ul.menu > li a > i {
   section .select-side ul.menu > li a > i {
     display: none;
   }
+}
+section .select-side ul.menu > li a:hover > * {
+  color: #D60C18;
 }
 @media (min-width: 992px) {
   section .select-side ul.menu > li::before {

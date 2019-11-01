@@ -1,5 +1,15 @@
 $(function() {
-	var width = $(window).width();
+	var height = $(window).height();
+	function opening(height){
+		if(height > 1020) {
+			$('section#access').addClass('sp');
+			$('section#access').css('min-height', 'auto');
+		} else {
+			$('section#access').removeClass('sp');
+			$('section#access').css('min-height', (height - 80));
+		}
+	}
+	opening(height);
 	// slideshow
 	$(".slideshow").each(function() {
 		var $slider = $(this).children(".slider"),
@@ -63,5 +73,9 @@ $(function() {
 	    $(this).children("i.icon").toggleClass("icon-plus");
 	    $(this).children("i.icon").toggleClass("icon-minus");
 	    $(this).siblings(".accordion__item__panel").slideToggle();
+	})
+	$(window).resize(function(){
+		var height = $(window).height();
+		opening(height);
 	})
 })

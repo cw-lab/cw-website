@@ -92,14 +92,6 @@
 	@include breakpoint(768px) {
 		padding-bottom: 225px;
 	}
-	.container {
-		&::before,
-		&::after {
-			@extend %before-after;
-			display: table;
-			clear: both;
-		}
-	}
 	h1 {
 		margin-bottom: 5px;
 		@include breakpoint(max-width 767px) {
@@ -115,13 +107,21 @@
 	}
 	p {
 		@include breakpoint(768px) {
-			font-size: 1.125rem !important;
+			// font-size: 1.125rem !important;
 			span.mark {
 				display: block;
 				width: 0;
 				height: 0;
 				overflow: hidden;
 			}
+		}
+	}
+	a.btn {
+		margin-top: 25px;
+		margin-bottom: 25px;
+		@include breakpoint(768px) {
+			margin-top: 30px;
+			margin-bottom: 40px;
 		}
 	}
 	header {
@@ -146,6 +146,18 @@
 				padding-right: 20px;
 				@include breakpoint(1024px) {
 					width: 784px;
+				}
+			}
+			&#access {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				align-content: center;
+				&:not(.sp) {
+					@include breakpoint(768px) {
+						padding-top: 40px;
+						padding-bottom: 40px;
+					}
 				}
 			}
 			&#edit,
@@ -320,19 +332,19 @@
 			word-wrap: break-word; /* Internet Explorer 5.5+ */
 			background-color: $black;
 			border: 1px solid $white;
-			@include breakpoint(768px) {
-				width: calc(1em + 16px);
+			@include breakpoint(700px) {
+				width: calc(1em + 18px);
 				padding: 15px 8px;
 			}
-			@include breakpoint(max-width 767px) {
+			@include breakpoint(max-width 699px) {
 				padding: 6px 1px;
-				width: calc(1em + 6px);
+				width: calc(1em + 4px);
 				font-size: 14px;
 			}
 			&:nth-child(1) {
 				top: 35%;
 				left: 12%;
-				@include breakpoint(768px) {
+				@include breakpoint(700px) {
 					top: 34%;
 					left: 15%;
 				}
@@ -340,14 +352,14 @@
 			&:nth-child(2) {
 				top: 14%;
 				left: 32%;
-				@include breakpoint(768px) {
+				@include breakpoint(700px) {
 					top: 19%;
 				}
 			}
 			&:nth-child(3) {
 				top: 43%;
 				left: 42%;
-				@include breakpoint(768px) {
+				@include breakpoint(700px) {
 					top: 39%;
 					left: 40%;
 				}
@@ -355,7 +367,7 @@
 			&:nth-child(4) {
 				top: 25%;
 				left: 60%;
-				@include breakpoint(768px) {
+				@include breakpoint(700px) {
 					top: 27%;
 					left: 59%;
 				}
@@ -363,7 +375,7 @@
 			&:nth-child(5) {
 				top: 33%;
 				left: 80%;
-				@include breakpoint(768px) {
+				@include breakpoint(700px) {
 					top: 32%;
 					left: 79%;
 				}
@@ -372,11 +384,21 @@
 	}
 	.award {
 		width: 100%;
-		@include breakpoint(768px) {
-			width: 33.333333%;
+		@include breakpoint(375px) {
+			width: 80%;
 		}
-		@include breakpoint(max-width 767px) {
+		@include breakpoint(700px) {
+			width: 196px;
+		}
+		@include breakpoint(max-width 699px) {
+			margin-left: auto;
+			margin-right: auto;
 			margin-bottom: 20px;
+		}
+		&__gruop {
+			@include breakpoint(700px) {
+				justify-content: space-between;
+			}
 		}
 		.award__img {
 			width: 196px;
@@ -399,6 +421,7 @@
 			color: $secondary;
 			span {
 				display: inline-block;
+				font-size: 14px;
 				&::after {
 					content: '、';
 				}
@@ -410,9 +433,6 @@
 	}
 	.accordion {
 		&__item {
-			@include breakpoint(768px) {
-				font-size: 1.125rem;
-			}
 			&::before,
 			&::after {
 				@extend %before-after;

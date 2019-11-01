@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page .slideshow::before, .webaccess__page .slideshow .slider__wrap::before, .webaccess__page .slideshow .slider__wrap::after, .webaccess__page .accordion__item::before, .webaccess__page .accordion__item::after, .webaccess__page .accordion__item__header::before, .webaccess__page .accordion__item__header::after, .webaccess__page .accordion__item__panel::before, .webaccess__page .accordion__item__panel::after {
+.webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page .slideshow::before, .webaccess__page .slideshow .slider__wrap::before, .webaccess__page .slideshow .slider__wrap::after, .webaccess__page .globel__earth::after, .webaccess__page .accordion__item::before, .webaccess__page .accordion__item::after, .webaccess__page .accordion__item__header::before, .webaccess__page .accordion__item__header::after, .webaccess__page .accordion__item__panel::before, .webaccess__page .accordion__item__panel::after {
   content: '';
   display: block;
 }
@@ -357,6 +357,13 @@
 }
 .webaccess__page .globel {
   position: relative;
+}
+.webaccess__page .globel__earth::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .webaccess__page .globel__item {
   position: absolute;

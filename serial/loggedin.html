@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>填寫基本資料 - 請選擇你想看天下的方式｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../assets/css/cw.css">
+		<link rel="stylesheet" href="../assets/css/serial.css">
+	</head>
+	<body class="serial__page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<div class="list__group flex">
+						<ul class="list-reset flex member__list">
+							<li><a href="#!">登入</a></li>
+							<li><a href="#!">註冊</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<article>
+				<div class="step__group flex">
+					<div class="step__item">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">輸入序號</span>
+					</div>
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">登入註冊</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">開通成功</span>
+					</div>
+				</div>
+				<form action="success.html">
+					<h2>開通序號</h2>
+					<p>尚未開通完成，請點選確認開通</p>
+					<section class="group">
+						<div class="content__group">
+							<ul class="content__list">
+								<li class="content__item">
+									<div class="content__item__title">商品名稱</div>
+									<div class="content__item__amount">天下全閱讀　3個月</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">活動名稱</div>
+									<div class="content__item__amount">迷客夏員工體驗全閱讀</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="group">
+						<div class="content__group">
+							<ul class="content__list">
+								<li class="content__item">
+									<div class="content__item__title">欲開通會員帳號</div>
+									<div class="content__item__amount">wtshen@cw.com.tw</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">原有訂戶權益迄日</div>
+									<div class="content__item__amount">yyyy/mm/dd</div>
+								</li>
+								<li class="content__item">
+									<div class="content__item__title">開通後權益迄日</div>
+									<div class="content__item__amount">yyyy/mm/dd</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<div class="text-right">
+						<button class="btn btn--outlined">更換會員帳號</button>
+						<button class="btn btn--contained">下一步</button>
+					</div>
+				</form>
+			</article>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="flex justify-between">
+					<div class="copyright">
+						<ul class="copyright__cwlink flex list-reset">
+							<li><a href="https://www.cw.com.tw/about/" target="_blank">關於天下雜誌群</a></li>
+							<li><a href="https://www.cwbook.com.tw/member/mcntr/MemberHome!redirect.shtml" target="_blank">顧客服務</a></li>
+							<li><a href="https://www.cw.com.tw/subscriptions">雜誌訂閱</a></li>
+							<li><a href="https://www.cw.com.tw/saleskit/" target="_blank">廣告刊登</a></li>
+							<li><a href="https://www.cw.com.tw/recruit/index.php" target="_blank">人才招募</a></li>
+							<li><a href="https://www.cw.com.tw/privacy" target="_blank">隱私權政策與使用條款</a></li>
+						</ul>
+						<div class="copyright__contact">
+							<span>讀者服務專線：886-2-2662-0332</span>
+							<span>傳真電話：886-2-2662-6048</span>
+							<span>服務時間：週一～週五 09:00~17:30</span>
+							<span>台北市104南京東路二段139號11樓</span>
+							<span>Copyright © 2019天下雜誌</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+		<script type="text/javascript" src="../assets/js/cw.js"></script>
+		<script type="text/javascript">
+			// $("section.address").hide();
+			$(".tab .tab__nav > ul li:nth-child(2), .tab .tab__nav > ul li:nth-child(3)").click(function () {
+				$("section.address").hide();
+			})
+			$(".tab .tab__nav > ul li:nth-child(1)").click(function () {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			})
+			$(".label--radio input").change(function() {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			}).change();
+		</script>
+	</body>
+</html>

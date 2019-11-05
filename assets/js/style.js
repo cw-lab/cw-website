@@ -24,13 +24,19 @@ $(function(){
 	$("aside").load("aside.html", function(){
 		$('a[href*="' + (url.slice(url.lastIndexOf('/') + 1)) + '"]').parent().addClass('now');
 		pageScroll();
+	});
+	$("header").load("header.html", function(){
 		$('.hamburger').click(function() {
-			$('.componentsList').toggleClass('opend');
-			$('body').toggleClass('opend');
-			console.log('a');
+			$(this).toggleClass('opened');
+			$('.componentsList').toggleClass('opened');
+			$('body, .opacity').toggleClass('opened');
 		});
 	});
-	$("header").load("header.html");
+	$('.opacity').click(function() {
+		$('.hamburger').removeClass('opened');
+		$('.componentsList').removeClass('opened');
+		$('body, .opacity').removeClass('opened');
+	});
 	$("footer").load("footer.html");
 	$("span.detail").each(function(){
 		$(this).children().html($(this).attr("data-val"));

@@ -90,7 +90,7 @@ header {
 		color: $dark;
 		font-size: 30px;
 		@include breakpoint(375px) {
-			padding: 1rem 0;
+			padding: 0;
 		}
 		@include breakpoint(992px) {
 			display: block;
@@ -99,8 +99,9 @@ header {
 	}
 	.hamburger {
 		position: absolute;
-		top: 20px;
+		top: 50%;
 		right: 0;
+		@include translateY(-50%);
 		@include breakpoint(992px) {
 			display: none;
 		}
@@ -110,10 +111,14 @@ header {
 	}
 	> .container {
 		> .flex {
+			position: relative;
 			align-items: center;
 		}
 	}
 	.subMenuList {
+		@include breakpoint(max-width 991px) {
+			padding-right: 40px;
+		}
 		li {
 			display: inline-block;
 			a {
@@ -166,11 +171,11 @@ section {
 				width: 0;
 				height: 100%;
 				background-color: #fff;
-				z-index: 10;
 				overflow: hidden;
 				@include transition(width 0.3s);
+				z-index: 10;
 			}
-			&.opend {
+			&.opened {
 				width: 210px;
 			}
 			> li {
@@ -691,7 +696,7 @@ footer {
 	@include transition(all 0.3s);
 }
 body {
-	&.opend {
+	&.opened {
 		main, footer {
 			margin-left: -210px;
 			margin-right: 210px;

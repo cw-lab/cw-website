@@ -20,6 +20,8 @@
 	left: -100%;
 	font-size: 15px;
 	font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+	-webkit-font-smoothing: auto;
+	text-rendering: auto;
 	background-color: #777;
 	@include transition(.3s);
 	overflow: auto;

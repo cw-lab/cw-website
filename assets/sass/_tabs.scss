@@ -7,7 +7,7 @@
 		&__nav {
 			position: relative;
 			border: solid $gray-200;
-			border-width: 1px;
+			border-width: 1px 1px 0;
 			@include breakpoint(max-width 767px) {
 				overflow-x: scroll;
 				overflow-y: hidden;
@@ -35,7 +35,8 @@
 				li {
 					position: relative;
 					display: flex;
-					min-width: 110px;
+					// min-width: 110px;
+					min-width: 140px;
 					padding: 5px;
 					line-height: 2.6rem;
 					justify-content: center;
@@ -53,6 +54,11 @@
 						color: $primary;
 						border-color: $primary;
 					}
+				}
+			}
+			&:not(.equal) {
+				@include breakpoint(768px) {
+					display: table;
 				}
 			}
 			&__next {
@@ -95,7 +101,7 @@
 			&__pane {
 				display: none;
 				border: solid $gray-200;
-				border-width: 0 1px 1px;
+				border-width: 1px;
 				&--p20 {
 					padding: 20px;
 				}

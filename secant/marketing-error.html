@@ -261,9 +261,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 		<script type="text/javascript" src="../assets/js/cw.js"></script>
 		<script type="text/javascript">
-			$(function () {
+			$(window).load(function() {
 				$('body').addClass('message__open');
 				$('.message--dialogs').show();
+				$('.black').addClass('opened');
 			})
 		</script>
 	</body>

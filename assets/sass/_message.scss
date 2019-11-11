@@ -1,3 +1,6 @@
+body.message__open {
+    overflow: hidden;
+}
 .message {
     p {
         font-size: 1rem;
@@ -118,6 +121,7 @@
     }
     &--alert {
         position: absolute;
+        top: 50%;
         left: 50%;
         max-width: 560px;
         width: calc(100% - 30px);
@@ -137,6 +141,7 @@
     &--dialogs {
         display: none;
         position: absolute;
+        top: 50%;
         left: 50%;
         max-width: 560px;
         width: calc(100% - 30px);

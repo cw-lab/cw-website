@@ -54,11 +54,6 @@
 .webaccess__page--marketing .tab .tab__content__pane a:hover {
   color: #D60C18 !important;
 }
-.webaccess__page--error {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
 .webaccess__page--error::before {
   position: absolute;
   top: 0%;

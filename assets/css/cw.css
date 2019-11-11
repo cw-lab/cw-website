@@ -2884,6 +2884,10 @@ a.btn[disabled].btn--animate {
   border-color: #D3D5D7;
 }
 
+body.message__open {
+  overflow: hidden;
+}
+
 .message p {
   font-size: 1rem;
   line-height: 1.5;
@@ -2994,6 +2998,7 @@ a.btn[disabled].btn--animate {
 }
 .message--alert {
   position: absolute;
+  top: 50%;
   left: 50%;
   max-width: 560px;
   width: calc(100% - 30px);
@@ -3014,6 +3019,7 @@ a.btn[disabled].btn--animate {
 .message--dialogs {
   display: none;
   position: absolute;
+  top: 50%;
   left: 50%;
   max-width: 560px;
   width: calc(100% - 30px);

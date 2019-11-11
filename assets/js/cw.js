@@ -229,9 +229,9 @@ $(window).load(function() {
 		$('.black').toggleClass('opened');
 	})
 	// message--alert, .message--dialogs 絕對定位
-	$(".message--alert, .message--dialogs").animate({
-		"top": (height / 2)
-	}, 10);
+	// $(".message--alert, .message--dialogs").animate({
+	// 	"top": (height / 2)
+	// }, 10);
 	// menubar--sub 絕對定位
 	function menubarSub(width, container) {
 		$(".menubar--sub2").css({
@@ -413,13 +413,13 @@ $(window).load(function() {
 			});
 		}
 	})
-	$(window).scroll(function() {
-		// message: 定位在目前畫面之中
-		var scroll = $(window).scrollTop();
-		$(".message--alert, .message--dialogs").animate({
-			"top": scroll + (height / 2)
-		}, 10);
-	})
+	// $(window).scroll(function() {
+	// 	// message: 定位在目前畫面之中
+	// 	var scroll = $(window).scrollTop();
+	// 	$(".message--alert, .message--dialogs").animate({
+	// 		"top": scroll + (height / 2)
+	// 	}, 10);
+	// })
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),

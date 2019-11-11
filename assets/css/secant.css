@@ -1,4 +1,4 @@
-.webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page main form::before, .webaccess__page main form::after, .webaccess__page main .plan .plan__item__spec::before {
+.webaccess__page--error::before, .webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page main form::before, .webaccess__page main form::after, .webaccess__page main .plan .plan__item__spec::before {
   content: '';
   display: block;
 }
@@ -53,6 +53,25 @@
 }
 .webaccess__page--marketing .tab .tab__content__pane a:hover {
   color: #D60C18 !important;
+}
+.webaccess__page--error {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.webaccess__page--error::before {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+  z-index: 10;
+}
+.webaccess__page--error > *:not(.message--dialogs) {
+  filter: blur(5px);
 }
 @media (min-width: 375px) {
   .webaccess__page .container {

@@ -1,6 +1,7 @@
 $(function() {
 	var width = $(window).width(),
-		height = $(window).height();
+		height = $(window).height(),
+		sliderWidth;
 	function imgResize(width, height) {
 		$(".slider__img").each(function() {
 			var desktopImg = $(this).data('desktop'),
@@ -14,6 +15,8 @@ $(function() {
 	}
 	imgResize(width, height);
 	$('.slideshow.single .slider__wrap').slick({
+		autoplay: true,
+		autoplaySpeed: 3000,
 		prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-left"></i></a></div>',
 		nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-right"></i></a></div>'
 	});
@@ -37,12 +40,20 @@ $(function() {
 			}
 		]
 	});
+	function naviHeigh(sliderWidth) {
+		$('.slideshow.multi').each(function() {
+			var sliderWidth = $(this).outerWidth(),
+				imgHeigh = 422 / 630 * sliderWidth;
+			$(this).children().children('.slider__navi--prev').css('top', imgHeigh / 2);
+			$(this).children().children('.slider__navi--next').css('top', imgHeigh / 2);
+		});
+	}
+	naviHeigh(sliderWidth);
 	$(window).load(function() {
 		var width = $(window).width(),
 			height = $(window).height(),
 			container = $(".header__logo .container").outerWidth(),
 			slider_item_width, $slider_wrap;
-
 		function menubarSub(width, container) {
 			$(".menubar--sub2").css({
 				"right": ((width - container) / 2)
@@ -62,24 +73,23 @@ $(function() {
 		});
 		$(window).scroll(function() {
 			var width = $(window).width(),
+				height = $(window).height(),
 				scroll = $(window).scrollTop(),
 				container = $(".header__logo .container").outerWidth();
 			menubarSub(width, container);
-			if (width < 1024) {
-				$("nav .sns__group").css({
-					"top": scroll + height - 165 - $('.message--banner').outerHeight()
-				}, 20);
-				if (scroll >= height) {
-					$("nav .sns__group").css('opacity', 1);
-				} else {
-					$("nav .sns__group").css('opacity', 0);
-				}
+			if (scroll >= height) {
+				$(".sns__group").css('opacity', 1);
+			} else {
+				$(".sns__group").css('opacity', 0);
 			}
 		});
+
 	});
 	$(window).resize(function() {
 		var width = $(window).width(),
-			height = $(window).height();
+			height = $(window).height(),
+			sliderWidth;
 		imgResize(width, height);
+		naviHeigh(sliderWidth);
 	});
 });

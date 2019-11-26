@@ -377,8 +377,7 @@ $(window).load(function() {
 	$(window).resize(function(width) {
 		var width = $(window).width(),
 			height = $(window).height(),
-			container = $(".header__logo .container").outerWidth(),
-			articleTextWidth = $(".article__text").outerWidth();
+			container = $(".header__logo .container").outerWidth();
 		tabNavWidth(width);
 		menubarSub(width, container);
 		if (width >= 768) {
@@ -386,9 +385,5 @@ $(window).load(function() {
 		} else {
 			$(".plan__item__right").height('');
 		}
-		$("iframe[src*='youtube']").css({
-			"width": articleTextWidth,
-			"height": articleTextWidth * 0.5625
-		})
 	})
 });

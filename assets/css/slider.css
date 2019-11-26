@@ -11,4 +11,9 @@
   float: left;
 }
 
+.slick-slide {
+  outline: 0;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=slider.css.map */

@@ -3,117 +3,117 @@ nav {
 		display: block;
 	}
 	&.menubar {
-		&--left {
-			position: fixed;
-			top: 0;
-			left: -300px;
-			width: 300px;
-			max-height: 100vh;
-			font-size: 1rem;
-			border: 1px solid $gray-200;
-			background-color: $white;
-			overflow: scroll;
-			@include transition(all 0.3s);
-			z-index: 12;
-			@include breakpoint(1024px) {
-				overflow: hidden scroll;
-			}
-			ul {
-				padding: 0;
-				margin: 0;
-				list-style: none;
-				li {
-					line-height: 1;
-					.li__group {
-						display: flex;
-						flex-wrap: wrap;
-						align-items: center;
-						justify-content: space-between;
-						a {
-							color: $black;
-						}
-						&:hover {
-							a, i {
-								color: $primary;
-							}
-						}
-						a {
-							&.sns {
-								&-facebook {
-									&:hover {
-										> i, > span {
-											color: $facebook;
-										}
-									}
-								}
-								&-line {
-									&:hover {
-										> i, > span {
-											color: $line;
-										}
-									}
-								}
-							}
-						}
-					}
-					&.now {
-						background-color: $primary;
-						> .li__group {
-							> a, > i {
-								color: $white;
-							}
-						}
-					}
-				}
-			}
-			> ul {
-				+ ul {
-					border-top: 1px solid $gray-200;
-				}
-				> li {
-					.li__group {
-						position: relative;
-						> a {
-							display: flex;
-							width: 100%;
-							padding: 17px 25px;
-							align-items: center;
-							&.sns {
-								i + span {
-									margin-left: 5px;
-								}
-							}
-						}
-						> i.more {
-							position: absolute;
-							top: 0;
-							right: 0;
-							padding: 17px 25px;
-							font-weight: bold;
-							cursor: pointer;
-							@include transition(all 0.3s);
-							&.active {
-								@include rotate(180deg);
-							}
-						}
-					}
-					> ul {
-						display: none;
-						background-color: $gray-100;
-						> li {
-							.li__group {
-								> a {
-									padding: 17px 50px;
-								}
-							}
-						}
-					}
-				}
-			}
-			&.opened {
-				left: 0;
-			}
-		}
+		// &--left {
+		// 	position: fixed;
+		// 	top: 0;
+		// 	left: -300px;
+		// 	width: 300px;
+		// 	max-height: 100vh;
+		// 	font-size: 1rem;
+		// 	border: 1px solid $gray-200;
+		// 	background-color: $white;
+		// 	overflow: scroll;
+		// 	@include transition(all 0.3s);
+		// 	z-index: 12;
+		// 	@include breakpoint(1024px) {
+		// 		overflow: hidden scroll;
+		// 	}
+		// 	ul {
+		// 		padding: 0;
+		// 		margin: 0;
+		// 		list-style: none;
+		// 		li {
+		// 			line-height: 1;
+		// 			.li__group {
+		// 				display: flex;
+		// 				flex-wrap: wrap;
+		// 				align-items: center;
+		// 				justify-content: space-between;
+		// 				a {
+		// 					color: $black;
+		// 				}
+		// 				&:hover {
+		// 					a, i {
+		// 						color: $primary;
+		// 					}
+		// 				}
+		// 				a {
+		// 					&.sns {
+		// 						&-facebook {
+		// 							&:hover {
+		// 								> i, > span {
+		// 									color: $facebook;
+		// 								}
+		// 							}
+		// 						}
+		// 						&-line {
+		// 							&:hover {
+		// 								> i, > span {
+		// 									color: $line;
+		// 								}
+		// 							}
+		// 						}
+		// 					}
+		// 				}
+		// 			}
+		// 			&.now {
+		// 				background-color: $primary;
+		// 				> .li__group {
+		// 					> a, > i {
+		// 						color: $white;
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// 	> ul {
+		// 		+ ul {
+		// 			border-top: 1px solid $gray-200;
+		// 		}
+		// 		> li {
+		// 			.li__group {
+		// 				position: relative;
+		// 				> a {
+		// 					display: flex;
+		// 					width: 100%;
+		// 					padding: 17px 25px;
+		// 					align-items: center;
+		// 					&.sns {
+		// 						i + span {
+		// 							margin-left: 5px;
+		// 						}
+		// 					}
+		// 				}
+		// 				> i.more {
+		// 					position: absolute;
+		// 					top: 0;
+		// 					right: 0;
+		// 					padding: 17px 25px;
+		// 					font-weight: bold;
+		// 					cursor: pointer;
+		// 					@include transition(all 0.3s);
+		// 					&.active {
+		// 						@include rotate(180deg);
+		// 					}
+		// 				}
+		// 			}
+		// 			> ul {
+		// 				display: none;
+		// 				background-color: $gray-100;
+		// 				> li {
+		// 					.li__group {
+		// 						> a {
+		// 							padding: 17px 50px;
+		// 						}
+		// 					}
+		// 				}
+		// 			}
+		// 		}
+		// 	}
+		// 	&.opened {
+		// 		left: 0;
+		// 	}
+		// }
 		&--sub {
 			position: relative;
 			font-size: 14px;
@@ -411,6 +411,90 @@ nav {
 			}
 		}
 	}
+}
+.sideMenu {
+	background-color: #777;
+	position: fixed;
+	z-index: 10005;
+	top: 0;
+	width: 318px;
+	height: 100%;
+	left: -100%;
+	transition: .3s;
+	overflow: auto;
+	font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+	font-size: 15px;
+	line-height: 1;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: auto;
+	text-rendering: auto;
+}
+@media (max-width: 767px) {
+	.sideMenu {
+		width: 80vw;
+		overflow: auto;
+	}
+}
+.sideMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sideMenu>ul>li+li a {
+	border-top: 1px solid #55565b;
+}
+.sideMenu>ul>li {
+	padding: 0px 15px;
+}
+.sideMenu>ul>li a {
+	display: block;
+	padding: 16px 0px;
+}
+.sideMenu .moreItem ul {
+	background-color: #666;
+	margin: 0 -15px;
+	padding: 0 15px 0 30px;
+	display: none;
+}
+.sideMenu .moreItem>a {
+	display: block;
+	position: relative;
+}
+.sideMenu .moreItem>a:after {
+	content: url('https://www.cw.com.tw/assets_new/img/side_menu_arrow.png');
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.sideMenu .moreItem>a.open:after {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.sideMenu a {
+	color: #fff;
+}
+.sideMenu.show {
+	left: 0;
+}
+.subNav {
+	position: relative;
+}
+.subNav.fixed ul {
+	position: fixed;
+	top: 6px;
+	z-index: 10003;
+}
+.sideMenu .sideMenuSocial {
+	background-color: #4c4c4c;
+}
+.sideMenu .sideMenuSocial li a {
+	padding-top: 6px;
+	padding-bottom: 6px;
 }
 .opacity, .black {
 	position: fixed;

@@ -1,7 +1,8 @@
-$(function() {
+$(window).load(function() {
 	var width = $(window).width(),
 		height = $(window).height(),
-		container = $(".header__logo .container").outerWidth();
+		container = $(".header__logo .container").outerWidth(),
+		slider_item_width, $slider_wrap;
 	function menubarSub(width, container) {
 		$(".menubar--sub2").css({
 			"right": ((width - container) / 2)
@@ -9,7 +10,7 @@ $(function() {
 	}
 	menubarSub(width, container);
 	// slideshow
-	$(".slideshow").each(function() {
+	$(".slideshow.multi").each(function() {
 		var $slider = $(this).children(".slider"),
 			$sliderCountDiv = $(this).children(".slider__count"),
 			$slider_wrap = $(this).children(".slider").children(".slider__wrap"),
@@ -45,6 +46,9 @@ $(function() {
 			$slider_item.removeClass("active");
 			$slider_item.eq(index).addClass("active");
 		});
+		if (slider_count > 1) {
+			$slider.children(".slider__navi").fadeIn()
+		}
 		if (width >= 1024) {
 			$thumbnail_wrap.css({
 				"width": (thumbnail_item_width * thumbnail_count) + (15 * (thumbnail_count - 1)),
@@ -68,12 +72,12 @@ $(function() {
 			switch_item_horizon();
 			$slider_wrap.css("left", -(index * slider_item_width));
 		});
-		// console.log(slider_item_width);
-		$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
+		$slider_navi_next.click(switch_next);
+		$slider_navi_prev.click(switch_prev);
 		function switch_next() {
 			if ($slider_wrap.is(":animated")) return;
 			$slider_wrap.animate({ left: "-=" + slider_item_width }, function() {
-				if (index >= slider_count - 2) {
+				if (index >= slider_count - 1) {
 					index = -1;
 					$(this).css("left", 0);
 				}
@@ -107,7 +111,7 @@ $(function() {
 		function switch_prev() {
 			if ($slider_wrap.is(":animated")) return;
 			if (index <= 0) {
-				index = slider_count - 1;
+				index = slider_count;
 				$slider_wrap.css("left", -(index * slider_item_width));
 			}
 			$slider_wrap.animate({ left: "+=" + slider_item_width }, function() {
@@ -115,8 +119,6 @@ $(function() {
 				switch_item_horizon();
 			});
 		}
-		$slider_navi_next.click(switch_next);
-		$slider_navi_prev.click(switch_prev);
 	});
 	$("p.preface").each(function() {
 		var preface_height = $(this).outerHeight();
@@ -129,9 +131,6 @@ $(function() {
 	$(".btn--preface").on("click", function() {
 		$(this).siblings("p").removeClass('hidden');
 		$(this).remove();
-	});
-	$(window).resize(function() {
-		location.reload();
 	});
 	$(window).scroll(function() {
 		var width = $(window).width(),
@@ -149,4 +148,4 @@ $(function() {
 			}
 		}
 	});
-})
+});

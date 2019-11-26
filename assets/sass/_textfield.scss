@@ -41,9 +41,8 @@ form {
             &__input {
                 min-width: 144px;
                 width: 100%;
-                color: $surface;
+                color: $black;
                 font-size: 1rem;
-                @include text-fill-color($black);
                 border-style: solid;
                 border-color: $secondary;
                 &:focus {
@@ -70,9 +69,9 @@ form {
                     }
                 }
                 &--error {
-                    .form__group__input {
-                        color: $primary;
-                    }
+                    // .form__group__input {
+                    //     color: $primary;
+                    // }
                     &:hover,
                     &.hasValue {
                         .form__group__placeholder {
@@ -177,7 +176,7 @@ form {
                 color: $primary !important;
             }
             .form__group__input {
-                color: $primary;
+                // color: $primary;
                 border-color: $primary !important;
             }
             .select__group::before {

@@ -1,9 +1,38 @@
+$(function(){
+	// 漢堡
+	$('body').append('<div class="black"></div>');
+	$('.hamburger').click(function() {
+		// $('.menubar--left').addClass('opened');
+		// $('.black').addClass('opened menubar--left');
+		$('.sideMenu').addClass('show');
+		$('.black').addClass('opened sideMenu');
+	});
+	$('.sideMenu .moreItem > a').click(function() {
+		$(this).toggleClass('open');
+		$(this).siblings('.sudeMenuSub').slideToggle();
+	});
+	$('.black').click(function() {
+		if ($(this).hasClass("sideMenu")) {
+			$('.sideMenu').removeClass('show');
+			$('.black').removeClass('opened sideMenu');
+		}
+		if ($(this).hasClass("menubar--left")) {
+			$('.menubar--left').removeClass('opened');
+			$('.black').removeClass('opened menubar--left');
+		}
+		if ($(this).hasClass("message--dialogs")) {
+			$('.black').removeClass('opened message--dialogs');
+			$('.message--dialogs').fadeOut(200);
+		}
+	});
+})
 $(window).load(function() {
 	var width = $(window).width(),
 		height = $(window).height(),
 		container = $("header .container").outerWidth(),
 		articleContainFluid = $(".article__info").outerWidth(),
-		articleTextWidth = $(".article__text").outerWidth();
+		articleTextWidth = $(".article__text").outerWidth(),
+		slider_item_width, $slider_wrap;
 	// 判斷瀏覽器
 	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -37,12 +66,10 @@ $(window).load(function() {
 		);
 		$(this).toggleClass('icon-eyeoff icon-eyeon');
 	})
-
 	function input() {
 		$("input").parent().addClass('form__group--defalt');
 		$("input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
 	}
-
 	function select() {
 		$("select").parent().addClass('select__group--defalt');
 		$("select[disabled]").parent().removeClass('select__group--defalt').addClass('select__group--disabled');
@@ -68,17 +95,20 @@ $(window).load(function() {
 		}
 	});
 	// slideshow
-	$(".slideshow").each(function() {
+	$(".slideshow.single").each(function() {
 		var $slider = $(this).children(".slider"),
 			$sliderCountDiv = $(this).children(".slider__count"),
-			$slider_wrap = $(this).children(".slider").children(".slider__wrap"),
-			$slider_navi_prev = $(this).children(".slider__navi--prev"),
-			$slider_navi_next = $(this).children(".slider__navi--next"),
+			$slider_wrap = $slider.children(".slider__wrap"),
+			$slider_navi_prev = $slider.children(".slider__navi--prev"),
+			$slider_navi_next = $slider.children(".slider__navi--next"),
 			$slider_item = $slider_wrap.children(".slider__item"),
 			slider_item_width = $(this).parent().outerWidth(), //每張slide寬度
 			slider_count = $slider_item.length,
 			slider_item_index = 0, //預宣告slide為0
 			index = 0;
+		if (slider_count > 1) {
+			$slider.children(".slider__navi").fadeIn()
+		}
 		$slider_item.first().clone().css({
 			"width": slider_item_width
 		}).appendTo($slider_wrap);
@@ -89,7 +119,6 @@ $(window).load(function() {
 			"width": slider_item_width
 		});
 		$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
-
 		function switch_next() {
 			if ($slider_wrap.is(":animated")) return;
 			$slider_wrap.animate({ left: "-=" + slider_item_width }, function() {
@@ -101,11 +130,9 @@ $(window).load(function() {
 				switch_item();
 			});
 		}
-
 		function switch_item() {
 			$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
 		}
-
 		function switch_prev() {
 			if ($slider_wrap.is(":animated")) return;
 			if (index <= 0) {
@@ -119,6 +146,7 @@ $(window).load(function() {
 		}
 		$slider_navi_next.click(switch_next);
 		$slider_navi_prev.click(switch_prev);
+		console.log(slider_item_width);
 	})
 	// 當不是首頁時
 	if (!$("body").hasClass("index__page")) {
@@ -174,22 +202,6 @@ $(window).load(function() {
 			$(this).addClass("tooltips-wrap");
 		}
 	})
-	// 漢堡
-	$('body').append('<div class="black"></div>');
-	$('.hamburger').click(function() {
-		$('.menubar--left').addClass('opened');
-		$('.black').addClass('opened menubar--left');
-	});
-	$('.black').click(function() {
-		if ($(this).hasClass("menubar--left")) {
-			$('.menubar--left').removeClass('opened');
-			$('.black').removeClass('opened menubar--left');
-		}
-		if ($(this).hasClass("message--dialogs")) {
-			$('.black').removeClass('opened message--dialogs');
-			$('.message--dialogs').fadeOut(200);
-		}
-	});
 	// menu寬度平分
 	$("nav.menubar--belt").each(function() {
 		$(this).children().children().css({
@@ -293,7 +305,6 @@ $(window).load(function() {
 		$(this).children("i.icon").toggleClass("icon-minus");
 		$(this).siblings(".accordion__item__panel").slideToggle();
 	})
-
 	function copyToClipboard(elem) {
 		// create hidden text element, if it doesn't already exist
 		var targetId = "_hiddenCopyText_";
@@ -346,7 +357,6 @@ $(window).load(function() {
 		return $(this).outerHeight();
 	}).get();
 	var highestCol = Math.max.apply(null, rightHeights);
-
 	if (width >= 768) {
 		$(".plan__item__right").height(highestCol);
 	} else {
@@ -364,7 +374,6 @@ $(window).load(function() {
 			$(".card__input--code").attr("value", this.value);
 		})
 		var creditCard = $('#creditCardNumber');
-
 		function validateCard() {
 			var cardHolder = $('div.card__type');
 			creditCard.validateCreditCard(function(result) {

@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(function(){
 	var width = $(window).width(),
 		height = $(window).height(),
 		container = $(".header__logo .container").outerWidth(),

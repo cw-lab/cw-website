@@ -25,6 +25,60 @@ $(function(){
 			$('.message--dialogs').fadeOut(200);
 		}
 	});
+	// slideshow
+	$(".slideshow.single").each(function() {
+		var $slider = $(this).children(".slider"),
+			$sliderCountDiv = $(this).children(".slider__count"),
+			$slider_wrap = $slider.children(".slider__wrap"),
+			$slider_navi_prev = $slider.children(".slider__navi--prev"),
+			$slider_navi_next = $slider.children(".slider__navi--next"),
+			$slider_item = $slider_wrap.children(".slider__item"),
+			slider_item_width = $(this).parent().outerWidth(), //每張slide寬度
+			slider_count = $slider_item.length,
+			slider_item_index = 0, //預宣告slide為0
+			index = 0;
+		if (slider_count > 1) {
+			$slider.children(".slider__navi").fadeIn()
+		}
+		$slider_item.first().clone().css({
+			"width": slider_item_width
+		}).appendTo($slider_wrap);
+		$slider_wrap.css({
+			"width": slider_item_width * (slider_count + 1),
+		});
+		$slider_item.css({
+			"width": slider_item_width
+		});
+		$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
+		function switch_next() {
+			if ($slider_wrap.is(":animated")) return;
+			$slider_wrap.animate({ left: "-=" + slider_item_width }, function() {
+				if (index >= slider_count - 1) {
+					index = -1;
+					$(this).css("left", 0);
+				}
+				index++;
+				switch_item();
+			});
+		}
+		function switch_item() {
+			$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
+		}
+		function switch_prev() {
+			if ($slider_wrap.is(":animated")) return;
+			if (index <= 0) {
+				index = slider_count;
+				$slider_wrap.css("left", -(index * slider_item_width));
+			}
+			$slider_wrap.animate({ left: "+=" + slider_item_width }, function() {
+				index--;
+				switch_item();
+			});
+		}
+		$slider_navi_next.click(switch_next);
+		$slider_navi_prev.click(switch_prev);
+		console.log(slider_item_width);
+	})
 })
 $(window).load(function() {
 	var width = $(window).width(),
@@ -94,60 +148,6 @@ $(window).load(function() {
 			$(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
 		}
 	});
-	// slideshow
-	$(".slideshow.single").each(function() {
-		var $slider = $(this).children(".slider"),
-			$sliderCountDiv = $(this).children(".slider__count"),
-			$slider_wrap = $slider.children(".slider__wrap"),
-			$slider_navi_prev = $slider.children(".slider__navi--prev"),
-			$slider_navi_next = $slider.children(".slider__navi--next"),
-			$slider_item = $slider_wrap.children(".slider__item"),
-			slider_item_width = $(this).parent().outerWidth(), //每張slide寬度
-			slider_count = $slider_item.length,
-			slider_item_index = 0, //預宣告slide為0
-			index = 0;
-		if (slider_count > 1) {
-			$slider.children(".slider__navi").fadeIn()
-		}
-		$slider_item.first().clone().css({
-			"width": slider_item_width
-		}).appendTo($slider_wrap);
-		$slider_wrap.css({
-			"width": slider_item_width * (slider_count + 1),
-		});
-		$slider_item.css({
-			"width": slider_item_width
-		});
-		$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
-		function switch_next() {
-			if ($slider_wrap.is(":animated")) return;
-			$slider_wrap.animate({ left: "-=" + slider_item_width }, function() {
-				if (index >= slider_count - 1) {
-					index = -1;
-					$(this).css("left", 0);
-				}
-				index++;
-				switch_item();
-			});
-		}
-		function switch_item() {
-			$sliderCountDiv.html("<i class='icon icon-images'></i><span class='now'>" + (index + 1) + "</span><span class='slash'>/</span><span class='total'>" + slider_count + "</span>");
-		}
-		function switch_prev() {
-			if ($slider_wrap.is(":animated")) return;
-			if (index <= 0) {
-				index = slider_count;
-				$slider_wrap.css("left", -(index * slider_item_width));
-			}
-			$slider_wrap.animate({ left: "+=" + slider_item_width }, function() {
-				index--;
-				switch_item();
-			});
-		}
-		$slider_navi_next.click(switch_next);
-		$slider_navi_prev.click(switch_prev);
-		console.log(slider_item_width);
-	})
 	// 當不是首頁時
 	if (!$("body").hasClass("index__page")) {
 		$("header nav.menubar--sub").addClass("menubar--sub2").removeClass("menubar--sub");

@@ -1,0 +1,12 @@
+@import "_basic";
+@import "_sheet";
+.slider__wrap {
+	overflow: hidden;
+}
+.slick-list {
+	position: relative;
+}
+.slider__item {
+	position: relative;
+	float: left;
+}

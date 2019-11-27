@@ -40,6 +40,12 @@
 }
 .feature__page header .container {
   max-width: 1260px;
+  width: 100%;
+}
+@media (min-width: 1280px) {
+  .feature__page header nav.menubar--sub2 {
+    right: calc((100% - 1260px) / 2);
+  }
 }
 .feature__page section {
   border-top: 1px solid #D3D5D7;

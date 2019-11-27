@@ -51,15 +51,7 @@ $(function() {
 	naviHeigh(sliderWidth);
 	$(window).load(function() {
 		var width = $(window).width(),
-			height = $(window).height(),
-			container = $(".header__logo .container").outerWidth(),
-			slider_item_width, $slider_wrap;
-		function menubarSub(width, container) {
-			$(".menubar--sub2").css({
-				"right": ((width - container) / 2)
-			});
-		}
-		menubarSub(width, container);
+			height = $(window).height();
 		$("p.preface").each(function() {
 			var preface_height = $(this).outerHeight();
 			if ((preface_height > 100) && (width < 1024)) {
@@ -74,9 +66,7 @@ $(function() {
 		$(window).scroll(function() {
 			var width = $(window).width(),
 				height = $(window).height(),
-				scroll = $(window).scrollTop(),
-				container = $(".header__logo .container").outerWidth();
-			menubarSub(width, container);
+				scroll = $(window).scrollTop();
 			if (scroll >= height) {
 				$(".sns__group").css('opacity', 1);
 			} else {

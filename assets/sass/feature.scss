@@ -31,6 +31,12 @@
 		}
 		.container {
 			max-width: 1260px;
+			width: 100%;
+		}
+		nav.menubar--sub2 {
+			@include breakpoint (1280px) {
+				right: calc((100% - 1260px) / 2);
+			}
 		}
 	}
 	section {

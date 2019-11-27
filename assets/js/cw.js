@@ -189,13 +189,6 @@ $(window).load(function() {
 	// $(".message--alert, .message--dialogs").animate({
 	// 	"top": (height / 2)
 	// }, 10);
-	// menubar--sub 絕對定位
-	function menubarSub(width, container) {
-		$(".menubar--sub2").css({
-			"right": ((width - container) / 2)
-		});
-	}
-	menubarSub(width, container);
 	// 文章頁
 	$('.article__edit__info__type').hide();
 	$('.article__edit__info__type').each(function() {
@@ -376,10 +369,8 @@ $(window).load(function() {
 	// })
 	$(window).resize(function(width) {
 		var width = $(window).width(),
-			height = $(window).height(),
-			container = $(".header__logo .container").outerWidth();
+			height = $(window).height();
 		tabNavWidth(width);
-		menubarSub(width, container);
 		if (width >= 768) {
 			$(".plan__item__right").height(highestCol);
 		} else {

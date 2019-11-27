@@ -34,7 +34,7 @@
 			width: 100%;
 		}
 		nav.menubar--sub2 {
-			@include breakpoint (1280px) {
+			@include breakpoint (1260px) {
 				right: calc((100% - 1260px) / 2);
 			}
 		}

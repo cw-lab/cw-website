@@ -42,7 +42,7 @@
   max-width: 1260px;
   width: 100%;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1260px) {
   .feature__page header nav.menubar--sub2 {
     right: calc((100% - 1260px) / 2);
   }

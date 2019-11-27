@@ -464,17 +464,21 @@
   position: fixed;
   display: flex;
   flex-direction: column;
-  bottom: 30px;
-  right: 10px;
+  bottom: 20px;
   font-size: 28px;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   z-index: 5;
 }
+@media (max-width: 1023px) {
+  .feature__page .sns__group {
+    right: 10px;
+  }
+}
 @media (min-width: 1024px) {
   .feature__page .sns__group {
     bottom: 3em;
-    right: 20px;
+    left: calc(910px + (100% - 880px) / 2);
     font-size: 40px;
   }
 }

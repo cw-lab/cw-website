@@ -416,14 +416,16 @@
 		position: fixed;
 		display: flex;
 		flex-direction: column;
-		bottom: 30px;
-		right: 10px;
+		bottom: 20px;
 		font-size: 28px;
 		@include opacity(0);
 		z-index: 5;
+		@include breakpoint(max-width 1023px) {
+			right: 10px;
+		}
 		@include breakpoint(1024px) {
 			bottom: 3em;
-			right: 20px;
+			left: calc(910px + (100% - 880px) / 2);
 			font-size: 40px;
 		}
 		li {

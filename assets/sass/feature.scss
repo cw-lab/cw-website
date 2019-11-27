@@ -424,6 +424,7 @@
 		@include breakpoint(1024px) {
 			bottom: 3em;
 			right: 20px;
+			font-size: 40px;
 		}
 		li {
 			+li {

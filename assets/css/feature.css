@@ -475,6 +475,7 @@
   .feature__page .sns__group {
     bottom: 3em;
     right: 20px;
+    font-size: 40px;
   }
 }
 .feature__page .sns__group li + li {

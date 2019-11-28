@@ -245,6 +245,10 @@ ol {
   margin-top: 40px !important;
 }
 
+.mt30 {
+  margin-top: 30px !important;
+}
+
 .mb30 {
   margin-bottom: 30px !important;
 }
@@ -1285,6 +1289,102 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
 nav a {
   display: block;
 }
+nav.menubar--left {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  max-height: 100vh;
+  font-size: 1rem;
+  border: 1px solid #D3D5D7;
+  background-color: #fff;
+  overflow: scroll;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 12;
+}
+@media (min-width: 1024px) {
+  nav.menubar--left {
+    overflow: hidden scroll;
+  }
+}
+nav.menubar--left ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav.menubar--left ul li {
+  line-height: 1;
+}
+nav.menubar--left ul li .li__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav.menubar--left ul li .li__group a {
+  color: #171717;
+}
+nav.menubar--left ul li .li__group:hover a, nav.menubar--left ul li .li__group:hover i {
+  color: #D60C18;
+}
+nav.menubar--left ul li .li__group a.sns-facebook:hover > i, nav.menubar--left ul li .li__group a.sns-facebook:hover > span {
+  color: #1877F2;
+}
+nav.menubar--left ul li .li__group a.sns-line:hover > i, nav.menubar--left ul li .li__group a.sns-line:hover > span {
+  color: #00C200;
+}
+nav.menubar--left ul li.now {
+  background-color: #D60C18;
+}
+nav.menubar--left ul li.now > .li__group > a, nav.menubar--left ul li.now > .li__group > i {
+  color: #fff;
+}
+nav.menubar--left > ul + ul {
+  border-top: 1px solid #D3D5D7;
+}
+nav.menubar--left > ul > li .li__group {
+  position: relative;
+}
+nav.menubar--left > ul > li .li__group > a {
+  display: flex;
+  width: 100%;
+  padding: 17px 25px;
+  align-items: center;
+}
+nav.menubar--left > ul > li .li__group > a.sns i + span {
+  margin-left: 5px;
+}
+nav.menubar--left > ul > li .li__group > i.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 17px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+nav.menubar--left > ul > li .li__group > i.more.active {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+nav.menubar--left > ul > li > ul {
+  display: none;
+  background-color: #EEEEEE;
+}
+nav.menubar--left > ul > li > ul > li .li__group > a {
+  padding: 17px 50px;
+}
+nav.menubar--left.opened {
+  left: 0;
+}
 nav.menubar--sub {
   position: relative;
   font-size: 14px;
@@ -1582,6 +1682,89 @@ nav.menubar--belt--third ul li a {
   align-items: center;
 }
 nav.menubar--belt--third > ul > li > ul {
+  left: 0;
+}
+
+aside.menubar--left {
+  font-size: 1rem;
+  border: 1px solid #D3D5D7;
+  background-color: #fff;
+}
+aside.menubar--left ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+aside.menubar--left ul li {
+  line-height: 1;
+}
+aside.menubar--left ul li .li__group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+aside.menubar--left ul li .li__group a {
+  color: #171717;
+}
+aside.menubar--left ul li .li__group:hover a, aside.menubar--left ul li .li__group:hover i {
+  color: #D60C18;
+}
+aside.menubar--left ul li .li__group a.sns-facebook:hover > i, aside.menubar--left ul li .li__group a.sns-facebook:hover > span {
+  color: #1877F2;
+}
+aside.menubar--left ul li .li__group a.sns-line:hover > i, aside.menubar--left ul li .li__group a.sns-line:hover > span {
+  color: #00C200;
+}
+aside.menubar--left > ul + ul {
+  border-top: 1px solid #D3D5D7;
+}
+aside.menubar--left > ul > li .li__group {
+  position: relative;
+}
+aside.menubar--left > ul > li .li__group > a {
+  display: flex;
+  width: 100%;
+  padding: 17px 25px;
+  align-items: center;
+}
+aside.menubar--left > ul > li .li__group > a.sns i + span {
+  margin-left: 5px;
+}
+aside.menubar--left > ul > li .li__group > i.more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 17px 25px;
+  font-weight: bold;
+  cursor: pointer;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+aside.menubar--left > ul > li .li__group > i.more.active {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+aside.menubar--left > ul > li.now {
+  background-color: #D60C18;
+}
+aside.menubar--left > ul > li.now > .li__group > a, aside.menubar--left > ul > li.now > .li__group > i {
+  color: #fff;
+}
+aside.menubar--left > ul > li > ul {
+  display: none;
+}
+aside.menubar--left > ul > li > ul > li .li__group > a {
+  padding: 17px 50px;
+}
+aside.menubar--left > ul > li > ul > li.now a {
+  color: #D60C18;
+}
+aside.menubar--left.opened {
   left: 0;
 }
 
@@ -2041,6 +2224,12 @@ a.btn {
     padding: 0.8125em 1em;
   }
 }
+button.btn.btn--small,
+a.btn.btn--small {
+  min-width: 72px;
+  padding: 0.7em 1em;
+  line-height: 1;
+}
 button.btn + button.btn,
 button.btn + a.btn,
 a.btn + button.btn,
@@ -2114,12 +2303,20 @@ a.btn:active::after {
 button.btn--text,
 a.btn--text {
   display: inline-block;
+  padding: 0;
   color: #003a9f;
   text-decoration: underline;
+  border: 0;
+  cursor: pointer;
 }
 button.btn--text:hover,
 a.btn--text:hover {
   color: #D60C18;
+}
+button.btn--text.disabled,
+a.btn--text.disabled {
+  color: #D3D5D7;
+  cursor: not-allowed;
 }
 button.btn--outlined,
 a.btn--outlined {
@@ -3128,6 +3325,9 @@ body.message__open {
   z-index: -1;
 }
 
+header {
+  position: relative;
+}
 header > .container-fluid > .flex, header > .container > .flex {
   padding-top: 10px;
   padding-bottom: 10px;

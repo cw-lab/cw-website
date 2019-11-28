@@ -157,7 +157,7 @@ $(window).load(function() {
 	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
 	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
 	// sidemenu-left
-	$("nav.menubar--left > ul > li > .li__group > i.more").click(function() {
+	$(".menubar--left > ul > li > .li__group > i.more").click(function() {
 		$(this).toggleClass("active");
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();

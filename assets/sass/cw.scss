@@ -13,6 +13,7 @@
 @import "_selection";
 @import "_message";
 header {
+    position: relative;
     > .container-fluid, > .container {
         >.flex {
             padding-top: 10px;

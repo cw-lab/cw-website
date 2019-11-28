@@ -1,0 +1,195 @@
+@import "_basic";
+@import "_sheet";
+html {
+	height: 100%;
+	min-height: 100%;
+}
+.center__page {
+	header {
+		border-bottom: 1px solid $gray-200;
+		nav.menubar--sub2 {
+			@include breakpoint(1024px) {
+				right: calc( (100% - 1020px) / 2 );
+			}
+			ul.menubar__user {
+				display: block !important;
+				&::before {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: auto;
+	    margin-right: auto;
+		@include breakpoint(1024px) {
+			width: 1020px;
+		}
+		@include breakpoint(375px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&::after {
+			@extend %before-after;
+			clear: both;
+		}
+	}
+	aside {
+		width: 100%;
+		@include breakpoint(max-width 1023px) {
+			display: none;
+		}
+		@include breakpoint(1024px) {
+			float: left;
+			max-width: 200px;
+		}
+	}
+	article {
+		width: 100%;
+		@include breakpoint(1024px) {
+			float: right;
+			max-width: 750px;
+		}
+		.edit__group {
+			padding: 20px;
+			border: 1px solid $gray-200;
+			background-color: $white;
+			@include breakpoint(1024px) {
+				padding: 30px;
+			}
+		}
+		form {
+			+ form {
+				margin-top: 30px;
+			}
+			> .form__group {
+				max-width: none;
+				margin-top: 10px;
+				.btn--small {
+					margin-top: 20px;
+				}
+				label + label {
+					margin-top: 20px;
+				}
+			}
+			.form__edit {
+				font-size: 1rem;
+				> * {
+					line-height: 1.5;
+				}
+				> .h3 {
+					font-weight: 600;
+				}
+				&:hover {
+					background-color: $gray;
+				}
+			}
+			.form__value {
+				font-size: 1rem;
+				line-height: 1.5;
+				&.form__value--blank {
+					color: $secondary;
+				}
+			}
+			.address__group {
+				margin-top: 10px;
+				.form__group {
+					@include breakpoint(375px) {
+						margin-left: 1rem;
+					}
+					max-width: none;
+					.form__group__input {
+						min-width: auto;
+						width: 100%;
+					}
+				}
+				.select__group {
+					@include breakpoint(max-width 374px) {
+						width: 100%;
+					}
+					@include breakpoint(375px) {
+						width: calc( (100% - 1rem) / 2 );
+					}
+					@include breakpoint(768px) {
+						width: 140px;
+					}
+					select {
+						width: 100%;
+						min-width: auto;
+					}
+					+ .select__group {
+						@include breakpoint(max-width 374px) {
+							margin-left: 0;
+							margin-top: 1rem;
+						}
+					}
+				}
+			}
+			.taiwan {
+				.form__group {
+					max-width: none;
+					width: 100%;
+					@include breakpoint(768px) {
+						width: calc(100% - 280px - 2rem);
+					}
+					@include breakpoint(max-width 767px) {
+						margin-top: 1rem;
+						margin-left: 0;
+					}
+				}
+			}
+			.oversea {
+				margin-top: 20px;
+				.form__group {
+					width: calc(100% - 140px - 1rem);
+					@include breakpoint(375px) {
+						width: calc( (100% - 1rem) / 2 );
+					}
+					@include breakpoint(768px) {
+						width: 140px;
+					}
+					@include breakpoint(max-width 374px) {
+						margin-top: 1rem;
+						width: 100%;
+					}
+					+ .form__group {
+						@include breakpoint(768px) {
+							width: calc(100% - 280px - 2rem);
+						}
+						@include breakpoint(max-width 767px) {
+							margin-top: 1rem;
+							margin-left: 0;
+							width: 100%;
+						}
+					}
+				}
+			}
+			.birthday__group {
+				display: flex;
+				.select__group {
+					width: 100%;
+					@include breakpoint(768px) {
+						width: calc( (100% - 2rem) / 3);
+					}
+					&:nth-child(2) {
+						@include breakpoint(max-width 767px) {
+							margin-left: 0;
+						}
+					}
+					+ .select__group {
+						@include breakpoint(max-width 767px) {
+							margin-top: 1rem;
+							width: calc( (100% - 1rem) / 2);
+						}
+					}
+					select {
+						min-width: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

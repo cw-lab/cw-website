@@ -359,21 +359,38 @@
 			}
 			.slider__thumbnail {
 				overflow: hidden;
+				&.fixed .slick-track {
+					margin-left: auto;
+					margin-right: auto;
+					@include transform(none !important);
+				}
 				.thumbnail__img {
+					position: relative;
 					display: inline-block;
-					width: 120px;
-					margin-left: 10px;
-					background-color: $black;
+					padding-left: 5px;
+					padding-right: 5px;
 					@include breakpoint(1024px) {
-						width: 150px;
-						margin-left: 15px;
+						padding-left: 8px;
+						padding-right: 8px;
 					}
-					&:first-child {
-						margin-left: 0;
+					&::before {
+						@extend %before-after;
+						position: absolute;
+						top: 0;
+						left: 5px;
+						width: calc(100% - 10px);
+						height: 100%;
+						background-color: $black;
+						@include breakpoint(1024px) {
+							left: 8px;
+							width: calc(100% - 16px);
+						}
 					}
 					img {
+						position: relative;
 						@include opacity(0.5);
 						@include transition(opacity 0.3s);
+						z-index: 2;
 					}
 					&.slick-current {
 						img {

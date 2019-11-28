@@ -25,6 +25,11 @@ a {
             min-width: 144px;
             padding: 0.8125em 1em;
         }
+        &.btn--small {
+            min-width: 72px;
+            padding: 0.7em 1em;
+            line-height: 1;
+        }
         +button.btn,
         +a.btn {
             margin-left: 0.5rem;
@@ -80,10 +85,17 @@ a {
         }
         &--text {
             display: inline-block;
+            padding: 0;
             color: $surface;
             text-decoration: underline;
+            border: 0;
+            cursor: pointer;
             &:hover {
                 color: $primary;
+            }
+            &.disabled {
+                color: $gray-200;
+                cursor: not-allowed;
             }
         }
         &--outlined {

@@ -29,8 +29,8 @@ $(function() {
 		slidesToShow: 5,
 		asNavFor: '.slideshow.multi .slider__wrap',
 		arrows: false,
-		centerMode: true,
 		focusOnSelect: true,
+		centerMode: true,
 		responsive: [
 			{
 				breakpoint: 768,
@@ -63,6 +63,15 @@ $(function() {
 			$(this).siblings("p").removeClass('hidden');
 			$(this).remove();
 		});
+		if (width >= 768) {
+			$('.slideshow.multi .slider__thumbnail').each(function(){
+				if ( $(this).children('.slick-list').children('.slick-track').children('.thumbnail__img').length < 5 ) {
+					$(this).addClass('fixed');
+				} else {
+					$(this).removeClass('fixed');
+				}
+			});
+		}
 		$(window).scroll(function() {
 			var width = $(window).width(),
 				height = $(window).height(),

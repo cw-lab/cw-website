@@ -75,150 +75,150 @@ html {
     padding: 30px;
   }
 }
-.center__page article form + form {
+.center__page article .form + .form {
   margin-top: 30px;
 }
-.center__page article form > .form__group {
+.center__page article .form > .form__group {
   max-width: none;
   margin-top: 10px;
 }
-.center__page article form > .form__group .btn--small {
+.center__page article .form > .form__group .btn--small {
   margin-top: 20px;
 }
-.center__page article form > .form__group label + label {
+.center__page article .form > .form__group label + label {
   margin-top: 20px;
 }
-.center__page article form .form__edit {
+.center__page article .form .form__edit {
   font-size: 1rem;
 }
-.center__page article form .form__edit > * {
+.center__page article .form .form__edit > * {
   line-height: 1.5;
 }
-.center__page article form .form__edit > .h3 {
+.center__page article .form .form__edit > .h3 {
   font-weight: 600;
 }
-.center__page article form .form__edit:hover {
+.center__page article .form .form__edit:hover {
   background-color: #fafafa;
 }
-.center__page article form .form__value {
+.center__page article .form .form__value {
   font-size: 1rem;
   line-height: 1.5;
 }
-.center__page article form .form__value.form__value--blank {
+.center__page article .form .form__value.form__value--blank {
   color: #939EA7;
 }
-.center__page article form .address__group {
+.center__page article .form .address__group {
   margin-top: 10px;
 }
-.center__page article form .address__group .form__group {
+.center__page article .form .address__group .form__group {
   max-width: none;
 }
 @media (min-width: 375px) {
-  .center__page article form .address__group .form__group {
+  .center__page article .form .address__group .form__group {
     margin-left: 1rem;
   }
 }
-.center__page article form .address__group .form__group .form__group__input {
+.center__page article .form .address__group .form__group .form__group__input {
   min-width: auto;
   width: 100%;
 }
 @media (max-width: 374px) {
-  .center__page article form .address__group .select__group {
+  .center__page article .form .address__group .select__group {
     width: 100%;
   }
 }
 @media (min-width: 375px) {
-  .center__page article form .address__group .select__group {
+  .center__page article .form .address__group .select__group {
     width: calc( (100% - 1rem) / 2 );
   }
 }
 @media (min-width: 768px) {
-  .center__page article form .address__group .select__group {
+  .center__page article .form .address__group .select__group {
     width: 140px;
   }
 }
-.center__page article form .address__group .select__group select {
+.center__page article .form .address__group .select__group select {
   width: 100%;
   min-width: auto;
 }
 @media (max-width: 374px) {
-  .center__page article form .address__group .select__group + .select__group {
+  .center__page article .form .address__group .select__group + .select__group {
     margin-left: 0;
     margin-top: 1rem;
   }
 }
-.center__page article form .taiwan .form__group {
+.center__page article .form .taiwan .form__group {
   max-width: none;
   width: 100%;
 }
 @media (min-width: 768px) {
-  .center__page article form .taiwan .form__group {
+  .center__page article .form .taiwan .form__group {
     width: calc(100% - 280px - 2rem);
   }
 }
 @media (max-width: 767px) {
-  .center__page article form .taiwan .form__group {
+  .center__page article .form .taiwan .form__group {
     margin-top: 1rem;
     margin-left: 0;
   }
 }
-.center__page article form .oversea {
+.center__page article .form .oversea {
   margin-top: 20px;
 }
-.center__page article form .oversea .form__group {
+.center__page article .form .oversea .form__group {
   width: calc(100% - 140px - 1rem);
 }
 @media (min-width: 375px) {
-  .center__page article form .oversea .form__group {
+  .center__page article .form .oversea .form__group {
     width: calc( (100% - 1rem) / 2 );
   }
 }
 @media (min-width: 768px) {
-  .center__page article form .oversea .form__group {
+  .center__page article .form .oversea .form__group {
     width: 140px;
   }
 }
 @media (max-width: 374px) {
-  .center__page article form .oversea .form__group {
+  .center__page article .form .oversea .form__group {
     margin-top: 1rem;
     width: 100%;
   }
 }
 @media (min-width: 768px) {
-  .center__page article form .oversea .form__group + .form__group {
+  .center__page article .form .oversea .form__group + .form__group {
     width: calc(100% - 280px - 2rem);
   }
 }
 @media (max-width: 767px) {
-  .center__page article form .oversea .form__group + .form__group {
+  .center__page article .form .oversea .form__group + .form__group {
     margin-top: 1rem;
     margin-left: 0;
     width: 100%;
   }
 }
-.center__page article form .birthday__group {
+.center__page article .form .birthday__group {
   display: flex;
 }
-.center__page article form .birthday__group .select__group {
+.center__page article .form .birthday__group .select__group {
   width: 100%;
 }
 @media (min-width: 768px) {
-  .center__page article form .birthday__group .select__group {
+  .center__page article .form .birthday__group .select__group {
     width: calc( (100% - 2rem) / 3);
   }
 }
 @media (max-width: 767px) {
-  .center__page article form .birthday__group .select__group:nth-child(2) {
+  .center__page article .form .birthday__group .select__group:nth-child(2) {
     margin-left: 0;
   }
 }
 @media (max-width: 767px) {
-  .center__page article form .birthday__group .select__group + .select__group {
+  .center__page article .form .birthday__group .select__group + .select__group {
     margin-top: 1rem;
     width: calc( (100% - 1rem) / 2);
   }
 }
-.center__page article form .birthday__group .select__group select {
+.center__page article .form .birthday__group .select__group select {
   min-width: auto;
   width: 100%;
 }

@@ -1941,21 +1941,21 @@ input[type*='number']::-webkit-outer-spin-button {
   opacity: 0;
 }
 
-form.form {
+.form {
   font-size: 0;
 }
-form .form__group {
+.form .form__group {
   position: relative;
   max-width: 290px;
 }
-form .form__group > * {
+.form .form__group > * {
   display: block;
 }
-form .form__group .label {
+.form .form__group .label {
   position: relative;
   display: block;
 }
-form .form__group .form__group__placeholder {
+.form .form__group .form__group__placeholder {
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -1966,7 +1966,7 @@ form .form__group .form__group__placeholder {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-form .form__group .form__group__input {
+.form .form__group .form__group__input {
   min-width: 144px;
   width: 100%;
   color: #171717;
@@ -1974,60 +1974,60 @@ form .form__group .form__group__input {
   border-style: solid;
   border-color: #939EA7;
 }
-form .form__group .form__group__input:focus {
+.form .form__group .form__group__input:focus {
   border-color: #003a9f;
 }
-form .form__group--filled .form__group__input {
+.form .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
   background-color: #EEEEEE;
   border-width: 0px 0px 1px;
 }
-form .form__group--filled.form__group--correct:hover .form__group__placeholder, form .form__group--filled.form__group--correct.hasValue .form__group__placeholder {
+.form .form__group--filled.form__group--correct:hover .form__group__placeholder, .form .form__group--filled.form__group--correct.hasValue .form__group__placeholder {
   color: #003a9f;
 }
-form .form__group--filled.form__group--correct:hover .form__group__input, form .form__group--filled.form__group--correct.hasValue .form__group__input {
+.form .form__group--filled.form__group--correct:hover .form__group__input, .form .form__group--filled.form__group--correct.hasValue .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--filled.form__group--error:hover .form__group__placeholder, form .form__group--filled.form__group--error.hasValue .form__group__placeholder {
+.form .form__group--filled.form__group--error:hover .form__group__placeholder, .form .form__group--filled.form__group--error.hasValue .form__group__placeholder {
   color: #D60C18;
 }
-form .form__group--filled.form__group--error:hover .form__group__input, form .form__group--filled.form__group--error.hasValue .form__group__input {
+.form .form__group--filled.form__group--error:hover .form__group__input, .form .form__group--filled.form__group--error.hasValue .form__group__input {
   border-color: #D60C18;
 }
-form .form__group--filled.form__group--hasicon .form__group__input {
+.form .form__group--filled.form__group--hasicon .form__group__input {
   padding: 1.5rem 3rem 0.4rem 1rem;
 }
-form .form__group--filled.form__group--hasicon i.icon {
+.form .form__group--filled.form__group--hasicon i.icon {
   top: 1.5rem;
 }
-form .form__group--filled .form__group--defalt:hover .form__group__placeholder, form .form__group--filled .form__group--defalt.hasValue .form__group__placeholder {
+.form .form__group--filled .form__group--defalt:hover .form__group__placeholder, .form .form__group--filled .form__group--defalt.hasValue .form__group__placeholder {
   top: 0.2em;
   font-size: 12px;
 }
-form .form__group--outlined .form__group__input {
+.form .form__group--outlined .form__group__input {
   padding: 1.1rem 1rem 0.7rem;
   background-color: transparent;
   border-width: 1px;
 }
-form .form__group--outlined .form__group--defalt:hover .form__group__placeholder, form .form__group--outlined .form__group--defalt.hasValue .form__group__placeholder {
+.form .form__group--outlined .form__group--defalt:hover .form__group__placeholder, .form .form__group--outlined .form__group--defalt.hasValue .form__group__placeholder {
   top: -0.8em;
   padding: 0 2px;
   font-size: 12px;
   background-color: #fff;
 }
-form .form__group--outlined .form__group--correct:hover .form__group__placeholder, form .form__group--outlined .form__group--correct.hasValue .form__group__placeholder {
+.form .form__group--outlined .form__group--correct:hover .form__group__placeholder, .form .form__group--outlined .form__group--correct.hasValue .form__group__placeholder {
   color: #003a9f;
 }
-form .form__group--outlined .form__group--correct:hover .form__group__input, form .form__group--outlined .form__group--correct.hasValue .form__group__input {
+.form .form__group--outlined .form__group--correct:hover .form__group__input, .form .form__group--outlined .form__group--correct.hasValue .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--outlined .form__group--hasicon .form__group__input {
+.form .form__group--outlined .form__group--hasicon .form__group__input {
   padding: 1.1rem 3rem 0.7rem 1rem;
 }
-form .form__group--defalt:hover .form__group__placeholder {
+.form .form__group--defalt:hover .form__group__placeholder {
   color: #003a9f;
 }
-form .form__group--hasicon i.icon {
+.form .form__group--hasicon i.icon {
   position: absolute;
   top: 1.25rem;
   right: 1rem;
@@ -2037,54 +2037,54 @@ form .form__group--hasicon i.icon {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-form .form__group--correct .form__group__placeholder,
-form .form__group--correct .icon,
-form .form__group--correct .form__group__help--highlight {
+.form .form__group--correct .form__group__placeholder,
+.form .form__group--correct .icon,
+.form .form__group--correct .form__group__help--highlight {
   color: #003a9f !important;
 }
-form .form__group--correct .form__group__placeholder,
-form .form__group--correct .icon {
+.form .form__group--correct .form__group__placeholder,
+.form .form__group--correct .icon {
   color: #003a9f;
 }
-form .form__group--correct .form__group__input {
+.form .form__group--correct .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--error .form__group__placeholder,
-form .form__group--error .icon,
-form .form__group--error .form__group__help--highlight {
+.form .form__group--error .form__group__placeholder,
+.form .form__group--error .icon,
+.form .form__group--error .form__group__help--highlight {
   color: #D60C18 !important;
 }
-form .form__group--error .form__group__input {
+.form .form__group--error .form__group__input {
   border-color: #D60C18 !important;
 }
-form .form__group--error .select__group::before {
+.form .form__group--error .select__group::before {
   color: #D60C18;
 }
-form .form__group--undone .form__group__placeholder {
+.form .form__group--undone .form__group__placeholder {
   color: #D60C18;
 }
-form .form__group--undone .form__group__input {
+.form .form__group--undone .form__group__input {
   border-color: #D60C18;
 }
-form .form__group--undone:hover .form__group__placeholder,
-form .form__group--undone .hasValue .form__group__placeholder {
+.form .form__group--undone:hover .form__group__placeholder,
+.form .form__group--undone .hasValue .form__group__placeholder {
   color: #003a9f;
 }
-form .form__group--undone:hover .form__group__input,
-form .form__group--undone .hasValue .form__group__input {
+.form .form__group--undone:hover .form__group__input,
+.form .form__group--undone .hasValue .form__group__input {
   border-color: #003a9f;
 }
-form .form__group--disabled > * {
+.form .form__group--disabled > * {
   cursor: not-allowed;
 }
-form .form__group--disabled .form__group__placeholder {
+.form .form__group--disabled .form__group__placeholder {
   color: #D3D5D7;
 }
-form .form__group--disabled .form__group__input {
+.form .form__group--disabled .form__group__input {
   background-color: #EEEEEE;
   border-color: #EEEEEE;
 }
-form .form__group__help {
+.form .form__group__help {
   display: block;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2094,7 +2094,7 @@ form .form__group__help {
   font-style: normal;
   line-height: 1;
 }
-form .form__group__help--strong {
+.form .form__group__help--strong {
   padding-left: 0;
   padding-right: 0;
   margin-top: 10px;
@@ -2102,18 +2102,18 @@ form .form__group__help--strong {
   color: #48545D;
   font-size: 14px;
 }
-form .form__group__help + .form__group__help {
+.form .form__group__help + .form__group__help {
   margin-top: -10px;
 }
-form .select__group {
+.form .select__group {
   position: relative;
   display: table;
   font-size: 1rem;
 }
-form .select__group + .select__group {
+.form .select__group + .select__group {
   margin-left: 1rem;
 }
-form .select__group select {
+.form .select__group select {
   min-width: 140px;
   padding: 1rem 2rem 1rem 1rem;
   line-height: 1;
@@ -2127,57 +2127,57 @@ form .select__group select {
   background-repeat: no-repeat;
 }
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  form .select__group select {
+  .form .select__group select {
     height: 50px;
     background-size: 28px;
     background-position: calc(100% - 3.5px) center;
   }
 }
-form .select__group--defalt.select__group--filled select {
+.form .select__group--defalt.select__group--filled select {
   background-color: #EEEEEE;
   background-image: url(../images/common/down.svg);
   border-color: #EEEEEE;
 }
-form .select__group--defalt.select__group--filled:hover select {
+.form .select__group--defalt.select__group--filled:hover select {
   color: #fff;
   background-color: #003a9f;
   background-image: url(../images/common/down--white.svg);
 }
-form .select__group--defalt.select__group--outlined select {
+.form .select__group--defalt.select__group--outlined select {
   background-color: #fff;
   background-image: url(../images/common/down.svg);
   border-color: #939EA7;
 }
-form .select__group--defalt.select__group--outlined:hover select {
+.form .select__group--defalt.select__group--outlined:hover select {
   color: #003a9f;
   background-image: url(../images/common/down--surface.svg);
 }
-form .select__group--undone.select__group--filled select {
+.form .select__group--undone.select__group--filled select {
   color: #D60C18;
   background-color: #EEEEEE;
   background-image: url(../images/common/down--primary.svg);
   border-color: #EEEEEE;
 }
-form .select__group--undone.select__group--filled:hover select {
+.form .select__group--undone.select__group--filled:hover select {
   color: #fff;
   background-color: #003a9f;
   background-image: url(../images/common/down--white.svg);
 }
-form .select__group--undone.select__group--outlined select {
+.form .select__group--undone.select__group--outlined select {
   color: #D60C18;
   background-color: #fff;
   background-image: url(../images/common/down--primary.svg);
   border-color: #D60C18;
 }
-form .select__group--undone.select__group--outlined:hover select {
+.form .select__group--undone.select__group--outlined:hover select {
   color: #003a9f;
   border-color: #003a9f;
   background-image: url(../images/common/down--surface.svg);
 }
-form .select__group--disabled {
+.form .select__group--disabled {
   cursor: not-allowed;
 }
-form .select__group--disabled select {
+.form .select__group--disabled select {
   color: #D3D5D7;
   background-color: #EEEEEE;
   background-image: url(../images/common/down--disable.svg) !important;

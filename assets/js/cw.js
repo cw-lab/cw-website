@@ -177,6 +177,7 @@ $(window).load(function() {
 	// message: 點擊 message__open 開啟
 	$(".message__open").on("click", function() {
 		var messageID = $(this).attr("id");
+		$('body').removeClass('message__open');
 		$('.black').toggleClass('opened');
 		$(".message." + messageID).fadeIn();
 	})
@@ -184,6 +185,12 @@ $(window).load(function() {
 	$(".message__close").on("click", function() {
 		$(this).parent().parent().fadeOut();
 		$('.black').toggleClass('opened');
+		$('body').removeClass('message__open');
+	})
+	$(".btn__close").on("click", function() {
+		$(this).parent().parent().parent().fadeOut();
+		$('.black').toggleClass('opened');
+		$('body').removeClass('message__open');
 	})
 	// message--alert, .message--dialogs 絕對定位
 	// $(".message--alert, .message--dialogs").animate({

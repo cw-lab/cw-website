@@ -89,8 +89,12 @@ html {
 			.form__value {
 				font-size: 1rem;
 				line-height: 1.5;
+				word-break: break-word;
 				&.form__value--blank {
 					color: $secondary;
+				}
+				&.blank__show {
+					color: $black;
 				}
 			}
 			.address__group {

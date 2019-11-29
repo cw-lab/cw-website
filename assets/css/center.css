@@ -103,9 +103,13 @@ html {
 .center__page article .form .form__value {
   font-size: 1rem;
   line-height: 1.5;
+  word-break: break-word;
 }
 .center__page article .form .form__value.form__value--blank {
   color: #939EA7;
+}
+.center__page article .form .form__value.blank__show {
+  color: #171717;
 }
 .center__page article .form .address__group {
   margin-top: 10px;

@@ -141,6 +141,23 @@
 								</label>
 								<button class="btn btn--contained btn--small">儲存</button>
 							</div>
+							<div class="form__group form__group--filled form__group--hasicon form__group--error">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入 e-mail</div>
+									<input type="email" class="form__group__input form__group__input--default">
+									<i class="form__group--filled__icon icon icon-exclamation-circle"></i>
+									<i class="form__group__help form__group__help--strong form__group__help--highlight">信箱已使用，請試試其他信箱</i>
+								</label>
+								<button class="btn btn--contained btn--small">儲存</button>
+							</div>
+							<div class="form__group form__group--filled form__group--undone">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入 e-mail</div>
+									<input type="email" class="form__group__input form__group__input--default">
+									<i class="form__group__help form__group__help--strong">此為必填欄位</i>
+								</label>
+								<button class="btn btn--contained btn--small">儲存</button>
+							</div>
 						</div>
 						<div class="form">
 							<div class="form__edit flex align-items-center justify-between">
@@ -152,7 +169,16 @@
 							<div class="form__group form__group--filled">
 								<label for="#!" class="label">
 									<div class="form__group__placeholder">請輸入手機號碼</div>
-									<input type="phone" class="form__group__input form__group__input--default">
+									<input type="tel" class="form__group__input form__group__input--default">
+								</label>
+								<button class="btn btn--contained btn--small">儲存</button>
+							</div>
+							<div class="form__group form__group--filled form__group--undone">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入手機號碼</div>
+									<input type="tel" class="form__group__input form__group__input--default">
+									<i class="form__group--filled__icon icon icon-exclamation-circle"></i>
+									<i class="form__group__help form__group__help--strong" style="">台灣讀者請輸入手機號碼，例：0912345678<br>其他地區讀者請輸入國碼，例：+886912345678</i>
 								</label>
 								<button class="btn btn--contained btn--small">儲存</button>
 							</div>
@@ -1048,12 +1074,15 @@
 						$(this).parent('.form__edit').siblings('.form__group').show();
 						$(this).parent('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').addClass('disabled');
 						$(this).parent('.form__edit').parent('.form').parent('.edit__group').siblings('.edit__group').children('.form').children('.form__edit').children('a').addClass('disabled');
+						if ( $(this).parent('.form__edit').siblings('.form__value').hasClass('form__value--blank') ) {
+							$(this).parent('.form__edit').siblings('.form__value').addClass('blank__show').show();
+						}
 					}
 				});
 				$('.goRevert').click(function(){
 					$(this).hide();
 					$(this).siblings('.goEdit').show();
-					$(this).parent('.form__edit').siblings('.form__value').show();
+					$(this).parent('.form__edit').siblings('.form__value').removeClass('blank__show').show();
 					$(this).parent('.form__edit').siblings('.form__group').hide();
 					$(this).parent('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').removeClass('disabled');
 					$(this).parent('.form__edit').parent('.form').parent('.edit__group').siblings('.edit__group').children('.form').children('.form__edit').children('a').removeClass('disabled');
@@ -1092,8 +1121,16 @@
 						$(this).parent('.form__group')
 								.siblings('.form__value')
 								.removeClass('form__value--blank')
-								.text(nation+worldcity+detailworld);
+								.text(nation+' '+worldcity+' '+detailworld);
 					}
+				});
+				$("#nation, #worldcity, #detailworld").click(function(){
+					$('.taiwan input[name="address"]').prop('checked', false);
+					$('.oversea input[name="address"]').prop('checked', true);
+				});
+				$("#country, #city, #detailtaiwan").click(function(){
+					$('.taiwan input[name="address"]').prop('checked', true);
+					$('.oversea input[name="address"]').prop('checked', false);
 				});
 			})
 		</script>

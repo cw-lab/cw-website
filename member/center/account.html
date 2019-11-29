@@ -1047,6 +1047,7 @@
 						$(this).parent('.form__edit').siblings('.form__value').hide();
 						$(this).parent('.form__edit').siblings('.form__group').show();
 						$(this).parent('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').addClass('disabled');
+						$(this).parent('.form__edit').parent('.form').parent('.edit__group').siblings('.edit__group').children('.form').children('.form__edit').children('a').addClass('disabled');
 					}
 				});
 				$('.goRevert').click(function(){
@@ -1055,6 +1056,15 @@
 					$(this).parent('.form__edit').siblings('.form__value').show();
 					$(this).parent('.form__edit').siblings('.form__group').hide();
 					$(this).parent('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').removeClass('disabled');
+					$(this).parent('.form__edit').parent('.form').parent('.edit__group').siblings('.edit__group').children('.form').children('.form__edit').children('a').removeClass('disabled');
+				});
+				$('button.btn--small').click(function(){
+					$(this).parent('.form__group').hide();
+					$(this).parent('.form__group').siblings('.form__value').show();
+					$(this).parent('.form__group').siblings('.form__edit').children('.goRevert').hide();
+					$(this).parent('.form__group').siblings('.form__edit').children('.goEdit').show();
+					$(this).parent('.form__group').siblings('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').removeClass('disabled');
+					$(this).parent('.form__group').parent('.form').parent('.edit__group').siblings('.edit__group').children('.form').children('.form__edit').children('a').removeClass('disabled');
 				});
 				$('#birthday button.btn--small').click(function(){
 					var year		 = $('select#year').find(':selected').text(),
@@ -1064,11 +1074,6 @@
 							.siblings('.form__value')
 							.removeClass('form__value--blank')
 							.text(year+'年'+month+'月'+day+'日');
-					$(this).parent('.form__group').hide();
-					$(this).parent('.form__group').siblings('.form__value').show();
-					$(this).parent('.form__group').siblings('.form__edit').children('.goRevert').hide();
-					$(this).parent('.form__group').siblings('.form__edit').children('.goEdit').show();
-					$(this).parent('.form__group').siblings('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').removeClass('disabled');
 				});
 				$('#address button.btn--small').click(function(){
 					var nation		 = $('select#nation').find(':selected').text(),
@@ -1089,11 +1094,6 @@
 								.removeClass('form__value--blank')
 								.text(nation+worldcity+detailworld);
 					}
-					$(this).parent('.form__group').hide();
-					$(this).parent('.form__group').siblings('.form__value').show();
-					$(this).parent('.form__group').siblings('.form__edit').children('.goRevert').hide();
-					$(this).parent('.form__group').siblings('.form__edit').children('.goEdit').show();
-					$(this).parent('.form__group').siblings('.form__edit').parent('.form').siblings('.form').children('.form__edit').children('a').removeClass('disabled');
 				});
 			})
 		</script>

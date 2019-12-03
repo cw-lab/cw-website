@@ -453,7 +453,7 @@ footer {
                 left: 0;
                 bottom: 0;
                 width: 100%;
-                height: 3.6em;
+                height: 100%;
                 @include filter-gradient(rgba($white, 0), $white, vertical);
                 @include background-image(linear-gradient(top, rgba($white, 0) 0%, $white 100%));
             }

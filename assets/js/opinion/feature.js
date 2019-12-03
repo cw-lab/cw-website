@@ -24,14 +24,12 @@ $(function() {
 		}
 	});
 	$('.slideshow--column .slider__wrap').slick({
-		// autoplay: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		arrows: false,
 		dots: true
 	});
 	$('.slideshow--image .slider__wrap').slick({
-		// autoplay: true,
 		autoplay: false,
 		autoplaySpeed: 3000,
 		dots: true,
@@ -40,7 +38,6 @@ $(function() {
 	});
 	$('.card__group').slick({
 		slidesToShow: 3,
-		// autoplay: true,
 		autoplay: false,
 		autoplaySpeed: 3000,
 		dots: true,

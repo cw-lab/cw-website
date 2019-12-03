@@ -36,8 +36,7 @@ $(function() {
 	}
 	imgResize(width, height);
 	$('.slideshow.single .slider__wrap').slick({
-		// autoplay: true,
-		autoplay: false,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		fade: true,
 		prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center"><i class="icon icon--white icon-left"></i></a></div>',
@@ -45,6 +44,7 @@ $(function() {
 	});
 	$('.slideshow.multi .slider__wrap').slick({
 		autoplay: false,
+		fade: true,
 		asNavFor: '.slideshow.multi .slider__thumbnail',
 		prevArrow: '<div class="slider__navi slider__navi--prev"><a class="icon-btn icon-btn-center navi-btn"><i class="icon icon--white icon-left"></i></a></div>',
 		nextArrow: '<div class="slider__navi slider__navi--next"><a class="icon-btn icon-btn-center navi-btn"><i class="icon icon--white icon-right"></i></a></div>'

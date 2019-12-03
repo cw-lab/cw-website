@@ -2,567 +2,530 @@
 @import "_sheet";
 @import "_button";
 .feature__page {
-    nav.menubar--sub2 {
-        ul.menubar__user::before {
-            width: 1px;
-            height: 1rem;
-            @include breakpoint(max-width 1023px) {
-                background-color: transparent;
-            }
-        }
-    }
-    header {
-        position: relative;
-        background-color: $white;
-        z-index: 10;
-        .flex {
-            align-items: center;
-            .logoSet {
-                a {
-                    display: inline-block;
-                    vertical-align: middle;
-                    &.cwLogo {
-                        margin-left: 6px;
-                        margin-right: 6px;
-                        @include breakpoint(1024px) {
-                            margin-left: 10px;
-                            margin-right: 10px;
-                        }
-                        img {
-                            width: 84px;
-                            @include breakpoint(1024px) {
-                                width: 130px;
-                            }
-                        }
-                    }
-                    &.channelLogo {
-                        img {
-                            width: 60px;
-                            @include breakpoint(1024px) {
-                                width: 100px;
-                            }
-                        }
-                    }
-                }
-            }
-            .sns__group {
-                @extend %list-reset;
-                display: flex;
-                font-size: 2em;
-                @include breakpoint(max-width 1023px) {
-                    position: fixed;
-                    flex-direction: column;
-                    transform: initial;
-                    @include opacity(0);
-                }
-                li {
-                    +li {
-                        @include breakpoint(1024px) {
-                            margin-left: 1rem;
-                        }
-                        @include breakpoint(max-width 1023px) {
-                            margin-top: 0.5rem;
-                        }
-                    }
-                    >a.sns {
-                        display: block;
-                        @include breakpoint(1024px) {
-                            width: 1em;
-                            height: 1em;
-                            @include background-size(1em);
-                        }
-                        @include breakpoint(max-width 1023px) {
-                            width: 1.4em;
-                            height: 1.4em;
-                            @include background-size(1.4em);
-                        }
-                        background-position: center;
-                        background-repeat: no-repeat;
-                        &-facebook {
-                            @include breakpoint(1024px) {
-                                background-image: url('../../../images/common/facebook--secondary.svg')
-                            }
-                            @include breakpoint(max-width 1023px) {
-                                background-image: url('../../../images/common/facebook--brand.svg')
-                            }
-                            &:hover {
-                                background-image: url('../../../images/common/facebook--brand.svg')
-                            }
-                        }
-                        &-line {
-                            @include breakpoint(1024px) {
-                                background-image: url('../../../images/common/line--secondary.svg')
-                            }
-                            @include breakpoint(max-width 1023px) {
-                                background-image: url('../../../images/common/line--brand.svg')
-                            }
-                            &:hover {
-                                background-image: url('../../../images/common/line--brand.svg')
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        >.container-fluid {
-            border-bottom: 1px solid $gray-200;
-        }
-        .container {
-            max-width: 1260px;
-        }
-    }
-    main {
-        position: relative;
-    }
-    section {
-        border-bottom: 1px solid $gray-200;
-        &:first-child {
-            border-top: 0;
-        }
-        .container {
-            max-width: 880px;
-            padding-top: 80px;
-            padding-bottom: 80px;
-            @include breakpoint (max-width 767px) {
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-            >.row {
-                @include breakpoint (max-width 767px) {
-                    margin-left: -20px;
-                    margin-right: -20px;
-                }
-            }
-        }
-        p {
-            &.text {
-                &--summary {
-                    color: $surface;
-                }
-                &--update {
-                    font-size: 0.875rem;
-                    line-height: 1.5;
-                }
-            }
-        }
-        .img__group {
-            @include breakpoint (max-width 767px) {
-                margin-left: -20px;
-                margin-right: -20px;
-            }
-            img {
-                width: 100%;
-                height: auto;
-            }
-            span {
-                display: block;
-                padding-top: 0.4em;
-                padding-bottom: 1.4em;
-                color: $secondary;
-                font-size: 0.875rem;
-                @include breakpoint (max-width 767px) {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-            }
-        }
-        .card {
-            &__group {
-                display: flex;
-                flex-wrap: wrap;
-                @include breakpoint (max-width 767px) {
-                    margin-left: -20px;
-                    margin-right: -20px;
-                }
-            }
-            &__item {
-                width: 100%;
-                margin-bottom: 30px;
-                &:nth-last-child(1) {
-                    margin-bottom: 0;
-                }
-                @include breakpoint (768px) {
-                    width: calc((100% - 50px) / 3);
-                    margin-left: 25px;
-                    margin-bottom: 50px;
-                    &:nth-child(3n+1) {
-                        margin-left: 0;
-                    }
-                    &:nth-last-child(2),
-                    &:nth-last-child(3) {
-                        margin-bottom: 0;
-                    }
-                }
-                &:hover .card__title {
-                    color: $surface;
-                }
-            }
-            &__title {
-                display: block;
-                margin-top: 10px;
-                margin-bottom: 10px;
-                color: $black;
-                font-size: 1.125em;
-                @include breakpoint (max-width 767px) {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-            }
-            &__img {
-                position: relative;
-                display: block;
-                width: 100%;
-                overflow: hidden;
-                &::before {
-                    @extend %before-after;
-                    width: 100%;
-                    padding-top: 66.666667%;
-                }
-                img {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-        .sponsor {
-            &__group {
-                @extend %list-reset;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-                li {
-                    width: 150px;
-                    margin: 10px;
-                    @include breakpoint(768px) {
-                        width: 195px;
-                    }
-                    img {
-                        width: 100%;
-                        height: auto;
-                    }
-                }
-            }
-        }
-        .embed {
-            position: relative;
-            width: 100%;
-            &:before {
-                @extend %before-after;
-                width: 100%;
-            }
-            &.embed--16by9 {
-                &:before {
-                    padding-top: 56.25%;
-                }
-            }
-            &.embed--4by3 {
-                &:before {
-                    padding-top: 75%;
-                }
-            }
-            >.embed__video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
-        .slideshow {
-            .container {
-                width: 100%;
-                max-width: 1260px;
-                padding-top: 20px;
-                padding-bottom: 20px;
-                @include breakpoint(768px) {
-                    width: 85%;
-                    padding-bottom: 30px;
-                }
-            }
-        }
-        .slideshow {
-            position: relative;
-            .slider {
-                &__navi {
-                    position: absolute;
-                    top: 50%;
-                    @include translateY(-50%);
-                    z-index: 5;
-                    &.slider__navi--prev {
-                        left: 0;
-                    }
-                    &.slider__navi--next {
-                        right: 0;
-                    }
-                }
-                &__wrap {
-                    position: relative;
-                    &::before,
-                    &::after {
-                        @extend %before-after;
-                        clear: both;
-                    }
-                }
-                position: relative;
-                overflow: hidden;
-                &__thumbnail {
-                    overflow: hidden;
-                }
-                &__wrap__thumbnail {
-                    position: relative;
-                    font-size: 0;
-                    @include transition(left 0.3s);
-                    @include breakpoint (max-width 1023px) {
-                        padding-left: 30px;
-                        padding-right: 30px;
-                    }
-                    li {
-                        display: inline-block;
-                        width: 120px;
-                        margin-left: 10px;
-                        @include breakpoint(1024px) {
-                            width: 150px;
-                            margin-left: 15px;
-                        }
-                        &:first-child {
-                            margin-left: 0;
-                        }
-                        .thumbnail__img {
-                            background-color: $black;
-                            img {
-                                @include opacity(0.5);
-                                @include transition(opacity 0.3s);
-                            }
-                        }
-                        &.active {
-                            .thumbnail__img img {
-                                @include opacity(1);
-                            }
-                        }
-                    }
-                }
-                .slider__item {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    @include opacity(0);
-                    @include transition(all 0.3s);
-                    z-index: 0;
-                    &.active {
-                        @include opacity(1);
-                        z-index: 2;
-                    }
-                    >span {
-                        display: block;
-                        padding-top: 0.4em;
-                        padding-bottom: 1.4em;
-                        color: $secondary;
-                        font-size: 0.875rem;
-                        @include breakpoint (max-width 767px) {
-                            padding-left: 20px;
-                            padding-right: 20px;
-                        }
-                        span {
-                            display: block;
-                        }
-                    }
-                }
-            }
-            &--column {
-                .slider {
-                    &__wrap {
-                        height: calc(100vh - 70px);
-                    }
-                    &__navi {
-                        .icon-btn {
-                            width: 30px;
-                            height: 100%;
-                            color: $white;
-                            font-size: 2rem;
-                            text-shadow: 1px 1px 0 rgba($black, 0.5);
-                            @include breakpoint(768px) {
-                                width: 70px;
-                            }
-                        }
-                    }
-                    .slider__item {
-                        >img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                        &::before {
-                            @extend %before-after;
-                            position: absolute;
-                            width: 100%;
-                            height: 200px;
-                            @include filter-gradient(rgba($black,
-                            0),
-                            $black,
-                            vertical);
-                            @include background-image(linear-gradient(top,
-                            rgba($black,
-                            0) 0%,
-                            $black 100%));
-                            @include opacity(0.75);
-                            @include transition(all 0.3s);
-                            z-index: 2;
-                        }
-                        &::after {
-                            @extend %before-after;
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            background-image: url('https://www.cw.com.tw/assets_new/img/dot.png');
-                            z-index: 1;
-                        }
-                        &:hover {
-                            &::before {
-                                @include opacity(1);
-                            }
-                        }
-                        >span {
-                            padding-top: 30px;
-                            padding-bottom: 30px;
-                            @include breakpoint(1024px) {
-                                padding-top: 50px;
-                                padding-bottom: 50px;
-                            }
-                        }
-                    }
-                    .slider__title {
-                        position: relative;
-                        text-shadow: 1px 1px 0 rgba($black, 0.5);
-                        z-index: 3;
-                        @include breakpoint(max-width 767px) {
-                            overflow: hidden;
-                        }
-                        .h1 {
-                            color: $surface;
-                            font-weight: 400;
-                        }
-                        .h2 {
-                            color: $gray-200;
-                        }
-                        img.slider__blur {
-                            @include breakpoint(768px) {
-                                display: none;
-                            }
-                            position: absolute;
-                            bottom: 0;
-                            left: 50%;
-                            width: auto;
-                            max-width: none;
-                            height: calc(100vh - 70px);
-                            filter: blur(7px) brightness(75%) contrast(125%);
-                            @include translateX(-50%);
-                            z-index: -2;
-                        }
-                    }
-                }
-            }
-            &--column2 {
-                .slider {
-                    .slider__item {
-                        display: flex;
-                        align-items: flex-end;
-                        height: calc(100vh - 70px);
-                        span {
-                            display: block;
-                        }
-                        .slider__title {
-                            >* {
-                                max-width: 700px;
-                            }
-                        }
-                    }
-                    &__navi {
-                        @include breakpoint(1024px) {
-                            position: relative;
-                            top: auto;
-                            @include translateY(0%);
-                            z-index: 5;
-                            &__group {
-                                position: absolute;
-                                display: flex;
-                                justify-content: space-between;
-                                left: 50%;
-                                bottom: 50px;
-                                margin-left: 480px;
-                                width: 150px;
-                            }
-                        }
-                    }
-                }
-            }
-            &--column1 {
-                .slider {
-                    .slider__item {
-                        display: flex;
-                        align-items: flex-end;
-                        height: calc(100vh - 70px);
-                        >img {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    .slider__title {
-                        @include breakpoint(768px) {
-                            text-align: center;
-                        }
-                    }
-                    .container {
-                        @include breakpoint(1024px) {
-                            width: 950px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    p {
-        position: relative;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        @include transition(height 0.3s);
-        &.hidden {
-            height: 9em;
-            overflow: hidden;
-            &::before {
-                @extend %before-after;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 3.6em;
-                @include filter-gradient(rgba($white,
-                0),
-                $white,
-                vertical);
-                @include background-image(linear-gradient(top,
-                rgba($white,
-                0) 0%,
-                $white 100%));
-            }
-            +.btn {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 40px;
-            }
-        }
-    }
+	nav.menubar--sub2 {
+		@include breakpoint(1024px) {
+			right: calc( (100% - 950px) / 2 );
+		}
+		ul.menubar__user {
+			display: block !important;
+			&::before {
+				background-color: transparent;
+			}
+		}
+	}
+	header {
+		position: relative;
+		background-color: $white;
+		z-index: 10;
+		.flex {
+			align-items: center;
+			.logoSet {
+				a {
+					display: inline-block;
+					vertical-align: middle;
+					&.cwLogo {
+						margin-left: 6px;
+						margin-right: 6px;
+						@include breakpoint(1024px) {
+							margin-left: 10px;
+							margin-right: 10px;
+						}
+						img {
+							width: 84px;
+							@include breakpoint(1024px) {
+								width: 130px;
+							}
+						}
+					}
+					&.channelLogo {
+						img {
+							width: 60px;
+							@include breakpoint(1024px) {
+								width: 100px;
+							}
+						}
+					}
+				}
+			}
+		}
+		>.container-fluid {
+			border-bottom: 1px solid $gray-200;
+		}
+		.container {
+			max-width: 1260px;
+		}
+	}
+	main {
+		position: relative;
+	}
+	section {
+		border-bottom: 1px solid $gray-200;
+		&:first-child {
+			border-top: 0;
+		}
+		.container {
+			max-width: 880px;
+			padding-top: 80px;
+			padding-bottom: 80px;
+			@include breakpoint (max-width 767px) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			>.row {
+				@include breakpoint (max-width 767px) {
+					margin-left: -20px;
+					margin-right: -20px;
+				}
+			}
+		}
+		p {
+			&.text {
+				&--summary {
+					color: $surface;
+				}
+				&--update {
+					font-size: 0.875rem;
+					line-height: 1.5;
+				}
+			}
+		}
+		.img__group {
+			@include breakpoint (max-width 767px) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+			span {
+				display: block;
+				padding-top: 0.4em;
+				padding-bottom: 1.4em;
+				color: $secondary;
+				font-size: 0.875rem;
+				@include breakpoint (max-width 767px) {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+		}
+		.card {
+			&__group {
+				display: flex;
+				flex-wrap: wrap;
+				@include breakpoint (max-width 767px) {
+					margin-left: -20px;
+					margin-right: -20px;
+				}
+			}
+			&__item {
+				width: 100%;
+				margin-bottom: 30px;
+				&:nth-last-child(1) {
+					margin-bottom: 0;
+				}
+				@include breakpoint (768px) {
+					width: calc((100% - 50px) / 3);
+					margin-left: 25px;
+					margin-bottom: 50px;
+					&:nth-child(3n+1) {
+						margin-left: 0;
+					}
+					&:nth-last-child(2),
+					&:nth-last-child(3) {
+						margin-bottom: 0;
+					}
+				}
+				&:hover .card__title {
+					color: $surface;
+				}
+			}
+			&__title {
+				display: block;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				color: $black;
+				font-size: 1.125em;
+				@include breakpoint (max-width 767px) {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+			&__img {
+				position: relative;
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				&::before {
+					@extend %before-after;
+					width: 100%;
+					padding-top: 66.666667%;
+				}
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+		.sponsor {
+			&__group {
+				@extend %list-reset;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				li {
+					width: 150px;
+					margin: 10px;
+					@include breakpoint(768px) {
+						width: 195px;
+					}
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		.embed {
+			position: relative;
+			width: 100%;
+			&:before {
+				@extend %before-after;
+				width: 100%;
+			}
+			&.embed--16by9 {
+				&:before {
+					padding-top: 56.25%;
+				}
+			}
+			&.embed--4by3 {
+				&:before {
+					padding-top: 75%;
+				}
+			}
+			>.embed__video {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.slideshow {
+			position: relative;
+			.container {
+				width: 100%;
+				max-width: 1260px;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				@include breakpoint(768px) {
+					width: 85%;
+					padding-bottom: 30px;
+				}
+			}
+			.slider {
+				position: relative;
+				overflow: hidden;
+				&__navi {
+					position: absolute;
+					top: 50%;
+					z-index: 5;
+					@include translateY(-50%);
+					&.slider__navi--prev {
+						left: 0;
+					}
+					&.slider__navi--next {
+						right: 0;
+					}
+				}
+				&__wrap__thumbnail {
+					position: relative;
+					font-size: 0;
+					@include transition(left 0.3s);
+					@include breakpoint (max-width 1023px) {
+						padding-left: 30px;
+						padding-right: 30px;
+					}
+				}
+				&__thumbnail {
+					overflow: hidden;
+					&.fixed .slick-track {
+						margin-left: auto;
+						margin-right: auto;
+						@include transform(none !important);
+					}
+					.thumbnail__img {
+						position: relative;
+						display: inline-block;
+						padding-left: 5px;
+						padding-right: 5px;
+						@include breakpoint(1024px) {
+							padding-left: 8px;
+							padding-right: 8px;
+						}
+						&::before {
+							@extend %before-after;
+							position: absolute;
+							top: 0;
+							left: 5px;
+							width: calc(100% - 10px);
+							height: 100%;
+							background-color: $black;
+							@include breakpoint(1024px) {
+								left: 8px;
+								width: calc(100% - 16px);
+							}
+						}
+						img {
+							position: relative;
+							@include opacity(0.5);
+							@include transition(opacity 0.3s);
+							z-index: 2;
+						}
+						&.slick-current {
+							img {
+								@include opacity(1);
+							}
+						}
+					}
+				}
+				&__item > span {
+					display: block;
+					padding-top: 0.4em;
+					padding-bottom: 1.4em;
+					color: $secondary;
+					font-size: 0.875rem;
+					@include breakpoint (max-width 767px) {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+					span {
+						display: block;
+					}
+				}
+			}
+			&--column {
+				.slider {
+					&__navi {
+						.icon-btn {
+							display: block;
+							width: 30px;
+							height: 100%;
+							color: $white;
+							font-size: 2rem;
+							text-align: center;
+							text-shadow: 1px 1px 0 rgba($black, 0.5);
+							@include breakpoint(768px) {
+								width: 70px;
+							}
+						}
+					}
+					&__item {
+						position: relative;
+						&::before {
+							@extend %before-after;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							width: 100%;
+							height: 200px;
+							@include filter-gradient(rgba($black, 0), $black, vertical);
+							@include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+							@include opacity(0.75);
+							@include transition(all 0.3s);
+							z-index: 2;
+						}
+						&::after {
+							@extend %before-after;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background-image: url('https://www.cw.com.tw/assets_new/img/dot.png');
+							z-index: 1;
+						}
+					}
+					&__title {
+						position: absolute;
+						bottom: 0;
+						left: 50%;
+						padding-top: 30px;
+						padding-bottom: 30px;
+						text-shadow: 1px 1px 0 rgba($black, 0.5);
+						@include translateX(-50%);
+						z-index: 3;
+						@include breakpoint(max-width 767px) {
+							overflow: hidden;
+						}
+						@include breakpoint(1024px) {
+							padding-top: 50px;
+							padding-bottom: 50px;
+						}
+						h1 {
+							color: $surface;
+							font-weight: 400;
+						}
+						.h2 {
+							color: $gray-200;
+						}
+					}
+					&__ground{
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 250px;
+						overflow: hidden;
+						z-index: 2;
+						@include breakpoint(768px) {
+							display: none;
+						}
+						img {
+							position: absolute;
+							bottom: -2.5%;
+							left: -2.5%;
+							width: 105%;
+							max-width: none;
+							filter: blur(7px) brightness(75%) contrast(125%);
+							z-index: -2;
+						}
+					}
+				}
+				&1 {
+					.slider__title > div {
+						@include breakpoint(1024px) {
+							max-width: 950px;
+							margin-left: auto;
+							margin-right: auto;
+						}
+						@include breakpoint(768px) {
+							text-align: center;
+						}
+					}
+				}
+				&2 {
+					.slider__navi {
+						@include breakpoint(1024px) {
+							top: auto;
+							bottom: 50px;
+							@include translateY(0);
+							&.slider__navi--prev {
+								left: auto;
+								right: calc((15% / 2) + 70px);
+							}
+							&.slider__navi--next {
+								right: 7.5%;
+							}
+						}
+						@include breakpoint(1480px) {
+							&.slider__navi--prev {
+								right: calc(((100% - 1260px) / 2) + 70px);
+							}
+							&.slider__navi--next {
+								right: calc((100% - 1260px) / 2);
+							}
+						}
+					}
+					.slider__title > div {
+						@include breakpoint(1024px) {
+							max-width: 700px;
+						}
+					}
+				}
+			}
+		}
+	}
+	p {
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		@include transition(height 0.3s);
+		&.hidden {
+			height: 9em;
+			overflow: hidden;
+			&::before {
+				@extend %before-after;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				@include filter-gradient(rgba($white, 0), $white, vertical);
+				@include background-image(linear-gradient(top, rgba($white, 0) 0%, $white 100%));
+			}
+			+.btn {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 40px;
+			}
+		}
+	}
+	.sns__group {
+		@extend %list-reset;
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		bottom: 20px;
+		font-size: 28px;
+		@include opacity(0);
+		z-index: 5;
+		@include breakpoint(max-width 1023px) {
+			right: 10px;
+		}
+		@include breakpoint(1024px) {
+			bottom: 3em;
+			left: calc(910px + (100% - 880px) / 2);
+			font-size: 40px;
+		}
+		li {
+			+li {
+				margin-top: 0.75rem;
+			}
+			>a.sns {
+				display: block;
+				@include breakpoint(1024px) {
+					width: 1em;
+					height: 1em;
+					@include background-size(1em);
+				}
+				@include breakpoint(max-width 1023px) {
+					width: 1.4em;
+					height: 1.4em;
+					@include background-size(1.4em);
+				}
+				background-position: center;
+				background-repeat: no-repeat;
+				&-facebook {
+					@include breakpoint(1024px) {
+						background-image: url('../../../images/common/facebook--secondary.svg')
+					}
+					@include breakpoint(max-width 1023px) {
+						background-image: url('../../../images/common/facebook--brand.svg')
+					}
+					&:hover {
+						background-image: url('../../../images/common/facebook--brand.svg')
+					}
+				}
+				&-line {
+					@include breakpoint(1024px) {
+						background-image: url('../../../images/common/line--secondary.svg')
+					}
+					@include breakpoint(max-width 1023px) {
+						background-image: url('../../../images/common/line--brand.svg')
+					}
+					&:hover {
+						background-image: url('../../../images/common/line--brand.svg')
+					}
+				}
+			}
+		}
+	}
 }

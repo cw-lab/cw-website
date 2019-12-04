@@ -1,12 +1,21 @@
 @import "../../_basic";
+@import "../../_general";
 @import "_sheet";
+@import "../../_typography";
+@import "../../_font";
+@import "../../_iconography";
+@import "../../_navigation";
 @import "_button";
+@import "../../_message";
+@import "../../_header";
+@import "../../_container";
+@import "../../_footer";
 %serif {
 	font-family: 'Noto Serif TC', serif;
 }
 .feature__page {
 	.hamburger span {
-		background-color: $surface
+		background-color: $surface;
 	}
 	nav.menubar--sub2 {
 		@include breakpoint(1024px) {
@@ -51,6 +60,64 @@
 		}
 		.container {
 			max-width: 1260px;
+		}
+	}
+	.menu--left {
+		display: flex;
+		position: fixed;
+		top: 0;
+		left: -250px;
+		width: 250px;
+		height: 100%;
+		background-color: $white;
+		flex-direction: column;
+		@include transition(left 0.3s);
+		z-index: 10;
+		&.slideLeft {
+			left: 0px;
+			box-shadow: 0 0 10px rgba($black, 0.25);
+		}
+		>ul {
+			>li {
+				display: flex;
+				align-items: center;
+				a {
+					color: $black;
+					font-size: 1rem;
+						width: 100%;
+						padding-left: 30px;
+						padding-right: 30px;
+						line-height: 50px;
+						border-bottom: 1px solid #ebebeb;
+					&:hover {
+						background-color: $surface;
+					}
+				}
+				&.active a {
+					background-color: $surface;
+				}
+				&.menuClose {
+					display: block;
+					position: relative;
+					margin-left: 30px;
+					width: 50px;
+					height: 50px;
+					>span {
+						position: absolute;
+						top: 50%;
+						display: block;
+						width: 25px;
+						height: 2px;
+						background-color: $surface;
+						&:first-child {
+							@include rotate(45deg);
+						}
+						&:last-child {
+							@include rotate(-45deg);
+						}
+					}
+				}
+			}
 		}
 	}
 	main {

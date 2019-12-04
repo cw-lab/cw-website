@@ -1,0 +1,58 @@
+header {
+    position: relative;
+    > .container-fluid, > .container {
+        >.flex {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            align-items: center;
+        }
+    }
+    ul {
+        &.member__list {
+            position: relative;
+            padding-left: 0.5rem;
+            @include breakpoint(414px) {
+                padding-left: 1rem;
+            }
+            &--desktop {
+                @include breakpoint(max-width 767px) {
+                    display: none;
+                }
+            }
+            +.member__list {
+                margin-left: 1rem;
+                &::before {
+                    @extend %before-after;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 1px;
+                    height: 100%;
+                    background-color: $gray-200;
+                    @include translateY(-50%);
+                    @include breakpoint(max-width 767px) {
+                        display: none;
+                    }
+                }
+            }
+            li {
+                @include breakpoint(max-width 350px) {
+                    &.login {
+                        display: none;
+                    }
+                }
+            }
+            a {
+                display: block;
+                padding: 0 0.5rem;
+                color: $text;
+                @include breakpoint(414px) {
+                    padding: 0 1rem;
+                }
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

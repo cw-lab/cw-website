@@ -3,20 +3,12 @@ $(function() {
 		height = $(window).height(),
 		sliderWidth;
 	// 漢堡
-	$('body').append('<div class="black"></div>');
-	$('.hamburger').click(function() {
-		$('.menubar--left').addClass('opened');
-		$('.black').addClass('opened menubar--left');
+	$('body').append('<div class="touchClose"></div>');
+	$('.ham').click(function () {
+		$('html').toggleClass('nav-opened');
 	});
-	$('.black').click(function() {
-		if ($(this).hasClass("menubar--left")) {
-			$('.menubar--left').removeClass('opened');
-			$('.black').removeClass('opened menubar--left');
-		}
-		if ($(this).hasClass("message--dialogs")) {
-			$('.black').removeClass('opened message--dialogs');
-			$('.message--dialogs').fadeOut(200);
-		}
+	$('.touchClose').click(function () {
+		$('html').removeClass('nav-opened');
 	});
 	$("nav[class*='menubar--sub'] ul.menubar__user > li, .opacity").click(function() {
 		$(".menubar__user__slide").slideToggle();

@@ -1,0 +1,84 @@
+.sideMenu {
+	background-color: #777;
+	position: fixed;
+	z-index: 10005;
+	top: 0;
+	width: 318px;
+	height: 100%;
+	left: -100%;
+	transition: .3s;
+	overflow: auto;
+	font-family: Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', sans-serif, "新細明體", PMingLiU;
+	font-size: 15px;
+	line-height: 1;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: auto;
+	text-rendering: auto;
+}
+@media (max-width: 767px) {
+	.sideMenu {
+		width: 80vw;
+		overflow: auto;
+	}
+}
+.sideMenu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sideMenu>ul>li+li a {
+	border-top: 1px solid #55565b;
+}
+.sideMenu>ul>li {
+	padding: 0px 15px;
+}
+.sideMenu>ul>li a {
+	display: block;
+	padding: 16px 0px;
+}
+.sideMenu .moreItem ul {
+	background-color: #666;
+	margin: 0 -15px;
+	padding: 0 15px 0 30px;
+	display: none;
+}
+.sideMenu .moreItem>a {
+	display: block;
+	position: relative;
+}
+.sideMenu .moreItem>a:after {
+	content: url('https://www.cw.com.tw/assets_new/img/side_menu_arrow.png');
+	display: block;
+	position: absolute;
+	right: 10px;
+	top: 13px;
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+.sideMenu .moreItem>a.open:after {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.sideMenu a {
+	color: #fff;
+}
+.sideMenu.show {
+	left: 0;
+}
+.subNav {
+	position: relative;
+}
+.subNav.fixed ul {
+	position: fixed;
+	top: 6px;
+	z-index: 10003;
+}
+.sideMenu .sideMenuSocial {
+	background-color: #4c4c4c;
+}
+.sideMenu .sideMenuSocial li a {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}

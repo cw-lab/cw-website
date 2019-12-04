@@ -18,7 +18,7 @@ $(function(){
 	$('.list__item--vip').each(function(){
 		$(this).click(function(){
 			$('body').addClass('message__open');
-			// $('.black').addClass('opened black-vip');
+			$('.black').addClass('opened');
 			$('.message--vip').fadeIn();
 		})
 	});

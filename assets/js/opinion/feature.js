@@ -8,20 +8,17 @@ $(function() {
 		$("body").addClass("chrome");
 	}
 	// 漢堡
-	$('body').append('<div class="black"></div>');
 	$('.hamburger').click(function() {
-		$('.menubar--left').addClass('opened');
-		$('.black').addClass('opened menubar--left');
+		if ( width >= 1024 ) {
+			$(this).toggleClass('active');
+			$('.menu--left').toggleClass('opened');
+			$('body').toggleClass('menu--opened');
+		} else {
+			$('.menu--left').slideToggle();
+		}
 	});
-	$('.black').click(function() {
-		if ($(this).hasClass("menubar--left")) {
-			$('.menubar--left').removeClass('opened');
-			$('.black').removeClass('opened menubar--left');
-		}
-		if ($(this).hasClass("message--dialogs")) {
-			$('.black').removeClass('opened message--dialogs');
-			$('.message--dialogs').fadeOut(200);
-		}
+	$('.keyword-hover').click(function() {
+		$('.keyword-box').slideToggle();
 	});
 	$('.slideshow--column .slider__wrap').slick({
 		autoplay: true,

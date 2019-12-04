@@ -20,7 +20,96 @@
         width: 985px;
     }
 }
-
+.menu--left {
+    position: fixed;
+    padding: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 20px;
+    background: $surface;
+    overflow: auto;
+    z-index: 11;
+    @include breakpoint(1024px) {
+        display: block !important;
+        left: -250px;
+        width: 250px;
+        background: $white;
+        @include transition(left 0.3s);
+        &.opened {
+            left: 0px;
+            @include box-shadow(0 0 10px rgba($black, .25));
+        }
+    }
+    @include breakpoint(max-width 1023px) {
+        display: none;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    .hamburger {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        @include breakpoint(1024px) {
+            display: none;
+        }
+    }
+    ul {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0;
+        list-style: none;
+        &.socialLink {
+            > li:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    > ul {
+        > li {
+            display: block;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            border-bottom: 1px solid #777;
+            @include breakpoint(1024px) {
+                border-bottom: 1px solid #ccc;
+            }
+            a {
+                display: block;
+                padding: 15px;
+                color: #fff;
+                @include breakpoint(1024px) {
+                    color: $surface;
+                }
+            }
+            .fa {
+                display: inline-block;
+                margin-left: 4px;
+                margin-right: 4px;
+                font-size: 18px;
+            }
+            > ul {
+                display: none;
+                margin-left: -20px;
+                margin-right: -20px;
+                background: #f2f2f2;
+                @include breakpoint(max-width 1023px) {
+                    background: #4b4b77;
+                }
+                > li {
+                    border-bottom: 1px solid #777;
+                    @include breakpoint(1024px) {
+                        border-bottom: 1px solid #ccc;
+                    }
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
 footer {
     padding: 5px 0 3px;
     margin-top: 50px;
@@ -67,8 +156,15 @@ footer {
         }
     }
 }
-
 .feature__page {
+    @include breakpoint(1024px) {
+        @include transition(all 0.3s);
+        &.menu--opened {
+            padding-left: 250px;
+            width: calc(100% + 250px);
+            overflow: hidden;
+        }
+    }
     header {
         position: relative;
         padding-top: 10px;

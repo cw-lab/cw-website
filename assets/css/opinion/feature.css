@@ -623,10 +623,10 @@ body.chrome i.icon:before {
   -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .hamburger span:nth-child(1) {
   top: 0;
@@ -637,8 +637,26 @@ body.chrome i.icon:before {
 .hamburger span:nth-child(3) {
   top: 20px;
 }
-.hamburger:hover span, .hamburger.active span {
+.hamburger:hover span {
   background-color: #9D0505;
+}
+.hamburger.active span {
+  top: 10px;
+}
+.hamburger.active span:nth-child(1) {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.hamburger.active span:nth-child(2) {
+  display: none;
+}
+.hamburger.active span:nth-child(3) {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .icon-btn {
@@ -1665,6 +1683,112 @@ button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
   }
 }
 
+.menu--left {
+  position: fixed;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 20px;
+  background: #313160;
+  overflow: auto;
+  z-index: 11;
+}
+@media (min-width: 1024px) {
+  .menu--left {
+    display: block !important;
+    left: -250px;
+    width: 250px;
+    background: #fff;
+    -moz-transition: left 0.3s;
+    -o-transition: left 0.3s;
+    -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+  }
+  .menu--left.opened {
+    left: 0px;
+    -moz-box-shadow: 0 0 10px rgba(23, 23, 23, 0.25);
+    -webkit-box-shadow: 0 0 10px rgba(23, 23, 23, 0.25);
+    box-shadow: 0 0 10px rgba(23, 23, 23, 0.25);
+  }
+}
+@media (max-width: 1023px) {
+  .menu--left {
+    display: none;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}
+.menu--left .hamburger {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .menu--left .hamburger {
+    display: none;
+  }
+}
+.menu--left ul {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+  list-style: none;
+}
+.menu--left ul.socialLink > li:last-child {
+  border-bottom: 0;
+}
+.menu--left > ul > li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid #777;
+}
+@media (min-width: 1024px) {
+  .menu--left > ul > li {
+    border-bottom: 1px solid #ccc;
+  }
+}
+.menu--left > ul > li a {
+  display: block;
+  padding: 15px;
+  color: #fff;
+}
+@media (min-width: 1024px) {
+  .menu--left > ul > li a {
+    color: #313160;
+  }
+}
+.menu--left > ul > li .fa {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 18px;
+}
+.menu--left > ul > li > ul {
+  display: none;
+  margin-left: -20px;
+  margin-right: -20px;
+  background: #f2f2f2;
+}
+@media (max-width: 1023px) {
+  .menu--left > ul > li > ul {
+    background: #4b4b77;
+  }
+}
+.menu--left > ul > li > ul > li {
+  border-bottom: 1px solid #777;
+}
+@media (min-width: 1024px) {
+  .menu--left > ul > li > ul > li {
+    border-bottom: 1px solid #ccc;
+  }
+}
+.menu--left > ul > li > ul > li:last-child {
+  border-bottom: 0;
+}
+
 footer {
   padding: 5px 0 3px;
   margin-top: 50px;
@@ -1716,6 +1840,19 @@ footer p a:hover {
   color: #D60C18;
 }
 
+@media (min-width: 1024px) {
+  .feature__page {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .feature__page.menu--opened {
+    padding-left: 250px;
+    width: calc(100% + 250px);
+    overflow: hidden;
+  }
+}
 .feature__page header {
   position: relative;
   padding-top: 10px;

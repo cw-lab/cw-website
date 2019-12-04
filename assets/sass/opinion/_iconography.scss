@@ -14,7 +14,7 @@
 		@include transition();
 		@include opacity(1);
 		@include rotate(0deg);
-		@include transition(all 0.4s);
+		@include transition(all 0.3s);
 		&:nth-child(1) {
 			top: 0;
 		}
@@ -25,11 +25,24 @@
 			top: 20px;
 		}
 	}
-	&:hover, &.active {
+	&:hover span {
+		background-color: $primary-variant;
+	}
+	&.active {
 		span {
-			background-color: $primary-variant;
+		    top: 10px;
+		    &:nth-child(1) {
+		        @include rotate(-45deg);
+		    }
+		    &:nth-child(2) {
+		        display: none;
+		    }
+		    &:nth-child(3) {
+		        @include rotate(45deg);
+		    }
 		}
 	}
+
 }
 .icon-btn {
 	display: inline-flex;

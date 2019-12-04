@@ -234,6 +234,7 @@ html {
 @media (min-width: 768px) {
   .center__page article .list__group .list__item {
     display: flex;
+    align-items: center;
   }
 }
 .center__page article .list__group .list__item .list__img {

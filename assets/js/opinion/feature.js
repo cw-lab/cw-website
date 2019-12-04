@@ -81,7 +81,7 @@ $(function() {
 		function dotsTop(width) {
 			$('.slider__title').each(function(){
 				var titleHeight = $(this).outerHeight() - 36;
-				if (width <= 768) {
+				if (width <= 1023) {
 					$(this).siblings().find('.slick-dots').css('top', 'calc(100% + ' + titleHeight + 'px)');
 				} else {
 					$(this).siblings().find('.slick-dots').css('top', 'auto');

@@ -159,6 +159,7 @@ body.message__open {
                 right: -10px;
                 font-weight: bold;
                 padding: 10px;
+                cursor: pointer;
             }
             &__txt {
                 padding-bottom: 30px;
@@ -174,7 +175,9 @@ body.message__open {
         }
     }
 }
-
+.black.dialogs {
+    cursor: pointer;
+}
 .board {
     position: relative;
     padding: 25px;

@@ -23,18 +23,12 @@ i.icon {
 	font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	@include breakpoint(max-width 767px) {
-		&::before {
-			display: inline;
-			vertical-align: sub;
-			line-height: 0;
-		}
-	}
 }
-body.chrome i.icon:before {
-	display: inline;
-	vertical-align: middle;
-	line-height: 0;
+.icon-lock:before {
+	content: "\e936";
+}
+.icon-download:before {
+	content: "\e937";
 }
 .icon-minus:before {
 	content: "\e936";

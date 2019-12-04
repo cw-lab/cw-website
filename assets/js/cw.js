@@ -1,4 +1,10 @@
 $(function(){
+	// 判斷瀏覽器
+	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+	if (isChrome) {
+		$("body").addClass("chrome");
+	}
 	// 漢堡
 	$('body').append('<div class="black"></div>');
 	$('.hamburger').click(function() {
@@ -32,12 +38,6 @@ $(window).load(function() {
 		container = $("header .container").outerWidth(),
 		articleContainFluid = $(".article__info").outerWidth(),
 		articleTextWidth = $(".article__text").outerWidth();
-	// 判斷瀏覽器
-	var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-	var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-	if (isChrome) {
-		$("body").addClass("chrome");
-	}
 	$("img").lazyload({
 		effect: "fadeIn"
 	});

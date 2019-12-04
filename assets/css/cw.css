@@ -785,18 +785,13 @@ i.icon {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
-@media (max-width: 767px) {
-  i.icon::before {
-    display: inline;
-    vertical-align: sub;
-    line-height: 0;
-  }
+
+.icon-lock:before {
+  content: "\e936";
 }
 
-body.chrome i.icon:before {
-  display: inline;
-  vertical-align: middle;
-  line-height: 0;
+.icon-download:before {
+  content: "\e937";
 }
 
 .icon-minus:before {
@@ -3305,6 +3300,7 @@ body.message__open {
   right: -10px;
   font-weight: bold;
   padding: 10px;
+  cursor: pointer;
 }
 .message--dialogs .message__txt {
   padding-bottom: 30px;
@@ -3316,6 +3312,10 @@ body.message__open {
 }
 .message--dialogs .message__btn {
   text-align: right;
+}
+
+.black.dialogs {
+  cursor: pointer;
 }
 
 .board {

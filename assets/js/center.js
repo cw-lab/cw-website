@@ -18,7 +18,7 @@ $(function(){
 	$('.list__item--vip').each(function(){
 		$(this).click(function(){
 			$('body').addClass('message__open');
-			$('.black').addClass('opened black-vip');
+			// $('.black').addClass('opened black-vip');
 			$('.message--vip').fadeIn();
 		})
 	});
@@ -35,11 +35,11 @@ $(function(){
 			$('body').removeClass('message__open');
 			$('.black').removeClass('opened black-theater');
 		}
-		if ( $(this).hasClass('black-vip') ) {
-			$('.message--vip').fadeOut();
-			$('body').removeClass('message__open');
-			$('.black').removeClass('opened black-vip');
-		}
+		// if ( $(this).hasClass('black-vip') ) {
+		// 	$('.message--vip').fadeOut();
+		// 	$('body').removeClass('message__open');
+		// 	$('.black').removeClass('opened black-vip');
+		// }
 	});
 })
 // $(window).load(function() {

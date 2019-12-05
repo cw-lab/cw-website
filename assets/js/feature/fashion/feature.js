@@ -3,8 +3,14 @@ $(function() {
 		height = $(window).height(),
 		sliderWidth;
 	// 漢堡
+	$('body').append('<div class="touchClose"></div>');
 	$('.hamburger, .menuClose').click(function() {
 		$('.menu--left').toggleClass('slideLeft');
+		$('.touchClose').toggleClass('opened');
+	});
+	$('.touchClose').click(function () {
+		$('.menu--left').toggleClass('slideLeft');
+		$('.touchClose').toggleClass('opened');
 	});
 	$("nav[class*='menubar--sub'] ul.menubar__user > li, .opacity").click(function() {
 		$(".menubar__user__slide").slideToggle();

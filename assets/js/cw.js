@@ -6,12 +6,17 @@ $(function(){
 		$("body").addClass("chrome");
 	}
 	// 漢堡
-	$('body').append('<div class="black"></div>');
+	$('body').append('<div class="black"></div><div class="opacity"></div>');
 	$('.hamburger').click(function() {
 		// $('.menubar--left').addClass('opened');
 		// $('.black').addClass('opened menubar--left');
 		$('.sideMenu').addClass('show');
-		$('.black').addClass('opened sideMenu');
+		$('.opacity').addClass('opened');
+		// $('.black').addClass('opened sideMenu');
+	});
+	$('.opacity').click(function() {
+		$('.sideMenu').removeClass('show');
+		$('.opacity').removeClass('opened');
 	});
 	$('.sideMenu .moreItem > a').click(function() {
 		$(this).toggleClass('open');
@@ -164,11 +169,9 @@ $(window).load(function() {
 		$(this).parent().siblings("ul").slideToggle();
 	})
 	// 第二層
-	$('body').append('<div class="opacity"></div>');
-	$("nav[class*='menubar--sub'] ul.menubar__user > li, .opacity").click(function() {
+	$("nav[class*='menubar--sub'] ul.menubar__user > li").click(function() {
 		$(".menubar__user__slide").slideToggle();
 		$("nav[class*='menubar--sub'] ul.menubar__user > li > a > i").toggleClass("deg");
-		$('.opacity').toggleClass('opened');
 	})
 	// message: Notification 3 秒後關閉
 	setTimeout(function() {

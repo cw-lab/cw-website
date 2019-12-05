@@ -8,14 +8,21 @@ $(function() {
 		$("body").addClass("chrome");
 	}
 	// 漢堡
+	$('body').append('<div class="touchClose"></div>');
 	$('.hamburger').click(function() {
 		if ( width >= 1024 ) {
-			$(this).toggleClass('active');
+			$('.hamburger').toggleClass('active');
 			$('.menu--left').toggleClass('opened');
-			$('body').toggleClass('menu--opened');
+			$('.touchClose').toggleClass('opened');
 		} else {
 			$('.menu--left').slideToggle();
+			$('.touchClose').toggleClass('opened');
 		}
+	});
+	$('.touchClose').click(function(){
+		$('.touchClose').toggleClass('opened');
+		$('.hamburger').toggleClass('active');
+		$('.menu--left').toggleClass('opened');
 	});
 	$('.keyword-hover').click(function() {
 		$('.keyword-box').slideToggle();

@@ -488,8 +488,8 @@ aside.menubar--left {
 				}
 			}
 			&.now {
-				background-color: $primary;
 				> .li__group {
+					background-color: $primary;
 					> a, > i {
 						color: $white;
 					}

@@ -1247,12 +1247,6 @@ a.bookmark-btn > i {
 a.bookmark-btn i:hover, a.bookmark-btn i.active {
   color: #fff;
 }
-@media (min-width: 768px) {
-  a.bookmark-btn {
-    width: 44px;
-    height: 44px;
-  }
-}
 
 .social_login {
   width: 100%;
@@ -1744,7 +1738,7 @@ aside.menubar--left > ul > li .li__group > i.more.active {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-aside.menubar--left > ul > li.now {
+aside.menubar--left > ul > li.now > .li__group {
   background-color: #D60C18;
 }
 aside.menubar--left > ul > li.now > .li__group > a, aside.menubar--left > ul > li.now > .li__group > i {
@@ -2430,7 +2424,7 @@ a.btn[disabled].btn--animate {
   transform: translateX(-50%) translateY(2px);
 }
 @media (min-width: 768px) {
-  .tooltips--top:hover:before {
+  .tooltips--top:hover:before, .tooltips--top.active:before {
     display: block;
     visibility: visible;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2451,7 +2445,7 @@ a.btn[disabled].btn--animate {
   transform: translateX(-50%) translateY(-2px);
 }
 @media (min-width: 768px) {
-  .tooltips--bottom:hover:before {
+  .tooltips--bottom:hover:before, .tooltips--bottom.active:before {
     display: block;
     visibility: visible;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2472,7 +2466,7 @@ a.btn[disabled].btn--animate {
   transform: translateX(2px) translateY(-50%);
 }
 @media (min-width: 768px) {
-  .tooltips--left:hover:before {
+  .tooltips--left:hover:before, .tooltips--left.active:before {
     display: block;
     visibility: visible;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2493,7 +2487,7 @@ a.btn[disabled].btn--animate {
   transform: translateX(-2px) translateY(-50%);
 }
 @media (min-width: 768px) {
-  .tooltips--right:hover:before {
+  .tooltips--right:hover:before, .tooltips--right.active:before {
     display: block;
     visibility: visible;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2507,16 +2501,6 @@ a.btn[disabled].btn--animate {
 .tooltips-wrap:before {
   width: 200px;
   white-space: normal;
-}
-.tooltips.active:before {
-  display: block;
-  visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-  opacity: 1;
-  -moz-transform: translateX(-50%) translateY(0);
-  -ms-transform: translateX(-50%) translateY(0);
-  -webkit-transform: translateX(-50%) translateY(0);
-  transform: translateX(-50%) translateY(0);
 }
 
 .tab {

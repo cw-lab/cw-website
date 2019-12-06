@@ -207,10 +207,6 @@ a {
 				color: $white;
 			}
 		}
-		@include breakpoint(768px) {
-			width: 44px;
-			height: 44px;
-		}
 	}
 }
 .social_login {

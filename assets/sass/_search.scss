@@ -1,0 +1,43 @@
+.search {
+	.search__group {
+		position: relative;
+		> * {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+		.search__input {
+			width: calc(100% - 41px);
+			padding: 10.5px 1rem;
+			color: $black;
+			font-size: 1rem;
+			border-style: solid;
+			background-color: $gray-100;
+			border-width: 0px;
+		}
+		.search__submit {
+			position: relative;
+			width: 41px;
+			height: 40px;
+			color: $black;
+			font-size: 1.25rem;
+			border-width: 0px;
+			background-color: $gray-100;
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				@extend %before-after;
+				width: 1px;
+				height: 20px;
+				background-color: $gray-200;
+				@include translateY(-50%);
+			}
+			i.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include translate(-50%, -50%);
+			}
+		}
+	}
+}

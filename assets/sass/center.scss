@@ -1,9 +1,6 @@
 @import "_basic";
 @import "_sheet";
-html {
-	height: 100%;
-	min-height: 100%;
-}
+@import "_search";
 .center__page {
 	header {
 		border-bottom: 1px solid $gray-200;
@@ -48,6 +45,7 @@ html {
 		}
 	}
 	article {
+		position: relative;
 		width: 100%;
 		@include breakpoint(1024px) {
 			float: right;
@@ -194,6 +192,18 @@ html {
 						width: 100%;
 					}
 				}
+			}
+		}
+		.search {
+			width: 100%;
+			@include breakpoint(max-width 1023px) {
+				margin-top: 10px
+			}
+			@include breakpoint(1024px) {
+				position: absolute;
+				top: -4px;
+				right: 0;
+				width: 240px;
 			}
 		}
 	}

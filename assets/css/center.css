@@ -1,11 +1,53 @@
-.center__page .container::after {
+.search .search__group .search__submit::before, .center__page .container::after {
   content: '';
   display: block;
 }
 
-html {
-  height: 100%;
-  min-height: 100%;
+.search .search__group {
+  position: relative;
+}
+.search .search__group > * {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.search .search__group .search__input {
+  width: calc(100% - 41px);
+  padding: 10.5px 1rem;
+  color: #171717;
+  font-size: 1rem;
+  border-style: solid;
+  background-color: #EEEEEE;
+  border-width: 0px;
+}
+.search .search__group .search__submit {
+  position: relative;
+  width: 41px;
+  height: 40px;
+  color: #171717;
+  font-size: 1.25rem;
+  border-width: 0px;
+  background-color: #EEEEEE;
+}
+.search .search__group .search__submit::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 20px;
+  background-color: #D3D5D7;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.search .search__group .search__submit i.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .center__page header {
@@ -58,6 +100,7 @@ html {
   }
 }
 .center__page article {
+  position: relative;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -226,6 +269,22 @@ html {
 .center__page article .form .birthday__group .select__group select {
   min-width: auto;
   width: 100%;
+}
+.center__page article .search {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .center__page article .search {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .center__page article .search {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 240px;
+  }
 }
 .center__page .list__group .list__item {
   border: 1px solid #D3D5D7;

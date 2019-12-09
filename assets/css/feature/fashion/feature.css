@@ -239,8 +239,16 @@ ol {
   margin-top: 40px !important;
 }
 
+.mt20 {
+  margin-top: 20px !important;
+}
+
 .mt30 {
   margin-top: 30px !important;
+}
+
+.mb20 {
+  margin-bottom: 20px !important;
 }
 
 .mb30 {
@@ -316,6 +324,8 @@ ol {
 }
 
 html {
+  min-height: 100%;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -349,7 +359,15 @@ textarea {
 }
 
 body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 158px;
   font-family: Roboto, 'Noto Sans TC', sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 190px;
+  }
 }
 
 .serif {
@@ -1116,12 +1134,6 @@ a.bookmark-btn > i {
 a.bookmark-btn i:hover, a.bookmark-btn i.active {
   color: #fff;
 }
-@media (min-width: 768px) {
-  a.bookmark-btn {
-    width: 44px;
-    height: 44px;
-  }
-}
 
 .social_login {
   width: 100%;
@@ -1613,7 +1625,7 @@ aside.menubar--left > ul > li .li__group > i.more.active {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-aside.menubar--left > ul > li.now {
+aside.menubar--left > ul > li.now > .li__group {
   background-color: #D60C18;
 }
 aside.menubar--left > ul > li.now > .li__group > a, aside.menubar--left > ul > li.now > .li__group > i {
@@ -1638,6 +1650,7 @@ aside.menubar--left.opened {
   left: 0;
   width: 0;
   height: 0;
+  z-index: 11;
 }
 .opacity.opened, .black.opened {
   width: 100%;
@@ -1652,7 +1665,6 @@ aside.menubar--left.opened {
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
-  z-index: 11;
 }
 .black.opened {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2143,6 +2155,10 @@ header ul.member__list a:hover {
 }
 
 footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 20px;
   font-size: 0.8125rem;
@@ -2177,7 +2193,7 @@ footer a:hover {
 }
 footer .copyright__cwlink {
   margin-bottom: 1.5em;
-  margin-right: -275px;
+  margin-right: -460px;
 }
 @media (max-width: 767px) {
   footer .copyright__cwlink {

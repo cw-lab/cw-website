@@ -50,10 +50,16 @@ ol {
     margin-top: 40px !important;
 }
 
+.mt20 {
+    margin-top: 20px !important;
+}
 .mt30 {
     margin-top: 30px !important;
 }
 
+.mb20 {
+    margin-bottom: 20px !important;
+}
 .mb30 {
     margin-bottom: 30px !important;
 }
@@ -131,6 +137,8 @@ ol {
 }
 
 html {
+    min-height: 100%;
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -162,7 +170,13 @@ textarea {
 }
 
 body {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 158px;
     font-family: Roboto, 'Noto Sans TC', sans-serif;
+    @include breakpoint(768px) {
+        padding-bottom: 190px;
+    }
 }
 
 .serif {

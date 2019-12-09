@@ -1777,7 +1777,7 @@ button.btn[disabled].btn--animate, a.btn[disabled].btn--animate {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 11;
+  z-index: 10;
 }
 .touchClose.opened {
   width: 100%;

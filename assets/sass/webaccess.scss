@@ -489,6 +489,27 @@
 			}
 		}
 	}
+	.accordion__item__panel {
+		.h3 {
+			font-weight: 500;
+			line-height: 1.5;
+		}
+		.decimal--step {
+			margin-left: 2.1em;
+			li {
+				position: relative;
+				&::before {
+					content: 'Step';
+					display: inline-block;
+					position: absolute;
+					top: 2px;
+					right: calc(100% + 1.2em);
+					font-size: 1rem;
+					line-height: 1.5;
+				}
+			}
+		}
+	}
 	footer {
 		@include breakpoint(768px) {
 			position: absolute;

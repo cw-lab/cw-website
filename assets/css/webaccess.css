@@ -573,6 +573,25 @@
 .webaccess__page .accordion__item__panel::before, .webaccess__page .accordion__item__panel::after {
   clear: both;
 }
+.webaccess__page .accordion__item__panel .h3 {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.webaccess__page .accordion__item__panel .decimal--step {
+  margin-left: 2.1em;
+}
+.webaccess__page .accordion__item__panel .decimal--step li {
+  position: relative;
+}
+.webaccess__page .accordion__item__panel .decimal--step li::before {
+  content: 'Step';
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: calc(100% + 1.2em);
+  font-size: 1rem;
+  line-height: 1.5;
+}
 @media (min-width: 768px) {
   .webaccess__page footer {
     position: absolute;

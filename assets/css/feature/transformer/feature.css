@@ -208,6 +208,10 @@ ol {
   list-style-type: upper-alpha;
 }
 
+.decimal {
+  list-style-type: decimal;
+}
+
 .disc {
   list-style-type: disc;
 }
@@ -681,14 +685,6 @@ i.icon {
   content: "\e937";
 }
 
-.icon-minus:before {
-  content: "\e936";
-}
-
-.icon-plus:before {
-  content: "\e937";
-}
-
 .icon-images:before {
   content: "\e900";
 }
@@ -746,11 +742,11 @@ i.icon {
 }
 
 .icon-exclamation-circle:before {
-  content: "\e90e";
+  content: "\e90f";
 }
 
 .icon-question-circle:before {
-  content: "\e90f";
+  content: "\e90e";
 }
 
 .icon-sort:before {
@@ -905,8 +901,16 @@ i.icon {
   content: "\e935";
 }
 
-.icon-exclamation-solid:before {
+.icon-minus:before {
   content: "\e938";
+}
+
+.icon-plus:before {
+  content: "\e939";
+}
+
+.icon-exclamation-solid:before {
+  content: "\e93a";
 }
 
 .hamburger {
@@ -1614,10 +1618,10 @@ aside.menubar--left > ul > li .li__group > i.more {
   padding: 17px 25px;
   font-weight: bold;
   cursor: pointer;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
 }
 aside.menubar--left > ul > li .li__group > i.more.active {
   -moz-transform: rotate(180deg);

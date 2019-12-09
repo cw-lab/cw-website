@@ -481,7 +481,7 @@ aside.menubar--left {
 					padding: 17px 25px;
 					font-weight: bold;
 					cursor: pointer;
-					@include transition(all 0.3s);
+					@include transition(transform 0.3s);
 					&.active {
 						@include rotate(180deg);
 					}

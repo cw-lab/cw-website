@@ -450,10 +450,6 @@
   margin-bottom: 5px;
   color: #171717;
 }
-.center__page .list__group.list__group--exclusive .list__item .list__txt .phase {
-  color: #939EA7;
-  font-size: 14px;
-}
 .center__page .list__group.list__group--exclusive .list__item:not(.list__item--vip):hover .list__label {
   background-color: #171717;
 }

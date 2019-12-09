@@ -40,12 +40,6 @@ i.icon {
 .icon-download:before {
 	content: "\e937";
 }
-.icon-minus:before {
-	content: "\e936";
-}
-.icon-plus:before {
-	content: "\e937";
-}
 .icon-images:before {
 	content: "\e900";
 }
@@ -89,10 +83,10 @@ i.icon {
 	content: "\e90d";
 }
 .icon-exclamation-circle:before {
-	content: "\e90e";
+	content: "\e90f";
 }
 .icon-question-circle:before {
-	content: "\e90f";
+	content: "\e90e";
 }
 .icon-sort:before {
 	content: "\e910";
@@ -208,6 +202,12 @@ i.icon {
 .icon-error-solid:before {
 	content: "\e935";
 }
-.icon-exclamation-solid:before {
+.icon-minus:before {
 	content: "\e938";
+}
+.icon-plus:before {
+	content: "\e939";
+}
+.icon-exclamation-solid:before {
+	content: "\e93a";
 }

@@ -89,11 +89,6 @@
 	}
 }
 .webaccess__page {
-	position: relative;
-	min-height: 100vh;
-	@include breakpoint(768px) {
-		padding-bottom: 225px;
-	}
 	h1 {
 		margin-bottom: 5px;
 		@include breakpoint(max-width 767px) {
@@ -508,14 +503,6 @@
 					line-height: 1.5;
 				}
 			}
-		}
-	}
-	footer {
-		@include breakpoint(768px) {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
 		}
 	}
 }

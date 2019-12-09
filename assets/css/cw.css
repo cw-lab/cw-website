@@ -371,7 +371,7 @@ textarea {
 body {
   position: relative;
   min-height: 100%;
-  padding-bottom: 158px;
+  padding-bottom: 280px;
   font-family: Roboto, 'Noto Sans TC', sans-serif;
 }
 @media (min-width: 768px) {

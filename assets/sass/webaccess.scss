@@ -490,7 +490,10 @@
 			line-height: 1.5;
 		}
 		.decimal--step {
-			margin-left: 2.1em;
+			margin-left: 2.4em;
+			@include breakpoint(768px) {
+				margin-left: 2.1em;
+			}
 			li {
 				position: relative;
 				&::before {
@@ -498,9 +501,12 @@
 					display: inline-block;
 					position: absolute;
 					top: 2px;
-					right: calc(100% + 1.2em);
+					right: calc(100% + 1.5em);
 					font-size: 1rem;
 					line-height: 1.5;
+					@include breakpoint(768px) {
+						right: calc(100% + 1.2em);
+					}
 				}
 			}
 		}

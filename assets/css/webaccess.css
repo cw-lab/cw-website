@@ -104,15 +104,6 @@
   left: 0;
 }
 
-.webaccess__page {
-  position: relative;
-  padding-bottom: 280px;
-}
-@media (min-width: 768px) {
-  .webaccess__page {
-    padding-bottom: 190px;
-  }
-}
 .webaccess__page h1 {
   margin-bottom: 5px;
 }
@@ -578,7 +569,12 @@
   line-height: 1.5;
 }
 .webaccess__page .accordion__item__panel .decimal--step {
-  margin-left: 2.1em;
+  margin-left: 2.4em;
+}
+@media (min-width: 768px) {
+  .webaccess__page .accordion__item__panel .decimal--step {
+    margin-left: 2.1em;
+  }
 }
 .webaccess__page .accordion__item__panel .decimal--step li {
   position: relative;
@@ -588,9 +584,14 @@
   display: inline-block;
   position: absolute;
   top: 2px;
-  right: calc(100% + 1.2em);
+  right: calc(100% + 1.5em);
   font-size: 1rem;
   line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .webaccess__page .accordion__item__panel .decimal--step li::before {
+    right: calc(100% + 1.2em);
+  }
 }
 
 /*# sourceMappingURL=webaccess.css.map */

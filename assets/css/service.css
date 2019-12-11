@@ -146,6 +146,9 @@
   .service__page aside > ul > li > .li__group i.more {
     display: none;
   }
+  .service__page aside > ul > li > .li__group:hover > a {
+    color: #171717;
+  }
   .service__page aside > ul > li > ul {
     display: block !important;
   }
@@ -199,6 +202,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: 1023px) {
+  .service__master__page .accordion__item:nth-child(5) ~ .accordion__item {
+    display: none;
+  }
+}
+.service__master__page .btn--more {
+  padding: 10px 1.125em;
+  color: #003a9f;
+  text-decoration: underline;
+}
+@media (min-width: 1024px) {
+  .service__master__page .btn--more {
+    display: none;
   }
 }
 

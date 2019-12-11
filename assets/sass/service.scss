@@ -55,6 +55,9 @@
 						i.more {
 							display: none;
 						}
+						&:hover > a {
+							color: $black;
+						}
 					}
 					> ul {
 						display: block !important;
@@ -106,6 +109,23 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+		}
+	}
+}
+.service__master__page {
+	.accordion__item {
+		@include breakpoint(max-width 1023px) {
+			&:nth-child(5) ~ .accordion__item {
+				display: none;
+			}
+		}
+	}
+	.btn--more {
+		padding: 10px 1.125em;
+		color: $surface;
+		text-decoration: underline;
+		@include breakpoint(1024px) {
+			display: none;
 		}
 	}
 }

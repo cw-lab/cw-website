@@ -8,15 +8,18 @@ header {
         }
     }
     a.logo {
+        display: inline-block;
+        vertical-align: middle;
         > * {
             display: inline-block;
             vertical-align: middle;
         }
-        img {
+        &.logo--main {
             margin-right: 20px;
         }
-        span {
+        &.logo--sub {
             color: $primary;
+            font-weight: 500;
         }
     }
     ul {

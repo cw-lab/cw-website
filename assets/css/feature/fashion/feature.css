@@ -2126,15 +2126,20 @@ header > .container-fluid > .flex, header > .container > .flex {
   padding-bottom: 10px;
   align-items: center;
 }
+header a.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
 header a.logo > * {
   display: inline-block;
   vertical-align: middle;
 }
-header a.logo img {
+header a.logo.logo--main {
   margin-right: 20px;
 }
-header a.logo span {
+header a.logo.logo--sub {
   color: #D60C18;
+  font-weight: 500;
 }
 header ul.member__list {
   position: relative;

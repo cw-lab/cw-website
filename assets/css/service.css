@@ -147,7 +147,7 @@
     display: none;
   }
   .service__page aside > ul > li > ul {
-    display: block;
+    display: block !important;
   }
   .service__page aside > ul > li > ul li .li__group > a {
     padding: 10px 1.5em;
@@ -202,12 +202,12 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .service__sub__page aside {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .service__sub__page article .btn--back {
     display: none;
   }

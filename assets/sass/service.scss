@@ -57,7 +57,7 @@
 						}
 					}
 					> ul {
-						display: block;
+						display: block !important;
 						li .li__group {
 							> a {
 								padding: 10px 1.5em;
@@ -111,13 +111,13 @@
 }
 .service__sub__page {
 	aside {
-		@include breakpoint(max-width 767px) {
+		@include breakpoint(max-width 1023px) {
 			display: none;
 		}
 	}
 	article {
 		.btn--back {
-			@include breakpoint(768px) {
+			@include breakpoint(1024px) {
 				display: none;
 			}
 		}

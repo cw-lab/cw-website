@@ -7,6 +7,18 @@ header {
             align-items: center;
         }
     }
+    a.logo {
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img {
+            margin-right: 20px;
+        }
+        span {
+            color: $primary;
+        }
+    }
     ul {
         &.member__list {
             position: relative;

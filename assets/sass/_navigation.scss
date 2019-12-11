@@ -237,13 +237,12 @@ nav {
 					}
 					> li {
 						margin-left: 16px;
-						> a {
-							display: flex;
+						> .menubar__user--login {
 							padding-top: 10px;
 							padding-bottom: 10px;
 							color: $black;
 							line-height: 1rem;
-							align-items: center;
+							cursor: pointer;
 							i {
 								margin-left: 7px;
 								height: 0.875em;
@@ -253,8 +252,25 @@ nav {
 									@include rotate(180deg);
 								}
 							}
-							&:hover {
-								color: $primary;
+							@include breakpoint(max-width 767px) {
+								.desktop {
+									display: none;
+								}
+								.mobile {
+									font-size: 1.5em;
+								}
+							}
+							@include breakpoint(768px) {
+								.desktop {
+									display: flex;
+									align-items: center;
+								}
+								.mobile {
+									display: none;
+								}
+								&:hover {
+									color: $primary;
+								}
 							}
 						}
 					}
@@ -278,9 +294,14 @@ nav {
 					.menubar__user__slide {
 						display: none;
 						position: absolute;
-						left: -10px;
-						min-width: calc(100% + 20px);
+						min-width: 130px;
 						width: 100%;
+						@include breakpoint(768px) {
+							left: -10px;
+						}
+						@include breakpoint(max-width 767px) {
+							right: -15px;
+						}
 						ul {
 							background-color: $white;
 							border: 1px solid $gray-200;
@@ -466,7 +487,8 @@ aside.menubar--left {
 				> a {
 					display: flex;
 					width: 100%;
-					padding: 17px 25px;
+					padding: 15px 25px;
+					line-height: 1.25;
 					align-items: center;
 					&.sns {
 						i + span {
@@ -478,7 +500,7 @@ aside.menubar--left {
 					position: absolute;
 					top: 0;
 					right: 0;
-					padding: 17px 25px;
+					padding: 15px 25px;
 					font-weight: bold;
 					cursor: pointer;
 					@include transition(transform 0.3s);
@@ -500,7 +522,7 @@ aside.menubar--left {
 				> li {
 					.li__group {
 						> a {
-							padding: 17px 50px;
+							padding: 15px 20px 15px 50px;
 						}
 					}
 					&.now a {

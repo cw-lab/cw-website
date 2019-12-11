@@ -205,8 +205,7 @@ th {
   padding: 0;
 }
 
-ul,
-ol {
+ul, ol {
   padding-left: 1.15em;
 }
 
@@ -249,12 +248,20 @@ ol {
   margin-top: 40px !important;
 }
 
+.mt10 {
+  margin-top: 10px !important;
+}
+
 .mt20 {
   margin-top: 20px !important;
 }
 
 .mt30 {
   margin-top: 30px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
 }
 
 .mb20 {
@@ -1541,15 +1548,14 @@ nav.menubar--sub2 > .container > ul:not(.sns__group) {
 nav.menubar--sub2 > .container > ul:not(.sns__group) > li {
   margin-left: 16px;
 }
-nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a {
-  display: flex;
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #171717;
   line-height: 1rem;
-  align-items: center;
+  cursor: pointer;
 }
-nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a i {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login i {
   margin-left: 7px;
   height: 0.875em;
   font-weight: bold;
@@ -1558,14 +1564,31 @@ nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a i {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
-nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a i.deg {
+nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login i.deg {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-nav.menubar--sub2 > .container > ul:not(.sns__group) > li > a:hover {
-  color: #D60C18;
+@media (max-width: 767px) {
+  nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login .desktop {
+    display: none;
+  }
+  nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login .mobile {
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 768px) {
+  nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login .desktop {
+    display: flex;
+    align-items: center;
+  }
+  nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login .mobile {
+    display: none;
+  }
+  nav.menubar--sub2 > .container > ul:not(.sns__group) > li > .menubar__user--login:hover {
+    color: #D60C18;
+  }
 }
 nav.menubar--sub2 ul.menubar__user {
   margin-left: 16px;
@@ -1588,9 +1611,18 @@ nav.menubar--sub2 ul.menubar__user > li {
 nav.menubar--sub2 ul.menubar__user > li .menubar__user__slide {
   display: none;
   position: absolute;
-  left: -10px;
-  min-width: calc(100% + 20px);
+  min-width: 130px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  nav.menubar--sub2 ul.menubar__user > li .menubar__user__slide {
+    left: -10px;
+  }
+}
+@media (max-width: 767px) {
+  nav.menubar--sub2 ul.menubar__user > li .menubar__user__slide {
+    right: -15px;
+  }
 }
 nav.menubar--sub2 ul.menubar__user > li .menubar__user__slide ul {
   background-color: #fff;
@@ -1736,7 +1768,8 @@ aside.menubar--left > ul > li .li__group {
 aside.menubar--left > ul > li .li__group > a {
   display: flex;
   width: 100%;
-  padding: 17px 25px;
+  padding: 15px 25px;
+  line-height: 1.25;
   align-items: center;
 }
 aside.menubar--left > ul > li .li__group > a.sns i + span {
@@ -1746,7 +1779,7 @@ aside.menubar--left > ul > li .li__group > i.more {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 17px 25px;
+  padding: 15px 25px;
   font-weight: bold;
   cursor: pointer;
   -moz-transition: -moz-transform 0.3s;
@@ -1770,7 +1803,7 @@ aside.menubar--left > ul > li > ul {
   display: none;
 }
 aside.menubar--left > ul > li > ul > li .li__group > a {
-  padding: 17px 50px;
+  padding: 15px 20px 15px 50px;
 }
 aside.menubar--left > ul > li > ul > li.now a {
   color: #D60C18;
@@ -3346,6 +3379,16 @@ header > .container-fluid > .flex, header > .container > .flex {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+}
+header a.logo > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+header a.logo img {
+  margin-right: 20px;
+}
+header a.logo span {
+  color: #D60C18;
 }
 header ul.member__list {
   position: relative;

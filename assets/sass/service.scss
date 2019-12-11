@@ -1,0 +1,125 @@
+@import "_basic";
+@import "_sheet";
+@import "_accordion";
+.service__page {
+	header {
+		border-bottom: 1px solid $gray-200;
+		nav.menubar--sub2 {
+			@include breakpoint(1024px) {
+				right: calc( (100% - 1020px) / 2 );
+			}
+			ul.menubar__user {
+				display: block !important;
+				&::before {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+	.container {
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: auto;
+	    margin-right: auto;
+		@include breakpoint(1024px) {
+			width: 1020px;
+		}
+		@include breakpoint(375px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		&::after {
+			@extend %before-after;
+			clear: both;
+		}
+	}
+	aside {
+		width: 100%;
+		@include breakpoint(max-width 1023px) {
+			padding-top: 25px;
+			border: 0;
+			background-color: transparent;
+			> ul {
+				> li {
+					&:first-child {
+						display: none;
+					}
+					> .li__group {
+						> a {
+							padding-left: 0;
+							padding-right: 0;
+							font-size: 1.375em;
+							font-weight: 500;
+						}
+						i.more {
+							display: none;
+						}
+					}
+					> ul {
+						display: block;
+						li .li__group {
+							> a {
+								padding: 10px 1.5em;
+							}
+						}
+					}
+				}
+			}
+		}
+		@include breakpoint(1024px) {
+			float: left;
+			max-width: 200px;
+		}
+	}
+	article {
+		position: relative;
+		width: 100%;
+		@include breakpoint(1024px) {
+			float: right;
+			max-width: 750px;
+		}
+	}
+	.feedback__block {
+		width: 100%;
+		@include breakpoint(1024px) {
+			float: right;
+			max-width: 750px;
+		}
+	}
+	.accordion__group {
+		ul.accordion__item__header {
+			margin: 0 0 0 1.125em;
+			padding: 0.8125em 1.125em;
+		}
+	}
+	.list__item {
+		padding: 20px;
+		border: 1px solid $gray-200;
+		.h3 {
+			margin: 0 0 10px;
+			@include breakpoint(530px) {
+				margin: 0;
+			}
+		}
+		@include breakpoint(530px) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+}
+.service__sub__page {
+	aside {
+		@include breakpoint(max-width 767px) {
+			display: none;
+		}
+	}
+	article {
+		.btn--back {
+			@include breakpoint(768px) {
+				display: none;
+			}
+		}
+	}
+}

@@ -3,9 +3,6 @@
 .serial__page {
     position: relative;
     min-height: 100vh;
-    @include breakpoint(768px) {
-        padding-bottom: 225px;
-    }
     .container {
         @include breakpoint(375px) {
             padding-left: 15px;

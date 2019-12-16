@@ -13,11 +13,6 @@
   position: relative;
   min-height: 100vh;
 }
-@media (min-width: 768px) {
-  .serial__page {
-    padding-bottom: 225px;
-  }
-}
 @media (min-width: 375px) {
   .serial__page .container {
     padding-left: 15px;

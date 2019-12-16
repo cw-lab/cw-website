@@ -64,6 +64,10 @@
   font-weight: 500;
   line-height: 1.5;
 }
+.accordion__item__panel img {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
 .accordion__item__panel .decimal--step {
   margin-left: 2.4em;
 }

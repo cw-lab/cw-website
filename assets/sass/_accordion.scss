@@ -65,6 +65,10 @@
 				font-weight: 500;
 				line-height: 1.5;
 			}
+			img {
+				display: inline-block;
+				vertical-align: text-bottom;
+			}
 			.decimal--step {
 				margin-left: 2.4em;
 				@include breakpoint(768px) {

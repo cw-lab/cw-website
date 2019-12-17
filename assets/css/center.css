@@ -272,6 +272,7 @@
 }
 .center__page article .search {
   width: 100%;
+  font-size: 0;
 }
 @media (max-width: 1023px) {
   .center__page article .search {

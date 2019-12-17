@@ -1,0 +1,356 @@
+@import '_basic';
+@import '_general';
+@import '_font';
+$ddp: #5ECAA4;
+$kmt: #22AFE3;
+$tpp: #2BBEC4;
+$pfp: #F8B136;
+$npp: #DCB000;
+$npsu: #B1B1B1;
+$other: #343434;
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    a {
+        display: block;
+        color: #373737;
+        line-height: 1;
+        &.logo {
+            i {
+                font-size: 35px;
+                margin-right: 10px;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .sns {
+        font-size: 22px;
+    }
+}
+
+.candidate__item {
+    margin-bottom: 40px;
+    padding: 30px 25px 15px 55px;
+    border: 2px solid;
+    .candidate__img {
+        margin-right: 30px;
+        img {
+            display: block;
+            margin: auto;
+            border: 1px solid;
+            @include border-radius(50%);
+        }
+    }
+    .candidate__detail {
+        width: calc(100% - 150px);
+    }
+    .candidate__name {
+        .name {
+            &.name--han {
+                color: #000;
+                font-size: 26px;
+                font-weight: 600;
+                line-height: 34px;
+                .age {
+                    display: inline-block;
+                    color: #666;
+                    font-size: 15px;
+                    font-weight: normal;
+                    vertical-align: middle;
+                }
+            }
+            &.name--eng {
+                color: #666;
+                font-size: 15px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .candidate__perform__group,
+    .candidate__family__group {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .candidate__perform,
+    .candidate__family {
+        padding: 8px 20px;
+        color: #F5F5F5;
+        font-size: 15px;
+        line-height: 1;
+        border: 1px solid #313131;
+        background-color: #313131;
+        cursor: pointer;
+        >i {
+            margin-left: 8px;
+        }
+    }
+    .candidate__name {
+        margin-right: 10px;
+    }
+    .candidate__keyword {
+        li {
+            display: inline-block;
+            margin-right: 30px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1;
+            cursor: pointer;
+            &:nth-child(1),
+            &:nth-child(2) {
+                font-size: 50px;
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+                font-size: 38px;
+            }
+        }
+    }
+    .candidate__party {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.7em 0.275em 0.3em 0.275em;
+        color: #fff;
+        font-size: 17px;
+        letter-spacing: 0.5em;
+        writing-mode: tb;
+    }
+    &.candidate--kmt {
+        border-color: $kmt;
+        .candidate__img img {
+            border-color: $kmt;
+        }
+        .candidate__keyword {
+            color: $kmt;
+        }
+        .candidate__party {
+            background-color: $kmt;
+        }
+    }
+    &.candidate--ddp {
+        border-color: $ddp;
+        .candidate__img img {
+            border-color: $ddp;
+        }
+        .candidate__keyword {
+            color: $ddp;
+        }
+        .candidate__party {
+            background-color: $ddp;
+        }
+    }
+    &.candidate--tpp {
+        border-color: $tpp;
+        .candidate__img img {
+            border-color: $tpp;
+        }
+        .candidate__keyword {
+            color: $tpp;
+        }
+        .candidate__party {
+            background-color: $tpp;
+        }
+    }
+    &.candidate--pfp {
+        border-color: $pfp;
+        .candidate__img img {
+            border-color: $pfp;
+        }
+        .candidate__keyword {
+            color: $pfp;
+        }
+        .candidate__party {
+            background-color: $pfp;
+        }
+    }
+    &.candidate--npp {
+        border-color: $npp;
+        .candidate__img img {
+            border-color: $npp;
+        }
+        .candidate__keyword {
+            color: $npp;
+        }
+        .candidate__party {
+            background-color: $npp;
+        }
+    }
+    &.candidate--npsu {
+        border-color: $npsu;
+        .candidate__img img {
+            border-color: $npsu;
+        }
+        .candidate__keyword {
+            color: $npsu;
+        }
+        .candidate__party {
+            background-color: $npsu;
+        }
+    }
+    &.candidate--other {
+        border-color: $other;
+        .candidate__img img {
+            border-color: $other;
+        }
+        .candidate__keyword {
+            color: $other;
+        }
+        .candidate__party {
+            background-color: $other;
+        }
+    }
+}
+
+.modal-header,
+.modal-footer {
+    border: 0px;
+}
+
+.perform__model,
+.family__model {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    padding: 20px;
+    color: #fff;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 3px 6px rgba(46, 46, 46, 0.25);
+    z-index: 1;
+    .perform__title,
+    .family__title {
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+.model__close {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    &::before,
+    &::after {
+        @extend %before-after;
+        width: 20px;
+        height: 3px;
+        background-color: #93AAA7;
+        @include border-radius(3px);
+    }
+    &::before {
+        @include transform(rotate(45deg) translate(6px, 6px));
+    }
+    &::after {
+        @include transform(rotate(-45deg) translate(-4px, 4px));
+    }
+}
+
+.rate__block {
+    margin: 0;
+    padding: 10px 10px 10px 20px;
+    list-style: none;
+    li {
+        border-bottom: 1px solid #777777;
+        >* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .title {
+            width: calc(100% - 80px);
+            padding: 10px 0;
+            font-size: 16px;
+            span {
+                display: inline-block;
+                color: #E5E5E5;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.3;
+                vertical-align: middle;
+            }
+        }
+        .rate {
+            width: 80px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+}
+
+.keyword__block {
+    span.date {
+        display: inline-block;
+        padding: 0px 10px;
+        margin-right: 5px;
+        color: #fff;
+        font-size: 12px;
+        vertical-align: middle;
+        background-color: #027cff;
+        @include border-radius(20px);
+    }
+    >div {
+        display: inline;
+        a {
+            margin-right: 5px;
+        }
+        [class*='fa'] {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            font-size: 12px;
+            vertical-align: middle;
+            @include border-radius(50%);
+            &::before {
+                display: inline-block;
+                font-family: "Font Awesome 5 Brands";
+            }
+        }
+        .fa-fb {
+            color: #fff;
+            background-color: #1877f2;
+            &::before {
+                content: "\f39e";
+                @include scale(0.9);
+            }
+        }
+        .fa-twitter {
+            color: #fff;
+            background-color: #1DA1F2;
+            @include scale(0.9);
+        }
+        .fa-yt {
+            color: #d60c18;
+            &::before {
+                content: "\f167";
+                font-size: 16px;
+            }
+        }
+        .fa-ig {
+            color: #833AB4;
+            &::before {
+                content: "\f16d";
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.opacity {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}

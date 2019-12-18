@@ -111,13 +111,13 @@ header {
     }
     .candidate__party {
         position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0.7em 0.275em 0.3em 0.275em;
+        top: -2px;
+        right: -2px;
+        padding: 0.7em 0.5em;
+        width: 2em;
         color: #fff;
         font-size: 17px;
-        letter-spacing: 0.5em;
-        writing-mode: tb;
+        text-align: center;
     }
     &.candidate--kmt {
         border-color: $kmt;

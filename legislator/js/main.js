@@ -112,15 +112,15 @@
             } else if (filteredCandidate[i]["party"] == '民進黨') {
                 html += '<div class="col-md-12 candidate__item candidate--ddp order-2">';
             } else if (filteredCandidate[i]["party"] == '台灣民眾黨') {
-                html += '<div class="col-md-12 candidate__item candidate--tpp order-3">';
+                html += '<div class="col-md-12 candidate__item candidate--tpp order-5">';
             } else if (filteredCandidate[i]["party"] == '親民黨') {
                 html += '<div class="col-md-12 candidate__item candidate--pfp order-3">';
             } else if (filteredCandidate[i]["party"] == '時代力量') {
-                html += '<div class="col-md-12 candidate__item candidate--npp order-3">';
+                html += '<div class="col-md-12 candidate__item candidate--npp order-4">';
             } else if (filteredCandidate[i]["party"] == '無黨籍') {
-                html += '<div class="col-md-12 candidate__item candidate--npsu order-3">';
+                html += '<div class="col-md-12 candidate__item candidate--npsu order-6">';
             } else {
-                html += '<div class="col-md-12 candidate__item candidate--other order-3">';
+                html += '<div class="col-md-12 candidate__item candidate--other order-7">';
             }
             html += '<div class="row"><div class="candidate__img order-0"><img src="images/candidate/';
             html += filteredCandidate[i]["img"];
@@ -234,8 +234,8 @@
             $('.opacity').hide();
         });
     });
-    $('#sort option[value=north]').attr('selected', 'selected');
-    $('#country option[value=taipei]').attr('selected', 'selected');
-    $('#electorate option[value=tp1]').attr('selected', 'selected');
     $('#electorate').trigger('change');
+    // var evt = document.createEvent("HTMLEvents");
+    // evt.initEvent("change", true, true);
+    // document.getElementById('electorate').dispatchEvent(evt);
 });

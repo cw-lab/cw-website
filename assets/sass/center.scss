@@ -51,6 +51,11 @@
 			float: right;
 			max-width: 750px;
 		}
+		.phrase {
+			span {
+				display: inline-block;
+			}
+		}
 		.edit__group {
 			padding: 20px;
 			border: 1px solid $gray-200;
@@ -365,6 +370,95 @@
 							top: 0;
 							right: 0;
 						}
+					}
+				}
+			}
+		}
+		&.list__group--newsletters {
+			.list__item {
+				@include breakpoint(768px) {
+					display: flex;
+					align-items: center;
+				}
+				.title__group {
+					position: relative;
+					@include breakpoint(768px) {
+						padding-right: 60px;
+					}
+					.bookmark-btn {
+						position: absolute;
+						right: 0;
+						@include breakpoint(768px) {
+							top: 0;
+						}
+						@include breakpoint(max-width 767px) {
+							bottom: -3px;
+							width: 25px;
+							height: 25px;
+							i {
+								font-size: 12px !important;
+							}
+						}
+					}
+				}
+				.list__img {
+					width: 150px;
+					@include breakpoint(max-width 767px) {
+						display: none;
+					}
+				}
+				.list__txt {
+					@include breakpoint(max-width 767px) {
+						display: flex;
+						flex-wrap: wrap;
+						padding: 20px 15px 10px;
+					}
+					@include breakpoint(768px) {
+						width: calc(100% - 250px);
+						padding: 20px;
+					}
+					.title__group {
+						width: 100%;
+					}
+					.title {
+						display: -webkit-box;
+						margin-bottom: 5px;
+						color: $black;
+						-webkit-line-clamp: 2;
+						-webkit-box-orient: vertical;
+						overflow: hidden;
+						&:hover {
+							color: $primary;
+						}
+						@include breakpoint(768px) {
+							-webkit-line-clamp: 1;
+						}
+						@include breakpoint(max-width 767px) {
+							order: 1;
+						}
+					}
+					.phase {
+						@include breakpoint(max-width 767px) {
+							order: 3;
+						}
+					}
+					.btn--text {
+						@include breakpoint(max-width 767px) {
+							margin-bottom: 5px;
+							order: 2;
+						}
+					}
+				}
+				.list__btn {
+					min-width: auto;
+					width: calc(100% - 30px);
+					padding: 0.575em 0;
+					align-self: center;
+					@include breakpoint(768px) {
+						width: 80px;
+					}
+					@include breakpoint(max-width 767px) {
+						margin: 0 15px 20px;
 					}
 				}
 			}

@@ -3456,13 +3456,13 @@ footer {
   font-size: 0.8125rem;
   background-color: #EEEEEE;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   footer {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   footer > .container > .flex {
     flex-direction: column;
   }

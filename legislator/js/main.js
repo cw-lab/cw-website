@@ -124,12 +124,12 @@
             }
             html += '<div class="row"><div class="candidate__img order-0"><img src="images/candidate/';
             html += filteredCandidate[i]["img"];
-            html += '" width="120" alt="';
+            html += '" alt="';
             html += filteredCandidate[i]["name_chinese"];
-            html += '"></div><div class="candidate__detail order-2 order-md-1"><div class="d-md-flex flex-wrap align-items-start text-center text-md-left mt-3 mb-4"><div class="candidate__name"><div class="name name--han">';
+            html += '"></div><div class="candidate__detail order-2 order-md-1"><div class="d-md-flex flex-wrap align-items-start text-center text-md-left mt-3 mb-3"><div class="candidate__name"><div class="name name--han">';
             html += filteredCandidate[i]["name_chinese"];
             if (filteredCandidate[i]["age"] !== '') {
-                html += '<span class="age">（' + filteredCandidate[i]["age"] + '）</span>';
+                html += '<span class="age">(' + filteredCandidate[i]["age"] + ')</span>';
             }
             html += '</div>';
             if (filteredCandidate[i]["name_english"] !== '') {

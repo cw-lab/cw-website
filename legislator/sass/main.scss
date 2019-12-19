@@ -35,11 +35,15 @@ header {
     padding: 30px 25px 15px 55px;
     border: 2px solid;
     .candidate__img {
+        align-self: start;
         margin-right: 30px;
+        @include border-radius(50%);
         img {
             display: block;
             margin: auto;
-            border: 1px solid;
+            width: 100px;
+            height: 100px;
+            border: 2px solid;
             @include border-radius(50%);
         }
     }
@@ -50,20 +54,22 @@ header {
         .name {
             &.name--han {
                 color: #000;
-                font-size: 26px;
+                font-size: 24px;
                 font-weight: 600;
                 line-height: 34px;
                 .age {
                     display: inline-block;
+                    margin-left: 12px;
                     color: #666;
-                    font-size: 15px;
+                    font-size: 14px;
                     font-weight: normal;
+                    line-height: 1;
                     vertical-align: middle;
                 }
             }
             &.name--eng {
                 color: #666;
-                font-size: 15px;
+                font-size: 14px;
                 text-transform: uppercase;
             }
         }
@@ -78,34 +84,35 @@ header {
     .candidate__family {
         padding: 8px 20px;
         color: #F5F5F5;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1;
         border: 1px solid #313131;
         background-color: #313131;
         cursor: pointer;
         >i {
             margin-left: 8px;
+            font-size: 12px;
         }
     }
     .candidate__name {
-        margin-right: 10px;
+        margin-right: 48px;
     }
     .candidate__keyword {
         li {
             display: inline-block;
             margin-right: 30px;
             margin-bottom: 15px;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 300;
             line-height: 1;
             cursor: pointer;
             &:nth-child(1),
             &:nth-child(2) {
-                font-size: 50px;
+                font-size: 40px;
             }
             &:nth-child(3),
             &:nth-child(4) {
-                font-size: 38px;
+                font-size: 30px;
             }
         }
     }
@@ -113,16 +120,20 @@ header {
         position: absolute;
         top: -2px;
         right: -2px;
-        padding: 0.7em 0.5em;
-        width: 2em;
+        width: 2.4em;
+        padding: 0.67em 0.7em 0.7em;
         color: #fff;
-        font-size: 17px;
+        font-size: 0.875em;
         text-align: center;
+        line-height: 1.3;
     }
     &.candidate--kmt {
         border-color: $kmt;
-        .candidate__img img {
-            border-color: $kmt;
+        .candidate__img {
+            background-color: $kmt;
+            img {
+                border-color: $kmt;
+            }
         }
         .candidate__keyword {
             color: $kmt;
@@ -133,8 +144,11 @@ header {
     }
     &.candidate--ddp {
         border-color: $ddp;
-        .candidate__img img {
-            border-color: $ddp;
+        .candidate__img {
+            background-color: $ddp;
+            img {
+                border-color: $ddp;
+            }
         }
         .candidate__keyword {
             color: $ddp;
@@ -145,8 +159,11 @@ header {
     }
     &.candidate--tpp {
         border-color: $tpp;
-        .candidate__img img {
-            border-color: $tpp;
+        .candidate__img {
+            background-color: $tpp;
+            img {
+                border-color: $tpp;
+            }
         }
         .candidate__keyword {
             color: $tpp;
@@ -157,8 +174,11 @@ header {
     }
     &.candidate--pfp {
         border-color: $pfp;
-        .candidate__img img {
-            border-color: $pfp;
+        .candidate__img {
+            background-color: $pfp;
+            img {
+                border-color: $pfp;
+            }
         }
         .candidate__keyword {
             color: $pfp;
@@ -169,8 +189,11 @@ header {
     }
     &.candidate--npp {
         border-color: $npp;
-        .candidate__img img {
-            border-color: $npp;
+        .candidate__img {
+            background-color: $npp;
+            img {
+                border-color: $npp;
+            }
         }
         .candidate__keyword {
             color: $npp;
@@ -181,8 +204,11 @@ header {
     }
     &.candidate--npsu {
         border-color: $npsu;
-        .candidate__img img {
-            border-color: $npsu;
+        .candidate__img {
+            background-color: $npsu;
+            img {
+                border-color: $npsu;
+            }
         }
         .candidate__keyword {
             color: $npsu;
@@ -193,8 +219,11 @@ header {
     }
     &.candidate--other {
         border-color: $other;
-        .candidate__img img {
-            border-color: $other;
+        .candidate__img {
+            background-color: $other;
+            img {
+                border-color: $other;
+            }
         }
         .candidate__keyword {
             color: $other;
@@ -352,5 +381,6 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }

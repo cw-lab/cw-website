@@ -572,6 +572,11 @@
     margin: 0 15px 20px;
   }
 }
+@media (max-width: 767px) {
+  .center__page .newsletters__btn {
+    width: 100%;
+  }
+}
 .center__page .black.black-theater {
   background-color: rgba(23, 23, 23, 0.6);
 }

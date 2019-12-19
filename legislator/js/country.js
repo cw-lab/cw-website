@@ -248,7 +248,7 @@ var country = [{
         "country_name": "嘉義市",
         "country_sort": [{
             "sort_val": "cyc",
-            "sort_name": "新竹市選舉區",
+            "sort_name": "嘉義市選舉區",
         }]
     },
     {

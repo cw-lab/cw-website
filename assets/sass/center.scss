@@ -464,6 +464,11 @@
 			}
 		}
 	}
+	.newsletters__btn {
+		@include breakpoint(max-width 767px) {
+			width: 100%;
+		}
+	}
 	.black.black-theater {
 		background-color: rgba($black, 0.6);
 	}

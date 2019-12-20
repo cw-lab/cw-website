@@ -1,6 +1,24 @@
 @import '_basic';
 @import '_general';
 @import '_font';
+@import '_select';
+// ----
+$labor_rights:#22afe3;
+$annuity_reform:#55c1e9;
+$gender_issues:#5ecaa4;
+$education_reform:#7ed1ef;
+$energy:#a1dbf1;
+$climate_change:#77d9b7;
+$surroundings:#93ebcc;
+$eco_and_industrial_development:#93aaa7;
+$residence_justice:#2fa9ae;
+$social_welfare:#2bbec4;
+$returning:#dbc0b2;
+$national_identity:#e5b896;
+$tw_usa_relations:#f9d956;
+$diplomatic:#e8c436;
+$cross_strait_relations:#dcb000;
+// ----
 $ddp: #5ECAA4;
 $kmt: #22AFE3;
 $tpp: #2BBEC4;
@@ -30,33 +48,174 @@ header {
     }
 }
 
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 13px;
+}
+
+section {
+    position: relative;
+    padding: 50px 0;
+    @include breakpoint(768px) {
+        padding: 40px 0 120px;
+    }
+    &::before {
+        @extend %before-after;
+        position: relative;
+        top: -42px;
+        left: 50%;
+        width: 30px;
+        height: 4px;
+        background-color: #597B77;
+        @include translateX(-50%);
+    }
+}
+
+.section__title {
+    h2 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 28px;
+        font-weight: 500;
+        @include breakpoint(768px) {
+            font-size: 40px;
+        }
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+.page__essay {
+    padding: 130px 0 100px 0;
+    h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-size: 20px;
+        font-weight: 500;
+        @include breakpoint(768px) {
+            font-size: 24px;
+        }
+    }
+    p {
+        font-size: 18px;
+    }
+}
+
+.method__essay {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    >* {
+        font-size: 15px;
+    }
+}
+
+.further__block {
+    .h4 {
+        font-size: 21px;
+        font-weight: 600;
+    }
+    ul {
+        @extend %list-reset;
+        font-size: 24px;
+        li {
+            margin-top: 1em;
+            margin-bottom: 1em;
+            &:first-child a {
+                color: $kmt;
+            }
+            &:last-child a {
+                color: $ddp;
+            }
+            a:hover {
+                color: #343434;
+            }
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 0.5em;
+            font-size: 30px;
+        }
+        span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
+
+.form-group-title {
+    i {
+        display: inline-block;
+        vertical-align: text-top;
+    }
+    @include breakpoint(max-width 767px) {
+        i {
+            display: none;
+        }
+    }
+}
+
 .candidate__item {
-    margin-bottom: 40px;
-    padding: 30px 25px 15px 55px;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 15px;
     border: 2px solid;
+    @include breakpoint(768px) {
+        padding: 30px 60px;
+        margin-bottom: 40px;
+    }
+    .candidate__base {
+        &::before,
+        &::after {
+            @extend %before-after;
+            @include breakpoint(max-width 767px) {
+                clear: both;
+            }
+        }
+    }
     .candidate__img {
-        align-self: start;
-        margin-right: 30px;
         @include border-radius(50%);
+        @include breakpoint(max-width 767px) {
+            display: inline-block;
+            margin-right: 10px;
+            width: 65px;
+            height: 65px;
+            vertical-align: middle;
+        }
+        @include breakpoint(768px) {
+            float: left;
+            margin-right: 30px;
+            width: 100px;
+            height: 100px;
+        }
         img {
             display: block;
             margin: auto;
-            width: 100px;
-            height: 100px;
-            border: 2px solid;
+            width: 100%;
+            height: 100%;
+            border: 1px solid;
             @include border-radius(50%);
         }
     }
-    .candidate__detail {
-        width: calc(100% - 150px);
-    }
     .candidate__name {
+        display: inline-block;
+        @include breakpoint(max-width 767px) {
+            vertical-align: middle;
+        }
+        @include breakpoint(768px) {
+            vertical-align: top;
+        }
         .name {
             &.name--han {
                 color: #000;
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 34px;
+                @include breakpoint(max-width 767px) {
+                    line-height: 1.15;
+                }
                 .age {
                     display: inline-block;
                     margin-left: 12px;
@@ -74,45 +233,119 @@ header {
             }
         }
     }
-    .candidate__perform__group,
-    .candidate__family__group {
-        position: relative;
-        display: inline-block;
-        margin-right: 10px;
+    .candidate__detail {
+        @include breakpoint(768px) {
+            display: inline-block;
+            vertical-align: top;
+        }
     }
     .candidate__perform,
     .candidate__family {
-        padding: 8px 20px;
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        padding: 6px 10px 4px;
         color: #F5F5F5;
         font-size: 16px;
         line-height: 1;
-        border: 1px solid #313131;
-        background-color: #313131;
+        border: 1px solid #3E3E3E;
+        background-color: #3E3E3E;
         cursor: pointer;
+        @include transition(all 0.3s);
+        @include breakpoint(768px) {
+            padding: 8px 20px;
+        }
         >i {
             margin-left: 8px;
             font-size: 12px;
+            font-weight: bold;
+        }
+        &:hover {
+            border: 1px solid #000;
+            background-color: #000;
         }
     }
     .candidate__name {
-        margin-right: 48px;
+        @include breakpoint(768px) {
+            margin-right: 48px;
+        }
+        @include breakpoint(max-width 767px) {
+            width: calc(100% - 95px);
+            margin-right: 20px;
+        }
     }
     .candidate__keyword {
+        width: 100%;
+        @include breakpoint(768px) {
+            padding: 16px 0 0 130px;
+        }
+        @include breakpoint(max-width 767px) {
+            margin-top: 1rem;
+        }
+        &::before,
+        &::after {
+            @extend %before-after;
+            @include breakpoint(max-width 767px) {
+                clear: both;
+            }
+        }
         li {
+            position: relative;
             display: inline-block;
-            margin-right: 30px;
-            margin-bottom: 15px;
-            font-size: 20px;
+            margin-bottom: 7px;
+            padding: 8px 5px 4px;
+            font-size: 16px;
             font-weight: 300;
             line-height: 1;
             cursor: pointer;
+            z-index: 2;
+            @include breakpoint(768px) {
+                margin-left: -17px;
+                margin-right: 17px;
+                padding: 12px 17px 8px;
+                font-size: 20px;
+            }
             &:nth-child(1),
             &:nth-child(2) {
-                font-size: 40px;
+                font-size: 30px;
+                @include breakpoint(768px) {
+                    font-size: 40px;
+                }
             }
             &:nth-child(3),
             &:nth-child(4) {
-                font-size: 30px;
+                font-size: 24px;
+                @include breakpoint(768px) {
+                    font-size: 30px;
+                }
+            }
+            &::before {
+                @extend %before-after;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: #FCF757;
+                @include transition(width 0.3s);
+                z-index: -1;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+        &.disabled {
+            li {
+                padding: 0;
+                color: $npsu;
+                font-size: 20px;
+                cursor: not-allowed;
+                @include breakpoint(768px) {
+                    padding: 0 17px;
+                }
+                &::before {
+                    background-color: transparent;
+                }
             }
         }
     }
@@ -120,12 +353,16 @@ header {
         position: absolute;
         top: -2px;
         right: -2px;
-        width: 2.4em;
-        padding: 0.67em 0.7em 0.7em;
+        width: 2em;
+        padding: 0.67em 0.5em 0.7em;
         color: #fff;
         font-size: 0.875em;
         text-align: center;
         line-height: 1.3;
+        @include breakpoint(768px) {
+            width: 2.4em;
+            padding: 0.67em 0.7em 0.7em;
+        }
     }
     &.candidate--kmt {
         border-color: $kmt;
@@ -284,7 +521,7 @@ header {
 
 .rate__block {
     margin: 0;
-    padding: 10px 10px 10px 20px;
+    padding: 0;
     list-style: none;
     li {
         border-bottom: 1px solid #777777;
@@ -316,18 +553,26 @@ header {
 .keyword__block {
     span.date {
         display: inline-block;
-        padding: 0px 10px;
+        padding: 4px 6px;
         margin-right: 5px;
         color: #fff;
-        font-size: 12px;
+        font-size: 14px;
         vertical-align: middle;
-        background-color: #027cff;
-        @include border-radius(20px);
+        background-color: $npsu;
+        // @include border-radius(20px);
     }
     >div {
         display: inline;
         a {
             margin-right: 5px;
+            color: $other;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 2;
+            @include transition(all 0.3s);
+            &:hover {
+                color: #597B77;
+            }
         }
         [class*='fa'] {
             display: inline-flex;
@@ -336,36 +581,28 @@ header {
             width: 20px;
             height: 20px;
             margin-right: 5px;
-            font-size: 12px;
+            color: $other;
+            font-size: 15px;
             vertical-align: middle;
-            @include border-radius(50%);
             &::before {
                 display: inline-block;
                 font-family: "Font Awesome 5 Brands";
             }
         }
         .fa-fb {
-            color: #fff;
-            background-color: #1877f2;
             &::before {
                 content: "\f39e";
-                @include scale(0.9);
             }
         }
-        .fa-twitter {
-            color: #fff;
-            background-color: #1DA1F2;
-            @include scale(0.9);
-        }
         .fa-yt {
-            color: #d60c18;
+            // color: #d60c18;
             &::before {
                 content: "\f167";
                 font-size: 16px;
             }
         }
         .fa-ig {
-            color: #833AB4;
+            // color: #833AB4;
             &::before {
                 content: "\f16d";
                 font-size: 16px;
@@ -383,4 +620,327 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
+}
+
+.tab__group {
+    .tab__nav {
+        font-size: 0;
+        li {
+            display: inline-block;
+            width: 170px;
+            // width: 150px;
+            margin: 13px;
+            font-size: 20px;
+            // font-size: 18px;
+            color: #343434;
+            line-height: 50px;
+            text-align: center;
+            border: 2px solid #707070;
+            cursor: pointer;
+            @include transition(background 0.1s);
+            &.active,
+            &:hover {
+                &.labor_rights {
+                    background-color: $labor_rights;
+                }
+                &.annuity_reform {
+                    background-color: $annuity_reform;
+                }
+                &.gender_issues {
+                    background-color: $gender_issues;
+                }
+                &.education_reform {
+                    background-color: $education_reform;
+                }
+                &.energy {
+                    background-color: $energy;
+                }
+                &.climate_change {
+                    background-color: $climate_change;
+                }
+                &.surroundings {
+                    background-color: $surroundings;
+                }
+                &.eco_and_industrial_development {
+                    background-color: $eco_and_industrial_development;
+                }
+                &.residence_justice {
+                    background-color: $residence_justice;
+                }
+                &.social_welfare {
+                    background-color: $social_welfare;
+                }
+                &.returning {
+                    background-color: $returning;
+                }
+                &.national_identity {
+                    background-color: $national_identity;
+                }
+                &.tw_usa_relations {
+                    background-color: $tw_usa_relations;
+                }
+                &.diplomatic {
+                    background-color: $diplomatic;
+                }
+                &.cross_strait_relations {
+                    background-color: $cross_strait_relations;
+                }
+            }
+        }
+    }
+    .tab__item {
+        display: none;
+        &.active {
+            display: block;
+        }
+        .img__chart {
+            padding-top: 60px;
+            padding-bottom: 120px;
+        }
+        &[data-item*="eco_and_industrial_development"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $eco_and_industrial_development;
+            }
+        }
+        &[data-item*="labor_rights"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $labor_rights;
+            }
+        }
+        &[data-item*="surroundings"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $surroundings;
+            }
+        }
+        &[data-item*="energy"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $energy;
+            }
+        }
+        &[data-item*="climate_change"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $climate_change;
+            }
+        }
+        &[data-item*="annuity_reform"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $annuity_reform;
+            }
+        }
+        &[data-item*="gender_issues"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $gender_issues;
+            }
+        }
+        &[data-item*="education_reform"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $education_reform;
+            }
+        }
+        &[data-item*="residence_justice"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $residence_justice;
+            }
+        }
+        &[data-item*="national_identity"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $national_identity;
+            }
+        }
+        &[data-item*="cross_strait_relations"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $cross_strait_relations;
+            }
+        }
+        &[data-item*="tw_usa_relations"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $tw_usa_relations;
+            }
+        }
+        &[data-item*="diplomatic"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $diplomatic;
+            }
+        }
+        &[data-item*="returning"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $returning;
+            }
+        }
+        &[data-item*="social_welfare"] {
+            .hot__content span,
+            .img__chart .chart--line .line span {
+                background-color: $social_welfare;
+            }
+        }
+    }
+}
+
+.hot__group {
+    .slick-slide {
+        padding: 0 27px;
+    }
+    .hot__item {
+        position: relative;
+        padding-bottom: 10px;
+        border-top: 3px solid #343434;
+    }
+    .hot__title {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    .hot__more {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        padding: 0 12px;
+        color: #343434;
+        font-size: 16px;
+        line-height: 33px;
+        border: 1px solid #343434;
+        @include translateX(-50%);
+        @include transition(all 0.3s);
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            background-color: #93AAA7;
+        }
+    }
+    .hot__content {
+        position: relative;
+        font-size: 14px;
+        line-height: 2;
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        .date {
+            display: inline-block;
+            padding: 0 6px;
+            vertical-align: middle;
+        }
+        b {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        >a {
+            // display: inline;
+            color: #343434;
+            // cursor: pointer;
+            &:focus {
+                outline: 0;
+            }
+            &:hover {
+                color: #597B77;
+            }
+        }
+        &::after {
+            @extend %before-after;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 6em;
+            @include background-image(linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1) 100%));
+        }
+    }
+}
+
+.img__chart {
+    .chart {
+        width: 83%;
+        margin: 0 10px 0 20px;
+    }
+    .chart--yAxis {
+        font-size: 20px;
+        line-height: 20px;
+        >div {
+            margin-top: 15px;
+        }
+    }
+    .chart--number {
+        font-size: 16px;
+        line-height: 20px;
+        >div {
+            margin-top: 15px;
+        }
+    }
+    .chart--xAxis {
+        position: relative;
+        height: 16px;
+        color: #A2A2A2;
+        font-size: 16px;
+        .xAxis {
+            position: absolute;
+            @include translateX(-50%);
+            &.xAxis--0 {
+                left: 0;
+            }
+            &.xAxis--50 {
+                left: 50%;
+            }
+            &.xAxis--100 {
+                left: 100%;
+            }
+        }
+    }
+    .chart--line {
+        position: relative;
+        .divi {
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: #fff;
+            z-index: 1;
+            &.divi--25 {
+                left: 25%;
+            }
+            &.divi--50 {
+                left: calc(50% - 1px);
+            }
+            &.divi--75 {
+                left: 75%;
+            }
+        }
+        .line {
+            position: relative;
+            width: 100%;
+            height: 20px;
+            margin-top: 15px;
+            background-color: #EFEFEF;
+            border: 1px solid #343434;
+            span {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                border-right: 1px solid #343434;
+            }
+        }
+    }
 }

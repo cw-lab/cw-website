@@ -160,8 +160,12 @@ textarea {
 
 body {
     position: relative;
+    color: #343434;
     font-family: Roboto, 'Noto Sans TC', sans-serif;
-    letter-spacing: 0.005em;
+    line-height: 1.8;
+    @include breakpoint(768px) {
+        letter-spacing: 0.005em;
+    }
 }
 
 .serif {

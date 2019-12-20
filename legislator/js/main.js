@@ -6,83 +6,6 @@
         });
         return result;
     }
-    $('#sort').on('change', function() {
-        var val = $(this).val();
-        if (val == "north") {
-            $("#country").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>請選擇縣市</option>" +
-                "<option value='keelung'>基隆市</option>" +
-                "<option value='taipei'>台北市</option>" +
-                "<option value='newtaipei'>新北市</option>" +
-                "<option value='taoyuan'>桃園市</option>" +
-                "<option value='hsinchucity'>新竹市</option>" +
-                "<option value='hsinchucounty'>新竹縣</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>"
-            );
-        } else if (val == "middle") {
-            $("#country").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>請選擇縣市</option>" +
-                "<option value='miaoli'>苗栗縣</option>" +
-                "<option value='taichung'>台中市</option>" +
-                "<option value='changhua'>彰化縣</option>" +
-                "<option value='nantou'>南投縣</option>" +
-                "<option value='yunlin'>雲林縣</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>"
-            );
-        } else if (val == "south") {
-            $("#country").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>請選擇縣市</option>" +
-                "<option value='chiayicity'>嘉義市</option>" +
-                "<option value='chiayicounty'>嘉義縣</option>" +
-                "<option value='tainan'>台南市</option>" +
-                "<option value='kaohsiung'>高雄市</option>" +
-                "<option value='pingtung'>屏東縣</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>"
-            );
-        } else if (val == "east") {
-            $("#country").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>請選擇縣市</option>" +
-                "<option value='yilan'>宜蘭縣</option>" +
-                "<option value='hualien'>花蓮縣</option>" +
-                "<option value='taitung'>台東縣</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>"
-            );
-        } else if (val == "offshore") {
-            $("#country").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>請選擇縣市</option>" +
-                "<option value='penghu'>澎湖縣</option>" +
-                "<option value='lianjiang'>連江縣</option>" +
-                "<option value='kinmen'>金門縣</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>"
-            );
-        } else if (val == "aborigine") {
-            $("#country").attr('disabled', true);
-            $("#electorate").attr('disabled', false);
-            $("#country").html(
-                "<option selected disabled>無法選擇縣市</option>"
-            );
-            $("#electorate").html(
-                "<option selected disabled>請選擇選區</option>" +
-                "<option value='rural'>平地原住民選區</option>" +
-                "<option value='urban'>山地原住民選區</option>"
-            );
-        }
-    })
     $('#country').on('change', function() {
         var sortname = $(this).val();
         $('#electorate').attr('disabled', false);
@@ -108,25 +31,32 @@
                 return (keywords.post_name === filteredCandidate[i]["name_chinese"]);
             });
             if (filteredCandidate[i]["party"] == '國民黨') {
-                html += '<div class="col-md-12 candidate__item candidate--kmt order-1">';
+                html += '<div class="col-md-12 order-1">';
+                html += '<div class="candidate__item candidate--kmt">';
             } else if (filteredCandidate[i]["party"] == '民進黨') {
-                html += '<div class="col-md-12 candidate__item candidate--ddp order-2">';
+                html += '<div class="col-md-12 order-2">';
+                html += '<div class="candidate__item candidate--ddp">';
             } else if (filteredCandidate[i]["party"] == '台灣民眾黨') {
-                html += '<div class="col-md-12 candidate__item candidate--tpp order-5">';
+                html += '<div class="col-md-12 order-5">';
+                html += '<div class="candidate__item candidate--tpp">';
             } else if (filteredCandidate[i]["party"] == '親民黨') {
-                html += '<div class="col-md-12 candidate__item candidate--pfp order-3">';
+                html += '<div class="col-md-12 order-3">';
+                html += '<div class="candidate__item candidate--pfp">';
             } else if (filteredCandidate[i]["party"] == '時代力量') {
-                html += '<div class="col-md-12 candidate__item candidate--npp order-4">';
+                html += '<div class="col-md-12 order-4">';
+                html += '<div class="candidate__item candidate--npp">';
             } else if (filteredCandidate[i]["party"] == '無黨籍') {
-                html += '<div class="col-md-12 candidate__item candidate--npsu order-6">';
+                html += '<div class="col-md-12 order-6">';
+                html += '<div class="candidate__item candidate--npsu">';
             } else {
-                html += '<div class="col-md-12 candidate__item candidate--other order-7">';
+                html += '<div class="col-md-12 order-7">';
+                html += '<div class="candidate__item candidate--other">';
             }
-            html += '<div class="row"><div class="candidate__img order-0"><img src="images/candidate/';
+            html += '<div class="candidate__base"><div class="candidate__img order-0"><img src="images/candidate/';
             html += filteredCandidate[i]["img"];
             html += '" alt="';
             html += filteredCandidate[i]["name_chinese"];
-            html += '"></div><div class="candidate__detail order-2 order-md-1"><div class="d-md-flex flex-wrap align-items-start text-center text-md-left mt-3 mb-3"><div class="candidate__name"><div class="name name--han">';
+            html += '"></div><div class="candidate__name mt-md-3 mt-0"><div class="name name--han">';
             html += filteredCandidate[i]["name_chinese"];
             if (filteredCandidate[i]["age"] !== '') {
                 html += '<span class="age">(' + filteredCandidate[i]["age"] + ')</span>';
@@ -135,26 +65,26 @@
             if (filteredCandidate[i]["name_english"] !== '') {
                 html += '<div class="name name--eng">' + filteredCandidate[i]["name_english"] + '</div>';
             }
-            html += '</div><div class="detail">';
+            html += '</div><div class="candidate__detail">';
+            // if (filteredCandidate[i]["yuan_rate"] == '-' && filteredCandidate[i]["family"] == '否') {
+            //     html += '<div class="candidate__detail mt-3">';
+            // }
             if (filteredCandidate[i]["yuan_rate"] !== '-') {
-                html += '<div class="candidate__perform__group"><div class="candidate__perform" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-party="' + filteredCandidate[i]["party"] + '">問政表現<i class="fas fa-chevron-down"></i></div>';
-                html += '<div class="perform__model"><div class="perform__title">問政表現</div><i class="model__close"></i><ul class="rate__block"></ul></div></div>';
-                // } else if (filteredCandidate[i]["yuan_rate"] == '-') {
-                //     html += '<div class="candidate__perform"><i class="far fa-comments"></i>問政表現</div>';
+                html += '<div class="candidate__perform mt-3" data-toggle="modal" data-target="#performModal" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-party="' + filteredCandidate[i]["party"] + '">問政表現<i class="icon-down"></i></div>';
             }
             if (filteredCandidate[i]["family"] == '是') {
-                html += '<div class="candidate__family__group"><div class="candidate__family" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-party="' + filteredCandidate[i]["party"] + '">政治家族<i class="fas fa-chevron-down"></i></div>';
-                html += '<div class="family__model"><div class="family__title">政治家族</div><i class="model__close"></i><p class="family__block"></p></div></div>';
-                // } else {
-                //     html += '<div class="candidate__family"><i class="far fa-star"></i>政治家族</div>';
+                html += '<div class="candidate__family mt-3" data-toggle="modal" data-target="#familyModal" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-party="' + filteredCandidate[i]["party"] + '">政治家族<i class="icon-down"></i></div>';
             }
+            // if (filteredCandidate[i]["yuan_rate"] == '-' && filteredCandidate[i]["family"] == '否') {
+            //     html += '</div>';
+            // }
             html += '</div></div><ul class="candidate__keyword list-reset">';
             for (var j = 0; j < filteredKeyword.length; j++) {
                 if (filteredCandidate[i]["name_chinese"] == filteredKeyword[j]["post_name"]) {
                     html += '<li data-toggle="modal" data-target="#keywordModal" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-keyword="' + filteredKeyword[j]["post_keyword"] + '">#' + filteredKeyword[j]["post_keyword"] + '</li>';
                 }
             }
-            html += '</ul></div><div class="candidate__party">';
+            html += '</ul><div class="candidate__party">';
             html += filteredCandidate[i]["party"];
             html += '</div></div></div>';
         }
@@ -204,7 +134,7 @@
                 } else {
                     var hundren = filteredKeyword[m]["post_content"];
                 }
-                khtml += '<div><span class="date">' + filteredKeyword[m]["year"] + '/' + filteredKeyword[m]["month"] + '</span>';
+                khtml += '<div><span class="date">' + filteredKeyword[m]["year"] + '.' + filteredKeyword[m]["month"] + '</span>';
                 khtml += '<i class="fa fa-' + filteredKeyword[m]["platform"] + '"></i>';
                 khtml += '<a href="' + filteredKeyword[m]["post_link"] + '" target="_blank">' + hundren + '</a></div>';
             }
@@ -220,22 +150,50 @@
                     array[txt] = true;
                 }
             });
+            if ($(this).children('li').length == 0) {
+                $(this).addClass('disabled');
+                $(this).html('<li>無相關關鍵字貼文</li>');
+            }
         });
         $('.candidate__perform').click(function() {
             $(this).siblings('.perform__model').fadeIn(100);
-            $('.opacity').show();
+            // $('.opacity').show();
         });
         $('.candidate__family').click(function() {
             $(this).siblings('.family__model').fadeIn(100);
-            $('.opacity').show();
+            // $('.opacity').show();
         });
         $('.model__close, .opacity').click(function() {
             $('.family__model, .perform__model').fadeOut(100);
-            $('.opacity').hide();
+            // $('.opacity').hide();
         });
     });
     $('#electorate').trigger('change');
     // var evt = document.createEvent("HTMLEvents");
     // evt.initEvent("change", true, true);
     // document.getElementById('electorate').dispatchEvent(evt);
+    $('.hot__group').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: false,
+        autoplay: false,
+        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-arrow"></i></button>',
+        nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-arrow"></i></button>',
+        responsive: [{
+            breakpoint: 1780,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
 });

@@ -6,80 +6,258 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
     <link rel="stylesheet" href="css/main.css">
     <title>候選人－天下雜誌</title>
 </head>
 
 <body>
-    <header>
+    <div class="container">
+        <div class="page__essay col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
+            <h3>假的小標假的小標假的小標假的小標假的小標</h3>
+            <p>
+                區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+            </p>
+        </div>
+    </div>
+    <section class="discuss__detail">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-6">
-                    <a href="#!" class="logo"><i class="icon-cw"></i><i class="icon-logo-1"></i></a>
-                </div>
-                <div class="col-6">
-                    <div class="d-flex justify-content-end align-items-center sns-block">
-                        <!-- <h6 class="mb-0 font-weight-normal">Last Updated：2019.11.25 </h6> -->
-                        <ul class="d-flex list-reset sns">
-                            <li><a class="px-2" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//web.cw.com.tw/static/2020-presidential-candidates/index.html" target="_blank"><i class="icon-fb"></i></a></li>
-                            <li><a class="px-2" href="https://line.naver.jp/R/msg/text/?https://web.cw.com.tw/static/2020-presidential-candidates/index.html" target="_blank"><i class="icon-line"></i></a></li>
-                            <li><a class="px-2" href="https://twitter.com/share?url=https://web.cw.com.tw/static/2020-presidential-candidates/index.html" target="_blank"><i class="icon-twitter"></i></a></li>
-                        </ul>
-                    </div>
+            <div class="row">
+                <div class="section__title col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
+                    <h2>哪一項關鍵議題最常被討論？</h2>
+                    <p>
+                        區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+                    </p>
                 </div>
             </div>
         </div>
-    </header>
-    <section class="legislator__detail">
+    </section>
+    <section class="hotkeyword__detail">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="row align-items-md-center py-5">
-                        <div class="form-group mb-0 col-8 offset-2 offset-md-0 col-md-12">
-                            <div class="row">
-                                <div class="col-md-4 my-1">
-                                    <select id="sort" class="form-control" name="selectgroup">
-                                        <option disabled>請選擇地區</option>
-                                        <option value="north" selected>北部地區</option>
-                                        <option value="middle">中部地區</option>
-                                        <option value="south">南部地區</option>
-                                        <option value="east">東部地區</option>
-                                        <option value="offshore">離島地區</option>
-                                        <option value="aborigine">原住民</option>
-                                    </select>
+                <div class="section__title col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
+                    <h2>關鍵議題中，哪個關鍵字最夯？</h2>
+                    <p>
+                        區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+                    </p>
+                </div>
+                <div class="col-md-12 tab__group">
+                    <select name="" id="tab_nav" class="d-lg-none d-block m-auto">
+                        <option value="eco_and_industrial_development">經濟與產業發展</option>
+                        <option value="labor_rights" selected>勞權</option>
+                        <option value="surroundings">環境</option>
+                        <option value="energy">能源</option>
+                        <option value="climate_change">氣候變遷</option>
+                        <option value="annuity_reform">年金改革</option>
+                        <option value="gender_issues">性別議題</option>
+                        <option value="education_reform">教育改革</option>
+                        <option value="residence_justice">居住正義</option>
+                        <option value="national_identity">國家認同</option>
+                        <option value="cross_strait_relations">兩岸關係</option>
+                        <option value="tw_usa_relations">台美關係</option>
+                        <option value="diplomatic">外交</option>
+                        <option value="returning">反送中</option>
+                        <option value="social_welfare">社福</option>
+                    </select>
+                    <ul class="tab__nav list-reset text-center d-lg-block d-none">
+                        <li class="eco_and_industrial_development">經濟與產業發展</li>
+                        <li class="labor_rights active">勞權</li>
+                        <li class="surroundings">環境</li>
+                        <li class="energy">能源</li>
+                        <li class="climate_change">氣候變遷</li>
+                        <li class="annuity_reform">年金改革</li>
+                        <li class="gender_issues">性別議題</li>
+                        <li class="education_reform">教育改革</li>
+                        <li class="residence_justice">居住正義</li>
+                        <li class="national_identity">國家認同</li>
+                        <li class="cross_strait_relations">兩岸關係</li>
+                        <li class="tw_usa_relations">台美關係</li>
+                        <li class="diplomatic">外交</li>
+                        <li class="returning">反送中</li>
+                        <li class="social_welfare">社福</li>
+                    </ul>
+                    <div class="tab__item active" data-item="labor_rights">
+                        <div class="row">
+                            <div class="col-xxl-8 offset-xxl-2">
+                                <div class="d-flex align-items-end justify-content-center img__chart">
+                                    <div class="chart--yAxis">
+                                        <div>一例一休</div>
+                                        <div>慣老闆</div>
+                                        <div>基本工資</div>
+                                        <div>外勞</div>
+                                        <div>休息日</div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="chart--xAxis">
+                                            <div class="xAxis xAxis--0">0%</div>
+                                            <div class="xAxis xAxis--50">50%</div>
+                                            <div class="xAxis xAxis--100">100%</div>
+                                        </div>
+                                        <div class="chart--line">
+                                            <span class="divi divi--25"></span>
+                                            <span class="divi divi--50"></span>
+                                            <span class="divi divi--75"></span>
+                                            <div class="line__group">
+                                                <div class="line"><span></span></div>
+                                                <div class="line"><span></span></div>
+                                                <div class="line"><span></span></div>
+                                                <div class="line"><span></span></div>
+                                                <div class="line"><span></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart--number">
+                                        <div>61%</div>
+                                        <div>42%</div>
+                                        <div>30%</div>
+                                        <div>24%</div>
+                                        <div>7%</div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 my-1">
-                                    <select id="country" class="form-control" name="selectgroup">
-                                        <option disabled>請選擇縣市</option>
-                                        <option value="keelung">基隆市</option>
-                                        <option value="taipei" selected>台北市</option>
-                                        <option value="newtaipei">新北市</option>
-                                        <option value="taoyuan">桃園市</option>
-                                        <option value="hsinchucity">新竹市</option>
-                                        <option value="hsinchucounty">新竹縣</option>
-                                    </select>
+                            </div>
+                        </div>
+                        <div class="hot__group">
+                            <div class="hot__item">
+                                <div class="hot__title">一例一休</div>
+                                <div class="hot__content">
+                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
+                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a href="#!" target="_blank">
                                 </div>
-                                <div class="col-md-4 my-1">
-                                    <select id="electorate" class="form-control" name="selectgroup">
-                                        <option disabled>請選擇選區</option>
-                                        <option value="tp1" selected>第1選舉區</option>
-                                        <option value="tp2">第2選舉區</option>
-                                        <option value="tp3">第3選舉區</option>
-                                        <option value="tp4">第4選舉區</option>
-                                        <option value="tp5">第5選舉區</option>
-                                        <option value="tp6">第6選舉區</option>
-                                        <option value="tp7">第7選舉區</option>
-                                        <option value="tp8">第8選舉區</option>
-                                    </select>
+                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
+                            </div>
+                            <div class="hot__item">
+                                <div class="hot__title">慣老闆</div>
+                                <div class="hot__content">
+                                    <span class="date">2019.09</span><b>余天</b><i class="icon-instagram"></i>：
+                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
                                 </div>
+                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
+                            </div>
+                            <div class="hot__item">
+                                <div class="hot__title">基本工資</div>
+                                <div class="hot__content">
+                                    <span class="date">2019.09</span><b>余天</b><i class="icon-youtube"></i>：
+                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
+                                </div>
+                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
+                            </div>
+                            <div class="hot__item">
+                                <div class="hot__title">外勞</div>
+                                <div class="hot__content">
+                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
+                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
+                                </div>
+                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
+                            </div>
+                            <div class="hot__item">
+                                <div class="hot__title">休息日</div>
+                                <div class="hot__content">
+                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
+                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
+                                </div>
+                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12">
+            </div>
+        </div>
+    </section>
+    <section class="legislator__detail">
+        <div class="container">
+            <div class="row">
+                <div class="section__title col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
+                    <h2>立委候選人都喜歡談什麼？</h2>
+                    <p>
+                        區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xxl-6 offset-xxl-3">
+                    <div class="row align-items-md-center py-5 mt-4 mb-3">
+                        <div class="form-group col-md-12">
+                            <div class="d-md-flex flex-wrap align-items-center justify-content-center text-center">
+                                <div class="form-group-title mr-md-4 mr-0 mb-md-0 mb-3">請選擇選區 <i class="icon-arrow"></i></div>
+                                <select id="country" class="form-control mr-md-2 mr-0 mb-md-0 mb-3" name="selectgroup">
+                                    <!-- <option disabled>請選擇縣市</option> -->
+                                    <optgroup label="北部地區">
+                                        <option value='keelung'>基隆市</option>
+                                        <option value='taipei' selected>台北市</option>
+                                        <option value='newtaipei'>新北市</option>
+                                        <option value='taoyuan'>桃園市</option>
+                                        <option value='hsinchucity'>新竹市</option>
+                                        <option value='hsinchucounty'>新竹縣</option>
+                                    </optgroup>
+                                    <optgroup label="中部地區">
+                                        <option value='miaoli'>苗栗縣</option>
+                                        <option value='taichung'>台中市</option>
+                                        <option value='changhua'>彰化縣</option>
+                                        <option value='nantou'>南投縣</option>
+                                        <option value='yunlin'>雲林縣</option>"
+                                    </optgroup>
+                                    <optgroup label="南部地區">
+                                        <option value='chiayicity'>嘉義市</option>
+                                        <option value='chiayicounty'>嘉義縣</option>
+                                        <option value='tainan'>台南市</option>
+                                        <option value='kaohsiung'>高雄市</option>
+                                        <option value='pingtung'>屏東縣</option>"
+                                    </optgroup>
+                                    <optgroup label="東部地區">
+                                        <option value='yilan'>宜蘭縣</option>
+                                        <option value='hualien'>花蓮縣</option>
+                                        <option value='taitung'>台東縣</option>"
+                                    </optgroup>
+                                    <optgroup label="離島地區">
+                                        <option value='penghu'>澎湖縣</option>
+                                        <option value='lianjiang'>連江縣</option>
+                                        <option value='kinmen'>金門縣</option>"
+                                    </optgroup>
+                                    <optgroup label="原住民">
+                                        <option value='rural'>平地原住民選區</option>
+                                        <option value='urban'>山地原住民選區</option>
+                                    </optgroup>
+                                </select>
+                                <select id="electorate" class="form-control" name="selectgroup">
+                                    <option disabled>請選擇選區</option>
+                                    <option value="tp1" selected>第1選舉區</option>
+                                    <option value="tp2">第2選舉區</option>
+                                    <option value="tp3">第3選舉區</option>
+                                    <option value="tp4">第4選舉區</option>
+                                    <option value="tp5">第5選舉區</option>
+                                    <option value="tp6">第6選舉區</option>
+                                    <option value="tp7">第7選舉區</option>
+                                    <option value="tp8">第8選舉區</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xxl-10 offset-xxl-1">
                     <div class="row candidate__group"></div>
+                </div>
+                <div class="method__essay col-md-8 offset-md-2 col-xxl-6 offset-xxl-3">
+                    <h4 class="font-weight-normal mt-0 mb-3">研究方法</h4>
+                    <p class="my-2">
+                        假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字。
+                    </p>
+                    <p class="my-2">
+                        假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字。
+                    </p>
+                    <p>
+                        假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字假的文字，假的文字假的文字假的文字假的文字假的文字假的文字。
+                    </p>
+                </div>
+                <div class="further__block col-md-8 offset-md-2 text-center">
+                    <div class="h4">延伸閱讀</div>
+                    <ul>
+                        <li><a href="#!"><i class="icon-arrow"></i><span>前往總統開票地圖</span></a></li>
+                        <li><a href="#!"><i class="icon-arrow"></i><span>前往立委分析頁</span></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -91,59 +269,57 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="keywordModalCenterTitle"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                        <span aria-hidden="true"><i class="icon-cancel"></i></span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <div class="keyword__block"></div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal fade" id="performModal" tabindex="-1" role="dialog" aria-labelledby="performModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content modal--black">
                 <div class="modal-header">
                     <h5 class="modal-title" id="performModalCenterTitle">問政表現</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                        <span aria-hidden="true"><i class="icon-cancel"></i></span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <ul class="rate__block"></ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="modal fade" id="familyModal" tabindex="-1" role="dialog" aria-labelledby="familyModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
+            <div class="modal-content modal--black">
                 <div class="modal-header">
                     <h5 class="modal-title" id="familyModalCenterTitle">政治家族</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+                        <span aria-hidden="true"><i class="icon-cancel"></i></span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <p class="family__block"></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">關閉</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="opacity"></div>
+    <footer>
+        <div class="container text-center">
+            <span>Copyright © 2019 天下雜誌.</span>
+            <span>All rights reserved. 版權所有，禁止擅自轉貼節錄</span>
+        </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js"></script>
     <script src="js/country.js"></script>
     <script src="js/candidate.js"></script>
     <script src="js/keywords.js"></script>

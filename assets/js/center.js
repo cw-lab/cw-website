@@ -35,14 +35,25 @@ $(function(){
 			$('body').removeClass('message__open');
 			$('.black').removeClass('opened black-theater');
 		}
-		// if ( $(this).hasClass('black-vip') ) {
-		// 	$('.message--vip').fadeOut();
-		// 	$('body').removeClass('message__open');
-		// 	$('.black').removeClass('opened black-vip');
-		// }
 	});
+	function phaseText() {
+		$('.list__group--author .phase').each(function(){
+			var pwidth = $(this).outerWidth(),
+				fontSize = 16,
+				oneLine = Math.floor(pwidth/fontSize);
+			if( $.trim($(this).text()).length > (oneLine*3) ) {
+				$(this).siblings('.btn--text').show();
+			} else {
+				$(this).siblings('.btn--text').hide();
+			}
+		});
+	}
+	phaseText();
+	$(window).resize(function(width) {
+		phaseText();
+	})
 })
-// $(window).load(function() {
+// });// $(window).load(function() {
 // 	$(window).resize(function(width) {
 // 	})
 // });

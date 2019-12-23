@@ -501,7 +501,7 @@
   }
 }
 .center__page .list__group.list__group--newsletters .list__item .list__img {
-  width: 150px;
+  width: 144px;
 }
 @media (max-width: 767px) {
   .center__page .list__group.list__group--newsletters .list__item .list__img {
@@ -517,7 +517,7 @@
 }
 @media (min-width: 768px) {
   .center__page .list__group.list__group--newsletters .list__item .list__txt {
-    width: calc(100% - 250px);
+    width: calc(100% - 244px);
     padding: 20px;
   }
 }
@@ -616,7 +616,7 @@
   padding-bottom: 56.25%;
   overflow: hidden;
 }
-.center__page .theater .embed-responsive iframe {
+.center__page .theater .embed-responsive > iframe, .center__page .theater .embed-responsive > video {
   position: absolute;
   top: 0;
   left: 0;

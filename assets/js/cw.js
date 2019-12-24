@@ -174,9 +174,9 @@ $(window).load(function() {
 		$("nav[class*='menubar--sub'] ul.menubar__user > li > a > i").toggleClass("deg");
 	})
 	// message: Notification 3 秒後關閉
-	setTimeout(function() {
-		$(".message--notification").fadeOut();
-	}, 3000);
+	// setTimeout(function() {
+	// 	$(".message--notification").fadeOut();
+	// }, 3000);
 	// message: 點擊 message__open 開啟
 	$(".message__open").on("click", function() {
 		var messageID = $(this).attr("id");

@@ -12,6 +12,12 @@ body.message__open {
     &__btn {
         font-size: 0;
     }
+    &--center {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+    }
     &--remark {
         width: 100%;
         background-color: $gray-100;
@@ -99,13 +105,14 @@ body.message__open {
     }
     &--notification {
         display: table;
-        max-width: 500px;
-        width: calc(100% - 30px);
+        // max-width: 500px;
+        max-width: calc(100% - 30px);
         padding: 29px 35px;
         color: $white;
         font-size: 1.125rem;
         line-height: 1.25;
         background-color: $gray-500;
+        z-index: 10;
         .message {
             &__container {
                 position: relative;

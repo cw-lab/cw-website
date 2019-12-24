@@ -99,7 +99,7 @@
 						</li>
 						<li>
 							<div class="li__group">
-								<a href="service.html">服務中心</a>
+								<a href="../../service/index.html">服務中心</a>
 							</div>
 						</li>
 					</ul>
@@ -200,24 +200,11 @@
 				</div>
 			</div>
 		</footer>
-		<div class="theater" style="display: none;">
-			<i class="icon icon-cancel theater__close"></i>
-			<div class="container">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe></iframe>
-				</div>
-			</div>
-		</div>
-		<div class="message message--dialogs message--vip" style="display: none;">
-			<div class="message__container">
-				<i class="icon icon-cancel message__close"></i>
-				<div class="message__txt">
-					<h2>訂戶限定</h2>
-					<p>這是訂戶會員限定內容，請升級為訂戶會員就能瀏覽。</p>
-				</div>
-				<div class="message__btn">
-					<a href="https://www.cw.com.tw/webaccess/intro" target="_blank" class="btn btn--contained">立即升級</a>
-				</div>
+		<div class="message message--notification message--center" style="display: none;">
+			<div class="message__txt">
+				<p class="mtb0">
+					您已成功追蹤此作者
+				</p>
 			</div>
 		</div>
 		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
@@ -230,6 +217,11 @@
 					$(this).addClass('btn--contained');
 					$(this).html('追蹤');
 					$(this).removeClass('btn--outlined');
+					$('.message--notification p').text('您已取消追蹤' + $(this).siblings('.list__txt').children('.title__group').children('a').text() );
+					$('.message--notification').fadeIn();
+					setTimeout(function(){
+						$('.message--notification').fadeOut()
+					}, 3000)
 				})
 			})
 		</script>

@@ -3195,6 +3195,15 @@ body.message__open {
 .message__btn {
   font-size: 0;
 }
+.message--center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .message--remark {
   width: 100%;
   background-color: #EEEEEE;
@@ -3275,13 +3284,13 @@ body.message__open {
 }
 .message--notification {
   display: table;
-  max-width: 500px;
-  width: calc(100% - 30px);
+  max-width: calc(100% - 30px);
   padding: 29px 35px;
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.25;
   background-color: #48545D;
+  z-index: 10;
 }
 .message--notification .message__container {
   position: relative;

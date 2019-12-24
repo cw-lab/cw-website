@@ -203,7 +203,7 @@
 					$(this).addClass('btn--outlined');
 					$(this).html('取消追蹤');
 					$(this).removeClass('btn--contained');
-					$('.message--notification p').text('您已成功追蹤' + $(this).siblings('.list__txt').children('.title__group').children('a').text() );
+					$('.message--notification p').text('您已成功追蹤' + $(this).siblings('.list__txt').children('.title__group').children('a').text().split("（")[0] );
 					$('.message--notification').fadeIn();
 					setTimeout(function(){
 						$('.message--notification').fadeOut()

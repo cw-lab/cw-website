@@ -320,9 +320,41 @@
 				</div>
 			</div>
 		</footer>
+		<div class="message message--notification message--center" style="display: none;">
+			<div class="message__txt">
+				<p class="mtb0">
+					您已成功追蹤此作者
+				</p>
+			</div>
+		</div>
 		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 		<script type="text/javascript" src="../../assets/js/cw.js"></script>
 		<script type="text/javascript" src="../../assets/js/center.js"></script>
+		<script>
+			$(function () {
+				$('.list__btn').click(function(){
+					if ( $(this).hasClass('btn--outlined') ) {
+						$(this).addClass('btn--contained');
+						$(this).html('訂閱');
+						$(this).removeClass('btn--outlined');
+						$('.message--notification p').text('您已取消訂閱' + $(this).siblings('.list__txt').children('.title__group').children('a').text().split("（")[0] );
+						$('.message--notification').fadeIn();
+						setTimeout(function(){
+							$('.message--notification').fadeOut()
+						}, 3000)
+					} else {
+						$(this).addClass('btn--outlined');
+						$(this).html('取消訂閱');
+						$(this).removeClass('btn--contained');
+						$('.message--notification p').text('您已訂閱' + $(this).siblings('.list__txt').children('.title__group').children('a').text().split("（")[0] );
+						$('.message--notification').fadeIn();
+						setTimeout(function(){
+							$('.message--notification').fadeOut()
+						}, 3000)
+					}
+				})
+			})
+		</script>
 	</body>
 </html>

@@ -234,7 +234,7 @@
 					color: $white;
 					text-align: center;
 					background-color: rgba($black, 0.4);
-					@include transition(background, 0.3s);
+					@include transition(background 0.3s);
 					i.icon {
 						margin-right: 5px;
 					}
@@ -245,7 +245,7 @@
 					font-size: 18px;
 					font-weight: 500;
 					line-height: 1.33333333;
-					@include transition(color, 0.3s);
+					@include transition(color 0.3s);
 				}
 				.phase {
 					line-height: 1.5;

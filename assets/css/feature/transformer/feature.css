@@ -380,6 +380,11 @@ body {
     padding-bottom: 190px;
   }
 }
+@media (max-width: 767px) {
+  body.footer--downward {
+    padding-bottom: 160px;
+  }
+}
 
 .serif {
   font-family: 'Roboto Slab', 'Noto Serif TC', serif;

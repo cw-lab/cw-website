@@ -185,6 +185,11 @@ body {
 	@include breakpoint(768px) {
 		padding-bottom: 190px;
 	}
+	@include breakpoint(max-width 767px) {
+		&.footer--downward {
+			padding-bottom: 160px;
+		}
+	}
 }
 
 .serif {

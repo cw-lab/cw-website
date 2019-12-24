@@ -14,6 +14,16 @@
 </head>
 
 <body>
+    <nav>
+        <a href="#!" class="logo"><img src="images/2020logo.svg" alt="天下雜誌｜2020台灣總統選舉"></a>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="d-flex h-100 align-items-center justify-content-center">
+                <h1>2020立委關鍵政策</h1>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="page__essay col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
             <h3>假的小標假的小標假的小標假的小標假的小標</h3>
@@ -27,6 +37,17 @@
             <div class="row">
                 <div class="section__title col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
                     <h2>哪一項關鍵議題最常被討論？</h2>
+                    <p>
+                        區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+                    </p>
+                </div>
+                <div class="col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center mt-5 pt-4">
+                    <p>
+                        區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
+                    </p>
+                </div>
+                <div class="section__title col-md-8 offset-md-2 col-xxl-6 offset-xxl-3 text-center">
+                    <h3>假的小標假的小標假的小標假的小標假的小標</h3>
                     <p>
                         區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言，區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區，區塊前言區塊前言區塊前言前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言區塊前言。
                     </p>
@@ -45,122 +66,40 @@
                 </div>
                 <div class="col-md-12 tab__group">
                     <select name="" id="tab_nav" class="d-lg-none d-block m-auto">
-                        <option value="eco_and_industrial_development">經濟與產業發展</option>
-                        <option value="labor_rights" selected>勞權</option>
+                        <option value="eco_and_industrial_development" selected>經濟與產業發展</option>
+                        <!-- <option value="labor_rights">勞權</option>
                         <option value="surroundings">環境</option>
                         <option value="energy">能源</option>
                         <option value="climate_change">氣候變遷</option>
-                        <option value="annuity_reform">年金改革</option>
+                        <option value="annuity_reform">年金改革</option> -->
                         <option value="gender_issues">性別議題</option>
-                        <option value="education_reform">教育改革</option>
+                        <!-- <option value="education_reform">教育改革</option>
                         <option value="residence_justice">居住正義</option>
                         <option value="national_identity">國家認同</option>
-                        <option value="cross_strait_relations">兩岸關係</option>
+                        <option value="cross_strait_relations">兩岸關係</option> -->
                         <option value="tw_usa_relations">台美關係</option>
-                        <option value="diplomatic">外交</option>
+                        <!-- <option value="diplomatic">外交</option>
                         <option value="returning">反送中</option>
-                        <option value="social_welfare">社福</option>
+                        <option value="social_welfare">社福</option> -->
                     </select>
                     <ul class="tab__nav list-reset text-center d-lg-block d-none">
-                        <li class="eco_and_industrial_development">經濟與產業發展</li>
-                        <li class="labor_rights active">勞權</li>
+                        <li data-value="eco_and_industrial_development" class="active">經濟與產業發展</li>
+                        <!-- <li class="labor_rights">勞權</li>
                         <li class="surroundings">環境</li>
                         <li class="energy">能源</li>
                         <li class="climate_change">氣候變遷</li>
-                        <li class="annuity_reform">年金改革</li>
-                        <li class="gender_issues">性別議題</li>
-                        <li class="education_reform">教育改革</li>
+                        <li class="annuity_reform">年金改革</li> -->
+                        <li data-value="gender_issues">性別議題</li>
+                        <!-- <li class="education_reform">教育改革</li>
                         <li class="residence_justice">居住正義</li>
                         <li class="national_identity">國家認同</li>
-                        <li class="cross_strait_relations">兩岸關係</li>
-                        <li class="tw_usa_relations">台美關係</li>
-                        <li class="diplomatic">外交</li>
+                        <li class="cross_strait_relations">兩岸關係</li> -->
+                        <li data-value="tw_usa_relations">台美關係</li>
+                        <!-- <li class="diplomatic">外交</li>
                         <li class="returning">反送中</li>
-                        <li class="social_welfare">社福</li>
+                        <li class="social_welfare">社福</li> -->
                     </ul>
-                    <div class="tab__item active" data-item="labor_rights">
-                        <div class="row">
-                            <div class="col-xxl-8 offset-xxl-2">
-                                <div class="d-flex align-items-end justify-content-center img__chart">
-                                    <div class="chart--yAxis">
-                                        <div>一例一休</div>
-                                        <div>慣老闆</div>
-                                        <div>基本工資</div>
-                                        <div>外勞</div>
-                                        <div>休息日</div>
-                                    </div>
-                                    <div class="chart">
-                                        <div class="chart--xAxis">
-                                            <div class="xAxis xAxis--0">0%</div>
-                                            <div class="xAxis xAxis--50">50%</div>
-                                            <div class="xAxis xAxis--100">100%</div>
-                                        </div>
-                                        <div class="chart--line">
-                                            <span class="divi divi--25"></span>
-                                            <span class="divi divi--50"></span>
-                                            <span class="divi divi--75"></span>
-                                            <div class="line__group">
-                                                <div class="line"><span></span></div>
-                                                <div class="line"><span></span></div>
-                                                <div class="line"><span></span></div>
-                                                <div class="line"><span></span></div>
-                                                <div class="line"><span></span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="chart--number">
-                                        <div>61%</div>
-                                        <div>42%</div>
-                                        <div>30%</div>
-                                        <div>24%</div>
-                                        <div>7%</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hot__group">
-                            <div class="hot__item">
-                                <div class="hot__title">一例一休</div>
-                                <div class="hot__content">
-                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
-                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a href="#!" target="_blank">
-                                </div>
-                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
-                            </div>
-                            <div class="hot__item">
-                                <div class="hot__title">慣老闆</div>
-                                <div class="hot__content">
-                                    <span class="date">2019.09</span><b>余天</b><i class="icon-instagram"></i>：
-                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
-                                </div>
-                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
-                            </div>
-                            <div class="hot__item">
-                                <div class="hot__title">基本工資</div>
-                                <div class="hot__content">
-                                    <span class="date">2019.09</span><b>余天</b><i class="icon-youtube"></i>：
-                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
-                                </div>
-                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
-                            </div>
-                            <div class="hot__item">
-                                <div class="hot__title">外勞</div>
-                                <div class="hot__content">
-                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
-                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
-                                </div>
-                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
-                            </div>
-                            <div class="hot__item">
-                                <div class="hot__title">休息日</div>
-                                <div class="hot__content">
-                                    <span class="date">2019.09</span><b>余天</b><i class="icon-facebook"></i>：
-                                    <a href="#!" target="_blank">民主進步黨「#改革挺台灣 - 2018候選人授旗誓師大會」，今天來到新北市，由我們的主席蔡英文 Tsai Ing-wen 總統，親自為市長參選人蘇貞昌，及這次提名的所有市議員參選人授旗。民主進步黨新北市黨部余天 Yu Tian 主委致詞時表示，看到現場「#爆場」的人潮，雖然外面下著大雨，但還有上千名鄉親在排隊等候進場，這就是我們新北市鄉親的熱情啦。</a>
-                                </div>
-                                <div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-chinese="汪志冰" data-keyword="郭台銘">看全部</div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="tab__item__group"></div>
                 </div>
             </div>
         </div>
@@ -263,8 +202,8 @@
         </div>
     </section>
     <!-- Modal -->
-    <div class="modal fade bd-example-modal-lg" id="keywordModal" tabindex="-1" role="dialog" aria-labelledby="keywordModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal fade bd-example-modal-xl" id="keywordModal" tabindex="-1" role="dialog" aria-labelledby="keywordModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="keywordModalCenterTitle"></h5>
@@ -274,6 +213,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="keyword__block"></div>
+                    <div class="hot__block"></div>
                 </div>
             </div>
         </div>
@@ -323,7 +263,10 @@
     <script src="js/country.js"></script>
     <script src="js/candidate.js"></script>
     <script src="js/keywords.js"></script>
+    <script src="js/bargraph.js"></script>
+    <script src="js/barkeyword.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/tab.js"></script>
 
 </body>
 

@@ -26,25 +26,38 @@ $pfp: #F8B136;
 $npp: #DCB000;
 $npsu: #B1B1B1;
 $other: #343434;
-header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    a {
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+    @include transition(opacity 0.3s);
+    &.scrollUp {
+        position: fixed;
+    }
+    a.logo {
         display: block;
-        color: #373737;
-        line-height: 1;
-        &.logo {
-            i {
-                font-size: 35px;
-                margin-right: 10px;
+        padding: 13px 17px;
+        @include breakpoint(768px) {
+            padding: 30px 40px;
+        }
+        img {
+            height: 25px;
+            @include breakpoint(768px) {
+                height: 44px;
             }
         }
-        &:hover {
-            text-decoration: none;
-        }
     }
-    .sns {
-        font-size: 22px;
+}
+
+header {
+    height: 127.5vh;
+    background-position: bottom center;
+    @include background-size(cover);
+    background-image: url('../images/legislator_opeing.svg');
+    .container {
+        height: 100vh;
     }
 }
 
@@ -72,35 +85,32 @@ section {
     }
 }
 
-.section__title {
-    h2 {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-size: 28px;
-        font-weight: 500;
-        @include breakpoint(768px) {
-            font-size: 40px;
-        }
+h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 28px;
+    font-weight: 500;
+    @include breakpoint(768px) {
+        font-size: 40px;
     }
-    p {
-        font-size: 18px;
+}
+
+h3 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 20px;
+    font-weight: 500;
+    @include breakpoint(768px) {
+        font-size: 24px;
     }
+}
+
+p {
+    font-size: 18px;
 }
 
 .page__essay {
     padding: 130px 0 100px 0;
-    h3 {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        font-size: 20px;
-        font-weight: 500;
-        @include breakpoint(768px) {
-            font-size: 24px;
-        }
-    }
-    p {
-        font-size: 18px;
-    }
 }
 
 .method__essay {
@@ -553,7 +563,7 @@ section {
 .keyword__block {
     span.date {
         display: inline-block;
-        padding: 4px 6px;
+        padding: 0 6px;
         margin-right: 5px;
         color: #fff;
         font-size: 14px;
@@ -640,62 +650,72 @@ section {
             @include transition(background 0.1s);
             &.active,
             &:hover {
-                &.labor_rights {
+                &[data-value*="labor_rights"] {
                     background-color: $labor_rights;
                 }
-                &.annuity_reform {
+                &[data-value*="annuity_reform"] {
                     background-color: $annuity_reform;
                 }
-                &.gender_issues {
+                &[data-value*="gender_issues"] {
                     background-color: $gender_issues;
                 }
-                &.education_reform {
+                &[data-value*="education_reform"] {
                     background-color: $education_reform;
                 }
-                &.energy {
+                &[data-value*="energy"] {
                     background-color: $energy;
                 }
-                &.climate_change {
+                &[data-value*="climate_change"] {
                     background-color: $climate_change;
                 }
-                &.surroundings {
+                &[data-value*="surroundings"] {
                     background-color: $surroundings;
                 }
-                &.eco_and_industrial_development {
+                &[data-value*="eco_and_industrial_development"] {
                     background-color: $eco_and_industrial_development;
                 }
-                &.residence_justice {
+                &[data-value*="residence_justice"] {
                     background-color: $residence_justice;
                 }
-                &.social_welfare {
+                &[data-value*="social_welfare"] {
                     background-color: $social_welfare;
                 }
-                &.returning {
+                &[data-value*="returning"] {
                     background-color: $returning;
                 }
-                &.national_identity {
+                &[data-value*="national_identity"] {
                     background-color: $national_identity;
                 }
-                &.tw_usa_relations {
+                &[data-value*="tw_usa_relations"] {
                     background-color: $tw_usa_relations;
                 }
-                &.diplomatic {
+                &[data-value*="diplomatic"] {
                     background-color: $diplomatic;
                 }
-                &.cross_strait_relations {
+                &[data-value*="cross_strait_relations"] {
                     background-color: $cross_strait_relations;
                 }
             }
         }
     }
     .tab__item {
-        display: none;
+        height: 0;
+        overflow: hidden;
         &.active {
-            display: block;
+            height: auto;
+            overflow: visible;
         }
         .img__chart {
-            padding-top: 60px;
-            padding-bottom: 120px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+            @include breakpoint(768px) {
+                padding-top: 60px;
+                padding-bottom: 120px;
+            }
+            @include breakpoint(max-width 767px) {
+                margin-left: -5px;
+                margin-right: -5px;
+            }
         }
         &[data-item*="eco_and_industrial_development"] {
             .hot__content span,
@@ -790,6 +810,120 @@ section {
     }
 }
 
+.hot__block,
+.hot__group {
+    .hot__content {
+        position: relative;
+        font-size: 14px;
+        line-height: 2;
+        .date {
+            display: inline-block;
+            padding: 0 6px;
+            vertical-align: middle;
+        }
+        b {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        i {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        >a {
+            // display: inline;
+            color: #343434;
+            // cursor: pointer;
+            &:focus {
+                outline: 0;
+            }
+            &:hover {
+                color: #597B77;
+            }
+        }
+    }
+}
+
+.hot__block .hot__item {
+    &.eco_and_industrial_development {
+        .date {
+            background-color: $eco_and_industrial_development;
+        }
+    }
+    &.labor_rights {
+        .date {
+            background-color: $labor_rights;
+        }
+    }
+    &.surroundings {
+        .date {
+            background-color: $surroundings;
+        }
+    }
+    &.energy {
+        .date {
+            background-color: $energy;
+        }
+    }
+    &.climate_change {
+        .date {
+            background-color: $climate_change;
+        }
+    }
+    &.annuity_reform {
+        .date {
+            background-color: $annuity_reform;
+        }
+    }
+    &.gender_issues {
+        .date {
+            background-color: $gender_issues;
+        }
+    }
+    &.education_reform {
+        .date {
+            background-color: $education_reform;
+        }
+    }
+    &.residence_justice {
+        .hot__content span,
+        .img__chart .chart--line .line span {
+            background-color: $residence_justice;
+        }
+    }
+    &.national_identity {
+        .date {
+            background-color: $national_identity;
+        }
+    }
+    &.cross_strait_relations {
+        .date {
+            background-color: $cross_strait_relations;
+        }
+    }
+    &.tw_usa_relations {
+        .date {
+            background-color: $tw_usa_relations;
+        }
+    }
+    &.diplomatic {
+        .date {
+            background-color: $diplomatic;
+        }
+    }
+    &.returning {
+        .date {
+            background-color: $returning;
+        }
+    }
+    &.social_welfare {
+        .date {
+            background-color: $social_welfare;
+        }
+    }
+}
+
 .hot__group {
     .slick-slide {
         padding: 0 27px;
@@ -819,43 +953,14 @@ section {
         cursor: pointer;
         &:hover {
             color: #fff;
-            background-color: #93AAA7;
+            background-color: #597B77;
         }
     }
     .hot__content {
-        position: relative;
-        font-size: 14px;
-        line-height: 2;
         display: -webkit-box;
         -webkit-line-clamp: 7;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        .date {
-            display: inline-block;
-            padding: 0 6px;
-            vertical-align: middle;
-        }
-        b {
-            display: inline-block;
-            margin-left: 10px;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-        i {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        >a {
-            // display: inline;
-            color: #343434;
-            // cursor: pointer;
-            &:focus {
-                outline: 0;
-            }
-            &:hover {
-                color: #597B77;
-            }
-        }
         &::after {
             @extend %before-after;
             position: absolute;
@@ -871,27 +976,41 @@ section {
 .img__chart {
     .chart {
         width: 83%;
-        margin: 0 10px 0 20px;
+        margin: 0 10px;
+        @include breakpoint(768px) {
+            margin: 0 10px 0 20px;
+        }
     }
     .chart--yAxis {
-        font-size: 20px;
+        font-size: 16px;
         line-height: 20px;
+        word-break: keep-all;
+        @include breakpoint(768px) {
+            font-size: 20px;
+        }
         >div {
             margin-top: 15px;
         }
     }
     .chart--number {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 20px;
+        @include breakpoint(768px) {
+            font-size: 16px;
+        }
         >div {
             margin-top: 15px;
         }
     }
     .chart--xAxis {
         position: relative;
-        height: 16px;
+        height: 14px;
         color: #A2A2A2;
-        font-size: 16px;
+        font-size: 14px;
+        @include breakpoint(768px) {
+            font-size: 16px;
+            height: 16px;
+        }
         .xAxis {
             position: absolute;
             @include translateX(-50%);

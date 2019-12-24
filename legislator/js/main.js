@@ -1,11 +1,5 @@
 ﻿$(function() {
-    function unique(list) {
-        var result = [];
-        $.each(list, function(i, e) {
-            if ($.inArray(e, result) == -1) result.push(e);
-        });
-        return result;
-    }
+    var iScrollPos = 0;
     $('#country').on('change', function() {
         var sortname = $(this).val();
         $('#electorate').attr('disabled', false);
@@ -135,7 +129,7 @@
                     var hundren = filteredKeyword[m]["post_content"];
                 }
                 khtml += '<div><span class="date">' + filteredKeyword[m]["year"] + '.' + filteredKeyword[m]["month"] + '</span>';
-                khtml += '<i class="fa fa-' + filteredKeyword[m]["platform"] + '"></i>';
+                khtml += '<i class="icon icon-' + filteredKeyword[m]["platform"] + '"></i>';
                 khtml += '<a href="' + filteredKeyword[m]["post_link"] + '" target="_blank">' + hundren + '</a></div>';
             }
             $('.keyword__block').html(khtml);
@@ -169,31 +163,17 @@
         });
     });
     $('#electorate').trigger('change');
-    // var evt = document.createEvent("HTMLEvents");
-    // evt.initEvent("change", true, true);
-    // document.getElementById('electorate').dispatchEvent(evt);
-    $('.hot__group').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        autoplay: false,
-        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-arrow"></i></button>',
-        nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-arrow"></i></button>',
-        responsive: [{
-            breakpoint: 1780,
-            settings: {
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-    });
+    $(window).scroll(function() {
+        // 往上滾動出現<nav>
+        var iCurScrollPos = $(this).scrollTop();
+        if (iCurScrollPos < iScrollPos) {
+            $("nav").addClass("scrollUp");
+        } else {
+            $("nav").removeClass("scrollUp");
+        }
+        iScrollPos = iCurScrollPos;
+        if ($("nav").offset().top == 0) {
+            $("nav").removeClass("scrollUp");
+        }
+    })
 });

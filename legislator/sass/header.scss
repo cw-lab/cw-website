@@ -23,10 +23,6 @@ body.menu__opened {
         padding-top: 105px;
         padding-bottom: 105px;
     }
-    // @include breakpoint(max-width 374px) {
-    //     padding-top: 105px;
-    //     padding-bottom: 55px;
-    // }
     &.default {
         right: -100%;
         margin-right: -100%;

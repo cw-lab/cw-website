@@ -26,7 +26,7 @@ body.menu__opened {
   transition: all 0.5s;
   z-index: 5;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block {
     padding-top: 105px;
     padding-bottom: 105px;
@@ -43,7 +43,7 @@ body.menu__opened {
 .menu__block .pagination {
   margin-right: 5px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block .pagination {
     margin-right: 40px;
   }
@@ -67,7 +67,7 @@ body.menu__opened {
   font-size: 18px;
   line-height: 1.5;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block .pagination li a > span.zhtw {
     font-size: 24px;
   }
@@ -76,7 +76,7 @@ body.menu__opened {
   color: #a8c2bf;
   line-height: 1;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .menu__block .pagination li a > span.eng {
     font-size: 14px;
   }
@@ -91,7 +91,7 @@ body.menu__opened {
   margin-right: 5px;
   letter-spacing: 0.05em;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block .webaccess {
     margin-right: 40px;
   }
@@ -120,7 +120,7 @@ body.menu__opened {
   font-size: 13px;
   border: 1px solid #fff;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block .webaccess ul li a {
     padding: 1px 20px;
   }
@@ -131,7 +131,7 @@ body.menu__opened {
   font-size: 16px;
   font-weight: 500;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .menu__block .webaccess ul li a span {
     font-size: 18px;
   }
@@ -153,7 +153,7 @@ nav {
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   nav {
     width: 100%;
   }
@@ -161,12 +161,12 @@ nav {
 nav.scrollUp {
   position: fixed;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   nav.firstscreen {
     background-color: #fff;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav.firstscreen a.logo {
     background-color: #fff;
   }
@@ -177,7 +177,7 @@ nav.scrollUp {
 nav.menu__opened svg {
   height: 31px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav.menu__opened svg {
     height: 44px;
   }
@@ -185,12 +185,12 @@ nav.menu__opened svg {
 nav.menu__opened svg .st0 {
   fill: #fff;
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   nav.menu__opened {
     background-color: transparent;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav.menu__opened a.logo {
     background-color: transparent;
   }
@@ -205,7 +205,7 @@ nav a {
   display: block;
   padding: 10px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav a {
     padding: 15px 20px;
   }
@@ -219,7 +219,7 @@ nav a svg {
   display: block;
   height: 31px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav a svg {
     height: 44px;
   }
@@ -242,7 +242,7 @@ nav .hamburger {
   padding: 9px 11px;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav .hamburger {
     padding: 16px 19px 17px;
   }
@@ -258,7 +258,7 @@ nav .hamburger > span {
   -webkit-transition: -webkit-transform 0.3s, background 0.3s;
   transition: transform 0.3s, background 0.3s;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav .hamburger > span {
     width: 36px;
     margin: 8px auto;
@@ -276,7 +276,7 @@ nav .hamburger.active > span:nth-child(1) {
   -webkit-transform: translateY(9px) rotate(45deg);
   transform: translateY(9px) rotate(45deg);
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav .hamburger.active > span:nth-child(1) {
     -moz-transform: translateY(11px) rotate(45deg);
     -ms-transform: translateY(11px) rotate(45deg);
@@ -290,7 +290,7 @@ nav .hamburger.active > span:nth-child(3) {
   -webkit-transform: translateY(-9px) rotate(-45deg);
   transform: translateY(-9px) rotate(-45deg);
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   nav .hamburger.active > span:nth-child(3) {
     -moz-transform: translateY(-11px) rotate(-45deg);
     -ms-transform: translateY(-11px) rotate(-45deg);

@@ -1,5 +1,4 @@
 ﻿$(function() {
-    var iScrollPos = 0;
     $('#country').on('change', function() {
         var sortname = $(this).val();
         $('#electorate').attr('disabled', false);
@@ -15,11 +14,12 @@
     });
     $('#electorate').on('change', function() {
         var html = '',
-            select_value = $(this).val();
-        var filteredCandidate = candidate.filter(function(candidate) {
-            var electorate = select_value;
-            return candidate.constituency === electorate;
-        });
+            select_value = $(this).val(),
+            filteredCandidate = candidate.filter(function(candidate) {
+                var electorate = select_value;
+                return candidate.constituency === electorate;
+            });
+        html = '<div class="click__alert"><img src="images/click.svg" alt="please click"></div>';
         for (var i = 0; i < filteredCandidate.length; i++) {
             var filteredKeyword = keywords.filter(function(keywords) {
                 return (keywords.post_name === filteredCandidate[i]["name_chinese"]);
@@ -133,6 +133,7 @@
                 khtml += '<a href="' + filteredKeyword[m]["post_link"] + '" target="_blank">' + hundren + '</a></div>';
             }
             $('.keyword__block').html(khtml);
+            $('.click__alert').fadeOut();
         })
         $('.candidate__keyword').each(function() {
             var array = {};
@@ -163,17 +164,4 @@
         });
     });
     $('#electorate').trigger('change');
-    $(window).scroll(function() {
-        // 往上滾動出現<nav>
-        var iCurScrollPos = $(this).scrollTop();
-        if (iCurScrollPos < iScrollPos) {
-            $("nav").addClass("scrollUp");
-        } else {
-            $("nav").removeClass("scrollUp");
-        }
-        iScrollPos = iCurScrollPos;
-        if ($("nav").offset().top == 0) {
-            $("nav").removeClass("scrollUp");
-        }
-    })
 });

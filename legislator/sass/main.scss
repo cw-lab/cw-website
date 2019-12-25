@@ -26,35 +26,11 @@ $pfp: #F8B136;
 $npp: #DCB000;
 $npsu: #B1B1B1;
 $other: #343434;
-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    z-index: 10;
-    @include transition(opacity 0.3s);
-    &.scrollUp {
-        position: fixed;
-    }
-    a.logo {
-        display: block;
-        padding: 13px 17px;
-        @include breakpoint(768px) {
-            padding: 30px 40px;
-        }
-        img {
-            height: 25px;
-            @include breakpoint(768px) {
-                height: 44px;
-            }
-        }
-    }
-}
-
 header {
     height: 127.5vh;
     background-position: bottom center;
     @include background-size(cover);
+    background-repeat: no-repeat;
     background-image: url('../images/legislator_opeing.svg');
     .container {
         height: 100vh;
@@ -164,6 +140,26 @@ p {
         i {
             display: none;
         }
+    }
+}
+
+.click__alert {
+    position: absolute;
+    top: 70px;
+    right: 70px;
+    padding: 60px 0 0 60px;
+    z-index: 3;
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend %before-after;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(252, 247, 87);
+        @include border-radius(50%);
+        // @include opacity(0.75);
+        z-index: -1;
     }
 }
 

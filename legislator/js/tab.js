@@ -35,7 +35,7 @@ $(function() {
                 barhtml += filteredBarKeyword[c]['post_link'];
                 barhtml += '" target="_blank">';
                 barhtml += filteredBarKeyword[c]['post_content'];
-                barhtml += '</a></div><div class="hot__more" data-toggle="modal" data-target="#keywordModal" data-keyword="';
+                barhtml += '</a></div><div class="hot__more" data-toggle="modal" data-target="#hotModal" data-keyword="';
                 barhtml += filteredBarKeyword[c]['post_keyword'];
                 barhtml += '">看全部</div></div>';
             }
@@ -111,6 +111,6 @@ $(function() {
             hotHtml += '</a></div></div>';
         }
         $('.hot__block').html(hotHtml);
-        $('#keywordModalCenterTitle').html(moreBtn);
+        $('#hotModalCenterTitle').html(moreBtn);
     })
 })

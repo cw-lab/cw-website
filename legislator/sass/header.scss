@@ -1,0 +1,250 @@
+@import '_basic';
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+}
+
+body.menu__opened {
+    overflow: hidden;
+}
+
+.menu__block {
+    position: fixed;
+    top: 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    height: 100%;
+    background-color: #597b77;
+    @include transition(all 0.5s);
+    z-index: 5;
+    @include breakpoint(768px) {
+        padding-top: 105px;
+        padding-bottom: 105px;
+    }
+    &.default {
+        right: -100%;
+        margin-right: -100%;
+    }
+    &.active {
+        right: 0%;
+        margin-right: 0%;
+    }
+    .pagination {
+        margin-right: 5px;
+        @include breakpoint(768px) {
+            margin-right: 60px;
+        }
+        li {
+            +li {
+                margin-top: 5px;
+            }
+            a {
+                display: block;
+                padding: 10px 0;
+                >span {
+                    display: block;
+                    @include transition(color 0.3s);
+                    &.zhtw {
+                        color: #fff;
+                        font-size: 18px;
+                        line-height: 1.5;
+                        @include breakpoint(768px) {
+                            font-size: 24px;
+                        }
+                    }
+                    &.eng {
+                        color: #a8c2bf;
+                        line-height: 1;
+                        @include breakpoint(max-width 767px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &:hover>span {
+                    color: #f8b136 !important;
+                }
+            }
+        }
+    }
+    .webaccess {
+        position: relative;
+        margin-top: 50px;
+        padding-top: 50px;
+        margin-right: 5px;
+        letter-spacing: 0.05em;
+        @include breakpoint(768px) {
+            margin-right: 60px;
+        }
+        &::before {
+            @extend %before-after;
+            position: absolute;
+            top: -1px;
+            right: 0;
+            width: 35px;
+            height: 2px;
+            background-color: #d8d8d8;
+        }
+        .title {
+            color: #f8b136;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        ul {
+            padding-top: 15px;
+            li {
+                margin-left: 20px;
+                a {
+                    display: block;
+                    padding: 2px 10px;
+                    color: #fff;
+                    font-size: 13px;
+                    border: 1px solid #fff;
+                    @include breakpoint(768px) {
+                        padding: 1px 20px;
+                    }
+                    span {
+                        padding-left: 3px;
+                        padding-right: 3px;
+                        font-size: 16px;
+                        font-weight: 500;
+                        @include breakpoint(768px) {
+                            font-size: 18px;
+                        }
+                    }
+                    &:hover {
+                        color: #000;
+                        background-color: #f8b136;
+                        border-color: #f8b136;
+                    }
+                }
+            }
+        }
+    }
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    @include transition(opacity 0.3s);
+    @include breakpoint(max-width 767px) {
+        width: 100%;
+    }
+    &.scrollUp {
+        position: fixed;
+    }
+    &.firstscreen {
+        @include breakpoint(max-width 767px) {
+            background-color: #fff;
+        }
+        @include breakpoint(768px) {
+            a.logo {
+                background-color: #fff;
+            }
+            .hamburger {
+                background-color: #fff;
+            }
+        }
+    }
+    &.menu__opened {
+        svg {
+            height: 31px;
+            @include breakpoint(768px) {
+                height: 44px;
+            }
+            .st0 {
+                fill: #fff;
+            }
+        }
+        @include breakpoint(max-width 767px) {
+            background-color: transparent;
+        }
+        @include breakpoint(768px) {
+            a.logo {
+                background-color: transparent;
+            }
+            .hamburger {
+                background-color: transparent;
+            }
+        }
+        .hamburger>span {
+            background-color: #fff;
+        }
+    }
+    a {
+        display: block;
+        padding: 10px;
+        // @include transition(none);
+        @include breakpoint(768px) {
+            padding: 30px 40px;
+            &.logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        svg {
+            display: block;
+            height: 31px;
+            @include breakpoint(768px) {
+                height: 44px;
+            }
+            .st0 {
+                fill: #1A1A1A;
+            }
+            .st1 {
+                fill: none;
+                stroke: #E72F00;
+                stroke-width: 15;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+            }
+        }
+    }
+    .hamburger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 9px 11px;
+        cursor: pointer;
+        @include breakpoint(768px) {
+            padding: 32px 34px 31px;
+        }
+        >span {
+            width: 28px;
+            height: 3px;
+            background-color: #000;
+            display: block;
+            margin: 6px auto;
+            @include transition(transform 0.3s, background 0.3s);
+            @include breakpoint(768px) {
+                width: 36px;
+                margin: 8px auto;
+            }
+        }
+        &:hover>span {
+            background-color: #f8b136;
+        }
+        &.active>span {
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(1) {
+                @include transform(translateY(9px) rotate(45deg));
+                @include breakpoint(768px) {
+                    @include transform(translateY(11px) rotate(45deg));
+                }
+            }
+            &:nth-child(3) {
+                @include transform(translateY(-9px) rotate(-45deg));
+                @include breakpoint(768px) {
+                    @include transform(translateY(-11px) rotate(-45deg));
+                }
+            }
+        }
+    }
+}

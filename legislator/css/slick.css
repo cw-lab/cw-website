@@ -23,6 +23,10 @@
   display: inline-block;
   vertical-align: text-top;
 }
+.slick-slide > div {
+  display: flex;
+  width: 100%;
+}
 
 .slick-prev,
 .slick-next {

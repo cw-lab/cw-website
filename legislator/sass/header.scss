@@ -65,8 +65,20 @@ body.menu__opened {
                         }
                     }
                 }
-                &:hover>span {
-                    color: #f8b136 !important;
+                &.disabled>span {
+                    color: #a8c2bf;
+                }
+                &:hover {
+                    &>span.zhtw,
+                    &>span.eng {
+                        color: #f8b136;
+                    }
+                }
+                &.disabled:hover {
+                    &>span.zhtw,
+                    &>span.eng {
+                        color: #a8c2bf;
+                    }
                 }
             }
         }

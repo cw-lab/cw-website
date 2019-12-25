@@ -79,8 +79,14 @@ body.menu__opened {
     font-size: 14px;
   }
 }
-.menu__block .pagination li a:hover > span {
-  color: #f8b136 !important;
+.menu__block .pagination li a.disabled > span {
+  color: #a8c2bf;
+}
+.menu__block .pagination li a:hover > span.zhtw, .menu__block .pagination li a:hover > span.eng {
+  color: #f8b136;
+}
+.menu__block .pagination li a.disabled:hover > span.zhtw, .menu__block .pagination li a.disabled:hover > span.eng {
+  color: #a8c2bf;
 }
 .menu__block .webaccess {
   position: relative;

@@ -509,7 +509,12 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("../images/legislator_opeing.svg");
+  background-image: url("../images/legislator_opeing-pc.svg");
+}
+@media (orientation: portrait) {
+  header {
+    background-image: url("../images/legislator_opeing-mb.svg");
+  }
 }
 header .container {
   height: 100vh;

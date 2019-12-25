@@ -45,7 +45,7 @@ body.menu__opened {
 }
 @media (min-width: 768px) {
   .menu__block .pagination {
-    margin-right: 60px;
+    margin-right: 40px;
   }
 }
 .menu__block .pagination li + li {
@@ -93,7 +93,7 @@ body.menu__opened {
 }
 @media (min-width: 768px) {
   .menu__block .webaccess {
-    margin-right: 60px;
+    margin-right: 40px;
   }
 }
 .menu__block .webaccess::before {
@@ -109,10 +109,8 @@ body.menu__opened {
   font-size: 18px;
   font-weight: 500;
 }
-.menu__block .webaccess ul {
-  padding-top: 15px;
-}
 .menu__block .webaccess ul li {
+  margin-top: 15px;
   margin-left: 20px;
 }
 .menu__block .webaccess ul li a {
@@ -209,7 +207,7 @@ nav a {
 }
 @media (min-width: 768px) {
   nav a {
-    padding: 30px 40px;
+    padding: 15px 20px;
   }
   nav a.logo {
     position: absolute;
@@ -246,7 +244,7 @@ nav .hamburger {
 }
 @media (min-width: 768px) {
   nav .hamburger {
-    padding: 32px 34px 31px;
+    padding: 16px 19px 17px;
   }
 }
 nav .hamburger > span {

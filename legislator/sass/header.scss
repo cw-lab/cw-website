@@ -33,7 +33,7 @@ body.menu__opened {
     .pagination {
         margin-right: 5px;
         @include breakpoint(768px) {
-            margin-right: 60px;
+            margin-right: 40px;
         }
         li {
             +li {
@@ -74,7 +74,7 @@ body.menu__opened {
         margin-right: 5px;
         letter-spacing: 0.05em;
         @include breakpoint(768px) {
-            margin-right: 60px;
+            margin-right: 40px;
         }
         &::before {
             @extend %before-after;
@@ -91,8 +91,8 @@ body.menu__opened {
             font-weight: 500;
         }
         ul {
-            padding-top: 15px;
             li {
+                margin-top: 15px;
                 margin-left: 20px;
                 a {
                     display: block;
@@ -179,7 +179,7 @@ nav {
         padding: 10px;
         // @include transition(none);
         @include breakpoint(768px) {
-            padding: 30px 40px;
+            padding: 15px 20px;
             &.logo {
                 position: absolute;
                 top: 0;
@@ -212,7 +212,7 @@ nav {
         padding: 9px 11px;
         cursor: pointer;
         @include breakpoint(768px) {
-            padding: 32px 34px 31px;
+            padding: 16px 19px 17px;
         }
         >span {
             width: 28px;

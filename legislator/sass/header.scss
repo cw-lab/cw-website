@@ -64,10 +64,12 @@ body.menu__opened {
                 &.disabled>span {
                     color: #a8c2bf;
                 }
-                &:hover {
-                    &>span.zhtw,
-                    &>span.eng {
-                        color: #f8b136;
+                @include breakpoint(1024px) {
+                    &:hover {
+                        &>span.zhtw,
+                        &>span.eng {
+                            color: #f8b136;
+                        }
                     }
                 }
                 &.disabled:hover {
@@ -139,10 +141,12 @@ body.menu__opened {
                             font-size: 18px;
                         }
                     }
-                    &:hover {
-                        color: #000;
-                        background-color: #f8b136;
-                        border-color: #f8b136;
+                    @include breakpoint(1024px) {
+                        &:hover {
+                            color: #000;
+                            background-color: #f8b136;
+                            border-color: #f8b136;
+                        }
                     }
                 }
             }

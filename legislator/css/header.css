@@ -82,8 +82,10 @@ body.menu__opened {
 .menu__block .pagination li a.disabled > span {
   color: #a8c2bf;
 }
-.menu__block .pagination li a:hover > span.zhtw, .menu__block .pagination li a:hover > span.eng {
-  color: #f8b136;
+@media (min-width: 1024px) {
+  .menu__block .pagination li a:hover > span.zhtw, .menu__block .pagination li a:hover > span.eng {
+    color: #f8b136;
+  }
 }
 .menu__block .pagination li a.disabled:hover > span.zhtw, .menu__block .pagination li a.disabled:hover > span.eng {
   color: #a8c2bf;
@@ -163,10 +165,12 @@ body.menu__opened {
     font-size: 18px;
   }
 }
-.menu__block .webaccess ul li a:hover {
-  color: #000;
-  background-color: #f8b136;
-  border-color: #f8b136;
+@media (min-width: 1024px) {
+  .menu__block .webaccess ul li a:hover {
+    color: #000;
+    background-color: #f8b136;
+    border-color: #f8b136;
+  }
 }
 
 nav {

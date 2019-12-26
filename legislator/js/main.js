@@ -167,11 +167,11 @@
     $(window).scroll(function() {
         var halfHeight = $(window).height() / 2,
             infinteScroll = $(this).scrollTop() + halfHeight,
-            keychartTop = $('svg.keychart').offset().top;
+            keychartTop = $('svg.keychart--donut').offset().top;
         if (infinteScroll >= keychartTop) {
-            $("svg.keychart").addClass("active");
+            $("svg.keychart--donut").addClass("active");
         } else {
-            $("svg.keychart").removeClass("active");
+            $("svg.keychart--donut").removeClass("active");
         }
     })
 });

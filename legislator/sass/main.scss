@@ -43,6 +43,9 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 13px;
+    span {
+        display: inline-block;
+    }
 }
 
 section {
@@ -1071,8 +1074,8 @@ p {
 
 svg {
     display: block;
-    margin: auto;
-    &.keychart {
+    &.keychart--donut {
+        margin: auto;
         #val {
             @include opacity(0);
         }
@@ -1092,6 +1095,51 @@ svg {
         #val,
         #line {
             @include transition(all 0.3s);
+        }
+        .cls-1 {
+            fill: $eco_and_industrial_development;
+        }
+        .cls-2 {
+            fill: $residence_justice;
+        }
+        .cls-3 {
+            fill: $social_welfare;
+        }
+        .cls-4 {
+            fill: $returning;
+        }
+        .cls-5 {
+            fill: $national_identity;
+        }
+        .cls-6 {
+            fill: $tw_usa_relations;
+        }
+        .cls-7 {
+            fill: $diplomatic;
+        }
+        .cls-8 {
+            fill: $cross_strait_relations;
+        }
+        .cls-9 {
+            fill: $labor_rights;
+        }
+        .cls-10 {
+            fill: $annuity_reform;
+        }
+        .cls-11 {
+            fill: $education_reform;
+        }
+        .cls-12 {
+            fill: $energy;
+        }
+        .cls-13 {
+            fill: $gender_issues;
+        }
+        .cls-14 {
+            fill: $climate_change;
+        }
+        .cls-15 {
+            fill: $surroundings;
         }
         &.active {
             .cls {
@@ -1149,6 +1197,79 @@ svg {
                 @include animation(keychart 0.1s 0.9s forwards);
             }
         }
+    }
+}
+
+.keychart--bar {
+    font-size: 15px;
+    line-height: 20px;
+    word-break: keep-all;
+    >div>div {
+        margin-bottom: 10px;
+    }
+    .bar--line {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        >div {
+            border: 1px solid #343434;
+            height: 20px;
+            &.labor_rights {
+                background-color: $labor_rights;
+            }
+            &.annuity_reform {
+                background-color: $annuity_reform;
+            }
+            &.gender_issues {
+                background-color: $gender_issues;
+            }
+            &.education_reform {
+                background-color: $education_reform;
+            }
+            &.energy {
+                background-color: $energy;
+            }
+            &.climate_change {
+                background-color: $climate_change;
+            }
+            &.surroundings {
+                background-color: $surroundings;
+            }
+            &.eco_and_industrial_development {
+                background-color: $eco_and_industrial_development;
+            }
+            &.residence_justice {
+                background-color: $residence_justice;
+            }
+            &.social_welfare {
+                background-color: $social_welfare;
+            }
+            &.returning {
+                background-color: $returning;
+            }
+            &.national_identity {
+                background-color: $national_identity;
+            }
+            &.tw_usa_relations {
+                background-color: $tw_usa_relations;
+            }
+            &.diplomatic {
+                background-color: $diplomatic;
+            }
+            &.cross_strait_relations {
+                background-color: $cross_strait_relations;
+            }
+        }
+    }
+    .bar--number {
+        color: #b1b1b1;
+    }
+}
+
+.remark_block {
+    p {
+        color: #343434;
+        font-size: 15px;
     }
 }
 

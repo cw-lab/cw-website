@@ -23,7 +23,7 @@ body.menu__opened {
         padding-top: 105px;
         padding-bottom: 105px;
     }
-    @include breakpoint(max-width 768px) {
+    @include breakpoint(max-width 1023px) {
         overflow: scroll;
     }
     &.default {

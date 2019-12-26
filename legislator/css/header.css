@@ -406,7 +406,7 @@ body.menu__opened {
     padding-bottom: 105px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .menu__block {
     overflow: scroll;
   }

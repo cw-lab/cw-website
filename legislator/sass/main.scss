@@ -1,5 +1,4 @@
 @import '_basic';
-@import '_general';
 @import '_font';
 @import '_select';
 // ----
@@ -1067,5 +1066,97 @@ p {
                 border-right: 1px solid #343434;
             }
         }
+    }
+}
+
+svg {
+    display: block;
+    margin: auto;
+    &.keychart {
+        #val {
+            @include opacity(0);
+        }
+        #line {
+            @include opacity(0);
+            line {
+                fill: none;
+                stroke: #000;
+            }
+        }
+        .cls {
+            stroke: #fff;
+            stroke-miterlimit: 10;
+            @include opacity(0);
+        }
+        .cls,
+        #val,
+        #line {
+            @include transition(all 0.3s);
+        }
+        &.active {
+            .cls {
+                @include animation(keychart 0.1s forwards);
+                &.cls-1 {
+                    @include animation-delay(0s);
+                }
+                &.cls-2 {
+                    @include animation-delay(0.05s);
+                }
+                &.cls-3 {
+                    @include animation-delay(0.1s);
+                }
+                &.cls-4 {
+                    @include animation-delay(0.15s);
+                }
+                &.cls-5 {
+                    @include animation-delay(0.2s);
+                }
+                &.cls-6 {
+                    @include animation-delay(0.25s);
+                }
+                &.cls-7 {
+                    @include animation-delay(0.3s);
+                }
+                &.cls-8 {
+                    @include animation-delay(0.35s);
+                }
+                &.cls-9 {
+                    @include animation-delay(0.4s);
+                }
+                &.cls-10 {
+                    @include animation-delay(0.45s);
+                }
+                &.cls-11 {
+                    @include animation-delay(0.5s);
+                }
+                &.cls-12 {
+                    @include animation-delay(0.55s);
+                }
+                &.cls-13 {
+                    @include animation-delay(0.6s);
+                }
+                &.cls-14 {
+                    @include animation-delay(0.65s);
+                }
+                &.cls-15 {
+                    @include animation-delay(0.7s);
+                }
+            }
+            #val {
+                @include animation(keychart 0.1s 0.9s forwards);
+            }
+            #line {
+                @include animation(keychart 0.1s 0.9s forwards);
+            }
+        }
+    }
+}
+
+@include keyframes(keychart) {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
     }
 }

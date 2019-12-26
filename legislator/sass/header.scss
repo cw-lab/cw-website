@@ -1,4 +1,5 @@
 @import '_basic';
+@import '_general';
 html,
 body {
     min-height: 100%;
@@ -17,11 +18,13 @@ body.menu__opened {
     height: 100%;
     background-color: #597b77;
     @include transition(all 0.5s);
-    overflow: scroll;
     z-index: 5;
     @include breakpoint(1024px) {
         padding-top: 105px;
         padding-bottom: 105px;
+    }
+    @include breakpoint(max-width 768px) {
+        overflow: scroll;
     }
     &.default {
         right: -100%;
@@ -61,8 +64,11 @@ body.menu__opened {
                         }
                     }
                 }
-                &.disabled>span {
-                    color: #a8c2bf;
+                &.disabled {
+                    cursor: not-allowed;
+                    >span {
+                        color: #a8c2bf;
+                    }
                 }
                 @include breakpoint(1024px) {
                     &:hover {

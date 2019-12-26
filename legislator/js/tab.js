@@ -5,7 +5,7 @@ $(function() {
         barhtml += bargraph[a]['issue_eng'];
         barhtml += '" data-item="';
         barhtml += bargraph[a]['issue_eng'];
-        barhtml += '"><div class="row"><div class="col-xxl-8 offset-xxl-2"><div class="d-flex align-items-end justify-content-center img__chart"><div class="chart--yAxis">';
+        barhtml += '"><div class="row"><div class="col-xxl-8 offset-xxl-2"><div class="d-flex align-items-end justify-content-center img__chart"><div class="chart--yAxis text-right">';
         for (var b = 0; b < bargraph[a]['data'].length; b++) {
             barhtml += '<div>' + bargraph[a]['data'][b]['keyword'] + '</div>';
         }

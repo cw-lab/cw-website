@@ -164,4 +164,14 @@
         });
     });
     $('#electorate').trigger('change');
+    $(window).scroll(function() {
+        var halfHeight = $(window).height() / 2,
+            infinteScroll = $(this).scrollTop() + halfHeight,
+            keychartTop = $('svg.keychart').offset().top;
+        if (infinteScroll >= keychartTop) {
+            $("svg.keychart").addClass("active");
+        } else {
+            $("svg.keychart").removeClass("active");
+        }
+    })
 });

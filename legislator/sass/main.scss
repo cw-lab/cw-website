@@ -1380,14 +1380,17 @@ svg {
     >div>div {
         margin-bottom: 10px;
     }
+    &.active .bar--line>.line {
+        border: 1px solid #343434;
+    }
     .bar--line {
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
-        >div {
-            border: 1px solid #343434;
+        >.line {
             width: 0%;
             height: 20px;
+            @include transition(width 0.3s);
             &.labor_rights {
                 background-color: $labor_rights;
             }
@@ -1440,11 +1443,11 @@ svg {
     }
     .bar--xAxis {
         position: relative;
-        width: 100% !important;
+        width: 100%;
         height: 14px;
         color: #A2A2A2;
         font-size: 14px;
-        border: 0 !important;
+        border: 0;
         @include breakpoint(768px) {
             font-size: 16px;
             height: 16px;

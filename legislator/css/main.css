@@ -1537,59 +1537,65 @@ svg.keychart--donut.active #line {
 .keychart--bar > div > div {
   margin-bottom: 10px;
 }
+.keychart--bar.active .bar--line > .line {
+  border: 1px solid #343434;
+}
 .keychart--bar .bar--line {
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
 }
-.keychart--bar .bar--line > div {
-  border: 1px solid #343434;
+.keychart--bar .bar--line > .line {
   width: 0%;
   height: 20px;
+  -moz-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
-.keychart--bar .bar--line > div.labor_rights {
+.keychart--bar .bar--line > .line.labor_rights {
   background-color: #22afe3;
 }
-.keychart--bar .bar--line > div.annuity_reform {
+.keychart--bar .bar--line > .line.annuity_reform {
   background-color: #55c1e9;
 }
-.keychart--bar .bar--line > div.gender_issues {
+.keychart--bar .bar--line > .line.gender_issues {
   background-color: #5ecaa4;
 }
-.keychart--bar .bar--line > div.education_reform {
+.keychart--bar .bar--line > .line.education_reform {
   background-color: #7ed1ef;
 }
-.keychart--bar .bar--line > div.energy {
+.keychart--bar .bar--line > .line.energy {
   background-color: #a1dbf1;
 }
-.keychart--bar .bar--line > div.climate_change {
+.keychart--bar .bar--line > .line.climate_change {
   background-color: #77d9b7;
 }
-.keychart--bar .bar--line > div.surroundings {
+.keychart--bar .bar--line > .line.surroundings {
   background-color: #93ebcc;
 }
-.keychart--bar .bar--line > div.eco_and_industrial_development {
+.keychart--bar .bar--line > .line.eco_and_industrial_development {
   background-color: #93aaa7;
 }
-.keychart--bar .bar--line > div.residence_justice {
+.keychart--bar .bar--line > .line.residence_justice {
   background-color: #2fa9ae;
 }
-.keychart--bar .bar--line > div.social_welfare {
+.keychart--bar .bar--line > .line.social_welfare {
   background-color: #2bbec4;
 }
-.keychart--bar .bar--line > div.returning {
+.keychart--bar .bar--line > .line.returning {
   background-color: #dbc0b2;
 }
-.keychart--bar .bar--line > div.national_identity {
+.keychart--bar .bar--line > .line.national_identity {
   background-color: #e5b896;
 }
-.keychart--bar .bar--line > div.tw_usa_relations {
+.keychart--bar .bar--line > .line.tw_usa_relations {
   background-color: #f9d956;
 }
-.keychart--bar .bar--line > div.diplomatic {
+.keychart--bar .bar--line > .line.diplomatic {
   background-color: #e8c436;
 }
-.keychart--bar .bar--line > div.cross_strait_relations {
+.keychart--bar .bar--line > .line.cross_strait_relations {
   background-color: #dcb000;
 }
 .keychart--bar .bar--number {
@@ -1597,11 +1603,11 @@ svg.keychart--donut.active #line {
 }
 .keychart--bar .bar--xAxis {
   position: relative;
-  width: 100% !important;
+  width: 100%;
   height: 14px;
   color: #A2A2A2;
   font-size: 14px;
-  border: 0 !important;
+  border: 0;
 }
 @media (min-width: 768px) {
   .keychart--bar .bar--xAxis {

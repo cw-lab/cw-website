@@ -573,16 +573,19 @@ nav {
 nav.scrollUp {
   position: fixed;
 }
-nav.menu__opened svg {
+nav.menu__opened img {
   height: 31px;
 }
 @media (min-width: 1024px) {
-  nav.menu__opened svg {
+  nav.menu__opened img {
     height: 44px;
   }
 }
-nav.menu__opened svg .st0 {
-  fill: #fff;
+nav.menu__opened img.white {
+  display: block;
+}
+nav.menu__opened img.black {
+  display: none;
 }
 nav.menu__opened .hamburger > span {
   background-color: #fff;
@@ -601,25 +604,20 @@ nav a {
     left: 0;
   }
 }
-nav a svg {
+nav a img {
   display: block;
   height: 31px;
 }
 @media (min-width: 1024px) {
-  nav a svg {
+  nav a img {
     height: 44px;
   }
 }
-nav a svg .st0 {
-  fill: #1A1A1A;
+nav a img.white {
+  display: none;
 }
-nav a svg .st1 {
-  fill: none;
-  stroke: #E72F00;
-  stroke-width: 15;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
+nav a img.black {
+  display: block;
 }
 nav .hamburger {
   position: absolute;

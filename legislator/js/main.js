@@ -25,8 +25,8 @@
             });
         html = '<div class="click__alert"><img src="images/click.svg" alt="please click"></div>';
         for (var i = 0; i < filteredCandidate.length; i++) {
-            var filteredKeyword = keywords.filter(function(keywords) {
-                return (keywords.post_name === filteredCandidate[i]["name_chinese"]);
+            var filteredKeyword = cklist.filter(function(cklist) {
+                return (cklist.post_name === filteredCandidate[i]["name_chinese"]);
             });
             if (filteredCandidate[i]["party"] == '國民黨') {
                 html += '<div class="col-md-12 order-1">';
@@ -52,7 +52,7 @@
             }
             html += '<div class="candidate__base"><div class="candidate__img order-0"><img src="images/candidate/';
             html += filteredCandidate[i]["img"];
-            html += '" alt="';
+            html += '.jpg" alt="';
             html += filteredCandidate[i]["name_chinese"];
             html += '"></div><div class="candidate__name mt-md-3 mt-0"><div class="name name--han">';
             html += filteredCandidate[i]["name_chinese"];
@@ -78,7 +78,7 @@
             // }
             html += '</div></div><ul class="candidate__keyword list-reset">';
             for (var j = 0; j < filteredKeyword.length; j++) {
-                if (filteredCandidate[i]["name_chinese"] == filteredKeyword[j]["post_name"]) {
+                if (filteredCandidate[i]["name_chinese"] == filteredKeyword[j]["post_name"] && filteredCandidate[i]["constituency"] == filteredKeyword[j]["country"]) {
                     html += '<li data-toggle="modal" data-target="#keywordModal" data-chinese="' + filteredCandidate[i]["name_chinese"] + '" data-keyword="' + filteredKeyword[j]["post_keyword"] + '">#' + filteredKeyword[j]["post_keyword"] + '</li>';
                 }
             }
@@ -140,15 +140,7 @@
             $('.click__alert').fadeOut();
         })
         $('.candidate__keyword').each(function() {
-            var array = {};
-            $(this).children('li').each(function() {
-                var txt = $(this).text();
-                if (array[txt]) {
-                    $(this).remove();
-                } else {
-                    array[txt] = true;
-                }
-            });
+            $(this).children('li:gt(9)').remove();
             if ($(this).children('li').length == 0) {
                 $(this).addClass('disabled');
                 $(this).html('<li>無相關關鍵字貼文</li>');
@@ -179,9 +171,9 @@
             if (iPhone || android) {
                 var keybarTop = $('.keychart--bar').offset().top;
                 if (infinteScroll >= keybarTop) {
-                    $(".keychart--bar").addClass("active");
+                    $(".keychart--bar").addClass("active").trigger('classChange');
                 } else {
-                    $(".keychart--bar").removeClass("active");
+                    $(".keychart--bar").removeClass("active").trigger('classChange');
                 }
             } else {
                 var keychartTop = $('.keychart--donut').offset().top;
@@ -193,4 +185,15 @@
             }
         }
     })
+    $(".keychart--bar").on('classChange', function() {
+        if ($(".keychart--bar").hasClass('active')) {
+            $(".keychart--bar .bar--line .line").each(function() {
+                $(this).css({ width: $(this).data('width') })
+            })
+        } else {
+            $(".keychart--bar .bar--line .line").each(function() {
+                $(this).css({ width: 0 })
+            })
+        }
+    });
 });

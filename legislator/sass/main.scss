@@ -1269,50 +1269,41 @@ svg {
         #line {
             @include transition(all 0.3s);
         }
-        .cls-1 {
-            fill: $eco_and_industrial_development;
-        }
-        .cls-2 {
-            fill: $residence_justice;
-        }
-        .cls-3 {
-            fill: $social_welfare;
-        }
-        .cls-4 {
-            fill: $returning;
-        }
-        .cls-5 {
-            fill: $national_identity;
-        }
-        .cls-6 {
-            fill: $tw_usa_relations;
-        }
-        .cls-7 {
-            fill: $diplomatic;
-        }
-        .cls-8 {
+        .cls-12 {
             fill: $cross_strait_relations;
         }
-        .cls-9 {
-            fill: $labor_rights;
+        .cls-11 {
+            fill: $tw_usa_relations;
         }
         .cls-10 {
-            fill: $annuity_reform;
+            fill: $national_identity;
         }
-        .cls-11 {
-            fill: $education_reform;
+        .cls-9 {
+            fill: $residence_justice;
         }
-        .cls-12 {
-            fill: $energy;
+        .cls-8 {
+            fill: $eco_and_industrial_development;
         }
-        .cls-13 {
-            fill: $gender_issues;
+        .cls-7 {
+            fill: $surroundings;
         }
-        .cls-14 {
+        .cls-6 {
             fill: $climate_change;
         }
-        .cls-15 {
+        .cls-5 {
             fill: $surroundings;
+        }
+        .cls-4 {
+            fill: $education_reform;
+        }
+        .cls-3 {
+            fill: $gender_issues;
+        }
+        .cls-2 {
+            fill: $annuity_reform;
+        }
+        .cls-1 {
+            fill: $labor_rights;
         }
         &.active {
             .cls {
@@ -1352,15 +1343,6 @@ svg {
                 }
                 &.cls-12 {
                     @include animation-delay(0.55s);
-                }
-                &.cls-13 {
-                    @include animation-delay(0.6s);
-                }
-                &.cls-14 {
-                    @include animation-delay(0.65s);
-                }
-                &.cls-15 {
-                    @include animation-delay(0.7s);
                 }
             }
             #val {

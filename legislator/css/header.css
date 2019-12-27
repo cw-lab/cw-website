@@ -573,19 +573,6 @@ nav {
 nav.scrollUp {
   position: fixed;
 }
-@media (max-width: 1023px) {
-  nav.firstscreen {
-    background-color: #fff;
-  }
-}
-@media (min-width: 1024px) {
-  nav.firstscreen a.logo {
-    background-color: #fff;
-  }
-  nav.firstscreen .hamburger {
-    background-color: #fff;
-  }
-}
 nav.menu__opened svg {
   height: 31px;
 }
@@ -596,19 +583,6 @@ nav.menu__opened svg {
 }
 nav.menu__opened svg .st0 {
   fill: #fff;
-}
-@media (max-width: 1023px) {
-  nav.menu__opened {
-    background-color: transparent;
-  }
-}
-@media (min-width: 1024px) {
-  nav.menu__opened a.logo {
-    background-color: transparent;
-  }
-  nav.menu__opened .hamburger {
-    background-color: transparent;
-  }
 }
 nav.menu__opened .hamburger > span {
   background-color: #fff;
@@ -708,6 +682,33 @@ nav .hamburger.active > span:nth-child(3) {
     -ms-transform: translateY(-11px) rotate(-45deg);
     -webkit-transform: translateY(-11px) rotate(-45deg);
     transform: translateY(-11px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 1023px) {
+  .legislator-page nav.firstscreen {
+    background-color: #fff;
+  }
+}
+@media (min-width: 1024px) {
+  .legislator-page nav.firstscreen a.logo {
+    background-color: #fff;
+  }
+  .legislator-page nav.firstscreen .hamburger {
+    background-color: #fff;
+  }
+}
+@media (max-width: 1023px) {
+  .legislator-page nav.menu__opened {
+    background-color: transparent;
+  }
+}
+@media (min-width: 1024px) {
+  .legislator-page nav.menu__opened a.logo {
+    background-color: transparent;
+  }
+  .legislator-page nav.menu__opened .hamburger {
+    background-color: transparent;
   }
 }
 

@@ -173,19 +173,6 @@ nav {
     &.scrollUp {
         position: fixed;
     }
-    &.firstscreen {
-        @include breakpoint(max-width 1023px) {
-            background-color: #fff;
-        }
-        @include breakpoint(1024px) {
-            a.logo {
-                background-color: #fff;
-            }
-            .hamburger {
-                background-color: #fff;
-            }
-        }
-    }
     &.menu__opened {
         svg {
             height: 31px;
@@ -194,17 +181,6 @@ nav {
             }
             .st0 {
                 fill: #fff;
-            }
-        }
-        @include breakpoint(max-width 1023px) {
-            background-color: transparent;
-        }
-        @include breakpoint(1024px) {
-            a.logo {
-                background-color: transparent;
-            }
-            .hamburger {
-                background-color: transparent;
             }
         }
         .hamburger>span {
@@ -281,6 +257,35 @@ nav {
                 @include breakpoint(1024px) {
                     @include transform(translateY(-11px) rotate(-45deg));
                 }
+            }
+        }
+    }
+}
+
+.legislator-page nav {
+    &.firstscreen {
+        @include breakpoint(max-width 1023px) {
+            background-color: #fff;
+        }
+        @include breakpoint(1024px) {
+            a.logo {
+                background-color: #fff;
+            }
+            .hamburger {
+                background-color: #fff;
+            }
+        }
+    }
+    &.menu__opened {
+        @include breakpoint(max-width 1023px) {
+            background-color: transparent;
+        }
+        @include breakpoint(1024px) {
+            a.logo {
+                background-color: transparent;
+            }
+            .hamburger {
+                background-color: transparent;
             }
         }
     }

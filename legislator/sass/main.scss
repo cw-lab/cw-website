@@ -25,17 +25,138 @@ $pfp: #F8B136;
 $npp: #DCB000;
 $npsu: #B1B1B1;
 $other: #343434;
-header {
-    height: 127.5vh;
-    background-position: bottom center;
-    @include background-size(cover);
-    background-repeat: no-repeat;
-    background-image: url('../images/legislator_opeing-pc.svg');
-    @media (orientation: portrait) {
-        background-image: url('../images/legislator_opeing-mb.svg');
+.legislator-page {
+    header {
+        position: relative;
     }
-    .container {
-        height: 100vh;
+    &.index-page {
+        header {
+            height: 415vh;
+            .header-background {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 150vh;
+                background-position: bottom center;
+                @include background-size(cover);
+                background-repeat: no-repeat;
+                z-index: -1;
+                background-image: url('../images/legislator_opeing-pc.svg');
+                @media (orientation: portrait) {
+                    background-image: url('../images/legislator_opeing-mb.svg');
+                }
+            }
+            .subtitle_group {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .container {
+                height: 100vh;
+                @include breakpoint(max-width 374px) {
+                    padding-top: 100px;
+                    padding-bottom: 150px;
+                }
+            }
+            h1 img {
+                height: 90px;
+                @include breakpoint(375px) {
+                    height: 105px;
+                }
+                @include breakpoint(768px) {
+                    height: 202px;
+                }
+            }
+            h2 {
+                margin-bottom: 25px;
+                @include breakpoint(768px) {
+                    margin-bottom: 60px;
+                }
+                @include breakpoint(max-width 767px) {
+                    margin-right: 30px;
+                }
+                img {
+                    height: 40px;
+                    @include breakpoint(768px) {
+                        height: 60px;
+                    }
+                }
+            }
+            .subtitle {
+                padding: 10px 35px;
+                font-size: 18px;
+                font-weight: 600;
+                background-color: #fff;
+                border: 2px solid #343434;
+                @include breakpoint(768px) {
+                    padding: 20px 60px;
+                }
+                +.subtitle {
+                    margin-top: 20px;
+                    @include breakpoint(768px) {
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+        section::before {
+            background-color: #597B77;
+        }
+    }
+    &.analysis-page {
+        header {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            background-image: url('../images/legislative-article-pc.png');
+            @media (orientation: portrait) {
+                height: 100%;
+                padding-top: 75px;
+                padding-bottom: 175px;
+                background-image: url('../images/legislative-article-mb.png');
+            }
+            @include breakpoint(max-width 374px) {
+                padding-top: 100px;
+                padding-bottom: 150px;
+            }
+            h1 img {
+                height: 90px;
+                @include breakpoint(375px) {
+                    height: 109px;
+                }
+                @include breakpoint(768px) {
+                    height: 145px;
+                }
+            }
+            h2 {
+                margin-right: 30px;
+                margin-bottom: 33px;
+                @include breakpoint(375px) {
+                    margin-right: 32px;
+                    margin-bottom: 35px;
+                }
+                @include breakpoint(768px) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+                img {
+                    height: 35px;
+                    @include breakpoint(375px) {
+                        height: 42px;
+                    }
+                }
+            }
+        }
+        section {
+            &::after {
+                background-color: #597B77;
+            }
+            &:last-child::after {
+                background-color: transparent;
+            }
+        }
     }
 }
 
@@ -54,15 +175,20 @@ section {
     @include breakpoint(768px) {
         padding: 40px 0 120px;
     }
-    &::before {
+    &::before,
+    &::after {
         @extend %before-after;
         position: relative;
-        top: -42px;
         left: 50%;
         width: 30px;
         height: 4px;
-        background-color: #597B77;
         @include translateX(-50%);
+    }
+    &::before {
+        top: -42px;
+    }
+    &::after {
+        bottom: -42px;
     }
 }
 
@@ -90,6 +216,20 @@ h3 {
 
 p {
     font-size: 18px;
+    a.btn {
+        display: inline-block;
+        padding: 5px 25px;
+        margin-left: 5px;
+        color: #343434;
+        font-size: 17px;
+        line-height: 1;
+        vertical-align: middle;
+        border: 1px solid #343434;
+        &:hover {
+            color: #fff;
+            background-color: #597B77;
+        }
+    }
 }
 
 .page__essay {
@@ -101,6 +241,26 @@ p {
     padding-bottom: 100px;
     >* {
         font-size: 15px;
+    }
+}
+
+.title_group {
+    .order {
+        font-size: 50px;
+        line-height: 1.5;
+        @include breakpoint(768px) {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 114px;
+            line-height: 1;
+        }
+    }
+    .text {
+        font-size: 26px;
+        line-height: 1.3;
+        @include breakpoint(768px) {
+            font-size: 38px;
+        }
     }
 }
 
@@ -642,17 +802,21 @@ p {
         font-size: 0;
         li {
             display: inline-block;
-            width: 170px;
-            // width: 150px;
-            margin: 13px;
-            font-size: 20px;
-            // font-size: 18px;
+            width: 125px;
+            margin: 6px;
+            font-size: 16px;
             color: #343434;
-            line-height: 50px;
+            line-height: 40px;
             text-align: center;
             border: 2px solid #707070;
             cursor: pointer;
             @include transition(background 0.1s);
+            @include breakpoint(1200px) {
+                width: 170px;
+                margin: 13px;
+                font-size: 20px;
+                line-height: 50px;
+            }
             &.active,
             &:hover {
                 &[data-value*="labor_rights"] {
@@ -974,9 +1138,18 @@ p {
             width: 100%;
             height: 6em;
             @include background-image(linear-gradient(top,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 1) 75%,
-            rgba(255, 255, 255, 1) 100%));
+            rgba(255,
+            255,
+            255,
+            0) 0%,
+            rgba(255,
+            255,
+            255,
+            1) 75%,
+            rgba(255,
+            255,
+            255,
+            1) 100%));
         }
     }
 }
@@ -1213,6 +1386,7 @@ svg {
         padding-right: 10px;
         >div {
             border: 1px solid #343434;
+            width: 0%;
             height: 20px;
             &.labor_rights {
                 background-color: $labor_rights;
@@ -1263,6 +1437,42 @@ svg {
     }
     .bar--number {
         color: #b1b1b1;
+    }
+    .bar--xAxis {
+        position: relative;
+        width: 100% !important;
+        height: 14px;
+        color: #A2A2A2;
+        font-size: 14px;
+        border: 0 !important;
+        @include breakpoint(768px) {
+            font-size: 16px;
+            height: 16px;
+        }
+        .xAxis {
+            position: absolute;
+            padding-bottom: 5px;
+            @include translateX(-50%);
+            &::before {
+                @extend %before-after;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 1px;
+                height: 5px;
+                background-color: #A2A2A2;
+                @include translateX(-50%);
+            }
+            &.xAxis--0 {
+                left: 0;
+            }
+            &.xAxis--20 {
+                left: 100%;
+            }
+        }
+    }
+    &.active {
+        .bar--line {}
     }
 }
 

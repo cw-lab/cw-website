@@ -1,5 +1,5 @@
 var bargraph = [{
-        "issue": "經濟與產業發展",
+        "issue": "經濟產業發展",
         "issue_eng": "eco_and_industrial_development",
         "data": [{
                 "keyword": "GDP",

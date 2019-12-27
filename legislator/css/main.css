@@ -997,13 +997,13 @@ p a.btn:hover {
   background-color: #55c1e9;
 }
 .tab__group .tab__nav li.active[data-value*="gender_issues"], .tab__group .tab__nav li:hover[data-value*="gender_issues"] {
-  background-color: #5ecaa4;
+  background-color: #7ED1EF;
 }
 .tab__group .tab__nav li.active[data-value*="education_reform"], .tab__group .tab__nav li:hover[data-value*="education_reform"] {
   background-color: #7ed1ef;
 }
 .tab__group .tab__nav li.active[data-value*="energy"], .tab__group .tab__nav li:hover[data-value*="energy"] {
-  background-color: #a1dbf1;
+  background-color: #5ECAA4;
 }
 .tab__group .tab__nav li.active[data-value*="climate_change"], .tab__group .tab__nav li:hover[data-value*="climate_change"] {
   background-color: #77d9b7;
@@ -1073,7 +1073,7 @@ p a.btn:hover {
 }
 .tab__group .tab__item[data-item*="energy"] .hot__content span,
 .tab__group .tab__item[data-item*="energy"] .img__chart .chart--line .line span {
-  background-color: #a1dbf1;
+  background-color: #5ECAA4;
 }
 .tab__group .tab__item[data-item*="climate_change"] .hot__content span,
 .tab__group .tab__item[data-item*="climate_change"] .img__chart .chart--line .line span {
@@ -1085,7 +1085,7 @@ p a.btn:hover {
 }
 .tab__group .tab__item[data-item*="gender_issues"] .hot__content span,
 .tab__group .tab__item[data-item*="gender_issues"] .img__chart .chart--line .line span {
-  background-color: #5ecaa4;
+  background-color: #7ED1EF;
 }
 .tab__group .tab__item[data-item*="education_reform"] .hot__content span,
 .tab__group .tab__item[data-item*="education_reform"] .img__chart .chart--line .line span {
@@ -1167,7 +1167,7 @@ p a.btn:hover {
   background-color: #93ebcc;
 }
 .hot__block .hot__item.energy .date {
-  background-color: #a1dbf1;
+  background-color: #5ECAA4;
 }
 .hot__block .hot__item.climate_change .date {
   background-color: #77d9b7;
@@ -1176,7 +1176,7 @@ p a.btn:hover {
   background-color: #55c1e9;
 }
 .hot__block .hot__item.gender_issues .date {
-  background-color: #5ecaa4;
+  background-color: #7ED1EF;
 }
 .hot__block .hot__item.education_reform .date {
   background-color: #7ed1ef;
@@ -1415,13 +1415,13 @@ svg.keychart--donut .cls-6 {
   fill: #77d9b7;
 }
 svg.keychart--donut .cls-5 {
-  fill: #93ebcc;
+  fill: #5ECAA4;
 }
 svg.keychart--donut .cls-4 {
   fill: #7ed1ef;
 }
 svg.keychart--donut .cls-3 {
-  fill: #5ecaa4;
+  fill: #7ED1EF;
 }
 svg.keychart--donut .cls-2 {
   fill: #55c1e9;
@@ -1536,13 +1536,13 @@ svg.keychart--donut.active #line {
   background-color: #55c1e9;
 }
 .keychart--bar .bar--line > .line.gender_issues {
-  background-color: #5ecaa4;
+  background-color: #7ED1EF;
 }
 .keychart--bar .bar--line > .line.education_reform {
   background-color: #7ed1ef;
 }
 .keychart--bar .bar--line > .line.energy {
-  background-color: #a1dbf1;
+  background-color: #5ECAA4;
 }
 .keychart--bar .bar--line > .line.climate_change {
   background-color: #77d9b7;

@@ -8,13 +8,14 @@
         $('#electorate').attr('disabled', false);
         for (var k = 0; k < country.length; k++) {
             if (sortname == country[k]["country_val"]) {
-                var chtml = '<option selected disabled>請選擇選區</option>';
+                var chtml = '';
                 for (var l = 0; l < country[k]["country_sort"].length; l++) {
                     chtml += '<option value="' + country[k]["country_sort"][l]["sort_val"] + '">' + country[k]["country_sort"][l]["sort_name"] + '</option>';
                 }
                 $('#electorate').html(chtml);
             }
         }
+        $('#electorate').val($("#electorate option:first").val()).trigger('change');
     });
     $('#electorate').on('change', function() {
         var html = '',

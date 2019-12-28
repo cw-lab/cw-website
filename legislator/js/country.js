@@ -47,51 +47,51 @@ var country = [{
         "country_val": "newtaipei",
         "country_name": "新北市",
         "country_sort": [{
-                "sort_val": "nt1",
+                "sort_val": "ntc1",
                 "sort_name": "第1選舉區",
             },
             {
-                "sort_val": "nt2",
+                "sort_val": "ntc2",
                 "sort_name": "第2選舉區",
             },
             {
-                "sort_val": "nt3",
+                "sort_val": "ntc3",
                 "sort_name": "第3選舉區",
             },
             {
-                "sort_val": "nt4",
+                "sort_val": "ntc4",
                 "sort_name": "第4選舉區",
             },
             {
-                "sort_val": "nt5",
+                "sort_val": "ntc5",
                 "sort_name": "第5選舉區",
             },
             {
-                "sort_val": "nt6",
+                "sort_val": "ntc6",
                 "sort_name": "第6選舉區",
             },
             {
-                "sort_val": "nt7",
+                "sort_val": "ntc7",
                 "sort_name": "第7選舉區",
             },
             {
-                "sort_val": "nt8",
+                "sort_val": "ntc8",
                 "sort_name": "第8選舉區",
             },
             {
-                "sort_val": "nt9",
+                "sort_val": "ntc9",
                 "sort_name": "第9選舉區",
             },
             {
-                "sort_val": "nt10",
+                "sort_val": "ntc10",
                 "sort_name": "第10選舉區",
             },
             {
-                "sort_val": "nt11",
+                "sort_val": "ntc11",
                 "sort_name": "第11選舉區",
             },
             {
-                "sort_val": "nt12",
+                "sort_val": "ntc12",
                 "sort_name": "第12選舉區",
             }
         ]

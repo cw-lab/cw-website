@@ -749,7 +749,7 @@ p {
                 color: #597B77;
             }
         }
-        [class*='fa'] {
+        .icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -759,29 +759,6 @@ p {
             color: $other;
             font-size: 15px;
             vertical-align: middle;
-            &::before {
-                display: inline-block;
-                font-family: "Font Awesome 5 Brands";
-            }
-        }
-        .fa-fb {
-            &::before {
-                content: "\f39e";
-            }
-        }
-        .fa-yt {
-            // color: #d60c18;
-            &::before {
-                content: "\f167";
-                font-size: 16px;
-            }
-        }
-        .fa-ig {
-            // color: #833AB4;
-            &::before {
-                content: "\f16d";
-                font-size: 16px;
-            }
         }
     }
 }

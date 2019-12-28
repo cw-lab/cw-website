@@ -926,7 +926,7 @@ p a.btn:hover {
 .keyword__block > div a:hover {
   color: #597B77;
 }
-.keyword__block > div [class*='fa'] {
+.keyword__block > div .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -936,21 +936,6 @@ p a.btn:hover {
   color: #343434;
   font-size: 15px;
   vertical-align: middle;
-}
-.keyword__block > div [class*='fa']::before {
-  display: inline-block;
-  font-family: "Font Awesome 5 Brands";
-}
-.keyword__block > div .fa-fb::before {
-  content: "\f39e";
-}
-.keyword__block > div .fa-yt::before {
-  content: "\f167";
-  font-size: 16px;
-}
-.keyword__block > div .fa-ig::before {
-  content: "\f16d";
-  font-size: 16px;
 }
 
 .opacity {

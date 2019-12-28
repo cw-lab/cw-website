@@ -24,7 +24,7 @@
                 var electorate = select_value;
                 return candidate.constituency === electorate;
             });
-        html = '<div class="click__alert"><img src="images/click.svg" alt="please click"></div>';
+        html = '';
         for (var i = 0; i < filteredCandidate.length; i++) {
             var filteredKeyword = cklist.filter(function(cklist) {
                 return (cklist.post_name === filteredCandidate[i]["name_chinese"]);

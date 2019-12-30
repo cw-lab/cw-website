@@ -1419,166 +1419,21 @@ svg {
 svg.keychart--donut {
   margin: auto;
 }
-svg.keychart--donut #val {
+svg.keychart--donut .item-group rect,
+svg.keychart--donut .item-group polygon,
+svg.keychart--donut .item-group .number {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
-svg.keychart--donut #line {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-svg.keychart--donut #line line {
-  fill: none;
-  stroke: #000;
-}
-svg.keychart--donut .cls {
-  stroke: #fff;
-  stroke-miterlimit: 10;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-svg.keychart--donut .cls,
-svg.keychart--donut #val,
-svg.keychart--donut #line {
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-svg.keychart--donut .cls-15 {
-  fill: #22AFE3;
-}
-svg.keychart--donut .cls-14 {
-  fill: #55C1E9;
-}
-svg.keychart--donut .cls-13 {
-  fill: #7ED1EF;
-}
-svg.keychart--donut .cls-12 {
-  fill: #A1DBF1;
-}
-svg.keychart--donut .cls-11 {
-  fill: #5ECAA4;
-}
-svg.keychart--donut .cls-10 {
-  fill: #77D9B7;
-}
-svg.keychart--donut .cls-9 {
-  fill: #93EBCC;
-}
-svg.keychart--donut .cls-8 {
-  fill: #93AAA7;
-}
-svg.keychart--donut .cls-7 {
-  fill: #2FA9AE;
-}
-svg.keychart--donut .cls-6 {
-  fill: #2BBEC4;
-}
-svg.keychart--donut .cls-5 {
-  fill: #DBC0B2;
-}
-svg.keychart--donut .cls-4 {
-  fill: #E5B896;
-}
-svg.keychart--donut .cls-3 {
-  fill: #F9D956;
-}
-svg.keychart--donut .cls-2 {
-  fill: #E8C436;
-}
-svg.keychart--donut .cls-1 {
-  fill: #DCB000;
-}
-svg.keychart--donut.active .cls {
-  -moz-animation: keychart 0.1s forwards;
-  -webkit-animation: keychart 0.1s forwards;
-  animation: keychart 0.1s forwards;
-}
-svg.keychart--donut.active .cls.cls-1 {
-  -moz-animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-svg.keychart--donut.active .cls.cls-2 {
-  -moz-animation-delay: 0.05s;
-  -webkit-animation-delay: 0.05s;
-  animation-delay: 0.05s;
-}
-svg.keychart--donut.active .cls.cls-3 {
-  -moz-animation-delay: 0.1s;
-  -webkit-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-svg.keychart--donut.active .cls.cls-4 {
-  -moz-animation-delay: 0.15s;
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-}
-svg.keychart--donut.active .cls.cls-5 {
-  -moz-animation-delay: 0.2s;
-  -webkit-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-svg.keychart--donut.active .cls.cls-6 {
-  -moz-animation-delay: 0.25s;
-  -webkit-animation-delay: 0.25s;
-  animation-delay: 0.25s;
-}
-svg.keychart--donut.active .cls.cls-7 {
-  -moz-animation-delay: 0.3s;
-  -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-svg.keychart--donut.active .cls.cls-8 {
-  -moz-animation-delay: 0.35s;
-  -webkit-animation-delay: 0.35s;
-  animation-delay: 0.35s;
-}
-svg.keychart--donut.active .cls.cls-9 {
-  -moz-animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-svg.keychart--donut.active .cls.cls-10 {
-  -moz-animation-delay: 0.45s;
-  -webkit-animation-delay: 0.45s;
-  animation-delay: 0.45s;
-}
-svg.keychart--donut.active .cls.cls-11 {
-  -moz-animation-delay: 0.5s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-svg.keychart--donut.active .cls.cls-12 {
-  -moz-animation-delay: 0.55s;
-  -webkit-animation-delay: 0.55s;
-  animation-delay: 0.55s;
-}
-svg.keychart--donut.active .cls.cls-13 {
-  -moz-animation-delay: 0.6s;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-}
-svg.keychart--donut.active .cls.cls-14 {
-  -moz-animation-delay: 0.65s;
-  -webkit-animation-delay: 0.65s;
-  animation-delay: 0.65s;
-}
-svg.keychart--donut.active .cls.cls-15 {
-  -moz-animation-delay: 0.7s;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-svg.keychart--donut.active #val {
-  -moz-animation: keychart 0.1s 0.9s forwards;
-  -webkit-animation: keychart 0.1s 0.9s forwards;
-  animation: keychart 0.1s 0.9s forwards;
-}
-svg.keychart--donut.active #line {
-  -moz-animation: keychart 0.1s 0.9s forwards;
-  -webkit-animation: keychart 0.1s 0.9s forwards;
-  animation: keychart 0.1s 0.9s forwards;
+svg.keychart--donut .item-group:hover rect,
+svg.keychart--donut .item-group:hover polygon,
+svg.keychart--donut .item-group:hover .number {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
 }
 
 .keychart--bar {

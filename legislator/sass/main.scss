@@ -1284,125 +1284,19 @@ svg {
     display: block;
     &.keychart--donut {
         margin: auto;
-        #val {
-            @include opacity(0);
-        }
-        #line {
-            @include opacity(0);
-            line {
-                fill: none;
-                stroke: #000;
+        .item-group {
+            rect,
+            polygon,
+            .number {
+                @include opacity(0);
+                @include transition(opacity 0.3s);
             }
-        }
-        .cls {
-            stroke: #fff;
-            stroke-miterlimit: 10;
-            @include opacity(0);
-        }
-        .cls,
-        #val,
-        #line {
-            @include transition(all 0.3s);
-        }
-        .cls-15 {
-            fill: $labor_rights;
-        }
-        .cls-14 {
-            fill: $annuity_reform;
-        }
-        .cls-13 {
-            fill: $gender_issues;
-        }
-        .cls-12 {
-            fill: $education_reform;
-        }
-        .cls-11 {
-            fill: $energy;
-        }
-        .cls-10 {
-            fill: $climate_change;
-        }
-        .cls-9 {
-            fill: $surroundings;
-        }
-        .cls-8 {
-            fill: $eco_and_industrial_development;
-        }
-        .cls-7 {
-            fill: $residence_justice;
-        }
-        .cls-6 {
-            fill: $social_welfare;
-        }
-        .cls-5 {
-            fill: $returning;
-        }
-        .cls-4 {
-            fill: $national_identity;
-        }
-        .cls-3 {
-            fill: $tw_usa_relations;
-        }
-        .cls-2 {
-            fill: $diplomatic;
-        }
-        .cls-1 {
-            fill: $cross_strait_relations;
-        }
-        &.active {
-            .cls {
-                @include animation(keychart 0.1s forwards);
-                &.cls-1 {
-                    @include animation-delay(0s);
+            &:hover {
+                rect,
+                polygon,
+                .number {
+                    @include opacity(1);
                 }
-                &.cls-2 {
-                    @include animation-delay(0.05s);
-                }
-                &.cls-3 {
-                    @include animation-delay(0.1s);
-                }
-                &.cls-4 {
-                    @include animation-delay(0.15s);
-                }
-                &.cls-5 {
-                    @include animation-delay(0.2s);
-                }
-                &.cls-6 {
-                    @include animation-delay(0.25s);
-                }
-                &.cls-7 {
-                    @include animation-delay(0.3s);
-                }
-                &.cls-8 {
-                    @include animation-delay(0.35s);
-                }
-                &.cls-9 {
-                    @include animation-delay(0.4s);
-                }
-                &.cls-10 {
-                    @include animation-delay(0.45s);
-                }
-                &.cls-11 {
-                    @include animation-delay(0.5s);
-                }
-                &.cls-12 {
-                    @include animation-delay(0.55s);
-                }
-                &.cls-13 {
-                    @include animation-delay(0.6s);
-                }
-                &.cls-14 {
-                    @include animation-delay(0.65s);
-                }
-                &.cls-15 {
-                    @include animation-delay(0.7s);
-                }
-            }
-            #val {
-                @include animation(keychart 0.1s 0.9s forwards);
-            }
-            #line {
-                @include animation(keychart 0.1s 0.9s forwards);
             }
         }
     }

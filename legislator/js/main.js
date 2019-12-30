@@ -194,6 +194,13 @@
                 } else {
                     $(".keychart--bar").removeClass("active").trigger('classChange');
                 }
+            } else {
+                var keychartTop = $('#keychartDonut').offset().top;
+                if (infinteScroll >= keychartTop) {
+                    $(".keychart--donut").addClass("active");
+                } else {
+                    $(".keychart--donut").removeClass("active");
+                }
             }
         }
     })

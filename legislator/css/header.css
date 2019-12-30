@@ -570,7 +570,7 @@ nav {
     width: 100%;
   }
 }
-nav.scrollUp {
+nav.scrollUp, nav.menu__opened {
   position: fixed;
 }
 nav.menu__opened img {

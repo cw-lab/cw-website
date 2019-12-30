@@ -11,13 +11,13 @@
             // 往上滾動出現<nav>
             var iCurScrollPos = $(this).scrollTop();
             if (iCurScrollPos < iScrollPos) {
-                $("nav").addClass("scrollUp");
+                $("body, nav").addClass("scrollUp");
             } else {
-                $("nav").removeClass("scrollUp");
+                $("body, nav").removeClass("scrollUp");
             }
             iScrollPos = iCurScrollPos;
             if ($("nav").offset().top == 0) {
-                $("nav").removeClass("scrollUp");
+                $("body, nav").removeClass("scrollUp");
             }
             if ($("nav").offset().top > height) {
                 $("nav").removeClass("firstscreen");

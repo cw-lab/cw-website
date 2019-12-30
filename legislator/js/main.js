@@ -55,7 +55,11 @@
             html += filteredCandidate[i]["img"];
             html += '" alt="';
             html += filteredCandidate[i]["name_chinese"];
-            html += '"></div><div class="candidate__name mt-md-3 mt-0"><div class="name name--han">';
+            html += '">';
+            if (filteredCandidate[i]["selected"] !== '') {
+                html += '<img class="selected" src="images/selected.svg">';
+            }
+            html += '</div><div class="candidate__name mt-md-3 mt-0"><div class="name name--han">';
             html += filteredCandidate[i]["name_chinese"];
             if (filteredCandidate[i]["age"] !== '') {
                 html += '<span class="age">(' + filteredCandidate[i]["age"] + ')</span>';
@@ -164,31 +168,6 @@
         });
     });
     $('#electorate').trigger('change');
-    $(window).scroll(function() {
-        var width = $(window).width() / 2,
-            height = $(window).height(),
-            halfHeight = height / 2,
-            scroll = $(this).scrollTop(),
-            infinteScroll = scroll + halfHeight;
-        $(".header-background").css({ top: -(scroll * 0.15) });
-        if ($('body').hasClass('index-page')) {
-            if (iPhone || android) {
-                var keybarTop = $('.keychart--bar').offset().top;
-                if (infinteScroll >= keybarTop) {
-                    $(".keychart--bar").addClass("active").trigger('classChange');
-                } else {
-                    $(".keychart--bar").removeClass("active").trigger('classChange');
-                }
-            } else {
-                var keychartTop = $('.keychart--donut').offset().top;
-                if (infinteScroll >= keychartTop) {
-                    $(".keychart--donut").addClass("active");
-                } else {
-                    $(".keychart--donut").removeClass("active");
-                }
-            }
-        }
-    })
     $(".keychart--bar").on('classChange', function() {
         if ($(".keychart--bar").hasClass('active')) {
             $(".keychart--bar .bar--line .line").each(function() {
@@ -200,4 +179,22 @@
             })
         }
     });
+    $(window).scroll(function() {
+        var width = $(window).width(),
+            height = $(window).height(),
+            halfHeight = height / 2,
+            scroll = $(this).scrollTop(),
+            infinteScroll = scroll + halfHeight;
+        $(".header-background").css({ top: -(scroll * 0.15) });
+        if ($('body').hasClass('index-page')) {
+            if (width <= 1024) {
+                var keybarTop = $('.keychart--bar').offset().top;
+                if (infinteScroll >= keybarTop) {
+                    $(".keychart--bar").addClass("active").trigger('classChange');
+                } else {
+                    $(".keychart--bar").removeClass("active").trigger('classChange');
+                }
+            }
+        }
+    })
 });

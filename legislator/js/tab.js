@@ -16,7 +16,7 @@ $(function() {
             }
             barhtml += '</div><div class="chart"><div class="chart--xAxis"><div class="xAxis xAxis--0">0%</div><div class="xAxis xAxis--50">50%</div><div class="xAxis xAxis--100">100%</div></div><div class="chart--line"><span class="divi divi--25"></span><span class="divi divi--50"></span><span class="divi divi--75"></span><div class="line__group">';
             for (var b = 0; b < filteredtabCart[a]['data'].length; b++) {
-                barhtml += '<div class="line"><span style="width: ' + filteredtabCart[a]['data'][b]['percent'] + ';"></span></div>';
+                barhtml += '<div class="line"><span style="width:' + filteredtabCart[a]['data'][b]['percent'] + ';"></span></div>';
             }
             barhtml += '</div></div></div><div class="chart--number">';
             for (var b = 0; b < filteredtabCart[a]['data'].length; b++) {
@@ -52,7 +52,7 @@ $(function() {
             }
             barhtml += '</div></div>';
         }
-        $('.tab__item__group').html(barhtml);
+        $('.tab__item__group').html(barhtml).trigger('widthChange');
         $('.hot__group').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -105,19 +105,17 @@ $(function() {
             $('#hotModalCenterTitle').html(moreBtn);
         })
     });
-    $('.tab__nav li').click(function() {
+    $('#tab_nav').on('change', function() {
+        var tabValue = $(this).val();
+        $('.tab__nav li').removeClass('active');
+        $('.tab__nav li[data-value="' + tabValue + '"').addClass('active').trigger('click');
+    })
+    $('.tab__nav li').on('click', function() {
         var tabValue = $(this).data('value');
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
-        $('#tab_nav').children('option').attr('selected', false);
+        // $('#tab_nav').children('option').attr('selected', false);
         $('#tab_nav').children('option[value="' + tabValue + '"]').attr('selected', true);
     });
     $('.tab__nav li').eq(0).trigger('click');
-    $('#tab_nav').on('change', function() {
-        var tabValue = $(this).val(),
-            ultabIndex = $('.tab__nav li[data-value="' + tabValue + '"').index();
-        $('.tab__nav li').removeClass('active');
-        $('.tab__nav li[data-value="' + tabValue + '"').addClass('active');
-        $('.tab__nav li').eq(ultabIndex).trigger('click');
-    })
 })

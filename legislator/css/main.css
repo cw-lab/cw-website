@@ -140,6 +140,11 @@ button.close:hover {
 .legislator-page.index-page header {
   height: 415vh;
 }
+@media (orientation: landscape) {
+  .legislator-page.index-page header {
+    height: 350vh;
+  }
+}
 .legislator-page.index-page header .header-background {
   position: -webkit-sticky;
   position: sticky;
@@ -169,6 +174,11 @@ button.close:hover {
 }
 .legislator-page.index-page header .container {
   height: 100vh;
+}
+@media (orientation: landscape) {
+  .legislator-page.index-page header .container {
+    height: 80vh;
+  }
 }
 @media (max-width: 374px) {
   .legislator-page.index-page header .container {
@@ -470,6 +480,8 @@ p a.btn:hover {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
   z-index: -1;
 }
 
@@ -491,6 +503,7 @@ p a.btn:hover {
   }
 }
 .candidate__item .candidate__img {
+  position: relative;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -521,6 +534,18 @@ p a.btn:hover {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+.candidate__item .candidate__img img.selected {
+  position: absolute;
+  right: -5px;
+  bottom: 0px;
+  width: 30px;
+  height: auto;
+  border: 0;
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 .candidate__item .candidate__name {
   display: inline-block;
@@ -1009,49 +1034,49 @@ p a.btn:hover {
   }
 }
 .tab__group .tab__nav li.active[data-value*="labor_rights"], .tab__group .tab__nav li:hover[data-value*="labor_rights"] {
-  background-color: #22afe3;
+  background-color: #22AFE3;
 }
 .tab__group .tab__nav li.active[data-value*="annuity_reform"], .tab__group .tab__nav li:hover[data-value*="annuity_reform"] {
-  background-color: #55c1e9;
+  background-color: #55C1E9;
 }
 .tab__group .tab__nav li.active[data-value*="gender_issues"], .tab__group .tab__nav li:hover[data-value*="gender_issues"] {
   background-color: #7ED1EF;
 }
 .tab__group .tab__nav li.active[data-value*="education_reform"], .tab__group .tab__nav li:hover[data-value*="education_reform"] {
-  background-color: #7ed1ef;
+  background-color: #A1DBF1;
 }
 .tab__group .tab__nav li.active[data-value*="energy"], .tab__group .tab__nav li:hover[data-value*="energy"] {
   background-color: #5ECAA4;
 }
 .tab__group .tab__nav li.active[data-value*="climate_change"], .tab__group .tab__nav li:hover[data-value*="climate_change"] {
-  background-color: #77d9b7;
+  background-color: #77D9B7;
 }
 .tab__group .tab__nav li.active[data-value*="surroundings"], .tab__group .tab__nav li:hover[data-value*="surroundings"] {
-  background-color: #93ebcc;
+  background-color: #93EBCC;
 }
 .tab__group .tab__nav li.active[data-value*="eco_and_industrial_development"], .tab__group .tab__nav li:hover[data-value*="eco_and_industrial_development"] {
-  background-color: #93aaa7;
+  background-color: #93AAA7;
 }
 .tab__group .tab__nav li.active[data-value*="residence_justice"], .tab__group .tab__nav li:hover[data-value*="residence_justice"] {
-  background-color: #2fa9ae;
+  background-color: #2FA9AE;
 }
 .tab__group .tab__nav li.active[data-value*="social_welfare"], .tab__group .tab__nav li:hover[data-value*="social_welfare"] {
-  background-color: #2bbec4;
+  background-color: #2BBEC4;
 }
 .tab__group .tab__nav li.active[data-value*="returning"], .tab__group .tab__nav li:hover[data-value*="returning"] {
-  background-color: #dbc0b2;
+  background-color: #DBC0B2;
 }
 .tab__group .tab__nav li.active[data-value*="national_identity"], .tab__group .tab__nav li:hover[data-value*="national_identity"] {
-  background-color: #e5b896;
+  background-color: #E5B896;
 }
 .tab__group .tab__nav li.active[data-value*="tw_usa_relations"], .tab__group .tab__nav li:hover[data-value*="tw_usa_relations"] {
-  background-color: #f9d956;
+  background-color: #F9D956;
 }
 .tab__group .tab__nav li.active[data-value*="diplomatic"], .tab__group .tab__nav li:hover[data-value*="diplomatic"] {
-  background-color: #e8c436;
+  background-color: #E8C436;
 }
 .tab__group .tab__nav li.active[data-value*="cross_strait_relations"], .tab__group .tab__nav li:hover[data-value*="cross_strait_relations"] {
-  background-color: #dcb000;
+  background-color: #DCB000;
 }
 .tab__group .tab__item .img__chart {
   padding-top: 30px;
@@ -1071,15 +1096,15 @@ p a.btn:hover {
 }
 .tab__group .tab__item[data-item*="eco_and_industrial_development"] .hot__content span,
 .tab__group .tab__item[data-item*="eco_and_industrial_development"] .img__chart .chart--line .line span {
-  background-color: #93aaa7;
+  background-color: #93AAA7;
 }
 .tab__group .tab__item[data-item*="labor_rights"] .hot__content span,
 .tab__group .tab__item[data-item*="labor_rights"] .img__chart .chart--line .line span {
-  background-color: #22afe3;
+  background-color: #22AFE3;
 }
 .tab__group .tab__item[data-item*="surroundings"] .hot__content span,
 .tab__group .tab__item[data-item*="surroundings"] .img__chart .chart--line .line span {
-  background-color: #93ebcc;
+  background-color: #93EBCC;
 }
 .tab__group .tab__item[data-item*="energy"] .hot__content span,
 .tab__group .tab__item[data-item*="energy"] .img__chart .chart--line .line span {
@@ -1087,11 +1112,11 @@ p a.btn:hover {
 }
 .tab__group .tab__item[data-item*="climate_change"] .hot__content span,
 .tab__group .tab__item[data-item*="climate_change"] .img__chart .chart--line .line span {
-  background-color: #77d9b7;
+  background-color: #77D9B7;
 }
 .tab__group .tab__item[data-item*="annuity_reform"] .hot__content span,
 .tab__group .tab__item[data-item*="annuity_reform"] .img__chart .chart--line .line span {
-  background-color: #55c1e9;
+  background-color: #55C1E9;
 }
 .tab__group .tab__item[data-item*="gender_issues"] .hot__content span,
 .tab__group .tab__item[data-item*="gender_issues"] .img__chart .chart--line .line span {
@@ -1099,35 +1124,35 @@ p a.btn:hover {
 }
 .tab__group .tab__item[data-item*="education_reform"] .hot__content span,
 .tab__group .tab__item[data-item*="education_reform"] .img__chart .chart--line .line span {
-  background-color: #7ed1ef;
+  background-color: #A1DBF1;
 }
 .tab__group .tab__item[data-item*="residence_justice"] .hot__content span,
 .tab__group .tab__item[data-item*="residence_justice"] .img__chart .chart--line .line span {
-  background-color: #2fa9ae;
+  background-color: #2FA9AE;
 }
 .tab__group .tab__item[data-item*="national_identity"] .hot__content span,
 .tab__group .tab__item[data-item*="national_identity"] .img__chart .chart--line .line span {
-  background-color: #e5b896;
+  background-color: #E5B896;
 }
 .tab__group .tab__item[data-item*="cross_strait_relations"] .hot__content span,
 .tab__group .tab__item[data-item*="cross_strait_relations"] .img__chart .chart--line .line span {
-  background-color: #dcb000;
+  background-color: #DCB000;
 }
 .tab__group .tab__item[data-item*="tw_usa_relations"] .hot__content span,
 .tab__group .tab__item[data-item*="tw_usa_relations"] .img__chart .chart--line .line span {
-  background-color: #f9d956;
+  background-color: #F9D956;
 }
 .tab__group .tab__item[data-item*="diplomatic"] .hot__content span,
 .tab__group .tab__item[data-item*="diplomatic"] .img__chart .chart--line .line span {
-  background-color: #e8c436;
+  background-color: #E8C436;
 }
 .tab__group .tab__item[data-item*="returning"] .hot__content span,
 .tab__group .tab__item[data-item*="returning"] .img__chart .chart--line .line span {
-  background-color: #dbc0b2;
+  background-color: #DBC0B2;
 }
 .tab__group .tab__item[data-item*="social_welfare"] .hot__content span,
 .tab__group .tab__item[data-item*="social_welfare"] .img__chart .chart--line .line span {
-  background-color: #2bbec4;
+  background-color: #2BBEC4;
 }
 
 .hot__block .hot__item,
@@ -1182,50 +1207,50 @@ p a.btn:hover {
 }
 
 .hot__block .hot__item.eco_and_industrial_development .date {
-  background-color: #93aaa7;
+  background-color: #93AAA7;
 }
 .hot__block .hot__item.labor_rights .date {
-  background-color: #22afe3;
+  background-color: #22AFE3;
 }
 .hot__block .hot__item.surroundings .date {
-  background-color: #93ebcc;
+  background-color: #93EBCC;
 }
 .hot__block .hot__item.energy .date {
   background-color: #5ECAA4;
 }
 .hot__block .hot__item.climate_change .date {
-  background-color: #77d9b7;
+  background-color: #77D9B7;
 }
 .hot__block .hot__item.annuity_reform .date {
-  background-color: #55c1e9;
+  background-color: #55C1E9;
 }
 .hot__block .hot__item.gender_issues .date {
   background-color: #7ED1EF;
 }
 .hot__block .hot__item.education_reform .date {
-  background-color: #7ed1ef;
+  background-color: #A1DBF1;
 }
 .hot__block .hot__item.residence_justice .hot__content span,
 .hot__block .hot__item.residence_justice .img__chart .chart--line .line span {
-  background-color: #2fa9ae;
+  background-color: #2FA9AE;
 }
 .hot__block .hot__item.national_identity .date {
-  background-color: #e5b896;
+  background-color: #E5B896;
 }
 .hot__block .hot__item.cross_strait_relations .date {
-  background-color: #dcb000;
+  background-color: #DCB000;
 }
 .hot__block .hot__item.tw_usa_relations .date {
-  background-color: #f9d956;
+  background-color: #F9D956;
 }
 .hot__block .hot__item.diplomatic .date {
-  background-color: #e8c436;
+  background-color: #E8C436;
 }
 .hot__block .hot__item.returning .date {
-  background-color: #dbc0b2;
+  background-color: #DBC0B2;
 }
 .hot__block .hot__item.social_welfare .date {
-  background-color: #2bbec4;
+  background-color: #2BBEC4;
 }
 
 .hot__group .slick-slide {
@@ -1380,9 +1405,12 @@ p a.btn:hover {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
   height: 100%;
   border-right: 1px solid #343434;
+  -moz-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
 }
 
 svg {
@@ -1390,10 +1418,6 @@ svg {
 }
 svg.keychart--donut {
   margin: auto;
-}
-svg.keychart--donut #item {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 svg.keychart--donut #val {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
@@ -1415,7 +1439,6 @@ svg.keychart--donut .cls {
 }
 svg.keychart--donut .cls,
 svg.keychart--donut #val,
-svg.keychart--donut #item,
 svg.keychart--donut #line {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -1423,49 +1446,49 @@ svg.keychart--donut #line {
   transition: all 0.3s;
 }
 svg.keychart--donut .cls-15 {
-  fill: #22afe3;
+  fill: #22AFE3;
 }
 svg.keychart--donut .cls-14 {
-  fill: #55c1e9;
+  fill: #55C1E9;
 }
 svg.keychart--donut .cls-13 {
   fill: #7ED1EF;
 }
 svg.keychart--donut .cls-12 {
-  fill: #7ed1ef;
+  fill: #A1DBF1;
 }
 svg.keychart--donut .cls-11 {
   fill: #5ECAA4;
 }
 svg.keychart--donut .cls-10 {
-  fill: #77d9b7;
+  fill: #77D9B7;
 }
 svg.keychart--donut .cls-9 {
-  fill: #93ebcc;
+  fill: #93EBCC;
 }
 svg.keychart--donut .cls-8 {
-  fill: #93aaa7;
+  fill: #93AAA7;
 }
 svg.keychart--donut .cls-7 {
-  fill: #2fa9ae;
+  fill: #2FA9AE;
 }
 svg.keychart--donut .cls-6 {
-  fill: #2bbec4;
+  fill: #2BBEC4;
 }
 svg.keychart--donut .cls-5 {
-  fill: #dbc0b2;
+  fill: #DBC0B2;
 }
 svg.keychart--donut .cls-4 {
-  fill: #e5b896;
+  fill: #E5B896;
 }
 svg.keychart--donut .cls-3 {
-  fill: #f9d956;
+  fill: #F9D956;
 }
 svg.keychart--donut .cls-2 {
-  fill: #e8c436;
+  fill: #E8C436;
 }
 svg.keychart--donut .cls-1 {
-  fill: #dcb000;
+  fill: #DCB000;
 }
 svg.keychart--donut.active .cls {
   -moz-animation: keychart 0.1s forwards;
@@ -1547,7 +1570,7 @@ svg.keychart--donut.active .cls.cls-15 {
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
 }
-svg.keychart--donut.active #item {
+svg.keychart--donut.active #val {
   -moz-animation: keychart 0.1s 0.9s forwards;
   -webkit-animation: keychart 0.1s 0.9s forwards;
   animation: keychart 0.1s 0.9s forwards;
@@ -1583,49 +1606,49 @@ svg.keychart--donut.active #line {
   transition: width 0.3s;
 }
 .keychart--bar .bar--line > .line.labor_rights {
-  background-color: #22afe3;
+  background-color: #22AFE3;
 }
 .keychart--bar .bar--line > .line.annuity_reform {
-  background-color: #55c1e9;
+  background-color: #55C1E9;
 }
 .keychart--bar .bar--line > .line.gender_issues {
   background-color: #7ED1EF;
 }
 .keychart--bar .bar--line > .line.education_reform {
-  background-color: #7ed1ef;
+  background-color: #A1DBF1;
 }
 .keychart--bar .bar--line > .line.energy {
   background-color: #5ECAA4;
 }
 .keychart--bar .bar--line > .line.climate_change {
-  background-color: #77d9b7;
+  background-color: #77D9B7;
 }
 .keychart--bar .bar--line > .line.surroundings {
-  background-color: #93ebcc;
+  background-color: #93EBCC;
 }
 .keychart--bar .bar--line > .line.eco_and_industrial_development {
-  background-color: #93aaa7;
+  background-color: #93AAA7;
 }
 .keychart--bar .bar--line > .line.residence_justice {
-  background-color: #2fa9ae;
+  background-color: #2FA9AE;
 }
 .keychart--bar .bar--line > .line.social_welfare {
-  background-color: #2bbec4;
+  background-color: #2BBEC4;
 }
 .keychart--bar .bar--line > .line.returning {
-  background-color: #dbc0b2;
+  background-color: #DBC0B2;
 }
 .keychart--bar .bar--line > .line.national_identity {
-  background-color: #e5b896;
+  background-color: #E5B896;
 }
 .keychart--bar .bar--line > .line.tw_usa_relations {
-  background-color: #f9d956;
+  background-color: #F9D956;
 }
 .keychart--bar .bar--line > .line.diplomatic {
-  background-color: #e8c436;
+  background-color: #E8C436;
 }
 .keychart--bar .bar--line > .line.cross_strait_relations {
-  background-color: #dcb000;
+  background-color: #DCB000;
 }
 .keychart--bar .bar--number {
   color: #b1b1b1;

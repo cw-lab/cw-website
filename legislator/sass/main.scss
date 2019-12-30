@@ -2,21 +2,21 @@
 @import '_font';
 @import '_select';
 // ----
-$labor_rights:#22afe3;
-$annuity_reform:#55c1e9;
+$labor_rights:#22AFE3;
+$annuity_reform:#55C1E9;
 $gender_issues:#7ED1EF;
-$education_reform:#7ed1ef;
+$education_reform:#A1DBF1;
 $energy:#5ECAA4;
-$climate_change:#77d9b7;
-$surroundings:#93ebcc;
-$eco_and_industrial_development:#93aaa7;
-$residence_justice:#2fa9ae;
-$social_welfare:#2bbec4;
-$returning:#dbc0b2;
-$national_identity:#e5b896;
-$tw_usa_relations:#f9d956;
-$diplomatic:#e8c436;
-$cross_strait_relations:#dcb000;
+$climate_change:#77D9B7;
+$surroundings:#93EBCC;
+$eco_and_industrial_development:#93AAA7;
+$residence_justice:#2FA9AE;
+$social_welfare:#2BBEC4;
+$returning:#DBC0B2;
+$national_identity:#E5B896;
+$tw_usa_relations:#F9D956;
+$diplomatic:#E8C436;
+$cross_strait_relations:#DCB000;
 // ----
 $ddp: #5ECAA4;
 $kmt: #22AFE3;
@@ -32,6 +32,9 @@ $other: #343434;
     &.index-page {
         header {
             height: 415vh;
+            @media (orientation: landscape) {
+                height: 350vh;
+            }
             .header-background {
                 position: -webkit-sticky;
                 position: sticky;
@@ -56,6 +59,9 @@ $other: #343434;
             }
             .container {
                 height: 100vh;
+                @media (orientation: landscape) {
+                    height: 80vh;
+                }
                 @include breakpoint(max-width 374px) {
                     padding-top: 100px;
                     padding-bottom: 150px;
@@ -328,7 +334,7 @@ p {
         height: 100px;
         background-color: rgb(252, 247, 87);
         @include border-radius(50%);
-        // @include opacity(0.75);
+        @include opacity(0.75);
         z-index: -1;
     }
 }
@@ -352,6 +358,7 @@ p {
         }
     }
     .candidate__img {
+        position: relative;
         @include border-radius(50%);
         @include breakpoint(max-width 767px) {
             display: inline-block;
@@ -373,6 +380,15 @@ p {
             height: 100%;
             border: 1px solid;
             @include border-radius(50%);
+            &.selected {
+                position: absolute;
+                right: -5px;
+                bottom: 0px;
+                width: 30px;
+                height: auto;
+                border: 0;
+                @include rotate(-30deg);
+            }
         }
     }
     .candidate__name {
@@ -1255,9 +1271,10 @@ p {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 50%;
+                // width: 50%;
                 height: 100%;
                 border-right: 1px solid #343434;
+                @include transition(width 0.3s);
             }
         }
     }
@@ -1267,9 +1284,6 @@ svg {
     display: block;
     &.keychart--donut {
         margin: auto;
-        #item {
-            @include opacity(0);
-        }
         #val {
             @include opacity(0);
         }
@@ -1287,7 +1301,6 @@ svg {
         }
         .cls,
         #val,
-        #item,
         #line {
             @include transition(all 0.3s);
         }
@@ -1385,7 +1398,7 @@ svg {
                     @include animation-delay(0.7s);
                 }
             }
-            #item {
+            #val {
                 @include animation(keychart 0.1s 0.9s forwards);
             }
             #line {

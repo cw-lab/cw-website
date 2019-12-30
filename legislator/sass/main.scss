@@ -201,6 +201,9 @@ h2 {
     @include breakpoint(768px) {
         font-size: 40px;
     }
+    span {
+        display: inline-block;
+    }
 }
 
 h3 {
@@ -698,6 +701,10 @@ p {
     margin: 0;
     padding: 0;
     list-style: none;
+    .remark {
+        color: #93AAA7;
+        font-size: 15px;
+    }
     li {
         border-bottom: 1px solid #777777;
         >* {
@@ -749,7 +756,7 @@ p {
                 color: #597B77;
             }
         }
-        .icon {
+        [class*='fa'] {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -759,6 +766,29 @@ p {
             color: $other;
             font-size: 15px;
             vertical-align: middle;
+            &::before {
+                display: inline-block;
+                font-family: "Font Awesome 5 Brands";
+            }
+        }
+        .fa-fb {
+            &::before {
+                content: "\f39e";
+            }
+        }
+        .fa-yt {
+            // color: #d60c18;
+            &::before {
+                content: "\f167";
+                font-size: 16px;
+            }
+        }
+        .fa-ig {
+            // color: #833AB4;
+            &::before {
+                content: "\f16d";
+                font-size: 16px;
+            }
         }
     }
 }
@@ -845,12 +875,12 @@ p {
         }
     }
     .tab__item {
-        height: 0;
-        overflow: hidden;
-        &.active {
-            height: auto;
-            overflow: visible;
-        }
+        // height: 0;
+        // overflow: hidden;
+        // &.active {
+        //     height: auto;
+        //     overflow: visible;
+        // }
         .img__chart {
             padding-top: 30px;
             padding-bottom: 60px;
@@ -958,8 +988,15 @@ p {
 
 .hot__block,
 .hot__group {
+    .hot__item {
+        display: inline;
+        +.hot__item .date {
+            margin-left: 5px
+        }
+    }
     .hot__content {
         position: relative;
+        display: inline;
         font-size: 14px;
         line-height: 2;
         .date {
@@ -980,12 +1017,16 @@ p {
         >a {
             // display: inline;
             color: #343434;
+            word-break: break-all;
             // cursor: pointer;
             &:focus {
                 outline: 0;
             }
             &:hover {
                 color: #597B77;
+            }
+            +.date {
+                margin-left: 5px;
             }
         }
     }
@@ -1226,6 +1267,9 @@ svg {
     display: block;
     &.keychart--donut {
         margin: auto;
+        #item {
+            @include opacity(0);
+        }
         #val {
             @include opacity(0);
         }
@@ -1243,44 +1287,54 @@ svg {
         }
         .cls,
         #val,
+        #item,
         #line {
             @include transition(all 0.3s);
         }
+        .cls-15 {
+            fill: $labor_rights;
+        }
+        .cls-14 {
+            fill: $annuity_reform;
+        }
+        .cls-13 {
+            fill: $gender_issues;
+        }
         .cls-12 {
-            fill: $cross_strait_relations;
+            fill: $education_reform;
         }
         .cls-11 {
-            fill: $tw_usa_relations;
+            fill: $energy;
         }
         .cls-10 {
-            fill: $national_identity;
+            fill: $climate_change;
         }
         .cls-9 {
-            fill: $residence_justice;
+            fill: $surroundings;
         }
         .cls-8 {
             fill: $eco_and_industrial_development;
         }
         .cls-7 {
-            fill: $surroundings;
+            fill: $residence_justice;
         }
         .cls-6 {
-            fill: $climate_change;
+            fill: $social_welfare;
         }
         .cls-5 {
-            fill: $energy;
+            fill: $returning;
         }
         .cls-4 {
-            fill: $education_reform;
+            fill: $national_identity;
         }
         .cls-3 {
-            fill: $gender_issues;
+            fill: $tw_usa_relations;
         }
         .cls-2 {
-            fill: $annuity_reform;
+            fill: $diplomatic;
         }
         .cls-1 {
-            fill: $labor_rights;
+            fill: $cross_strait_relations;
         }
         &.active {
             .cls {
@@ -1321,8 +1375,17 @@ svg {
                 &.cls-12 {
                     @include animation-delay(0.55s);
                 }
+                &.cls-13 {
+                    @include animation-delay(0.6s);
+                }
+                &.cls-14 {
+                    @include animation-delay(0.65s);
+                }
+                &.cls-15 {
+                    @include animation-delay(0.7s);
+                }
             }
-            #val {
+            #item {
                 @include animation(keychart 0.1s 0.9s forwards);
             }
             #line {

@@ -24,7 +24,7 @@
                 var electorate = select_value;
                 return candidate.constituency === electorate;
             });
-        html = '';
+        html = '<div class="click__alert"><img src="images/click.svg" alt="please click"></div>';
         for (var i = 0; i < filteredCandidate.length; i++) {
             var filteredKeyword = cklist.filter(function(cklist) {
                 return (cklist.post_name === filteredCandidate[i]["name_chinese"]);
@@ -53,7 +53,7 @@
             }
             html += '<div class="candidate__base"><div class="candidate__img order-0"><img src="images/candidate/';
             html += filteredCandidate[i]["img"];
-            html += '.jpg" alt="';
+            html += '" alt="';
             html += filteredCandidate[i]["name_chinese"];
             html += '"></div><div class="candidate__name mt-md-3 mt-0"><div class="name name--han">';
             html += filteredCandidate[i]["name_chinese"];
@@ -105,6 +105,9 @@
                     rate += '</div></li><li><div class="title">公督盟優秀立委得獎次數</div><div class="rate">';
                     rate += filteredCandidate[i]["ccw_awards"];
                     rate += '</div></li>';
+                    if (filteredCandidate[i]["remark"] !== '') {
+                        rate += '<p class="remark">' + filteredCandidate[i]["remark"] + '</p>';
+                    }
                     $('.rate__block').html(rate);
                 }
             }

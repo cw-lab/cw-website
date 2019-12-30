@@ -41,7 +41,8 @@ section::before, section::after, .click__alert::before, .candidate__item .candid
   content: "\e901";
 }
 
-.icon-youtube:before {
+.icon-youtube:before,
+.icon-yt:before {
   content: "\e902";
 }
 
@@ -341,6 +342,9 @@ h2 {
   h2 {
     font-size: 40px;
   }
+}
+h2 span {
+  display: inline-block;
 }
 
 h3 {
@@ -874,6 +878,10 @@ p a.btn:hover {
   padding: 0;
   list-style: none;
 }
+.rate__block .remark {
+  color: #93AAA7;
+  font-size: 15px;
+}
 .rate__block li {
   border-bottom: 1px solid #777777;
 }
@@ -926,7 +934,7 @@ p a.btn:hover {
 .keyword__block > div a:hover {
   color: #597B77;
 }
-.keyword__block > div .icon {
+.keyword__block > div [class*='fa'] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -936,6 +944,21 @@ p a.btn:hover {
   color: #343434;
   font-size: 15px;
   vertical-align: middle;
+}
+.keyword__block > div [class*='fa']::before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Brands";
+}
+.keyword__block > div .fa-fb::before {
+  content: "\f39e";
+}
+.keyword__block > div .fa-yt::before {
+  content: "\f167";
+  font-size: 16px;
+}
+.keyword__block > div .fa-ig::before {
+  content: "\f16d";
+  font-size: 16px;
 }
 
 .opacity {
@@ -1020,14 +1043,6 @@ p a.btn:hover {
 .tab__group .tab__nav li.active[data-value*="cross_strait_relations"], .tab__group .tab__nav li:hover[data-value*="cross_strait_relations"] {
   background-color: #dcb000;
 }
-.tab__group .tab__item {
-  height: 0;
-  overflow: hidden;
-}
-.tab__group .tab__item.active {
-  height: auto;
-  overflow: visible;
-}
 .tab__group .tab__item .img__chart {
   padding-top: 30px;
   padding-bottom: 60px;
@@ -1105,9 +1120,18 @@ p a.btn:hover {
   background-color: #2bbec4;
 }
 
+.hot__block .hot__item,
+.hot__group .hot__item {
+  display: inline;
+}
+.hot__block .hot__item + .hot__item .date,
+.hot__group .hot__item + .hot__item .date {
+  margin-left: 5px;
+}
 .hot__block .hot__content,
 .hot__group .hot__content {
   position: relative;
+  display: inline;
   font-size: 14px;
   line-height: 2;
 }
@@ -1132,6 +1156,7 @@ p a.btn:hover {
 .hot__block .hot__content > a,
 .hot__group .hot__content > a {
   color: #343434;
+  word-break: break-all;
 }
 .hot__block .hot__content > a:focus,
 .hot__group .hot__content > a:focus {
@@ -1140,6 +1165,10 @@ p a.btn:hover {
 .hot__block .hot__content > a:hover,
 .hot__group .hot__content > a:hover {
   color: #597B77;
+}
+.hot__block .hot__content > a + .date,
+.hot__group .hot__content > a + .date {
+  margin-left: 5px;
 }
 
 .hot__block .hot__item.eco_and_industrial_development .date {
@@ -1352,6 +1381,10 @@ svg {
 svg.keychart--donut {
   margin: auto;
 }
+svg.keychart--donut #item {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
 svg.keychart--donut #val {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -1372,47 +1405,57 @@ svg.keychart--donut .cls {
 }
 svg.keychart--donut .cls,
 svg.keychart--donut #val,
+svg.keychart--donut #item,
 svg.keychart--donut #line {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+svg.keychart--donut .cls-15 {
+  fill: #22afe3;
+}
+svg.keychart--donut .cls-14 {
+  fill: #55c1e9;
+}
+svg.keychart--donut .cls-13 {
+  fill: #7ED1EF;
+}
 svg.keychart--donut .cls-12 {
-  fill: #dcb000;
+  fill: #7ed1ef;
 }
 svg.keychart--donut .cls-11 {
-  fill: #f9d956;
+  fill: #5ECAA4;
 }
 svg.keychart--donut .cls-10 {
-  fill: #e5b896;
+  fill: #77d9b7;
 }
 svg.keychart--donut .cls-9 {
-  fill: #2fa9ae;
+  fill: #93ebcc;
 }
 svg.keychart--donut .cls-8 {
   fill: #93aaa7;
 }
 svg.keychart--donut .cls-7 {
-  fill: #93ebcc;
+  fill: #2fa9ae;
 }
 svg.keychart--donut .cls-6 {
-  fill: #77d9b7;
+  fill: #2bbec4;
 }
 svg.keychart--donut .cls-5 {
-  fill: #5ECAA4;
+  fill: #dbc0b2;
 }
 svg.keychart--donut .cls-4 {
-  fill: #7ed1ef;
+  fill: #e5b896;
 }
 svg.keychart--donut .cls-3 {
-  fill: #7ED1EF;
+  fill: #f9d956;
 }
 svg.keychart--donut .cls-2 {
-  fill: #55c1e9;
+  fill: #e8c436;
 }
 svg.keychart--donut .cls-1 {
-  fill: #22afe3;
+  fill: #dcb000;
 }
 svg.keychart--donut.active .cls {
   -moz-animation: keychart 0.1s forwards;
@@ -1479,7 +1522,22 @@ svg.keychart--donut.active .cls.cls-12 {
   -webkit-animation-delay: 0.55s;
   animation-delay: 0.55s;
 }
-svg.keychart--donut.active #val {
+svg.keychart--donut.active .cls.cls-13 {
+  -moz-animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+svg.keychart--donut.active .cls.cls-14 {
+  -moz-animation-delay: 0.65s;
+  -webkit-animation-delay: 0.65s;
+  animation-delay: 0.65s;
+}
+svg.keychart--donut.active .cls.cls-15 {
+  -moz-animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+svg.keychart--donut.active #item {
   -moz-animation: keychart 0.1s 0.9s forwards;
   -webkit-animation: keychart 0.1s 0.9s forwards;
   animation: keychart 0.1s 0.9s forwards;

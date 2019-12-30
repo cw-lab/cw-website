@@ -934,7 +934,7 @@ p a.btn:hover {
 .keyword__block > div a:hover {
   color: #597B77;
 }
-.keyword__block > div [class*='fa'] {
+.keyword__block > div .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -945,20 +945,8 @@ p a.btn:hover {
   font-size: 15px;
   vertical-align: middle;
 }
-.keyword__block > div [class*='fa']::before {
+.keyword__block > div .icon::before {
   display: inline-block;
-  font-family: "Font Awesome 5 Brands";
-}
-.keyword__block > div .fa-fb::before {
-  content: "\f39e";
-}
-.keyword__block > div .fa-yt::before {
-  content: "\f167";
-  font-size: 16px;
-}
-.keyword__block > div .fa-ig::before {
-  content: "\f16d";
-  font-size: 16px;
 }
 
 .opacity {
@@ -972,6 +960,28 @@ p a.btn:hover {
   cursor: pointer;
 }
 
+@media (max-width: 991px) {
+  .tab__group ul.tab__nav {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+.tab__group select#tab_nav {
+  display: block;
+  margin: auto;
+}
+@media (min-width: 992px) {
+  .tab__group select#tab_nav {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden !important;
+  }
+}
 .tab__group .tab__nav {
   font-size: 0;
 }

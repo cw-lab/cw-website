@@ -756,7 +756,7 @@ p {
                 color: #597B77;
             }
         }
-        [class*='fa'] {
+        .icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -768,26 +768,6 @@ p {
             vertical-align: middle;
             &::before {
                 display: inline-block;
-                font-family: "Font Awesome 5 Brands";
-            }
-        }
-        .fa-fb {
-            &::before {
-                content: "\f39e";
-            }
-        }
-        .fa-yt {
-            // color: #d60c18;
-            &::before {
-                content: "\f167";
-                font-size: 16px;
-            }
-        }
-        .fa-ig {
-            // color: #833AB4;
-            &::before {
-                content: "\f16d";
-                font-size: 16px;
             }
         }
     }
@@ -805,6 +785,26 @@ p {
 }
 
 .tab__group {
+    ul.tab__nav {
+        @include breakpoint(max-width 991px) {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+    }
+    select#tab_nav {
+        display: block;
+        margin: auto;
+        @include breakpoint(992px) {
+            position: absolute;
+            width: 0;
+            height: 0;
+            padding: 0;
+            border: 0;
+            overflow: hidden !important;
+        }
+    }
     .tab__nav {
         font-size: 0;
         li {

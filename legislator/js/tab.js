@@ -115,9 +115,9 @@ $(function() {
     $('.tab__nav li').eq(0).trigger('click');
     $('#tab_nav').on('change', function() {
         var tabValue = $(this).val(),
-            tabIndex = $(this).index();
+            ultabIndex = $('.tab__nav li[data-value="' + tabValue + '"').index();
         $('.tab__nav li').removeClass('active');
         $('.tab__nav li[data-value="' + tabValue + '"').addClass('active');
-        $('.tab__nav li').eq(tabIndex).trigger('click');
+        $('.tab__nav li').eq(ultabIndex).trigger('click');
     })
 })

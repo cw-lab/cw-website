@@ -25,14 +25,17 @@ $(function() {
             barhtml += '</div></div></div></div><div class="hot__group">';
             for (var b = 0; b < filteredtabCart[a]['data'].length; b++) {
                 var filteredtabValue = keywords.filter(function(keywords) {
-                    return $.trim(keywords.post_keyword) === $.trim(filteredtabCart[a]['data'][b]['keyword']);
+                    return keywords.post_keyword === filteredtabCart[a]['data'][b]['keyword'];
                 });
                 barhtml += '<div class="hot__item"><div class="hot__title">';
                 barhtml += filteredtabCart[a]['data'][b]['keyword'];
                 barhtml += '</div><div class="hot__content">';
                 for (var c = 0;
                     (c < filteredtabValue.length) && (c <= 4); c++) {
-                    barhtml += '<span class="date">' + filteredtabValue[c]['year'] + '.' + filteredtabValue[c]['month'];
+                    barhtml += '<span class="date">' + filteredtabValue[c]['year'];
+                    if (filteredtabValue[c]['month'] !== '') {
+                        barhtml += '.' + filteredtabValue[c]['month'];
+                    }
                     barhtml += '</span><b>' + filteredtabValue[c]['post_name'] + '</b>';
                     barhtml += '<i class="icon-' + filteredtabValue[c]['platform'] + '"></i>';
                     barhtml += '：<a href="';

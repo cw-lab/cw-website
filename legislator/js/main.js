@@ -140,8 +140,11 @@
                 } else {
                     var hundren = filteredKeyword[m]["post_content"];
                 }
-                khtml += '<div><span class="date">' + filteredKeyword[m]["year"] + '.' + filteredKeyword[m]["month"] + '</span>';
-                khtml += '<i class="icon icon-' + filteredKeyword[m]["platform"] + '"></i>';
+                khtml += '<div><span class="date">' + filteredKeyword[m]["year"];
+                if (filteredKeyword[m]['month'] !== '') {
+                    khtml += '.' + filteredKeyword[m]['month'];
+                }
+                khtml += '</span><i class="icon icon-' + filteredKeyword[m]["platform"] + '"></i>';
                 khtml += '<a href="' + filteredKeyword[m]["post_link"] + '" target="_blank">' + hundren + '</a></div>';
             }
             $('.keyword__block').html(khtml);

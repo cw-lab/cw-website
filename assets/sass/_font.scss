@@ -34,6 +34,30 @@ i.icon {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+.icon-member-notification:before {
+	content: "\e93c";
+}
+.icon-member-download:before {
+	content: "\e93d";
+}
+.icon-member-invite:before {
+	content: "\e93e";
+}
+.icon-member-lecture:before {
+	content: "\e93f";
+}
+.icon-benefits:before {
+	content: "\e940";
+}
+.icon-coupon:before {
+	content: "\e941";
+}
+.icon-gift:before {
+	content: "\e942";
+}
+.icon-member-only:before {
+	content: "\e943";
+}
 .icon-internet:before {
 	content: "\e93b";
 }

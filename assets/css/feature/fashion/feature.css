@@ -215,6 +215,16 @@ ul, ol {
   list-style-type: disc;
 }
 
+.number__brackets li {
+  position: relative;
+  padding-left: 2em;
+  line-height: 1.5;
+}
+.number__brackets li span {
+  position: absolute;
+  left: 0;
+}
+
 .mtb0 {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -687,6 +697,38 @@ i.icon {
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+.icon-member-notification:before {
+  content: "\e93c";
+}
+
+.icon-member-download:before {
+  content: "\e93d";
+}
+
+.icon-member-invite:before {
+  content: "\e93e";
+}
+
+.icon-member-lecture:before {
+  content: "\e93f";
+}
+
+.icon-benefits:before {
+  content: "\e940";
+}
+
+.icon-coupon:before {
+  content: "\e941";
+}
+
+.icon-gift:before {
+  content: "\e942";
+}
+
+.icon-member-only:before {
+  content: "\e943";
 }
 
 .icon-internet:before {

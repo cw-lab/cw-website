@@ -513,9 +513,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.center__page .list__group.list__group--newsletters .list__item .list__txt .title:hover {
-  color: #D60C18;
-}
 @media (min-width: 768px) {
   .center__page .list__group.list__group--newsletters .list__item .list__txt .title {
     -webkit-line-clamp: 1;
@@ -693,6 +690,93 @@
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.right__page section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media (min-width: 1024px) {
+  .right__page section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.right__page section:nth-child(even) {
+  background-color: #fafafa;
+}
+.right__page section .h1, .right__page section .h2 {
+  font-weight: 500;
+}
+.right__page section .h1 span, .right__page section .h2 span {
+  display: inline-block;
+  margin: 0 .5em;
+}
+@media (max-width: 1023px) {
+  .right__page section .h1 {
+    font-size: 22px;
+  }
+  .right__page section .h2 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 720px) {
+  .right__page section p span {
+    display: block;
+  }
+}
+.right__page section.announcement {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.right__page section.announcement ol {
+  font-size: 14px;
+}
+.right__page .rights__group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.right__page .rights__group .rights__item {
+  position: relative;
+  width: 100%;
+  padding-left: 70px;
+}
+@media (min-width: 1024px) {
+  .right__page .rights__group .rights__item {
+    width: calc(50% - 45px);
+  }
+}
+@media (max-width: 1023px) {
+  .right__page .rights__group .rights__item {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+.right__page .rights__group .rights__item .img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #D3D5D7;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.right__page .rights__group .rights__item .img i.icon {
+  font-size: 24px;
+}
+.right__page .rights__group .rights__item .title {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=center.css.map */

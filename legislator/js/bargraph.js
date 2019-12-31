@@ -1032,7 +1032,7 @@ var bargraph = [{
                 "percent": "3.47%"
             },
             {
-                "keyword": "共諜",
+                "keyword": "共諜案",
                 "percent": "2.42%"
             }
             // {

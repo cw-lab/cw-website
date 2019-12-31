@@ -820,6 +820,10 @@ i.icon {
   -webkit-font-smoothing: antialiased;
 }
 
+.icon-internet:before {
+  content: "\e93b";
+}
+
 .icon-lock:before {
   content: "\e936";
 }

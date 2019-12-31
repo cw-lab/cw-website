@@ -34,6 +34,9 @@ i.icon {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+.icon-internet:before {
+	content: "\e93b";
+}
 .icon-lock:before {
 	content: "\e936";
 }

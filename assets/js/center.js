@@ -15,6 +15,13 @@ $(function(){
 			return false;
 		})
 	});
+	$('.list__item--link').each(function(){
+		var txtLink = $(this).data('textlink');
+		$(this).click(function(){
+			window.open(txtLink);
+			return false;
+		})
+	});
 	$('.list__item--vip').each(function(){
 		$(this).click(function(){
 			$('body').addClass('message__open');

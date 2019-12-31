@@ -58,8 +58,8 @@ $(function() {
             slidesToScroll: 1,
             infinite: false,
             autoplay: false,
-            prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon-arrow"></i></button>',
-            nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon-arrow"></i></button>',
+            prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" gtm-name="專輯-2020總統大選" eventaction="botton-click" eventlabel="點擊-向左"><i class="icon-arrow"></i></button>',
+            nextArrow: '<button class="slick-next" aria-label="Next" type="button" gtm-name="專輯-2020總統大選" eventaction="botton-click" eventlabel="點擊-向右"><i class="icon-arrow"></i></button>',
             responsive: [{
                 breakpoint: 1780,
                 settings: {

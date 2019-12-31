@@ -28,6 +28,7 @@ $other: #343434;
 .legislator-page {
     header {
         position: relative;
+        @include background-size(cover);
     }
     &.index-page {
         header {
@@ -1425,5 +1426,55 @@ svg {
     }
     100% {
         @include opacity(1);
+    }
+}
+
+.imgGroup--hide {
+    position: relative;
+    .imgGroup {
+        position: relative;
+        height: 300px;
+        overflow: hidden;
+        &::after {
+            @extend %before-after;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            @include opacity(0);
+            @include background-image(linear-gradient(top,
+            rgba(255,
+            255,
+            255,
+            0) 0%,
+            rgba(255,
+            255,
+            255,
+            1) 75%,
+            rgba(255,
+            255,
+            255,
+            1) 100%));
+        }
+        &.hide::after {
+            @include opacity(1);
+        }
+    }
+    .btn {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        padding: 0 25px;
+        color: #343434;
+        font-size: 16px;
+        line-height: 33px;
+        border: 1px solid #343434;
+        cursor: pointer;
+        @include translateX(-50%);
+        &:hover {
+            color: #fff;
+            background-color: #597B77;
+        }
     }
 }

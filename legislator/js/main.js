@@ -179,6 +179,13 @@
             })
         }
     });
+    $('.click__alert').click(function() {
+        $(this).fadeOut();
+    });
+    $('.imgGroup--hide .btn').click(function() {
+        $(this).hide();
+        $(this).siblings('.imgGroup').removeClass('hide').css('height', 'auto');
+    });
     $(window).scroll(function() {
         var width = $(window).width(),
             height = $(window).height(),

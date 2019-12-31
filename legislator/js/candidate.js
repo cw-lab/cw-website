@@ -14,7 +14,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kl",
@@ -32,7 +32,7 @@
         "oral_interpellation": "98.32%",
         "deliberation": "98.13%",
         "ccw_awards": "7",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kl",
@@ -50,7 +50,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kl",
@@ -68,7 +68,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -86,7 +86,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -104,7 +104,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -122,7 +122,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -140,7 +140,7 @@
         "oral_interpellation": "98.75%",
         "deliberation": "99.25%",
         "ccw_awards": "6",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -158,7 +158,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -176,7 +176,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp1",
@@ -194,7 +194,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp2",
@@ -212,7 +212,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp2",
@@ -230,7 +230,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp2",
@@ -248,7 +248,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp2",
@@ -284,7 +284,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp2",
@@ -302,7 +302,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp3",
@@ -320,7 +320,7 @@
         "oral_interpellation": "99.41%",
         "deliberation": "89.38%",
         "ccw_awards": "7",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp3",
@@ -338,7 +338,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp3",
@@ -356,7 +356,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp3",
@@ -374,7 +374,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -392,7 +392,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -410,7 +410,7 @@
         "oral_interpellation": "94.19%",
         "deliberation": "91.43%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -428,7 +428,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -446,7 +446,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -464,7 +464,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -482,7 +482,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp4",
@@ -500,7 +500,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -518,7 +518,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -536,7 +536,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -554,7 +554,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -572,7 +572,7 @@
         "oral_interpellation": "87.71%",
         "deliberation": "91.59%",
         "ccw_awards": "5",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -590,7 +590,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -608,7 +608,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -626,7 +626,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp5",
@@ -644,7 +644,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -680,7 +680,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -698,7 +698,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -716,7 +716,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -734,7 +734,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -752,7 +752,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -770,7 +770,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -788,7 +788,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -806,7 +806,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp6",
@@ -824,7 +824,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp7",
@@ -842,7 +842,7 @@
         "oral_interpellation": "91.71%",
         "deliberation": "97.01%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp7",
@@ -860,7 +860,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp7",
@@ -878,7 +878,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp7",
@@ -888,15 +888,15 @@
         "img": "tp7-04.jpg",
         "selected": "",
         "gender": "女",
-        "age": "44",
-        "family": "是",
-        "kinship": "父：許天送（前南投市民代表會主席）",
-        "yuan_rate": "95.36%",
-        "committees_rate": "86.49%",
-        "oral_interpellation": "83.04%",
-        "deliberation": "74.64%",
+        "age": "",
+        "family": "否",
+        "kinship": "",
+        "yuan_rate": "-",
+        "committees_rate": "-",
+        "oral_interpellation": "-",
+        "deliberation": "-",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp7",
@@ -914,7 +914,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -932,7 +932,7 @@
         "oral_interpellation": "99.48%",
         "deliberation": "95.52%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -950,7 +950,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -968,7 +968,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -986,7 +986,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -1004,7 +1004,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -1022,7 +1022,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -1040,7 +1040,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -1058,7 +1058,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tp8",
@@ -1076,7 +1076,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc10",
@@ -1094,7 +1094,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc10",
@@ -1112,7 +1112,7 @@
         "oral_interpellation": "90.06%",
         "deliberation": "96.13%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc10",
@@ -1130,7 +1130,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc10",
@@ -1148,7 +1148,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc10",
@@ -1166,7 +1166,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1184,7 +1184,7 @@
         "oral_interpellation": "90.16%",
         "deliberation": "91.04%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1202,7 +1202,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1220,7 +1220,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1238,7 +1238,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1256,7 +1256,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1274,7 +1274,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc11",
@@ -1292,7 +1292,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1310,7 +1310,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1328,7 +1328,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1346,7 +1346,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1364,7 +1364,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1382,7 +1382,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1400,7 +1400,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc12",
@@ -1418,7 +1418,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1436,7 +1436,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1454,7 +1454,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1472,7 +1472,7 @@
         "oral_interpellation": "73.08%",
         "deliberation": "92.38%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1490,7 +1490,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1508,7 +1508,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1526,7 +1526,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1544,7 +1544,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc1",
@@ -1562,7 +1562,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc2",
@@ -1580,7 +1580,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc2",
@@ -1598,7 +1598,7 @@
         "oral_interpellation": "97.08%",
         "deliberation": "86.11%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc2",
@@ -1616,7 +1616,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1634,7 +1634,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1670,7 +1670,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1688,7 +1688,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1706,7 +1706,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1724,7 +1724,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc3",
@@ -1742,7 +1742,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1760,7 +1760,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1778,7 +1778,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1796,7 +1796,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1814,7 +1814,7 @@
         "oral_interpellation": "95.85%",
         "deliberation": "86.57%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1832,7 +1832,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1850,7 +1850,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1868,7 +1868,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1886,7 +1886,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc4",
@@ -1904,7 +1904,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc5",
@@ -1922,7 +1922,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc5",
@@ -1940,7 +1940,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc5",
@@ -1958,7 +1958,7 @@
         "oral_interpellation": "98.13%",
         "deliberation": "97.76%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc6",
@@ -1976,7 +1976,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc6",
@@ -1994,7 +1994,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc6",
@@ -2012,7 +2012,7 @@
         "oral_interpellation": "96.45%",
         "deliberation": "96.73%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc6",
@@ -2030,7 +2030,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2048,7 +2048,7 @@
         "oral_interpellation": "97.50%",
         "deliberation": "100.00%",
         "ccw_awards": "5",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2066,7 +2066,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2084,7 +2084,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2102,7 +2102,7 @@
         "oral_interpellation": "94.97%",
         "deliberation": "94.34%",
         "ccw_awards": "5",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2120,7 +2120,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2138,7 +2138,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc7",
@@ -2156,7 +2156,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2174,7 +2174,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2192,7 +2192,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2210,7 +2210,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2225,10 +2225,10 @@
         "kinship": "姨丈：趙長江（新北中和「林江派」大老）<br/>\n堂哥：江上清（曾任中和市長）<br/>\n堂哥：趙永清（曾任立委）",
         "yuan_rate": "100.00%",
         "committees_rate": "100.00%",
-        "oral_interpellation": "99.48%",
+        "oral_interpellation": "100.00%",
         "deliberation": "100.00%",
         "ccw_awards": "6",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2246,7 +2246,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc8",
@@ -2264,7 +2264,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2282,7 +2282,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2300,7 +2300,7 @@
         "oral_interpellation": "96.26%",
         "deliberation": "85.88%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2318,7 +2318,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2336,7 +2336,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2354,7 +2354,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ntc9",
@@ -2372,7 +2372,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty1",
@@ -2390,7 +2390,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty1",
@@ -2408,7 +2408,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty1",
@@ -2426,7 +2426,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty1",
@@ -2444,7 +2444,7 @@
         "oral_interpellation": "96.75%",
         "deliberation": "86.99%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty1",
@@ -2462,7 +2462,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty2",
@@ -2480,7 +2480,7 @@
         "oral_interpellation": "92.00%",
         "deliberation": "88.76%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty2",
@@ -2498,7 +2498,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty2",
@@ -2516,7 +2516,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty2",
@@ -2534,7 +2534,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty2",
@@ -2552,7 +2552,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2570,7 +2570,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2588,7 +2588,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2606,7 +2606,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2624,7 +2624,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2642,7 +2642,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty3",
@@ -2660,7 +2660,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty4",
@@ -2678,7 +2678,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty4",
@@ -2696,7 +2696,7 @@
         "oral_interpellation": "99.30%",
         "deliberation": "97.48%",
         "ccw_awards": "6",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty4",
@@ -2714,7 +2714,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty4",
@@ -2732,7 +2732,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty4",
@@ -2750,7 +2750,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty5",
@@ -2768,7 +2768,7 @@
         "oral_interpellation": "90.96%",
         "deliberation": "98.10%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty5",
@@ -2786,7 +2786,7 @@
         "oral_interpellation": "97.92%",
         "deliberation": "100.00%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty5",
@@ -2804,7 +2804,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty5",
@@ -2822,7 +2822,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty5",
@@ -2840,7 +2840,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty6",
@@ -2858,7 +2858,7 @@
         "oral_interpellation": "74.38%",
         "deliberation": "87.31%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ty6",
@@ -2876,7 +2876,7 @@
         "oral_interpellation": "87.10%",
         "deliberation": "89.17%",
         "ccw_awards": "2",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2894,7 +2894,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2912,7 +2912,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2930,7 +2930,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2948,7 +2948,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2966,7 +2966,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hcc",
@@ -2984,7 +2984,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3002,7 +3002,7 @@
         "oral_interpellation": "80.22%",
         "deliberation": "89.89%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3020,7 +3020,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3038,7 +3038,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3056,7 +3056,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3074,7 +3074,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc1",
@@ -3092,7 +3092,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3110,7 +3110,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3128,7 +3128,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3146,7 +3146,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3164,7 +3164,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3182,7 +3182,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3200,7 +3200,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hc2",
@@ -3218,7 +3218,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3236,7 +3236,7 @@
         "oral_interpellation": "71.90%",
         "deliberation": "83.77%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3254,7 +3254,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3272,7 +3272,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3290,7 +3290,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3308,7 +3308,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml1",
@@ -3326,7 +3326,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3344,7 +3344,7 @@
         "oral_interpellation": "69.78%",
         "deliberation": "69.57%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3362,7 +3362,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3380,7 +3380,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3398,7 +3398,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3416,7 +3416,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ml2",
@@ -3434,7 +3434,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc1",
@@ -3452,7 +3452,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc1",
@@ -3470,7 +3470,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc1",
@@ -3488,7 +3488,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc2",
@@ -3506,7 +3506,7 @@
         "oral_interpellation": "61.64%",
         "deliberation": "65.65%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc2",
@@ -3524,7 +3524,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3542,7 +3542,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3560,7 +3560,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3578,7 +3578,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3596,7 +3596,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3614,7 +3614,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc3",
@@ -3632,7 +3632,7 @@
         "oral_interpellation": "97.95%",
         "deliberation": "92.13%",
         "ccw_awards": "5",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3650,7 +3650,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3668,7 +3668,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3686,7 +3686,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3704,7 +3704,7 @@
         "oral_interpellation": "98.13%",
         "deliberation": "96.27%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3722,7 +3722,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3740,7 +3740,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3758,7 +3758,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3776,7 +3776,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc4",
@@ -3794,7 +3794,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3830,7 +3830,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3848,7 +3848,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3866,7 +3866,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3884,7 +3884,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3902,7 +3902,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3920,7 +3920,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3938,7 +3938,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc5",
@@ -3956,7 +3956,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc6",
@@ -3974,7 +3974,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc6",
@@ -3992,7 +3992,7 @@
         "oral_interpellation": "99.36%",
         "deliberation": "99.24%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc6",
@@ -4010,7 +4010,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc6",
@@ -4028,7 +4028,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc6",
@@ -4046,7 +4046,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc7",
@@ -4064,7 +4064,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc7",
@@ -4082,7 +4082,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc7",
@@ -4100,7 +4100,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc7",
@@ -4118,7 +4118,7 @@
         "oral_interpellation": "92.02%",
         "deliberation": "93.85%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc7",
@@ -4136,7 +4136,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc8",
@@ -4154,7 +4154,7 @@
         "oral_interpellation": "91.67%",
         "deliberation": "99.06%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc8",
@@ -4172,7 +4172,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc8",
@@ -4190,7 +4190,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tc8",
@@ -4208,7 +4208,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch1",
@@ -4244,7 +4244,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch2",
@@ -4262,7 +4262,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch2",
@@ -4280,7 +4280,7 @@
         "oral_interpellation": "98.82%",
         "deliberation": "76.99%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch2",
@@ -4298,7 +4298,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch3",
@@ -4316,7 +4316,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch3",
@@ -4334,7 +4334,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch3",
@@ -4352,7 +4352,7 @@
         "oral_interpellation": "88.82%",
         "deliberation": "96.77%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch3",
@@ -4370,7 +4370,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4388,7 +4388,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4406,7 +4406,7 @@
         "oral_interpellation": "95.07%",
         "deliberation": "93.28%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4424,7 +4424,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4442,7 +4442,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4460,7 +4460,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4478,7 +4478,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ch4",
@@ -4496,7 +4496,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt1",
@@ -4514,7 +4514,7 @@
         "oral_interpellation": "85.16%",
         "deliberation": "94.39%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt1",
@@ -4532,7 +4532,7 @@
         "oral_interpellation": "71.07%",
         "deliberation": "82.22%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt2",
@@ -4542,7 +4542,7 @@
         "img": "nt2-01.jpg",
         "selected": "",
         "gender": "女",
-        "age": "44",
+        "age": "",
         "family": "是",
         "kinship": "父：許天送（前南投市民代表會主席）",
         "yuan_rate": "95.36%",
@@ -4550,7 +4550,7 @@
         "oral_interpellation": "83.04%",
         "deliberation": "74.64%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt2",
@@ -4568,7 +4568,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt2",
@@ -4586,7 +4586,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt2",
@@ -4604,7 +4604,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "nt2",
@@ -4622,7 +4622,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl1",
@@ -4640,7 +4640,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl1",
@@ -4658,7 +4658,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl1",
@@ -4676,7 +4676,7 @@
         "oral_interpellation": "73.20%",
         "deliberation": "72.14%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl1",
@@ -4694,7 +4694,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl2",
@@ -4712,7 +4712,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl2",
@@ -4730,7 +4730,7 @@
         "oral_interpellation": "94.51%",
         "deliberation": "87.27%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl2",
@@ -4748,7 +4748,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl2",
@@ -4766,7 +4766,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy1",
@@ -4784,7 +4784,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy1",
@@ -4802,7 +4802,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy1",
@@ -4820,7 +4820,7 @@
         "oral_interpellation": "83.16%",
         "deliberation": "93.90%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy1",
@@ -4838,7 +4838,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4856,7 +4856,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4874,7 +4874,7 @@
         "oral_interpellation": "86.11%",
         "deliberation": "85.16%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4892,7 +4892,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4910,7 +4910,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4928,7 +4928,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cy2",
@@ -4946,7 +4946,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -4964,7 +4964,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -4982,7 +4982,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5000,7 +5000,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5018,7 +5018,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5036,7 +5036,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5054,7 +5054,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5072,7 +5072,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "cyc",
@@ -5090,7 +5090,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5108,7 +5108,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5126,7 +5126,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5144,7 +5144,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5162,7 +5162,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5180,7 +5180,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5198,7 +5198,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn1",
@@ -5216,7 +5216,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn2",
@@ -5234,7 +5234,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn2",
@@ -5270,7 +5270,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn3",
@@ -5288,7 +5288,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn3",
@@ -5300,13 +5300,13 @@
         "gender": "女",
         "age": "45",
         "family": "是",
-        "kinship": "父：陳佳照（曾任台南市議員）\n妹：陳怡珍（現任台南市議員）",
+        "kinship": "父：陳佳照（曾任台南市議員）<br/>\n妹：陳怡珍（現任台南市議員）",
         "yuan_rate": "100.00%",
         "committees_rate": "99.10%",
         "oral_interpellation": "89.35%",
         "deliberation": "86.72%",
         "ccw_awards": "2",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn3",
@@ -5324,7 +5324,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn3",
@@ -5342,7 +5342,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5360,7 +5360,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5378,7 +5378,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5396,7 +5396,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5414,7 +5414,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5432,7 +5432,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn4",
@@ -5450,7 +5450,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5468,7 +5468,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5486,7 +5486,7 @@
         "oral_interpellation": "97.18%",
         "deliberation": "97.44%",
         "ccw_awards": "5",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5504,7 +5504,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5522,7 +5522,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5540,7 +5540,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn5",
@@ -5558,7 +5558,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn6",
@@ -5576,7 +5576,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn6",
@@ -5594,7 +5594,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn6",
@@ -5612,7 +5612,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn6",
@@ -5630,7 +5630,7 @@
         "oral_interpellation": "92.86%",
         "deliberation": "97.20%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tn6",
@@ -5648,7 +5648,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh1",
@@ -5666,7 +5666,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh1",
@@ -5684,7 +5684,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh1",
@@ -5702,7 +5702,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh1",
@@ -5720,7 +5720,7 @@
         "oral_interpellation": "43.79%",
         "deliberation": "70.71%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh1",
@@ -5738,7 +5738,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh2",
@@ -5756,7 +5756,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh2",
@@ -5774,7 +5774,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh2",
@@ -5792,7 +5792,7 @@
         "oral_interpellation": "92.76%",
         "deliberation": "83.74%",
         "ccw_awards": "3",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5810,7 +5810,7 @@
         "oral_interpellation": "83.57%",
         "deliberation": "88.10%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5828,7 +5828,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5846,7 +5846,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5864,7 +5864,7 @@
         "oral_interpellation": "98.84%",
         "deliberation": "96.15%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5882,7 +5882,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5900,7 +5900,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5918,7 +5918,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5936,7 +5936,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5954,7 +5954,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5972,7 +5972,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh3",
@@ -5990,7 +5990,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh4",
@@ -6008,7 +6008,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh4",
@@ -6026,7 +6026,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh4",
@@ -6044,7 +6044,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh4",
@@ -6062,7 +6062,7 @@
         "oral_interpellation": "66.01%",
         "deliberation": "55.00%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh4",
@@ -6080,7 +6080,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh5",
@@ -6098,7 +6098,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh5",
@@ -6116,7 +6116,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh5",
@@ -6134,7 +6134,7 @@
         "oral_interpellation": "100.00%",
         "deliberation": "100.00%",
         "ccw_awards": "7",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6152,7 +6152,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6170,7 +6170,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6188,7 +6188,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6206,7 +6206,7 @@
         "oral_interpellation": "74.84%",
         "deliberation": "81.48%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6224,7 +6224,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6242,7 +6242,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6260,7 +6260,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6278,7 +6278,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6296,7 +6296,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh6",
@@ -6314,7 +6314,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6332,7 +6332,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6350,7 +6350,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6368,7 +6368,7 @@
         "oral_interpellation": "86.67%",
         "deliberation": "90.34%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6386,7 +6386,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6404,7 +6404,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6422,7 +6422,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh7",
@@ -6440,7 +6440,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh8",
@@ -6458,7 +6458,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh8",
@@ -6476,7 +6476,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh8",
@@ -6494,7 +6494,7 @@
         "oral_interpellation": "99.35%",
         "deliberation": "96.99%",
         "ccw_awards": "7",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "kh8",
@@ -6512,7 +6512,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6530,7 +6530,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6548,7 +6548,7 @@
         "oral_interpellation": "95.48%",
         "deliberation": "93.02%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6566,7 +6566,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6584,7 +6584,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6602,7 +6602,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6620,7 +6620,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt1",
@@ -6638,7 +6638,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6656,7 +6656,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6674,7 +6674,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6692,7 +6692,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6710,7 +6710,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6728,7 +6728,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6746,7 +6746,7 @@
         "oral_interpellation": "84.31%",
         "deliberation": "76.43%",
         "ccw_awards": "1",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6764,7 +6764,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6782,7 +6782,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "pt2",
@@ -6800,7 +6800,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6818,7 +6818,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6836,7 +6836,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6854,7 +6854,7 @@
         "oral_interpellation": "76.76%",
         "deliberation": "82.35%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6872,7 +6872,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6890,7 +6890,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "yl",
@@ -6908,7 +6908,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -6926,7 +6926,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -6944,7 +6944,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -6962,7 +6962,7 @@
         "oral_interpellation": "96.48%",
         "deliberation": "90.68%",
         "ccw_awards": "4",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -6980,7 +6980,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -6998,7 +6998,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "hl",
@@ -7016,7 +7016,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tt",
@@ -7034,7 +7034,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tt",
@@ -7052,7 +7052,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tt",
@@ -7070,7 +7070,7 @@
         "oral_interpellation": "68.83%",
         "deliberation": "76.81%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "tt",
@@ -7088,7 +7088,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ph",
@@ -7106,7 +7106,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ph",
@@ -7124,7 +7124,7 @@
         "oral_interpellation": "85.80%",
         "deliberation": "76.99%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "ph",
@@ -7142,7 +7142,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "lj",
@@ -7160,7 +7160,7 @@
         "oral_interpellation": "59.86%",
         "deliberation": "62.18%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "lj",
@@ -7178,7 +7178,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "lj",
@@ -7196,7 +7196,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "lj",
@@ -7214,7 +7214,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "lj",
@@ -7232,7 +7232,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7250,7 +7250,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7286,7 +7286,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7304,7 +7304,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7322,7 +7322,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7340,7 +7340,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7358,7 +7358,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7376,7 +7376,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7394,7 +7394,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "km",
@@ -7412,7 +7412,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7430,7 +7430,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7448,7 +7448,7 @@
         "oral_interpellation": "72.85%",
         "deliberation": "78.57%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7466,7 +7466,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7484,7 +7484,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7502,7 +7502,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7520,7 +7520,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7538,7 +7538,7 @@
         "oral_interpellation": "52.50%",
         "deliberation": "34.33%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7556,7 +7556,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7574,7 +7574,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7592,7 +7592,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "urban",
@@ -7610,7 +7610,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7628,7 +7628,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7646,7 +7646,7 @@
         "oral_interpellation": "98.71%",
         "deliberation": "92.31%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7664,7 +7664,7 @@
         "oral_interpellation": "68.29%",
         "deliberation": "68.55%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7700,7 +7700,7 @@
         "oral_interpellation": "95.15%",
         "deliberation": "79.65%",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7718,7 +7718,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7736,7 +7736,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7754,7 +7754,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7772,7 +7772,7 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     },
     {
         "constituency": "rural",
@@ -7790,6 +7790,6 @@
         "oral_interpellation": "-",
         "deliberation": "-",
         "ccw_awards": "-",
-        "remark": "-"
+        "remark": ""
     }
 ]

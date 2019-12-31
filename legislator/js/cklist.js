@@ -16269,282 +16269,282 @@ var cklist = [{
         "post_keyword": "藻礁"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "中火"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "中華民國"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "AI（人工智慧）"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "能源"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "燃煤"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "108課綱"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "工會"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "台電"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "素養"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "電廠"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "一例一休"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "大數據"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "空污"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "長照"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "以核養綠"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "承攬"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "育兒津貼"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "核四"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "教改"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "燃氣"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "主權"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "外交部"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "社會福利"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "青年創業"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "缺電"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "移工"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "斷交"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "一國兩制"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "反核"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "性平"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "房貸"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "房價"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "東協"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "社工"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "非核家園"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "退休"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "新課綱"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "過勞"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "中共"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "外交官"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "地價稅"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "年改"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "吳斯懷"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "私菸"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "亞洲四小龍"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "青創"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "軍公教"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "租金補貼"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "租屋"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "陳同佳"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "陸委會"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "最低薪資"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "貿易"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "新南向"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "溫室氣體"
     },
     {
-        "country": "ty4",
+        "country": "tc6",
         "post_name": "李中",
         "post_keyword": "學習歷程"
     },

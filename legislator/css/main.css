@@ -395,6 +395,16 @@ p a.btn:hover {
   color: #fff;
   background-color: #597B77;
 }
+p.search {
+  font-size: 1rem;
+}
+p.search a {
+  color: #343534;
+  text-decoration: underline;
+}
+p.search a:hover {
+  color: #597B77;
+}
 
 .page__essay {
   padding: 130px 0 100px 0;

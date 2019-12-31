@@ -244,6 +244,16 @@ p {
             background-color: #597B77;
         }
     }
+    &.search {
+        font-size: 1rem;
+        a {
+            color: #343534;
+            text-decoration: underline;
+            &:hover {
+                color: #597B77;
+            }
+        }
+    }
 }
 
 .page__essay {

@@ -72,6 +72,7 @@
 }
 .feature__page section > .container-fluid {
   width: 100%;
+  padding-top: 80px;
   padding-bottom: 80px;
 }
 .feature__page section p.text--summary {

@@ -118,4 +118,7 @@ $(function() {
         $('#tab_nav').children('option[value="' + tabValue + '"]').attr('selected', true);
     });
     $('.tab__nav li').eq(0).trigger('click');
+    $('select').on('change', function() {
+        return false;
+    });
 })

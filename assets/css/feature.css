@@ -107,6 +107,10 @@
 .feature__page section .img__group.img__group--default span {
   padding-bottom: 1.4em;
 }
+.feature__page section .img__group.img__group--full + .img__group--full p {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
 .feature__page section .card__group {
   display: flex;
   flex-wrap: wrap;

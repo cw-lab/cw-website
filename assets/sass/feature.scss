@@ -45,7 +45,9 @@
 			border-top: 0;
 		}
 		> .container, >.container-fluid {
-						@include breakpoint (max-width 767px) {
+			padding-top: 80px;
+			padding-bottom: 80px;
+			@include breakpoint (max-width 767px) {
 				padding-left: 20px;
 				padding-right: 20px;
 			}
@@ -58,13 +60,9 @@
 		}
 		> .container {
 			max-width: 880px;
-			padding-top: 80px;
-			padding-bottom: 80px;
 		}
 		>.container-fluid {
 			width: 100%;
-			padding-top: 80px;
-			padding-bottom: 80px;
 		}
 		p {
 			&.text {

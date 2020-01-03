@@ -53,6 +53,10 @@
 .feature__page section:first-child {
   border-top: 0;
 }
+.feature__page section > .container, .feature__page section > .container-fluid {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 @media (max-width: 767px) {
   .feature__page section > .container, .feature__page section > .container-fluid {
     padding-left: 20px;
@@ -67,13 +71,9 @@
 }
 .feature__page section > .container {
   max-width: 880px;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 .feature__page section > .container-fluid {
   width: 100%;
-  padding-top: 80px;
-  padding-bottom: 80px;
 }
 .feature__page section p.text--summary {
   color: #003a9f;

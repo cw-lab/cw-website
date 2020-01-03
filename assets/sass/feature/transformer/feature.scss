@@ -155,8 +155,7 @@
 		&:first-child {
 			border-top: 0;
 		}
-		.container {
-			max-width: 880px;
+		> .container, >.container-fluid {
 			padding-top: 80px;
 			padding-bottom: 80px;
 			@include breakpoint (max-width 767px) {
@@ -169,6 +168,12 @@
 					margin-right: -20px;
 				}
 			}
+		}
+		> .container {
+			max-width: 880px;
+		}
+		>.container-fluid {
+			width: 100%;
 		}
 		p {
 			&.text {
@@ -193,13 +198,21 @@
 			span {
 				display: block;
 				padding-top: 0.4em;
-				padding-bottom: 1.4em;
 				color: $secondary;
 				font-size: 0.875rem;
 				@include breakpoint (max-width 767px) {
 					padding-left: 20px;
 					padding-right: 20px;
 				}
+			}
+			&.img__group--default {
+				span {
+					padding-bottom: 1.4em;
+				}
+			}
+			&.img__group--full + .img__group--full p {
+				margin-top: 80px;
+				margin-bottom: 40px;
 			}
 		}
 		.card {

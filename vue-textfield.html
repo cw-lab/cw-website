@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charSet="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
+	<title>輸入框 Text-field｜《天下雜誌》網站設計系統 CommonWealth Magazine Web Design System</title>
+	<link rel="stylesheet" href="../assets/css/cw.css">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
+</head>
+
+<body>
+	<header></header>
+	<main>
+		<section>
+			<div class="container">
+				<div class="flex">
+					<aside class="select-side"></aside>
+					<div class="content-side">
+						<div id="app" class="flex">
+							<form action="#!" class="form">
+								<input-template v-bind:class="{'form__group--correct': isCorrect}">
+									請輸入 e-mail
+								</input-template>
+								<input-template v-bind:class="{'form__group--correct': isCorrect}">
+									請輸入 e-mail
+								</input-template>
+								<input-template v-bind:class="{'form__group--correct': isCorrect}">
+									請輸入 e-mail
+								</input-template>
+								<!-- <input-template v-bind:class="{'hasValue': isValue} v-bind:class="{ 'form__group--correct': isCorrect }"></input-template> -->
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer></footer>
+	<template id="input-template">
+		<div class="form__group form__group--filled">
+			<label for="#!" class="label form__group--defalt" :class="{'hasValue': isValue}">
+				<div class="form__group__placeholder"><slot></slot></div>
+				<input type="email" class="form__group__input form__group__input--default" v-model="email">
+			</label>
+		</div>
+	</template>
+	<script>
+		Vue.component('input-template', {
+			template: '#input-template',
+			props: ['hasValue'],
+			data: function () {
+				return {
+					email: '',
+				}
+			},
+			computed: {
+				isValue: function() {
+					if (this.email !== '') {
+						return true
+					} else {
+						return false
+					}
+				},
+			}
+		});
+		new Vue({
+			el: '#app',
+			data: {
+				email: '',
+			},
+			computed: {
+				isCorrect: function() {
+					if (this.email !== '') {
+						return true
+					} else {
+						return false
+					}
+				}
+			}
+		})
+	</script>
+	<script type="text/javascript" src="assets/js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/vue/style.js"></script>
+</body>
+
+</html>

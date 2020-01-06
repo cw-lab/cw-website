@@ -1243,6 +1243,9 @@ section.map iframe {
 .day .day__item .section__item {
   margin-bottom: 12px;
 }
+.day .day__item.day__item--title .day__time::before {
+  background-color: #151515;
+}
 .day .day__item .day__time {
   position: relative;
   padding-top: 0.5em;
@@ -1266,7 +1269,8 @@ section.map iframe {
   right: -4px;
   width: 8px;
   height: 8px;
-  background-color: #151515;
+  border: 1px solid #151515;
+  background-color: #fff;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1414,6 +1418,7 @@ section.map iframe {
   color: #FADB00;
   font-size: 60px;
   font-weight: 500;
+  word-break: keep-all;
 }
 .ppt-page header .h1 {
   color: #A6A6A6;

@@ -3504,6 +3504,33 @@ header ul.member__list a:hover {
   color: #D60C18;
 }
 
+.paginate {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.paginate li {
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 28px;
+  width: 30px;
+  text-align: center;
+}
+.paginate li.active {
+  color: #fff;
+  background-color: #D60C18;
+  border-color: #D60C18;
+}
+.paginate a {
+  display: block;
+  color: #171717;
+  border: 1px solid #EEEEEE;
+}
+.paginate a:hover {
+  color: #D60C18;
+}
+
 main {
   margin-bottom: 40px;
   justify-content: space-between;

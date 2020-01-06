@@ -224,6 +224,19 @@
   margin-top: 0.5em;
   margin-bottom: 0;
 }
+.serial__page section.group .flex-container .col--left p {
+  margin-top: 0px;
+}
+@media (min-width: 768px) {
+  .serial__page section.group .flex-container .col--left p {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .serial__page section.group .flex-container .col--left p {
+    margin-bottom: 20px;
+  }
+}
 .serial__page section.group .content__group {
   font-size: 1rem;
   border: 1px solid #D3D5D7;

@@ -187,6 +187,17 @@
                         margin-bottom: 0;
                     }
                 }
+                .col--left {
+                    p {
+                        margin-top: 0px;
+                        @include breakpoint(768px) {
+                            margin-bottom: 0;
+                        }
+                        @include breakpoint(max-width 767px) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
             }
             .content__group {
                 font-size: 1rem;

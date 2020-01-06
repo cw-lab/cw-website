@@ -35,14 +35,6 @@ $(function(){
 		$('body').removeClass('message__open');
 		$('.black').removeClass('opened black-theater');
 	})
-	$('.black').click(function(){
-		if ( $(this).hasClass('black-theater') ) {
-			$('.theater').fadeOut();
-			$('.theater iframe').attr('src', '');
-			$('body').removeClass('message__open');
-			$('.black').removeClass('opened black-theater');
-		}
-	});
 	function phaseText() {
 		$('.list__group--author .phase').each(function(){
 			var pwidth = $(this).outerWidth(),

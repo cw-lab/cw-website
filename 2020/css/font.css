@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'cwef';
+    src: url('../fonts/cwef.eot?lkf2jh');
+    src: url('../fonts/cwef.eot?lkf2jh#iefix') format('embedded-opentype'), url('../fonts/cwef.ttf?lkf2jh') format('truetype'), url('../fonts/cwef.woff?lkf2jh') format('woff'), url('../fonts/cwef.svg?lkf2jh#cwef') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'cwef' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eyeoff:before {
+    content: "\e900";
+}
+
+.icon-eyeon:before {
+    content: "\e901";
+}

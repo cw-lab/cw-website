@@ -258,7 +258,7 @@ ul, ol {
   margin-top: 40px !important;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .mt40-md {
     margin-top: 40px !important;
   }

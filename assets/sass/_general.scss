@@ -54,7 +54,7 @@ ul, ol {
 	margin-top: 40px !important;
 }
 .mt40-md {
-	@include breakpoint(768px) {
+	@include breakpoint(1024px) {
 		margin-top: 40px !important;
 	}
 }

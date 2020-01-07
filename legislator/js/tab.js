@@ -48,7 +48,7 @@ $(function() {
                 barhtml += filteredtabCart[a]['issue_eng'];
                 barhtml += '" data-keyword="';
                 barhtml += filteredtabCart[a]['data'][b]['keyword'];
-                barhtml += '">看全部</div></div>';
+                barhtml += '">看更多原始貼文</div></div>';
             }
             barhtml += '</div></div>';
         }

@@ -1168,6 +1168,7 @@ p {
         border: 1px solid #343434;
         @include translateX(-50%);
         @include transition(all 0.3s);
+        word-break: keep-all;
         cursor: pointer;
         &:hover {
             color: #fff;

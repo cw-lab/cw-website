@@ -258,6 +258,12 @@ ul, ol {
   margin-top: 40px !important;
 }
 
+@media (min-width: 768px) {
+  .mt40-md {
+    margin-top: 40px !important;
+  }
+}
+
 .mt10 {
   margin-top: 10px !important;
 }

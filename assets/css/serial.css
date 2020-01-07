@@ -290,8 +290,7 @@
 .serial__page section.group .content__group .content__total__amount span {
   padding-left: 1em;
 }
-.serial__page section.group > h3,
-.serial__page section.group > .h3 {
+.serial__page section.group h3, .serial__page section.group .h3 {
   margin-bottom: 5px;
 }
 .serial__page section.group[class*='--disabled'] h3,

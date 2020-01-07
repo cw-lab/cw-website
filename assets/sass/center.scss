@@ -213,6 +213,80 @@
 			}
 		}
 	}
+	@include breakpoint(max-width 1023px) {
+		.h1 {
+			font-size: 22px;
+		}
+		.h2 {
+			font-size: 18px;
+		}
+	}
+	.card__group {
+		display: flex;
+		flex-wrap: wrap;
+		.card__item {
+			position: relative;
+			display: block;
+			align-self: auto;
+			width: 100%;
+			padding: 25px 60px 25px 25px;
+			margin-bottom: 20px;
+			border: 1px solid $gray-200;
+			@include breakpoint(660px) {
+				margin-left: 20px;
+				padding: 25px 60px 25px 30px;
+			}
+			@media screen and (min-width: 660px) and (max-width: 920px) {
+				width: calc( (100% - 20px) / 2);
+				&:nth-child(2n + 1) {
+					margin-left: 0;
+				}
+			}
+			@include breakpoint(920px) {
+				width: calc( (100% - 40px) / 3);
+				&:nth-child(3n + 1) {
+					margin-left: 0;
+				}
+			}
+			> * {
+				@include transition(color 0.3s);
+			}
+			> span {
+				display: block;
+				color: $text;
+			}
+			.card__title {
+				position: relative;
+				margin-bottom: 15px;
+				font-weight: 500;
+				&::before {
+					@extend %before-after;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+					width: 2em;
+					height: 2px;
+					background-color: $primary;
+				}
+			}
+			i.icon {
+				position: absolute;
+				top: 50%;
+				right: 20px;
+				color: $gray-200;
+				font-size: 1.45em;
+				@include translateY(-50%);
+			}
+			&:hover {
+				> .card__title {
+					color: $primary;
+				}
+				i.icon {
+					color: $text;
+				}
+			}
+		}
+	}
 	.list__group {
 		.list__item {
 			border: 1px solid $gray-200;
@@ -600,14 +674,6 @@
 			span {
 				display: inline-block;
 				margin: 0 .5em;
-			}
-		}
-		@include breakpoint(max-width 1023px) {
-			.h1 {
-				font-size: 22px;
-			}
-			.h2 {
-				font-size: 18px;
 			}
 		}
 		p {

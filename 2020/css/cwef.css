@@ -878,6 +878,19 @@ section.map iframe {
     height: 100%;
   }
 }
+section.download .bg-blue {
+  background-color: #003399;
+}
+section.download .bg-blue iframe {
+  min-height: 700px;
+  height: 100%;
+}
+section.download .sponsor {
+  background-color: #fafafa;
+}
+section.download .sponsor img {
+  background-color: rgba(255, 255, 255, 0.5);
+}
 
 .circle {
   width: 200px;

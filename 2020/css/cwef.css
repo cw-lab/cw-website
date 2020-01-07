@@ -262,9 +262,14 @@ a.btn {
   margin-right: auto;
   font-weight: 500;
   text-align: center;
-  width: 150px;
+  width: 130px;
   height: 50px;
   line-height: 50px;
+}
+@media (min-width: 1024px) {
+  a.btn {
+    width: 150px;
+  }
 }
 a.btn.btn--xs {
   width: 80px;
@@ -373,6 +378,11 @@ nav h5 img {
 }
 @media (min-width: 768px) {
   nav h5 img {
+    height: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  nav h5 img {
     height: 50px;
   }
 }
@@ -397,6 +407,11 @@ nav .main-nav {
 }
 @media (min-width: 768px) {
   nav .main-nav a.btn {
+    margin-left: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  nav .main-nav a.btn {
     margin-left: 40px;
   }
 }
@@ -407,8 +422,8 @@ nav .main-nav {
 }
 nav .main-nav a:not(.btn) {
   display: block;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: -1px;
   color: #fff;
   font-size: 1.125em;
@@ -418,6 +433,12 @@ nav .main-nav a:not(.btn) {
     padding-top: 29px;
     padding-bottom: 29px;
     border-bottom: 3px solid transparent;
+  }
+}
+@media (min-width: 1024px) {
+  nav .main-nav a:not(.btn) {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 767px) {
@@ -692,34 +713,6 @@ header .forum address {
   transform: rotate(45deg) translateX(3px) translateY(3px);
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-weight: 400;
-  background-color: #003399;
-}
-footer p {
-  color: #fff;
-}
-footer p a {
-  color: #fff;
-  text-decoration: underline;
-}
-footer ul {
-  list-style: none;
-}
-footer ul li {
-  display: inline-block;
-}
-footer ul li a {
-  display: block;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-footer ul li img {
-  height: 36px;
-}
-
 section {
   position: relative;
 }
@@ -879,16 +872,30 @@ section.map iframe {
   }
 }
 section.download .bg-blue {
-  background-color: #003399;
+  background-color: #353535;
 }
 section.download .bg-blue .iframe-height {
   position: relative;
   width: 100%;
-  height: 0;
-  padding-top: calc((1040px * 71.5) / 100);
   overflow: hidden;
 }
-section.download .bg-blue .iframe-height iframe {
+@media (max-width: 767px) {
+  section.download .bg-blue .iframe-height {
+    height: 0;
+    padding-top: calc((100% * 140) / 100);
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+  section.download .bg-blue .iframe-height {
+    padding-top: calc((100% * 71.5) / 100);
+  }
+}
+@media (min-width: 1200px) {
+  section.download .bg-blue .iframe-height {
+    height: 100%;
+  }
+}
+section.download .bg-blue iframe {
   position: absolute;
   top: 0;
   left: 0;

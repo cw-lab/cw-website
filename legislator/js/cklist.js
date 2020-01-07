@@ -29691,11 +29691,6 @@ var cklist = [{
     {
         "country": "ty1",
         "post_name": "鄭運鵬",
-        "post_keyword": "中共"
-    },
-    {
-        "country": "ty1",
-        "post_name": "鄭運鵬",
         "post_keyword": "年改"
     },
     {

@@ -3444,7 +3444,7 @@
         "img": "tc1-01.jpg",
         "selected": "",
         "gender": "男",
-        "age": "?",
+        "age": "",
         "family": "否",
         "kinship": "",
         "yuan_rate": "-",

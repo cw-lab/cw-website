@@ -992,7 +992,7 @@ section.download .sponsor img {
   line-height: 1.15;
 }
 .trendCard h5 span {
-  display: inline-block;
+  display: block;
 }
 .trendCard a.btn {
   margin-top: 20px;

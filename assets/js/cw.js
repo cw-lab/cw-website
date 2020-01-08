@@ -17,6 +17,11 @@ $(function(){
 	$('.opacity').click(function() {
 		$('.sideMenu').removeClass('show');
 		$('.opacity').removeClass('opened');
+		if ($(this).hasClass("menubar__user")) {
+			$('.menubar__user--login .desktop i.icon').removeClass('active');
+			$('.opacity').removeClass('menubar__user');
+			$('.menubar__user--member').slideUp();
+		}
 	});
 	$('.sideMenu .moreItem > a').click(function() {
 		$(this).toggleClass('open');
@@ -169,11 +174,15 @@ $(window).load(function() {
 		$(this).parent().siblings("ul").slideToggle();
     	event.stopPropagation();
 	})
+	$(".li__group--id").click(function(event){
+		event.stopPropagation();
+	})
 	// 第二層
 	$("nav[class*='menubar--sub'] ul.menubar__user > li").click(function() {
 		$(this).children(".menubar__user--member").slideToggle();
 		$(this).children('.menubar__user--login, .menubar__user--signin').children('.desktop').children('i.icon-down').toggleClass("active");
 		$(this).children('.menubar__user--login, .menubar__user--signin').children('.mobile').children('i').toggleClass("icon-user-filled icon-cancel");
+		$(".opacity").toggleClass("opened menubar__user");
 		if (width < 1024) {
 			$("body").toggleClass("slide__open");
 		} else {

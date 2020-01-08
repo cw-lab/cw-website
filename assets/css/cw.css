@@ -1855,6 +1855,15 @@ aside.menubar--left ul li .li__group a.sns-line:hover > span {
 aside.menubar--left > ul > li .li__group {
   position: relative;
 }
+.menubar__user--member > ul > li .li__group--id,
+aside.menubar--left > ul > li .li__group--id {
+  padding: 15px 25px;
+  line-height: 1.25;
+}
+.menubar__user--member > ul > li .li__group--id span,
+aside.menubar--left > ul > li .li__group--id span {
+  display: block;
+}
 .menubar__user--member > ul > li .li__group > a,
 aside.menubar--left > ul > li .li__group > a {
   width: 100%;
@@ -1864,10 +1873,6 @@ aside.menubar--left > ul > li .li__group > a {
 .menubar__user--member > ul > li .li__group > a.sns i + span,
 aside.menubar--left > ul > li .li__group > a.sns i + span {
   margin-left: 5px;
-}
-.menubar__user--member > ul > li .li__group > a span,
-aside.menubar--left > ul > li .li__group > a span {
-  display: block;
 }
 .menubar__user--member > ul > li .li__group > i.more,
 aside.menubar--left > ul > li .li__group > i.more {
@@ -1921,7 +1926,7 @@ aside.menubar--left.opened {
   left: 0;
   width: 0;
   height: 0;
-  z-index: 11;
+  z-index: 9;
 }
 .opacity.opened, .black.opened {
   width: 100%;

@@ -1,3 +1,6 @@
+body.slide__open {
+    overflow: hidden;
+}
 nav {
 	a {
 		display: block;
@@ -217,109 +220,65 @@ nav {
 		&--sub2 {
 			position: absolute;
 			top: 50%;
-			right: 10px;
-			font-size: 14px;
+			right: 0;
+			// font-size: 14px;
 			@include translateY(-50%);
 			z-index: 10;
+			@include breakpoint(1024px) {
+				right: 10px;
+			}
 			> .container {
 				width: auto;
 				justify-content: flex-end;
-				ul {
-					@extend %list-reset;
-					position: relative;
-				}
-				> ul:not(.sns__group) {
-					justify-content: flex-end;
-					&:first-child {
-						@include breakpoint(max-width 1023px) {
+			}
+			ul {
+				@extend %list-reset;
+			}
+			.menubar__user {
+				margin-left: 16px;
+				.menubar__user--signin,
+				.menubar__user--login {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					color: $text;
+					line-height: 1rem;
+					.desktop {
+						display: none;
+						@include breakpoint(1024px) {
+							display: flex;
+							align-items: center;
+						}
+						i.icon {
+							display: block;
+							margin-left: 7px;
+							height: 0.875em;
+							font-weight: bold;
+							@include transition(transform 0.3s);
+							&.active {
+								@include rotate(180deg);
+							}
+						}
+						// 未登入
+						> a {
+							padding: 10px 0;
+							color: $text;
+							&:hover {
+								color: $primary;
+							}
+							+ a {
+								margin-left: 25px;
+							}
+						}
+					}
+					.mobile {
+						font-size: 1.5em;
+						@include breakpoint(1024px) {
 							display: none;
 						}
 					}
-					> li {
-						margin-left: 16px;
-						> .menubar__user--login {
-							padding-top: 10px;
-							padding-bottom: 10px;
-							color: $black;
-							line-height: 1rem;
-							cursor: pointer;
-							i {
-								margin-left: 7px;
-								height: 0.875em;
-								font-weight: bold;
-								@include transition(transform 0.3s);
-								&.deg {
-									@include rotate(180deg);
-								}
-							}
-							@include breakpoint(max-width 767px) {
-								.desktop {
-									display: none;
-								}
-								.mobile {
-									font-size: 1.5em;
-								}
-							}
-							@include breakpoint(768px) {
-								.desktop {
-									display: flex;
-									align-items: center;
-								}
-								.mobile {
-									display: none;
-								}
-								&:hover {
-									color: $primary;
-								}
-							}
-						}
-					}
 				}
-			}
-			ul.menubar__user {
-				margin-left: 16px;
-				&::before {
-					@extend %before-after;
-					position: absolute;
-					top: 10px;
-					left: 0px;
-					background-color: $black;
-					@include breakpoint(1024px) {
-						width: 1px;
-						height: 1rem;
-					}
-				}
-				> li {
-					position: relative;
-					.menubar__user__slide {
-						display: none;
-						position: absolute;
-						min-width: 130px;
-						width: 100%;
-						@include breakpoint(768px) {
-							left: -10px;
-						}
-						@include breakpoint(max-width 767px) {
-							right: -15px;
-						}
-						ul {
-							background-color: $white;
-							border: 1px solid $gray-200;
-							li {
-								a {
-									padding: 15px 20px;
-									color: $black;
-									&:hover {
-										color: $primary;
-									}
-								}
-								&.hr {
-									height: 1px;
-									background-color: $gray-200;
-								}
-							}
-						}
-					}
+				.menubar__user--login {
+					cursor: pointer;
 				}
 			}
 		}
@@ -433,16 +392,51 @@ nav {
 		}
 	}
 }
+.menubar__user--member {
+	position: absolute;
+	width: 150px;
+	right: 0;
+	@include breakpoint(1024px) {
+		top: 48px;
+	}
+	@include breakpoint(max-width 1023px) {
+		top: 52px;
+	}
+	> ul {
+		&.desktop {
+			@include breakpoint(max-width 1023px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			@include breakpoint(1024px) {
+				display: none;
+			}
+		}
+	}
+}
+.menubar__user--member,
 aside.menubar--left {
 	font-size: 1rem;
-	border: 1px solid $gray-200;
+	border: solid $gray-200;
 	background-color: $white;
+	@include breakpoint(1024px) {
+		border-width: 1px;
+	}
+	@include breakpoint(max-width 1023px) {
+		border-width: 1px 0;
+		width: 100vw;
+		overflow: scroll;
+	}
 	ul {
-		padding: 0;
-		margin: 0;
-		list-style: none;
+		position: relative;
+		@extend %list-reset;
 		li {
 			line-height: 1;
+			&.hr {
+				height: 1px;
+				background-color: $gray-200;
+			}
 			.li__group {
 				display: flex;
 				flex-wrap: wrap;
@@ -478,22 +472,23 @@ aside.menubar--left {
 		}
 	}
 	> ul {
-		+ ul {
-			border-top: 1px solid $gray-200;
-		}
+		// + ul {
+		// 	border-top: 1px solid $gray-200;
+		// }
 		> li {
 			.li__group {
 				position: relative;
 				> a {
-					display: flex;
 					width: 100%;
 					padding: 15px 25px;
 					line-height: 1.25;
-					align-items: center;
 					&.sns {
 						i + span {
 							margin-left: 5px;
 						}
+					}
+					span {
+						display: block;
 					}
 				}
 				> i.more {

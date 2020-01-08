@@ -173,9 +173,16 @@ body {
 	@include breakpoint(768px) {
 		padding-bottom: 190px;
 	}
-	@include breakpoint(max-width 767px) {
-		&.footer--downward {
-			padding-bottom: 160px;
+	&.footer--downward {
+		padding-bottom: 160px;
+		@include breakpoint(768px) {
+			padding-bottom: 190px;
+		}
+	}
+	&.footer--normal {
+		padding-bottom: 280px;
+		@include breakpoint(768px) {
+			padding-bottom: 255px;
 		}
 	}
 }
@@ -187,7 +194,6 @@ a {
 	@include breakpoint(1024px) {
 		transition: color .2s, background-color .2s;
 	}
-	;
 }
 img {
 	display: block;

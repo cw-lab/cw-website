@@ -162,17 +162,33 @@ $(window).load(function() {
 	$("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
 	$("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
 	// sidemenu-left
-	$(".menubar--left > ul > li > .li__group > i.more").click(function() {
+	$(".menubar--left > ul > li > .li__group > i.more, .menubar__user--member > ul > li > .li__group > i.more").click(function(event) {
 		$(this).toggleClass("active");
 		$(this).parent().parent().siblings().children().children("i.more").removeClass("active");
 		$(this).parent().parent().siblings().children("ul").slideUp();
 		$(this).parent().siblings("ul").slideToggle();
+    	event.stopPropagation();
 	})
 	// 第二層
 	$("nav[class*='menubar--sub'] ul.menubar__user > li").click(function() {
-		$(".menubar__user__slide").slideToggle();
-		$("nav[class*='menubar--sub'] ul.menubar__user > li > a > i").toggleClass("deg");
+		$(this).children(".menubar__user--member").slideToggle();
+		$(this).children('.menubar__user--login, .menubar__user--signin').children('.desktop').children('i.icon-down').toggleClass("active");
+		$(this).children('.menubar__user--login, .menubar__user--signin').children('.mobile').children('i').toggleClass("icon-user-filled icon-cancel");
+		if (width < 1024) {
+			$("body").toggleClass("slide__open");
+		} else {
+			$("body").removeClass("slide__open");
+		}
 	})
+	if (width < 1024) {
+		$(".menubar__user--member").css("height", (window.innerHeight - 60) + "px");
+	} else {
+		$(".menubar__user--member").css("height", "auto");
+		if ($('.menubar__user--member').siblings().hasClass('menubar__user--signin')) {
+			$('.menubar__user--member').hide();
+			$('nav.menubar--sub2 .menubar__user .menubar__user--signin .mobile i.icon').removeClass("icon-cancel").addClass("icon-user-filled");
+		}
+	}
 	// message: Notification 3 秒後關閉
 	// setTimeout(function() {
 	// 	$(".message--notification").fadeOut();
@@ -385,6 +401,15 @@ $(window).load(function() {
 			$(".plan__item__right").height(highestCol);
 		} else {
 			$(".plan__item__right").height('');
+		}
+		if (width < 1024) {
+			$(".menubar__user--member").css("height", (window.innerHeight - 60) + "px");
+		} else {
+			$(".menubar__user--member").css("height", "auto");
+			if ($('.menubar__user--member').siblings().hasClass('menubar__user--signin')) {
+				$('.menubar__user--member').hide();
+				$('nav.menubar--sub2 .menubar__user .menubar__user--signin .mobile i.icon').removeClass("icon-cancel").addClass("icon-user-filled");
+			}
 		}
 	})
 });

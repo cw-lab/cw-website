@@ -95,6 +95,25 @@ $(function() {
         ppthtml += '" download class="btn btn--gray btn--sm btn--outlined">下載PPT</a></div>';
     }
     $('.pttCard__group').html(ppthtml);
+    if (location.href.match('report')) {
+        var reporthtml = '';
+        for (var k = 0; k < report.length; k++) {
+            reporthtml += '<div class="reportCard col-lg-4 col-md-6">';
+            reporthtml += '<a class="card__img" href="' + report[k]['link'] + '">';
+            reporthtml += '<img src="';
+            reporthtml += report[k]['img'];
+            reporthtml += '" alt="';
+            reporthtml += report[k]['title'];
+            reporthtml += '"><div class="card__body"><a href="' + report[k]['link'] + '" class="card__title serif">';
+            reporthtml += report[k]['title'];
+            reporthtml += '</a><div class="card__essay">';
+            reporthtml += report[k]['essay'];
+            reporthtml += '</div></div><a href="';
+            reporthtml += report[k]['link'];
+            reporthtml += '" download class="btn btn--gray btn--sm btn--outlined">完整報導</a></div>';
+        }
+        $('.reportCard__group').html(reporthtml);
+    }
     $(window).scroll(function() {
         // <nav>滑到畫面一半後固定
         var scroll = $(window).scrollTop();

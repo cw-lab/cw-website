@@ -1150,6 +1150,9 @@ section.download .sponsor img {
 .card.card--lightbox .card__img {
   max-width: 150px;
 }
+.card.card--lightbox .card__title span {
+  display: inline-block;
+}
 .card .card__img {
   display: block;
   margin-left: 20vw;

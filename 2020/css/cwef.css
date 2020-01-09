@@ -1519,6 +1519,10 @@ section.download .sponsor img {
   background-color: #fff;
 }
 
+.lightbox {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 .lightbox .black {
   position: fixed;
   top: 0;

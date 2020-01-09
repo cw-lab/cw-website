@@ -92,9 +92,9 @@
         "img": "29_okumura",
         "name_ch": "奧村幸彥 ",
         "name_eng": "Yukihiko Okumura",
-        "title_ch": "NTT Docomo 5G 創新推進室 5G 方式研究團隊擔當部長",
+        "title_ch": "NTT DOCOMO 5G 創新推進室擔當部長",
         "title_eng": "Senior Manager of 5G Laboratories, NTT DOCOMO, INC.",
-        "essay_ch": "自 1992 年起在 NTT DOCOMO 任職至今，目前負責5G技術研究與實際場域運用開發，找尋5G在實際生活場景中應用的可能性。東京理科大學電機碩士與日本東北大學工程博士。",
+        "essay_ch": "自 1992 年起在 NTT DOCOMO 任職至今，目前負責 5G 技術研究與實際場域運用開發，找尋 5G 在實際生活場景中應用的可能性。東京理科大學電機碩士與日本東北大學工程博士。",
         "essay_eng": "Yukihiko Okumura has focused on studying and developing broadband mobile communication technologies and systems since joining NTT Docomo in 1992. He is currently responsible for research into 5G radio access technologies and promoting field trials of 5G systems to explore how 5G can be applied to people’s daily lives. Mr. Okumura also serves as a leader of the 5G Trial Promotion Group under Japan’s Fifth Generation Mobile Communications Promotion Forum."
     },
     {
@@ -121,7 +121,7 @@
         "name_eng": "Joseph Chou",
         "title_ch": "<span>資誠聯合會計師事務所</span><span>所長暨聯盟事業執行長</span>",
         "title_eng": "Chairman & CEO, PricewaterhouseCoopers Taiwan",
-        "essay_ch": "周建宏為東海大學物理系畢業、美國密蘇里大學會計碩士。專長包括台美上市櫃輔導、跨國併購諮詢、公司治理及內控制度諮詢、企業變革管理、企業社會責任報告諮詢等。曾經擔任資誠聯合會計師事務所執行長、審計服務部營運長、PwC New York Global Capital Market Group partner、PwC San Jose Assurance manager等。 ",
+        "essay_ch": "周建宏為東海大學物理系畢業、美國密蘇里大學會計碩士。專長包括台美上市櫃輔導、跨國併購諮詢、公司治理及內控制度諮詢、企業變革管理、企業社會責任報告諮詢等。曾經擔任資誠聯合會計師事務所執行長、審計服務部營運長、PwC New York Global Capital Market Group partner、PwC San Jose Assurance manager 等。",
         "essay_eng": "Joseph Chou has a physics degree from Tunghai University and an accounting masters from the University of Missouri. His professional career has focused on audit and assurance, IPO and market listing services, cross-border M&A consultation, corporate governance and internal control consultation, change management and CSR report consultation. He provides end-to-end solutions to help clients address complex management and accounting issues and capital raising needs."
     },
     {
@@ -263,9 +263,9 @@
         "img": "15_weng",
         "name_ch": "翁朝棟",
         "name_eng": "Chao-Tung Wong",
-        "title_ch": "中國鋼鐵股份有限公司董事長",
+        "title_ch": "中鋼公司董事長",
         "title_eng": "Chairman, China Steel Corporation",
-        "essay_ch": "中鋼董事長，曾是中鋼首位由行政部門出身的總經理。任職近40年，帶領中鋼完成史上第一件海外投資案，成功於越南設廠，積極朝國際化發展。",
+        "essay_ch": "中鋼董事長，曾是中鋼首位由行政部門出身的總經理。任職近 40 年，帶領中鋼完成史上第一件海外投資案，成功於越南設廠，積極朝國際化發展。",
         "essay_eng": "The chairman of China Steel Corporation, Chao-tung Wong was China Steel’s first president to rise up through the ranks of administrative departments. Among his many achievements during his nearly 40 years with the company, he successfully led China Steel’s first overseas investment project, the construction and operation of a cold-rolled steel plant in Vietnam, earlier this decade. As chairman, he has continued the emphasis on the company’s internationalization."
     }
 ];

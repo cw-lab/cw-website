@@ -185,7 +185,7 @@ th {
   padding: 0;
 }
 
-section.site::before, .price__body::after, .reportCard .card__img::after, .day .day__item .day__time::before, .display__block.hide::before {
+section.site::before, .price__body::after, .card .card__body + .card__body::before, .reportCard .card__img::after, .day .day__item .day__time::before, .display__block.hide::before, .lightbox .lightbox__close::before, .lightbox .lightbox__close::after {
   content: '';
   display: block;
 }
@@ -230,6 +230,9 @@ body {
   height: 100%;
   font-family: Roboto, 'Noto Sans TC', sans-serif;
   font-weight: 300;
+}
+body.lightbox--opened {
+  overflow: hidden;
 }
 
 .serif {
@@ -1124,21 +1127,28 @@ section.download .sponsor img {
 }
 
 .card {
+  position: relative;
+}
+.card.card--standard {
+  padding-bottom: 30px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 50px;
 }
 @media (min-width: 414px) {
-  .card {
+  .card.card--standard {
     flex: 0 0 50%;
     max-width: 50%;
   }
 }
 @media (min-width: 768px) {
-  .card {
+  .card.card--standard {
     flex: 0 0 25%;
     max-width: 25%;
   }
+}
+.card.card--lightbox .card__img {
+  max-width: 150px;
 }
 .card .card__img {
   display: block;
@@ -1167,6 +1177,23 @@ section.download .sponsor img {
 }
 .card .card__body {
   text-align: center;
+}
+.card .card__body + .card__body {
+  position: relative;
+  margin-top: 1.5em;
+  padding-top: 0.5em;
+}
+.card .card__body + .card__body::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 2px;
+  background-color: #F8B72C;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .card .card__title {
   color: #151515;
@@ -1208,18 +1235,22 @@ section.download .sponsor img {
   }
 }
 .card .card__title--description {
+  margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.25;
 }
-.card .btn {
-  display: none;
+.card .btn.btn--outlined.btn--gray {
   position: absolute;
   bottom: 0;
   left: 50%;
+  cursor: pointer;
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+.card .btn.btn--outlined.btn--gray:hover {
+  color: #151515;
 }
 
 .pttCard {
@@ -1486,6 +1517,57 @@ section.download .sponsor img {
 .btn--show:hover {
   color: #003399;
   background-color: #fff;
+}
+
+.lightbox .black {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #151515;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+.lightbox .lightbox__body {
+  position: relative;
+  padding: 30px;
+}
+@media (min-width: 768px) {
+  .lightbox .lightbox__body {
+    padding: 50px;
+  }
+}
+.lightbox .lightbox__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.lightbox .lightbox__close::before, .lightbox .lightbox__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 1px;
+  background-color: #151515;
+}
+.lightbox .lightbox__close::before {
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+.lightbox .lightbox__close::after {
+  -moz-transform: translateX(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) rotate(-45deg);
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
+}
+.lightbox .lightbox__close:hover::before, .lightbox .lightbox__close:hover::after {
+  background-color: #003399;
 }
 
 .index-page header .container {

@@ -46,32 +46,61 @@ $(function() {
     }
     var html = '';
     for (var i = 0; i < data.length; i++) {
-        html += '<div class="card"><div class="card__img"><img src="images/speaker/' + data[i]["img"];
-        html += '.jpg" alt="' + data[i]["nameCh"];
-        html += '"></div><div class="card__body"><div class="card__title serif card__title--ch">' + data[i]["nameCh"];
-        html += '</div><div class="card__title serif card__title--en">' + data[i]["nameEn"];
-        html += '</div><div class="card__title card__title--description">' + data[i]["title"];
-        html += '</div><a href="#!" class="btn btn--outlined btn--small btn--gray text-uppercase">more</a></div></div>';
+        html += '<div class="card card--standard"><div class="card__img"><img src="images/speaker/' + data[i]["img"];
+        html += '.jpg" alt="' + data[i]["name_ch"];
+        html += '"></div><div class="card__body"><div class="card__title serif card__title--ch">' + data[i]["name_ch"];
+        html += '</div><div class="card__title serif card__title--en">' + data[i]["name_eng"];
+        html += '</div><div class="card__title card__title--description">' + data[i]["title_ch"];
+        html += '</div><a class="btn btn--outlined btn--sm btn--gray btn--speaker text-uppercase" data-name="' + data[i]["name_ch"] + '">more</a></div></div>';
     }
     $('.speaker-row').html(html);
     $('.btn--show').click(function() {
         $(this).hide();
         $(this).siblings('.display__block').removeClass('hide');
     });
+    $('.btn--speaker').click(function() {
+        var name = $(this).data('name'),
+            detailhtml = '';
+        // console.log(name);
+        for (var m = 0; m < data.length; m++) {
+            if (name == data[m]["name_ch"]) {
+                detailhtml += '<div class="card__img mx-auto"><img src="images/speaker/';
+                detailhtml += data[m]["img"];
+                detailhtml += '.jpg" alt="';
+                detailhtml += data[m]["name_ch"];
+                detailhtml += '"></div><div class="card__body"><div class="card__title serif card__title--ch">';
+                detailhtml += data[m]["name_ch"];
+                detailhtml += '</div><div class="card__title card__title--description mb-3 mt-2">';
+                detailhtml += data[m]["title_ch"];
+                detailhtml += '</div><div class="card__essay text-left">';
+                detailhtml += data[m]["essay_ch"];
+                detailhtml += '</div></div><div class="card__body"><div class="card__title serif card__title--ch">';
+                detailhtml += data[m]["name_eng"];
+                detailhtml += '</div><div class="card__title card__title--description mb-3 mt-2">';
+                detailhtml += data[m]["title_eng"];
+                detailhtml += '</div><div class="card__essay text-left">';
+                detailhtml += data[m]["essay_eng"];
+                detailhtml += '</div></div>';
+            }
+        }
+        $('.lightbox').fadeIn();
+        $('body').addClass('lightbox--opened');
+        $('.card--lightbox').html(detailhtml);
+    })
     // 判斷有沒有值
     $('input').each(function() {
-            if (this.value) {
+        if (this.value) {
+            $(this).parent().addClass('hasValue');
+        }
+        $(this).on('change keyup copy paste cut', function() {
+            if (!this.value) {
+                $(this).parent().removeClass('hasValue');
+            } else {
                 $(this).parent().addClass('hasValue');
             }
-            $(this).on('change keyup copy paste cut', function() {
-                if (!this.value) {
-                    $(this).parent().removeClass('hasValue');
-                } else {
-                    $(this).parent().addClass('hasValue');
-                }
-            })
         })
-        // 是否顯示密碼
+    })
+    // 是否顯示密碼
     $('.input-group .icon-eye').click(function() {
         $(this).siblings('input').attr('type',
             $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
@@ -114,6 +143,10 @@ $(function() {
         }
         $('.reportCard__group').html(reporthtml);
     }
+    $('.lightbox .black, .lightbox .lightbox__close').click(function(){
+        $('.lightbox').fadeOut(300);
+        $('body').removeClass('lightbox--opened');
+    });
     $(window).scroll(function() {
         // <nav>滑到畫面一半後固定
         var scroll = $(window).scrollTop();

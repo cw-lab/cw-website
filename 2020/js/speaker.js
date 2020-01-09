@@ -90,7 +90,7 @@
     },
     {
         "img": "29_okumura",
-        "name_ch": "奧村幸彥 ",
+        "name_ch": "奧村幸彥",
         "name_eng": "Yukihiko Okumura",
         "title_ch": "NTT DOCOMO 5G 創新推進室擔當部長",
         "title_eng": "Senior Manager of 5G Laboratories, NTT DOCOMO, INC.",
@@ -108,7 +108,7 @@
     },
     {
         "img": "30_takashige",
-        "name_ch": "高重吉邦 ",
+        "name_ch": "高重吉邦",
         "name_eng": "Yoshikuni Takashige",
         "title_ch": "富士通株式會社全球行銷戰略長",
         "title_eng": "Chief Strategist, Global Marketing Unit, Fujitsu Limited",
@@ -228,7 +228,7 @@
         "name_ch": "山田周平",
         "name_eng": "Shuhei Yamada",
         "title_ch": "日本經濟新聞社亞洲科技總編輯",
-        "title_eng": "Asia Tech Chief Editor, Business News Department, Nikkei  ",
+        "title_eng": "Asia Tech Chief Editor, Business News Department, Nikkei",
         "essay_ch": "早稻田大學政治經濟系政治學科畢業後，進入日本經濟新聞社，主跑產業新聞。之後出任台北支局長、亞洲部編輯、中國總局長，合著有《習近平的支配》、《了解現代中國的 52 章》，為日本媒體界知名的中國和台灣專家。",
         "essay_eng": "Shuhei YAMADA joined Nikkei after graduating with a degree in political science from Waseda University in Tokyo and primarily covered industry news. At Nikkei, he later headed Taipei bureau, also has served as an editor of the Asian news department and China Headquaters Chief. He is a co-author of books on Xi Jinping's regime and current Chinese issues, recognized as one of the leading experts on China and Taiwan in Japanese media."
     },
@@ -256,7 +256,7 @@
         "name_eng": "Steve Chen",
         "title_ch": "YouTube 共同創辦人",
         "title_eng": "Co-founder, YouTube",
-        "essay_ch": "知名台裔美籍創業家，2005 年創立的 YouTube，現已成全球最大的影片分享網站。他也是台灣國發會首張就業金卡持卡人，於 2018 年夏天舉家遷台並成立公司，要串連矽谷與台灣資源。 ",
+        "essay_ch": "知名台裔美籍創業家，2005 年創立的 YouTube，現已成全球最大的影片分享網站。他也是台灣國發會首張就業金卡持卡人，於 2018 年夏天舉家遷台並成立公司，要串連矽谷與台灣資源。",
         "essay_eng": "An American entrepreneur who was born in Taiwan, Steve Chen co-founded YouTube in 2005 and it has since become the world’s biggest video-sharing website. In 2018 he moved back to Taiwan with his family and was the first recipient of the National Development Council’s “Employment Gold Card,” an initiative to make it easier for foreign professionals to work in Taiwan. He has sought to connect Taiwan with Silicon Valley resources and help the local startup community. "
     },
     {

@@ -359,6 +359,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 button,
@@ -2235,6 +2236,117 @@ body.message__open {
   z-index: -1;
 }
 
+.tooltips {
+  position: relative;
+}
+.tooltips:before {
+  content: attr(data-tooltips);
+  position: absolute;
+  padding: 6px 8px;
+  max-width: 200px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.45;
+  background: #48545D;
+  white-space: nowrap;
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -moz-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -o-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -o-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -webkit-transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  z-index: 2;
+}
+.tooltips--top:before {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  -moz-transform: translateX(-50%) translateY(2px);
+  -ms-transform: translateX(-50%) translateY(2px);
+  -webkit-transform: translateX(-50%) translateY(2px);
+  transform: translateX(-50%) translateY(2px);
+}
+@media (min-width: 768px) {
+  .tooltips--top:hover:before, .tooltips--top.active:before {
+    display: block;
+    visibility: visible;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+  }
+}
+.tooltips--bottom:before {
+  top: 100%;
+  left: 50%;
+  margin-top: 10px;
+  -moz-transform: translateX(-50%) translateY(-2px);
+  -ms-transform: translateX(-50%) translateY(-2px);
+  -webkit-transform: translateX(-50%) translateY(-2px);
+  transform: translateX(-50%) translateY(-2px);
+}
+@media (min-width: 768px) {
+  .tooltips--bottom:hover:before, .tooltips--bottom.active:before {
+    display: block;
+    visibility: visible;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    -webkit-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
+  }
+}
+.tooltips--left:before {
+  top: 50%;
+  right: 100%;
+  margin-right: 10px;
+  -moz-transform: translateX(2px) translateY(-50%);
+  -ms-transform: translateX(2px) translateY(-50%);
+  -webkit-transform: translateX(2px) translateY(-50%);
+  transform: translateX(2px) translateY(-50%);
+}
+@media (min-width: 768px) {
+  .tooltips--left:hover:before, .tooltips--left.active:before {
+    display: block;
+    visibility: visible;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+  }
+}
+.tooltips--right:before {
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  -moz-transform: translateX(-2px) translateY(-50%);
+  -ms-transform: translateX(-2px) translateY(-50%);
+  -webkit-transform: translateX(-2px) translateY(-50%);
+  transform: translateX(-2px) translateY(-50%);
+}
+@media (min-width: 768px) {
+  .tooltips--right:hover:before, .tooltips--right.active:before {
+    display: block;
+    visibility: visible;
+    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+    opacity: 1;
+    -moz-transform: translateX(0) translateY(-50%);
+    -ms-transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%);
+  }
+}
+.tooltips-wrap:before {
+  width: 200px;
+  white-space: normal;
+}
+
 header {
   position: relative;
 }
@@ -2539,6 +2651,15 @@ footer .imglink__app__img li + li {
   .feature__page section .img__group {
     margin-left: -20px;
     margin-right: -20px;
+  }
+}
+.feature__page section .img__group .container {
+  max-width: 880px;
+}
+@media (max-width: 767px) {
+  .feature__page section .img__group .container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .feature__page section .img__group img {

@@ -7,6 +7,7 @@
 @import "../../_navigation";
 @import "_button";
 @import "../../_message";
+@import "../../_tooltips";
 @import "../../_header";
 @import "../../_container";
 @import "../../_footer";
@@ -109,6 +110,13 @@
 			@include breakpoint (max-width 767px) {
 				margin-left: -20px;
 				margin-right: -20px;
+			}
+			.container {
+				max-width: 880px;
+				@include breakpoint (max-width 767px) {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
 			}
 			img {
 				width: 100%;

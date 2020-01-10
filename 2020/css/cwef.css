@@ -274,6 +274,11 @@ a.btn {
     width: 150px;
   }
 }
+a.btn.btn--md {
+  width: 100px;
+  height: 36px;
+  line-height: 36px;
+}
 a.btn.btn--xs {
   width: 80px;
   height: 26px;
@@ -332,6 +337,12 @@ a.btn.btn--outlined.btn--dark:hover {
   background-color: #151515;
   border-color: #151515;
 }
+a.btn.btn--disabled {
+  color: #fff;
+  background-color: #A6A6A6;
+  border-color: #A6A6A6;
+  cursor: not-allowed;
+}
 a.btn.btn--gradient {
   color: #151515;
   background-color: #F8B72C;
@@ -357,7 +368,7 @@ a.btn.btn--gradient:hover {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
   left: 0;
@@ -417,7 +428,7 @@ nav .main-nav {
 }
 @media (min-width: 1024px) {
   nav .main-nav a.btn {
-    margin-left: 40px;
+    margin-left: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -1040,6 +1051,7 @@ section.download .sponsor img {
   -o-transition: background 0.3s;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
+  cursor: not-allowed;
 }
 .price .full {
   position: absolute;
@@ -1082,29 +1094,6 @@ section.download .sponsor img {
 }
 .price__body a.btn {
   float: right;
-}
-.price:hover {
-  background-color: #003399;
-}
-.price:hover .price__discount {
-  color: #fff;
-}
-.price:hover .price__discount span {
-  color: #fff;
-}
-.price:hover .price__title {
-  color: #fff;
-}
-.price:hover a.btn {
-  background-color: #FADB00;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFADB00', endColorstr='#FFFADB00');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZGIwMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZhZGIwMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #fadb00), color-stop(100%, #fadb00));
-  background-image: -moz-linear-gradient(left, #fadb00 0%, #fadb00 100%);
-  background-image: -webkit-linear-gradient(left, #fadb00 0%, #fadb00 100%);
-  background-image: linear-gradient(to right, #fadb00 0%, #fadb00 100%);
 }
 
 .right {
@@ -1730,6 +1719,13 @@ section.download .sponsor img {
   background-image: -moz-linear-gradient(left, #f8b72c 0%, #fadb00 100%);
   background-image: -webkit-linear-gradient(left, #f8b72c 0%, #fadb00 100%);
   background-image: linear-gradient(to right, #f8b72c 0%, #fadb00 100%);
+}
+.ppt-page .alert-danger ul {
+  list-style: none;
+  color: #721c24;
+  font-size: 1rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
 }
 
 /*# sourceMappingURL=cwef.css.map */

@@ -28,6 +28,11 @@
 				background-color: transparent;
 			}
 		}
+		.menubar__user--member {
+			@include breakpoint (max-width 1023px) {
+				top: 47px;
+			}
+		}
 	}
 	header {
 		position: relative;
@@ -41,7 +46,7 @@
 						display: inline-block;
 						vertical-align: middle;
 						&.channelLogo {
-							margin-left: 15px;
+							// margin-left: 15px;
 							img {
 								height: 35px;
 								@include breakpoint(1024px) {
@@ -79,6 +84,7 @@
 			&.text {
 				&--summary {
 					color: $surface;
+					font-weight: 400;
 				}
 				&--update {
 					font-size: 0.875rem;

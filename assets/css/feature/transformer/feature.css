@@ -2573,6 +2573,11 @@ footer .imglink__app__img li + li {
 .feature__page nav.menubar--sub2 ul.menubar__user::before {
   background-color: transparent;
 }
+@media (max-width: 1023px) {
+  .feature__page nav.menubar--sub2 .menubar__user--member {
+    top: 47px;
+  }
+}
 .feature__page header {
   position: relative;
   background-color: #fff;
@@ -2586,12 +2591,10 @@ footer .imglink__app__img li + li {
   vertical-align: middle;
 }
 .feature__page header .flex .logoSet a.cwLogo {
-  margin-left: 6px;
   margin-right: 6px;
 }
 @media (min-width: 1024px) {
   .feature__page header .flex .logoSet a.cwLogo {
-    margin-left: 10px;
     margin-right: 10px;
   }
 }

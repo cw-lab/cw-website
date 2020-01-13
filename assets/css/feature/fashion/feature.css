@@ -2574,6 +2574,11 @@ footer .imglink__app__img li + li {
 .feature__page nav.menubar--sub2 ul.menubar__user::before {
   background-color: transparent;
 }
+@media (max-width: 1023px) {
+  .feature__page nav.menubar--sub2 .menubar__user--member {
+    top: 47px;
+  }
+}
 .feature__page header {
   position: relative;
   background-color: #fff;
@@ -2585,9 +2590,6 @@ footer .imglink__app__img li + li {
 .feature__page header .header__logo > .container .logoSet a {
   display: inline-block;
   vertical-align: middle;
-}
-.feature__page header .header__logo > .container .logoSet a.channelLogo {
-  margin-left: 15px;
 }
 .feature__page header .header__logo > .container .logoSet a.channelLogo img {
   height: 35px;
@@ -2620,6 +2622,7 @@ footer .imglink__app__img li + li {
 }
 .feature__page section p.text--summary {
   color: #d1b156;
+  font-weight: 400;
 }
 .feature__page section p.text--update {
   font-size: 0.875rem;

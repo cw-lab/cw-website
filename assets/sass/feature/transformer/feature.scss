@@ -23,6 +23,11 @@
 				background-color: transparent;
 			}
 		}
+		.menubar__user--member {
+			@include breakpoint (max-width 1023px) {
+				top: 47px;
+			}
+		}
 	}
 	header {
 		position: relative;
@@ -35,10 +40,10 @@
 					display: inline-block;
 					vertical-align: middle;
 					&.cwLogo {
-						margin-left: 6px;
+						// margin-left: 6px;
 						margin-right: 6px;
 						@include breakpoint(1024px) {
-							margin-left: 10px;
+							// margin-left: 10px;
 							margin-right: 10px;
 						}
 						img {

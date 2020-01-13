@@ -37,7 +37,7 @@
 						<span class="label__title">財經</span>
 						<span class="label__txt">貿易戰、全球與區域經濟、投資理財</span>
 						<span class="label--check">
-							<input type="checkbox" name="財經">
+							<input type="checkbox" name="財經" checked>
 							<span class="label__radio__mark"></span>
 							<span class="label__radio__txt"></span>
 						</span>
@@ -55,7 +55,7 @@
 						<span class="label__title">國際兩岸</span>
 						<span class="label__txt">反送中、英脫歐、兩岸與全球局勢</span>
 						<span class="label--check">
-							<input type="checkbox" name="國際兩岸">
+							<input type="checkbox" name="國際兩岸" checked>
 							<span class="label__radio__mark"></span>
 							<span class="label__radio__txt"></span>
 						</span>
@@ -101,6 +101,19 @@
 			</form>
 		</section>
 	</main>
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function () {
+			var $checkboxes = $('.label__group input[type="checkbox"]');
+			$checkboxes.change(function(){
+				if ( $checkboxes.filter(':checked').length < 1 ) {
+					$('.btn').attr('href', '#!').attr('disabled', true);
+				} else {
+					$('.btn').attr('href', 'user.html').attr('disabled', false);
+				}
+			});
+		})
+	</script>
 </body>
 
 </html>

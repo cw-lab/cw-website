@@ -97,7 +97,7 @@
 						</span>
 					</label>
 				</div>
-				<a href="user.html" class="btn btn--contained btn--100 mt10">儲存</a>
+				<button class="btn btn--contained btn--100 mt10">儲存</button>
 			</form>
 		</section>
 	</main>
@@ -107,9 +107,9 @@
 			var $checkboxes = $('.label__group input[type="checkbox"]');
 			$checkboxes.change(function(){
 				if ( $checkboxes.filter(':checked').length < 1 ) {
-					$('.btn').attr('href', '#!').attr('disabled', true);
+					$('.btn').attr('disabled', true);
 				} else {
-					$('.btn').attr('href', 'user.html').attr('disabled', false);
+					$('.btn').attr('disabled', false);
 				}
 			});
 		})

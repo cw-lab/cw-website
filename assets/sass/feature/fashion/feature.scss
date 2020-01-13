@@ -29,6 +29,9 @@
 			}
 		}
 		.menubar__user--member {
+			@include breakpoint (1024px) {
+				top: 57px;
+			}
 			@include breakpoint (max-width 1023px) {
 				top: 47px;
 			}

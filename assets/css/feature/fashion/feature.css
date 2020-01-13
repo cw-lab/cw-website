@@ -2574,6 +2574,11 @@ footer .imglink__app__img li + li {
 .feature__page nav.menubar--sub2 ul.menubar__user::before {
   background-color: transparent;
 }
+@media (min-width: 1024px) {
+  .feature__page nav.menubar--sub2 .menubar__user--member {
+    top: 57px;
+  }
+}
 @media (max-width: 1023px) {
   .feature__page nav.menubar--sub2 .menubar__user--member {
     top: 47px;

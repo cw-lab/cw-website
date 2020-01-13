@@ -34,6 +34,12 @@ i.icon {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
+.icon-security:before {
+	content: "\e944";
+}
+.icon-pushpin:before {
+	content: "\e945";
+}
 .icon-member-notification:before {
 	content: "\e93c";
 }

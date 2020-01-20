@@ -1395,7 +1395,7 @@ nav.menubar--left {
   top: 0;
   left: -300px;
   width: 300px;
-  max-height: 100vh;
+  max-height: 100%;
   font-size: 1rem;
   border: 1px solid #D3D5D7;
   background-color: #fff;
@@ -1619,9 +1619,26 @@ nav.menubar--sub2 {
 }
 nav.menubar--sub2 > .container {
   width: auto;
+  align-items: center;
   justify-content: flex-end;
 }
+nav.menubar--sub2 a.logout {
+  margin-left: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #171717;
+  line-height: 1rem;
+}
+nav.menubar--sub2 a.logout:hover {
+  color: #D60C18;
+}
+@media (max-width: 1023px) {
+  nav.menubar--sub2 a.logout {
+    display: none;
+  }
+}
 nav.menubar--sub2 .menubar__user {
+  position: relative;
   margin-left: 16px;
 }
 nav.menubar--sub2 .menubar__user .menubar__user--signin,
@@ -1685,6 +1702,9 @@ nav.menubar--sub2 .menubar__user .menubar__user--login .mobile {
 }
 nav.menubar--sub2 .menubar__user .menubar__user--login {
   cursor: pointer;
+}
+nav.menubar--sub2 .menubar__user .menubar__user--login.menubar__user--text {
+  cursor: auto;
 }
 nav.menubar--belt ul {
   display: none;
@@ -1783,11 +1803,13 @@ nav.menubar--belt--third > ul > li > ul {
 @media (min-width: 1024px) {
   .menubar__user--member {
     top: 48px;
+    right: 0;
   }
 }
 @media (max-width: 1023px) {
   .menubar__user--member {
     top: 52px;
+    right: -15px;
   }
 }
 @media (max-width: 1023px) {

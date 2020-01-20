@@ -540,10 +540,19 @@
 				}
 				.list__img {
 					width: 100px;
+					height: 100px;
 					@include border-radius(50%);
+					background-color: $gray;
 					overflow: hidden;
 					@include breakpoint(768px) {
 						align-self: center;
+					}
+					img {
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 100%;
+						@include translateY(-50%);
 					}
 				}
 				.list__txt {

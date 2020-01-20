@@ -11,7 +11,7 @@ nav {
 			top: 0;
 			left: -300px;
 			width: 300px;
-			max-height: 100vh;
+			max-height: 100%;
 			font-size: 1rem;
 			border: 1px solid $gray-200;
 			background-color: $white;
@@ -229,12 +229,27 @@ nav {
 			}
 			> .container {
 				width: auto;
+				align-items: center;
 				justify-content: flex-end;
 			}
 			ul {
 				@extend %list-reset;
 			}
+			a.logout {
+				margin-left: 16px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				color: $text;
+				line-height: 1rem;
+				&:hover {
+					color: $primary;
+				}
+				@include breakpoint(max-width 1023px) {
+					display: none;
+				}
+			}
 			.menubar__user {
+				position: relative;
 				margin-left: 16px;
 				.menubar__user--signin,
 				.menubar__user--login {
@@ -279,6 +294,9 @@ nav {
 				}
 				.menubar__user--login {
 					cursor: pointer;
+					&.menubar__user--text {
+						cursor: auto;
+					}
 				}
 			}
 		}
@@ -398,9 +416,11 @@ nav {
 	right: 0;
 	@include breakpoint(1024px) {
 		top: 48px;
+		right: 0;
 	}
 	@include breakpoint(max-width 1023px) {
 		top: 52px;
+		right: -15px;
 	}
 	> ul {
 		&.desktop {

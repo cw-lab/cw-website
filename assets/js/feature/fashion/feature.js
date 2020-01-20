@@ -47,7 +47,7 @@ $(function() {
 		$(".slider__img").each(function() {
 			var desktopImg = $(this).data('desktop'),
 				mobileImg = $(this).data('mobile');
-			if ((width / height) <= 0.5625) {
+			if ((width / height) <= 1) {
 				$(this).attr('src', mobileImg)
 			} else {
 				$(this).attr('src', desktopImg)

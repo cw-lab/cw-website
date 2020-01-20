@@ -94,6 +94,16 @@ $(function() {
 		}
 		naviTop(width);
 		dotsTop(width);
+		$(window).scroll(function() {
+			var width = $(window).width(),
+				scroll = $(window).scrollTop(),
+				container = $(".header__logo .container").outerWidth();
+			if (scroll >= height) {
+				$(".sns__group").css('opacity', 1);
+			} else {
+				$(".sns__group").css('opacity', 0);
+			}
+		});
 		$(window).resize(function() {
 			var width = $(window).width(),
 				height = $(window).height(),

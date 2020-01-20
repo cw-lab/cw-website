@@ -7,7 +7,7 @@ nav.menubar--sub ul.menubar__user::before, nav.menubar--sub2 ul.menubar__user::b
   display: block;
 }
 
-.list-reset, nav.menubar--sub > .container ul, nav.menubar--sub2 > .container ul, nav.menubar--belt ul, .feature__page section .sponsor__group {
+.list-reset, nav.menubar--sub > .container ul, nav.menubar--sub2 > .container ul, nav.menubar--belt ul, .feature__page section .sponsor__group, .sns__group {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -2262,6 +2262,49 @@ footer p a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
+}
+
+.sns__group {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 20px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  z-index: 5;
+}
+@media (max-width: 1023px) {
+  .sns__group {
+    right: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  .sns__group {
+    bottom: 3em;
+    left: calc(910px + (100% - 880px) / 2);
+    font-size: 40px;
+  }
+}
+.sns__group li {
+  width: 46px;
+}
+.sns__group li + li {
+  margin-top: 0.25rem;
+}
+.sns__group li > a.sns {
+  display: block;
+  padding: 6px 0;
+  border: 1px solid;
+  border-color: transparent;
+  background-color: transparent;
+}
+.sns__group li > a.sns img {
+  margin: auto;
+  width: 28px;
+}
+.sns__group li > a.sns:hover {
+  border-color: #aaa;
+  background-color: #fff;
 }
 
 /*# sourceMappingURL=feature.css.map */

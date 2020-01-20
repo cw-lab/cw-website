@@ -555,3 +555,41 @@ footer {
         }
     }
 }
+.sns__group {
+    @extend %list-reset;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 20px;
+    @include opacity(0);
+    z-index: 5;
+    @include breakpoint(max-width 1023px) {
+        right: 10px;
+    }
+    @include breakpoint(1024px) {
+        bottom: 3em;
+        left: calc(910px + (100% - 880px) / 2);
+        font-size: 40px;
+    }
+    li {
+        width: 46px;
+        + li {
+            margin-top: 0.25rem;
+        }
+        > a.sns {
+            display: block;
+            padding: 6px 0;
+            border: 1px solid;
+            border-color: transparent;
+            background-color: transparent;
+            img {
+                margin: auto;
+                width: 28px;
+            }
+            &:hover {
+                border-color: #aaa;
+                background-color: #fff;
+            }
+        }
+    }
+}

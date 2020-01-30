@@ -1679,6 +1679,7 @@ nav.menubar--belt--third > ul > li > ul {
   .menubar__user--member {
     top: 52px;
     right: -15px;
+    opacity: 1 !important;
   }
 }
 @media (max-width: 1023px) {

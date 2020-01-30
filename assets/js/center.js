@@ -55,6 +55,7 @@ $(function(){
 		find2LinkElement	= $(".menubar__user--member > ul > li > ul > li > .li__group > a[href$='" + pathLastSpilt + "'], aside.menubar--left > ul > li > ul > li > .li__group > a[href$='" + pathLastSpilt + "']");
 	findLinkElement.parent().parent().addClass('now');
 	find2LinkElement.parent().parent().addClass('now');
+	find2LinkElement.parent().parent().parent().show();
 	find2LinkElement.parent().parent().parent().parent().addClass('now');
 	find2LinkElement.parent().parent().parent().siblings('.li__group').children('i.icon').addClass('active');
 	$("a[href$='password']").click(function(){

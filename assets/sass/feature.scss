@@ -64,6 +64,11 @@
 		>.container-fluid {
 			width: 100%;
 		}
+		&:nth-last-child(2) {
+			> .container {
+				padding-bottom: 40px;
+			}
+		}
 		p {
 			&.text {
 				&--summary {
@@ -166,6 +171,54 @@
 				}
 			}
 		}
+		.author {
+			&__group {
+				@extend %list-reset;
+				display: flex;
+				flex-wrap: wrap;
+				li {
+					width: 50%;
+					padding: 10px;
+					@include breakpoint(768px) {
+						width: 20%;
+					}
+					a {
+						display: block;
+						.author__img {
+							display: block;
+							position: relative;
+							width: 100%;
+							height: 0;
+							padding-top: 100%;
+							overflow: hidden;
+							img {
+								position: absolute;
+								top: 0%;
+								left: 0%;
+								width: 100%;
+								height: auto;
+							}
+						}
+						.author__title {
+							display: block;
+							margin-top: 10px;
+							margin-bottom: 10px;
+							color: $black;
+							font-size: 1.125em;
+							text-align: center;
+							@include transition(color 0.3s);
+							@include breakpoint (max-width 767px) {
+								padding-left: 20px;
+								padding-right: 20px;
+							}
+						}
+						&:hover .author__title {
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
 		.sponsor {
 			&__group {
 				@extend %list-reset;
@@ -174,14 +227,17 @@
 				align-items: center;
 				justify-content: center;
 				li {
-					width: 150px;
-					margin: 10px;
+					width: 50%;
+					padding: 10px;
 					@include breakpoint(768px) {
-						width: 195px;
+						width: 25%;
 					}
-					img {
-						width: 100%;
-						height: auto;
+					a {
+						display: block;
+						img {
+							width: 100%;
+							height: auto;
+						}
 					}
 				}
 			}

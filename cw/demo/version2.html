@@ -16,22 +16,22 @@
 		header {
 			position: fixed;
 			top: 0;
-			width: 100%;
+			left: 50%;
+			width: 1440px;
 			height: 61px;
 			background-color: #fff;
+			transform: translateX(-50%);
+			z-index: 5;
 		}
 		header img {
 			position: absolute;
 			top: 0;
-			left: 50%;
+			left: 0;
 			transition: opacity 0.3s;
-			transform: translateX(-50%);
 		}
 		header img,
-		main img {
+		main .bg > img {
 			width: 1440px;
-			margin-left: auto;
-			margin-right: auto;
 		}
 		header img.scroll,
 		header.scroll_down img.normal,
@@ -43,26 +43,65 @@
 			opacity: 1;
 		}
 		main {
+			width: 1440px;
 			padding-top: 61px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		main .bg {
+			position: relative;
+		}
+		main .bg1 {
+			z-index: 2;
+		}
+		main .bg2,
+		main .bg3 {
+			z-index: 1;
+		}
+		aside {
+			position: absolute;
+			top: 310px;
+			right: calc( (100% - 1440px) / 2 + 83px );
 		}
 		.sns {
+			position: absolute;
+			top: 0;
+			left: 234.5px;
+		}
+		.sns.bottomfixed {
+			position: absolute;
+			top: auto;
+			bottom: 45px;
+			left: 234.5px;
+		}
+		.sns.rightfixed {
 			position: fixed;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
+			top: 96px;
+			left: calc( (100% - 1440px) / 2 + 234.5px );
 		}
 	</style>
 </head>
 <body>
 	<header>
-		<img class="normal" src="v1/header.png" alt="正常版header">
-		<img class="scroll" src="v1/headerscroll.png" alt="往上滑版header">
+		<img class="normal" src="v2/header.png" alt="正常版header">
+		<img class="scroll" src="v2/headerscroll.png" alt="往上滑版header">
 	</header>
-	<div class="sns">
-		<img src="v1/share.png" width="44" alt="分享">
-	</div>
 	<main>
-		<img src="v1/bg.png" alt="文章">
+		<div class="bg bg1">
+			<img src="v2/bg1.png" alt="文章1">
+			<aside>
+				<img src="v2/aside.png" width="153" alt="熱門文章">
+			</aside>
+		</div>
+		<div class="bg bg2">
+			<img src="v2/bg2.png" alt="文章2">
+			<div class="sns">
+				<img src="v2/share.png" width="44" alt="分享">
+			</div>
+		</div>
+		<div class="bg bg3">
+			<img src="v2/bg3.png" alt="文章3">
+		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script>
@@ -71,11 +110,24 @@
 				iScrollPos = 0;
 			$(window).scroll(function() {
 				// 往上滾動出現<header>
-				var iCurScrollPos = $(this).scrollTop();
+				var iCurScrollPos = $(this).scrollTop(),
+					bg2Top = $('main .bg2').offset().top - 96,
+					bg3Top = $('main .bg3').offset().top - 96 - 45 - $('.sns').outerHeight();
+				// console.log(iCurScrollPos, bg2Top, bg3Top)
 				if (iCurScrollPos >= 400) {
 					$("header").addClass("scroll_down");
 				} else {
 					$("header").removeClass("scroll_down");
+				}
+				if ( (iCurScrollPos > bg2Top) && (iCurScrollPos < bg3Top) ) {
+					$(".sns").addClass("rightfixed");
+				} else {
+					$(".sns").removeClass("rightfixed");
+				}
+				if ( iCurScrollPos >= bg3Top ) {
+					$(".sns").addClass("bottomfixed");
+				} else {
+					$(".sns").removeClass("bottomfixed");
 				}
 				if (iCurScrollPos < iScrollPos) {
 					$("header").addClass("scroll");

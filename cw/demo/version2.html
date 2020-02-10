@@ -54,30 +54,41 @@
 		main .bg1 {
 			z-index: 2;
 		}
-		main .bg2,
-		main .bg3 {
+		main .bg2 {
 			z-index: 1;
-		}
-		aside {
-			position: absolute;
-			top: 310px;
-			right: calc( (100% - 1440px) / 2 + 83px );
 		}
 		.sns {
 			position: absolute;
 			top: 0;
 			left: 234.5px;
+			margin-left: -3px;
 		}
 		.sns.bottomfixed {
 			position: absolute;
 			top: auto;
-			bottom: 45px;
+			bottom: 41px;
 			left: 234.5px;
 		}
 		.sns.rightfixed {
 			position: fixed;
 			top: 96px;
 			left: calc( (100% - 1440px) / 2 + 234.5px );
+		}
+		.next {
+			position: absolute;
+			top: 0;
+			right: 52.5px;
+		}
+		.next.bottomfixed {
+			position: absolute;
+			top: auto;
+			bottom: 41px;
+			right: 52.5px;
+		}
+		.next.rightfixed {
+			position: fixed;
+			top: 96px;
+			right: calc( (100% - 1440px) / 2 + 52.5px );
 		}
 	</style>
 </head>
@@ -89,18 +100,21 @@
 	<main>
 		<div class="bg bg1">
 			<img src="v2/bg1.png" alt="文章1">
-			<aside>
-				<img src="v2/aside.png" width="153" alt="熱門文章">
-			</aside>
 		</div>
 		<div class="bg bg2">
 			<img src="v2/bg2.png" alt="文章2">
+			<div class="bg bg3">
+				<img src="v2/bg3.png" alt="文章3">
+				<div class="next">
+					<img src="v2/next.png" width="278" alt="上下一篇">
+				</div>
+			</div>
 			<div class="sns">
-				<img src="v2/share.png" width="44" alt="分享">
+				<img src="v2/share.png" width="36" alt="分享">
 			</div>
 		</div>
-		<div class="bg bg3">
-			<img src="v2/bg3.png" alt="文章3">
+		<div class="bg bg4">
+			<img src="v2/bg4.png" alt="文章3">
 		</div>
 	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -112,22 +126,34 @@
 				// 往上滾動出現<header>
 				var iCurScrollPos = $(this).scrollTop(),
 					bg2Top = $('main .bg2').offset().top - 96,
-					bg3Top = $('main .bg3').offset().top - 96 - 45 - $('.sns').outerHeight();
-				// console.log(iCurScrollPos, bg2Top, bg3Top)
+					bg3Top = $('main .bg3').offset().top - 96,
+					nextbg4Top = $('main .bg4').offset().top - 96 - 41 - $('.next').outerHeight(),
+					bg4Top = $('main .bg4').offset().top - 96 - 41 - $('.sns').outerHeight();
+				// console.log(iCurScrollPos, bg2Top, bg3Top, bg4Top)
 				if (iCurScrollPos >= 400) {
 					$("header").addClass("scroll_down");
 				} else {
 					$("header").removeClass("scroll_down");
 				}
-				if ( (iCurScrollPos > bg2Top) && (iCurScrollPos < bg3Top) ) {
+				if ( (iCurScrollPos > bg2Top) && (iCurScrollPos < bg4Top) ) {
 					$(".sns").addClass("rightfixed");
 				} else {
 					$(".sns").removeClass("rightfixed");
 				}
-				if ( iCurScrollPos >= bg3Top ) {
+				if ( iCurScrollPos >= bg4Top ) {
 					$(".sns").addClass("bottomfixed");
 				} else {
 					$(".sns").removeClass("bottomfixed");
+				}
+				if ( (iCurScrollPos > bg3Top) && (iCurScrollPos < nextbg4Top) ) {
+					$(".next").addClass("rightfixed");
+				} else {
+					$(".next").removeClass("rightfixed");
+				}
+				if ( iCurScrollPos >= nextbg4Top ) {
+					$(".next").addClass("bottomfixed");
+				} else {
+					$(".next").removeClass("bottomfixed");
 				}
 				if (iCurScrollPos < iScrollPos) {
 					$("header").addClass("scroll");

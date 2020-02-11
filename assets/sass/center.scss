@@ -666,6 +666,11 @@
 			border: 0px;
 		}
 	}
+	.message--notification p span {
+		@include breakpoint(max-width 1023px) {
+			display: block;
+		}
+	}
 }
 .right__page {
 	section {

@@ -87,9 +87,17 @@
                 display: none;
                 margin-left: -20px;
                 margin-right: -20px;
-                background: #f2f2f2;
-                @include breakpoint(max-width 1023px) {
-                    background: #4b4b77;
+                background: #4b4b77;
+                @include breakpoint(1024px) {
+                    background: #f2f2f2;
+                    a {
+                        @include breakpoint(1024px) {
+                            color: $surface;
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
                 }
                 > li {
                     border-bottom: 1px solid #777;
@@ -158,6 +166,9 @@ footer {
     }
 }
 .feature__page {
+    &.menu--opened {
+        overflow: hidden;
+    }
     header {
         position: relative;
         padding-top: 10px;

@@ -436,9 +436,7 @@
 		</footer>
 		<div class="message message--notification message--center" style="display: none;">
 			<div class="message__txt">
-				<p class="mtb0">
-					您已成功追蹤此作者
-				</p>
+				<p class="mtb0 text-center"></p>
 			</div>
 		</div>
 		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
@@ -452,7 +450,7 @@
 						$(this).addClass('btn--contained');
 						$(this).html('訂閱');
 						$(this).removeClass('btn--outlined');
-						$('.message--notification p').text('您已取消訂閱' + $(this).siblings('.list__txt').children('.title__group').children('.title').text().split("（")[0] );
+						$('.message--notification p').html('您已取消訂閱<span>' + $(this).siblings('.list__txt').children('.title__group').children('.title').text().split("（")[0] + '</span>');
 						$('.message--notification').fadeIn();
 						setTimeout(function(){
 							$('.message--notification').fadeOut()
@@ -461,7 +459,7 @@
 						$(this).addClass('btn--outlined');
 						$(this).html('取消訂閱');
 						$(this).removeClass('btn--contained');
-						$('.message--notification p').text('您已訂閱' + $(this).siblings('.list__txt').children('.title__group').children('.title').text().split("（")[0] );
+						$('.message--notification p').html('您已訂閱<span>' + $(this).siblings('.list__txt').children('.title__group').children('.title').text().split("（")[0] + '</span>');
 						$('.message--notification').fadeIn();
 						setTimeout(function(){
 							$('.message--notification').fadeOut()

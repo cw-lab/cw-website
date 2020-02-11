@@ -47,6 +47,12 @@
     right: calc((100% - 1260px) / 2);
   }
 }
+.feature__page .edit__department {
+  padding: 0.35em 0;
+  font-size: 0.875em;
+  color: #6B7780;
+  background-color: #EEEEEE;
+}
 .feature__page section {
   border-top: 1px solid #D3D5D7;
 }

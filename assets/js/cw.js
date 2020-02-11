@@ -41,6 +41,11 @@ $(function(){
 			$('.message--dialogs').fadeOut(200);
 		}
 	});
+	if ( $('footer > .container > .flex').children('div').hasClass('imglink') ) {
+		$('body').addClass('footer--normal');
+	} else {
+		$('body').addClass('footer--downward');
+	}
 })
 $(window).load(function() {
 	var width = $(window).width(),

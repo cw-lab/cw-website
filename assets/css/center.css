@@ -800,6 +800,11 @@
   height: 100%;
   border: 0px;
 }
+@media (max-width: 1023px) {
+  .center__page .message--notification p span {
+    display: block;
+  }
+}
 
 .right__page section {
   padding-top: 60px;

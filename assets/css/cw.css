@@ -409,6 +409,16 @@ body.footer--downward {
 }
 @media (min-width: 768px) {
   body.footer--downward {
+    padding-bottom: 228px;
+  }
+}
+@media (min-width: 872px) {
+  body.footer--downward {
+    padding-bottom: 209px;
+  }
+}
+@media (min-width: 874px) {
+  body.footer--downward {
     padding-bottom: 190px;
   }
 }
@@ -417,7 +427,17 @@ body.footer--normal {
 }
 @media (min-width: 768px) {
   body.footer--normal {
-    padding-bottom: 255px;
+    padding-bottom: 228px;
+  }
+}
+@media (min-width: 872px) {
+  body.footer--normal {
+    padding-bottom: 209px;
+  }
+}
+@media (min-width: 874px) {
+  body.footer--normal {
+    padding-bottom: 190px;
   }
 }
 
@@ -3634,13 +3654,13 @@ footer {
   font-size: 0.8125rem;
   background-color: #EEEEEE;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   footer {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   footer > .container > .flex {
     flex-direction: column;
   }

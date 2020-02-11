@@ -177,13 +177,25 @@ body {
 	&.footer--downward {
 		padding-bottom: 160px;
 		@include breakpoint(768px) {
+			padding-bottom: 228px;
+		}
+		@include breakpoint(872px) {
+			padding-bottom: 209px;
+		}
+		@include breakpoint(874px) {
 			padding-bottom: 190px;
 		}
 	}
 	&.footer--normal {
 		padding-bottom: 280px;
 		@include breakpoint(768px) {
-			padding-bottom: 255px;
+			padding-bottom: 228px;
+		}
+		@include breakpoint(872px) {
+			padding-bottom: 209px;
+		}
+		@include breakpoint(874px) {
+			padding-bottom: 190px;
 		}
 	}
 }

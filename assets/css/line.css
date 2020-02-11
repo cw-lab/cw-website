@@ -402,6 +402,16 @@ body.footer--downward {
 }
 @media (min-width: 768px) {
   body.footer--downward {
+    padding-bottom: 228px;
+  }
+}
+@media (min-width: 872px) {
+  body.footer--downward {
+    padding-bottom: 209px;
+  }
+}
+@media (min-width: 874px) {
+  body.footer--downward {
     padding-bottom: 190px;
   }
 }
@@ -410,7 +420,17 @@ body.footer--normal {
 }
 @media (min-width: 768px) {
   body.footer--normal {
-    padding-bottom: 255px;
+    padding-bottom: 228px;
+  }
+}
+@media (min-width: 872px) {
+  body.footer--normal {
+    padding-bottom: 209px;
+  }
+}
+@media (min-width: 874px) {
+  body.footer--normal {
+    padding-bottom: 190px;
   }
 }
 

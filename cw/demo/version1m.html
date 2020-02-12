@@ -13,8 +13,22 @@
 		img {
 			display: block;
 		}
+		header {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 375px;
+			height: 62px;
+			background-color: #fff;
+			transform: translateX(-50%);
+			z-index: 5;
+		}
+		header.scroll {
+			position: fixed;
+		}
 		main {
 			width: 375px;
+			padding-top: 62px;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -24,10 +38,33 @@
 	</style>
 </head>
 <body>
+	<header>
+		<img src="v1m/header.png" width="375" alt="header">
+	</header>
 	<main>
 		<div class="bg bg1">
 			<img src="v1m/bg.png" width="375" alt="文章">
 		</div>
 	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var width = $(window).width(),
+				iScrollPos = 0;
+			$(window).scroll(function() {
+				// 往上滾動出現<header>
+				var iCurScrollPos = $(this).scrollTop();
+				if (iCurScrollPos < iScrollPos) {
+					$("header").addClass("scroll");
+				} else {
+					$("header").removeClass("scroll");
+				}
+				iScrollPos = iCurScrollPos;
+				if ($("header").offset().top == 0) {
+					$("header").removeClass("scroll");
+				}
+			});
+		})
+	</script>
 </body>
 </html>

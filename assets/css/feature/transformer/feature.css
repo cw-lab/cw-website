@@ -2309,6 +2309,12 @@ body.message__open {
   transition: opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   z-index: 2;
 }
+.tooltips:hover:before, .tooltips.active:before {
+  display: block;
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
 .tooltips--top:before {
   bottom: 100%;
   left: 50%;
@@ -2320,10 +2326,6 @@ body.message__open {
 }
 @media (min-width: 768px) {
   .tooltips--top:hover:before, .tooltips--top.active:before {
-    display: block;
-    visibility: visible;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
     -moz-transform: translateX(-50%) translateY(0);
     -ms-transform: translateX(-50%) translateY(0);
     -webkit-transform: translateX(-50%) translateY(0);
@@ -2341,10 +2343,6 @@ body.message__open {
 }
 @media (min-width: 768px) {
   .tooltips--bottom:hover:before, .tooltips--bottom.active:before {
-    display: block;
-    visibility: visible;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
     -moz-transform: translateX(-50%) translateY(0);
     -ms-transform: translateX(-50%) translateY(0);
     -webkit-transform: translateX(-50%) translateY(0);
@@ -2362,10 +2360,6 @@ body.message__open {
 }
 @media (min-width: 768px) {
   .tooltips--left:hover:before, .tooltips--left.active:before {
-    display: block;
-    visibility: visible;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
     -moz-transform: translateX(0) translateY(-50%);
     -ms-transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
@@ -2383,10 +2377,6 @@ body.message__open {
 }
 @media (min-width: 768px) {
   .tooltips--right:hover:before, .tooltips--right.active:before {
-    display: block;
-    visibility: visible;
-    filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-    opacity: 1;
     -moz-transform: translateX(0) translateY(-50%);
     -ms-transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);

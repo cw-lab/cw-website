@@ -16,6 +16,13 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 		@include transition(opacity 0.2s $cubic, transform 0.2s $cubic);
 		z-index: 2;
 	}
+	&:hover, &.active {
+		&:before {
+			display: block;
+			visibility: visible;
+			@include opacity(1);
+		}
+	}
 	&--top {
 		&:before {
 			bottom: 100%;
@@ -26,9 +33,6 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 		&:hover, &.active {
 			&:before {
 				@include breakpoint(768px) {
-					display: block;
-					visibility: visible;
-					@include opacity(1);
 					@include transform(translateX(-50%) translateY(0));
 				}
 			}
@@ -44,9 +48,6 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 		&:hover, &.active {
 			&:before {
 				@include breakpoint(768px) {
-					display: block;
-					visibility: visible;
-					@include opacity(1);
 					@include transform(translateX(-50%) translateY(0));
 				}
 			}
@@ -62,9 +63,6 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 		&:hover, &.active {
 			&:before {
 				@include breakpoint(768px) {
-					display: block;
-					visibility: visible;
-					@include opacity(1);
 					@include transform(translateX(0) translateY(-50%));
 				}
 			}
@@ -80,9 +78,6 @@ $cubic: cubic-bezier(.64,.09,.08,1);
 		&:hover, &.active {
 			&:before {
 				@include breakpoint(768px) {
-					display: block;
-					visibility: visible;
-					@include opacity(1);
 					@include transform(translateX(0) translateY(-50%));
 				}
 			}

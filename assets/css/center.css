@@ -164,6 +164,13 @@
 .center__page article .form .form__value.blank__show {
   color: #171717;
 }
+.center__page article .form .form__value a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+.center__page article .form .form__value a:hover {
+  color: #D60C18;
+}
 .center__page article .form .address__group {
   margin-top: 10px;
 }

@@ -106,6 +106,13 @@
 				&.blank__show {
 					color: $black;
 				}
+				a {
+					color: $surface;
+					text-decoration: underline;
+					&:hover {
+						color: $primary;
+					}
+				}
 			}
 			.address__group {
 				margin-top: 10px;

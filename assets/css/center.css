@@ -144,6 +144,12 @@
 .center__page article .form .form__edit > .h3 {
   font-weight: 600;
 }
+.center__page article .form .form__edit > .h3 span {
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: text-bottom;
+}
 .center__page article .form .form__edit:hover {
   background-color: #fafafa;
 }

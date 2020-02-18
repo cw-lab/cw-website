@@ -1,0 +1,176 @@
+@import "_basic";
+@import "_general";
+@import "_sheet";
+@import "_color";
+@import "_typography";
+@import "_font";
+@import "_iconography";
+@import "_navigation_feature";
+@import "_sidemenu"; //天下原版
+@import "_button";
+@import "_tooltips";
+@import "_message";
+@import "_header";
+main {
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+@import "_footer";
+@import "_container";
+.ad {
+    background-color: $white;
+    a {
+        display: block;
+        width: 100%;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+    }
+}
+.index__page {
+    .container {
+        @include breakpoint(1024px) {
+            width: 1000px;
+        }
+        @include breakpoint(1280px) {
+            width: 1140px;
+        }
+        @include breakpoint(1366px) {
+            width: 1280px;
+        }
+    }
+}
+
+p {
+    font-size: 1em;
+    &.emphasis {
+        color: $secondary;
+        a {
+            color: $secondary;
+            &:hover {
+                color: $secondary-variant;
+            }
+        }
+        &--small {
+            font-size: 0.875em;
+        }
+    }
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $gray-100;
+}
+
+.link-btn {
+    color: $surface;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+        color: $primary;
+    }
+}
+
+.loader {
+    position: fixed;
+    // display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    &::before {
+        @extend %before-after;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+    }
+    &__text {
+        color: $white;
+        font-size: 0.875em;
+        font-weight: 500;
+    }
+    &__animate {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include translate(-50%, -50%);
+    }
+    &__icon {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        &::before,
+        &::after {
+            @extend %before-after;
+            position: absolute;
+            top: 15px;
+            width: 25px;
+            height: 25px;
+            @include border-radius(50%);
+        }
+        &::before {
+            background: linear-gradient(90deg, $surface, darken($surface, 5%));
+            animation: rotation1 1s linear infinite
+        }
+        &::after {
+            background: linear-gradient(90deg, $primary, $primary-variant);
+            animation: rotation2 1s linear infinite
+        }
+    }
+}
+
+.separation {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    >* {
+        position: relative;
+    }
+    &--or {
+        &::before {
+            @extend %before-after;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            background-color: $gray-200;
+        }
+        span {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            background-color: $white;
+        }
+    }
+}
+
+@keyframes rotation1 {
+    from {
+        left: 5px;
+        z-index: 1;
+    }
+    to {
+        left: 25px;
+    }
+}
+
+@keyframes rotation2 {
+    from {
+        right: 5px;
+    }
+    to {
+        right: 25px;
+    }
+}

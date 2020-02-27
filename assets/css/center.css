@@ -142,13 +142,19 @@
   line-height: 1.5;
 }
 .center__page article .form .form__edit > .h3 {
+  position: relative;
+  padding-right: 1.25em;
   font-weight: 600;
 }
-.center__page article .form .form__edit > .h3 span {
-  display: inline-block;
-  font-weight: normal;
-  line-height: 1;
-  vertical-align: text-bottom;
+.center__page article .form .form__edit > .h3 i.icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  cursor: pointer;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .center__page article .form .form__edit:hover {
   background-color: #fafafa;

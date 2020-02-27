@@ -84,12 +84,15 @@
 					line-height: 1.5;
 				}
 				> .h3 {
+					position: relative;
+					padding-right: 1.25em;
 					font-weight: 600;
-					span {
-						display: inline-block;
-						font-weight: normal;
-						line-height: 1;
-						vertical-align: text-bottom;
+					i.icon {
+						position: absolute;
+						top: 50%;
+						right: 0;
+						cursor: pointer;
+						@include translateY(-50%);
 					}
 				}
 				&:hover {

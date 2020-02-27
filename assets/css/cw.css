@@ -2508,7 +2508,8 @@ a.btn:active::after {
 }
 button.btn--text,
 a.btn--text {
-  display: inline-block;
+  display: inline;
+  min-width: auto;
   padding: 0;
   color: #003a9f;
   text-decoration: underline;

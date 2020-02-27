@@ -228,7 +228,7 @@
 						</form>
 						<form class="form">
 							<div class="form__edit flex align-items-center justify-between">
-								<div class="h3 mtb0">會員等級 <span class="tooltips tooltips--right" data-tooltips="免費註冊為「一般會員」，訂購天下全閱讀或紙本雜誌即為「付費訂閱會員」，詳情請見會員權益"><i class="icon icon-question-circle"></i></span></div>
+								<div id="form__right" class="h3 mtb0">會員等級<i class="icon icon-question-circle"></i></div>
 							</div>
 							<div class="form__value">一般會員</div>
 						</form>
@@ -1204,6 +1204,18 @@
 				</div>
 			</div>
 		</div>
+		<div class="message message--dialogs" id="memberRight" style="display: none;">
+			<div class="message__container">
+				<i class="icon icon-cancel message__close"></i>
+				<div class="message__txt">
+					<h2>會員等級</h2>
+					<p>免費註冊為「一般會員」，訂購天下全閱讀或紙本雜誌即為「付費訂閱會員」，詳情請見<a href="#!" class="btn btn--text">會員權益</a>。</p>
+				</div>
+				<div class="message__btn">
+					<a href="#!" class="btn btn--contained btn__close">我知道了</a>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
 		<script type="text/javascript" src="../../assets/js/cw.js"></script>
@@ -1286,6 +1298,11 @@
 				$('#messagefail').click(function(){
 					$('body').addClass('message__open');
 					$('#savefail').fadeIn();
+					$('.black').addClass('opened');
+				});
+				$('#form__right').click(function(){
+					$('body').addClass('message__open');
+					$('#memberRight').fadeIn();
 					$('.black').addClass('opened');
 				});
 			})

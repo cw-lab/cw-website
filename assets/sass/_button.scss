@@ -84,7 +84,8 @@ a {
             }
         }
         &--text {
-            display: inline-block;
+            display: inline;
+            min-width: auto;
             padding: 0;
             color: $surface;
             text-decoration: underline;

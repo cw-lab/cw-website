@@ -240,7 +240,7 @@
 }
 @media (min-width: 768px) {
   .center__page article .form .oversea .form__group {
-    width: calc(100% - 140px - 2rem);
+    width: calc(100% - 140px - 1rem);
   }
 }
 @media (max-width: 767px) {

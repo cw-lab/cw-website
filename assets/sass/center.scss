@@ -169,7 +169,7 @@
 				.form__group {
 					width: 100%;
 					@include breakpoint(768px) {
-						width: calc(100% - 140px - 2rem);
+						width: calc(100% - 140px - 1rem);
 					}
 					@include breakpoint(max-width 767px) {
 						margin-top: 1rem;

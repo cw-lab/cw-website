@@ -236,34 +236,17 @@
   margin-top: 20px;
 }
 .center__page article .form .oversea .form__group {
-  width: calc(100% - 140px - 1rem);
-}
-@media (min-width: 375px) {
-  .center__page article .form .oversea .form__group {
-    width: calc( (100% - 1rem) / 2 );
-  }
+  width: 100%;
 }
 @media (min-width: 768px) {
   .center__page article .form .oversea .form__group {
-    width: 140px;
-  }
-}
-@media (max-width: 374px) {
-  .center__page article .form .oversea .form__group {
-    margin-top: 1rem;
-    width: 100%;
-  }
-}
-@media (min-width: 768px) {
-  .center__page article .form .oversea .form__group + .form__group {
-    width: calc(100% - 280px - 2rem);
+    width: calc(100% - 140px - 2rem);
   }
 }
 @media (max-width: 767px) {
-  .center__page article .form .oversea .form__group + .form__group {
+  .center__page article .form .oversea .form__group {
     margin-top: 1rem;
     margin-left: 0;
-    width: 100%;
   }
 }
 .center__page article .form .birthday__group {

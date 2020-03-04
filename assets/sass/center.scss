@@ -167,26 +167,13 @@
 			.oversea {
 				margin-top: 20px;
 				.form__group {
-					width: calc(100% - 140px - 1rem);
-					@include breakpoint(375px) {
-						width: calc( (100% - 1rem) / 2 );
-					}
+					width: 100%;
 					@include breakpoint(768px) {
-						width: 140px;
+						width: calc(100% - 140px - 2rem);
 					}
-					@include breakpoint(max-width 374px) {
+					@include breakpoint(max-width 767px) {
 						margin-top: 1rem;
-						width: 100%;
-					}
-					+ .form__group {
-						@include breakpoint(768px) {
-							width: calc(100% - 280px - 2rem);
-						}
-						@include breakpoint(max-width 767px) {
-							margin-top: 1rem;
-							margin-left: 0;
-							width: 100%;
-						}
+						margin-left: 0;
 					}
 				}
 			}

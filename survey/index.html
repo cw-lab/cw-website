@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>範例RRR</title>
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/cw-survey.css">
+	<style>
+		.py-4 + .py-4 {
+			border-top: 1px solid #dee2e6;
+		}
+		.font-weight-bold {
+			font-weight: 600 !important;
+		}
+		.text-danger {
+			font-size: 0.75em;
+		}
+		.q-title .text-danger {
+			display: inline-block;
+			vertical-align: super;
+		}
+		.section-title {
+			color: #fff;
+			line-height: 2;
+			background-color: #939EA7;
+		}
+		.label--radio span.label__radio__mark {
+			vertical-align: top;
+		}
+		.label--radio span.label__radio__txt {
+			width: calc(100% - 20px);
+		}
+		.form__group {
+			max-width: none;
+			width: 100%;
+		}
+		/*.form__group .form__group__placeholder {
+			left: 0;
+		}*/
+		.form__group--outlined .form__group__input {
+			/*padding: 1.1rem 0 0.7rem;
+			border-width: 0 0 1px;*/
+			/*border-color: #D3D5D7;*/
+		}
+		.form-score {
+			align-items: center;
+		}
+		.form-score > div {
+			width: 65px;
+			font-size: 0.875rem;
+		}
+		.form-score .label--radio {
+			width: calc((100% - 130px) / 11);
+			margin-bottom: 0;
+		}
+		.form-score .label--radio span.label__radio__txt {
+			display: block;
+			padding: 0.5em 0 0;
+			width: 100%;
+		}
+		.alert-danger {
+			display: none;
+		}
+		@media screen and (max-width: 767px) {
+			h3, .h3 {
+				line-height: 1.5;
+			}
+			.bg-white.border {
+				border: 0 !important;
+				background-color: transparent !important;
+			}
+			.form-score > div {
+				width: 50%;
+				margin-bottom: 0.5em;
+				font-size: 0.75rem;
+				order: 0;
+			}
+			.form-score > div span {
+				display: none;
+			}
+			.form-score .label--radio {
+				width: calc(100% / 11);
+				order: 1;
+			}
+		}
+	</style>
+</head>
+
+<body class="bg-light pb-5">
+	<header class="blog-header py-2 bg-white border-bottom">
+		<div class="container">
+			<div class="row flex-nowrap justify-content-between align-items-center">
+				<div class="col-4">
+					<a class="blog-header-logo d-block" href="#">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="bg-white border mt-5">
+					<div class="p-md-5 text-center">
+						<h1 class="mt-0 mb-3 font-weight-bold">天下雜誌讀者印象調查</h1>
+						<p class="my-0">
+							為持續提供更好的服務，誠摯邀請您協助回答下方問卷。僅需2分鐘填寫，讓我們更了解您的使用習慣及滿意度，作為天下雜誌不斷改善進步的方向！
+						</p>
+						<div class="text-danger pt-3">*必填</div>
+					</div>
+				</div>
+				<div class="bg-white border mt-5">
+					<div class="p-md-5 py-4 px-3">
+						<div class="h3 mb-3 mt-0 q-title font-weight-bold">
+							特別聲明：我已詳細閱讀並同意以下條款<span class="text-danger">*</span>
+						</div>
+						<div class="d-flex option-item">
+							<label class="label--radio">
+								<input id="declaration" type="radio" name="radio">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">
+									天下雜誌集團及其委外服務廠商，基於客戶管理、統計及調查分析、會員管理、行銷及其他合於營業登記項目或章程所定業務需要之特定目的，在此向您蒐集以上個人資料，作為本集團營運期間於台灣地區寄送出版物及各項優惠訊息與調查分析使用。您可向本集團請求查閱、提供複本、更正或補充個人資訊，及請求刪除或停止處理利用，請您連繫天下雜誌群客戶服務中心 (02)2662-0332 或 email: <a class="link-btn" href="mailto:bill@service.cw.com.tw">bill@service.cw.com.tw</a>。若您填寫資料不完整時，可能會影響您收受出版物或優惠訊息之權利。
+								</span>
+							</label>
+						</div>
+						<div class="mt-3 alert alert-danger alert-declaration">
+							此為必填題目
+						</div>
+					</div>
+				</div>
+				<div class="h3 mt-5 mb-0 section-title">
+					<div class="px-3 py-2">品牌感受</div>
+				</div>
+				<div class="bg-white border border-top-0">
+					<div class="p-md-5 py-4 px-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							天下雜誌這個品牌帶給你什麼感受？
+						</div>
+						<p class=" mb-3">
+							說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好。
+						</p>
+						<div class="d-flex option-item form">
+							<div class="form__group form__group--outlined">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入</div>
+									<input type="text" id="feeling" class="form__group__input form__group__input--default">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="h3 mt-5 mb-0 section-title">
+					<div class="px-3 py-2">滿意度調查</div>
+				</div>
+				<div class="bg-white border border-top-0">
+					<div class="py-md-5 py-4 mx-md-5 mx-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							您有多大意願將天下雜誌推薦給朋友或是同事？（0-10分） 
+						</div>
+						<p class="mb-3">
+							說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好。
+						</p>
+						<div class="d-flex flex-wrap option-item form form-score">
+							<div class="min text-md-center text-left">非常不願意<span>推薦</span></div>
+							<label class="label--radio text-center">
+								<input value="0" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">0</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="1" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">1</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="2" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">2</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="3" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">3</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="4" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">4</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="5" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">5</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="6" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">6</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="7" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">7</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="8" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">8</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="9" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">9</span>
+							</label>
+							<label class="label--radio text-center">
+								<input value="10" type="radio" name="recommend">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">10</span>
+							</label>
+							<div class="max text-md-center text-right">非常願意<span>推薦</span></div>
+						</div>
+					</div>
+					<div class="py-md-5 py-4 mx-md-5 mx-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							請問天下雜誌可以做哪些改善，讓您更願意推薦？
+						</div>
+						<p class="mb-4">
+							說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好。
+						</p>
+						<div class="d-flex option-item form">
+							<div class="form__group form__group--outlined">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">您的回答</div>
+									<input type="text" id="improve" class="form__group__input form__group__input--default">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="h3 mt-5 mb-0 section-title">
+					<div class="px-3 py-2">基本資料</div>
+				</div>
+				<div class="bg-white border border-top-0">
+					<div class="py-md-5 py-4 mx-md-5 mx-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							下列敘述較符合您的狀態？<span class="text-danger">*</span>
+						</div>
+						<p class=" mb-3">
+							說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好。
+						</p>
+						<div class="option-item form">
+							<label class="label--radio mb-2">
+								<input value="第一次來天下網站" type="radio" name="identity">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">第一次來天下網站</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="曾經來過天下網站，但還不是會員" type="radio" name="identity">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">曾經來過天下網站，但還不是會員</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="天下雜誌會員" type="radio" name="identity">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">天下雜誌會員</span>
+							</label>
+							<label class="label--radio">
+								<input value="天下全閱讀訂戶" type="radio" name="identity">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">天下全閱讀訂戶</span>
+							</label>
+						</div>
+						<div class="mt-3 alert alert-danger alert-identity">
+							此為必填題目
+						</div>
+					</div>
+					<div class="py-md-5 py-4 mx-md-5 mx-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							您的年齡<span class="text-danger">*</span>
+						</div>
+						<p class=" mb-3">
+							說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好說什麼都好。
+						</p>
+						<div class="option-item form">
+							<label class="label--radio mb-2">
+								<input value="24歲以下" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">24歲以下</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="25-34歲" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">25-34歲</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="35-44歲" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">35-44歲</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="45-54歲" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">45-54歲</span>
+							</label>
+							<label class="label--radio mb-2">
+								<input value="55-64歲" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">55-64歲</span>
+							</label>
+							<label class="label--radio">
+								<input value="65歲以上" type="radio" name="age">
+								<span class="label__radio__mark"></span>
+								<span class="label__radio__txt">65歲以上</span>
+							</label>
+						</div>
+						<div class="mt-3 alert alert-danger alert-age">
+							此為必填題目
+						</div>
+					</div>
+					<div class="py-md-5 py-4 mx-md-5 mx-3">
+						<div class="h3 my-0 q-title font-weight-bold">
+							您的信箱
+						</div>
+						<p class=" mb-3">
+							若未來有實體訪談活動，有意願者請填寫。
+						</p>
+						<div class="d-flex option-item form">
+							<div class="form__group form__group--outlined">
+								<label for="#!" class="label">
+									<div class="form__group__placeholder">請輸入 E-mail</div>
+									<input type="email" id="mail" class="form__group__input form__group__input--default">
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<button id="sendData" class="rounded-0 btn btn--contained btn--100 mt-5">確認送出</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+	<script type="text/javascript" src="../assets/js/cw.js"></script>
+	<script>
+		$(function() {
+			// 監聽 送出訂單 按鈕點擊
+			// 下面這段主要在組合資料，還有擋使用者不填資料不能送出
+			$('#sendData').click(function(e) {
+				var status = true,
+					declaration = $('#declaration'),
+					feeling = $('#feeling').val(),
+					recommend = $('input[name*=recommend]:checked').val(),
+					improve = $('#improve').val(),
+					identity = 'noValue',
+					identity = $('input[name*=identity]:checked').val(),
+					age = 'noValue',
+					age = $('input[name*=age]:checked').val(),
+					mail = $('#mail').val();
+				// 擋住必填資料邏輯
+				if ( !declaration.is(':checked') ) {
+					$('.alert-declaration').fadeIn();
+					status = false;
+				}
+				if ( !$('input[name*=recommend]').is(':checked') ) {
+					$('.alert-identity').fadeIn();
+					status = false;
+				}
+				if ( !$('input[name*=age]').is(':checked') ) {
+					$('.alert-age').fadeIn();
+					status = false;
+				}
+				// if (phone == '') {
+				// 	$('#phone').css('border', '1px solid #ff0000');
+				// 	status = false;
+				// }
+				if (!status) {
+					$('html, body').animate({
+						scrollTop: 0
+					});
+				}
+				// 如果 必填欄位都過了 才會到這邊
+				if (status) {
+					// 打包 要的資料
+					var data = {
+						'feeling': feeling,
+						'recommend': recommend,
+						'improve': improve,
+						'identity': identity,
+						'age': age,
+						'mail': mail,
+					}
+					console.log(data)
+					// 呼叫 send ajax function
+					send(data);
+				}
+			});
+		});
+		function send(data) {
+			$.ajax({
+				// 這邊用get type
+				type: "get",
+				// api url - google appscript 產出的 url
+				url: "https://script.google.com/macros/s/AKfycbzAEHip77mVtZaFafdfu6qyr2GX-H8hGNBqK192P-aXumbG_6dS/exec",
+				// 剛剛整理好的資料帶入
+				data: data,
+				// 資料格式是JSON
+				dataType: "JSON",
+				// 成功送出 會回頭觸發下面這塊感謝
+				success: function(response) {
+					console.log(response);
+					alert('感謝您的填寫');
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>

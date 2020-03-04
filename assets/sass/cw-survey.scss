@@ -1,0 +1,48 @@
+@import "_basic";
+@import "_general";
+@import "_sheet";
+@import "_color";
+@import "_typography";
+@import "_font";
+@import "_iconography";
+@import "_textfield";
+@import "_button";
+@import "_tooltips";
+@import "_tabs";
+@import "_list";
+@import "_selection";
+@import "_message";
+@import "_paginate";
+
+p {
+    font-size: 1em;
+    &.emphasis {
+        color: $secondary;
+        a {
+            color: $secondary;
+            &:hover {
+                color: $secondary-variant;
+            }
+        }
+        &--small {
+            font-size: 0.875em;
+        }
+    }
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: $gray-100;
+}
+
+.link-btn {
+    color: $surface;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover {
+        color: $primary;
+    }
+}

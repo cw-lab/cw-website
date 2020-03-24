@@ -1,4 +1,4 @@
-.search .search__group .search__submit::before, .center__page .container::after, .center__page .card__group .card__item .card__title::before {
+.search .search__group .search__submit::before, .center__page .container::after, .center__page .card__group .card__item .card__title::before, .center__page .list__group.list__group--newsletters .list__item.list__item--disabled::after {
   content: '';
   display: block;
 }
@@ -376,6 +376,7 @@
   color: #171717;
 }
 .center__page .list__group .list__item {
+  position: relative;
   border: 1px solid #D3D5D7;
 }
 .center__page .list__group .list__item .list__img {
@@ -416,6 +417,9 @@
 }
 .center__page .list__group .list__item .list__txt .phase {
   line-height: 1.5;
+}
+.center__page .list__group .list__item.list__item--disabled {
+  cursor: pointer;
 }
 .center__page .list__group.list__group--favorite .list__item {
   display: flex;
@@ -634,6 +638,14 @@
   .center__page .list__group.list__group--newsletters .list__item .list__btn {
     margin: 0 15px 20px;
   }
+}
+.center__page .list__group.list__group--newsletters .list__item.list__item--disabled::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 1;
 }
 .center__page .list__group.list__group--newsletters .list__item.list__item--vip .list__img img {
   filter: grayscale(1);

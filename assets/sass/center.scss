@@ -292,6 +292,7 @@
 	}
 	.list__group {
 		.list__item {
+			position: relative;
 			border: 1px solid $gray-200;
 			.list__img {
 				position: relative;
@@ -327,6 +328,9 @@
 				.phase {
 					line-height: 1.5;
 				}
+			}
+			&.list__item--disabled {
+				cursor: pointer;
 			}
 		}
 		&.list__group--favorite {
@@ -521,6 +525,17 @@
 					}
 					@include breakpoint(max-width 767px) {
 						margin: 0 15px 20px;
+					}
+				}
+				&.list__item--disabled {
+					&::after {
+						@extend %before-after;
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 120px;
+						height: 100%;
+						z-index: 1;
 					}
 				}
 				&.list__item--vip {

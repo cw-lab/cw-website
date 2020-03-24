@@ -523,6 +523,17 @@
 						margin: 0 15px 20px;
 					}
 				}
+				&.list__item--vip {
+					.list__img {
+						img {
+							filter: grayscale(1);
+						}
+						.list__label {
+							top: 0;
+							right: 0;
+						}
+					}
+				}
 			}
 		}
 		&.list__group--author {

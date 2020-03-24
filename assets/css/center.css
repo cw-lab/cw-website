@@ -635,6 +635,13 @@
     margin: 0 15px 20px;
   }
 }
+.center__page .list__group.list__group--newsletters .list__item.list__item--vip .list__img img {
+  filter: grayscale(1);
+}
+.center__page .list__group.list__group--newsletters .list__item.list__item--vip .list__img .list__label {
+  top: 0;
+  right: 0;
+}
 .center__page .list__group.list__group--author .list__item {
   display: flex;
   justify-content: center;

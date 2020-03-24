@@ -641,11 +641,23 @@
 }
 .center__page .list__group.list__group--newsletters .list__item.list__item--disabled::after {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 120px;
-  height: 100%;
   z-index: 1;
+}
+@media (min-width: 1024px) {
+  .center__page .list__group.list__group--newsletters .list__item.list__item--disabled::after {
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .center__page .list__group.list__group--newsletters .list__item.list__item--disabled::after {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+  }
 }
 .center__page .list__group.list__group--newsletters .list__item.list__item--vip .list__img img {
   filter: grayscale(1);

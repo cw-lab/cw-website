@@ -531,11 +531,19 @@
 					&::after {
 						@extend %before-after;
 						position: absolute;
-						top: 0;
-						right: 0;
-						width: 120px;
-						height: 100%;
 						z-index: 1;
+						@include breakpoint(1024px){
+							top: 0;
+							right: 0;
+							width: 120px;
+							height: 100%;
+						}
+						@include breakpoint(max-width 1023px){
+							bottom: 0;
+							right: 0;
+							width: 100%;
+							height: 60px;						
+						}
 					}
 				}
 				&.list__item--vip {

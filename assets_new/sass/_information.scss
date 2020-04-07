@@ -1,0 +1,240 @@
+.views {
+    line-height: 1;
+    h2,
+    h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        font-weight: 400;
+        @include breakpoint(768px) {
+            font-size: 15px;
+        }
+    }
+    .count {
+        font-size: 24px;
+        @include breakpoint(768px) {
+            font-size: 40px;
+        }
+    }
+}
+
+.sns-list {
+    font-size: 0;
+    >div {
+        position: relative;
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: middle;
+        @include transition(background 0.3s);
+        &.title-text {
+            padding-bottom: 10px;
+            font-size: 0.875rem;
+        }
+        a,
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 .55em;
+            color: $white;
+            line-height: 36px;
+            border: 0;
+            background: none;
+            @include transition(color 0.3s, background 0.3s, border 0.3s);
+            @include breakpoint(768px) {
+                padding: 0 .5em;
+                line-height: 40px;
+            }
+            i {
+                font-size: 1.15em;
+                line-height: 36px;
+                @include breakpoint(768px) {
+                    font-size: 1.5em;
+                    line-height: 40px;
+                }
+            }
+        }
+        .txt {
+            @include breakpoint(max-width 767px) {
+                display: none;
+            }
+        }
+    }
+    .fbShare {
+        background-color: $facebook;
+        &:hover {
+            background-color: darken($facebook, 5%);
+        }
+    }
+    .comments {
+        margin-left: 10px;
+        background-color: $line;
+        &:hover {
+            background-color: darken($line, 5%);
+        }
+    }
+    .link {
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            @include opacity(0);
+            z-index: -1;
+        }
+        .copy-success {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            width: 180px;
+            padding: 5px 10px;
+            color: $white;
+            font-size: 0.875em;
+            text-align: center;
+            word-break: break-all;
+            background-color: $gray-600;
+            @include translate(-50%, 50%);
+        }
+    }
+    &.origin {
+        >div {
+            &.title-text {
+                @include breakpoint(768px) {
+                    display: none;
+                }
+            }
+            +div {
+                margin-left: 10px;
+            }
+        }
+        .twitter {
+            background-color: $twitter;
+            &:hover {
+                background-color: darken($twitter, 5%);
+            }
+            @include breakpoint(768px) {
+                display: none;
+            }
+        }
+        .whatapp {
+            background-color: $whatapp;
+            &:hover {
+                background-color: darken($whatapp, 5%);
+            }
+            @include breakpoint(768px) {
+                display: none;
+            }
+        }
+        .email {
+            background-color: $gray-600;
+            &:hover {
+                background-color: $black;
+            }
+        }
+        .link {
+            background-color: $gray-600;
+            &:hover {
+                background-color: $black;
+            }
+        }
+    }
+    &.fixed {
+        position: fixed;
+        top: 50%;
+        left: calc(((100% - 1000px) / 2) - 70px);
+        width: 50px;
+        padding: 10px 5px 5px;
+        text-align: center;
+        // background-color: rgba($white, 0.5);
+        // border: 1px solid $gray-100;
+        z-index: 3;
+        @include opacity(0);
+        @include animation(fadeIn 0.3s 0.3s forwards);
+        @include translateY(-50%);
+        >div {
+            margin-top: 5px;
+            display: block !important;
+            a,
+            button {
+                color: $gray-400;
+            }
+            &.fbShare {
+                background-color: transparent;
+                &:hover {
+                    background-color: transparent;
+                }
+                a:hover {
+                    color: $facebook;
+                }
+            }
+            &.comments {
+                margin-left: 0;
+                background-color: transparent;
+                &:hover {
+                    background-color: transparent;
+                }
+                a:hover {
+                    color: $line;
+                }
+            }
+            &.twitter a:hover {
+                color: $twitter;
+            }
+            &.whatapp a:hover {
+                color: $whatapp;
+            }
+            &.email a:hover {
+                color: $primary;
+            }
+            &.link button:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.collect {
+    font-size: 1rem;
+    background-color: $primary;
+    @include transition(background 0.3s);
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 .55em;
+        color: $white;
+        line-height: 36px;
+        @include breakpoint(768px) {
+            padding: 0 .5em;
+            line-height: 40px;
+        }
+        i {
+            font-size: 1.15em;
+            font-weight: 600;
+            line-height: 36px;
+            @include breakpoint(768px) {
+                font-size: 1.5em;
+                line-height: 40px;
+            }
+            &::before {
+                content: "\e90c";
+            }
+        }
+    }
+    &:hover {
+        background-color: darken($primary, 5%);
+    }
+    &.addsave a i::before {
+        content: "\e90d";
+    }
+}
+
+@include keyframes(fadeIn) {
+    0% {
+        @include opacity(0);
+    }
+    100% {
+        @include opacity(1);
+    }
+}

@@ -1,0 +1,79 @@
+ul.article__keyword {
+    @include list(0, 0, none);
+    font-size: 0;
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            position: relative;
+            display: block;
+            padding: 0.875em 0.75em;
+            color: $text;
+            font-size: 0.875rem;
+            line-height: 1;
+            text-align: center;
+            word-break: keep-all;
+            // word-break: break-word;
+            background-color: $white;
+            border: 1px solid $gray-200;
+            overflow: hidden;
+            z-index: 1;
+            &::before,
+            &::after {
+                @extend %before-after;
+                position: absolute;
+                background-color: $red-100;
+                @include opacity(0);
+                z-index: -1;
+            }
+            &::before {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                @include transition(opacity 0.2s);
+            }
+            &::after {
+                left: 50%;
+                top: 50%;
+                padding: 55%;
+                width: 32px;
+                height: 32px;
+                @include border-radius(50%);
+                @include transform(translate(-50%, -50%) scale(1));
+                @include transition(opacity 2s, transform 0.5s);
+            }
+            &:hover {
+                color: $primary;
+                border-color: $primary;
+                &::before {
+                    opacity: 0.04;
+                }
+                &:focus {
+                    &::before {
+                        opacity: 0.16;
+                    }
+                }
+            }
+            &:focus {
+                &::before {
+                    opacity: 0.12;
+                }
+            }
+            &:active {
+                &::after {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(0);
+                    transition: transform 0s;
+                }
+            }
+            &::-moz-focus-inner {
+                border: none;
+            }
+        }
+    }
+}

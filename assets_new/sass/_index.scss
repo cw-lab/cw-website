@@ -1,0 +1,81 @@
+.index-page {
+    @include breakpoint(768px) {
+        min-width: $index;
+    }
+    header {
+        .subNav {
+            position: static;
+            width: 100%;
+            background-color: $gray-300;
+            @include translateY(0);
+            li {
+                border-left-color: $white;
+                &.userName {
+                    background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow_white.png');
+                    &.opened {
+                        background-image: url('https://www.cw.com.tw/assets_new/img/upload_arrow_white.png');
+                    }
+                }
+                a {
+                    color: $white;
+                    &:hover {
+                        color: $gray-500;
+                    }
+                }
+            }
+            >ul {
+                width: 1280px;
+                >li {
+                    color: $white;
+                }
+            }
+        }
+        .main-header .main-header-body {
+            @include breakpoint(768px) {
+                width: 1280px;
+            }
+            .logo a img {
+                @include breakpoint(768px) {
+                    width: 134px;
+                }
+            }
+        }
+    }
+    .container {
+        @include breakpoint(768px) {
+            width: $index;
+        }
+    }
+    .main {
+        margin-top: 20px;
+        @include breakpoint(768px) {
+            width: $index;
+        }
+        article {
+            @include breakpoint(768px) {
+                width: ($index - 640);
+            }
+        }
+        .articleGroup {
+            margin-bottom: 10px;
+            @include breakpoint(768px) {
+                margin-bottom: 20px;
+                background-color: $white;
+                border: 1px solid $gray-200;
+            }
+            .subArticle {
+                @include breakpoint(768px) {
+                    padding: 0 15px 20px;
+                    margin: 0;
+                }
+                @include breakpoint(max-width 767px) {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    footer .container {
+        max-width: $index;
+        margin: auto;
+    }
+}

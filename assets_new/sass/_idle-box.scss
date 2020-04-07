@@ -1,0 +1,117 @@
+.idleBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    * {
+        font-style: normal;
+        text-decoration: none;
+    }
+    >.idlepanel {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% - 30px);
+        padding: 30px 30px 0;
+        background-color: $white;
+        @include translate(-50%, -50%);
+        z-index: 1;
+        @include breakpoint(768px) {
+            width: 580px;
+        }
+        @include breakpoint(max-width 767px) {
+            padding: 35px 20px 20px;
+        }
+        h4 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: $bluegray;
+            font-weight: normal;
+        }
+    }
+    .idle-group {
+        font-size: 0;
+        @include breakpoint(max-width 767px) {
+            height: 320px;
+            overflow: scroll;
+        }
+        @include breakpoint(max-width 374px) {
+            height: 250px;
+        }
+        .idle-item {
+            @include breakpoint(768px) {
+                display: inline-block;
+                vertical-align: top;
+                width: calc((100% - 40px) / 3);
+                margin-left: 20px;
+                margin-bottom: 30px;
+            }
+            @include breakpoint(max-width 767px) {
+                +.idle-item {
+                    margin-top: 20px;
+                }
+            }
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            a {
+                display: block;
+            }
+            .idle-img {
+                position: relative;
+                @include breakpoint(max-width 767px) {
+                    display: inline-block;
+                    vertical-align: text-top;
+                    width: 100px;
+                }
+                img {
+                    width: 100%;
+                }
+                @include imghover();
+                &:hover::before {
+                    @include opacity(1);
+                }
+                .pr {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 5px;
+                    color: $white;
+                    font-size: 0.875rem;
+                    line-height: 1;
+                    background-color: rgba($black, 0.5);
+                }
+            }
+            .idle-body {
+                @include breakpoint(768px) {
+                    padding-top: 10px;
+                }
+                @include breakpoint(max-width 767px) {
+                    display: inline-block;
+                    vertical-align: text-top;
+                    width: calc(100% - 100px);
+                    padding-left: 10px;
+                }
+                .subtitle {
+                    margin-bottom: 5px;
+                    color: $primary;
+                    font-size: 0.875rem;
+                    &:hover {
+                        color: $primary_variant;
+                    }
+                }
+                .idle-title {
+                    color: $black;
+                    font-size: 1rem;
+                    @include lineclamp(2);
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}

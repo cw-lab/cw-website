@@ -1,0 +1,112 @@
+.saleskit-page {
+    >section {
+        padding: 0 15px;
+        @include breakpoint(768px) {
+            width: $article;
+            margin: auto;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    section {
+        &.header {
+            margin-bottom: 3em;
+        }
+        &.intro {
+            .container {
+                position: relative;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                border-bottom: 1px dotted $gray-300;
+                @include breakpoint(768px) {
+                    padding-left: 140px;
+                }
+                .h3 {
+                    padding-left: 10px;
+                    font-size: 1.125em;
+                    font-weight: bold;
+                    border-left: 2px solid $primary;
+                    i {
+                        display: block;
+                        padding: 2.5px 0;
+                        color: $primary_variant;
+                        font-size: 0.775em;
+                        font-style: normal;
+                        font-weight: normal;
+                    }
+                }
+                p {
+                    color: $gray-400;
+                }
+                .btn-block {
+                    font-size: 0;
+                    @include breakpoint(max-width 767px) {
+                        padding-top: 1.5rem;
+                        text-align: center;
+                    }
+                    a {
+                        @include outlinebtn(inline-block, 0.5rem, $primary, 1rem);
+                        background-color: $white;
+                        @include breakpoint(max-width 767px) {
+                            min-width: 210px;
+                        }
+                        +a {
+                            @include breakpoint(768px) {
+                                margin-left: 1rem;
+                            }
+                            @include breakpoint(max-width 767px) {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+                img {
+                    margin: auto;
+                    @include breakpoint(768px) {
+                        position: absolute;
+                        top: 20px;
+                        left: 0;
+                        width: 120px;
+                        border: 1px solid $gray-100;
+                    }
+                    @include breakpoint(max-width 767px) {
+                        max-width: 220px;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        &.connect {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            .container {
+                >ul {
+                    @include listrest(0, 0, none);
+                    .h4 {
+                        padding-left: 10px;
+                        margin-bottom: 10px;
+                        font-weight: bold;
+                        line-height: 1.15;
+                        border-left: 2px solid $primary;
+                    }
+                    ul {
+                        @include listrest(0, 0 0 0 40px, disc);
+                    }
+                    p {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                    >li {
+                        margin-bottom: 1.5em;
+                        >p {
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

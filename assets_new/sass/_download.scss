@@ -1,0 +1,82 @@
+.download {
+    padding: 20px 0px;
+    margin-bottom: 1.5rem;
+    font-size: 0;
+    border: solid $gray-100;
+    border-width: 1px 0;
+    @include breakpoint(max-width 767px) {
+        text-align: center;
+    }
+    >a {
+        display: inline-block;
+        color: $black;
+        font-size: 1.125rem;
+        line-height: 1.5;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center right;
+        cursor: pointer;
+        span {
+            color: $primary;
+            @include transition(color 0.3s);
+        }
+    }
+    .dowloadLink,
+    .payreadLink {
+        width: 120px;
+        text-align: left;
+        line-height: 50px;
+        &:hover {
+            color: $primary;
+        }
+    }
+    .dowloadLink {
+        margin-right: 2rem;
+        background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow.png');
+        @include breakpoint(max-width 767px) {
+            margin-left: 1em;
+        }
+        &.noPdf {
+            color: $gray-400;
+            @include opacity(0.5);
+            cursor: not-allowed;
+            span {
+                color: $gray-400;
+            }
+        }
+    }
+    .payreadLink {
+        background-image: url('https://www.cw.com.tw/assets_new/img/payread.png');
+        &.noPay {
+            color: $gray-400;
+            @include opacity(0.5);
+            cursor: not-allowed;
+            span {
+                color: $gray-400;
+            }
+        }
+    }
+    .nextArticle {
+        padding-right: 35px;
+        text-align: right;
+        background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow_right.png');
+        @include breakpoint(768px) {
+            width: calc(100% - 240px - 6rem);
+            margin-left: 4rem;
+        }
+        span {
+            &:first-child {
+                display: inline-block;
+                padding-right: 1rem;
+            }
+            &:last-child {
+                color: $black;
+            }
+        }
+        &:hover {
+            span:last-child {
+                color: $primary;
+            }
+        }
+    }
+}

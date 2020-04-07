@@ -1,20 +1,14 @@
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
     width: 100%;
     padding-top: 30px;
-    padding-bottom: 20px;
-    font-size: 0.8125rem;
+    padding-bottom: 70px;
     background-color: $gray-100;
-    @include breakpoint(768px) {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    @include breakpoint(max-width 767px) {
-        >.container>.flex {
-            flex-direction: column;
-        }
+    z-index: 1;
+    @include breakpoint(1024px) {
+        padding-bottom: 90px;
     }
     a {
         color: $text;
@@ -22,85 +16,93 @@ footer {
             color: $primary;
         }
     }
-    .copyright {
-        @include breakpoint(768px) {
-            width: calc(100% - 460px);
+    .channel__group {
+        @include breakpoint(1024px) {
+            display: flex;
         }
-        @include breakpoint(max-width 767px) {
-            order: 2;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .channel__item {
+        @include breakpoint(max-width 1023px) {
+            border-bottom: 1px solid $gray-200;
         }
-        &__cwlink {
-            margin-bottom: 1.5em;
-            margin-right: -460px;
-            @include breakpoint(max-width 767px) {
+        .channel__title {
+            position: relative;
+            i.icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include translateY(-50%);
+                @include transition(transform 0.2s);
+                @include breakpoint(1024px) {
+                    display: none;
+                }
+                &.active {
+                    @include transform(translateY(-50%) rotate(180deg));
+                }
+            }
+        }
+        .channel__option {
+            @include breakpoint(1024px) {
+                display: block !important;
+            }
+            @include breakpoint(max-width 1023px) {
                 display: none;
             }
-            li {
-                padding: 0 1em;
-                line-height: 1;
-                border-left: 1px solid $text;
-                &:first-child {
-                    padding-left: 0;
-                    border-left: 0;
+            ul {
+                @include list(0, 0, none);
+                font-size: 0.875rem;
+                a {
+                    display: block;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
                 }
             }
         }
-        &__contact {
-            span {
-                display: block;
-                padding-right: 1em;
-                @include breakpoint(768px) {
-                    display: inline-block;
-                }
-                @include breakpoint(max-width 767px) {
-                    &:nth-child(4) {
-                        margin-top: 1em;
+        &:first-child {
+            .channel__option {
+                ul {
+                    @include breakpoint(1024px) {
+                        column-count: 2;
+                        column-gap: 1em;
                     }
                 }
             }
         }
     }
-    .imglink {
-        align-items: flex-end;
-        @include breakpoint(768px) {
-            width: 410px;
+    .cwgroup__copyright {
+        @include breakpoint(max-width 1023px) {
+            text-align: center;
         }
-        @include breakpoint(max-width 767px) {
-            order: 1;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        &__sns {
-            font-size: 30px;
+        ul.sns {
+            @include list(0, 0, none);
+            font-size: 0;
             li {
-                margin-left: 0.33333em;
-                line-height: 1;
-                &:first-child {
-                    margin-left: 0;
+                display: inline-block;
+                font-size: 1.5rem;
+                vertical-align: middle;
+                +li {
+                    margin-left: 20px;
                 }
                 a {
-                    text-decoration: none;
+                    display: block;
+                    i.icon {
+                        display: block;
+                    }
                 }
             }
         }
-        &__app {
-            @include breakpoint(768px) {
-                margin-left: 1em;
-            }
-            @include breakpoint(max-width 767px) {
-                margin-top: 1em;
-                margin-bottom: 1em;
-            }
-            &__title {
-                margin-bottom: 0.5em;
-                @include breakpoint(768px) {
-                    margin-bottom: 0.75em;
-                    text-align: center;
-                }
-            }
-            &__img {
-                li+li {
-                    margin-left: 0.5em;
+        .contact,
+        .copyright {
+            span {
+                display: block;
+                font-size: 0.75rem;
+                @include breakpoint(1024px) {
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 20px;
+                    }
                 }
             }
         }

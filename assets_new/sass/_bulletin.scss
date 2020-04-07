@@ -1,0 +1,64 @@
+.bulletin {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 15px;
+    line-height: 1.35;
+    background-color: $white;
+    border: 1px solid $surface;
+    z-index: 10;
+    @include breakpoint(768px) {
+        bottom: 15px;
+        left: 15px;
+        width: 350px;
+        padding: 30px;
+    }
+    @include breakpoint(1980px) {
+        left: calc(((100% - 1280px) / 2) - 350px);
+    }
+    .sort {
+        font-size: 0.875em;
+    }
+    .title {
+        margin-bottom: 1em;
+        color: $surface;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        a {
+            color: $surface;
+            text-decoration: underline;
+        }
+    }
+    .close-icon {
+        position: absolute;
+        right: 0px;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        color: #fff;
+        font-size: 0;
+        background-color: $gray-300;
+        background-image: url('https://www.cw.com.tw/assets_new/img/btn-close.png');
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:hover {
+            background-color: $gray-500;
+        }
+    }
+    .close-text {
+        @include containbtn(table,
+        0.7em,
+        $surface,
+        1em);
+        margin: 2em auto 0;
+        font-style: normal;
+        cursor: pointer;
+    }
+}

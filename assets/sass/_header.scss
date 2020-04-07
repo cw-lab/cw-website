@@ -1,73 +1,65 @@
 header {
     position: relative;
-    > .container-fluid, > .container {
-        >.flex {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $gray-100;
+    .container {
+        position: relative;
+        font-size: 0;
+        &::after {
+            @include clear;
+        }
+        >.item {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0;
+            &.item--left,
+            &.item--right {
+                position: absolute;
+                top: 50%;
+                @include translateY(-50%);
+            }
+            &.item--left {
+                left: 20px;
+            }
+            &.item--right {
+                right: 20px;
+            }
+            &.item--center {
+                width: 100%;
+                text-align: center;
+            }
+            >* {
+                display: inline-block;
+                vertical-align: middle;
+                cursor: pointer;
+            }
         }
     }
     a.logo {
-        display: inline-block;
-        vertical-align: middle;
-        > * {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        &.logo--main {
-            margin-right: 20px;
-        }
-        &.logo--sub {
-            color: $primary;
-            font-weight: 500;
+        img {
+            height: 40px;
         }
     }
-    ul {
-        &.member__list {
-            position: relative;
-            padding-left: 0.5rem;
-            @include breakpoint(414px) {
-                padding-left: 1rem;
-            }
-            &--desktop {
-                @include breakpoint(max-width 767px) {
-                    display: none;
-                }
-            }
-            +.member__list {
-                margin-left: 1rem;
-                &::before {
-                    @extend %before-after;
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    width: 1px;
-                    height: 100%;
-                    background-color: $gray-200;
-                    @include translateY(-50%);
-                    @include breakpoint(max-width 767px) {
-                        display: none;
-                    }
-                }
-            }
-            li {
-                @include breakpoint(max-width 350px) {
-                    &.login {
-                        display: none;
-                    }
-                }
-            }
-            a {
-                display: block;
-                padding: 0 0.5rem;
-                color: $text;
-                @include breakpoint(414px) {
-                    padding: 0 1rem;
-                }
-                &:hover {
-                    color: $primary;
-                }
-            }
+    .search {
+        margin-left: 30px;
+        i {
+            font-size: 1.25rem;
+        }
+        @include breakpoint(max-width 1023px) {
+            display: none !important;
+        }
+    }
+    .btn {
+        font-size: 1rem;
+        @include breakpoint(max-width 1023px) {
+            display: none !important;
+        }
+    }
+    .menubar__user {
+        margin-left: 30px;
+        i {
+            font-size: 1.125rem;
         }
     }
 }

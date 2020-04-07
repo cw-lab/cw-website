@@ -1,0 +1,57 @@
+@mixin tab($width) {
+    @include listrest(0, 0, none);
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    li {
+        float: left;
+        width: $width;
+        line-height: 44px;
+        color: $gray-300;
+        text-align: center;
+        border-top: 1px solid $gray-200;
+        background-color: $gray-200;
+        cursor: pointer;
+        +li {
+            border-left: 1px solid $white;
+        }
+        &:hover {
+            color: $gray-400;
+        }
+        &.active {
+            color: $gray-600;
+            background-color: $white;
+            border: solid $gray-200;
+            border-width: 1px 0 0 1px;
+            +li {
+                border-left-color: $gray-200;
+            }
+        }
+        &:last-child.active {
+            border-width: 1px 1px 0 0;
+        }
+    }
+}
+
+.mobile-tab {
+    position: relative;
+    width: 100%;
+    padding: 15px 15px 0;
+    overflow: auto;
+    z-index: 10;
+    @include breakpoint(768px) {
+        display: none;
+    }
+    >ul {
+        @include tab(33.33333%);
+    }
+}
+
+.tabGroup {
+    @include tab(50%);
+    @include breakpoint(max-width 767px) {
+        display: none;
+    }
+}

@@ -1,6 +1,7 @@
 @import "_basic";
 @import "_general";
 @import "_sheet";
+@import "_space";
 @import "_color";
 @import "_typography";
 @import "_font";
@@ -20,34 +21,9 @@ main {
     margin-bottom: 40px;
     justify-content: space-between;
 }
+
 @import "_footer";
 @import "_container";
-.ad {
-    background-color: $white;
-    a {
-        display: block;
-        width: 100%;
-    }
-    img {
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-    }
-}
-.index__page {
-    .container {
-        @include breakpoint(1024px) {
-            width: 1000px;
-        }
-        @include breakpoint(1280px) {
-            width: 1140px;
-        }
-        @include breakpoint(1366px) {
-            width: 1280px;
-        }
-    }
-}
-
 p {
     font-size: 1em;
     &.emphasis {

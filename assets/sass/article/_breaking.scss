@@ -1,0 +1,60 @@
+.breaking {
+    padding: 4px 0;
+    font-size: 0;
+    text-align: center;
+    border-bottom: 1px solid $gray-100;
+    >*>* {
+        display: inline-block;
+        padding: 5px 0;
+        vertical-align: middle;
+    }
+    .container {
+        @include breakpoint(max-width 1023px) {
+            display: flex;
+            padding-right: 0;
+        }
+    }
+    .breaking__title {
+        position: relative;
+        padding-right: 15px;
+        margin-right: 10px;
+        font-size: 0.875rem;
+        &::after {
+            @include beforeafter('\e911', block);
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 10px;
+            color: $primary;
+            font-family: $icomoon-font-family;
+            font-size: 0.75rem;
+            line-height: 10px;
+            @include transform(translateY(-50%) rotate(-90deg));
+        }
+        @include breakpoint(max-width 1023px) {
+            white-space: nowrap;
+        }
+    }
+    .breaking__news {
+        overflow: scroll;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        @include breakpoint(1024px) {
+            max-width: calc(100% - 120px);
+        }
+        @include breakpoint(max-width 1023px) {
+            padding-right: 20px;
+        }
+        a {
+            color: $text;
+            font-size: 0.875rem;
+            white-space: nowrap;
+            text-decoration: none;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}

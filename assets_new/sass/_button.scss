@@ -1,0 +1,217 @@
+@mixin outlinebtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $color;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    border: 1px solid $color;
+    &:hover {
+        color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}
+
+@mixin containbtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $white;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    background-color: $color;
+    border: 1px solid $color;
+    &:hover {
+        background-color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}
+
+#more {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    text-align: center;
+    border: 1px solid $gray-200;
+    background-color: rgba($gray-100, 0.5);
+    @include transition(background 0.3s);
+    cursor: pointer;
+    &::before {
+        content: url('https://www.cw.com.tw/assets_new/img/download_arrow.png');
+        display: inline-block;
+    }
+    &:hover {
+        background-color: rgba($gray-200, 0.5);
+    }
+}
+
+button,
+a {
+    background-color: transparent;
+    align-self: baseline;
+    @include border-radius(0);
+    @include appearance(none);
+    &:focus {
+        outline: 0;
+    }
+    &.btn {
+        position: relative;
+        display: inline-block;
+        min-width: 120px;
+        padding: 0.6875em 1em;
+        font-size: 1rem;
+        line-height: 1.25;
+        text-align: center;
+        word-break: keep-all;
+        // word-break: break-word;
+        text-decoration: none;
+        overflow: hidden;
+        @include breakpoint(375px) {
+            min-width: 135px;
+        }
+        @include breakpoint(768px) {
+            min-width: 144px;
+            padding: 0.8125em 1em;
+        }
+        &.btn--small {
+            min-width: 72px;
+            padding: 0.7em 1em;
+            line-height: 1;
+        }
+        +button.btn,
+        +a.btn {
+            margin-left: 0.5rem;
+            @include breakpoint(768px) {
+                margin-left: 1rem;
+            }
+        }
+        &::before,
+        &::after {
+            @include beforeafter('',
+            block);
+            position: absolute;
+            @include opacity(0);
+            z-index: -1;
+        }
+        &::before {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            @include transition(opacity 0.2s);
+        }
+        &::after {
+            left: 50%;
+            top: 50%;
+            padding: 55%;
+            width: 32px;
+            height: 32px;
+            @include border-radius(50%);
+            @include transform(translate(-50%, -50%) scale(1));
+            @include transition(opacity 2s,
+            transform 0.5s);
+        }
+        &:hover {
+            &::before {
+                opacity: 0.04;
+            }
+            &:focus {
+                &::before {
+                    opacity: 0.16;
+                }
+            }
+        }
+        &:focus {
+            &::before {
+                opacity: 0.12;
+            }
+        }
+        &:active {
+            &::after {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0);
+                transition: transform 0s;
+            }
+        }
+        &--text {
+            display: inline-block;
+            padding: 0;
+            color: $surface;
+            text-decoration: underline;
+            border: 0;
+            cursor: pointer;
+            &:hover {
+                color: $primary;
+            }
+            &.disabled {
+                color: $gray-200;
+                cursor: not-allowed;
+            }
+        }
+        &--outlined {
+            color: $surface;
+            background-color: $white;
+            border: 1px solid $surface;
+            z-index: 1;
+            &::-moz-focus-inner {
+                border: none;
+            }
+            &:hover {
+                color: $primary-variant;
+                border-color: $primary-variant;
+            }
+            &::before {
+                background-color: $red-100;
+            }
+            &::after {
+                background-color: $red-100;
+            }
+        }
+        &--contained {
+            color: $white;
+            background-color: $surface;
+            border: 1px solid $surface;
+            z-index: 1;
+            &::-moz-focus-inner {
+                border: none;
+            }
+            &:hover {
+                background-color: $primary-variant;
+                border-color: $primary-variant;
+            }
+            &::before {
+                background-color: $primary;
+            }
+            &::after {
+                background-color: $primary;
+            }
+        }
+        &--100 {
+            width: 100%;
+        }
+        &[disabled] {
+            color: $gray-200;
+            background: $gray-100;
+            border: 1px solid $gray-100;
+            cursor: not-allowed;
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 0;
+            }
+            &:hover {
+                color: $gray-200;
+                background: $gray-100;
+                border: 1px solid $gray-100;
+            }
+            &.btn--animate {
+                color: $secondary-variant;
+            }
+        }
+    }
+}

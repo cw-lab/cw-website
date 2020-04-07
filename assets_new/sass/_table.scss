@@ -1,0 +1,130 @@
+section.list-link,
+.tabContent {
+    >h3 {
+        padding: 1em;
+        margin: 0;
+        color: $gray-600;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1;
+        background-color: $gray-200;
+    }
+    >ul {
+        background-color: $white;
+        border: solid $gray-200;
+        border-width: 0 1px 1px;
+        @include listrest(0, 0, none);
+        li {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            @include breakpoint(768px) {
+                padding-top: 0.5325em;
+                padding-bottom: 0.5325em;
+            }
+            a {
+                font-size: 1rem;
+                color: $gray-600;
+                line-height: 1.4;
+                vertical-align: middle;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+section.list-link>ul {
+    &:not(.etu-item-list) {
+        li {
+            padding-left: 2em;
+            padding-right: 10px;
+            background: url('https://www.cw.com.tw/assets_new/img/dot.gif') no-repeat 17px center;
+            +li {
+                border-top: 1px solid $gray-100;
+            }
+            a {
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+    &.etu-item-list {
+        font-size: 0;
+        border-width: 0;
+        @include breakpoint(max-width 767px) {
+            padding-bottom: 10px;
+        }
+        li {
+            padding: 10px 10px 0;
+            @include breakpoint(768px) {
+                display: inline-block;
+                padding: 10px;
+                width: calc(100% / 3);
+                vertical-align: top;
+            }
+            .interest-list-link-img {
+                @include breakpoint(max-width 767px) {
+                    display: inline-block;
+                    width: 120px;
+                    vertical-align: middle;
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    @include imghover();
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            .interest-list-link-title {
+                @include breakpoint(768px) {
+                    padding-top: 0.5rem;
+                }
+                @include breakpoint(max-width 767px) {
+                    display: inline-block;
+                    width: calc(100% - 120px);
+                    padding-left: 10px;
+                    vertical-align: middle;
+                }
+                a {
+                    @include lineclamp(2);
+                }
+            }
+            &:hover {
+                .interest-list-link-img a::before {
+                    @include opacity(1);
+                }
+                .interest-list-link-title a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.tabContent>ul {
+    display: none;
+    border-top: 0;
+    &.active {
+        display: block;
+    }
+    li {
+        padding-left: 15px;
+        padding-right: 10px;
+        +li {
+            border-top: 1px solid $gray-100;
+        }
+        a {
+            display: inline-block;
+            width: calc(100% - 18px);
+            padding-left: 5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}

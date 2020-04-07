@@ -1,0 +1,57 @@
+.lazyload__group {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @include animation(shimmer 1s forwards linear infinite);
+    @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
+    @include background-size(800px 100px);
+    img {
+        width: 100%;
+        @include opacity(0);
+        @include transition(opacity 0.3s 0.3s);
+    }
+    &.finished {
+        background: $gray-100;
+        img {
+            @include opacity(1);
+        }
+    }
+    +.source {
+        @include breakpoint(1024px) {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.imgzoom {
+    position: relative;
+    display: block;
+    @include breakpoint(max-width 1023px) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    @include breakpoint(1024px) {
+        &::after {
+            @include beforeafter('\e94a', block);
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36px;
+            color: #fff;
+            font-family: $icomoon-font-family;
+            font-size: 1.5em;
+            line-height: 36px;
+            text-align: center;
+            background-color: rgba($black, 0.5);
+        }
+    }
+}
+
+@include keyframes(shimmer) {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}

@@ -1,0 +1,190 @@
+.mgz-index-page,
+.single-magz-page {
+    article {
+        @include breakpoint(768px) {
+            width: ($article - 350);
+        }
+    }
+}
+
+.mgz-index-page {
+    .mgzIndexList {
+        @include listrest(0 -10px, 0, none);
+        font-size: 0;
+        >li {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 20px;
+            vertical-align: top;
+            @include breakpoint(414px) {
+                display: inline-block;
+                width: 50%;
+            }
+            @include breakpoint(590px) {
+                width: 33.333%;
+            }
+            @include breakpoint(768px) {
+                width: 25%;
+            }
+            .pic {
+                @include breakpoint(max-width 413px) {
+                    display: inline-block;
+                    width: 90px;
+                    vertical-align: top;
+                }
+                img {
+                    border: 1px solid $gray-100;
+                }
+            }
+            .mgzIndexListTxt {
+                position: relative;
+                padding-top: 1.5rem;
+                font-size: 0.875rem;
+                @include breakpoint(414px) {
+                    margin-top: 10px;
+                }
+                @include breakpoint(max-width 413px) {
+                    display: inline-block;
+                    width: calc(100% - 100px);
+                    padding-left: 1rem;
+                    vertical-align: top;
+                }
+                p.mgzNb {
+                    position: absolute;
+                    top: 0;
+                    left: 1rem;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    color: $primary;
+                    @include breakpoint(414px) {
+                        left: 0;
+                    }
+                }
+                time {
+                    position: absolute;
+                    top: 0;
+                    color: $gray-300;
+                    @include breakpoint(414px) {
+                        right: 0;
+                    }
+                    @include breakpoint(max-width 413px) {
+                        left: 5em;
+                    }
+                }
+                a {
+                    display: block;
+                    color: $black;
+                    &:hover {
+                        color: $primary;
+                    }
+                    h2 {
+                        margin-top: 0;
+                        // margin-bottom: 0;
+                        font-size: 1.125rem;
+                        line-height: 1.25;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-magz-page {
+    .mgzIndex {
+        font-size: 0;
+        .pic {
+            display: inline-block;
+            width: 45%;
+            vertical-align: top;
+            @include breakpoint(768px) {
+                width: 35%;
+            }
+            img {
+                width: 100%;
+                border: 1px solid $gray-100;
+            }
+        }
+        .txt {
+            display: inline-block;
+            width: 55%;
+            padding-left: 10px;
+            vertical-align: top;
+            @include breakpoint(768px) {
+                width: 65%;
+                padding-left: 20px;
+            }
+            h1 {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 2rem;
+                font-weight: normal;
+                line-height: 1.25;
+            }
+            p {
+                margin-top: 0;
+                font-size: 1rem;
+                .mgzNum {
+                    color: $primary;
+                }
+                time {
+                    padding-left: 1rem;
+                    color: $gray-300;
+                }
+            }
+            .btnGroup a {
+                width: 100%;
+                @include containbtn(inline-block, 0.7rem, $gray-400, 1rem);
+                @include breakpoint(768px) {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    .articleGroup {
+        @include breakpoint(max-width 767px) {
+            margin-top: 1.5em;
+        }
+        .h2 {
+            font-weight: normal;
+            @include breakpoint(max-width 767px) {
+                padding: 10px;
+                font-size: 1.125em;
+                line-height: 1.25;
+                background-color: $gray-200;
+            }
+            @include breakpoint(768px) {
+                padding-top: 1em;
+                padding-bottom: 0.5em;
+                font-size: 1.5em;
+            }
+        }
+        .subArticle {
+            p {
+                color: $gray-500;
+            }
+            @include breakpoint(max-width 767px) {
+                margin-top: 0;
+                margin-bottom: 0;
+                .pic {
+                    display: none;
+                }
+                .caption {
+                    .channelTitle {
+                        display: none;
+                    }
+                    h3 a {
+                        font-size: 1.125rem;
+                    }
+                    p {
+                        display: -webkit-box !important;
+                    }
+                }
+            }
+            @include breakpoint(768px) {
+                padding: 0;
+                margin-bottom: 1.5em;
+            }
+        }
+    }
+}

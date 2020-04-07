@@ -1,0 +1,73 @@
+.card__group--scroll {
+    overflow-x: scroll;
+    @include breakpoint(max-width 1023px) {
+        margin-left: -20px;
+        margin-right: -20px;
+        .card__group {
+            padding-left: 20px;
+            width: calc(240px * 6 + 20px);
+        }
+    }
+}
+
+.card__group {
+    font-size: 0;
+    .card__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        @include breakpoint(1024px) {
+            width: calc((100% - 40px) / 3);
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        @include breakpoint(max-width 1023px) {
+            width: 220px;
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        &:nth-child(3n+1) {
+            margin-left: 0;
+        }
+        span {
+            display: block;
+        }
+        .card__img {
+            .label {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: block;
+                padding: 0 5px;
+                color: $white;
+                font-size: 0.875rem;
+                line-height: 30px;
+                text-align: center;
+                background: rgba($black, 0.5);
+                text-transform: uppercase;
+            }
+        }
+        .card__subtitle {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: $primary;
+            font-size: 0.875rem;
+            i.icon {
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: text-top;
+                line-height: 1;
+            }
+        }
+        .card__title {
+            color: $text;
+            font-size: 1rem;
+            @include transition(color 0.2s);
+        }
+        &:hover {
+            .card__title {
+                color: $primary;
+            }
+        }
+    }
+}

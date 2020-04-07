@@ -1,0 +1,37 @@
+.breadCrumbs {
+    max-width: $article;
+    padding-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include breakpoint(1024px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    ul {
+        @include listrest(0, 0, none);
+        font-size: 0;
+        li {
+            display: inline-block;
+            color: $gray-600;
+            font-size: 1rem;
+            a {
+                display: inline-block;
+                color: $gray-600;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            +li {
+                margin-left: 5px;
+                &::before {
+                    @include beforeafter('>', inline-block);
+                }
+                a {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}

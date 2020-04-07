@@ -1,0 +1,225 @@
+.pic {
+    position: relative;
+    overflow: hidden;
+    >a {
+        position: relative;
+        display: block;
+        @include imghover();
+        &:hover {
+            &::before {
+                @include opacity(1);
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .informationArea {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: rgba($black, .5);
+        @include translateY(100%);
+        @include transition(transform 0.3s);
+        z-index: 2;
+        .views {
+            color: $white;
+        }
+    }
+    &:hover {
+        .informationArea {
+            @include translateY(0%);
+        }
+    }
+}
+
+.caption {
+    position: relative;
+    @include breakpoint(max-width 767px) {
+        border: solid $gray-200;
+        border-width: 0 1px 1px;
+        background-color: $white;
+    }
+    .channelTitle {
+        display: inline-block;
+        color: $primary;
+        font-size: 0.875em;
+        line-height: 1;
+        &:hover {
+            color: $white;
+            background-color: $primary;
+        }
+    }
+    time {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        padding-top: 1em;
+        color: $secondary;
+        font-size: 13px;
+    }
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 400;
+        a {
+            display: block;
+            color: $black;
+            line-height: 1.5;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.4;
+        @include lineclamp(2);
+        @include breakpoint(max-width 767px) {
+            display: none !important;
+        }
+    }
+}
+
+.articleGroup {
+    .article {
+        .caption {
+            padding: 10px;
+            @include breakpoint(768px) {
+                padding: 20px 15px;
+            }
+            h3 a {
+                font-size: 22px;
+                @include lineclamp(1);
+                @include breakpoint(768px) {
+                    font-size: 28px;
+                }
+            }
+            time {
+                @include breakpoint(768px) {
+                    top: 1em;
+                    padding-top: 0.5em;
+                }
+            }
+            p {}
+        }
+    }
+    .subArticle {
+        align-items: center;
+        margin: 5px 0 15px;
+        @include breakpoint(768px) {
+            display: flex;
+            margin: 20px 0;
+        }
+        .pic {
+            @include breakpoint(768px) {
+                width: 120px;
+            }
+            .informationArea {
+                display: none;
+            }
+        }
+        .caption {
+            @include breakpoint(768px) {
+                width: calc(100% - 120px);
+                padding-left: 10px;
+            }
+            @include breakpoint(max-width 767px) {
+                padding: 10px;
+            }
+            h3 a {
+                font-size: 22px;
+                @include lineclamp(1);
+            }
+            time {
+                right: 0;
+                @include breakpoint(768px) {
+                    padding-top: 0.25em;
+                }
+            }
+            p {
+                @include lineclamp(1);
+            }
+        }
+        &.media {
+            .pic {
+                &::before,
+                &::after {
+                    position: absolute;
+                    @include beforeafter('', block);
+                    z-index: 1;
+                }
+                &::before {
+                    bottom: 5px;
+                    left: 5px;
+                    width: 40px;
+                    height: 40px;
+                    border: 3px solid $white;
+                    @include border-radius(50%);
+                }
+                &::after {
+                    bottom: 15px;
+                    left: 20px;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 10px 0 10px 16px;
+                    border-color: transparent transparent transparent $white;
+                }
+            }
+        }
+    }
+}
+
+aside {
+    .article,
+    .media {
+        @include breakpoint(768px) {
+            border: 1px solid $gray-200;
+            background-color: $white;
+        }
+        .caption {
+            padding: 10px;
+            .channelTitle {
+                margin-bottom: 0.25em;
+            }
+            h3 a {
+                font-size: 1rem;
+            }
+        }
+    }
+    .media {
+        .pic {
+            &::before,
+            &::after {
+                position: absolute;
+                @include beforeafter('', block);
+                z-index: 1;
+            }
+            &::before {
+                bottom: 10px;
+                left: 10px;
+                width: 55px;
+                height: 55px;
+                border: 4px solid $white;
+                @include border-radius(50%);
+            }
+            &::after {
+                bottom: 25px;
+                left: 30px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 12px 0 12px 21px;
+                border-color: transparent transparent transparent $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,42 @@
+.banner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f7f7f7;
+    border: 1px solid $gray-100;
+    img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    &.fixed {
+        margin-bottom: 60px;
+        @include breakpoint(1024px) {
+            margin-bottom: 65px;
+        }
+    }
+}
+
+.couplet-wide,
+.couplet-left,
+.couplet-right {
+    display: none;
+}
+
+.couplet-left,
+.couplet-right {
+    position: absolute;
+    width: 300px;
+}
+
+.couplet-left {
+    left: calc((100% - 1000px) / 2 - 300px);
+}
+
+.couplet-right {
+    right: calc((100% - 1000px) / 2 - 300px);
+}
+
+.bottom-banner {
+    margin-top: -1.5em;
+    margin-bottom: 50px;
+}

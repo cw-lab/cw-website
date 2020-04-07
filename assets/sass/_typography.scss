@@ -3,126 +3,161 @@
 //  @return $baseLineHeight * $count;
 // }
 // 標題
-$h-color: $text, $text, $text, $primary, $secondary;
-$h-size: 32px, 22px, 18px, 1rem, 14px;
-$h-lh: 1.5, 1.5, 2, 1.2, 1;
+$h-color: $text,
+$text,
+$text,
+$primary,
+$secondary;
+$h-size: 32px,
+22px,
+18px,
+1rem,
+14px;
+$h-m-size: 28px,
+20px;
+$h-lh: 1.5,
+1.5,
+2,
+1.2,
+1;
 @for $i from 1 through 5 {
-	h#{$i} {
-		font-weight: 500;
-	}
-	h#{$i}, .h#{$i} {
-		margin-top: 1em;
-		margin-bottom: 1em;
-		.heading__icon {
-			display: inline-block;
-			margin-right: 10px;
-			font-size: 0.9em;
-			vertical-align: middle;
-			&--correct {
-				color: $surface;
-			}
-			&--notice {
-				color: $primary;
-			}
-			&--error {
-				color: $primary;
-			}
-		}
-	}
+    h#{$i} {
+        font-weight: 500;
+    }
+    h#{$i},
+    .h#{$i} {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        .heading__icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 0.9em;
+            vertical-align: middle;
+            &--correct {
+                color: $surface;
+            }
+            &--notice {
+                color: $primary;
+            }
+            &--error {
+                color: $primary;
+            }
+        }
+    }
 }
-@for $i from 1 through 5 {
-	h#{$i}, .h#{$i} {
-		color: nth($h-color, $i);
-		font-size: nth($h-size, $i);
-		line-height: nth($h-lh, $i);
-		word-break: break-word;
-	}
+
+@for $i from 1 through 2 {
+    h#{$i},
+    .h#{$i} {
+        font-size: nth($h-m-size, $i);
+        @include breakpoint(1024px) {
+            font-size: nth($h-size, $i);
+        }
+    }
 }
+
+@for $i from 3 through 5 {
+    h#{$i},
+    .h#{$i} {
+        color: nth($h-color, $i);
+        font-size: nth($h-size, $i);
+        line-height: nth($h-lh, $i);
+        word-break: break-word;
+    }
+}
+
 .text-left {
-	text-align: left;
+    text-align: left;
 }
+
 .text-center {
-	text-align: center;
+    text-align: center;
 }
+
 .text-right {
-	text-align: right;
+    text-align: right;
 }
+
 p {
-	color: $text;
-	word-break: break-word;
-	.heading__icon {
-		display: inline-block;
-		margin-right: 10px;
-		font-size: 0.9em;
-		vertical-align: sub;
-	}
-	a.link-btn {
-		color: $surface;
-		text-decoration: underline;
-		&:hover {
-			color: $primary;
-		}
-	}
+    color: $text;
+    word-break: break-word;
+    .heading__icon {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 0.9em;
+        vertical-align: sub;
+    }
+    a.link-btn {
+        color: $surface;
+        text-decoration: underline;
+        &:hover {
+            color: $primary;
+        }
+    }
 }
+
 .summary {
-	color: $surface;
+    color: $surface;
 }
+
 blockquote {
-	color: $text;
-	font-weight: 500;
+    color: $text;
+    font-weight: 500;
 }
+
 ul.keyword {
-	margin: 1.125em 0;
-	padding: 0;
-	font-size: 0;
-	list-style: none;
-	li {
-		display: inline-block;
-		font-size: 1.125em;
-		&::after {
-			content: '、';
-		}
-		&:last-child {
-			&::after {
-				content: '';
-			}
-		}
-		a {
-			display: inline-block;
-			color: $primary;
-			&:hover {
-				color: $primary-variant;
-			}
-		}
-	}
+    margin: 1.125em 0;
+    padding: 0;
+    font-size: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        font-size: 1.125em;
+        &::after {
+            content: '、';
+        }
+        &:last-child {
+            &::after {
+                content: '';
+            }
+        }
+        a {
+            display: inline-block;
+            color: $primary;
+            &:hover {
+                color: $primary-variant;
+            }
+        }
+    }
 }
+
 body {
-	&:not(.feature__page) {
-		main p {
-			font-size: 1rem;
-			line-height: 1.6;
-		}
-	}
-	&.feature__page {
-		h1, .h1 {
-			color: $text;
-			font-size: 28px;
-			line-height: 1.3;
-			@include breakpoint(768px) {
-				font-size: 40px;
-			}
-		}
-		h2, .h2 {
-			color: $text;
-			font-size: 22px;
-			line-height: 1.3;
-			@include breakpoint(768px) {
-				font-size: 24px;
-			}
-		}
-		main p {
-			font-size: 1.125rem;
-			line-height: 1.8;
-		}
-	}
+    main p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    &.feature__page {
+        h1,
+        .h1 {
+            color: $text;
+            font-size: 28px;
+            line-height: 1.3;
+            @include breakpoint(768px) {
+                font-size: 40px;
+            }
+        }
+        h2,
+        .h2 {
+            color: $text;
+            font-size: 22px;
+            line-height: 1.3;
+            @include breakpoint(768px) {
+                font-size: 24px;
+            }
+        }
+        main p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+    }
 }

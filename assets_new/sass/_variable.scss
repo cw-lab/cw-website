@@ -1,0 +1,39 @@
+$index: 1280px;
+$article: 1000px;
+// 
+$gray-100: #EEEEEE !default;
+$gray-200: #D3D5D7 !default;
+$gray-300: #939EA7 !default; //secondary
+$gray-400: #6B7780 !default;
+$gray-500: #48545D !default; //secondary-variant
+$gray-600: #373737;
+// 
+$red-100: #FEEBEC !default;
+$red-200: #EE969B !default;
+$red-300: #D60C18 !default; //primary
+$red-400: #BE0B15 !default;
+$red-500: #9D0505 !default; //primary-variant
+// 
+$white: #fff !default; //background
+$gray: #fafafa !default; //background
+$black: #171717 !default;
+$dark: #394148 !default;
+$bluegray: $gray-400;
+// 
+$surface: #003a9f;
+$primary: $red-300 !default;
+$primary-variant: $red-500 !default;
+$secondary: $gray-300 !default;
+$secondary-variant: $gray-500 !default;
+$error: $red-500 !default;
+$background: $white !default;
+$text: $black !default;
+$cookies: #95ffff;
+// 
+$facebook: #1877F2 !default;
+$line: #00C200 !default;
+$instagram: #dd2a7b !default;
+$rss: #FF5700 !default;
+$twitter: #00acee !default;
+$whatapp: #4FCE5D !default;
+$mail: $surface !default;

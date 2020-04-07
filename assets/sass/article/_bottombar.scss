@@ -1,0 +1,20 @@
+.bottombar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    a {
+        display: block;
+        color: $white;
+        font-weight: 400;
+        line-height: 50px;
+        background-color: $primary;
+        @include breakpoint(1024px) {
+            line-height: 40px;
+        }
+        &:hover {
+            background-color: $primary-variant;
+        }
+    }
+}

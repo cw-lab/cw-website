@@ -1,0 +1,23 @@
+$h-color: $text,
+$text,
+$text,
+$primary,
+$secondary;
+$h-size: 32px,
+22px,
+18px,
+1rem,
+14px;
+$h-lh: 1.5,
+1.5,
+2,
+1.2,
+1;
+@for $i from 1 through 5 {
+    h#{$i},
+    .h#{$i} {
+        font-size: nth($h-size, $i);
+        line-height: nth($h-lh, $i);
+        font-weight: 500;
+    }
+}

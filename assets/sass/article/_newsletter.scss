@@ -1,0 +1,31 @@
+.newsletter {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    border-top: 1px solid $gray-100;
+    .container {
+        position: relative;
+        font-size: 0;
+        @include breakpoint(1024px) {
+            width: 790px;
+            padding-right: 185px;
+        }
+        @include breakpoint(max-width 1023px) {
+            text-align: center;
+        }
+        >* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &::after {
+            @include beforeafter('', inline-block);
+        }
+        .newsletter__btn {
+            @include breakpoint(1024px) {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                @include translateY(-50%);
+            }
+        }
+    }
+}

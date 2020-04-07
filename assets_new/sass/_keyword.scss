@@ -1,0 +1,38 @@
+.keyword {
+    margin-bottom: 1.5rem;
+    font-size: 0;
+    @include breakpoint(max-width 767px) {
+        display: none;
+    }
+    >* {
+        display: inline-block;
+        line-height: 1.5;
+        vertical-align: top;
+    }
+    h2 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    ul {
+        width: calc(100% - 64px);
+        @include listrest(0, 0 0 0 0.5rem, none);
+        li {
+            display: inline-block;
+            &::after {
+                content: '、';
+                font-size: 1rem;
+            }
+            &:last-child::after {
+                content: '';
+            }
+            a {
+                color: $primary;
+                font-size: 1rem;
+                &:hover {
+                    color: $primary_variant;
+                }
+            }
+        }
+    }
+}

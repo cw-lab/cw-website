@@ -1,0 +1,67 @@
+.pagination {
+    @include listrest(20px 0 0, 0, none);
+    font-size: 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: middle;
+        +li {
+            margin-left: 5px;
+        }
+        a,
+        span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding: 4px 0;
+            color: $black;
+            text-align: center;
+            line-height: 22px;
+        }
+        &:hover,
+        &.active {
+            a,
+            span {
+                color: $white;
+                background-color: $gray-300;
+            }
+        }
+        &.prev,
+        &.next,
+        &.disabled {
+            a,
+            span {
+                background-color: transparent;
+            }
+        }
+        &.prev {
+            a,
+            span {
+                background-image: url('https://www.cw.com.tw/assets_new/img/prev-arrow-b.gif');
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            &:hover {
+                a,
+                span {
+                    background-position: left center;
+                }
+            }
+        }
+        &.next {
+            a,
+            span {
+                background-image: url('https://www.cw.com.tw/assets_new/img/next-arrow-b.gif');
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            &:hover {
+                a,
+                span {
+                    background-position: right center;
+                }
+            }
+        }
+    }
+}

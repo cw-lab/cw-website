@@ -1,0 +1,35 @@
+.article__function {
+    position: fixed;
+    top: 50%;
+    left: calc((100% - 970px) / 2);
+    transform: translateY(-50%);
+    >ul {
+        @include list(0, 0, none);
+        .title {
+            margin-bottom: 5px;
+            color: $gray-400;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        li {
+            width: 3rem;
+            height: 3rem;
+            border: 1px solid $gray-100;
+            @include border-radius(50%);
+            a,
+            span {
+                display: block;
+                color: $gray-400;
+                i.icon {
+                    display: block;
+                    text-align: center;
+                    font-size: 1.125rem;
+                    line-height: calc(3rem - 2px);
+                    &.icon-fontsize {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

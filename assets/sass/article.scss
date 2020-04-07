@@ -47,6 +47,12 @@
     margin-right: auto;
 }
 
+.preface>* {
+    font-size: 1.125em;
+    line-height: 1.7;
+}
+
+@import "article/_function";
 @import "article/_detail";
 .article__content {
     p {

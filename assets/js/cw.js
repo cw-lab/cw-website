@@ -157,14 +157,14 @@ $(function() {
         }
         // 當不是首頁時
         $(".tab--recommend .card__group .card__title").each(function() {
-                var num = $(this).data('title');
-                if (($(this).data('title').length >= 21) && (width >= 768)) {
-                    $(this).text(num.substr(0, 20) + '...');
-                } else {
-                    $(this).text(num);
-                }
-            })
-            // 當裝置大於等於768時，將tab__nav寬度設為等分
+            var num = $(this).data('title');
+            if (($(this).data('title').length >= 21) && (width >= 768)) {
+                $(this).text(num.substr(0, 20) + '...');
+            } else {
+                $(this).text(num);
+            }
+        });
+        // 當裝置大於等於768時，將tab__nav寬度設為等分
         function tabNavWidth(width) {
             $(".tab").each(function() {
                 var tabLength = $(this).children(".tab__nav").children("ul").children("li").length,

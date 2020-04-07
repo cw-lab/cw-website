@@ -31,6 +31,7 @@
             &::before {
                 @include beforeafter('．', inline-block);
                 width: 2em;
+                font-weight: 600;
                 text-align: center;
             }
         }

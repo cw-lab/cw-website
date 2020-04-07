@@ -689,7 +689,7 @@
                     </div>
                     <div class="article__img">
                         <span class="imgzoom lazyload__group" data-zoom="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-sizes="auto" data-srcset="../assets/images/main-630.png 320w, ../assets/images/main-mobile.png 768w, ../assets/images/main-desktop.png 1280w" data-src="../assets/images/common/blank.png" width="100%" alt="" />
+                        <img class="lazyload" src="../assets/images/common/blank.png" data-sizes="auto" data-srcset="../assets/images/main-630.png 320w, ../assets/images/main-mobile.png 768w, ../assets/images/main-desktop.png 1280w" data-src="../assets/images/main-desktop.png" width="100%" alt="" />
                     </span>
                         <span class="source">外國旅客Mike正為平安符過火，體驗台灣傳統寺廟文化。圖片來源：shutterstock</span>
                     </div>
@@ -759,7 +759,7 @@
                     <section class="ad ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-02.jpg" height="250" alt="">
+                            <img src="../assets/images/article/ad-300-250-14.png" height="250" alt="">
                         </a>
                     </section>
                     <p>
@@ -1180,6 +1180,14 @@
             });
         });
     </script>
+    <!--[if IE]> -->
+    <script>
+        $("img.lazyload").each(function() {
+            var source = $(this).data('src');
+            $(this).attr('src', source);
+        });
+    </script>
+    <!-- <![endif]-->
 </body>
 
 </html>

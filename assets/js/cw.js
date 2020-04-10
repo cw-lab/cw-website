@@ -430,6 +430,23 @@ $(function() {
                     'padding-top': 0
                 });
             }
+            if (scroll >= (audioPlayerTop - headerHeight)) {
+                $('header .item--center').addClass('scroll');
+                $('.bottombar').css({
+                    'bottom': 0
+                });
+            } else {
+                $('header .item--center').removeClass('scroll');
+                if (width >= 1024) {
+                    $('.bottombar').css({
+                        'bottom': '-40px'
+                    });
+                } else {
+                    $('.bottombar').css({
+                        'bottom': '-50px'
+                    });
+                }
+            }
             if ((scroll >= (audioPlayerTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 $('.article__function').fadeIn();
             } else {

@@ -612,15 +612,30 @@
   position: fixed;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -50px;
   z-index: 2;
+  background-color: #D60C18;
+  -moz-transition: bottom 0.2s;
+  -o-transition: bottom 0.2s;
+  -webkit-transition: bottom 0.2s;
+  transition: bottom 0.2s;
+}
+@media (min-width: 1024px) {
+  .bottombar {
+    bottom: -40px;
+  }
 }
 .bottombar a {
   display: block;
+  padding-left: 20px;
+  padding-right: 20px;
   color: #fff;
   font-weight: 400;
   line-height: 50px;
   background-color: #D60C18;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   .bottombar a {
@@ -685,62 +700,126 @@
   transform: translateY(-50%);
   z-index: 3;
 }
-.article__function > ul {
+
+ul.article__share,
+ul.article__provide {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.article__function > ul + ul {
+ul.article__share + ul,
+ul.article__provide + ul {
   margin-top: 30px;
 }
-.article__function > ul .title {
+ul.article__share .title,
+ul.article__provide .title {
   margin-bottom: 5px;
   color: #6B7780;
   font-size: 0.875rem;
   text-align: center;
 }
-.article__function > ul li + li {
-  margin-top: 10px;
-}
-.article__function > ul li a,
-.article__function > ul li span {
+ul.article__share li a,
+ul.article__share li span,
+ul.article__provide li a,
+ul.article__provide li span {
   display: block;
-  width: 3rem;
-  height: 3rem;
   color: #6B7780;
-  border: 1px solid #EEEEEE;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+  border: solid #EEEEEE;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
 }
-.article__function > ul li a i.icon,
-.article__function > ul li span i.icon {
+ul.article__share li a i.icon,
+ul.article__share li span i.icon,
+ul.article__provide li a i.icon,
+ul.article__provide li span i.icon {
   display: block;
   text-align: center;
   font-size: 1.125rem;
-  line-height: calc(3rem - 2px);
 }
-.article__function > ul li a i.icon.icon-fontsize,
-.article__function > ul li span i.icon.icon-fontsize {
+ul.article__share li a i.icon.icon-fontsize,
+ul.article__share li span i.icon.icon-fontsize,
+ul.article__provide li a i.icon.icon-fontsize,
+ul.article__provide li span i.icon.icon-fontsize {
   font-size: 1rem;
 }
-.article__function > ul li a:hover,
-.article__function > ul li span:hover {
+ul.article__share li a:hover,
+ul.article__share li span:hover,
+ul.article__provide li a:hover,
+ul.article__provide li span:hover {
   color: #D60C18;
   border-color: #D60C18;
 }
-.article__function > ul li.tooltips--facebook a:hover {
+ul.article__share li.tooltips--facebook a:hover,
+ul.article__provide li.tooltips--facebook a:hover {
   color: #1877F2;
   border-color: #1877F2;
 }
-.article__function > ul li.tooltips--line a:hover {
+ul.article__share li.tooltips--line a:hover,
+ul.article__provide li.tooltips--line a:hover {
   color: #00C200;
   border-color: #00C200;
+}
+
+@media (max-width: 1023px) {
+  ul.article__share li {
+    display: inline-block;
+  }
+}
+@media (min-width: 1024px) {
+  ul.article__share li + li {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1023px) {
+  ul.article__share li + li {
+    margin-left: calc((100% - 120px) / 4);
+  }
+}
+ul.article__share li a {
+  border-width: 0;
+}
+@media (max-width: 1023px) {
+  ul.article__share li a {
+    padding: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  ul.article__share li a {
+    width: 3rem;
+    height: 3rem;
+    border-width: 1px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+@media (max-width: 1023px) {
+  ul.article__share li a i.icon {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 1024px) {
+  ul.article__share li a i.icon {
+    line-height: calc(3rem - 2px);
+  }
+}
+
+ul.article__provide li + li {
+  margin-top: 10px;
+}
+ul.article__provide li span {
+  width: 3rem;
+  height: 3rem;
+  border-width: 1px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+ul.article__provide li span i.icon {
+  line-height: calc(3rem - 2px);
 }
 
 .article__detail {
@@ -892,32 +971,56 @@
 .article__next {
   display: none;
   position: fixed;
-  top: 50%;
-  left: calc(((100% - 700px) / 2) + 700px + 20px);
-  width: 180px;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   z-index: 3;
+}
+@media (min-width: 1024px) {
+  .article__next {
+    top: 50%;
+    left: calc(((100% - 700px) / 2) + 700px + 20px);
+    width: 180px;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 1023px) {
+  .article__next {
+    bottom: 60px;
+    left: 20px;
+    right: 20px;
+  }
 }
 .article__next a {
   display: block;
+  font-size: 0;
   background-color: #fff;
   border: 1px solid #EEEEEE;
 }
 .article__next a span {
   display: block;
 }
+@media (max-width: 1023px) {
+  .article__next a .next__img {
+    display: inline-block;
+    width: 150px;
+    vertical-align: middle;
+  }
+}
 .article__next a .next__img img {
   width: 100%;
-}
-.article__next a .next__body {
-  padding: 0 15px;
 }
 @media (min-width: 1024px) {
   .article__next a .next__body {
     padding: 20px 15px;
+  }
+}
+@media (max-width: 1023px) {
+  .article__next a .next__body {
+    display: inline-block;
+    width: calc(100% - 150px);
+    padding: 0 15px;
+    vertical-align: middle;
   }
 }
 .article__next a .next__body .next__label {
@@ -926,6 +1029,11 @@
 }
 .article__next a .next__body .next__title {
   color: #171717;
+  font-size: 1rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .article__next a:hover .next__body .next__title {
   color: #D60C18;
@@ -1400,8 +1508,12 @@ article.article__level--2 ul.article__keyword li a {
   }
 }
 .newsletter .container > * {
-  display: inline-block;
   vertical-align: middle;
+}
+@media (min-width: 1024px) {
+  .newsletter .container > * {
+    display: inline-block;
+  }
 }
 .newsletter .container::after {
   content: "";

@@ -2,14 +2,22 @@
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -50px;
     z-index: 2;
+    background-color: $primary;
+    @include transition(bottom 0.2s);
+    @include breakpoint(1024px) {
+        bottom: -40px;
+    }
     a {
         display: block;
+        padding-left: 20px;
+        padding-right: 20px;
         color: $white;
         font-weight: 400;
         line-height: 50px;
         background-color: $primary;
+        @include ellipsis();
         @include breakpoint(1024px) {
             line-height: 40px;
         }

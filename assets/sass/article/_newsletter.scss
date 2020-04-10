@@ -13,8 +13,10 @@
             text-align: center;
         }
         >* {
-            display: inline-block;
             vertical-align: middle;
+            @include breakpoint(1024px) {
+                display: inline-block;
+            }
         }
         &::after {
             @include beforeafter('', inline-block);

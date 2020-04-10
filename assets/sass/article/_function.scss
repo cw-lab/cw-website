@@ -5,52 +5,100 @@
     left: calc((100% - 970px) / 2);
     @include translateY(-50%);
     z-index: 3;
-    >ul {
-        @include list(0, 0, none);
-        +ul {
-            margin-top: 30px;
-        }
-        .title {
-            margin-bottom: 5px;
+}
+
+ul.article__share,
+ul.article__provide {
+    @include list(0, 0, none);
+    +ul {
+        margin-top: 30px;
+    }
+    .title {
+        margin-bottom: 5px;
+        color: $gray-400;
+        font-size: 0.875rem;
+        text-align: center;
+    }
+    li {
+        a,
+        span {
+            display: block;
             color: $gray-400;
-            font-size: 0.875rem;
-            text-align: center;
+            border: solid $gray-100;
+            @include transition(all 0.2s);
+            cursor: pointer;
+            i.icon {
+                display: block;
+                text-align: center;
+                font-size: 1.125rem;
+                &.icon-fontsize {
+                    font-size: 1rem;
+                }
+            }
+            &:hover {
+                color: $primary;
+                border-color: $primary;
+            }
         }
-        li {
-            +li {
+        &.tooltips--facebook a:hover {
+            color: $facebook;
+            border-color: $facebook;
+        }
+        &.tooltips--line a:hover {
+            color: $line;
+            border-color: $line;
+        }
+    }
+}
+
+ul.article__share {
+    li {
+        @include breakpoint(max-width 1023px) {
+            display: inline-block;
+        }
+        +li {
+            @include breakpoint(1024px) {
                 margin-top: 10px;
             }
-            a,
-            span {
-                display: block;
+            @include breakpoint(max-width 1023px) {
+                margin-left: calc((100% - 120px) / 4);
+            }
+        }
+        a {
+            border-width: 0;
+            @include breakpoint(max-width 1023px) {
+                padding: 10px;
+            }
+            @include breakpoint(1024px) {
                 width: 3rem;
                 height: 3rem;
-                color: $gray-400;
-                border: 1px solid $gray-100;
+                border-width: 1px;
                 @include border-radius(50%);
-                @include transition(all 0.2s);
-                cursor: pointer;
-                i.icon {
-                    display: block;
-                    text-align: center;
-                    font-size: 1.125rem;
+            }
+            i.icon {
+                @include breakpoint(max-width 1023px) {
+                    font-size: 1.25rem;
+                }
+                @include breakpoint(1024px) {
                     line-height: calc(3rem - 2px);
-                    &.icon-fontsize {
-                        font-size: 1rem;
-                    }
-                }
-                &:hover {
-                    color: $primary;
-                    border-color: $primary;
                 }
             }
-            &.tooltips--facebook a:hover {
-                color: $facebook;
-                border-color: $facebook;
-            }
-            &.tooltips--line a:hover {
-                color: $line;
-                border-color: $line;
+        }
+    }
+}
+
+ul.article__provide {
+    li {
+        +li {
+            margin-top: 10px;
+        }
+        span {
+            width: 3rem;
+            height: 3rem;
+            border-width: 1px;
+            @include border-radius(50%);
+            i.icon {
+                line-height: calc(3rem - 2px);
             }
         }
     }

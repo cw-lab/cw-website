@@ -8,7 +8,9 @@
         position: relative;
         background-color: #f7f7f7;
         border: 1px solid $gray-100;
-        z-index: 10;
+        &.opened {
+            z-index: 10;
+        }
         a {
             width: 300px;
             @include breakpoint(1024px) {

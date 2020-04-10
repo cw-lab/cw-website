@@ -2501,12 +2501,16 @@ header {
   padding-bottom: 12px;
   background-color: #fff;
   border-bottom: 1px solid #EEEEEE;
+  z-index: 5;
+}
+header.opened {
   z-index: 10;
 }
 header.fixed {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 header .container {
   position: relative;
@@ -2584,6 +2588,9 @@ header .search__icon .handle {
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 header .search__icon .handle::after {
   content: "";
@@ -2592,6 +2599,9 @@ header .search__icon .handle::after {
   width: 24px;
   height: 2px;
   background-color: #171717;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
   -moz-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
   -o-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
   -webkit-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
@@ -2610,6 +2620,7 @@ header .search__icon.opened .circle {
 header .search__icon.opened .handle {
   bottom: 9px;
   right: -2px;
+  height: 3px;
 }
 header .search__icon.opened .handle:after {
   transform-origin: center center;
@@ -2617,6 +2628,7 @@ header .search__icon.opened .handle:after {
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+  height: 3px;
 }
 @media (max-width: 1023px) {
   header .search__icon {

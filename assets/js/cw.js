@@ -10,11 +10,18 @@ $(function() {
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');
     $('.hamburger').click(function() {
+        if ($('.black').hasClass("search__opened")) {
+            $('.search__icon').removeClass('opened');
+            $('.black').removeClass('opened search__opened');
+            $('.search__block').slideUp();
+            $('body, header, .ad--970by250').removeClass('opened');
+        }
         $('body').addClass('opened');
         $('.menubar--left').addClass('opened');
         $('.black').addClass('opened menubar--left');
     });
     $('.search__icon').click(function() {
+        $('body, header, .ad--970by250').toggleClass('opened');
         $(this).toggleClass('opened');
         $('.search__block').slideToggle();
         $('.black').toggleClass('opened search__opened');
@@ -30,7 +37,7 @@ $(function() {
             $('.message--dialogs').fadeOut(200);
         }
         if ($(this).hasClass("search__opened")) {
-            $('.search__icon').removeClass('opened');
+            $('body, header, .ad--970by250, .search__icon').removeClass('opened');
             $('.black').removeClass('opened search__opened');
             $('.search__block').slideUp();
         }

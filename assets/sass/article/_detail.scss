@@ -50,11 +50,21 @@
 
 .article__views {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
     font-size: 0.875rem;
+    @include translateY(-50%);
     span {
         display: block;
         line-height: 1;
+    }
+}
+
+.article__provideViews {
+    position: relative;
+    font-size: 0;
+    >* {
+        display: inline-block;
+        vertical-align: middle;
     }
 }

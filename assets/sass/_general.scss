@@ -141,6 +141,9 @@ body {
     //         padding-bottom: 190px;
     //     }
     // }
+    &.opened {
+        overflow: hidden;
+    }
 }
 
 .serif {
@@ -150,7 +153,9 @@ body {
 a {
     text-decoration: none;
     @include breakpoint(1024px) {
-        @include transition(all .2s);
+        @include transition(color .2s,
+        border .2s,
+        background .2s);
     }
 }
 

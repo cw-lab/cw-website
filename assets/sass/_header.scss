@@ -1,8 +1,18 @@
+$easing: cubic-bezier(.25, 1.7, .35, .8);
+$duration: 0.6s;
 header {
     position: relative;
+    width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
+    background-color: $white;
     border-bottom: 1px solid $gray-100;
+    z-index: 10;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
     .container {
         position: relative;
         font-size: 0;
@@ -41,10 +51,58 @@ header {
             height: 40px;
         }
     }
-    .search {
+    .search__icon {
         margin-left: 30px;
-        i {
-            font-size: 1.25rem;
+        position: relative;
+        width: 21px;
+        height: 21px;
+        cursor: pointer;
+        .circle {
+            position: relative;
+            display: block;
+            height: 18px;
+            width: 18px;
+            background-color: white;
+            @include border-radius(50%);
+            border: 2px solid black;
+            @include transition(all $duration $easing);
+            z-index: 1;
+        }
+        .handle {
+            position: absolute;
+            display: block;
+            float: right;
+            bottom: 8px;
+            right: -3px;
+            width: 24px;
+            height: 2px;
+            background-color: $black;
+            @include rotate(45deg);
+            &::after {
+                @include beforeafter('', block);
+                float: right;
+                width: 24px;
+                height: 2px;
+                background-color: $black;
+                @include transition(all $duration $easing);
+                z-index: -1;
+            }
+        }
+        &.opened {
+            .circle {
+                @include scale(.02);
+                transform-origin: 30% 40%;
+                background: $black;
+                border-color: $black;
+            }
+            .handle {
+                bottom: 9px;
+                right: -2px;
+                &:after {
+                    transform-origin: center center;
+                    @include rotate(90deg);
+                }
+            }
         }
         @include breakpoint(max-width 1023px) {
             display: none !important;
@@ -61,5 +119,30 @@ header {
         i {
             font-size: 1.125rem;
         }
+    }
+}
+
+.search__block {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 1px;
+    background-color: $white;
+    border-bottom: 1px solid $gray-100;
+    .container::after {
+        @include clear();
+    }
+    .search__item--left {
+        float: left;
+        width: calc(100% - 400px);
+        padding-right: 30px;
+    }
+    .search__item--right {
+        float: right;
+        width: 400px;
+        padding-left: 30px;
+        border-left: 1px solid $gray-100;
     }
 }

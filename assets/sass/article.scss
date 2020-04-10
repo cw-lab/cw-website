@@ -1,6 +1,7 @@
 @import "_basic";
 @import "_sheet";
 @import "_variable";
+@import "_search";
 @import "article/_ad";
 @import "article/_breaking";
 @import "article/_player";
@@ -8,7 +9,6 @@
 @import "article/_lazyload";
 @import "article/_bottombar";
 .breadcrumb {
-    font-size: 0;
     font-size: 0;
     li {
         display: inline-block;
@@ -137,8 +137,208 @@
     }
 }
 
+@import "article/_next";
 @import "article/_extended";
 @import "article/_keyword";
+article {
+    &.article__level--1 {
+        .article__content,
+        .article__detail,
+        .article__extended {
+            h1,
+            .h1 {
+                font-size: 32px;
+                @include breakpoint(1024px) {
+                    font-size: 36px;
+                }
+            }
+            h2,
+            .h2 {
+                font-size: 24px;
+                @include breakpoint(1024px) {
+                    font-size: 26px;
+                }
+            }
+        }
+        .article__detail {
+            @include breakpoint(1024px) {
+                padding-right: 100px;
+            }
+        }
+        .breadcrumb {
+            li {
+                +li {
+                    &::before {
+                        font-size: 1.125rem;
+                    }
+                }
+                a {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+        .source {
+            font-size: 1.125rem;
+        }
+        .audio__player .audio__title {
+            font-size: 1.375rem;
+        }
+        .article__detail {
+            >ul {
+                li {
+                    >span {
+                        font-size: 1.125rem;
+                    }
+                    >.author--item {
+                        a,
+                        span {
+                            font-size: 1.125rem;
+                        }
+                        +.author--item::before {
+                            font-size: 1.125rem;
+                        }
+                    }
+                }
+            }
+            >ul.article__author {
+                li::after {
+                    font-size: 1.125rem;
+                }
+            }
+            >ul.article__assort {
+                a,
+                span {
+                    font-size: 1.125rem;
+                }
+            }
+            time {
+                font-size: 1.125rem;
+            }
+        }
+        .article__views {
+            font-size: 1.125rem;
+        }
+        .preface>* {
+            font-size: 1.375rem;
+        }
+        .article__content {
+            p {
+                font-size: 1.375rem;
+            }
+        }
+        .article__extended {
+            ul {
+                font-size: 1.375rem;
+            }
+        }
+        ul.article__keyword {
+            li {
+                a {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+    &.article__level--2 {
+        .article__content,
+        .article__detail,
+        .article__extended {
+            h1,
+            .h1 {
+                font-size: 36px;
+                @include breakpoint(1024px) {
+                    font-size: 40px;
+                }
+            }
+            h2,
+            .h2 {
+                font-size: 28px;
+                @include breakpoint(1024px) {
+                    font-size: 30px;
+                }
+            }
+        }
+        .article__detail {
+            @include breakpoint(1024px) {
+                padding-right: 120px;
+            }
+        }
+        .breadcrumb {
+            li {
+                +li {
+                    &::before {
+                        font-size: 1.375rem;
+                    }
+                }
+                a {
+                    font-size: 1.375rem;
+                }
+            }
+        }
+        .source {
+            font-size: 1.375rem;
+        }
+        .audio__player .audio__title {
+            font-size: 1.625rem;
+        }
+        .article__detail {
+            >ul {
+                li {
+                    >span {
+                        font-size: 1.375rem;
+                    }
+                    >.author--item {
+                        a,
+                        span {
+                            font-size: 1.375rem;
+                        }
+                        +.author--item::before {
+                            font-size: 1.375rem;
+                        }
+                    }
+                }
+            }
+            >ul.article__author {
+                li::after {
+                    font-size: 1.375rem;
+                }
+            }
+            >ul.article__assort {
+                a,
+                span {
+                    font-size: 1.375rem;
+                }
+            }
+            time {
+                font-size: 1.375rem;
+            }
+        }
+        .article__views {
+            font-size: 1.375rem;
+        }
+        .preface>* {
+            font-size: 1.625rem;
+        }
+        .article__content {
+            p {
+                font-size: 1.625rem;
+            }
+        }
+        .article__extended {
+            ul {
+                font-size: 1.625rem;
+            }
+        }
+        ul.article__keyword {
+            li {
+                a {
+                    font-size: 1.375rem;
+                }
+            }
+        }
+    }
+}
+
 .article__recommend,
 .article__promotion {
     border-top: 1px solid $black;

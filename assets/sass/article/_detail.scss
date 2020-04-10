@@ -1,6 +1,9 @@
 .article__detail {
     position: relative;
     font-size: 0;
+    @include breakpoint(1024px) {
+        padding-right: 90px;
+    }
     >ul {
         display: inline-block;
         @include list(0, 0, none);

@@ -300,6 +300,9 @@ body {
     font-weight: 300;
   }
 }
+body.opened {
+  overflow: hidden;
+}
 
 .serif {
   font-family: 'Roboto Slab', 'Noto Serif TC', serif;
@@ -310,10 +313,10 @@ a {
 }
 @media (min-width: 1024px) {
   a {
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+    -moz-transition: color 0.2s, border 0.2s, background 0.2s;
+    -o-transition: color 0.2s, border 0.2s, background 0.2s;
+    -webkit-transition: color 0.2s, border 0.2s, background 0.2s;
+    transition: color 0.2s, border 0.2s, background 0.2s;
   }
 }
 

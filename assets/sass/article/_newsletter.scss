@@ -6,7 +6,7 @@
         position: relative;
         font-size: 0;
         @include breakpoint(1024px) {
-            width: 790px;
+            width: 740px;
             padding-right: 185px;
         }
         @include breakpoint(max-width 1023px) {

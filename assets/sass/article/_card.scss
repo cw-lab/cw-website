@@ -13,22 +13,7 @@
 .card__group {
     font-size: 0;
     .card__item {
-        display: inline-block;
-        vertical-align: top;
         width: 100%;
-        @include breakpoint(1024px) {
-            width: calc((100% - 40px) / 3);
-            margin-left: 20px;
-            margin-bottom: 30px;
-        }
-        @include breakpoint(max-width 1023px) {
-            width: 220px;
-            margin-right: 20px;
-            margin-bottom: 10px;
-        }
-        &:nth-child(3n+1) {
-            margin-left: 0;
-        }
         span {
             display: block;
         }
@@ -48,7 +33,6 @@
             }
         }
         .card__subtitle {
-            margin-top: 10px;
             margin-bottom: 5px;
             color: $primary;
             font-size: 0.875rem;
@@ -67,6 +51,50 @@
         &:hover {
             .card__title {
                 color: $primary;
+            }
+        }
+    }
+    &.card__group--grid {
+        .card__item {
+            display: inline-block;
+            vertical-align: top;
+            @include breakpoint(1024px) {
+                width: calc((100% - 40px) / 3);
+                margin-left: 20px;
+                margin-bottom: 30px;
+            }
+            @include breakpoint(max-width 1023px) {
+                width: 220px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            .card__subtitle {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.card__group--list {
+        .card__item {
+            display: block;
+            +.card__item {
+                margin-top: 20px;
+            }
+            .card__img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 110px;
+            }
+            .card__body {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 110px);
+                padding-left: 20px;
+                .card__title {
+                    @include lineclamp(2);
+                }
             }
         }
     }

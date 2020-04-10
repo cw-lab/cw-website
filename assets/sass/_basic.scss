@@ -29,6 +29,13 @@
     overflow: hidden;
 }
 
+@mixin lineclamp($line) {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
 @mixin list($margin, $padding, $style) {
     margin: $margin;
     padding: $padding;

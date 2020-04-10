@@ -49,6 +49,22 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+.search .search__group--white {
+  border: 1px solid #EEEEEE;
+}
+.search .search__group--white .search__input,
+.search .search__group--white .search__submit {
+  background-color: #fff;
+  vertical-align: middle;
+}
+.search .search__group--white .search__input {
+  width: calc(100% - 60px);
+  padding: 20px 1rem;
+}
+.search .search__group--white .search__submit {
+  width: 60px;
+  height: 60px;
+}
 
 .center__page header {
   border-bottom: 1px solid #D3D5D7;

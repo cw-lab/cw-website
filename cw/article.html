@@ -645,8 +645,9 @@
                 <div class="hamburger">
                     <span></span><span></span><span></span>
                 </div>
-                <div class="search">
-                    <i class="icon icon-search"></i>
+                <div class="search__icon">
+                    <span class="circle"></span>
+                    <span class="handle"></span>
                 </div>
             </div>
             <div class="item item--center">
@@ -657,6 +658,101 @@
             <div class="item item--right">
                 <a href="https://www.cw.com.tw/payment" class="btn btn--outlined btn--small">訂閱天下</a>
                 <div class="menubar__user"><i class="icon icon-user-filled"></i></div>
+            </div>
+        </div>
+        <div class="search__block search">
+            <div class="container py40">
+                <div class="search__item search__item--left">
+                    <div class="h2 font-weight-500 mt0 mb10">站內搜尋</div>
+                    <form class="form mb30" action="#!" method="post">
+                        <div class="search__group search__group--white form__group--defalt">
+                            <input type="email" class="search__input" placeholder="請輸入關鍵字">
+                            <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
+                        </div>
+                    </form>
+                    <div class="h2 font-weight-500 mt0 mb10">熱門關鍵字</div>
+                    <ul class="article__keyword">
+                        <li>
+                            <a href="#!">
+                        #新冠肺炎
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #疫情管理戰報
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #防疫外交
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #購買力
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #天下財經週報
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #台灣
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #實質GDP
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #金融
+                    </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                        #中小企業
+                    </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search__item search__item--right">
+                    <div class="h2 font-weight-500 mt0 mb10">推薦文章</div>
+                    <div class="card__group card__group--list">
+                        <a href="article.html" class="card__item">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e2569206af7f.jpg" alt="節目獲亞洲電視大獎心情沉重　Alana不捨：澳洲野火肆虐我第二個家">
+                        </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">環境</span>
+                            <span class="card__title">節目獲亞洲電視大獎心情沉重　Alana不捨：澳洲野火肆虐我第二個家
+                        </span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
+                            </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">企業突圍</span>
+                            <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item">
+                            <span class="card__img lazyload__group">
+                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
+                        </span>
+                            <span class="card__body">
+                                <span class="card__subtitle">國際</span>
+                            <span class="card__title">桑德斯親台？美國民主黨總統參選人最「親中」與「親台」</span>
+                            </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -705,9 +801,10 @@
                     </ul>
                     <ul class="article__provide">
                         <div class="title">其他</div>
-                        <li class="tooltips tooltips--right" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined"></i></span></li>
-                        <li class="tooltips tooltips--right" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize"></i></span></li>
-                        <li class="tooltips tooltips--right" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
+                        <li class="tooltips tooltips--right function__save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined"></i></span></li>
+                        <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize"></i></span></li>
+                        <li class="tooltips tooltips--right function__download" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
+                        <li class="tooltips tooltips--right function__paid" data-tooltips="單篇下載文章"><span><i class="icon icon-coin"></i></span></li>
                     </ul>
                 </div>
                 <div class="audio__player py20 px10 mb40">
@@ -863,6 +960,17 @@
                         台灣過去20年，企業也靠運籌帷幄這塊肥沃的「中間財」，撐起台灣的經濟發展。2019年第四季，台灣景氣轉佳，台商回來找人、找地，外商包括Google、微軟、亞馬遜也來台灣設研發中心。（責任編輯：吳凱琳）
                     </p>
                 </div>
+                <div class="article__next">
+                    <a href="#!">
+                        <span class="next__img">
+                        <img src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e4f98fe7863c.jpg" alt="史上最長寒假，讓這家24歲的社群網站翻身為一條活龍">
+                    </span>
+                        <span class="next__body">
+                        <span class="next__label">下一篇</span>
+                        <span class="next__title">史上最長寒假，讓這家24歲的社群網站翻身為一條活龍</span>
+                        </span>
+                    </a>
+                </div>
                 <div class="article__extended mb40">
                     <div class="h2 font-weight-500 mb10">
                         延伸閱讀
@@ -913,7 +1021,7 @@
                 <div class="article__recommend mb30">
                     <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
                     <div class="card__group--scroll">
-                        <div class="card__group">
+                        <div class="card__group card__group--grid">
                             <a href="article.html" class="card__item">
                                 <span class="card__img lazyload__group">
                                 <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
@@ -939,7 +1047,7 @@
                                 <span class="label">廣告</span>
                                 </span>
                                 <span class="card__body">
-                                <span class="card__subtitle">運動生活</span>
+                                <span class="card__subtitle">企業突圍</span>
                                 <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
                                 </span>
                             </a>
@@ -948,7 +1056,7 @@
                                 <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
                             </span>
                                 <span class="card__body">
-                                <span class="card__subtitle">時尚生活</span>
+                                <span class="card__subtitle">國際</span>
                                 <span class="card__title">桑德斯親台？美國民主黨總統參選人最「親中」與「親台」</span>
                                 </span>
                             </a>
@@ -974,24 +1082,6 @@
                         </div>
                     </div>
                 </div>
-                <section class="ad ad--300by250 mb20">
-                    <span class="sans-serif">廣告</span>
-                    <a href="#!" target="_blank">
-                        <img src="../assets/images/article/ad-300-250-07.jpg" height="250" alt="">
-                    </a>
-                </section>
-                <section class="ad ad--300by250 mb20">
-                    <span class="sans-serif">廣告</span>
-                    <a href="#!" target="_blank">
-                        <img src="../assets/images/article/ad-300-250-08.gif" height="250" alt="">
-                    </a>
-                </section>
-                <section class="ad ad--300by250 mb20">
-                    <span class="sans-serif">廣告</span>
-                    <a href="#!" target="_blank">
-                        <img src="../assets/images/article/ad-300-250-09.jpg" height="250" alt="">
-                    </a>
-                </section>
                 <section class="ad ad--video pb30 mb30">
                     <div class="h2 font-weight-500 my0 py20">2020財政與貨幣政策並行 四策略兼顧收益與成長</div>
                     <div class="embed embed--16by9">
@@ -1199,6 +1289,11 @@
             </div>
         </div>
     </footer>
+    <div class="message message--notification message--center" style="display: none;">
+        <div class="message__txt">
+            <p class="my0">您已成功收藏此文章</p>
+        </div>
+    </div>
     <script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
     <script type="text/javascript" src="../assets/js/cw.js"></script>
@@ -1211,6 +1306,31 @@
                 enableKeystrokes: true
             });
         });
+        $(function() {
+            var save = $('.function__save').data('tooltips'),
+                saved = "取消收藏文章",
+                msgSave = $('.message--notification p').text(),
+                msgSaved = "您已成功取消收藏此文章";
+
+            $('.function__save').click(function() {
+                var clicks = $(this).data('clicks');
+                if (clicks) {
+                    $(this).attr('data-tooltips', save);
+                    $(this).children().children('i').removeClass('icon-bookmark-filled').addClass('icon-bookmark-outlined');
+                    $('.message--notification p').text(msgSaved);
+                    $('.message--notification').fadeIn()
+                } else {
+                    $(this).attr('data-tooltips', saved);
+                    $(this).children().children('i').removeClass('icon-bookmark-outlined').addClass('icon-bookmark-filled');
+                    $('.message--notification p').text(msgSave);
+                    $('.message--notification').fadeIn()
+                }
+                $(this).data("clicks", !clicks);
+                setTimeout(function() {
+                    $('.message--notification').fadeOut()
+                }, 2000);
+            });
+        })
     </script>
     <!--[if IE]> -->
     <script>

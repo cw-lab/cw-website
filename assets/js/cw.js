@@ -1,5 +1,6 @@
 $(function() {
-    var width = $(window).width();
+    var width = $(window).width(),
+        height = $(window).height();
     // 判斷瀏覽器
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -9,17 +10,29 @@ $(function() {
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');
     $('.hamburger').click(function() {
+        $('body').addClass('opened');
         $('.menubar--left').addClass('opened');
         $('.black').addClass('opened menubar--left');
     });
+    $('.search__icon').click(function() {
+        $(this).toggleClass('opened');
+        $('.search__block').slideToggle();
+        $('.black').toggleClass('opened search__opened');
+    });
     $('.black').click(function() {
         if ($(this).hasClass("menubar--left")) {
+            $('body').removeClass('opened');
             $('.menubar--left').removeClass('opened');
             $('.black').removeClass('opened menubar--left');
         }
         if ($(this).hasClass("message--dialogs")) {
             $('.black').removeClass('opened message--dialogs');
             $('.message--dialogs').fadeOut(200);
+        }
+        if ($(this).hasClass("search__opened")) {
+            $('.search__icon').removeClass('opened');
+            $('.black').removeClass('opened search__opened');
+            $('.search__block').slideUp();
         }
     });
     // if ($('footer > .container > .flex').children('div').hasClass('imglink')) {
@@ -201,17 +214,17 @@ $(function() {
         tabNavWidth(width);
         // 當tooltips大於等於15字
         $(".tooltips").each(function() {
-                if ($(this).data("tooltips").length >= 15) {
-                    $(this).addClass("tooltips-wrap");
-                }
-            })
-            // menu寬度平分
+            if ($(this).data("tooltips").length >= 15) {
+                $(this).addClass("tooltips-wrap");
+            };
+        });
+        // menu寬度平分
         $("nav.menubar--belt").each(function() {
-                $(this).children().children().css({
-                    "width": ($(this).outerWidth() / $(this).children().children().length) + "px"
-                });
-            })
-            // 當導覽menu有第三層時，加上classname
+            $(this).children().children().css({
+                "width": ($(this).outerWidth() / $(this).children().children().length) + "px"
+            });
+        });
+        // 當導覽menu有第三層時，加上classname
         $("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
         $("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
         // sidemenu-left
@@ -223,9 +236,9 @@ $(function() {
             event.stopPropagation();
         })
         $(".li__group--id").click(function(event) {
-                event.stopPropagation();
-            })
-            // 第二層
+            event.stopPropagation();
+        });
+        // 第二層
         $("nav[class*='menubar--sub'] ul.menubar__user > li").click(function() {
             if ((!$(this).children('.menubar__user--login').children('.desktop').children('i').hasClass('icon-down')) && (width >= 1024)) {
                 $(this).children(".menubar__user--member").css('opacity', '0');
@@ -265,27 +278,27 @@ $(function() {
             $(this).parent().parent().fadeOut();
             $('.black').toggleClass('opened');
             $('body').removeClass('message__open');
-        })
+        });
         $(".btn__close").on("click", function() {
-                $(this).parent().parent().parent().fadeOut();
-                $('.black').toggleClass('opened');
-                $('body').removeClass('message__open');
-            })
-            // message--alert, .message--dialogs 絕對定位
-            // $(".message--alert, .message--dialogs").animate({
-            // 	"top": (height / 2)
-            // }, 10);
-            // 文章頁
+            $(this).parent().parent().parent().fadeOut();
+            $('.black').toggleClass('opened');
+            $('body').removeClass('message__open');
+        });
+        // message--alert, .message--dialogs 絕對定位
+        // $(".message--alert, .message--dialogs").animate({
+        // 	"top": (height / 2)
+        // }, 10);
+        // 文章頁
         $('.article__edit__info__type').hide();
         $('.article__edit__info__type').each(function() {
-                if ($(this).text().length > 0) {
-                    $(this).show();
-                }
-            })
-            // 字體大小放大縮小
-        var $fz = $('.article__edit__font');
-        var fzLevel = 0;
-        var fzClass = 'article__level--' + fzLevel;
+            if ($(this).text().length > 0) {
+                $(this).show();
+            }
+        });
+        // 字體大小放大縮小
+        var $fz = $('.function__scale'),
+            fzLevel = 0,
+            fzClass = 'article__level--' + fzLevel;
         $fz.click(function() {
             fzLevel < 2 ? fzLevel++ : fzLevel = 0;
             fzClass = 'article__level--' + fzLevel;
@@ -293,27 +306,7 @@ $(function() {
             $('article').addClass(fzClass);
             return false;
         });
-        // 複製網址
-        var shareCopy = document.getElementById("shareCopy"),
-            shareCopyBottom = document.getElementById("shareCopyBottom");
-        if (shareCopy) {
-            shareCopy.addEventListener("click", function() {
-                copyToClipboard(document.getElementById("copyTarget"));
-            })
-        }
-        if (shareCopyBottom) {
-            shareCopyBottom.addEventListener("click", function() {
-                copyToClipboard(document.getElementById("copyTargetBottom"));
-            })
-        }
-        $("#shareCopy, #shareCopyBottom").click(function() {
-                $(this).siblings().fadeIn();
-                setTimeout(function() {
-                    $(".article__function--success").fadeOut();
-                }, 1500);
-                return false;
-            })
-            // width <= 1024，點擊後出現 tooltips
+        // width <= 1024，點擊後出現 tooltips
         if (width <= 1024) {
             $(".tooltips").click(function() {
                 $(this).toggleClass("active");
@@ -328,55 +321,7 @@ $(function() {
             $(this).children("i.icon").toggleClass("icon-plus");
             $(this).children("i.icon").toggleClass("icon-minus");
             $(this).siblings(".accordion__item__panel").slideToggle();
-        })
-
-        function copyToClipboard(elem) {
-            // create hidden text element, if it doesn't already exist
-            var targetId = "_hiddenCopyText_";
-            var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
-            var origSelectionStart, origSelectionEnd;
-            if (isInput) {
-                // can just use the original source element for the selection and copy
-                target = elem;
-                origSelectionStart = elem.selectionStart;
-                origSelectionEnd = elem.selectionEnd;
-            } else {
-                // must use a temporary form element for the selection and copy
-                target = document.getElementById(targetId);
-                if (!target) {
-                    var target = document.createElement("textarea");
-                    target.style.position = "absolute";
-                    target.style.left = "-9999px";
-                    target.style.top = "0";
-                    target.id = targetId;
-                    document.body.appendChild(target);
-                }
-                target.textContent = elem.textContent;
-            }
-            // select the content
-            var currentFocus = document.activeElement;
-            target.focus();
-            target.setSelectionRange(0, target.value.length);
-            // copy the selection
-            var succeed;
-            try {
-                succeed = document.execCommand("copy");
-            } catch (e) {
-                succeed = false;
-            }
-            // restore original focus
-            if (currentFocus && typeof currentFocus.focus === "function") {
-                currentFocus.focus();
-            }
-            if (isInput) {
-                // restore prior selection
-                elem.setSelectionRange(origSelectionStart, origSelectionEnd);
-            } else {
-                // clear temporary content
-                target.textContent = "";
-            }
-            return succeed;
-        }
+        });
         // 全閱讀 secant project
         var rightHeights = $('.plan__item .plan__item__right').map(function() {
             return $(this).outerHeight();
@@ -439,22 +384,56 @@ $(function() {
             $(this).parent().parent().parent().siblings(".select-invoicing").slideDown();
         })
         $(".tab__content__pane.active > .label").on("click", function() {
-                if (!$(this).parent().parent().parent().parent(".group").hasClass("group--disabled")) {
-                    $(this).siblings().children(".form__group--input").css({
-                        "display": "none"
-                    });
-                    $(this).children(".form__group--input").css({
-                        "display": "block"
-                    });
-                }
-            })
-            // $(window).scroll(function() {
-            // 	// message: 定位在目前畫面之中
-            // 	var scroll = $(window).scrollTop();
-            // 	$(".message--alert, .message--dialogs").animate({
-            // 		"top": scroll + (height / 2)
-            // 	}, 10);
-            // })
+            if (!$(this).parent().parent().parent().parent(".group").hasClass("group--disabled")) {
+                $(this).siblings().children(".form__group--input").css({
+                    "display": "none"
+                });
+                $(this).children(".form__group--input").css({
+                    "display": "block"
+                });
+            };
+        });
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop(),
+                adHeight = $('.ad--970by250').outerHeight(),
+                headerHeight = $('header').outerHeight(),
+                nextAHeight = $('.article__next > a').outerHeight(),
+                functionGroupHeight = $('.article__function').outerHeight(),
+                audioPlayerTop = $('.audio__player').offset().top,
+                articleBodyTop = $('.article__body').offset().top,
+                articleRecommendTop = $('.article__recommend').offset().top,
+                articleContentGroupHeight = articleRecommendTop - articleBodyTop;
+            if (width >= 1024) {
+                $('.article__next').css({
+                    'padding-top': functionGroupHeight - nextAHeight
+                })
+            } else {
+                $('.article__next').css({
+                    'padding-top': 0
+                })
+            }
+            if (scroll >= adHeight) {
+                $('header').addClass('fixed');
+                $('body').css({
+                    'padding-top': headerHeight
+                });
+            } else {
+                $('header').removeClass('fixed');
+                $('body').css({
+                    'padding-top': 0
+                });
+            }
+            if ((scroll >= (audioPlayerTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                $('.article__function').fadeIn();
+            } else {
+                $('.article__function').fadeOut();
+            }
+            if ((scroll >= (articleBodyTop + (articleContentGroupHeight / 3 * 2))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                $('.article__next').fadeIn();
+            } else {
+                $('.article__next').fadeOut();
+            }
+        })
         $(window).resize(function(width) {
             var width = $(window).width(),
                 height = $(window).height();

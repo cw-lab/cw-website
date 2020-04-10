@@ -1,0 +1,42 @@
+.article__next {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: calc(((100% - 700px) / 2) + 700px + 20px);
+    width: 180px;
+    @include translateY(-50%);
+    z-index: 3;
+    a {
+        display: block;
+        background-color: $white;
+        border: 1px solid $gray-100;
+        span {
+            display: block;
+        }
+        .next__img {
+            img {
+                width: 100%;
+            }
+        }
+        .next__body {
+            padding: 0 15px;
+            @include breakpoint(1024px) {
+                padding: 20px 15px;
+            }
+            .next__label {
+                color: $primary;
+                font-size: 0.875rem;
+            }
+            .next__title {
+                color: $text;
+            }
+        }
+        &:hover {
+            .next__body {
+                .next__title {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

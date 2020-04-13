@@ -1,0 +1,25 @@
+amp-img {
+    @include animation(shimmer 1s forwards linear infinite);
+    @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
+    @include background-size(800px 100px);
+    img {
+        width: 100%;
+        @include opacity(0);
+        @include transition(opacity 0.3s 0.3s);
+    }
+    &[i-amphtml-auto-lightbox-visited] {
+        background: $gray-100;
+        img {
+            @include opacity(1);
+        }
+    }
+}
+
+@include keyframes(shimmer) {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}

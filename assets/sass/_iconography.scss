@@ -1,6 +1,9 @@
 .hamburger {
     position: relative;
     width: 20px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
     cursor: pointer;
     span {
         display: block;

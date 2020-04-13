@@ -19,9 +19,15 @@
     <meta property="og:site_name" content="天下雜誌" />
     <meta property="og:description" content="隨台灣產業結構轉型，逐漸形成大企業獨佔出口額的局面，曾撐起台灣經濟的中小企業榮景不再，而最讓全民有感的實質薪資則是停滯16年，趕不上經濟成長。">
     <link rel="canonical" href="http://yutinghcw.github.io/design/cw/article.html">
+
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
-    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+    <!-- <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+	<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script> -->
+
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -86,73 +92,1105 @@
             }
         }
     </style>
+    <style amp-custom>
+        @import url('../assets/css/amp.css');
+    </style>
     <noscript>
-        <style amp-boilerplate>
-            body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
-        </style>
-    </noscript>
+		<style amp-boilerplate>
+			body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+		</style>
+	</noscript>
 </head>
 
 <body>
-    <div class="card ampstart-card">
-
-        <amp-position-observer on="scroll:fadeTransition.seekTo(percent=event.percent)" intersection-ratios="0" layout="nodisplay">
-        </amp-position-observer>
-
-        <amp-position-observer on="enter:slideTransition.start; exit:slideTransition.start,slideTransition.reverse" intersection-ratios="0.8" layout="nodisplay">
-        </amp-position-observer>
-
-        <amp-fit-text layout="fill">
-            <div class="card-title">
-                Organic, fresh tomatoes and pasta!
+    <amp-sidebar id="sidebar-left" layout="nodisplay" side="left">
+        <nav class="menubar menubar--left">
+            <ul>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">回首頁</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">English</a>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="subtitle">頻道分類</li>
+                <amp-accordion animate expand-single-section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">財經</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">貿易戰</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">財經焦點</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">財經週報</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">投資理財</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">產業</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">製造</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">服務</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">金融</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">科技</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">國際</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">兩岸四地</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">東南亞</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">亞洲</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">歐洲</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">美洲</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">非洲</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">紐澳</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">管理</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">管理</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">行銷</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">創新創業</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">人才</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">職場競爭力</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">環境</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">環境</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">能源</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">氣候變遷</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">永續發展</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">教育</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">教育趨勢</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">創新教育</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">親子教養</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">人物</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">大師觀點</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">CEO觀點</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">人物特寫</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">政治社會</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">政治</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">政策</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">社會現場</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">調查排行</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">2000大調查</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">兩岸三地1000大</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">快速成長企業100強</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">CSR天下企業公民</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">標竿企業</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">金牌服務業調查</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">縣市調查</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">2000大調查資料庫</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">健康關係</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">健康醫療</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">兩性關係</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">心靈成長</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">時尚品味</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">時尚精品</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">旅行</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">設計</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">藝文</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">影視</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">運動生活</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">運動</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">生活</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">重磅外媒</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">經濟學人</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">BBC中文網</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">德國之聲</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">日經中文網</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">路透社</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">專欄作者</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">專欄</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">記者</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">編輯精選</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </amp-accordion>
+            </ul>
+            <ul>
+                <li class="subtitle">多媒體</li>
+                <amp-accordion animate expand-single-section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">數位專輯</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">互動專題</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">新聞專題</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">CW Lab</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">數據圖表</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">資料新聞</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">數字說話</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">圖表動畫</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </amp-accordion>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">調查報導</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">聽天下</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">天下影音</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="li__group">
+                        <a href="#!">雜誌</a>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li class="subtitle">策展</li>
+                <amp-accordion animate expand-single-section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">企業突圍</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">傳承接班</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">數位轉型</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">創新突圍</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">經營管理</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">Off學</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">風格</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">文化</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">旅行</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">美食</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h6 class="li__group">
+                            <a href="#!">特色頻道</a>
+                            <i class="icon icon-down more"></i>
+                        </h6>
+                        <ul>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">未來城市@天下</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">CSR@天下</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">獨立評論@天下</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">我讀網</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">創新學院</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">換日線</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="#!">微笑台灣</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </amp-accordion>
+            </ul>
+            <ul>
+                <li>
+                    <div class="li__group"><a href="#!" class="sns sns-facebook" target="_blank"><i class="icon icon-facebook"></i><span>粉絲專頁</span></a></div>
+                </li>
+                <li>
+                    <div class="li__group"><a href="#!" class="sns sns-instagram" target="_blank"><i class="icon icon-instagram"></i><span>官方 instagram</span></a></div>
+                </li>
+                <li>
+                    <div class="li__group"><a href="#!" class="sns sns-line" target="_blank"><i class="icon icon-line"></i><span>官方 Line</span></a></div>
+                </li>
+            </ul>
+        </nav>
+    </amp-sidebar>
+    <div id="target-element-left"></div>
+    <header>
+        <div class="container">
+            <div class="item item--left">
+                <button class="hamburger" on="tap:sidebar-left.toggle">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-        </amp-fit-text>
-
-        <amp-img id="cardImage" width="1280" height="898" layout="responsive" src="/static/samples/img/food.jpg" alt="Picture of food table."></amp-img>
-    </div>
-    <amp-animation id="fadeTransition" layout="nodisplay">
-        <script type="application/json">
-            {
-                "duration": "1",
-                "fill": "both",
-                "direction": "reverse",
-                "animations": [{
-                    "selector": "#cardImage",
-                    "keyframes": [{
-                        "opacity": "0.3",
-                        "offset": 0
-                    }, {
-                        "opacity": "1",
-                        "offset": 0.4
-                    }, {
-                        "opacity": "1",
-                        "offset": 0.6
-                    }, {
-                        "opacity": "0.3",
-                        "offset": 1
-                    }]
-                }]
-            }
-        </script>
-    </amp-animation>
-    <amp-animation id="slideTransition" layout="nodisplay">
-        <script type="application/json">
-            {
-                "duration": "500ms",
-                "fill": "both",
-                "easing": "ease-out",
-                "iterations": "1",
-                "animations": [{
-                    "selector": ".card-title",
-                    "keyframes": [{
-                        "transform": "translateX(-100%)"
-                    }, {
-                        "transform": "translateX(0)"
-                    }]
-                }]
-            }
-        </script>
-    </amp-animation>
+            <div class="item item--center">
+                <!-- <amp-position-observer on="scroll:positionTransition.seekTo(percent=event.percent)" intersection-ratios="0" layout="nodisplay"></amp-position-observer> -->
+                <div id="item__scroll" class="item__scroll">
+                    <a href="index.html" class="logo">
+                        <amp-img width="109" height="40" src="https://www.cw.com.tw/assets_new/img/logo.png" alt="天下雜誌"></amp-img>
+                    </a>
+                    <div class="title__share">
+                        <ul class="article__share">
+                            <li class="tooltips tooltips--right tooltips--facebook" data-tooltips="分享至 Facebook"><a href="#!" target="_blank"><i class="icon icon-facebook"></i></a></li>
+                            <li class="tooltips tooltips--right tooltips--line" data-tooltips="分享至 Line"><a href="#!" target="_blank"><i class="icon icon-line"></i></a></li>
+                            <li class="tooltips tooltips--right" data-tooltips="email 分享"><a href="#!" target="_blank"><i class="icon icon-mail"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="item item--right">
+                <div class="menubar__user"><i class="icon icon-user-filled"></i></div>
+            </div>
+        </div>
+    </header>
+    <main class="pt30">
+        <article>
+            <div class="article__head">
+                <div class="container">
+                    <ul class="breadcrumb list-reset">
+                        <li>
+                            <a href="#!">財經</a>
+                        </li>
+                        <li>
+                            <a href="#!">投資理財</a>
+                        </li>
+                    </ul>
+                    <h1 class="my10">投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相</h1>
+                    <div class="preface">
+                        <p>
+                            隨台灣產業結構轉型，逐漸形成大企業獨佔出口額的局面，曾撐起台灣經濟的中小企業榮景不再，讓全民有感的實質薪資則是停滯16年，趕不上經濟成長。
+                        </p>
+                    </div>
+                    <div class="article__img">
+                        <amp-img width="630" height="422" src="../assets/images/main-mobile.png" layout="responsive" alt="天下雜誌"></amp-img>
+                        <span class="source">外國旅客Mike正為平安符過火，體驗台灣傳統寺廟文化。圖片來源：shutterstock</span>
+                    </div>
+                </div>
+            </div>
+            <div class="article__body pt-d-40 pt-m-30 px20">
+                <div class="audio__player py20 px10 mb40">
+                    <amp-img class="audio__image mx10" width="60" height="60" src="../assets/images/listencw500.jpg" layout="responsive" alt="聽天下"></amp-img>
+                    <div class="audio__body px10">
+                        <div class="audio__title">天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？</div>
+                        <div class="audio__control">
+                            <amp-audio width="auto" height="50" src="../assets/audio/voice-5e7dd2627b42f.mp3" artwork="../assets/images/listencw500.jpg" title="天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？" artist="天下雜誌" album="聽天下" controlslist="nodownload">
+                                <div fallback>您的瀏覽器不支援HTML5播放器</div>
+                            </amp-audio>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__detail">
+                    <ul class="article__author">
+                        <li>
+                            <span>文</span>
+                            <div class="author--item">
+                                <a class="btn--text" href="#!" target="_blank">黃亦筠</a>
+                            </div>
+                            <div class="author--item">
+                                <a class="btn--text" href="#!" target="_blank">呂國禎</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span>編譯</span>
+                            <div class="author--item">
+                                <span>黃維德</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="article__assort">
+                        <li>
+                            <a class="btn--text" href="#!" target="_blank">天下雜誌689期</a>
+                        </li>
+                    </ul>
+                    <time class="mt5">2019-09-12</time>
+                    <!-- <div class="article__views text-center">
+                        <span class="h2 my0">12345</span>瀏覽數
+                    </div> -->
+                </div>
+                <div class="article__content py20">
+                    <p>
+                        台灣，是一座由「中小企業」撐起的海島。手提一卡皮箱，全球跑透透的中小企業頭家們，挹注這座海島賴以為生的國際貿易與經濟發展命脈。「以前資本額8億台幣以上就算大企業，現在可能10億都不算大」中信金融管理學院教授施光訓說。
+                    </p>
+                    <h2>中小企業：佔出口比率大幅下滑</h2>
+                    <p>
+                        數字反轉背後，透露台灣不容忽視的企業面貌與產業結構的轉型。首先是金融市場變革的驅動力，允許企業藉由資本市場取得資本，中小企業逐漸走向大型化。
+                    </p>
+                    <p>
+                        企業面貌變化背後，是哪些企業快速大型化？1990年代末期開始，電機設備與零件成為台灣主要出口產品，2003年之後超過30%，到2018年更達到43%。
+                    </p>
+                    <blockquote>
+                        <p>
+                            企業利用廉價勞工成長，中國成長帶動中國薪資成長，台灣卻停滯了。
+                        </p>
+                    </blockquote>
+                    <p>
+                        資通訊產業的創業第一代，靠著製造出口，讓企業長大。台灣過去20年，企業也靠運籌帷幄這塊肥沃的「中間財」。2019年第四季，台灣景氣轉佳，台商回來找人、找地，外商包括Google、微軟、亞馬遜也來台灣設研發中心。
+                    </p>
+                    <h2>勞動：長期失業與超時工作減少中</h2>
+                    <p>主計總處人力運用調查報告中揭露，15至24歲的失業者裡，中長期失業者佔比持續上升。這也代表在台灣總體長期失業率下降的同持，年輕失業者卻也面臨長期失業的困境。（延伸閱讀：<a href="#!" target="_blank">美中貿協簽署在即　專家看壞未來談判</a>）</p>
+                    <p>
+                        2017年之後，我們可以看到，中國政府已經幾乎不提「中國製造2025」，對外言論和宣傳，變得比較低調。因為他們當初也沒料到，川普對中國的政策，會做到這樣的程度。
+                    </p>
+                    <p>
+                        再看到勞工工作時數上，台灣勞動者過去最為人詬病的超時工作也有改善，稍微舒緩「過勞之島」的惡名。若以經濟合作暨發展組織的「美好生活指數」，將每週50小時工作時數作為長工時的門檻來看。
+                    </p>
+                    <p>
+                        <amp-img width="1800" height="1044" src="../assets/images/article/chart.png" layout="responsive" alt="天下雜誌"></amp-img>
+                        <span class="source sans-serif">註：實質薪資累積成長率：（當年數值／1981 年數值）﹣1，每工時實質產出為（名目GDP／受雇人員全年總工時×GDP
+                        平減指數），每工時實質薪資為（名目薪資／受雇人員全年總工時×消費者物價指數）。</span>
+                    </p>
+                    <p>
+                        台灣「每週平均總工時達50小時以上」的比例，在歷經2000年第一波勞基法修正，規定每兩週總工時不得逾84小時，和2016年進一步改為單週工時不得逾40小時等，已從2000年的12.9%，降到2018年的5.9%。
+                    </p>
+                    <p>
+                        若和國際比較，台灣的「每週經常工時50小時以上」比率，2016年為8%，優於同為亞洲國家日本的21.8%與韓國的20.8%。然而要推動台灣整體產業升級與環境軟硬體改善，政府是否有穩健的體質來進行國家轉型升級是關鍵。
+                    </p>
+                    <h2>財政：政府負債比上升，但仍可控</h2>
+                    <p>
+                        然而要推動台灣整體產業升級與環境軟硬體改善，政府是否有穩健的體質來進行國家轉型升級是關鍵。（延伸閱讀：<a href="#!">經濟衰退來了嗎？2020年這項數據很關鍵</a>）
+                    </p>
+                    <p>
+                        負債比，代表政府一年要用多少所得，才能把累積的債還完。負債比愈低，代表政府能夠償債的能力較強。
+                    </p>
+                    <p>台灣在1998年實施「<strong>兩稅合一</strong>」，調降金融營業稅率並延長租稅優惠等，導致政府歲入大幅下滑。後來調降營所稅、遺產稅及<span on="tap:AMP.setState({hiddenState: true})" class="more">贈與稅稅率</span><span [hidden]="hiddenState" class="more__text">遺產及贈與稅新制上路，最高稅率由單一稅率10%改為累進稅率20%，遺產稅各級稅率門檻，遺產淨額5,000萬元以下者，稅率維持現行的10%。</span>，政府財政赤字一路上飆。直到2014年之後推動財政健全方案和檢討補助與退休金制度等稍微改善。
+                    </p>
+                    <p>台灣政府的負債比雖然較20年前高，但放在國際標準來看，仍很健康。</p>
+                    <p>台灣政府債務結構相較國外，最特殊之處就是皆為國債而無外債，外匯存底豐厚甚至可以借錢給其他國家。台灣政府零外債的結構，躲過1997亞洲金融風暴。相較台灣，外債高的韓國當年就受到極大影響。
+                    </p>
+                    <h2>以亞洲國家來看，台灣已算是資優生</h2>
+                    <p>國家需要適度舉債發展。美國政府舉債超過80%，日本超過200%，新加坡政府也是超過100%，以新加坡政府來說，就是利用負債來帶動國家經濟發展。</p>
+                    <p>如果人民要求政府維持低負債，又不要<a href="https://www.cw.com.tw/article/article.action?id=5093541" target="_blank">收稅或提高稅率</a>，那政府無法做事，也不能推動基礎建設，吳文傑認為，維持<a href="https://www.cw.com.tw/article/article.action?id=5093605" target="_blank">財政紀律</a>的同時，也要兼顧國家持續的發展。</p>
+                    <p>
+                        「台灣經濟差不多到一個轉型的點，人民更在意的是有幸福感的經濟發展，」施光訓說。展望未來20年，台灣經濟發展站上一個新拐點：一個由中大型企業驅動的出口型海島經濟，更期盼新投資、新建設，往高附加價值的一端走。
+                    </p>
+                    <h2>薪資：生產力、經濟成長未帶動漲薪</h2>
+                    <p>
+                        台灣在2002年之前確實如此，但2002年後，代表勞工生產力的「實質GDP」雖然持續成長，但代表人民購買力的「實質薪資」卻陷入16年的停滯。
+                    </p>
+                    <p>
+                        中研院經濟所助研究員楊子霆分析，2002年後代表「生產品價格」的GDP平減指數下滑，代表「消費品價格」的消費者物價指數（CPI）卻一路上升，差距逐年擴大，代表過去16年台灣生產力雖然成長，但生產的產品卻愈來愈便宜。（延伸閱讀：<a href="#!">台灣變好或變壞？台灣第一家資訊數據設計公司：答案在100組數據裡</a>）
+                    </p>
+                    <h2>
+                        不能忽略中國崛起的因素
+                    </h2>
+                    <p>
+                        2001年中國加入WTO，關稅優惠待遇推升中國成為世界工廠，包括台商在內的資通訊代工業西進，利用中國廉價勞動力成長，帶動中國崛起的同時，也壓抑了台灣企業在台灣該落實的技術升級與員工調薪。
+                    </p>
+                    <p>
+                        中國進入了台灣擅長的代工製造領域，發動紅海式的低價競爭。台灣出口商品價格逐年下跌，代表生產力雖然提升，卻都是奠基在生產愈來愈低價的產品上。
+                    </p>
+                    <p>
+                        展望未來20年，台灣經濟發展站上一個新拐點：一個由中大型企業驅動的出口型海島經濟，更期盼新投資、新建設，往高附加價值的一端走。
+                    </p>
+                    <p>
+                        數字反轉背後，透露台灣不容忽視的企業面貌與產業結構的轉型。首先是金融市場變革的驅動力，允許企業藉由資本市場取得資本，中小企業逐漸走向大型化。
+                    </p>
+                    <p>
+                        台灣過去20年，企業也靠運籌帷幄這塊肥沃的「中間財」，撐起台灣的經濟發展。2019年第四季，台灣景氣轉佳，台商回來找人、找地，外商包括Google、微軟、亞馬遜也來台灣設研發中心。（責任編輯：吳凱琳）
+                    </p>
+                </div>
+                <div class="article__next mb40">
+                    <a href="#!">
+                        <span class="next__img">
+							<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e4f98fe7863c.jpg" layout="responsive" alt="史上最長寒假，讓這家24歲的社群網站翻身為一條活龍"></amp-img>
+						</span>
+                        <span class="next__body">
+                        <span class="next__label">下一篇</span>
+                        <span class="next__title">史上最長寒假，讓這家24歲的社群網站翻身為一條活龍</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="article__extended mb40">
+                    <div class="h2 font-weight-500 mb10">
+                        延伸閱讀
+                    </div>
+                    <ul>
+                        <li><a href="#!" class="btn--text" target="_blank">台灣變好或變壞？台灣第一家資訊數據設計公司：答案在100組數據裡</a></li>
+                        <li><a href="#!" class="btn--text" target="_blank">愈老愈藍？講的不是政治，而是你的心</a></li>
+                        <li><a href="#!" class="btn--text" target="_blank">為什麼2002年之後，台灣走上「愈賺愈薄」的16年？</a></li>
+                    </ul>
+                </div>
+                <ul class="article__keyword mb30">
+                    <li>
+                        <a href="#!">
+                        #工時
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #購買力
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #金融
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #資本市場
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #中小企業
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #失業
+                    </a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                        #實質GDP
+                    </a>
+                    </li>
+                </ul>
+                <div class="article__recommend mb30">
+                    <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
+                    <div class="card__group--scroll">
+                        <div class="card__group card__group--grid">
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" layout="responsive" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！"></amp-img>
+								</span>
+                                <span class="card__body">
+									<span class="card__subtitle">時尚生活</span>
+                                <span class="card__title">教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！</span>
+                                </span>
+                            </a>
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" layout="responsive" alt="天下財經週報：台灣無薪假大潮來了？"></amp-img>
+								</span>
+                                <span class="card__body">
+									<span class="card__subtitle"><i class="icon icon-headphones"></i>財經時事</span>
+                                <span class="card__title">天下財經週報：台灣無薪假大潮來了？</span>
+                                </span>
+                            </a>
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" layout="responsive" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司"></amp-img>
+                                </span>
+                                <span class="card__body">
+									<span class="card__subtitle">企業突圍</span>
+                                <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
+                                </span>
+                            </a>
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" layout="responsive" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」"></amp-img>
+								</span>
+                                <span class="card__body">
+									<span class="card__subtitle">國際</span>
+                                <span class="card__title">桑德斯親台？美國民主黨總統參選人最「親中」與「親台」</span>
+                                </span>
+                            </a>
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" layout="responsive" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？"></amp-img>
+								</span>
+                                <span class="card__body">
+									<span class="card__subtitle">國際</span>
+                                <span class="card__title">美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？</span>
+                                </span>
+                            </a>
+                            <a href="article.html" class="card__item">
+                                <span class="card__img">
+									<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" layout="responsive" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同"></amp-img>
+									<span class="label">廣告</span>
+                                </span>
+                                <span class="card__body">
+									<span class="card__subtitle">健康關係</span>
+                                <span class="card__title">台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__text">
+                    <div class="h2 font-weight-500 my0">訂閱天下雜誌電子報</div>
+                    <p class="mt10 mb0">天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
+                </div>
+                <div class="newsletter__btn mt-m-20">
+                    <a href="#!" target="_blank" class="btn btn--contained">立即訂閱</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <amp-accordion class="channel__group" animate expand-single-section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        頻道分類
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">財經</a></li>
+                            <li><a href="#!">產業</a></li>
+                            <li><a href="#!">國際</a></li>
+                            <li><a href="#!">管理</a></li>
+                            <li><a href="#!">環境</a></li>
+                            <li><a href="#!">教育</a></li>
+                            <li><a href="#!">人物</a></li>
+                            <li><a href="#!">政治社會</a></li>
+                            <li><a href="#!">調查排行</a></li>
+                            <li><a href="#!">健康關係</a></li>
+                            <li><a href="#!">時尚品味</a></li>
+                            <li><a href="#!">運動生活</a></li>
+                            <li><a href="#!">重磅外媒</a></li>
+                            <li><a href="#!">專欄作者</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        多媒體
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">數位專輯</a></li>
+                            <li><a href="#!">數據圖表</a></li>
+                            <li><a href="#!">調查報導</a></li>
+                            <li><a href="#!">聽天下</a></li>
+                            <li><a href="#!">天下影音</a></li>
+                            <li><a href="#!">雜誌</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        友站連結
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">未來城市@天下</a></li>
+                            <li><a href="#!">CSR@天下</a></li>
+                            <li><a href="#!">獨立評論@天下</a></li>
+                            <li><a href="#!">我讀網</a></li>
+                            <li><a href="#!">創新學院</a></li>
+                            <li><a href="#!">換日線</a></li>
+                            <li><a href="#!">微笑台灣</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        特色頻道
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">企業突圍</a></li>
+                            <li><a href="#!">Off學</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        產品與服務
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">數位訂閱</a></li>
+                            <li><a href="#!">雜誌訂閱</a></li>
+                            <li><a href="#!">APP下載</a></li>
+                            <li><a href="#!">電子報</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        關於天下
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">顧客服務</a></li>
+                            <li><a href="#!">廣告刊登</a></li>
+                            <li><a href="#!">隱私權政策</a></li>
+                            <li><a href="#!">加入我們</a></li>
+                            <li><a href="#!">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="channel__item pb5">
+                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                        會員中心
+                        <i class="icon icon-down"></i>
+                    </h6>
+                    <div class="channel__option">
+                        <ul>
+                            <li><a href="#!">會員權益</a></li>
+                            <li><a href="#!">服務中心</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </amp-accordion>
+        </div>
+        <div class="cwgroup__copyright">
+            <ul class="sns pt30 pb10">
+                <li>
+                    <a href="#!" target="_blank">
+                        <i class="icon icon-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" target="_blank">
+                        <i class="icon icon-line"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" target="_blank">
+                        <i class="icon icon-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!" target="_blank">
+                        <i class="icon icon-rss"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="contact mt-m-5">
+                <span>讀者服務專線：886-2-2662-0332</span><span>服務時間：週一～週五 09:00~17:30</span>
+            </div>
+            <div class="copyright mt-m-30">
+                <span>Copyright © 2020天下雜誌</span>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- <amp-animation id="positionTransition" layout="nodisplay">
+		<script type="application/json">
+			{
+				"duration": "1",
+				"fill": "both",
+				"direction": "reverse",
+				"animations": [{
+					"selector": "#item__scroll",
+					"keyframes": [{
+						"opacity": "1",
+						"offset": 0
+					}, {
+						"opacity": "0",
+						"offset": 1
+					}]
+				}]
+			}
+		</script>
+    </amp-animation> -->
 </body>
 
 </html>

@@ -1863,6 +1863,9 @@ body.feature__page main p {
 .hamburger {
   position: relative;
   width: 20px;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
   cursor: pointer;
 }
 .hamburger span {

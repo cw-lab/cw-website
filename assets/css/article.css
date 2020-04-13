@@ -947,7 +947,12 @@ ul.article__provide li span i.icon {
   margin: 40px auto;
 }
 .article__content blockquote p {
-  font-weight: 400;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .article__content blockquote p {
+    font-weight: 500;
+  }
 }
 .article__content blockquote::before, .article__content blockquote::after {
   position: absolute;

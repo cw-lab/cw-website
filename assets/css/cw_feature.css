@@ -477,7 +477,12 @@ img {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-weight: 500;
+  }
 }
 
 h1,
@@ -506,7 +511,12 @@ h1 .heading__icon--error,
 }
 
 h2 {
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-weight: 500;
+  }
 }
 
 h2,
@@ -535,7 +545,12 @@ h2 .heading__icon--error,
 }
 
 h3 {
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-weight: 500;
+  }
 }
 
 h3,
@@ -564,7 +579,12 @@ h3 .heading__icon--error,
 }
 
 h4 {
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  h4 {
+    font-weight: 500;
+  }
 }
 
 h4,
@@ -593,7 +613,12 @@ h4 .heading__icon--error,
 }
 
 h5 {
-  font-weight: 500;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  h5 {
+    font-weight: 500;
+  }
 }
 
 h5,

@@ -81,7 +81,10 @@
         padding: 2px 0;
         margin: 40px auto;
         p {
-            font-weight: 400;
+            font-weight: 600;
+            @include breakpoint(1024px) {
+                font-weight: 500;
+            }
         }
         &::before,
         &::after {

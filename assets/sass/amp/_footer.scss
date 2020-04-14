@@ -31,10 +31,10 @@ footer {
                 position: absolute;
                 top: 50%;
                 right: 0;
-                @include translateY(-50%);
+                @include translateY(translateY(calc(-50% + 5px)));
                 @include transition(transform 0.2s);
                 &.active {
-                    @include transform(translateY(-50%) rotate(180deg));
+                    @include transform(translateY(calc(-50% + 5px)) rotate(180deg));
                 }
             }
         }

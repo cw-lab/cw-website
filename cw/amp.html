@@ -726,7 +726,6 @@
                 </button>
             </div>
             <div class="item item--center">
-                <!-- <amp-position-observer on="scroll:positionTransition.seekTo(percent=event.percent)" intersection-ratios="0" layout="nodisplay"></amp-position-observer> -->
                 <div id="item__scroll" class="item__scroll">
                     <a href="index.html" class="logo">
                         <amp-img width="109" height="40" src="https://www.cw.com.tw/assets_new/img/logo.png" alt="天下雜誌"></amp-img>
@@ -741,7 +740,7 @@
                 </div>
             </div>
             <div class="item item--right">
-                <div class="menubar__user"><i class="icon icon-user-filled"></i></div>
+                <div class="search__icon"><i class="icon icon-search"></i></div>
             </div>
         </div>
     </header>
@@ -854,7 +853,7 @@
                     <p>
                         負債比，代表政府一年要用多少所得，才能把累積的債還完。負債比愈低，代表政府能夠償債的能力較強。
                     </p>
-                    <p>台灣在1998年實施「<strong>兩稅合一</strong>」，調降金融營業稅率並延長租稅優惠等，導致政府歲入大幅下滑。後來調降營所稅、遺產稅及<span on="tap:AMP.setState({hiddenState: true})" class="more">贈與稅稅率</span><span [hidden]="hiddenState" class="more__text">遺產及贈與稅新制上路，最高稅率由單一稅率10%改為累進稅率20%，遺產稅各級稅率門檻，遺產淨額5,000萬元以下者，稅率維持現行的10%。</span>，政府財政赤字一路上飆。直到2014年之後推動財政健全方案和檢討補助與退休金制度等稍微改善。
+                    <p>台灣在1998年實施「<strong>兩稅合一</strong>」，調降金融營業稅率並延長租稅優惠等，導致政府歲入大幅下滑。後來調降營所稅、遺產稅及<button on="tap:more1.toggleVisibility" class="more">贈與稅稅率</button><span id="more1" class="more__text" hidden>遺產及贈與稅新制上路，最高稅率由單一稅率10%改為累進稅率20%，遺產稅各級稅率門檻，遺產淨額5,000萬元以下者，稅率維持現行的10%。</span>，政府財政赤字一路上飆。直到2014年之後推動財政健全方案和檢討補助與退休金制度等稍微改善。
                     </p>
                     <p>台灣政府的負債比雖然較20年前高，但放在國際標準來看，仍很健康。</p>
                     <p>台灣政府債務結構相較國外，最特殊之處就是皆為國債而無外債，外匯存底豐厚甚至可以借錢給其他國家。台灣政府零外債的結構，躲過1997亞洲金融風暴。相較台灣，外債高的韓國當年就受到極大影響。
@@ -1172,25 +1171,40 @@
         </div>
         </div>
     </footer>
-    <!-- <amp-animation id="positionTransition" layout="nodisplay">
-		<script type="application/json">
-			{
-				"duration": "1",
-				"fill": "both",
-				"direction": "reverse",
-				"animations": [{
-					"selector": "#item__scroll",
-					"keyframes": [{
-						"opacity": "1",
-						"offset": 0
-					}, {
-						"opacity": "0",
-						"offset": 1
-					}]
-				}]
-			}
-		</script>
-    </amp-animation> -->
+    <amp-animation id="showAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "1",
+                        "visibility": "visible"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+    <amp-animation id="hideAnim" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "200ms",
+                "fill": "both",
+                "iterations": "1",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": "#scrollToTopButton",
+                    "keyframes": [{
+                        "opacity": "0",
+                        "visibility": "hidden"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
 </body>
 
 </html>

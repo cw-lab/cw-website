@@ -9,7 +9,7 @@
 @import "_iconography";
 @import "amp/_navigation";
 @import "_search";
-@import "_header";
+@import "amp/_header";
 @import "amp/_footer";
 @import "_container";
 @import "article/_ad";
@@ -129,10 +129,16 @@
         position: relative;
         display: inline-block;
         padding-right: 1.15em;
+        padding-left: 0;
         color: $primary;
         line-height: 1.5;
-        border-bottom: 1px dashed $primary;
+        border: dashed $primary;
+        border-width: 0 0 1px;
+        background-color: transparent;
         cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
         &::before {
             @include beforeafter('\e94b', block);
             position: absolute;
@@ -147,7 +153,7 @@
         }
     }
     .more__text {
-        display: none;
+        display: block;
         width: 100%;
         margin: 10px 0;
         padding: 20px 40px;

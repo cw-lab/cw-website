@@ -2290,22 +2290,20 @@ nav.menubar--left ul .i-amphtml-accordion-header[aria-expanded="true"] i.more {
   height: 60px;
 }
 
+body {
+  padding-top: 65px;
+}
+
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #fff;
   border-bottom: 1px solid #EEEEEE;
   z-index: 5;
-}
-header.opened {
-  z-index: 10;
-}
-header.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
 }
 header .container {
   position: relative;
@@ -2344,14 +2342,10 @@ header .container > .item.item--right {
 header .container > .item.item--center {
   width: 100%;
   height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   overflow: hidden;
-}
-@media (max-width: 1023px) {
-  header .container > .item.item--center {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 header .container > .item.item--center .item__scroll {
   position: relative;
@@ -2360,9 +2354,6 @@ header .container > .item.item--center .item__scroll {
   -o-transition: top 0.3s;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-}
-header .container > .item.item--center.scroll .item__scroll {
-  top: -40px;
 }
 header .container > .item.item--center a.logo {
   display: inline-block;
@@ -2374,128 +2365,12 @@ header a.logo img {
   height: 40px;
 }
 header .search__icon {
-  margin-left: 30px;
-  position: relative;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
-header .search__icon .circle {
-  position: relative;
-  display: block;
-  height: 18px;
-  width: 18px;
-  background-color: white;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 2px solid black;
-  -moz-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  -o-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  -webkit-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  z-index: 1;
-}
-header .search__icon .handle {
-  position: absolute;
-  display: block;
-  float: right;
-  bottom: 8px;
-  right: -3px;
-  width: 24px;
-  height: 2px;
-  background-color: #171717;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-}
-header .search__icon .handle::after {
-  content: "";
-  display: block;
-  float: right;
-  width: 24px;
-  height: 2px;
-  background-color: #171717;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  -o-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  -webkit-transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-  z-index: -1;
-}
-header .search__icon.opened .circle {
-  -moz-transform: scale(0.02, 0.02);
-  -ms-transform: scale(0.02, 0.02);
-  -webkit-transform: scale(0.02, 0.02);
-  transform: scale(0.02, 0.02);
-  transform-origin: 30% 40%;
-  background: #171717;
-  border-color: #171717;
-}
-header .search__icon.opened .handle {
-  bottom: 9px;
-  right: -2px;
-  height: 3px;
-}
-header .search__icon.opened .handle:after {
-  transform-origin: center center;
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  height: 3px;
-}
-@media (max-width: 1023px) {
-  header .search__icon {
-    display: none !important;
-  }
-}
-header .btn {
-  font-size: 1rem;
-}
-@media (max-width: 1023px) {
-  header .btn {
-    display: none !important;
-  }
-}
-header .menubar__user {
-  margin-left: 30px;
-}
-header .menubar__user i {
+header .search__icon i.icon {
   font-size: 1.25rem;
-}
-@media (min-width: 1024px) {
-  header .menubar__user i {
-    font-size: 1.125rem;
-  }
-}
-
-.search__block {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  margin-top: 1px;
-  background-color: #fff;
-  border-bottom: 1px solid #EEEEEE;
-}
-.search__block .search__item--left {
-  float: left;
-  width: calc(100% - 400px);
-  padding-right: 30px;
-}
-.search__block .search__item--right {
-  float: right;
-  width: 400px;
-  padding-left: 30px;
-  border-left: 1px solid #EEEEEE;
 }
 
 footer {
@@ -2531,20 +2406,20 @@ footer .channel__item .channel__title i.icon {
   position: absolute;
   top: 50%;
   right: 0;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -moz-transform: translateY(translateY(calc(-50% + 5px)));
+  -ms-transform: translateY(translateY(calc(-50% + 5px)));
+  -webkit-transform: translateY(translateY(calc(-50% + 5px)));
+  transform: translateY(translateY(calc(-50% + 5px)));
   -moz-transition: -moz-transform 0.2s;
   -o-transition: -o-transform 0.2s;
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
 }
 footer .channel__item .channel__title i.icon.active {
-  -moz-transform: translateY(-50%) rotate(180deg);
-  -ms-transform: translateY(-50%) rotate(180deg);
-  -webkit-transform: translateY(-50%) rotate(180deg);
-  transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(calc(-50% + 5px)) rotate(180deg);
+  -ms-transform: translateY(calc(-50% + 5px)) rotate(180deg);
+  -webkit-transform: translateY(calc(-50% + 5px)) rotate(180deg);
+  transform: translateY(calc(-50% + 5px)) rotate(180deg);
 }
 footer .channel__item .channel__option {
   display: none;
@@ -3487,10 +3362,16 @@ ul.article__provide li span i.icon {
   position: relative;
   display: inline-block;
   padding-right: 1.15em;
+  padding-left: 0;
   color: #D60C18;
   line-height: 1.5;
-  border-bottom: 1px dashed #D60C18;
+  border: dashed #D60C18;
+  border-width: 0 0 1px;
+  background-color: transparent;
   cursor: pointer;
+}
+.article__content .more:focus {
+  outline: 0;
 }
 .article__content .more::before {
   content: "";
@@ -3509,7 +3390,7 @@ ul.article__provide li span i.icon {
   color: #9D0505;
 }
 .article__content .more__text {
-  display: none;
+  display: block;
   width: 100%;
   margin: 10px 0;
   padding: 20px 40px;

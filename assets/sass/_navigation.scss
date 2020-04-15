@@ -428,14 +428,13 @@ nav {
 .menubar__user--member {
     position: absolute;
     width: 150px;
-    right: 0;
     @include breakpoint(1024px) {
-        top: 48px;
+        top: 52px;
         right: 0;
     }
     @include breakpoint(max-width 1023px) {
-        top: 52px;
-        right: -15px;
+        top: 42px;
+        right: -20px;
         opacity: 1 !important;
     }
     >ul {
@@ -455,7 +454,7 @@ nav {
 .menubar__user--member,
 aside.menubar--left {
     font-size: 1rem;
-    border: solid $gray-200;
+    border: solid $gray-100;
     background-color: $white;
     @include breakpoint(1024px) {
         border-width: 1px;
@@ -463,7 +462,7 @@ aside.menubar--left {
     @include breakpoint(max-width 1023px) {
         border-width: 1px 0;
         width: 100vw;
-        overflow: scroll;
+        overflow: hidden scroll;
     }
     ul {
         position: relative;
@@ -472,7 +471,7 @@ aside.menubar--left {
             line-height: 1;
             &.hr {
                 height: 1px;
-                background-color: $gray-200;
+                background-color: $gray-100;
             }
             .li__group {
                 display: flex;
@@ -579,25 +578,21 @@ aside.menubar--left {
 
 .opacity,
 .black {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
-    z-index: 9;
-    &.opened {
-        width: 100%;
-        height: 100%;
-    }
+    width: 100%;
+    height: 100%;
+}
+
+.opacity {
+    z-index: 3;
 }
 
 .black {
     background-color: rgba($black, 0.4);
-    @include opacity(0);
-    @include transition(opacity 0.3s);
-    &.opened {
-        @include opacity(1);
-    }
+    z-index: 9;
 }
 
 .article-page {

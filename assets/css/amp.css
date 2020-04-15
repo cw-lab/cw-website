@@ -2102,11 +2102,7 @@ nav a {
   display: block;
 }
 nav.menubar--left {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 300px;
-  max-height: 100%;
   font-size: 1rem;
   border: 1px solid #D3D5D7;
   background-color: #fff;
@@ -2283,11 +2279,22 @@ nav.menubar--left ul .i-amphtml-accordion-header[aria-expanded="true"] i.more {
 }
 .search .search__group--white .search__input {
   width: calc(100% - 60px);
-  padding: 20px 1rem;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .search .search__group--white .search__input {
+    padding: 20px 1rem;
+  }
 }
 .search .search__group--white .search__submit {
   width: 60px;
-  height: 60px;
+  height: 50px;
+}
+@media (min-width: 1024px) {
+  .search .search__group--white .search__submit {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 body {
@@ -2367,6 +2374,9 @@ header a.logo img {
 header .search__icon {
   width: 20px;
   height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
   cursor: pointer;
 }
 header .search__icon i.icon {
@@ -3405,7 +3415,11 @@ ul.article__provide li span i.icon {
 }
 
 .article__next {
-  position: relative;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  visibility: hidden;
   z-index: 3;
 }
 .article__next a {

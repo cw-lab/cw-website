@@ -71,6 +71,9 @@ header {
     .search__icon {
         width: 20px;
         height: 20px;
+        padding: 0;
+        background-color: transparent;
+        border: 0;
         cursor: pointer;
         i.icon {
             font-size: 1.25rem;

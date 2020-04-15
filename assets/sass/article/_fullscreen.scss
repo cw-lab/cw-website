@@ -1,0 +1,38 @@
+.fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden auto;
+    cursor: pointer;
+    z-index: 10;
+    .fullscreen__close {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        padding: 1rem;
+        color: #fff;
+        font-size: 2em;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .fullscreen__body {
+        max-width: 1280px;
+        width: 90%;
+        min-height: calc(100% - 40px);
+        margin: 20px auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .fullscreen__content {
+            width: 100%;
+            background-color: $white;
+            cursor: default;
+        }
+    }
+}

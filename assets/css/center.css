@@ -59,11 +59,22 @@
 }
 .search .search__group--white .search__input {
   width: calc(100% - 60px);
-  padding: 20px 1rem;
+  padding: 1rem;
+}
+@media (min-width: 1024px) {
+  .search .search__group--white .search__input {
+    padding: 20px 1rem;
+  }
 }
 .search .search__group--white .search__submit {
   width: 60px;
-  height: 60px;
+  height: 50px;
+}
+@media (min-width: 1024px) {
+  .search .search__group--white .search__submit {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .center__page header {

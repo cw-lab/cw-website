@@ -25,8 +25,10 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
-    <!-- <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
-	<script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script> -->
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
     <script type="application/ld+json">
         {
@@ -94,6 +96,13 @@
     </style>
     <style amp-custom>
         @import url('../assets/css/amp.css');
+        .form {
+            font-size: 0;
+        }
+        
+        .search {
+            background-color: #fff;
+        }
     </style>
     <noscript>
 		<style amp-boilerplate>
@@ -717,7 +726,14 @@
             </ul>
         </nav>
     </amp-sidebar>
-    <div id="target-element-left"></div>
+    <amp-sidebar id="sidebar-right" class="search px20 py20" layout="nodisplay" side="right">
+        <form class="form" action="#!" method="post" target="_top">
+            <div class="search__group search__group--white form__group--defalt">
+                <input type="email" class="search__input" placeholder="請輸入關鍵字">
+                <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
+            </div>
+        </form>
+    </amp-sidebar>
     <header>
         <div class="container">
             <div class="item item--left">
@@ -740,7 +756,9 @@
                 </div>
             </div>
             <div class="item item--right">
-                <div class="search__icon"><i class="icon icon-search"></i></div>
+                <button class="search__icon" on="tap:sidebar-right.toggle">
+                    <i class="icon icon-search"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -780,7 +798,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="article__detail">
+                <div id="article__start" class="article__detail">
                     <ul class="article__author">
                         <li>
                             <span>文</span>
@@ -808,7 +826,7 @@
                         <span class="h2 my0">12345</span>瀏覽數
                     </div> -->
                 </div>
-                <div class="article__content py20">
+                <div id="article__content" class="article__content py20">
                     <p>
                         台灣，是一座由「中小企業」撐起的海島。手提一卡皮箱，全球跑透透的中小企業頭家們，挹注這座海島賴以為生的國際貿易與經濟發展命脈。「以前資本額8億台幣以上就算大企業，現在可能10億都不算大」中信金融管理學院教授施光訓說。
                     </p>
@@ -890,7 +908,7 @@
                         台灣過去20年，企業也靠運籌帷幄這塊肥沃的「中間財」，撐起台灣的經濟發展。2019年第四季，台灣景氣轉佳，台商回來找人、找地，外商包括Google、微軟、亞馬遜也來台灣設研發中心。（責任編輯：吳凱琳）
                     </p>
                 </div>
-                <div class="article__next mb40">
+                <div class="article__next">
                     <a href="#!">
                         <span class="next__img">
 							<amp-img width="630" height="422" src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e4f98fe7863c.jpg" layout="responsive" alt="史上最長寒假，讓這家24歲的社群網站翻身為一條活龍"></amp-img>
@@ -1171,35 +1189,37 @@
         </div>
         </div>
     </footer>
-    <amp-animation id="showAnim" layout="nodisplay">
+    <amp-position-observer target="article__start" viewport-margins="30" intersection-ratios="1" on="scroll:headerScroll.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
+    <amp-animation id="headerScroll" layout="nodisplay">
         <script type="application/json">
             {
-                "duration": "200ms",
+                "duration": "100ms",
                 "fill": "both",
-                "iterations": "1",
                 "direction": "alternate",
                 "animations": [{
-                    "selector": "#scrollToTopButton",
+                    "selector": "#item__scroll",
                     "keyframes": [{
-                        "opacity": "1",
-                        "visibility": "visible"
+                        "transform": "translateY(0)"
+                    }, {
+                        "transform": "translateY(-40px)"
                     }]
                 }]
             }
         </script>
     </amp-animation>
-    <amp-animation id="hideAnim" layout="nodisplay">
+    <amp-position-observer target="article__content" viewport-margins="50vh" intersection-ratios="0.5" on="scroll:nextScroll.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
+    <amp-animation id="nextScroll" layout="nodisplay">
         <script type="application/json">
             {
-                "duration": "200ms",
+                "duration": "100ms",
                 "fill": "both",
-                "iterations": "1",
                 "direction": "alternate",
                 "animations": [{
-                    "selector": "#scrollToTopButton",
+                    "selector": ".article__next",
                     "keyframes": [{
-                        "opacity": "0",
                         "visibility": "hidden"
+                    }, {
+                        "visibility": "visible"
                     }]
                 }]
             }

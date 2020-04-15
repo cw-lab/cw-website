@@ -12,34 +12,51 @@ $(function() {
     $('.hamburger').click(function() {
         if ($('.black').hasClass("search__opened")) {
             $('.search__icon').removeClass('opened');
-            $('.black').removeClass('opened search__opened');
+            $('.black').fadeToggle();
+            $('.black').removeClass('search__opened');
             $('.search__block').slideUp();
             $('body, header, .ad--970by250').removeClass('opened');
         }
         $('body').addClass('opened');
         $('.menubar--left').addClass('opened');
-        $('.black').addClass('opened menubar--left');
+        $('.black').fadeToggle();
+        $('.black').removeClass('menubar--left');
+        $('.menubar__user--member').slideUp();
+        $('.opacity').fadeToggle().removeClass('menubar__user');
     });
     $('.search__icon').click(function() {
         $('body, header, .ad--970by250').toggleClass('opened');
         $(this).toggleClass('opened');
         $('.search__block').slideToggle();
-        $('.black').toggleClass('opened search__opened');
+        $('.black').fadeToggle();
+        $('.black').removeClass('search__opened');
+        $('.menubar__user--member').slideUp();
+        $('.opacity').fadeToggle().removeClass('menubar__user');
     });
     $('.black').click(function() {
         if ($(this).hasClass("menubar--left")) {
             $('body').removeClass('opened');
             $('.menubar--left').removeClass('opened');
-            $('.black').removeClass('opened menubar--left');
+            $('.black').fadeToggle();
+            $('.black').removeClass('menubar--left');
         }
         if ($(this).hasClass("message--dialogs")) {
-            $('.black').removeClass('opened message--dialogs');
+            $('.black').fadeToggle();
+            $('.black').removeClass('message--dialogs');
             $('.message--dialogs').fadeOut(200);
         }
         if ($(this).hasClass("search__opened")) {
             $('body, header, .ad--970by250, .search__icon').removeClass('opened');
-            $('.black').removeClass('opened search__opened');
+            $('.black').fadeToggle();
+            $('.black').removeClass('search__opened');
             $('.search__block').slideUp();
+        }
+    });
+    $('.opacity').click(function() {
+        if ($(this).hasClass("menubar__user")) {
+            $('body').removeClass('opened');
+            $('.menubar__user--member').slideUp();
+            $('.opacity').fadeToggle().removeClass('menubar__user');
         }
     });
     // if ($('footer > .container > .flex').children('div').hasClass('imglink')) {
@@ -83,18 +100,21 @@ $(function() {
         $('.imgzoom').each(function() {
             var imgcode = $(this).data('zoom');
             $(this).click(function() {
-                $('body').addClass('message__open');
-                $('.black').addClass('opened black-fullscreen');
-                $('.img--fullscreen img').attr('src', imgcode);
-                $('.img--fullscreen').fadeIn();
+                $('body').addClass('opened');
+                $('.fullscreen, .black').fadeIn();
+                $('.black').addClass('black-fullscreen');
+                $('.fullscreen img').attr('src', imgcode);
             })
         });
-        $('.black, .fullscreen__close').click(function() {
-            $('.img--fullscreen').fadeOut();
-            $('.img--fullscreen img').attr('src', '');
-            $('body').removeClass('message__open');
-            $('.black').removeClass('opened black-fullscreen');
+        $('.fullscreen').click(function() {
+            $('body').removeClass('opened');
+            $('.fullscreen, .black').fadeOut();
+            $('.black').removeClass('black-fullscreen');
+            $('.fullscreen img').attr('src', '');
         })
+        $('.fullscreen__content').click(function(event) {
+            event.stopPropagation();
+        });
     }
     if (width >= 1024) {
         imgZoom();
@@ -119,22 +139,22 @@ $(function() {
 
         // 判斷有沒有值
         $("input").each(function() {
-                if (this.value) {
+            if (this.value) {
+                $(this).parent().addClass('hasValue');
+            }
+            $(this).on('change keyup copy paste cut', function() {
+                if (!this.value) {
+                    $(this).parent().removeClass('hasValue');
+                } else {
                     $(this).parent().addClass('hasValue');
                 }
-                $(this).on('change keyup copy paste cut', function() {
-                    if (!this.value) {
-                        $(this).parent().removeClass('hasValue');
-                    } else {
-                        $(this).parent().addClass('hasValue');
-                    }
-                })
             })
-            // 統計字數
+        });
+        // 統計字數
         $('.form__group--countletter input').keyup(function() {
-                $(this).siblings('i').children('span').html(this.value.length);
-            })
-            // 是否顯示密碼
+            $(this).siblings('i').children('span').html(this.value.length);
+        });
+        // 是否顯示密碼
         $('.form__group .icon-eye').click(function() {
             $(this).siblings('input').attr('type',
                 $(this).siblings('input').attr('type') === 'password' ? 'text' : 'password'
@@ -160,9 +180,9 @@ $(function() {
             select();
         })
         $(".select__group--undone").click(function() {
-                $(this).removeClass("select__group--undone")
-            })
-            // tabs
+            $(this).removeClass("select__group--undone")
+        });
+        // tabs
         $(".tab__nav > ul li").click(function() {
             var tabsIndex = $(this).index();
             if (!$(this).parent().parent().parent().parent(".group").hasClass("group--disabled")) {
@@ -171,11 +191,6 @@ $(function() {
                 $(this).parent().parent().siblings('.tab__content').children('.tab__content__pane').eq(tabsIndex).addClass('active');
             }
         });
-        // 當不是首頁時
-        if (!$("body").hasClass("index__page")) {
-            $("header nav.menubar--sub").addClass("menubar--sub2").removeClass("menubar--sub");
-        }
-        // 當不是首頁時
         $(".tab--recommend .card__group .card__title").each(function() {
             var num = $(this).data('title');
             if (($(this).data('title').length >= 21) && (width >= 768)) {
@@ -231,9 +246,6 @@ $(function() {
                 "width": ($(this).outerWidth() / $(this).children().children().length) + "px"
             });
         });
-        // 當導覽menu有第三層時，加上classname
-        $("nav.menubar--belt ul li  ul li").has("ul").parent().parent().parent().parent().addClass("menubar--belt--third");
-        $("nav.menubar--belt ul li  ul li").has("ul").children("a").append("<i class='icon icon-caret-right'></i>");
         // sidemenu-left
         $(".menubar--left > ul > li > .li__group > i.more, .menubar__user--member > ul > li > .li__group > i.more").click(function(event) {
             $(this).toggleClass("active");
@@ -245,63 +257,48 @@ $(function() {
         $(".li__group--id").click(function(event) {
             event.stopPropagation();
         });
-        // 第二層
-        $("nav[class*='menubar--sub'] ul.menubar__user > li").click(function() {
-            if ((!$(this).children('.menubar__user--login').children('.desktop').children('i').hasClass('icon-down')) && (width >= 1024)) {
-                $(this).children(".menubar__user--member").css('opacity', '0');
-            }
-            $(this).children(".menubar__user--member").slideToggle();
-            $(this).children('.menubar__user--login, .menubar__user--signin').children('.desktop').children('i.icon-down').toggleClass("active");
-            $(this).children('.menubar__user--login, .menubar__user--signin').children('.mobile').children('i').toggleClass("icon-user-filled icon-cancel");
-            $(".opacity").toggleClass("opened menubar__user");
+        // 會員下拉式選單
+        function memberHeight(width) {
             if (width < 1024) {
-                $("body").toggleClass("slide__open");
+                $('.menubar__user--member').height(window.innerHeight - $('header').outerHeight());
             } else {
-                $("body").removeClass("slide__open");
-            }
-        })
-        if (width < 1024) {
-            $(".menubar__user--member").css("height", (window.innerHeight - 60) + "px");
-        } else {
-            $(".menubar__user--member").css("height", "auto");
-            if ($('.menubar__user--member').siblings().hasClass('menubar__user--signin')) {
-                $('.menubar__user--member').hide();
-                $('nav.menubar--sub2 .menubar__user .menubar__user--signin .mobile i.icon').removeClass("icon-cancel").addClass("icon-user-filled");
+                $('.menubar__user--member').height('auto');
             }
         }
+        memberHeight(width);
+        $(".menubar__user > i.icon").click(function() {
+            $(this).siblings('.menubar__user--member').slideToggle();
+            $('.opacity').fadeToggle().toggleClass('menubar__user');
+            if (($('header').hasClass('fixed')) && (width < 1024)) {
+                $('body').toggleClass('opened')
+            }
+        });
         // message: Notification 3 秒後關閉
         // setTimeout(function() {
         // 	$(".message--notification").fadeOut();
         // }, 3000);
         // message: 點擊 message__open 開啟
         $(".message__open").on("click", function() {
-                var messageID = $(this).attr("id");
-                $('body').removeClass('message__open');
-                $('.black').toggleClass('opened');
-                $(".message." + messageID).fadeIn();
-            })
-            // message: Dialogs 點擊X關閉
+            var messageID = $(this).attr("id");
+            $('body').removeClass('message__open');
+            $('.black').fadeToggle();
+            $(".message." + messageID).fadeIn();
+        });
+        // message: Dialogs 點擊X關閉
         $(".message__close").on("click", function() {
             $(this).parent().parent().fadeOut();
-            $('.black').toggleClass('opened');
+            $('.black').fadeToggle();
             $('body').removeClass('message__open');
         });
         $(".btn__close").on("click", function() {
             $(this).parent().parent().parent().fadeOut();
-            $('.black').toggleClass('opened');
+            $('.black').fadeToggle();
             $('body').removeClass('message__open');
         });
         // message--alert, .message--dialogs 絕對定位
         // $(".message--alert, .message--dialogs").animate({
         // 	"top": (height / 2)
         // }, 10);
-        // 文章頁
-        $('.article__edit__info__type').hide();
-        $('.article__edit__info__type').each(function() {
-            if ($(this).text().length > 0) {
-                $(this).show();
-            }
-        });
         // 字體大小放大縮小
         var $fz = $('.function__scale'),
             fzLevel = 0,
@@ -420,6 +417,11 @@ $(function() {
                     'padding-top': 0
                 })
             }
+            if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adHeight)) {
+                $('body').addClass('opened');
+            } else {
+                $('body').removeClass('opened');
+            }
             if (scroll >= adHeight) {
                 $('header').addClass('fixed');
                 $('body').css({
@@ -471,17 +473,11 @@ $(function() {
             } else {
                 $(".plan__item__right").height('');
             }
-            if (width >= 1024) {
-                $(".menubar__user--member").css('opacity', '0');
-            }
+            memberHeight(width);
             if (width < 1024) {
-                $(".menubar__user--member").css("height", (window.innerHeight - 60) + "px");
+                $('body').addClass('opened');
             } else {
-                $(".menubar__user--member").css("height", "auto");
-                if ($('.menubar__user--member').siblings().hasClass('menubar__user--signin')) {
-                    $('.menubar__user--member').hide();
-                    $('nav.menubar--sub2 .menubar__user .menubar__user--signin .mobile i.icon').removeClass("icon-cancel").addClass("icon-user-filled");
-                }
+                $('body').removeClass('opened');
             }
         })
     })

@@ -1,9 +1,10 @@
 .article__next {
     // display: none;
-    position: relative;
-    // bottom: 20px;
-    // left: 20px;
-    // right: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    visibility: hidden;
     z-index: 3;
     a {
         display: block;

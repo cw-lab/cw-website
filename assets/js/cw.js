@@ -407,6 +407,7 @@ $(function() {
                 nextAHeight = $('.article__next > a').outerHeight(),
                 functionGroupHeight = $('.article__function').outerHeight(),
                 audioPlayerTop = $('.audio__player').offset().top,
+                articleImgTop = $('.article__img').offset().top,
                 articleBodyTop = $('.article__body').offset().top,
                 articleRecommendTop = $('.article__recommend').offset().top,
                 articleContentGroupHeight = articleRecommendTop - articleBodyTop;
@@ -456,6 +457,9 @@ $(function() {
                 $('.article__next').fadeIn();
             } else {
                 $('.article__next').fadeOut();
+            }
+            if (scroll >= articleImgTop) {
+                $('.bulletin').addClass('hide');
             }
         })
         $(window).resize(function(width) {

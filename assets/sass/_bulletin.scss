@@ -1,0 +1,32 @@
+.bulletin {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 20px 10px;
+    background-color: $gray-100;
+    border: 1px solid $gray-200;
+    @include transition(bottom 1s);
+    z-index: 3;
+    &.hide {
+        bottom: -100%;
+    }
+    @include breakpoint(1024px) {
+        width: 300px;
+        padding: 30px 25px 20px;
+    }
+    @include breakpoint(1620px) {
+        left: calc(((100% - 1010px) / 2) - 300px);
+    }
+    .bulletin__txt {
+        @include breakpoint(max-width 1023px) {
+            font-size: 0.875rem;
+        }
+    }
+    .bulletin__btn {
+        margin-top: 10px;
+        @include breakpoint(1024px) {
+            margin-top: 20px;
+        }
+    }
+}

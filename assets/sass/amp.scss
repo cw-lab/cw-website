@@ -119,6 +119,20 @@ a {
     }
 }
 
+.search__block {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    &.show {
+        display: block;
+    }
+    &.hide {
+        display: none;
+    }
+}
+
 .breadcrumb {
     font-size: 0;
     li {

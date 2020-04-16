@@ -23,13 +23,10 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
-    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -726,14 +723,6 @@
             </ul>
         </nav>
     </amp-sidebar>
-    <amp-sidebar id="sidebar-right" class="search px20 py20" layout="nodisplay" side="right">
-        <form class="form" action="#!" method="post" target="_top">
-            <div class="search__group search__group--white form__group--defalt">
-                <input type="email" class="search__input" placeholder="請輸入關鍵字">
-                <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
-            </div>
-        </form>
-    </amp-sidebar>
     <header>
         <div class="container">
             <div class="item item--left">
@@ -756,12 +745,18 @@
                 </div>
             </div>
             <div class="item item--right">
-                <button class="search__icon" on="tap:sidebar-right.toggle">
-                    <i class="icon icon-search"></i>
-                </button>
+                <button on="tap:AMP.setState({visible: !visible})" class="search__icon"><i class="icon icon-search" [class]="visible ? 'icon icon-cancel' : 'icon icon-search'"></i></button>
             </div>
         </div>
     </header>
+    <div id="search__block" [class]="visible ? 'search__block show' : 'search__block hide'" class="search__block hide">
+        <div class="form search px20 py20">
+            <div class="search__group search__group--white">
+                <input class="search__input" name="keyword" on="input-throttled:AMP.setState({searchText: event.value})" placeholder="請輸入關鍵字" type="text">
+                <a [href]="'https://www.cw.com.tw/search/doSearch.action?key=' + searchText" class="search__submit"><i class="icon icon-search"></i></a>
+            </div>
+        </div>
+    </div>
     <main class="pt30">
         <article>
             <div class="article__head">
@@ -1206,6 +1201,7 @@
             </div>
         </div>
     </div>
+    <button class="black" [class]="visible ? 'black opened' : 'black'" on="tap:AMP.setState({visible: !visible})"></button>
     <amp-position-observer target="article__start" viewport-margins="30" intersection-ratios="1" on="scroll:headerScroll.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
     <amp-animation id="headerScroll" layout="nodisplay">
         <script type="application/json">

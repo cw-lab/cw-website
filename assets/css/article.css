@@ -1101,6 +1101,47 @@ ul.article__provide li span i.icon {
   margin-top: 40px;
 }
 
+.article__box {
+  font-size: 0;
+  border: 1px solid #D3D5D7;
+}
+@media (min-width: 1024px) {
+  .article__box > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 1024px) {
+  .article__box .box__img img {
+    width: 200px;
+  }
+}
+@media (max-width: 1023px) {
+  .article__box .box__img img {
+    height: 160px;
+    margin: auto;
+  }
+}
+.article__box .box__body {
+  padding: 10px 20px 20px;
+  line-height: 1.7;
+}
+@media (min-width: 1024px) {
+  .article__box .box__body {
+    width: calc(100% - 200px);
+    padding: 20px;
+  }
+}
+.article__box .box__body .box__content,
+.article__box .box__body .box__btn a.btn {
+  font-size: 1.125rem;
+}
+@media (max-width: 1023px) {
+  .article__box .box__body .box__btn {
+    text-align: center;
+  }
+}
+
 .article__next {
   display: none;
   position: fixed;

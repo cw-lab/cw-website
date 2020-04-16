@@ -13,6 +13,9 @@
             border-style: solid;
             background-color: $gray-100;
             border-width: 0px;
+            &:focus {
+                outline: 0;
+            }
         }
         .search__submit {
             position: relative;

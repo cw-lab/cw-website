@@ -20,6 +20,9 @@
   background-color: #EEEEEE;
   border-width: 0px;
 }
+.search .search__group .search__input:focus {
+  outline: 0;
+}
 .search .search__group .search__submit {
   position: relative;
   width: 41px;

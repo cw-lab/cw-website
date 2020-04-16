@@ -966,7 +966,7 @@
                     </a>
                     </li>
                 </ul>
-                <div class="article__recommend mb30">
+                <div id="article__recommend" class="article__recommend mb30">
                     <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
                     <div class="card__group--scroll">
                         <div class="card__group card__group--grid">
@@ -1224,8 +1224,8 @@
             }
         </script>
     </amp-animation>
-    <amp-position-observer target="article__content" viewport-margins="50vh" intersection-ratios="0.5" on="scroll:nextScroll.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
-    <amp-animation id="nextScroll" layout="nodisplay">
+    <amp-position-observer target="article__content" viewport-margins="50vh" intersection-ratios="0.5" on="scroll:nextScrollOpen.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
+    <amp-animation id="nextScrollOpen" layout="nodisplay">
         <script type="application/json">
             {
                 "duration": "100ms",
@@ -1237,6 +1237,24 @@
                         "visibility": "hidden"
                     }, {
                         "visibility": "visible"
+                    }]
+                }]
+            }
+        </script>
+    </amp-animation>
+    <amp-position-observer target="article__recommend" viewport-margins="50vh" intersection-ratios="0" on="scroll:nextScrollClose.seekTo(percent=event.percent)" layout="nodisplay"></amp-position-observer>
+    <amp-animation id="nextScrollClose" layout="nodisplay">
+        <script type="application/json">
+            {
+                "duration": "100ms",
+                "fill": "both",
+                "direction": "alternate",
+                "animations": [{
+                    "selector": ".article__next",
+                    "keyframes": [{
+                        "visibility": "visible"
+                    }, {
+                        "visibility": "hidden"
                     }]
                 }]
             }

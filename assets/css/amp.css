@@ -2396,7 +2396,7 @@ header .search__icon i.icon {
 footer {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
   background-color: #EEEEEE;
   z-index: 1;
 }

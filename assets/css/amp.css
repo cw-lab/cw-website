@@ -794,6 +794,10 @@ img {
   .mb-d-40 {
     margin-bottom: 40px !important;
   }
+
+  .mb-d-60 {
+    margin-bottom: 60px !important;
+  }
 }
 @media (max-width: 1023px) {
   .px-m-0 {

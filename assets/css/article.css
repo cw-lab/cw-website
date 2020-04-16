@@ -1570,12 +1570,16 @@ article.article__level--2 ul.article__keyword li a {
 .card__group .card__item:hover .card__title {
   color: #D60C18;
 }
-.card__group.card__group--grid .card__item {
-  display: inline-block;
-  vertical-align: top;
+@media (max-width: 1023px) {
+  .card__group.card__group--grid {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 @media (min-width: 1024px) {
   .card__group.card__group--grid .card__item {
+    display: inline-block;
+    vertical-align: top;
     width: calc((100% - 40px) / 3);
     margin-left: 20px;
     margin-bottom: 30px;
@@ -1586,6 +1590,24 @@ article.article__level--2 ul.article__keyword li a {
     width: 220px;
     margin-right: 20px;
     margin-bottom: 10px;
+  }
+  .card__group.card__group--grid .card__item:nth-child(1) {
+    order: 1;
+  }
+  .card__group.card__group--grid .card__item:nth-child(2) {
+    order: 2;
+  }
+  .card__group.card__group--grid .card__item:nth-child(3) {
+    order: 4;
+  }
+  .card__group.card__group--grid .card__item:nth-child(4) {
+    order: 5;
+  }
+  .card__group.card__group--grid .card__item:nth-child(5) {
+    order: 6;
+  }
+  .card__group.card__group--grid .card__item:nth-child(6) {
+    order: 3;
   }
 }
 .card__group.card__group--grid .card__item:nth-child(3n+1) {

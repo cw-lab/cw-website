@@ -42,6 +42,10 @@
     }
     .search__group--white {
         border: 1px solid $gray-100;
+        @include transition(border 0.3s);
+        &.focus {
+            border-color: $black;
+        }
         .search__input,
         .search__submit {
             background-color: $white;

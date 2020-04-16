@@ -53,6 +53,14 @@ $(function() {
             $('.opacity').removeClass('opened menubar__user');
         }
     });
+    $('.search__group').each(function() {
+        $(this).children('input').blur(function() {
+                $(this).parent().removeClass("focus");
+            })
+            .focus(function() {
+                $(this).parent().addClass("focus");
+            });
+    });
     // if ($('footer > .container > .flex').children('div').hasClass('imglink')) {
     //     $('body').addClass('footer--normal');
     // } else {

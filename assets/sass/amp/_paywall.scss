@@ -10,11 +10,17 @@
         position: relative;
         padding: 15px 20px;
         background-color: $gray-100;
-        i.icon {
+        .paywall__close {
             position: absolute;
             top: 50%;
-            right: 20px;
+            right: 0;
+            padding: 15px 20px;
+            border: 0;
+            background-color: transparent;
             @include translateY(-50%);
+            i.icon {
+                display: block;
+            }
         }
     }
     .paywall__body {

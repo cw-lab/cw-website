@@ -429,6 +429,9 @@ nav {
     position: absolute;
     width: 150px;
     @include breakpoint(1024px) {
+        &.menubar__user--login {
+            width: auto;
+        }
         top: 52px;
         right: 0;
     }

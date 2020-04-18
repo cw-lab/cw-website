@@ -1685,6 +1685,9 @@ nav.menubar--belt--third > ul > li > ul {
     top: 52px;
     right: 0;
   }
+  .menubar__user--member.menubar__user--login {
+    width: auto;
+  }
 }
 @media (max-width: 1023px) {
   .menubar__user--member {

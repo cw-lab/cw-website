@@ -1,0 +1,67 @@
+.article__detail {
+    position: relative;
+    font-size: 0;
+    >ul {
+        display: inline-block;
+        @include list(0, 0, none);
+        li {
+            display: inline-block;
+            >* {
+                display: inline-block;
+            }
+            >span {
+                font-size: 0.875rem;
+                &::after {
+                    @include beforeafter('—', inline-block);
+                }
+            }
+            >.author--item {
+                a,
+                span {
+                    font-size: 0.875rem;
+                }
+                +.author--item::before {
+                    @include beforeafter('、', inline-block);
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+    >ul.article__author {
+        li::after {
+            @include beforeafter('．', inline-block);
+            font-size: 0.875rem;
+        }
+    }
+    >ul.article__assort {
+        a,
+        span {
+            font-size: 0.875rem;
+        }
+    }
+    time {
+        display: block;
+        font-size: 0.875rem;
+    }
+}
+
+.article__views {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 0.875rem;
+    @include translateY(-50%);
+    span {
+        display: block;
+        line-height: 1;
+    }
+}
+
+.article__provideViews {
+    position: relative;
+    font-size: 0;
+    >* {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

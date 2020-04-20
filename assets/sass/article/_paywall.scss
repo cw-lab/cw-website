@@ -1,0 +1,106 @@
+.paywall {
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 1.125rem;
+    background-color: #f7f7f7;
+    &::before {
+        @include beforeafter('', block);
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        width: 100%;
+        height: 130px;
+        @include background-image(linear-gradient(top, rgba($white, 0) 0%, rgba($white, 1) 100%));
+        border-bottom: 40px solid $white;
+    }
+    &.paywall--p0 {
+        >div[class*='paywall__'] {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    &.paywall--p1 {
+        padding: 40px 60px;
+        font-size: 0;
+        @include breakpoint(1024px) {
+            padding: 60px 40px;
+        }
+        @include breakpoint(max-width 1023px) {
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        .paywall__item {
+            font-size: 1.125rem;
+            @include breakpoint(1024px) {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &.paywall__item--text {
+                width: 100%;
+                @include breakpoint(1024px) {
+                    width: calc(100% - 270px);
+                    padding-right: 20px;
+                }
+            }
+            &.paywall__item--img {
+                width: 100%;
+                @include breakpoint(1024px) {
+                    width: 270px;
+                }
+                @include breakpoint(max-width 1023px) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .paywall__header {
+        line-height: 2.8;
+        background-color: $gray-100;
+    }
+    .paywall__body {
+        padding-top: 30px;
+        >img {
+            width: 240px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        ul.check {
+            display: table;
+            @include list(1em auto, 0, none);
+            text-align: left;
+            li {
+                padding-left: calc(1em + 10px);
+                text-indent: calc(-1em - 10px);
+                &::before {
+                    content: $icon-check;
+                    padding-right: 10px;
+                    font-family: '#{$icomoon-font-family}';
+                }
+                +li {
+                    margin-top: 10px;
+                }
+            }
+        }
+        a.btn {
+            min-width: 180px;
+            font-size: 1.125rem;
+        }
+    }
+    .separation--or {
+        margin-left: auto;
+        margin-right: auto;
+        width: calc(100% - 60px);
+        span {
+            background-color: #f7f7f7;
+        }
+    }
+    .paywall__footer {
+        padding-bottom: 30px;
+    }
+    .paywall__text {
+        line-height: 1.7;
+    }
+}

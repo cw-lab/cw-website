@@ -31,7 +31,7 @@ footer {
                 position: absolute;
                 top: 50%;
                 right: 0;
-                @include translateY(translateY(calc(-50% + 5px)));
+                @include transform(translateY(calc(-50% + 5px)));
                 @include transition(transform 0.2s);
                 &.active {
                     @include transform(translateY(calc(-50% + 5px)) rotate(180deg));
@@ -50,21 +50,17 @@ footer {
                 }
             }
         }
-        &:first-child {
-            .channel__option {
-                ul {
-                    @include breakpoint(1024px) {
-                        column-count: 2;
-                        column-gap: 1em;
-                    }
-                }
+        &[expanded] {
+            .channel__title i.icon {
+                @include transform(translateY(calc(-50% + 5px)) rotate(180deg));
             }
         }
     }
     .cwgroup__copyright {
         text-align: center;
         ul.sns {
-            @include list(0, 0, none);
+            margin: 0;
+            list-style: none;
             font-size: 0;
             li {
                 display: inline-block;

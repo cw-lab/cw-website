@@ -1,23 +1,53 @@
 @import "_basic";
-@import "_general";
+@import "amp/_general";
 @import "_sheet";
-@import "_variable";
-@import "_space";
-@import "_color";
-@import "_typography";
-@import "_font";
-@import "_iconography";
+@import "amp/_variable";
+// @import "_color";
+@import "amp/_typography";
+@import "amp/_font";
+// @import "_iconography";
+.hamburger {
+    position: relative;
+    width: 20px;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: $text;
+        @include transition();
+        @include opacity(1);
+        @include rotate(0deg);
+        @include transition(background 0.4s);
+        +span {
+            margin-top: 4px;
+        }
+    }
+    &:hover,
+    &.active {
+        span {
+            background-color: $black;
+        }
+    }
+}
+
 @import "amp/_navigation";
-@import "_search";
+@import "amp/_search";
 @import "amp/_header";
 @import "amp/_footer";
-@import "_container";
-@import "article/_ad";
-@import "article/_breaking";
-@import "article/_player";
-@import "amp/_lazyload";
-@import "article/_bottombar";
+@import "amp/_container";
+// @import "amp/_breaking";
+@import "amp/_player";
+// @import "amp/_lazyload";
+// @import "amp/_bottombar";
 @import "amp/_paywall";
+.form {
+    font-size: 0;
+}
+
 button,
 a {
     background-color: transparent;
@@ -40,13 +70,9 @@ a {
         @include breakpoint(375px) {
             min-width: 135px;
         }
-        @include breakpoint(768px) {
-            min-width: 144px;
-            padding: 0.8125em 1em;
-        }
         &::before,
         &::after {
-            @extend %before-after;
+            @include beforeafter('', block);
             position: absolute;
             @include opacity(0);
             z-index: -1;
@@ -184,8 +210,8 @@ a {
     line-height: 1.7;
 }
 
-@import "article/_function";
-@import "article/_detail";
+@import "amp/_function";
+@import "amp/_detail";
 .article__content {
     p {
         margin-top: 1.15em;
@@ -277,11 +303,12 @@ a {
 }
 
 @import "amp/_next";
-@import "article/_extended";
-@import "article/_keyword";
+@import "amp/_extended";
+@import "amp/_keyword";
 .article__recommend {
     border-top: 1px solid $black;
 }
 
 @import "amp/_card";
 @import "amp/_newsletter";
+@import "amp/_space";

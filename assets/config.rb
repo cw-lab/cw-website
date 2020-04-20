@@ -30,3 +30,4 @@ line_comments = false
 
 Encoding.default_external = "utf-8"
 sourcemap = true
+# sourcemap = false

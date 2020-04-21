@@ -90,6 +90,18 @@ footer {
                     i.icon {
                         display: block;
                     }
+                    &.facebook:hover {
+                        color: $facebook;
+                    }
+                    &.line:hover {
+                        color: $line;
+                    }
+                    &.instagram:hover {
+                        color: $instagram;
+                    }
+                    &.rss:hover {
+                        color: $rss;
+                    }
                 }
             }
         }

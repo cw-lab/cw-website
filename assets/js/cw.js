@@ -408,7 +408,7 @@ $(function() {
                 // audioPlayerTop = $('.audio__player').offset().top,
                 articleImgTop = $('.article__img').offset().top,
                 articleBodyTop = $('.article__body').offset().top,
-                articleRecommendTop = $('.article__recommend').offset().top,
+                articleRecommendTop = $('.article__body .article__keyword').offset().top + $('.article__body .article__keyword').outerHeight() + 50,
                 articleContentGroupHeight = articleRecommendTop - articleBodyTop;
             if (width >= 1024) {
                 $('.article__next').css({

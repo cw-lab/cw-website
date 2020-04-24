@@ -723,12 +723,12 @@
     <header>
         <div class="container">
             <div class="item item--left">
-                <div class="hamburger gtmEvent" gtm-name="read_more" eventlabel="click text" eventaction="side_menu">
-                    <span></span><span></span><span></span>
+                <div class="hamburger">
+                    <span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span>
                 </div>
-                <div class="search__icon gtmEvent" gtm-name="function" eventlabel="searchicon-click" eventaction="search">
-                    <span class="circle"></span>
-                    <span class="handle"></span>
+                <div class="search__icon">
+                    <span class="circle" gtm-name="function" eventaction="search_icon"></span>
+                    <span class="handle" gtm-name="function" eventaction="search_icon"></span>
                 </div>
             </div>
             <div class="item item--center">
@@ -739,14 +739,14 @@
                     <div class="title__share">
                         <div class="title h3 my0 desktop">投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相</div>
                         <ul class="article__share mobile">
-                            <li class="tooltips tooltips--right tooltips--facebook" data-tooltips="分享至 Facebook">
-                                <a class="gtmEvent" gtm-name="fb_share" href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook"></i></a>
+                            <li class="tooltips--facebook">
+                                <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook" gtm-name="function" eventaction="click_fb_share"></i></a>
                             </li>
-                            <li class="tooltips tooltips--right tooltips--line" data-tooltips="分享至 Line">
-                                <a class="gtmEvent" gtm-name="line_share" href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line"></i></a>
+                            <li class="tooltips--line">
+                                <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line" gtm-name="function" eventaction="click_line_share"></i></a>
                             </li>
-                            <li class="tooltips tooltips--right" data-tooltips="email 分享">
-                                <a class="gtmEvent" gtm-name="mail_share" href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail"></i></a>
+                            <li>
+                                <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail" gtm-name="function" eventaction="click_mail_share"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -896,53 +896,53 @@
                     <form class="form mb30" action="#!" method="post">
                         <div class="search__group search__group--white form__group--defalt">
                             <input type="email" class="search__input" placeholder="請輸入關鍵字">
-                            <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
+                            <button type="submit" class="search__submit" gtm-name="function" eventaction="submit_search"><i class="icon icon-search"></i></button>
                         </div>
                     </form>
                     <div class="h2 font-weight-500 mt0 mb10">熱門關鍵字</div>
                     <ul class="article__keyword">
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #新冠肺炎
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #疫情管理戰報
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #防疫外交
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #購買力
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #天下財經週報
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #台灣
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #實質GDP
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #金融
                     </a>
                         </li>
                         <li>
-                            <a href="#!" class="gtmEvent" gtm-name="search_keyword">
+                            <a href="#!" gtm-name="read_more" eventaction="search_keyword">
                         #中小企業
                     </a>
                         </li>
@@ -951,7 +951,7 @@
                 <div class="search__item search__item--right">
                     <div class="h2 font-weight-500 mt0 mb10">產業頻道熱門</div>
                     <div class="card__group card__group--list">
-                        <a href="article.html" class="card__item">
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
                             <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e2569206af7f.jpg" alt="節目獲亞洲電視大獎心情沉重　Alana不捨：澳洲野火肆虐我第二個家">
                         </span>
@@ -961,7 +961,7 @@
                         </span>
                             </span>
                         </a>
-                        <a href="article.html" class="card__item">
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
                             <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
                             </span>
@@ -970,7 +970,7 @@
                             <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
                             </span>
                         </a>
-                        <a href="article.html" class="card__item">
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
                                 <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
                         </span>
@@ -989,7 +989,7 @@
         <div class="container">
             <div class="breaking__title">694期封面故事</div>
             <div class="breaking__news">
-                <a href="https://www.cw.com.tw/article/article.action?id=5099504" class="gtmEvent" gtm-name="article_title_news">「這次是SARS+911恐攻+金融海嘯！」美歐疫情失控，後果多嚴重？</a>
+                <a href="https://www.cw.com.tw/article/article.action?id=5099504" gtm-name="function" eventaction="article_title_news">「這次是SARS+911恐攻+金融海嘯！」美歐疫情失控，後果多嚴重？</a>
             </div>
         </div>
     </section>
@@ -1014,8 +1014,8 @@
                     </div>
                     <div class="article__provideViews my20 mobile">
                         <ul class="article__provide">
-                            <li class="function__save"><span><i class="icon icon-bookmark-outlined"></i></span></li>
-                            <li class="function__scale"><span><i class="icon icon-fontsize"></i></span></li>
+                            <li class="function__save"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
+                            <li class="function__scale"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                             <li class="function__download gtmEvent" id="pdf_download" gtm-name="pdf_download"><span><i class="icon icon-download"></i></span></li>
                             <li class="function__paid gtmEvent" id="pay_read" gtm-name="pay_point"><span><i class="icon icon-coin"></i></span></li>
                         </ul>
@@ -1024,7 +1024,7 @@
                         </div>
                     </div>
                     <div class="article__img">
-                        <span class="imgzoom lazyload__group" data-zoom="../assets/images/main-desktop.png">
+                        <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../assets/images/main-desktop.png">
                         <img class="lazyload" src="../assets/images/common/blank.png" data-sizes="auto" data-srcset="../assets/images/main-630.png 320w, ../assets/images/main-mobile.png 768w, ../assets/images/main-desktop.png 1280w" data-src="../assets/images/main-desktop.png" width="100%" alt="" />
                     </span>
                         <span class="source">外國旅客Mike正為平安符過火，體驗台灣傳統寺廟文化。圖片來源：shutterstock</span>
@@ -1036,22 +1036,33 @@
                     <ul class="article__share">
                         <div class="title">分享</div>
                         <li class="tooltips tooltips--right tooltips--facebook" data-tooltips="分享至 Facebook">
-                            <a class="gtmEvent" gtm-name="fb_share" href="#!" target="_blank"><i class="icon icon-facebook"></i></a>
+                            <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook" gtm-name="function" eventaction="click_fb_share"></i></a>
                         </li>
                         <li class="tooltips tooltips--right tooltips--line" data-tooltips="分享至 Line">
-                            <a class="gtmEvent" gtm-name="line_share" href="#!" target="_blank"><i class="icon icon-line"></i></a>
+                            <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line" gtm-name="function" eventaction="click_line_share"></i></a>
                         </li>
                         <li class="tooltips tooltips--right" data-tooltips="email 分享">
-                            <a class="gtmEvent" gtm-name="mail_share" href="#!" target="_blank"><i class="icon icon-mail"></i></a>
+                            <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail" gtm-name="function" eventaction="click_mail_share"></i></a>
                         </li>
                     </ul>
                     <ul class="article__provide">
                         <div class="title">其他</div>
-                        <li class="tooltips tooltips--right function__save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined"></i></span></li>
-                        <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize"></i></span></li>
+                        <li class="tooltips tooltips--right function__save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
+                        <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                         <li class="tooltips tooltips--right function__download gtmEvent" id="pdf_download" gtm-name="pdf_download" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
                         <li class="tooltips tooltips--right function__paid gtmEvent" id="pay_read" gtm-name="pay_point" data-tooltips="單篇付費閱讀"><span><i class="icon icon-coin"></i></span></li>
                     </ul>
+                </div>
+                <div class="audio__player py20 px10 mb40">
+                    <img src="../assets/images/listencw500.jpg" alt="聽天下" class="audio__image mx10">
+                    <div class="audio__body px10">
+                        <div class="audio__title">天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？</div>
+                        <div class="audio__control">
+                            <audio crossorigin preload="none">
+                            <source src="../assets/audio/voice-5e7dd2627b42f.mp3" type="audio/mpeg">
+                        </audio>
+                        </div>
+                    </div>
                 </div>
                 <div class="article__detail">
                     <ul class="article__author">
@@ -1081,6 +1092,7 @@
                         <span class="h2 my0">12345</span>瀏覽數
                     </div>
                 </div>
+
                 <div class="article__content py20">
                     <p>
                         數字反轉背後，透露台灣不容忽視的企業面貌與產業結構的轉型。首先是金融市場變革的驅動力，允許企業藉由資本市場取得資本，中小企業逐漸走向大型化。

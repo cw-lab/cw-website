@@ -40,7 +40,6 @@
     <link href="https://www.cw.com.tw/images/common/apple-icon-iPadPro@2x.png?id=7de8673e237e37cc45d4" rel="apple-touch-icon" sizes="167x167" />
     <link href="https://www.cw.com.tw/images/common/apple-icon-iPad@2x.png?id=543c21902aa02fe2fcde" rel="apple-touch-icon" sizes="152x152" />
     <link rel="stylesheet" href="../assets/css/cw.css">
-    <link rel="stylesheet" href="../assets/css/article.css">
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -194,7 +193,7 @@
                 <form class=" form pt20 px20 pb20" action="#!" method="post">
                     <div class="search__group search__group--white form__group--defalt">
                         <input type="email" class="search__input" placeholder="請輸入關鍵字">
-                        <button type="submit" class="search__submit" gtm-name="function" eventaction="submit_search"><i class="icon icon-search"></i></button>
+                        <button type="submit" class="search__submit"><i class="icon icon-search"></i></button>
                     </div>
                 </form>
             </li>
@@ -795,12 +794,12 @@
     <header>
         <div class="container">
             <div class="item item--left">
-                <div class="hamburger" gtm-name="read_more" eventaction="side_menu_icon">
-                    <span></span><span></span><span></span>
+                <div class="hamburger">
+                    <span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span>
                 </div>
-                <div class="search__icon" gtm-name="function" eventaction="search_icon">
-                    <span class="circle"></span>
-                    <span class="handle"></span>
+                <div class="search__icon">
+                    <span class="circle" gtm-name="function" eventaction="search_icon"></span>
+                    <span class="handle" gtm-name="function" eventaction="search_icon"></span>
                 </div>
             </div>
             <div class="item item--center">
@@ -811,14 +810,14 @@
                     <div class="title__share">
                         <div class="title h3 my0 desktop">投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相</div>
                         <ul class="article__share mobile">
-                            <li class="tooltips--facebook" gtm-name="function" eventaction="click_fb_share">
-                                <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook"></i></a>
+                            <li class="tooltips--facebook">
+                                <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook" gtm-name="function" eventaction="click_fb_share"></i></a>
                             </li>
-                            <li class="tooltips--line" gtm-name="function" eventaction="click_line_share">
-                                <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line"></i></a>
+                            <li class="tooltips--line">
+                                <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line" gtm-name="function" eventaction="click_line_share"></i></a>
                             </li>
-                            <li class="" gtm-name="function" eventaction="click_mail_share">
-                                <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail"></i></a>
+                            <li>
+                                <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail" gtm-name="function" eventaction="click_mail_share"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -1061,7 +1060,7 @@
         <div class="container">
             <div class="breaking__title">694期封面故事</div>
             <div class="breaking__news">
-                <a href="https://www.cw.com.tw/article/article.action?id=5099504" gtm-name="read_more" eventaction="article_title_news">「這次是SARS+911恐攻+金融海嘯！」美歐疫情失控，後果多嚴重？</a>
+                <a href="https://www.cw.com.tw/article/article.action?id=5099504" gtm-name="function" eventaction="article_title_news">「這次是SARS+911恐攻+金融海嘯！」美歐疫情失控，後果多嚴重？</a>
             </div>
         </div>
     </section>
@@ -1086,8 +1085,8 @@
                     </div>
                     <div class="article__provideViews my20 mobile">
                         <ul class="article__provide">
-                            <li class="function__save" gtm-name="function" eventaction="article_save"><span><i class="icon icon-bookmark-outlined"></i></span></li>
-                            <li class="function__scale" gtm-name="function" eventaction="article_text_zoom"><span><i class="icon icon-fontsize"></i></span></li>
+                            <li class="function__save"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
+                            <li class="function__scale"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                             <li class="function__download gtmEvent" id="pdf_download" gtm-name="pdf_download"><span><i class="icon icon-download"></i></span></li>
                             <li class="function__paid gtmEvent" id="pay_read" gtm-name="pay_point"><span><i class="icon icon-coin"></i></span></li>
                         </ul>
@@ -1107,20 +1106,20 @@
                 <div class="article__function">
                     <ul class="article__share">
                         <div class="title">分享</div>
-                        <li class="tooltips tooltips--right tooltips--facebook" gtm-name="function" eventaction="click_fb_share" data-tooltips="分享至 Facebook">
-                            <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook"></i></a>
+                        <li class="tooltips tooltips--right tooltips--facebook" data-tooltips="分享至 Facebook">
+                            <a href="{{pageLink}}?utm_source=fb_&utm_medium=website_share&utm_campaign=fb_-website_share-icon" target="_blank"><i class="icon icon-facebook" gtm-name="function" eventaction="click_fb_share"></i></a>
                         </li>
-                        <li class="tooltips tooltips--right tooltips--line" gtm-name="function" eventaction="click_line_share" data-tooltips="分享至 Line">
-                            <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line"></i></a>
+                        <li class="tooltips tooltips--right tooltips--line" data-tooltips="分享至 Line">
+                            <a href="{{pageLink}}?utm_source=line_&utm_medium=website_share&utm_campaign=line_-website_share-icon" target="_blank"><i class="icon icon-line" gtm-name="function" eventaction="click_line_share"></i></a>
                         </li>
-                        <li class="tooltips tooltips--right" gtm-name="function" eventaction="click_mail_share" data-tooltips="email 分享">
-                            <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail"></i></a>
+                        <li class="tooltips tooltips--right" data-tooltips="email 分享">
+                            <a href="{{pageLink}}?utm_source=mail_&utm_medium=website_share&utm_campaign=mail_-website_share-icon" target="_blank"><i class="icon icon-mail" gtm-name="function" eventaction="click_mail_share"></i></a>
                         </li>
                     </ul>
                     <ul class="article__provide">
                         <div class="title">其他</div>
-                        <li class="tooltips tooltips--right function__save" gtm-name="function" eventaction="article_save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined"></i></span></li>
-                        <li class="tooltips tooltips--right function__scale" gtm-name="function" eventaction="article_text_zoom" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize"></i></span></li>
+                        <li class="tooltips tooltips--right function__save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
+                        <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                         <li class="tooltips tooltips--right function__download gtmEvent" id="pdf_download" gtm-name="pdf_download" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
                         <li class="tooltips tooltips--right function__paid gtmEvent" id="pay_read" gtm-name="pay_point" data-tooltips="單篇付費閱讀"><span><i class="icon icon-coin"></i></span></li>
                     </ul>
@@ -1366,85 +1365,85 @@
                     </a>
                     </li>
                 </ul>
-                <div class="article__recommend mb30">
-                    <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
-                    <div class="card__group--scroll">
-                        <div class="card__group card__group--grid">
-                            <a href="article-paywall-p0.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
-                            </span>
-                                <span class="card__body">
-                                <span class="card__subtitle">時尚生活</span>
-                                <span class="card__title">教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！
-                            </span>
-                                </span>
-                            </a>
-                            <a href="article-paywall-p1.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
-                            </span>
-                                <span class="card__body">
-                                <span class="card__subtitle"><i class="icon icon-headphones"></i>財經時事</span>
-                                <span class="card__title">天下財經週報：台灣無薪假大潮來了？</span>
-                                </span>
-                            </a>
-                            <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
-                                </span>
-                                <span class="card__body">
-                                <span class="card__subtitle">企業突圍</span>
-                                <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
-                                </span>
-                            </a>
-                            <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
-                            </span>
-                                <span class="card__body">
-                                <span class="card__subtitle">國際</span>
-                                <span class="card__title">桑德斯親台？美國民主黨總統參選人最「親中」與「親台」</span>
-                                </span>
-                            </a>
-                            <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
-                            </span>
-                                <span class="card__body">
-                                <span class="card__subtitle">國際</span>
-                                <span class="card__title">美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？</span>
-                                </span>
-                            </a>
-                            <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
-                                <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
-                                <span class="label">廣告</span>
-                                </span>
-                                <span class="card__body">
-                                <span class="card__subtitle">健康關係</span>
-                                <span class="card__title">台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <section class="ad ad--300by250 mb-d-60 mb-m-30">
-                    <span class="sans-serif">廣告</span>
-                    <a href="#!" target="_blank">
-                        <img src="../assets/images/article/ad-300-250-09.jpg" height="250" alt="">
-                    </a>
-                </section>
-                <section class="ad ad--video pb30 mb30">
-                    <div class="h2 font-weight-500 my0 py20">2020財政與貨幣政策並行 四策略兼顧收益與成長</div>
-                    <div class="embed embed--16by9">
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcwgroup%2Fvideos%2F2530073760573472%2F&width=500&show_text=false&appId=494725780578575&height=280" width="500" height="280" style="border:none;overflow:hidden"
-                            scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    </div>
-                </section>
             </div>
         </article>
         <div class="article__foot px20 pb20">
+            <div class="article__recommend mb30">
+                <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
+                <div class="card__group--scroll">
+                    <div class="card__group card__group--grid">
+                        <a href="article-paywall-p0.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
+                        </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">時尚生活</span>
+                            <span class="card__title">教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！
+                        </span>
+                            </span>
+                        </a>
+                        <a href="article-paywall-p1.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
+                        </span>
+                            <span class="card__body">
+                            <span class="card__subtitle"><i class="icon icon-headphones"></i>財經時事</span>
+                            <span class="card__title">天下財經週報：台灣無薪假大潮來了？</span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
+                            </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">企業突圍</span>
+                            <span class="card__title">只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司</span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
+                        </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">國際</span>
+                            <span class="card__title">桑德斯親台？美國民主黨總統參選人最「親中」與「親台」</span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
+                        </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">國際</span>
+                            <span class="card__title">美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？</span>
+                            </span>
+                        </a>
+                        <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
+                            <span class="card__img lazyload__group">
+                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
+                            <span class="label">廣告</span>
+                            </span>
+                            <span class="card__body">
+                            <span class="card__subtitle">健康關係</span>
+                            <span class="card__title">台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <section class="ad ad--300by250 mb-d-60 mb-m-30">
+                <span class="sans-serif">廣告</span>
+                <a href="#!" target="_blank">
+                    <img src="../assets/images/article/ad-300-250-09.jpg" height="250" alt="">
+                </a>
+            </section>
+            <section class="ad ad--video pb30 mb30">
+                <div class="h2 font-weight-500 my0 py20">2020財政與貨幣政策並行 四策略兼顧收益與成長</div>
+                <div class="embed embed--16by9">
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcwgroup%2Fvideos%2F2530073760573472%2F&width=500&show_text=false&appId=494725780578575&height=280" width="500" height="280" style="border:none;overflow:hidden"
+                        scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+                </div>
+            </section>
             <div class="article__promotion pb40">
                 <div class="h2 font-weight-500 my0 pt20 pb10">最新訊息</div>
                 <ul class="dot-list">

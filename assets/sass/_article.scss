@@ -233,7 +233,9 @@ article {
             font-size: 1.375rem;
         }
         .article__content {
-            p {
+            p,
+            ul,
+            ol {
                 font-size: 1.375rem;
             }
         }
@@ -331,7 +333,9 @@ article {
             font-size: 1.625rem;
         }
         .article__content {
-            p {
+            p,
+            ul,
+            ol {
                 font-size: 1.625rem;
             }
         }

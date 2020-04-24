@@ -6358,7 +6358,9 @@ article.article__level--1 .article__views {
 article.article__level--1 .preface > * {
   font-size: 1.375rem;
 }
-article.article__level--1 .article__content p {
+article.article__level--1 .article__content p,
+article.article__level--1 .article__content ul,
+article.article__level--1 .article__content ol {
   font-size: 1.375rem;
 }
 article.article__level--1 .article__extended ul {
@@ -6446,7 +6448,9 @@ article.article__level--2 .article__views {
 article.article__level--2 .preface > * {
   font-size: 1.625rem;
 }
-article.article__level--2 .article__content p {
+article.article__level--2 .article__content p,
+article.article__level--2 .article__content ul,
+article.article__level--2 .article__content ol {
   font-size: 1.625rem;
 }
 article.article__level--2 .article__extended ul {

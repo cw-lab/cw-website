@@ -5962,11 +5962,15 @@ ul.article__provide li span i.icon {
   vertical-align: middle;
 }
 
+.article__content p,
+.article__content ul,
+.article__content ol {
+  font-size: 1.125em;
+  line-height: 1.7;
+}
 .article__content p {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
-  font-size: 1.125em;
-  line-height: 1.7;
 }
 .article__content h2 {
   margin-top: 40px;

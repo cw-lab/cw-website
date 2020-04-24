@@ -58,11 +58,15 @@
 @import "article/_function";
 @import "article/_detail";
 .article__content {
+    p,
+    ul,
+    ol {
+        font-size: 1.125em;
+        line-height: 1.7;
+    }
     p {
         margin-top: 1.15em;
         margin-bottom: 1.15em;
-        font-size: 1.125em;
-        line-height: 1.7;
     }
     h2 {
         margin-top: 40px;

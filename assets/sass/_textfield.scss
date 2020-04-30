@@ -18,6 +18,7 @@ input[type*='number']::-webkit-outer-spin-button {
 .form {
     font-size: 0;
 }
+
 .form__group {
     position: relative;
     max-width: 290px;
@@ -55,7 +56,15 @@ input[type*='number']::-webkit-outer-spin-button {
             background-color: $gray-100;
             border-width: 0px 0px 1px;
         }
-        &.form__group {
+        .form__group {
+            &--defalt {
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: 0.2em;
+                    }
+                }
+            }
             &--correct {
                 &:hover,
                 &.hasValue {
@@ -89,14 +98,10 @@ input[type*='number']::-webkit-outer-spin-button {
                     top: 1.5rem;
                 }
             }
-        }
-        .form__group {
-            &--defalt {
-                &:hover,
+            &--disabled {
                 &.hasValue {
                     .form__group__placeholder {
                         top: 0.2em;
-                        font-size: 12px;
                     }
                 }
             }
@@ -104,7 +109,7 @@ input[type*='number']::-webkit-outer-spin-button {
     }
     &--outlined {
         .form__group__input {
-            padding: 1.1rem 1rem 0.7rem;
+            padding: 1rem 1rem 0.8rem;
             background-color: transparent;
             border-width: 1px;
         }
@@ -134,6 +139,19 @@ input[type*='number']::-webkit-outer-spin-button {
             &--hasicon {
                 .form__group__input {
                     padding: 1.1rem 3rem 0.7rem 1rem;
+                }
+            }
+            &--disabled {
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: -0.8em;
+                        padding: 0 2px;
+                        background-color: $white;
+                    }
+                    .form__group__input {
+                        background-color: $white;
+                        border-color: $secondary;
+                    }
                 }
             }
         }
@@ -207,8 +225,20 @@ input[type*='number']::-webkit-outer-spin-button {
             color: $gray-200;
         }
         .form__group__input {
+            color: $secondary;
             background-color: $gray-100;
             border-color: $gray-100;
+            cursor: not-allowed;
+        }
+        &.hasValue {
+            .form__group__placeholder {
+                color: $secondary;
+                font-size: 0.75rem;
+            }
+            .form__group__input {
+                color: $secondary;
+                border-color: $secondary;
+            }
         }
     }
     &__help {
@@ -233,6 +263,7 @@ input[type*='number']::-webkit-outer-spin-button {
         }
     }
 }
+
 .select__group {
     position: relative;
     display: table;

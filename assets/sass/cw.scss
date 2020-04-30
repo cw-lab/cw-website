@@ -83,6 +83,10 @@ hr {
         top: 50%;
         left: 50%;
         @include translate(-50%, -50%);
+        &--triggle {
+            position: static;
+            @include translate(0, 0);
+        }
     }
     &__icon {
         position: relative;

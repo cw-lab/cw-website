@@ -246,11 +246,16 @@ nav {
             ul {
                 @extend %list-reset;
             }
+            span {
+                font-size: 1rem;
+                line-height: 1.125;
+            }
             a.logout {
                 margin-left: 16px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 color: $text;
+                font-size: 1rem;
                 line-height: 1rem;
                 &:hover {
                     color: $primary;
@@ -264,8 +269,6 @@ nav {
                 margin-left: 16px;
                 .menubar__user--signin,
                 .menubar__user--login {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
                     color: $text;
                     line-height: 1rem;
                     .desktop {
@@ -432,7 +435,7 @@ nav {
         &.menubar__user--login {
             width: auto;
         }
-        top: 52px;
+        top: 41px;
         right: 0;
     }
     @include breakpoint(max-width 1023px) {
@@ -457,7 +460,7 @@ nav {
 .menubar__user--member,
 aside.menubar--left {
     font-size: 1rem;
-    border: solid $gray-100;
+    border: solid $gray-200;
     background-color: $white;
     @include breakpoint(1024px) {
         border-width: 1px;
@@ -474,7 +477,7 @@ aside.menubar--left {
             line-height: 1;
             &.hr {
                 height: 1px;
-                background-color: $gray-100;
+                background-color: $gray-200;
             }
             .li__group {
                 display: flex;

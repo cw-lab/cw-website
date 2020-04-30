@@ -1,0 +1,183 @@
+.mc-select {
+    @include list(0, 0, none);
+    &.single {
+        display: block;
+        position: relative;
+        font-size: 0;
+        cursor: pointer;
+        z-index: 1;
+        @include user-select(none);
+        li {
+            margin-top: 10px;
+            span {
+                display: inline-block;
+                vertical-align: text-top;
+                @include transition(all 0.3s);
+                &.label__radio__txt {
+                    width: calc(100% - 20px);
+                    padding-left: 0.5em;
+                    font-size: 1rem;
+                    line-height: 1.75;
+                }
+                &.label__radio__mark {
+                    position: relative;
+                    top: calc((1.75rem - 20px) / 2);
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background-color: transparent;
+                    border: 2px solid $gray-500;
+                    @include border-radius(50%);
+                    &::before {
+                        @extend %before-after;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 20px;
+                        height: 20px;
+                        background: $red-100;
+                        @include border-radius(50%);
+                        @include translate(-50%, -50%);
+                        @include opacity(0);
+                        @include transition(all 0.3s);
+                        z-index: -1;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                        top: 50%;
+                        left: 50%;
+                        width: 10px;
+                        height: 10px;
+                        background: $primary;
+                        @include border-radius(50%);
+                        @include translate(-50%, -50%);
+                    }
+                }
+            }
+            &:hover {
+                span.label__radio__mark {
+                    border-color: $primary;
+                }
+            }
+            a.selected {
+                span.label__radio__mark {
+                    border-color: $primary;
+                    &::after {
+                        display: block;
+                    }
+                }
+                &:hover {
+                    span.label__radio__mark::before {
+                        width: 36px;
+                        height: 36px;
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+        .form__group {
+            width: calc(100% - 20px - 0.5rem);
+            margin: 5px 0 0 calc(20px + 0.5rem);
+        }
+    }
+    .label--check {
+        display: block;
+        position: relative;
+        font-size: 0;
+        cursor: pointer;
+        z-index: 1;
+        @include user-select(none);
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            @include transition(all 0.3s);
+            &.label__radio__txt {
+                width: calc(100% - 20px - .5em);
+                padding-left: 0.5em;
+                font-size: 1rem;
+            }
+            &.label__radio__helper {
+                display: block;
+                padding-left: calc(20px + 0.575rem);
+                color: $secondary;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.5;
+            }
+            &.label__radio__mark {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                border: 2px solid $gray-500;
+                &::before {
+                    @extend %before-after;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    background: $red-100;
+                    @include border-radius(50%);
+                    @include translate(-50%, -50%);
+                    @include opacity(0);
+                    @include transition(all 0.3s);
+                    z-index: -1;
+                }
+                &::after {
+                    content: "\e929";
+                    position: absolute;
+                    display: none;
+                    top: 50%;
+                    left: 50%;
+                    width: 10px;
+                    height: 10px;
+                    color: $white;
+                    font-family: 'icomoon';
+                    font-size: 12px;
+                    font-weight: bold;
+                    line-height: 1;
+                    @include translate(-50%, -50%);
+                }
+            }
+        }
+        input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            cursor: pointer;
+            &:checked {
+                ~span.label__radio__mark {
+                    border-color: $primary;
+                    background-color: $primary;
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+        }
+        &:hover,
+        &.active {
+            input {
+                ~span.label__radio__mark {
+                    border-color: $primary;
+                }
+                &:checked {
+                    ~span.label__radio__mark {
+                        &::before {
+                            width: 36px;
+                            height: 36px;
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

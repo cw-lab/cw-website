@@ -42,6 +42,12 @@
     font-size: 0.875rem;
 }
 
+.article__head,
+.article__body,
+.article__foot {
+    font-weight: 300;
+}
+
 .article__body,
 .article__foot {
     max-width: 740px;
@@ -144,6 +150,11 @@
     }
     .lazyload__group {
         margin-top: 40px;
+        +.source {
+            @include breakpoint(1024px) {
+                margin-bottom: 40px;
+            }
+        }
     }
 }
 
@@ -359,6 +370,15 @@ article {
     border-top: 1px solid $black;
 }
 
-@import "article/_card";
-@import "article/_list";
+.article__page {
+    @import "article/_card";
+    @import "article/_list";
+    footer {
+        padding-bottom: 70px;
+        @include breakpoint(1024px) {
+            padding-bottom: 90px;
+        }
+    }
+}
+
 @import "article/_newsletter";

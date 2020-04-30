@@ -4,12 +4,9 @@ footer {
     // left: 0;
     width: 100%;
     padding-top: 30px;
-    padding-bottom: 70px;
+    padding-bottom: 30px;
     background-color: $gray-100;
     z-index: 1;
-    @include breakpoint(1024px) {
-        padding-bottom: 90px;
-    }
     a {
         color: $text;
         &:hover {

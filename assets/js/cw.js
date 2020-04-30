@@ -1,6 +1,7 @@
 $(function() {
     var width = $(window).width(),
-        height = $(window).height();
+        height = $(window).height(),
+        documentHeight = $(document).height();
     // 判斷瀏覽器
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -140,7 +141,7 @@ $(function() {
         })
 
         // 判斷有沒有值
-        $("input").each(function() {
+        $("input.form__group__input").each(function() {
             if (this.value) {
                 $(this).parent().addClass('hasValue');
             }
@@ -165,8 +166,8 @@ $(function() {
         })
 
         function input() {
-            $("input").parent().addClass('form__group--defalt');
-            $("input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+            $("input.form__group__input").parent().addClass('form__group--defalt');
+            $("input.form__group__input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
         }
 
         function select() {
@@ -175,7 +176,7 @@ $(function() {
         }
         input();
         select();
-        $("input").change(function() {
+        $("input.form__group__input").change(function() {
             input();
         })
         $("select").change(function() {
@@ -268,8 +269,9 @@ $(function() {
             }
         }
         memberHeight(width);
-        $(".menubar__user > i.icon").click(function() {
+        $(".menubar__user > i.icon, .menubar__user .menubar__user--login").click(function() {
             $(this).siblings('.menubar__user--member').slideToggle();
+            $('.desktop i.icon-down').toggleClass('active');
             $('.opacity').toggleClass('opened menubar__user');
             if (($('header').hasClass('fixed')) && (width < 1024)) {
                 $('body').toggleClass('opened')
@@ -338,53 +340,6 @@ $(function() {
         } else {
             $(".plan__item__right").height('');
         }
-        // 信用卡Keyup同步
-        if ((location.href.match(/payment/)) && (width >= 768)) {
-            $("#expMonth").on('change', function() {
-                $(".card__input--month").attr("value", this.value);
-            })
-            $("#expYear").on('change', function() {
-                $(".card__input--year").attr("value", this.value);
-            })
-            $("#securityCode").on('keyup', function() {
-                $(".card__input--code").attr("value", this.value);
-            })
-            var creditCard = $('#creditCardNumber');
-
-            function validateCard() {
-                var cardHolder = $('div.card__type');
-                creditCard.validateCreditCard(function(result) {
-                    var paymentIcons = $(this).hasClass('*[class*="card__type-"]'),
-                        removeIcon = $(this).removeClass(function(index, css) {
-                            return (css.match(/\bcard-\S+/g) || []).join(' ');
-                        });
-                    if (result.card_type !== null) {
-                        cardHolder.attr('class', 'card__type');
-                        cardHolder.addClass('card__type--' + result.card_type.name);
-                        $(".card__note--error").hide();
-                    } else {
-                        cardHolder.attr('class', 'card__type');
-                        $(".card__note--error").show();
-                    }
-                }, {
-                    accept: ['visa', 'mastercard', 'jcb']
-                });
-            }
-        }
-        $("#creditCardNumber").on('keyup', function() {
-            var val = $(this).val();
-            var newval = '';
-            val = val.replace(/\s/g, '');
-            for (var i = 0; i < val.length; i++) {
-                if (i % 4 == 0 && i > 0) newval = newval.concat('  ');
-                newval = newval.concat(val[i]);
-            }
-            $(this).val(newval);
-            $(".card__input--number").attr("value", this.value);
-            if (creditCard.data('creditcard') == true) {
-                validateCard();
-            }
-        })
         $("#chageInvoicing").on("click", function() {
             $(this).parent().parent().parent().slideUp();
             $(this).parent().parent().parent().siblings(".select-invoicing").slideDown();
@@ -399,72 +354,94 @@ $(function() {
                 });
             };
         });
+        let isLoading = false;
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adHeight = $('.ad--970by250').outerHeight(),
-                headerHeight = $('header').outerHeight(),
-                nextAHeight = $('.article__next > a').outerHeight(),
-                functionGroupHeight = $('.article__function').outerHeight(),
-                // audioPlayerTop = $('.audio__player').offset().top,
-                articleImgTop = $('.article__img').offset().top,
-                articleBodyTop = $('.article__body').offset().top,
-                articleRecommendTop = $('.article__body .article__keyword').offset().top + $('.article__body .article__keyword').outerHeight() + 50,
-                articleContentGroupHeight = articleRecommendTop - articleBodyTop;
-            if (width >= 1024) {
-                $('.article__next').css({
-                    'padding-top': functionGroupHeight - nextAHeight
-                })
-            } else {
-                $('.article__next').css({
-                    'padding-top': 0
-                })
-            }
-            if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adHeight)) {
-                $('body').addClass('opened');
-            } else {
-                $('body').removeClass('opened');
-            }
-            if (scroll >= adHeight) {
-                $('header').addClass('fixed');
-                $('body').css({
-                    'padding-top': headerHeight
-                });
-            } else {
-                $('header').removeClass('fixed');
-                $('body').css({
-                    'padding-top': 0
-                });
-            }
-            if (scroll >= (articleBodyTop - headerHeight)) {
-                $('header .item--center').addClass('scroll');
-                $('.bottombar').css({
-                    'bottom': 0
-                });
-            } else {
-                $('header .item--center').removeClass('scroll');
+                headerHeight = $('header').outerHeight();
+            $('article').each(function() {
+                var next = $(this).children('.article__body').children('.article__next'),
+                    nextAHeight = next.children('a').outerHeight(),
+                    functionGroup = $(this).children('.article__body').children('.article__function'),
+                    functionGroupHeight = functionGroup.outerHeight(),
+                    articleFirst = $('article').eq(0),
+                    articleSecond = $('article').eq(1),
+                    articleFirstBodyTop = articleFirst.children('.article__body').offset().top,
+                    articleImg = $(this).children('.article__head').children().children('.article__img'),
+                    articleImgTop = articleImg.offset().top,
+                    articleBody = $(this).children('.article__body'),
+                    articleBodyTop = articleBody.offset().top,
+                    articleRecommend = $(this).children('.article__body').children('.article__keyword'),
+                    articleRecommendTop = articleRecommend.offset().top + articleRecommend.outerHeight() + 50,
+                    articleContentGroupHeight = articleRecommendTop - articleBodyTop;
                 if (width >= 1024) {
-                    $('.bottombar').css({
-                        'bottom': '-40px'
+                    next.css({
+                        'padding-top': functionGroupHeight - nextAHeight
+                    })
+                } else {
+                    $('.article__next').css({
+                        'padding-top': 0
+                    })
+                }
+                if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adHeight)) {
+                    $('body').addClass('opened');
+                } else {
+                    $('body').removeClass('opened');
+                }
+                if (scroll >= adHeight) {
+                    $('header').addClass('fixed');
+                    $('body').css({
+                        'padding-top': headerHeight
                     });
                 } else {
-                    $('.bottombar').css({
-                        'bottom': '-50px'
+                    $('header').removeClass('fixed');
+                    $('body').css({
+                        'padding-top': 0
                     });
                 }
-            }
-            if ((scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-                $('.article__function').fadeIn();
-            } else {
-                $('.article__function').fadeOut();
-            }
-            if ((scroll >= (articleBodyTop + (articleContentGroupHeight / 3 * 2))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-                $('.article__next').fadeIn();
-            } else {
-                $('.article__next').fadeOut();
-            }
-            if (scroll >= articleImgTop) {
-                $('.bulletin').addClass('hide');
-            }
+                if (scroll >= (articleFirstBodyTop - headerHeight)) {
+                    $('header .item--center').addClass('scroll');
+                    $('.bottombar').css({
+                        'bottom': 0
+                    });
+                } else {
+                    $('header .item--center').removeClass('scroll');
+                    if (width >= 1024) {
+                        $('.bottombar').css({
+                            'bottom': '-40px'
+                        });
+                    } else {
+                        $('.bottombar').css({
+                            'bottom': '-50px'
+                        });
+                    }
+                }
+                if ((scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                    functionGroup.fadeIn();
+                } else {
+                    functionGroup.fadeOut();
+                }
+                if ((scroll >= (articleBodyTop + (articleContentGroupHeight / 3 * 2))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                    next.fadeIn();
+                } else {
+                    next.fadeOut();
+                }
+                if (scroll >= articleImgTop) {
+                    $('.bulletin').addClass('hide');
+                }
+                // var triggle = $(this).offset().top + ($(this).height() * 0.8);
+                // if ((scroll >= triggle) && (scroll < documentHeight) && !isLoading) {
+                //     isLoading = true;
+                //     $(this).after(data[0]['content']);
+                //     $('.title__share .title').text(data[0]['title']);
+                //     console.log(scroll, triggle, 'ajaxRequest');
+                //     // 請求完再把 isLoading 切回 false
+                //     lazyload();
+                //     if (width >= 1024) {
+                //         imgZoom();
+                //     }
+                // } else if ((scroll >= triggle) && !isLoading) {}
+            })
         })
         $(window).resize(function(width) {
             var width = $(window).width(),
@@ -482,5 +459,22 @@ $(function() {
                 $('body').removeClass('opened');
             }
         })
+        var intersectionObserver = new IntersectionObserver(
+            function(entries) {
+                // 如果不可見，就返回
+                if (entries[0].intersectionRatio <= 0) return;
+                $('article').after(data[0]['content']);
+                $('.title__share .title').text(data[0]['title']);
+                lazyload();
+                if (width >= 1024) {
+                    imgZoom();
+                }
+                console.log('Loaded new items');
+            }
+        );
+        // 開始觀察
+        intersectionObserver.observe(
+            document.querySelector('.infinite__triggle')
+        );
     })
 });

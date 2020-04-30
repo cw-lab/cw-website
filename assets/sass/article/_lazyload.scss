@@ -16,11 +16,6 @@
             @include opacity(1);
         }
     }
-    +.source {
-        @include breakpoint(1024px) {
-            margin-bottom: 40px;
-        }
-    }
 }
 
 .imgzoom {

@@ -298,7 +298,6 @@ body {
 @media (min-width: 1024px) {
   body {
     font-family: Roboto, 'Noto Sans TC', sans-serif;
-    font-weight: 300;
   }
 }
 body.opened {
@@ -1503,11 +1502,16 @@ nav.menubar--sub2 > .container {
   align-items: center;
   justify-content: flex-end;
 }
+nav.menubar--sub2 span {
+  font-size: 1rem;
+  line-height: 1.125;
+}
 nav.menubar--sub2 a.logout {
   margin-left: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #171717;
+  font-size: 1rem;
   line-height: 1rem;
 }
 nav.menubar--sub2 a.logout:hover {
@@ -1524,8 +1528,6 @@ nav.menubar--sub2 .menubar__user {
 }
 nav.menubar--sub2 .menubar__user .menubar__user--signin,
 nav.menubar--sub2 .menubar__user .menubar__user--login {
-  padding-top: 10px;
-  padding-bottom: 10px;
   color: #171717;
   line-height: 1rem;
 }
@@ -1682,7 +1684,7 @@ nav.menubar--belt--third > ul > li > ul {
 }
 @media (min-width: 1024px) {
   .menubar__user--member {
-    top: 52px;
+    top: 41px;
     right: 0;
   }
   .menubar__user--member.menubar__user--login {
@@ -1710,7 +1712,7 @@ nav.menubar--belt--third > ul > li > ul {
 .menubar__user--member,
 aside.menubar--left {
   font-size: 1rem;
-  border: solid #EEEEEE;
+  border: solid #D3D5D7;
   background-color: #fff;
 }
 @media (min-width: 1024px) {
@@ -1738,7 +1740,7 @@ aside.menubar--left ul li {
 .menubar__user--member ul li.hr,
 aside.menubar--left ul li.hr {
   height: 1px;
-  background-color: #EEEEEE;
+  background-color: #D3D5D7;
 }
 .menubar__user--member ul li .li__group,
 aside.menubar--left ul li .li__group {
@@ -2509,14 +2511,23 @@ header .container > .item.item--center .item__scroll {
 header .container > .item.item--center.scroll .item__scroll {
   top: -40px;
 }
-header .container > .item.item--center a.logo {
-  display: inline-block;
-}
 header .container > .item.item--center .title__share .h3 {
   line-height: 40px;
 }
+header a.logo {
+  display: inline-block;
+  vertical-align: middle;
+}
 header a.logo img {
   height: 40px;
+}
+header a.logo.logo--main {
+  margin-right: 20px;
+}
+header a.logo.logo--sub {
+  color: #D60C18;
+  font-size: 1rem;
+  font-weight: 500;
 }
 header .search__icon {
   margin-left: 30px;
@@ -2658,14 +2669,9 @@ header .menubar__user i {
 footer {
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
   background-color: #EEEEEE;
   z-index: 1;
-}
-@media (min-width: 1024px) {
-  footer {
-    padding-bottom: 90px;
-  }
 }
 footer a {
   color: #171717;

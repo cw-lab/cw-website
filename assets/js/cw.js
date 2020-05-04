@@ -1,7 +1,6 @@
 $(function() {
     var width = $(window).width(),
-        height = $(window).height(),
-        documentHeight = $(document).height();
+        height = $(window).height();
     // 判斷瀏覽器
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
     var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -364,9 +363,6 @@ $(function() {
                     nextAHeight = next.children('a').outerHeight(),
                     functionGroup = $(this).children('.article__body').children('.article__function'),
                     functionGroupHeight = functionGroup.outerHeight(),
-                    articleFirst = $('article').eq(0),
-                    articleSecond = $('article').eq(1),
-                    articleFirstBodyTop = articleFirst.children('.article__body').offset().top,
                     articleImg = $(this).children('.article__head').children().children('.article__img'),
                     articleImgTop = articleImg.offset().top,
                     articleBody = $(this).children('.article__body'),
@@ -375,7 +371,7 @@ $(function() {
                     articleRecommendTop = articleRecommend.offset().top + articleRecommend.outerHeight() + 50,
                     articleContentGroupHeight = articleRecommendTop - articleBodyTop;
                 if (width >= 1024) {
-                    next.css({
+                    $('.article__next').css({
                         'padding-top': functionGroupHeight - nextAHeight
                     })
                 } else {
@@ -399,7 +395,7 @@ $(function() {
                         'padding-top': 0
                     });
                 }
-                if (scroll >= (articleFirstBodyTop - headerHeight)) {
+                if (scroll >= (articleBodyTop - headerHeight)) {
                     $('header .item--center').addClass('scroll');
                     $('.bottombar').css({
                         'bottom': 0
@@ -429,18 +425,6 @@ $(function() {
                 if (scroll >= articleImgTop) {
                     $('.bulletin').addClass('hide');
                 }
-                // var triggle = $(this).offset().top + ($(this).height() * 0.8);
-                // if ((scroll >= triggle) && (scroll < documentHeight) && !isLoading) {
-                //     isLoading = true;
-                //     $(this).after(data[0]['content']);
-                //     $('.title__share .title').text(data[0]['title']);
-                //     console.log(scroll, triggle, 'ajaxRequest');
-                //     // 請求完再把 isLoading 切回 false
-                //     lazyload();
-                //     if (width >= 1024) {
-                //         imgZoom();
-                //     }
-                // } else if ((scroll >= triggle) && !isLoading) {}
             })
         })
         $(window).resize(function(width) {
@@ -459,22 +443,5 @@ $(function() {
                 $('body').removeClass('opened');
             }
         })
-        var intersectionObserver = new IntersectionObserver(
-            function(entries) {
-                // 如果不可見，就返回
-                if (entries[0].intersectionRatio <= 0) return;
-                $('article').after(data[0]['content']);
-                $('.title__share .title').text(data[0]['title']);
-                lazyload();
-                if (width >= 1024) {
-                    imgZoom();
-                }
-                console.log('Loaded new items');
-            }
-        );
-        // 開始觀察
-        intersectionObserver.observe(
-            document.querySelector('.infinite__triggle')
-        );
     })
 });

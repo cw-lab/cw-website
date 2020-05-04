@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>感謝您的提供的意見</title>
+    <link rel="stylesheet" href="../assets/css/cw-unsubscribe.css">
+    <style>
+        body,
+        .flex {
+            height: 100%;
+            min-height: 100%;
+        }
+        
+        .flex {
+            flex-direction: column;
+            justify-content: center
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex container align-items-center text-center">
+        <h1 class="mt0">感謝您的提供的意見</h1>
+        <p class="my0">網站將自動導向天下顧客服務中心<br>請繼續取消自動續訂流程</p>
+        <p class="mb0">
+            <span id="count">5</span>秒後將前往<a href="https://www.cwbook.com.tw/member/mcntr/QryDueDate.shtml" class="btn--text">天下顧客服務中心</a>
+        </p>
+    </div>
+    <script type="text/javascript">
+        window.onload = function() {
+            (function() {
+                var counter = 5;
+                setInterval(function() {
+                    counter--;
+                    if (counter >= 0) {
+                        document.getElementById("count").innerHTML = counter;
+                    }
+                    if (counter === 0) {
+                        clearInterval(counter);
+                        window.location.href = 'https://www.cwbook.com.tw/member/mcntr/QryDueDate.shtml';
+                    }
+                }, 500);
+            })();
+        }
+    </script>
+</body>
+
+</html>

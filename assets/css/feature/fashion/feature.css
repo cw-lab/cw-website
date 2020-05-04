@@ -2621,6 +2621,7 @@ header .btn {
   }
 }
 header .menubar__user {
+  position: relative;
   margin-left: 30px;
 }
 header .menubar__user i {

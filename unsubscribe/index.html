@@ -24,38 +24,38 @@
         <div id="dform" class="xform container">
             <input type="hidden" name="tpage" id="tpage" value="1" />
             <div id="page1">
-                <div class="form__group form__group--outlined" type="1" req="0" id="div_n_1" accesskey="1" ispk="0" isuk="0">
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_1" accesskey="1" ispk="0" isuk="0">
                     <label class="label">
                       <div class="form__group__placeholder">請輸入姓名</div>
                       <input class="form__group__input" name="n_1" type="text" id="n_1" maxlength="" value=壹貳參 tag="姓名" disabled>
                     </label>
                 </div>
-                <div class="form__group form__group--outlined" type="1" req="0" id="div_n_2" accesskey="2" ispk="0" isuk="0">
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_2" accesskey="2" ispk="0" isuk="0">
                     <label class="label">
                         <div class="form__group__placeholder">E-mail</div>
                         <input class="form__group__input" name="n_2" type="text" id="n_2" maxlength="" value="onetwothree@gmail.com" tag="主要電子郵件" isEmail="true" disabled />
                     </label>
                 </div>
-                <div class="form__group form__group--outlined" type="1" req="0" id="div_n_3" accesskey="3" ispk="0" isuk="0">
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_3" accesskey="3" ispk="0" isuk="0">
                     <label class="label">
                         <div class="form__group__placeholder">全閱讀帳號</div>
                         <input class="form__group__input" name="n_3" type="text" id="n_3" maxlength="" value="onetwothree@gmail.com" tag="全閱讀帳號" disabled />
                     </label>
                 </div>
-                <div class="form__group form__group--outlined" type="1" req="0" id="div_n_4" accesskey="4" ispk="0" isuk="0">
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_4" accesskey="4" ispk="0" isuk="0">
                     <label class="label">
                         <div class="form__group__placeholder">請輸入填寫時間</div>
                         <input class="form__group__input" name="n_4" type="text" id="n_4" maxlength="" value="2020/04/27" tag="填寫時間" disabled />
                     </label>
                 </div>
-                <div class="form__group" type="3" req="1" id="div_n_5" accesskey="5" ispk="0">
+                <div class="field form__group" type="3" req="1" id="div_n_5" accesskey="5" ispk="0">
                     <div class="field-labelblock">
                         <span class="error"></span>
                         <span class="field-label h2 font-weight-500">請問您取消天下全閱讀自動續訂最主要的原因是⋯⋯<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
-                            <li class="mco"><a single="true" class="selected"><span class="label__radio__mark"></span><span class="label__radio__txt">內容不符合期待</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">內容不符合期待</span></a></li>
                             <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">看其他媒體提供的免費內容就夠了</span></a></li>
                             <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">改成付費訂閱其他的媒體</span></a></li>
                             <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不滿意 APP 功能</span></a></li>
@@ -66,15 +66,11 @@
                             <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">想多使用一段時間再決定是否續訂</span></a></li>
                             <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不喜歡自動續訂這種訂閱方式</span></a></li>
                             <li class="mco">
-                                <div>
-                                    <a single="true" onclick="toggleInput(this)">
-                                        <span class="label__radio__mark"></span><span class="label__radio__txt">其他原因</span>
-                                        <div class="form__group form__group--filled">
-                                            <label class="label">
-                                                <div class="form__group__placeholder">請輸入其他原因</div>
-                                                <input class="specify form__group__input" id="n_5_11_o" name="n_5_11_o" type="text" onkeyup="validateSpecify(this)" />
-                                            </label>
-                                        </div>
+                                <div class="form__group form__group--filled">
+                                    <span class="label__radio__mark"></span><span class="label__radio__txt">其他原因</span>
+                                    <a single="true" class="label" onclick="toggleInput(this)">
+                                        <div class="form__group__placeholder">請輸入其他原因</div>
+                                        <input class="specify form__group__input" id="n_5_11_o" name="n_5_11_o" type="text" onkeyup="validateSpecify(this)" />
                                     </a>
                                 </div>
                             </li>
@@ -82,7 +78,7 @@
                     </div>
                     <input name="n_5" type="hidden" id="n_5" value=1 />
                 </div>
-                <div class="form__group" type="2" req="0" id="div_n_6" accesskey="6" ispk="0">
+                <div class="field form__group" type="2" req="0" id="div_n_6" accesskey="6" ispk="0">
                     <div class="field-labelblock">
                         <span class="error"></span>
                         <span class="field-label h2 font-weight-500">您覺得天下全閱讀有任何需要改善的地方嗎？</span>
@@ -111,6 +107,10 @@
     <script type="text/javascript">
         $(function() {
             $('#form').attr('action', location.protocol.replace('file:', 'http:') + '//crmt.cw.com.tw/SurveyCollector/sc.aspx');
+            $(".mco").click(function() {
+                $(this).siblings().children().removeClass('selected');
+                $(this).children().addClass('selected');
+            });
         });
     </script>
 </body>

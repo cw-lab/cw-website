@@ -2656,20 +2656,19 @@ a:focus {
 .mc-select.single li:hover span.label__radio__mark {
   border-color: #D60C18;
 }
-.mc-select.single li a.selected span.label__radio__mark {
+.mc-select.single li .selected span.label__radio__mark {
   border-color: #D60C18;
 }
-.mc-select.single li a.selected span.label__radio__mark::after {
+.mc-select.single li .selected span.label__radio__mark::after {
   display: block;
 }
-.mc-select.single li a.selected:hover span.label__radio__mark::before {
+.mc-select.single li .selected:hover span.label__radio__mark::before {
   width: 36px;
   height: 36px;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
-.mc-select.single .form__group {
-  width: calc(100% - 20px - 0.5rem);
+.mc-select.single .form__group .label {
   margin: 5px 0 0 calc(20px + 0.5rem);
 }
 .mc-select .label--check {

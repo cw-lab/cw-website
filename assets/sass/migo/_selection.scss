@@ -61,7 +61,7 @@
                     border-color: $primary;
                 }
             }
-            a.selected {
+            .selected {
                 span.label__radio__mark {
                     border-color: $primary;
                     &::after {
@@ -77,8 +77,7 @@
                 }
             }
         }
-        .form__group {
-            width: calc(100% - 20px - 0.5rem);
+        .form__group .label {
             margin: 5px 0 0 calc(20px + 0.5rem);
         }
     }

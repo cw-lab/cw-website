@@ -1989,19 +1989,10 @@
                                 'data-link': link
                             });
                             window.history.pushState(null, title, link);
-                            (function(w, d, s, l, i) {
-                                w[l] = w[l] || []
-                                w[l].push({
-                                    'gtm.start': new Date().getTime(),
-                                    event: 'gtm.js'
-                                })
-                                var f = d.getElementsByTagName(s)[0],
-                                    j = d.createElement(s),
-                                    dl = l != 'dataLayer' ? '&l=' + l : ''
-                                j.async = true
-                                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl
-                                f.parentNode.insertBefore(j, f)
-                            })(window, document, 'script', 'dataLayer', 'GTM-TXLD77')
+                            if (window.ga) {
+                                window.ga.getAll()[0].set('page', location.pathname);
+                                window.ga.getAll()[0].send('pageview')
+                            }
                         }
                         if (pageCount == $('#infiniteTriggle').data('morepage') - 1) {
                             observer.unobserve(target);

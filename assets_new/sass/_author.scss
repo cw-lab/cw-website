@@ -39,6 +39,7 @@
         #follow_msg {
             @include containbtn(table, 0.7em, $gray-300, 0.875em);
             min-width: auto;
+            cursor: pointer;
         }
         .authorTxt {
             margin-top: 1em;

@@ -1,9 +1,41 @@
+function lazyload() {
+    $("img.lazyload").each(function() {
+        $(this).lazyload();
+        $(this).load(function() {
+            $(this).parent().addClass('finished');
+        })
+    });
+}
+lazyload();
+// 圖片全螢幕
+function imgZoom() {
+    $('.imgzoom').each(function() {
+        var imgcode = $(this).data('zoom');
+        $(this).click(function() {
+            $('body').addClass('opened');
+            $('.black').addClass('opened black-fullscreen');
+            $('.fullscreen img').attr('src', imgcode);
+            $('.fullscreen').fadeIn();
+        })
+    });
+    $('.fullscreen__content').click(function(event) {
+        event.stopPropagation();
+    });
+    $('.fullscreen').click(function() {
+        $('body').removeClass('opened');
+        $('.black').removeClass('opened black-fullscreen');
+        $('.fullscreen img').attr('src', '');
+        $('.fullscreen').fadeOut();
+    })
+}
 $(function() {
     var width = $(window).width(),
-        height = $(window).height();
-    // 判斷瀏覽器
-    var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+        height = $(window).height(),
+        originTitle = $('title').text(),
+        originLink = window.location.pathname.split("/").pop(),
+        // 判斷瀏覽器
+        isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
+        isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
     if (isChrome) {
         $("body").addClass("chrome");
     }
@@ -61,11 +93,6 @@ $(function() {
                 $(this).parent().addClass("focus");
             });
     });
-    // if ($('footer > .container > .flex').children('div').hasClass('imglink')) {
-    //     $('body').addClass('footer--normal');
-    // } else {
-    //     $('body').addClass('footer--downward');
-    // }
     if (width < 1024) {
         $('.channel__title').click(function() {
             $(this).children('i.icon').toggleClass('active');
@@ -75,15 +102,6 @@ $(function() {
         })
     }
 
-    function lazyload() {
-        $("img.lazyload").each(function() {
-            $(this).lazyload();
-            $(this).load(function() {
-                $(this).parent().addClass('finished');
-            })
-        });
-    }
-    lazyload();
     // 打開小辭典
     function openDictionary() {
         $(".more").each(function() {
@@ -97,27 +115,6 @@ $(function() {
         });
     }
     openDictionary();
-    // 圖片全螢幕
-    function imgZoom() {
-        $('.imgzoom').each(function() {
-            var imgcode = $(this).data('zoom');
-            $(this).click(function() {
-                $('body').addClass('opened');
-                $('.black').addClass('opened black-fullscreen');
-                $('.fullscreen img').attr('src', imgcode);
-                $('.fullscreen').fadeIn();
-            })
-        });
-        $('.fullscreen__content').click(function(event) {
-            event.stopPropagation();
-        });
-        $('.fullscreen').click(function() {
-            $('body').removeClass('opened');
-            $('.black').removeClass('opened black-fullscreen');
-            $('.fullscreen img').attr('src', '');
-            $('.fullscreen').fadeOut();
-        })
-    }
     if (width >= 1024) {
         imgZoom();
     }
@@ -129,16 +126,16 @@ $(function() {
             }
         })
     }
+    $('main').children('article').eq(0).attr({
+        'data-title': originTitle,
+        'data-link': originLink
+    });
     $(window).load(function() {
         var height = $(window).height(),
             container = $("header .container").outerWidth(),
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
-
-        $(window).load(function() {
-            adBlock();
-        })
-
+        adBlock();
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {
@@ -353,38 +350,43 @@ $(function() {
                 });
             };
         });
-        let isLoading = false;
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
-                adHeight = $('.ad--970by250').outerHeight(),
+                adFirstHeight = $('body > .ad--970by250').outerHeight(),
                 headerHeight = $('header').outerHeight();
             $('article').each(function() {
                 var next = $(this).children('.article__body').children('.article__next'),
                     nextAHeight = next.children('a').outerHeight(),
                     functionGroup = $(this).children('.article__body').children('.article__function'),
                     functionGroupHeight = functionGroup.outerHeight(),
-                    articleImg = $(this).children('.article__head').children().children('.article__img'),
+                    articleHead = $(this).children('.article__head'),
+                    articleHeadTop = articleHead.offset().top,
+                    articleTitle = $(this).attr('data-title'),
+                    articleLink = $(this).attr('data-link'),
+                    articleH1 = articleHead.children().children('h1').text(),
+                    articleImg = articleHead.children().children('.article__img'),
                     articleImgTop = articleImg.offset().top,
                     articleBody = $(this).children('.article__body'),
                     articleBodyTop = articleBody.offset().top,
+                    articleFirstBodyTop = $(this).parent().children('article').eq(0).children('.article__body').offset().top,
                     articleRecommend = $(this).children('.article__body').children('.article__keyword'),
                     articleRecommendTop = articleRecommend.offset().top + articleRecommend.outerHeight() + 50,
                     articleContentGroupHeight = articleRecommendTop - articleBodyTop;
                 if (width >= 1024) {
-                    $('.article__next').css({
+                    next.css({
                         'padding-top': functionGroupHeight - nextAHeight
                     })
                 } else {
-                    $('.article__next').css({
+                    next.css({
                         'padding-top': 0
                     })
                 }
-                if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adHeight)) {
+                if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adFirstHeight)) {
                     $('body').addClass('opened');
                 } else {
                     $('body').removeClass('opened');
                 }
-                if (scroll >= adHeight) {
+                if (scroll >= adFirstHeight) {
                     $('header').addClass('fixed');
                     $('body').css({
                         'padding-top': headerHeight
@@ -395,7 +397,7 @@ $(function() {
                         'padding-top': 0
                     });
                 }
-                if (scroll >= (articleBodyTop - headerHeight)) {
+                if (scroll >= (articleFirstBodyTop - headerHeight)) {
                     $('header .item--center').addClass('scroll');
                     $('.bottombar').css({
                         'bottom': 0
@@ -426,7 +428,20 @@ $(function() {
                     $('.bulletin').addClass('hide');
                 }
             })
-        })
+            for (var index = 0; index < $('article').length; index++) {
+                var articleIndex = $('article').eq(index),
+                    articleIndexTop = articleIndex.offset().top,
+                    articleIndexH1 = articleIndex.children('.article__head').children().children('h1').text(),
+                    articleIndexTitle = articleIndex.attr('data-title'),
+                    articleIndexLink = articleIndex.attr('data-link');
+
+                if ((scroll > articleIndexTop) && (scroll < (articleIndexTop + articleIndex.outerHeight()))) {
+                    $('header .title').text(articleIndexH1);
+                    $('title').text(articleIndexTitle);
+                    history.replaceState('', articleIndexTitle, articleIndexLink);
+                }
+            }
+        });
         $(window).resize(function(width) {
             var width = $(window).width(),
                 height = $(window).height();

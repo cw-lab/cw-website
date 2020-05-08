@@ -1367,7 +1367,7 @@
                 </ul>
             </div>
         </article>
-        <div class="infinite__triggle"></div>
+        <div id="infiniteTriggle" data-morepage="2"></div>
         <div class="loader__animate loader__animate--triggle">
             <div class="loader__icon"></div>
         </div>
@@ -1748,7 +1748,6 @@
     <script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-    <script type="text/javascript" src="../assets/js/data.js"></script>
     <script type="text/javascript" src="../assets/js/cw.js"></script>
     <script type="text/javascript" src="../assets/js/green-audio-player.js"></script>
     <script>
@@ -1961,6 +1960,64 @@
             pushDataLayerpublish();
             pushDataLayersuscribedate();
             pushDataLayerLineInfo();
+        });
+    </script>
+    <script>
+        // 滾滾滾
+        $.get("../db.json", function(data) {
+            var width = $(window).width(),
+                wasAbove = false,
+                pageCount = -1;
+            const callback = (entries, observer) => {
+                entries.forEach(entry => {
+                    const isAbove = entry.boundingClientRect.y >= entry.rootBounds.y;
+                    if (entry.isIntersecting && wasAbove) {
+                        if (pageCount < $('#infiniteTriggle').data('morepage')) {
+                            pageCount++;
+                            var title = data['posts'][pageCount]['title'],
+                                h1 = data['posts'][pageCount]['h1'],
+                                link = data['posts'][pageCount]['link'],
+                                lastArticle = $('article').filter(':last');
+                            // 塞結構
+                            $(data['posts'][pageCount]['content']).insertAfter(lastArticle);
+                            // 換header中title
+                            $('header .title').text(h1);
+                            // 換title
+                            $('title').text(title);
+                            $('main').children('article').eq(pageCount + 1).attr({
+                                'data-title': title,
+                                'data-link': link
+                            });
+                            window.history.pushState(null, title, link);
+                            (function(w, d, s, l, i) {
+                                w[l] = w[l] || []
+                                w[l].push({
+                                    'gtm.start': new Date().getTime(),
+                                    event: 'gtm.js'
+                                })
+                                var f = d.getElementsByTagName(s)[0],
+                                    j = d.createElement(s),
+                                    dl = l != 'dataLayer' ? '&l=' + l : ''
+                                j.async = true
+                                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl
+                                f.parentNode.insertBefore(j, f)
+                            })(window, document, 'script', 'dataLayer', 'GTM-TXLD77')
+                        }
+                        if (pageCount == $('#infiniteTriggle').data('morepage') - 1) {
+                            observer.unobserve(target);
+                            $('#infiniteTriggle, .loader__animate').remove();
+                        }
+                    }
+                    wasAbove = isAbove;
+                    lazyload();
+                    if (width >= 1024) {
+                        imgZoom();
+                    }
+                });
+            }
+            const observer = new IntersectionObserver(callback);
+            const target = document.querySelector('#infiniteTriggle');
+            observer.observe(target);
         });
     </script>
 </body>

@@ -223,3 +223,118 @@ aside {
         }
     }
 }
+
+.card__group {
+    font-size: 0;
+    .card__item {
+        width: 100%;
+        span {
+            display: block;
+        }
+        .card__img {
+            .label {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: block;
+                padding: 0 5px;
+                color: $white;
+                font-size: 0.875rem;
+                line-height: 30px;
+                text-align: center;
+                background: rgba($black, 0.5);
+                text-transform: uppercase;
+            }
+        }
+        .card__subtitle {
+            margin-bottom: 5px;
+            color: $primary;
+            font-size: 0.875rem;
+            i.icon {
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: text-top;
+                line-height: 1;
+            }
+        }
+        .card__title {
+            color: $text;
+            font-size: 1rem;
+            @include transition(color 0.2s);
+        }
+        &:hover {
+            .card__title {
+                color: $primary;
+            }
+        }
+    }
+    &.card__group--grid {
+        @include breakpoint(max-width 1023px) {
+            display: flex;
+            align-items: flex-start;
+        }
+        .card__item {
+            @include breakpoint(1024px) {
+                display: inline-block;
+                vertical-align: top;
+                width: calc((100% - 40px) / 3);
+                margin-left: 20px;
+                margin-bottom: 30px;
+            }
+            @include breakpoint(max-width 1023px) {
+                width: 220px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                &:nth-child(1) {
+                    order: 1;
+                }
+                &:nth-child(2) {
+                    order: 2;
+                }
+                &:nth-child(3) {
+                    order: 4;
+                }
+                &:nth-child(4) {
+                    order: 5;
+                }
+                &:nth-child(5) {
+                    order: 6;
+                }
+                &:nth-child(6) {
+                    order: 3;
+                }
+            }
+            &:nth-child(3n+1) {
+                margin-left: 0;
+            }
+            .card__subtitle {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.card__group--list {
+        .card__item {
+            display: block;
+            +.card__item {
+                margin-top: 20px;
+            }
+            .card__img {
+                display: inline-block;
+                vertical-align: middle;
+                width: 110px;
+                img {
+                    width: 100%;
+                }
+            }
+            .card__body {
+                display: inline-block;
+                vertical-align: middle;
+                width: calc(100% - 110px);
+                padding-left: 20px;
+                .card__title {
+                    @include lineclamp(2);
+                }
+            }
+        }
+    }
+}

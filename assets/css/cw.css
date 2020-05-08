@@ -5771,6 +5771,7 @@ ul.article__provide li span {
   display: block;
   color: #6B7780;
   border: solid #EEEEEE;
+  background-color: #fff;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;

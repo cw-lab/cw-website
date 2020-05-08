@@ -1,106 +1,74 @@
-.search,
-.searchInput {
-    font-size: 0;
-    @include breakpoint(768px) {
-        display: inline-block;
-        vertical-align: middle;
-    }
-    @include breakpoint(max-width 767px) {
-        display: none;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 45px;
-        align-items: center;
-        justify-content: center;
-        z-index: 5;
-        &.fadein {
-            display: flex;
-            // @include animation(fadeIn 0.3s 0.3s forwards);
-        }
-    }
-    @include breakpoint(max-width 374px) {
-        padding: 15px;
-    }
-    >input,
-    >button {
-        display: inline-block;
-        border: none;
-        vertical-align: middle;
-        @include transition(all 0.5s);
-        @include breakpoint(768px) {
-            height: 30px;
-            line-height: 30px;
-        }
-        @include breakpoint(max-width 767px) {
-            height: 40px;
-            line-height: 40px;
-        }
-    }
-    >input {
-        font-size: 1rem;
-        padding-left: 10px;
-        background-color: $gray-100;
-        @include breakpoint(768px) {
-            width: 160px;
-            &:focus {
-                width: 200px;
-                color: $white;
-                background-color: $gray-500;
-                +button {
-                    background-color: $black;
-                    background-image: url('https://www.cw.com.tw/assets_new/img/icon-search-w.png');
-                }
-            }
-        }
-        @include breakpoint(max-width 767px) {
-            width: calc(100% - 70px);
-        }
-    }
-    >button {
-        background-color: transparent;
-        background-position: center;
-        background-repeat: no-repeat;
-        @include background-size(20px);
-        @include breakpoint(768px) {
-            width: 30px;
-            background-image: url('https://www.cw.com.tw/assets_new/img/icon-search-b.png');
-            &:hover {
-                background-color: $gray-400;
-                background-image: url('https://www.cw.com.tw/assets_new/img/icon-search-w.png');
-            }
-        }
-        @include breakpoint(max-width 767px) {
-            width: 70px;
-            color: $white;
-            background-color: $black;
-            span {
-                position: static !important;
-                width: auto !important;
-                height: auto !important;
-                font-size: 1rem !important;
-            }
-        }
-    }
-    .closeTouch {
-        @include breakpoint(max-width 767px) {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: $black;
-            @include opacity(0.9);
-            z-index: -1;
-        }
-    }
-}
-
 .search {
-    @include breakpoint(768px) {
-        margin-left: 20px;
+    .search__group {
+        position: relative;
+        >* {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        .search__input {
+            width: calc(100% - 41px);
+            padding: 10.5px 1rem;
+            color: $black;
+            font-size: 1rem;
+            border-style: solid;
+            background-color: $gray-100;
+            border-width: 0px;
+            &:focus {
+                outline: 0;
+            }
+        }
+        .search__submit {
+            position: relative;
+            width: 41px;
+            height: 40px;
+            color: $black;
+            font-size: 1.25rem;
+            border-width: 0px;
+            background-color: $gray-100;
+            &::before {
+                @include beforeafter('', block);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 1px;
+                height: 20px;
+                background-color: $gray-200;
+                @include translateY(-50%);
+            }
+            i.icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+            }
+        }
+    }
+    .search__group--white {
+        border: 1px solid $gray-100;
+        @include transition(border 0.3s);
+        &.focus {
+            border-color: $black;
+        }
+        .search__input,
+        .search__submit {
+            background-color: $white;
+            vertical-align: middle;
+        }
+        .search__input {
+            width: calc(100% - 60px);
+            padding: 1rem;
+            @include breakpoint(1024px) {
+                padding: 20px 1rem;
+            }
+        }
+        .search__submit {
+            width: 60px;
+            height: 50px;
+            @include breakpoint(1024px) {
+                width: 60px;
+                height: 60px;
+            }
+        }
     }
 }
 
@@ -162,7 +130,7 @@
         .caption h3 a span,
         .caption p span {
             color: $primary;
-            font-weight: bold;
+            font-weight: 500;
         }
         @include breakpoint(max-width 767px) {
             .pic {
@@ -187,9 +155,7 @@
         padding-bottom: 10px;
     }
     ul {
-        @include listrest(0,
-        0,
-        none);
+        @include listrest(0, 0, none);
         font-size: 0;
         li {
             display: inline-block;

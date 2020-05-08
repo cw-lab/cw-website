@@ -8,7 +8,7 @@
     .articleGroup {
         @include breakpoint(768px) {
             float: left;
-            width: ($article - 320);
+            width: ($article - 320 - 40);
         }
     }
     article {

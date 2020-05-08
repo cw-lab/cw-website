@@ -25,6 +25,7 @@ ul.article__provide {
             display: block;
             color: $gray-400;
             border: solid $gray-100;
+            background-color: $white;
             @include transition(all 0.2s);
             cursor: pointer;
             i.icon {

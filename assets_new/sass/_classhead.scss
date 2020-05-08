@@ -14,8 +14,8 @@
     }
     @include breakpoint(1024px) {
         width: $article;
-        padding-left: 0;
-        padding-right: 0;
+        // padding-left: 0;
+        // padding-right: 0;
     }
     h1,
     h2 {

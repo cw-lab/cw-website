@@ -1,8 +1,12 @@
 .banner {
+    position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: #f7f7f7;
     border: 1px solid $gray-100;
+    &.opened {
+        z-index: 10;
+    }
     img {
         margin: auto;
         max-width: 100%;

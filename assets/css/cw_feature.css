@@ -1416,19 +1416,23 @@ nav.menubar--left ul li .li__group {
 nav.menubar--left ul li .li__group a {
   color: #171717;
 }
-nav.menubar--left ul li .li__group:hover a, nav.menubar--left ul li .li__group:hover i {
+nav.menubar--left ul li .li__group:hover a,
+nav.menubar--left ul li .li__group:hover i {
   color: #D60C18;
 }
-nav.menubar--left ul li .li__group a.sns-facebook:hover > i, nav.menubar--left ul li .li__group a.sns-facebook:hover > span {
+nav.menubar--left ul li .li__group a.sns-facebook:hover > i,
+nav.menubar--left ul li .li__group a.sns-facebook:hover > span {
   color: #1877F2;
 }
-nav.menubar--left ul li .li__group a.sns-line:hover > i, nav.menubar--left ul li .li__group a.sns-line:hover > span {
+nav.menubar--left ul li .li__group a.sns-line:hover > i,
+nav.menubar--left ul li .li__group a.sns-line:hover > span {
   color: #00C200;
 }
 nav.menubar--left ul li.now {
   background-color: #D60C18;
 }
-nav.menubar--left ul li.now > .li__group > a, nav.menubar--left ul li.now > .li__group > i {
+nav.menubar--left ul li.now > .li__group > a,
+nav.menubar--left ul li.now > .li__group > i {
   color: #fff;
 }
 nav.menubar--left > ul + ul {
@@ -1798,43 +1802,60 @@ nav.menubar--belt--third > ul > li > ul {
   left: 0;
 }
 
+.menubar__user--member,
 aside.menubar--left {
   font-size: 1rem;
   border: 1px solid #D3D5D7;
   background-color: #fff;
 }
+.menubar__user--member ul,
 aside.menubar--left ul {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+.menubar__user--member ul li,
 aside.menubar--left ul li {
   line-height: 1;
 }
+.menubar__user--member ul li .li__group,
 aside.menubar--left ul li .li__group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
+.menubar__user--member ul li .li__group a,
 aside.menubar--left ul li .li__group a {
   color: #171717;
 }
-aside.menubar--left ul li .li__group:hover a, aside.menubar--left ul li .li__group:hover i {
+.menubar__user--member ul li .li__group:hover a,
+.menubar__user--member ul li .li__group:hover i,
+aside.menubar--left ul li .li__group:hover a,
+aside.menubar--left ul li .li__group:hover i {
   color: #D60C18;
 }
-aside.menubar--left ul li .li__group a.sns-facebook:hover > i, aside.menubar--left ul li .li__group a.sns-facebook:hover > span {
+.menubar__user--member ul li .li__group a.sns-facebook:hover > i,
+.menubar__user--member ul li .li__group a.sns-facebook:hover > span,
+aside.menubar--left ul li .li__group a.sns-facebook:hover > i,
+aside.menubar--left ul li .li__group a.sns-facebook:hover > span {
   color: #1877F2;
 }
-aside.menubar--left ul li .li__group a.sns-line:hover > i, aside.menubar--left ul li .li__group a.sns-line:hover > span {
+.menubar__user--member ul li .li__group a.sns-line:hover > i,
+.menubar__user--member ul li .li__group a.sns-line:hover > span,
+aside.menubar--left ul li .li__group a.sns-line:hover > i,
+aside.menubar--left ul li .li__group a.sns-line:hover > span {
   color: #00C200;
 }
+.menubar__user--member > ul + ul,
 aside.menubar--left > ul + ul {
   border-top: 1px solid #D3D5D7;
 }
+.menubar__user--member > ul > li .li__group,
 aside.menubar--left > ul > li .li__group {
   position: relative;
 }
+.menubar__user--member > ul > li .li__group > a,
 aside.menubar--left > ul > li .li__group > a {
   display: flex;
   width: 100%;
@@ -1842,9 +1863,11 @@ aside.menubar--left > ul > li .li__group > a {
   line-height: 1.25;
   align-items: center;
 }
+.menubar__user--member > ul > li .li__group > a.sns i + span,
 aside.menubar--left > ul > li .li__group > a.sns i + span {
   margin-left: 5px;
 }
+.menubar__user--member > ul > li .li__group > i.more,
 aside.menubar--left > ul > li .li__group > i.more {
   position: absolute;
   top: 0;
@@ -1857,32 +1880,42 @@ aside.menubar--left > ul > li .li__group > i.more {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
+.menubar__user--member > ul > li .li__group > i.more.active,
 aside.menubar--left > ul > li .li__group > i.more.active {
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+.menubar__user--member > ul > li.now > .li__group,
 aside.menubar--left > ul > li.now > .li__group {
   background-color: #D60C18;
 }
-aside.menubar--left > ul > li.now > .li__group > a, aside.menubar--left > ul > li.now > .li__group > i {
+.menubar__user--member > ul > li.now > .li__group > a,
+.menubar__user--member > ul > li.now > .li__group > i,
+aside.menubar--left > ul > li.now > .li__group > a,
+aside.menubar--left > ul > li.now > .li__group > i {
   color: #fff;
 }
+.menubar__user--member > ul > li > ul,
 aside.menubar--left > ul > li > ul {
   display: none;
 }
+.menubar__user--member > ul > li > ul > li .li__group > a,
 aside.menubar--left > ul > li > ul > li .li__group > a {
   padding: 15px 20px 15px 50px;
 }
+.menubar__user--member > ul > li > ul > li.now a,
 aside.menubar--left > ul > li > ul > li.now a {
   color: #D60C18;
 }
+.menubar__user--member.opened,
 aside.menubar--left.opened {
   left: 0;
 }
 
-.opacity, .black {
+.opacity,
+.black {
   position: fixed;
   top: 0;
   left: 0;
@@ -1890,7 +1923,8 @@ aside.menubar--left.opened {
   height: 0;
   z-index: 11;
 }
-.opacity.opened, .black.opened {
+.opacity.opened,
+.black.opened {
   width: 100%;
   height: 100%;
 }

@@ -5723,7 +5723,8 @@ main .ad.ad--970by250.opened {
 }
 
 .article__body,
-.article__foot {
+.article__foot,
+.article__promotion {
   max-width: 740px;
   width: 100%;
   margin-left: auto;
@@ -6520,6 +6521,10 @@ article.article__level--2 ul.article__keyword li a {
   line-height: 1;
 }
 .article__page .card__group .card__item .card__title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   color: #171717;
   font-size: 1rem;
   -moz-transition: color 0.2s;

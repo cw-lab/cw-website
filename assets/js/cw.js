@@ -350,7 +350,7 @@ $(function() {
                 });
             };
         });
-        $(window).scroll(function() {
+        $(window).on('scroll', _.throttle(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .ad--970by250').outerHeight(),
                 headerHeight = $('header').outerHeight();
@@ -441,7 +441,7 @@ $(function() {
                     history.replaceState('', articleIndexTitle, articleIndexLink);
                 }
             }
-        });
+        }, 300));
         $(window).resize(function(width) {
             var width = $(window).width(),
                 height = $(window).height();

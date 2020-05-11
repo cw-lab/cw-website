@@ -11,6 +11,7 @@
     .container {
         @include breakpoint(max-width 1023px) {
             display: flex;
+            justify-content: center;
             padding-right: 0;
         }
     }

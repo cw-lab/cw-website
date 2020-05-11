@@ -1,28 +1,33 @@
 .article__next {
-    display: none;
+    // display: none;
     position: fixed;
-    @include breakpoint(1024px) {
+    @include breakpoint(1140px) {
         top: 50%;
         left: calc(((100% - 700px) / 2) + 700px + 20px);
         width: 180px;
         @include translateY(-50%);
     }
-    @include breakpoint(max-width 1023px) {
+    @include breakpoint(max-width 1139px) {
         bottom: 60px;
         left: 20px;
         right: 20px;
+        height: auto !important;
     }
     z-index: 3;
     a {
-        display: block;
+        display: none;
         font-size: 0;
         background-color: $white;
         border: 1px solid $gray-200;
+        @include breakpoint(1140px) {
+            position: absolute;
+            bottom: 0;
+        }
         span {
             display: block;
         }
         .next__img {
-            @include breakpoint(max-width 1023px) {
+            @include breakpoint(max-width 1139px) {
                 display: inline-block;
                 width: 150px;
                 vertical-align: middle;
@@ -32,10 +37,10 @@
             }
         }
         .next__body {
-            @include breakpoint(1024px) {
+            @include breakpoint(1140px) {
                 padding: 20px 15px;
             }
-            @include breakpoint(max-width 1023px) {
+            @include breakpoint(max-width 1139px) {
                 display: inline-block;
                 width: calc(100% - 150px);
                 padding: 0 15px;

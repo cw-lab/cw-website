@@ -5,6 +5,9 @@
     left: calc((100% - 970px) / 2);
     @include translateY(-50%);
     z-index: 3;
+    @include breakpoint(max-width 1023px) {
+        display: none !important;
+    }
 }
 
 ul.article__share,

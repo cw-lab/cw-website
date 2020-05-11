@@ -51,10 +51,19 @@
 .article__body,
 .article__foot,
 .article__promotion {
-    max-width: 740px;
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.article__body,
+.article__foot {
+    max-width: 740px;
+    width: 100%;
+}
+
+.article__promotion {
+    max-width: 700px;
+    width: calc(100% - 40px);
 }
 
 .preface>* {

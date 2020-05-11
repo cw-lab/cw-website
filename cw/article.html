@@ -1967,13 +1967,14 @@
         $.get("../db.json", function(data) {
             var width = $(window).width(),
                 wasAbove = false,
-                pageCount = 0,
+                pageCount = -1,
                 limited = $('#infiniteTriggle').data('morepage');
             const callback = (entries, observer) => {
                 entries.forEach(entry => {
                     const isAbove = entry.boundingClientRect.y >= entry.rootBounds.y;
                     if (entry.isIntersecting && wasAbove) {
                         if (pageCount < limited) {
+                            pageCount++;
                             var title = data['posts'][pageCount]['title'],
                                 h1 = data['posts'][pageCount]['h1'],
                                 link = data['posts'][pageCount]['link'],
@@ -1989,18 +1990,12 @@
                                 'data-link': link
                             });
                             window.history.pushState(null, title, link);
-                            ga('send', {
-                                hitType: 'pageview',
-                                page: 'yuting/' + link
-                            });
                             if (window.ga) {
-                                window.ga.getAll()[0].set('page', 'https://topic.cw.com.tw/yuting/' + link);
+                                window.ga.getAll()[0].set('page', 'yuting/cw2020/cw/' + link);
                                 window.ga.getAll()[0].send('pageview')
                             }
-                            pageCount++;
-                            console.log(pageCount, title, h1, link);
                         }
-                        if (pageCount == limited) {
+                        if (pageCount == limited - 1) {
                             observer.unobserve(target);
                             $('#infiniteTriggle, .loader__animate').remove();
                         }

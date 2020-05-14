@@ -387,6 +387,7 @@ article {
 .article__page {
     @import "article/_card";
     @import "article/_list";
+    @import "article/_idlebox";
     footer {
         padding-bottom: 70px;
         @include breakpoint(1024px) {

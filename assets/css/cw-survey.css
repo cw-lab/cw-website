@@ -301,6 +301,7 @@ body {
 @media (min-width: 1024px) {
   body {
     font-family: Roboto, 'Noto Sans TC', sans-serif;
+    font-weight: 300;
   }
 }
 body.opened {
@@ -2779,7 +2780,12 @@ body.message__open {
 .message--download .message__container {
   position: relative;
 }
-.message--download .message__close {
+.message--download .message__btn {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.message__close {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2788,14 +2794,10 @@ body.message__open {
   cursor: pointer;
 }
 @media (min-width: 1024px) {
-  .message--download .message__close {
+  .message__close {
     top: 10px;
     right: 10px;
   }
-}
-.message--download .message__btn {
-  padding-top: 20px;
-  text-align: center;
 }
 
 .black.dialogs {

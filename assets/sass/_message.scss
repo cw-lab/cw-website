@@ -195,23 +195,24 @@ body.message__open {
             &__container {
                 position: relative;
             }
-            &__close {
-                position: absolute;
-                top: 0px;
-                right: 0px;
-                font-weight: bold;
-                padding: 10px;
-                cursor: pointer;
-                @include breakpoint(1024px) {
-                    top: 10px;
-                    right: 10px;
-                }
-            }
             &__btn {
                 padding-top: 20px;
                 text-align: center;
             }
         }
+    }
+}
+
+.message__close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    @include breakpoint(1024px) {
+        top: 10px;
+        right: 10px;
     }
 }
 

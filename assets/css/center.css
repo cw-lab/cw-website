@@ -64,7 +64,7 @@
 }
 .search .search__group--white .search__input,
 .search .search__group--white .search__submit {
-  background-color: #fff;
+  background-color: transparent;
   vertical-align: middle;
 }
 .search .search__group--white .search__input {

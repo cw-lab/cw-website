@@ -1,0 +1,15 @@
+.android {
+    @for $i from 1 through 5 {
+        h#{$i} {
+            @include breakpoint(max-width 1023px) {
+                font-weight: bold;
+            }
+        }
+    }
+    .article__content blockquote p,
+    .article__content p strong,
+    .article__content p b,
+    .font-weight-500 {
+        font-weight: bold;
+    }
+}

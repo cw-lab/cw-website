@@ -31,13 +31,21 @@ function imgZoom() {
 $(function() {
     var width = $(window).width(),
         height = $(window).height(),
+        articleFirstBodyTop = $('article').children('.article__body').offset().top,
         originTitle = $('title').text(),
         originLink = window.location.pathname.split("/").pop(),
+        // 判斷系統
+        iphone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null),
+        android = (navigator.userAgent.match(/android/i) != null),
+        ipad = navigator.userAgent.match(/iPad/i) != null,
         // 判斷瀏覽器
-        isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
-        isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
-    if (isChrome) {
+        chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
+        safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+    if (chrome) {
         $("body").addClass("chrome");
+    }
+    if (android) {
+        $("body").addClass("android");
     }
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');
@@ -353,96 +361,44 @@ $(function() {
                 });
             };
         });
-        $(window).on('scroll', _.throttle(function() {
+        $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .ad--970by250').outerHeight(),
                 headerHeight = $('header').outerHeight();
-            $('article').each(function() {
-                var next = $(this).children('.article__body').children('.article__next'),
-                    nextAHeight = next.children('a').outerHeight(),
-                    functionGroup = $(this).children('.article__body').children('.article__function'),
-                    functionGroupHeight = functionGroup.outerHeight(),
-                    articleHead = $(this).children('.article__head'),
-                    articleHeadTop = articleHead.offset().top,
-                    articleTitle = $(this).attr('data-title'),
-                    articleLink = $(this).attr('data-link'),
-                    articleH1 = articleHead.children().children('h1').text(),
-                    articleImg = articleHead.children().children('.article__img'),
-                    articleImgTop = articleImg.offset().top,
-                    articleBody = $(this).children('.article__body'),
-                    articleBodyTop = articleBody.offset().top,
-                    articleFirstBodyTop = $(this).parent().children('article').eq(0).children('.article__body').offset().top,
-                    articleRecommend = $(this).next('.article__foot').children('.article__recommend'),
-                    articleRecommendTop = articleRecommend.offset().top + articleRecommend.outerHeight() + 50,
-                    articleContentGroupHeight = articleRecommendTop - articleBodyTop;
-                next.css({
-                    'height': functionGroupHeight
-                })
-                if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adFirstHeight)) {
-                    $('body').addClass('opened');
-                } else {
-                    $('body').removeClass('opened');
-                }
-                if (scroll >= adFirstHeight) {
-                    $('header').addClass('fixed');
-                    $('body').css({
-                        'padding-top': headerHeight
-                    });
-                } else {
-                    $('header').removeClass('fixed');
-                    $('body').css({
-                        'padding-top': 0
-                    });
-                }
-                if (scroll >= (articleFirstBodyTop - headerHeight)) {
-                    $('header .item--center').addClass('scroll');
+            if ((width < 1024) && ($('.menubar__user--member').is(':visible')) && (scroll >= adFirstHeight)) {
+                $('body').addClass('opened');
+            } else {
+                $('body').removeClass('opened');
+            }
+            if (scroll >= adFirstHeight) {
+                $('header').addClass('fixed');
+                $('body').css({
+                    'padding-top': headerHeight
+                });
+            } else {
+                $('header').removeClass('fixed');
+                $('body').css({
+                    'padding-top': 0
+                });
+            }
+            if (scroll >= (articleFirstBodyTop - headerHeight)) {
+                $('header .item--center').addClass('scroll');
+                $('.bottombar').css({
+                    'bottom': 0
+                });
+            } else {
+                $('header .item--center').removeClass('scroll');
+                if (width >= 1024) {
                     $('.bottombar').css({
-                        'bottom': 0
+                        'bottom': '-40px'
                     });
                 } else {
-                    $('header .item--center').removeClass('scroll');
-                    if (width >= 1024) {
-                        $('.bottombar').css({
-                            'bottom': '-40px'
-                        });
-                    } else {
-                        $('.bottombar').css({
-                            'bottom': '-50px'
-                        });
-                    }
-                }
-                if ((scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-                    functionGroup.fadeIn(150);
-                } else {
-                    functionGroup.fadeOut(150);
-                }
-                if ((scroll >= (articleRecommend.offset().top - (1.5 * height))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-                    next.children('a').fadeIn({
-                        start: function() {
-                            $(this).css('display', 'block');
-                        }
+                    $('.bottombar').css({
+                        'bottom': '-50px'
                     });
-                } else {
-                    next.children('a').fadeOut();
-                }
-                if (scroll >= articleImgTop) {
-                    $('.bulletin').addClass('hide');
-                }
-            })
-            for (var index = 0; index < $('article').length; index++) {
-                var articleIndex = $('article').eq(index),
-                    articleIndexTop = articleIndex.offset().top,
-                    articleIndexH1 = articleIndex.children('.article__head').children().children('h1').text(),
-                    articleIndexTitle = articleIndex.attr('data-title'),
-                    articleIndexLink = articleIndex.attr('data-link');
-
-                if ((scroll > articleIndexTop) && (scroll < (articleIndexTop + articleIndex.outerHeight()))) {
-                    $('header .title').text(articleIndexH1);
-                    $('title').text(articleIndexTitle);
-                    history.replaceState('', articleIndexTitle, articleIndexLink);
                 }
             }
-        }, 300));
+        });
         $(window).resize(function(width) {
             var width = $(window).width(),
                 height = $(window).height();

@@ -2536,6 +2536,7 @@ nav.menubar--belt--third > ul > li > ul {
 .menubar__user--member {
   position: absolute;
   width: 150px;
+  word-break: keep-all;
 }
 @media (min-width: 1024px) {
   .menubar__user--member {
@@ -6015,6 +6016,10 @@ ul.article__provide li span i.icon {
 .article__content a:hover {
   color: #D60C18;
 }
+.article__content img {
+  max-width: 100%;
+  height: auto !important;
+}
 .article__content blockquote {
   position: relative;
   width: 300px;
@@ -6733,6 +6738,38 @@ article.article__level--2 ul.article__keyword li a {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
   }
+}
+
+@media (max-width: 1023px) {
+  .android h1 {
+    font-weight: bold;
+  }
+}
+@media (max-width: 1023px) {
+  .android h2 {
+    font-weight: bold;
+  }
+}
+@media (max-width: 1023px) {
+  .android h3 {
+    font-weight: bold;
+  }
+}
+@media (max-width: 1023px) {
+  .android h4 {
+    font-weight: bold;
+  }
+}
+@media (max-width: 1023px) {
+  .android h5 {
+    font-weight: bold;
+  }
+}
+.android .article__content blockquote p,
+.android .article__content p strong,
+.android .article__content p b,
+.android .font-weight-500 {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=cw.css.map */

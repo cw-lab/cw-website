@@ -43,13 +43,13 @@
     }
     .container {
         @include breakpoint(768px) {
-            width: $index;
+            width: ($index + 40);
         }
     }
     .main {
         margin-top: 20px;
         @include breakpoint(768px) {
-            width: $index;
+            width: ($index + 40);
         }
         article {
             @include breakpoint(768px) {
@@ -75,7 +75,7 @@
         }
     }
     footer .container {
-        max-width: $index;
+        max-width: ($index + 40);
         margin: auto;
     }
 }

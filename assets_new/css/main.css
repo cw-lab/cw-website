@@ -4209,7 +4209,7 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
 }
 @media (min-width: 768px) {
   .index-page .container {
-    width: 1280px;
+    width: 1320px;
   }
 }
 .index-page .main {
@@ -4217,7 +4217,7 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
 }
 @media (min-width: 768px) {
   .index-page .main {
-    width: 1280px;
+    width: 1320px;
   }
 }
 @media (min-width: 768px) {
@@ -4247,7 +4247,7 @@ section.list-link > ul.etu-item-list li:hover .interest-list-link-title a {
   }
 }
 .index-page footer .container {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: auto;
 }
 

@@ -1681,6 +1681,7 @@ nav.menubar--belt--third > ul > li > ul {
 .menubar__user--member {
   position: absolute;
   width: 150px;
+  word-break: keep-all;
 }
 @media (min-width: 1024px) {
   .menubar__user--member {

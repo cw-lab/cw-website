@@ -138,22 +138,6 @@ $(function() {
             }
         })
     }
-    // 閒置五分鐘
-    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
-    $(this).mousemove(function(e) {
-        idleTime = 0;
-    });
-    $(this).keypress(function(e) {
-        idleTime = 0;
-    });
-
-    function timerIncrement() {
-        idleTime++;
-        if (idleTime > 5) { // 4:59
-            $('.message--idlebox').fadeIn();
-            $('.black').addClass('opened idlebox__opened');
-        }
-    }
     $('main').children('article').eq(0).attr({
         'data-title': originTitle,
         'data-link': originLink

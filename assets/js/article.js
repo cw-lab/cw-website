@@ -1,7 +1,24 @@
 $(window).load(function() {
     var width = $(window).width(),
         height = $(window).height(),
+        idleTime = 0,
         articleFirstBodyTop = $('article').children('.article__body').offset().top;
+    // 閒置五分鐘
+    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+    $(this).mousemove(function(e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function(e) {
+        idleTime = 0;
+    });
+
+    function timerIncrement() {
+        idleTime++;
+        if (idleTime > 5) { // 4:59
+            $('.message--idlebox').fadeIn();
+            $('.black').addClass('opened idlebox__opened');
+        }
+    }
     $(window).on('scroll', _.throttle(function() {
         var scroll = $(window).scrollTop(),
             headerHeight = $('header').outerHeight();

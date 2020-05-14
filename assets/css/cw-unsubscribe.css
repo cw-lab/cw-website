@@ -295,7 +295,6 @@ body {
 @media (min-width: 1024px) {
   body {
     font-family: Roboto, 'Noto Sans TC', sans-serif;
-    font-weight: 300;
   }
 }
 body.opened {
@@ -1977,34 +1976,7 @@ a.sns-facebook:hover, a.sns-facebook.active {
   color: #1877F2;
 }
 a.sns-instagram:hover, a.sns-instagram.active {
-  color: transparent !important;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
-}
-a.sns-instagram:hover i::before, a.sns-instagram.active i::before {
-  color: transparent !important;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
+  color: #b900b4;
 }
 a.sns-line:hover, a.sns-line.active {
   color: #00C200;

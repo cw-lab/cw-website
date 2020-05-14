@@ -119,26 +119,7 @@ a {
         &-instagram {
             &:hover,
             &.active {
-                color: transparent !important;
-                @include background-clip(text);
-                @include background-size(cover);
-                background-repeat: no-repeat;
-                background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-                background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-                background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
-                // background-image: url(../img/instagram-bg@3x-100.jpg);
-                i {
-                    &::before {
-                        color: transparent !important;
-                        @include background-clip(text);
-                        @include background-size(cover);
-                        background-repeat: no-repeat;
-                        background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-                        background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-                        background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
-                        // background-image: url(../img/instagram-bg@3x-100.jpg);
-                    }
-                }
+                color: $instagram;
             }
         }
         &-line {

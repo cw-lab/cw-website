@@ -302,7 +302,6 @@ body {
 @media (min-width: 1024px) {
   body {
     font-family: Roboto, 'Noto Sans TC', sans-serif;
-    font-weight: 300;
   }
 }
 body.opened {
@@ -1984,34 +1983,7 @@ a.sns-facebook:hover, a.sns-facebook.active {
   color: #1877F2;
 }
 a.sns-instagram:hover, a.sns-instagram.active {
-  color: transparent !important;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
-}
-a.sns-instagram:hover i::before, a.sns-instagram.active i::before {
-  color: transparent !important;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: -webkit-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: -o-linear-gradient(top left, #b900b4 0%, #f50000 100%);
-  background-image: linear-gradient(to bottom right, #b900b4 0%, #f50000 100%);
+  color: #b900b4;
 }
 a.sns-line:hover, a.sns-line.active {
   color: #00C200;
@@ -4259,16 +4231,22 @@ body.message__open {
 
 .message__close {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
   padding: 10px;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .message__close {
+    font-weight: bold;
+  }
 }
 @media (min-width: 1024px) {
   .message__close {
     top: 10px;
     right: 10px;
+    font-size: 1.5rem;
   }
 }
 
@@ -6694,30 +6672,67 @@ article.article__level--2 ul.article__keyword li a {
 .article__page .message--idlebox {
   max-width: 760px;
   width: calc(100% - 30px);
-  padding: 30px 30px 40px;
-  font-weight: 300;
+  padding: 20px 20px 30px;
   background: #fff;
   z-index: 11;
 }
+@media (min-width: 1024px) {
+  .article__page .message--idlebox {
+    padding: 30px 30px 40px;
+  }
+}
 .article__page .message--idlebox .idle__title {
-  padding-right: 50px;
+  padding-right: 30px;
   margin-bottom: 24px;
   font-weight: 500;
+  line-height: 1.5;
+}
+@media (max-width: 1023px) {
+  .article__page .message--idlebox .card__group {
+    max-height: 50vh;
+    overflow: scroll;
+  }
 }
 .article__page .message--idlebox .card__group .card__item {
   display: inline-block;
   vertical-align: text-top;
-  width: calc((100% - 40px) / 3);
-  margin-left: 20px;
 }
-.article__page .message--idlebox .card__group .card__item:nth-child(3n+1) {
-  margin-left: 0;
+@media (min-width: 1024px) {
+  .article__page .message--idlebox .card__group .card__item {
+    width: calc((100% - 40px) / 3);
+    margin-left: 20px;
+  }
+  .article__page .message--idlebox .card__group .card__item:nth-child(3n+1) {
+    margin-left: 0;
+  }
+  .article__page .message--idlebox .card__group .card__item:nth-child(n+4) {
+    margin-top: 30px;
+  }
+  .article__page .message--idlebox .card__group .card__item .card__subtitle {
+    margin-top: 10px;
+  }
 }
-.article__page .message--idlebox .card__group .card__item:nth-child(n+4) {
-  margin-top: 30px;
-}
-.article__page .message--idlebox .card__group .card__item .card__subtitle {
-  margin-top: 10px;
+@media (max-width: 1023px) {
+  .article__page .message--idlebox .card__group .card__item + .card__item {
+    margin-top: 20px;
+  }
+  .article__page .message--idlebox .card__group .card__item > span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .article__page .message--idlebox .card__group .card__item > span.card__img {
+    width: 110px;
+  }
+  .article__page .message--idlebox .card__group .card__item > span.card__body {
+    width: calc(100% - 110px);
+    padding-left: 20px;
+  }
+  .article__page .message--idlebox .card__group .card__item > span.card__body .card__title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
 }
 .article__page footer {
   padding-bottom: 70px;

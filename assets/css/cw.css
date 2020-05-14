@@ -6745,5 +6745,34 @@ article.article__level--2 ul.article__keyword li a {
 .android {
   font-family: Roboto, 'Noto Sans TC', sans-serif;
 }
+.android h1 {
+  font-weight: 400;
+}
+@media (max-width: 1023px) {
+  .android h2 {
+    font-weight: 400;
+  }
+}
+@media (max-width: 1023px) {
+  .android h3 {
+    font-weight: 400;
+  }
+}
+@media (max-width: 1023px) {
+  .android h4 {
+    font-weight: 400;
+  }
+}
+@media (max-width: 1023px) {
+  .android h5 {
+    font-weight: 400;
+  }
+}
+.android .article__content blockquote p,
+.android .article__content p strong,
+.android .article__content p b,
+.android .font-weight-500 {
+  font-weight: 400;
+}
 
 /*# sourceMappingURL=cw.css.map */

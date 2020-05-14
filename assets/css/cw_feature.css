@@ -2082,6 +2082,7 @@ a:focus {
 .btn.btn--small {
   min-width: 72px;
   padding: 0.7em 1em;
+  font-size: 0.875rem;
   line-height: 1;
 }
 .btn + button.btn,

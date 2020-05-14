@@ -3183,6 +3183,7 @@ a:focus {
 .btn.btn--small {
   min-width: 72px;
   padding: 0.7em 1em;
+  font-size: 0.875rem;
   line-height: 1;
 }
 .btn + button.btn,
@@ -5488,6 +5489,7 @@ main .ad.ad--970by250.opened {
   bottom: 0;
   width: 100%;
   padding: 15px 20px 10px;
+  font-size: 0.875rem;
   background-color: #EEEEEE;
   border: 1px solid #D3D5D7;
   -moz-transition: bottom 1s;
@@ -5501,13 +5503,13 @@ main .ad.ad--970by250.opened {
 }
 @media (min-width: 1024px) {
   .bulletin {
-    width: 300px;
+    width: 265px;
     padding: 30px 25px 20px;
   }
 }
 @media (min-width: 1620px) {
   .bulletin {
-    left: calc(((100% - 1010px) / 2) - 300px);
+    left: calc(((100% - 1010px) / 2) - 265px);
   }
 }
 @media (max-width: 1023px) {
@@ -6740,11 +6742,6 @@ article.article__level--2 ul.article__keyword li a {
   }
 }
 
-@media (max-width: 1023px) {
-  .android h1 {
-    font-weight: bold;
-  }
-}
 @media (max-width: 1023px) {
   .android h2 {
     font-weight: bold;

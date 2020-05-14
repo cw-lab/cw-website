@@ -6742,6 +6742,9 @@ article.article__level--2 ul.article__keyword li a {
   }
 }
 
+.android h1 {
+  font-weight: 500;
+}
 @media (max-width: 1023px) {
   .android h2 {
     font-weight: bold;

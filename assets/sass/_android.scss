@@ -1,4 +1,7 @@
 .android {
+    h1 {
+        font-weight: 500;
+    }
     @for $i from 2 through 5 {
         h#{$i} {
             @include breakpoint(max-width 1023px) {

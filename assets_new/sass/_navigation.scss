@@ -4,6 +4,7 @@ body.opened {
 }
 
 nav {
+    font-weight: 400;
     a {
         display: block;
     }
@@ -133,6 +134,7 @@ nav {
 .menubar__user--member {
     position: absolute;
     width: 150px;
+    word-break: keep-all;
     @include breakpoint(1024px) {
         &.menubar__user--login {
             width: auto;

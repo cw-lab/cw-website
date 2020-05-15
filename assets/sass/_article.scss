@@ -45,7 +45,9 @@
 .article__head,
 .article__body,
 .article__foot {
-    font-weight: 300;
+    @include breakpoint(1024px) {
+        font-weight: 300;
+    }
 }
 
 .article__body,

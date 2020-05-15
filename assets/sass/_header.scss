@@ -26,10 +26,10 @@ header {
             display: inline-block;
             vertical-align: middle;
             font-size: 0;
-            &.item--left,
             &.item--right {
                 position: absolute;
                 top: 50%;
+                right: 20px;
                 @include translateY(-50%);
                 z-index: 1;
                 >* {
@@ -38,36 +38,55 @@ header {
                     cursor: pointer;
                 }
             }
-            &.item--left {
-                left: 20px;
-            }
-            &.item--right {
-                right: 20px;
-            }
             &.item--center {
                 width: 100%;
                 height: 40px;
-                text-align: center;
+                padding-left: 40px;
+                padding-right: 40px;
                 overflow: hidden;
-                @include breakpoint(max-width 1023px) {
-                    padding-left: 20px;
-                    padding-right: 20px;
+                @include breakpoint(1024px) {
+                    padding-left: 180px;
+                    padding-right: 215px;
                 }
                 .item__scroll {
                     position: relative;
                     top: 0;
+                    padding-top: 40px;
                     @include transition(top 0.3s);
                 }
-                &.scroll .item__scroll {
-                    top: -40px;
-                }
                 .title__share {
+                    @include breakpoint(max-width 1023px) {
+                        text-align: center;
+                    }
                     .h3 {
                         line-height: 40px;
+                        @include ellipsis;
+                    }
+                }
+                a.logo {
+                    position: absolute;
+                    top: 0;
+                    left: 60px;
+                    @include transition(top 0.3s);
+                }
+                &.scroll {
+                    .item__scroll {
+                        top: -40px;
+                    }
+                    a.logo {
+                        @include breakpoint(max-width 1023px) {
+                            top: -55px;
+                        }
                     }
                 }
             }
         }
+    }
+    .hamburger {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        @include translateY(-50%);
     }
     a.logo {
         display: inline-block;

@@ -1,5 +1,6 @@
 @mixin tab($width) {
     @include listrest(0, 0, none);
+    font-weight: 400;
     &::after {
         content: '';
         display: block;
@@ -38,7 +39,8 @@
 .mobile-tab {
     position: relative;
     width: 100%;
-    padding: 15px 15px 0;
+    padding: 20px 20px 0;
+    margin-bottom: -20px;
     overflow: auto;
     z-index: 10;
     @include breakpoint(768px) {

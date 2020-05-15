@@ -68,6 +68,9 @@
         margin-top: 0;
         margin-bottom: 0;
         font-weight: 400;
+        @include breakpoint(768px) {
+            margin-bottom: 5px;
+        }
         a {
             display: block;
             color: $black;

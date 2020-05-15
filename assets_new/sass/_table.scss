@@ -15,15 +15,15 @@ section.list-link,
         border-width: 0 1px 1px;
         @include listrest(0, 0, none);
         li {
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             @include breakpoint(768px) {
                 padding-top: 0.5325em;
                 padding-bottom: 0.5325em;
             }
             a {
                 font-size: 1rem;
-                color: $gray-600;
+                color: $black;
                 line-height: 1.4;
                 vertical-align: middle;
                 &:hover {

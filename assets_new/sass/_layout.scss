@@ -6,7 +6,7 @@
     margin-left: auto;
     margin-right: auto;
     @include breakpoint(1024px) {
-        width: $article;
+        width: ($article+10);
         // padding-left: 0;
         // padding-right: 0;
     }

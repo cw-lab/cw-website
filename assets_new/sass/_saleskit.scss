@@ -1,13 +1,8 @@
 .saleskit-page {
     >section {
-        padding: 0 15px;
-        @include breakpoint(768px) {
-            width: $article;
-            margin: auto;
-        }
         h1 {
             font-size: 2em;
-            font-weight: 600;
+            // font-weight: 600;
             text-align: center;
         }
     }
@@ -22,12 +17,13 @@
                 padding-bottom: 40px;
                 border-bottom: 1px dotted $gray-300;
                 @include breakpoint(768px) {
-                    padding-left: 140px;
+                    padding-left: 160px;
                 }
                 .h3 {
                     padding-left: 10px;
                     font-size: 1.125em;
-                    font-weight: bold;
+                    line-height: 1.5;
+                    // font-weight: bold;
                     border-left: 2px solid $primary;
                     i {
                         display: block;
@@ -68,7 +64,7 @@
                     @include breakpoint(768px) {
                         position: absolute;
                         top: 20px;
-                        left: 0;
+                        left: 20px;
                         width: 120px;
                         border: 1px solid $gray-100;
                     }
@@ -88,7 +84,7 @@
                     .h4 {
                         padding-left: 10px;
                         margin-bottom: 10px;
-                        font-weight: bold;
+                        // font-weight: bold;
                         line-height: 1.15;
                         border-left: 2px solid $primary;
                     }

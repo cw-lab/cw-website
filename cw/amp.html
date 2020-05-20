@@ -281,7 +281,6 @@
         optgroup {
             font-weight: bold;
         }
-        /*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
         
         table {
             border-collapse: collapse;
@@ -349,72 +348,44 @@
             clear: both;
         }
         
-        h1 {
-            font-weight: 600;
-        }
-        
         h1,
-        .h1 {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        
-        h2 {
-            font-weight: 600;
-        }
-        
         h2,
-        .h2 {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        
-        h3 {
-            font-weight: 600;
-        }
-        
         h3,
-        .h3 {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        
-        h4 {
-            font-weight: 600;
-        }
-        
         h4,
-        .h4 {
-            margin-top: 1em;
-            margin-bottom: 1em;
-        }
-        
         h5 {
             font-weight: 600;
         }
         
+        h1,
+        h2,
+        h3,
+        h4,
         h5,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
         .h5 {
             margin-top: 1em;
             margin-bottom: 1em;
+            word-break: break-word;
         }
         
         h1,
         .h1 {
-            font-size: 28px;
+            font-size: 1.75rem;
         }
         
         h2,
         .h2 {
-            font-size: 20px;
+            font-size: 1.25rem;
         }
         
         h3,
         .h3 {
             color: #171717;
-            font-size: 18px;
+            font-size: 1.125rem;
             line-height: 2;
-            word-break: break-word;
         }
         
         h4,
@@ -422,15 +393,13 @@
             color: #D60C18;
             font-size: 1rem;
             line-height: 1.2;
-            word-break: break-word;
         }
         
         h5,
         .h5 {
             color: #939EA7;
-            font-size: 14px;
+            font-size: 0.875rem;
             line-height: 1;
-            word-break: break-word;
         }
         
         .text-left {
@@ -1210,12 +1179,16 @@
         }
         
         footer .channel__item {
+            padding-bottom: 5px;
             border-bottom: 1px solid #D3D5D7;
         }
         
         footer .channel__item .channel__title {
             position: relative;
+            padding-top: 10px;
+            padding-bottom: 5px;
             font-size: 1rem;
+            font-weight: 500;
             background-color: transparent;
             border: 0;
         }
@@ -1275,6 +1248,7 @@
         
         footer .cwgroup__copyright ul.sns {
             margin: 0;
+            padding: 30px 0 10px;
             list-style: none;
             font-size: 0;
         }
@@ -1303,6 +1277,14 @@
             font-size: 0.75rem;
         }
         
+        footer .cwgroup__copyright .contact {
+            margin-bottom: 5px;
+        }
+        
+        footer .cwgroup__copyright .copyright {
+            margin-bottom: 30px;
+        }
+        
         .container {
             padding-left: 20px;
             padding-right: 20px;
@@ -1311,8 +1293,10 @@
         }
         
         .audio__player {
-            border: 1px solid #D3D5D7;
+            padding: 10px 20px;
+            margin-bottom: 40px;
             font-size: 0;
+            border: 1px solid #D3D5D7;
         }
         
         .audio__player>* {
@@ -1322,6 +1306,8 @@
         
         .audio__player .audio__body {
             width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         
         .audio__player .audio__title {
@@ -1378,6 +1364,17 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px;
+        }
+        
+        .paywall .paywall__body .h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .paywall .paywall__body p {
+            margin-top: 0;
+            margin-bottom: 0;
         }
         
         .form {
@@ -1542,6 +1539,14 @@
             display: none;
         }
         
+        .search__block .search {
+            padding: 20px;
+        }
+        
+        main {
+            padding-top: 30px;
+        }
+        
         .breadcrumb {
             font-size: 0;
         }
@@ -1576,6 +1581,11 @@
             font-size: 0.875rem;
         }
         
+        .article__head h1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
         .article__head amp-img {
             margin-left: -20px;
             margin-right: -20px;
@@ -1587,6 +1597,12 @@
             width: 100%;
             margin-left: auto;
             margin-right: auto;
+        }
+        
+        .article__body {
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         
         .preface>* {
@@ -1687,6 +1703,7 @@
         
         .article__detail time {
             display: block;
+            margin-top: 5px;
             font-size: 0.875rem;
         }
         
@@ -1714,6 +1731,11 @@
         .article__provideViews>* {
             display: inline-block;
             vertical-align: middle;
+        }
+        
+        .article__content {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         
         .article__content p {
@@ -1879,7 +1901,12 @@
             color: #D60C18;
         }
         
+        .article__extended {
+            margin-bottom: 40px;
+        }
+        
         .article__extended .h2 {
+            margin-bottom: 10px;
             font-weight: 500;
         }
         
@@ -1904,7 +1931,7 @@
         }
         
         ul.article__keyword {
-            margin: 0;
+            margin: 0 0 30px;
             padding: 0;
             list-style: none;
             font-size: 0;
@@ -2004,7 +2031,16 @@
         }
         
         .article__recommend {
+            margin-bottom: 30px;
             border-top: 1px solid #171717;
+        }
+        
+        .article__recommend .h2 {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 500;
         }
         
         .card__group--scroll {
@@ -2124,6 +2160,21 @@
             border-top: 1px solid #EEEEEE;
         }
         
+        .newsletter .h2 {
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .newsletter p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        
+        .newsletter .newsletter__btn {
+            margin-top: 20px;
+        }
+        
         .newsletter .container {
             position: relative;
             font-size: 0;
@@ -2137,87 +2188,6 @@
         .newsletter .container::after {
             content: "";
             display: inline-block;
-        }
-        
-        .px10,
-        .p10 {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-        
-        .px20 {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        
-        .py20 {
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        
-        .pt10 {
-            padding-top: 10px;
-        }
-        
-        .pt30,
-        .p30 {
-            padding-top: 30px;
-        }
-        
-        .pb5 {
-            padding-bottom: 5px;
-        }
-        
-        .pb10 {
-            padding-bottom: 10px;
-        }
-        
-        .my0,
-        .m0,
-        .mtb0 {
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        
-        .mt10 {
-            margin-top: 10px;
-        }
-        
-        .mb0 {
-            margin-bottom: 0px;
-        }
-        
-        .mb10 {
-            margin-bottom: 10px;
-        }
-        
-        .mb30 {
-            margin-bottom: 30px;
-        }
-        
-        .mb40 {
-            margin-bottom: 40px;
-        }
-        
-        @media (min-width: 1024px) {
-            .pt-d-40 {
-                padding-top: 40px;
-            }
-        }
-        
-        @media (max-width: 1023px) {
-            .pt-m-30 {
-                padding-top: 30px;
-            }
-            .mt-m-5 {
-                margin-top: 5px;
-            }
-            .mt-m-20 {
-                margin-top: 20px;
-            }
-            .mt-m-30 {
-                margin-top: 30px;
-            }
         }
     </style>
     <noscript>
@@ -2869,14 +2839,14 @@
         </div>
     </header>
     <div id="search__block" [class]="visible ? 'search__block show' : 'search__block hide'" class="search__block hide">
-        <div class="form search px20 py20">
+        <div class="form search">
             <div class="search__group search__group--white">
                 <input class="search__input" name="keyword" on="input-throttled:AMP.setState({searchText: event.value})" placeholder="請輸入關鍵字" type="text">
                 <a [href]="'https://www.cw.com.tw/search/doSearch.action?key=' + searchText" class="search__submit"><i class="icon icon-search"></i></a>
             </div>
         </div>
     </div>
-    <main class="pt30">
+    <main>
         <article>
             <div class="article__head">
                 <div class="container">
@@ -2888,7 +2858,7 @@
                             <a href="#!">投資理財</a>
                         </li>
                     </ul>
-                    <h1 class="my10">投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相</h1>
+                    <h1>投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相</h1>
                     <div class="preface">
                         <p>
                             隨台灣產業結構轉型，逐漸形成大企業獨佔出口額的局面，曾撐起台灣經濟的中小企業榮景不再，讓全民有感的實質薪資則是停滯16年，趕不上經濟成長。
@@ -2900,9 +2870,9 @@
                     </div>
                 </div>
             </div>
-            <div class="article__body pt-d-40 pt-m-30 px20">
-                <div class="audio__player py20 px10 mb40">
-                    <div class="audio__body px10">
+            <div class="article__body">
+                <div class="audio__player">
+                    <div class="audio__body">
                         <div class="audio__title">天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？</div>
                         <div class="audio__control">
                             <amp-audio width="auto" height="50" src="../assets/audio/voice-5e7dd2627b42f.mp3" artwork="../assets/images/listencw500.jpg" title="天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？" artist="天下雜誌" album="聽天下" controlslist="nodownload">
@@ -2934,12 +2904,9 @@
                             <a class="btn--text" href="#!" target="_blank">天下雜誌689期</a>
                         </li>
                     </ul>
-                    <time class="mt5">2019-09-12</time>
-                    <!-- <div class="article__views text-center">
-                        <span class="h2 my0">12345</span>瀏覽數
-                    </div> -->
+                    <time>2019-09-12</time>
                 </div>
-                <div id="article__content" class="article__content py20">
+                <div id="article__content" class="article__content">
                     <p>
                         台灣，是一座由「中小企業」撐起的海島。手提一卡皮箱，全球跑透透的中小企業頭家們，挹注這座海島賴以為生的國際貿易與經濟發展命脈。「以前資本額8億台幣以上就算大企業，現在可能10億都不算大」中信金融管理學院教授施光訓說。
                     </p>
@@ -3032,8 +2999,8 @@
                         </span>
                     </a>
                 </div>
-                <div class="article__extended mb40">
-                    <div class="h2 font-weight-500 mb10">
+                <div class="article__extended">
+                    <div class="h2">
                         延伸閱讀
                     </div>
                     <ul>
@@ -3042,7 +3009,7 @@
                         <li><a href="#!" class="btn--text" target="_blank">為什麼2002年之後，台灣走上「愈賺愈薄」的16年？</a></li>
                     </ul>
                 </div>
-                <ul class="article__keyword mb30">
+                <ul class="article__keyword">
                     <li>
                         <a href="#!">
                         #工時
@@ -3079,8 +3046,8 @@
                     </a>
                     </li>
                 </ul>
-                <div id="article__recommend" class="article__recommend mb30">
-                    <div class="h2 font-weight-500 my0 py20">你可能有興趣</div>
+                <div id="article__recommend" class="article__recommend">
+                    <div class="h2">你可能有興趣</div>
                     <div class="card__group--scroll">
                         <div class="card__group card__group--grid">
                             <a href="article.html" class="card__item">
@@ -3145,10 +3112,10 @@
         <section class="newsletter">
             <div class="container">
                 <div class="newsletter__text">
-                    <div class="h2 font-weight-500 my0">訂閱天下雜誌電子報</div>
-                    <p class="mt10 mb0">天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
+                    <div class="h2">訂閱天下雜誌電子報</div>
+                    <p>天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
                 </div>
-                <div class="newsletter__btn mt-m-20">
+                <div class="newsletter__btn">
                     <a href="#!" target="_blank" class="btn btn--contained">立即訂閱</a>
                 </div>
             </div>
@@ -3157,8 +3124,8 @@
     <footer>
         <div class="container">
             <amp-accordion class="channel__group" animate expand-single-section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         頻道分類
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3181,8 +3148,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         多媒體
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3197,8 +3164,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         友站連結
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3214,8 +3181,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         特色頻道
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3226,8 +3193,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         產品與服務
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3240,8 +3207,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         關於天下
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3255,8 +3222,8 @@
                         </ul>
                     </div>
                 </section>
-                <section class="channel__item pb5">
-                    <h6 class="channel__title pt10 pb5 font-weight-500">
+                <section class="channel__item">
+                    <h6 class="channel__title">
                         會員中心
                         <i class="icon icon-down"></i>
                     </h6>
@@ -3270,7 +3237,7 @@
             </amp-accordion>
         </div>
         <div class="cwgroup__copyright">
-            <ul class="sns pt30 pb10">
+            <ul class="sns">
                 <li>
                     <a href="#!" target="_blank">
                         <i class="icon icon-facebook"></i>
@@ -3292,10 +3259,10 @@
                     </a>
                 </li>
             </ul>
-            <div class="contact mt-m-5">
+            <div class="contact">
                 <span>讀者服務專線：886-2-2662-0332</span><span>服務時間：週一～週五 09:00~17:30</span>
             </div>
-            <div class="copyright mt-m-30">
+            <div class="copyright">
                 <span>Copyright © 2020天下雜誌</span>
             </div>
         </div>
@@ -3308,8 +3275,8 @@
         </div>
         <div class="paywall__body">
             <div class="paywall__content">
-                <div class="h2 mt0 mb5 font-weight-500">天下雜誌無限看</div>
-                <p class="my0">
+                <div class="h2">天下雜誌無限看</div>
+                <p>
                     12週優惠價399元
                 </p>
             </div>

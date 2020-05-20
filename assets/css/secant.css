@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .webaccess__page--error::before, .webaccess__page .container::before, .webaccess__page .container::after, .webaccess__page main form::before, .webaccess__page main form::after, .webaccess__page main .plan .plan__item__spec::before {
   content: '';
   display: block;
@@ -12,11 +13,6 @@
 .webaccess__page {
   position: relative;
   min-height: 100vh;
-}
-@media (min-width: 768px) {
-  .webaccess__page {
-    padding-bottom: 225px;
-  }
 }
 @media (min-width: 768px) {
   .webaccess__page--index {
@@ -44,7 +40,8 @@
     padding: 30px;
   }
 }
-.webaccess__page--marketing .tab .tab__content__pane img, .webaccess__page--marketing .tab .tab__content__pane iframe {
+.webaccess__page--marketing .tab .tab__content__pane img,
+.webaccess__page--marketing .tab .tab__content__pane iframe {
   max-width: 100%;
   height: auto;
 }
@@ -141,8 +138,8 @@
   display: block;
 }
 .webaccess__page main article .step__item::before {
-  content: "\e933";
-  font-family: 'icomoon';
+  content: "";
+  font-family: "cw_icon";
   position: absolute;
   top: 50%;
   left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px);
@@ -366,12 +363,12 @@
   position: relative;
 }
 .webaccess__page main .plan .plan__item__right li::before {
-  content: '\e929';
+  content: "";
   display: block;
   position: absolute;
   top: 3px;
   left: -1.35em;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
 }
 .webaccess__page main .plan .plan__item__right--narrow li {
   display: table;
@@ -1015,14 +1012,6 @@
 @media (max-width: 767px) {
   .webaccess__page section .credit .card__group .card {
     display: none;
-  }
-}
-@media (min-width: 768px) {
-  .webaccess__page footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
   }
 }
 

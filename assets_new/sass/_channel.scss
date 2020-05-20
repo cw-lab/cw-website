@@ -1,5 +1,7 @@
 .channel-page,
-.subChannel-page {
+.subChannel-page,
+.channel-fashion-page,
+.subChannel-fashion-page {
     .class-header .list-inline {
         @include breakpoint(max-width 767px) {
             display: none;

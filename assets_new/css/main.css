@@ -242,6 +242,7 @@ button.btn.btn--small,
 a.btn.btn--small {
   min-width: 72px;
   padding: 0.7em 1em;
+  font-size: 0.875rem;
   line-height: 1;
 }
 button.btn + button.btn,
@@ -497,6 +498,10 @@ textarea {
 
 #fb-root {
   font-size: 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .main,
@@ -1629,77 +1634,6 @@ h5,
   content: "\e94b";
 }
 
-.cookies {
-  display: none;
-  background-color: #95ffff;
-}
-
-.cookies .container {
-  width: 100%;
-  padding: 20px 10px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.cookies .container p {
-  margin-top: 0;
-  font-size: 0.875em;
-  line-height: 1.5;
-}
-
-.cookies a#cookie-know-button {
-  display: inline-block;
-  padding: 0.625em 1.25em;
-  color: #fff;
-  font-size: 0.875em;
-  text-align: center;
-  line-height: 1;
-  background-color: #939EA7;
-  border: 1px solid #939EA7;
-}
-
-.cookies a#cookie-know-button:hover {
-  color: #48545D;
-  background-color: #fff;
-}
-
-.cookies-txt a {
-  color: #48545D;
-  text-decoration: underline;
-}
-
-.cookies-txt a:hover {
-  color: #D60C18;
-}
-
-.cookies-a {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .cookies .container {
-    display: flex;
-    align-items: center;
-    max-width: 960px;
-  }
-
-  .cookies-txt {
-    display: flex;
-    width: calc(100% - 100px);
-    padding-right: 20px;
-  }
-
-  .cookies .container p {
-    margin-bottom: 0;
-    font-size: 0.875em;
-    line-height: 1.75;
-  }
-
-  .cookies-a {
-    width: 100px;
-    text-align: right;
-  }
-}
 header {
   position: relative;
   width: 100%;
@@ -4467,111 +4401,80 @@ ul.article__keyword li a::-moz-focus-inner {
 }
 
 .bulletin {
-  display: none;
   position: fixed;
-  bottom: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
-  padding: 30px 15px;
-  line-height: 1.35;
-  background-color: #fff;
-  border: 1px solid #003a9f;
-  z-index: 10;
+  padding: 15px 20px 10px;
+  font-size: 0.875rem;
+  background-color: #EEEEEE;
+  border: 1px solid #D3D5D7;
+  -moz-transition: bottom 1s;
+  -o-transition: bottom 1s;
+  -webkit-transition: bottom 1s;
+  transition: bottom 1s;
+  z-index: 3;
 }
-@media (min-width: 768px) {
+.bulletin.hide {
+  bottom: -100%;
+}
+@media (min-width: 1024px) {
   .bulletin {
-    bottom: 15px;
-    left: 15px;
-    width: 350px;
-    padding: 30px;
+    width: 265px;
+    padding: 30px 25px 20px;
   }
 }
-@media (min-width: 1980px) {
-  .bulletin {
-    left: calc(((100% - 1280px) / 2) - 350px);
+@media (max-width: 1023px) {
+  .bulletin .bulletin__txt {
+    font-size: 0.875rem;
   }
 }
-.bulletin .sort {
-  font-size: 0.875em;
+.bulletin .bulletin__btn {
+  margin-top: 10px;
 }
-.bulletin .title {
-  margin-bottom: 1em;
-  color: #003a9f;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.bulletin p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-.bulletin p a {
-  color: #003a9f;
-  text-decoration: underline;
-}
-.bulletin .close-icon {
-  position: absolute;
-  right: 0px;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  color: #fff;
-  font-size: 0;
-  background-color: #939EA7;
-  background-image: url("https://www.cw.com.tw/assets_new/img/btn-close.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.bulletin .close-icon:hover {
-  background-color: #48545D;
-}
-.bulletin .close-text {
-  display: table;
-  padding: 0.7em 1.4em;
-  min-width: 120px;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  text-align: center;
-  line-height: 1;
-  background-color: #003a9f;
-  border: 1px solid #003a9f;
-  margin: 2em auto 0;
-  font-style: normal;
-  cursor: pointer;
-}
-.bulletin .close-text:hover {
-  background-color: #003186;
-  border-color: #003186;
+@media (min-width: 1024px) {
+  .bulletin .bulletin__btn {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 767px) {
   .channel-page .class-header .list-inline,
-  .subChannel-page .class-header .list-inline {
+  .subChannel-page .class-header .list-inline,
+  .channel-fashion-page .class-header .list-inline,
+  .subChannel-fashion-page .class-header .list-inline {
     display: none;
   }
 }
 @media (min-width: 768px) {
   .channel-page .articleGroup,
-  .subChannel-page .articleGroup {
+  .subChannel-page .articleGroup,
+  .channel-fashion-page .articleGroup,
+  .subChannel-fashion-page .articleGroup {
     float: left;
     width: 640px;
   }
 }
 .channel-page article > .article,
-.subChannel-page article > .article {
+.subChannel-page article > .article,
+.channel-fashion-page article > .article,
+.subChannel-fashion-page article > .article {
   margin-bottom: 15px;
   background-color: #fff;
 }
 @media (min-width: 768px) {
   .channel-page article > .article,
-  .subChannel-page article > .article {
+  .subChannel-page article > .article,
+  .channel-fashion-page article > .article,
+  .subChannel-fashion-page article > .article {
     border: 1px solid #D3D5D7;
     margin-bottom: 20px;
   }
 }
 .channel-page article > .article .caption p,
-.subChannel-page article > .article .caption p {
+.subChannel-page article > .article .caption p,
+.channel-fashion-page article > .article .caption p,
+.subChannel-fashion-page article > .article .caption p {
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 2;

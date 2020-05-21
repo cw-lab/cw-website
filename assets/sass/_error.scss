@@ -1,0 +1,58 @@
+.error__page {
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        @include breakpoint(1024px) {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .content {
+            position: relative;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            z-index: 1;
+            @include breakpoint(1024px) {
+                padding-top: 150px;
+                padding-bottom: 150px;
+            }
+            &::before,
+            &::after {
+                @include beforeafter('', block);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                @include background-size(contain);
+                background-repeat: no-repeat;
+                background-position: center;
+                z-index: -1;
+            }
+            &::before {
+                background-image: url('../images/error-gray.svg');
+                @include animation(rotate 30s infinite);
+            }
+            &::after {
+                background-image: url('../images/error-white.svg');
+                @include animation(rotate 20s infinite);
+            }
+            .h1 {
+                font-size: 3.125rem;
+            }
+            p {
+                @include breakpoint(1024px) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}
+
+@include keyframes(rotate) {
+    0% {
+        @include rotate(0deg);
+    }
+    100% {
+        @include rotate(360deg);
+    }
+}

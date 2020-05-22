@@ -278,16 +278,29 @@ $(function() {
             }
         }
         memberHeight(width);
+        var menubarUserClick = 0;
         $(".menubar__user > i.icon, .menubar__user .menubar__user--login").click(function() {
+            menubarUserClick < 1 ? menubarUserClick++ : menubarUserClick = 0;
             $(this).siblings('.menubar__user--member').slideToggle();
             $('.desktop i.icon-down').toggleClass('active');
-            $('.opacity').toggleClass('opened menubar__user');
             $('.search__block').slideUp();
             $('body, .search__icon').removeClass('opened');
-            $('.black').removeClass('opened search__opened');
-            if (($('header').hasClass('fixed')) && (width < 1024)) {
-                $('body').toggleClass('opened')
+            $('.opacity, .black').removeClass('opened menubar__user search__opened');
+            if (menubarUserClick == 0) {
+                if (($('header').hasClass('fixed')) && (width < 1024)) {
+                    setTimeout(function() {
+                        $('body').removeClass('opened');
+                    }, 300);
+                }
+            } else {
+                $('.opacity').addClass('opened menubar__user');
+                if (($('header').hasClass('fixed')) && (width < 1024)) {
+                    setTimeout(function() {
+                        $('body').addClass('opened');
+                    }, 300);
+                }
             }
+            return false;
         });
         // message: Notification 3 秒後關閉
         // setTimeout(function() {

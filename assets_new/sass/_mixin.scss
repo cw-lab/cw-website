@@ -41,3 +41,36 @@
         @include transition(opacity 0.3s);
     }
 }
+
+@mixin outlinebtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $color;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    border: 1px solid $color;
+    &:hover {
+        color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}
+
+@mixin containbtn($display, $padding, $color, $fontsize) {
+    display: $display;
+    padding: $padding $padding*2;
+    min-width: 120px;
+    color: $white;
+    font-size: $fontsize;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1;
+    background-color: $color;
+    border: 1px solid $color;
+    &:hover {
+        background-color: darken($color, 5%);
+        border-color: darken($color, 5%);
+    }
+}

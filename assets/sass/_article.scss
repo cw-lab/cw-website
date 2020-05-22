@@ -396,4 +396,52 @@ article {
     }
 }
 
+// 補舊版樣式
+.authorDetail {
+    font-style: normal;
+    font-size: 0;
+    border: 1px solid $gray-200;
+    @include breakpoint(1024px) {
+        padding: 20px;
+    }
+    .pic {
+        vertical-align: middle;
+        width: 100px;
+        margin: auto;
+        @include breakpoint(1024px) {
+            display: inline-block;
+        }
+        .imgzoom {
+            margin-top: 0;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    .txt {
+        vertical-align: middle;
+        @include breakpoint(max-width 1023px) {
+            padding: 10px 20px 20px;
+        }
+        @include breakpoint(1024px) {
+            display: inline-block;
+            width: calc(100% - 100px);
+            padding-left: 20px;
+        }
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+            @include breakpoint(1024px) {
+                font-size: 1.375rem;
+            }
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 1.125rem;
+        }
+    }
+}
+
 @import "article/_newsletter";

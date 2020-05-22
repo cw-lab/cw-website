@@ -140,13 +140,19 @@ $(function() {
     $(window).load(function() {
         $(window).scroll(function() {
             var scroTop = $(window).scrollTop(),
-                headerTop = $('body>.banner').outerHeight();
+                headerTop = $('body>.banner').outerHeight(),
+                headerHeight = $('header').outerHeight();
             if (scroTop >= headerTop) {
                 $('header, .banner, .main-nav').addClass('fixed');
+                $('body').css({
+                    'padding-top': headerHeight
+                });
             } else {
                 $('header, .banner, .main-nav').removeClass('fixed');
+                $('body').css({
+                    'padding-top': 0
+                });
             }
-
         });
     });
 })

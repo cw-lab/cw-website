@@ -5,6 +5,10 @@ footer {
             padding-top: 30px;
             padding-bottom: 30px;
         }
+        &::before,
+        &::after {
+            display: none;
+        }
         @include breakpoint(1024px) {
             &:first-child {
                 display: flex;

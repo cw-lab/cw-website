@@ -61,7 +61,7 @@
             &.embed--4by3 {
                 padding-bottom: 75%;
             }
-            iframe {
+            >* {
                 position: absolute;
                 top: 0;
                 left: 0;

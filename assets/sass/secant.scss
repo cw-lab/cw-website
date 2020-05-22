@@ -5,9 +5,6 @@
     position: relative;
     min-height: 100vh;
     &--index {
-        @include breakpoint(768px) {
-            padding-bottom: 225px;
-        }
         .container {
             @include breakpoint(1024px) {
                 width: 1020px;

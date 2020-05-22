@@ -14,11 +14,6 @@
   position: relative;
   min-height: 100vh;
 }
-@media (min-width: 768px) {
-  .webaccess__page--index {
-    padding-bottom: 225px;
-  }
-}
 @media (min-width: 1024px) {
   .webaccess__page--index .container {
     width: 1020px;

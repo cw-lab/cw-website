@@ -145,6 +145,15 @@
 .webaccess__page header .align-items-center a.logo {
   margin-left: 10px;
 }
+.webaccess__page header .align-items-center .hamburger {
+  position: relative;
+  top: auto;
+  left: 0;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
 .webaccess__page main {
   justify-content: center;
 }
@@ -202,7 +211,7 @@
 }
 @media (min-width: 1200px) {
   .webaccess__page main section#edit .container {
-    width: 1080px;
+    width: 970px;
   }
 }
 .webaccess__page main section#edit .container .edit__text {

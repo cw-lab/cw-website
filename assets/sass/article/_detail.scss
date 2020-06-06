@@ -31,12 +31,21 @@
         }
     }
     >ul.article__author {
-        li::after {
-            @include beforeafter('．', inline-block);
-            font-size: 0.875rem;
+        li {
+            &::after {
+                @include beforeafter('．', inline-block);
+                font-size: 0.875rem;
+            }
+            &:last-child::after {
+                content: '';
+            }
         }
     }
     >ul.article__assort {
+        &::before {
+            @include beforeafter('．', inline-block);
+            font-size: 0.875rem;
+        }
         a,
         span {
             font-size: 0.875rem;

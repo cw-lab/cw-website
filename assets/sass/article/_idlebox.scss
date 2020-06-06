@@ -2,11 +2,11 @@
     max-width: 760px;
     width: calc(100% - 30px);
     padding: 20px 20px 30px;
-    font-weight: 300;
     background: $white;
     z-index: 11;
     @include breakpoint(1024px) {
         padding: 30px 30px 40px;
+        font-weight: 300;
     }
     .idle__title {
         padding-right: 30px;

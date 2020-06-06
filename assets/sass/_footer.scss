@@ -30,6 +30,7 @@ footer {
                 position: absolute;
                 top: 50%;
                 right: 0;
+                margin-top: 5px;
                 @include translateY(-50%);
                 @include transition(transform 0.2s);
                 @include breakpoint(1024px) {

@@ -10,12 +10,14 @@ lazyload();
 $(function() {
     var width = $(window).width();
     $('body').append('<div class="black"></div><div class="opacity"></div>');
+    // 漢堡
+    $('body').append('<div class="black"></div><div class="opacity"></div>');
     $('.hamburger').click(function() {
         if ($('.black').hasClass("search__opened")) {
             $('.search__icon').removeClass('opened');
             $('.black').removeClass('opened search__opened');
             $('.search__block').slideUp();
-            $('body, header, .banner').removeClass('opened');
+            $('body, header, .ad--970by250').removeClass('opened');
         }
         $('body').addClass('opened');
         $('.menubar--left').addClass('opened');
@@ -24,7 +26,7 @@ $(function() {
         $('.opacity').removeClass('opened menubar__user');
     });
     $('.search__icon').click(function() {
-        $('body, header, .banner').toggleClass('opened');
+        $('header, .ad--970by250').toggleClass('opened');
         $(this).toggleClass('opened');
         $('.search__block').slideToggle();
         $('.black').toggleClass('opened search__opened');
@@ -42,9 +44,13 @@ $(function() {
             $('.message--dialogs').fadeOut(200);
         }
         if ($(this).hasClass("search__opened")) {
-            $('body, header, .banner, .search__icon').removeClass('opened');
+            $('body, header, .ad--970by250, .search__icon').removeClass('opened');
             $('.black').removeClass('opened search__opened');
             $('.search__block').slideUp();
+        }
+        if ($(this).hasClass("idlebox__opened")) {
+            $('.black').removeClass('opened idlebox__opened');
+            $('.message--idlebox').fadeOut(200);
         }
     });
     $('.opacity').click(function() {
@@ -62,6 +68,14 @@ $(function() {
                 $(this).parent().addClass("focus");
             });
     });
+    if (width < 1024) {
+        $('.channel__title').click(function() {
+            $(this).children('i.icon').toggleClass('active');
+            $(this).siblings('.channel__option').slideToggle();
+            $(this).parent().siblings('.channel__item').children('.channel__title').children('i.icon').removeClass('active');
+            $(this).parent().siblings('.channel__item').children('.channel__option').slideUp();
+        })
+    }
     $('.tabPanel .tabGroup li').click(function() {
         var tabIndex = $(this).index();
         $('.tabContent .active').removeClass('active');
@@ -73,11 +87,11 @@ $(function() {
         $(this).toggleClass("active");
         $(this).parent().siblings("ul").slideToggle();
         $(this).parent().parent().siblings().children().children("i.more").removeClass("active");
-        $(this).parent(".li__group").parent("li").parent("ul").siblings("ul").children("li").children("ul").children("i.more").removeClass("active");
-        $(this).parent(".li__group").parent("li").siblings("li").children("ul").slideUp();
-        $(this).parent(".li__group").parent("li").parent("ul").siblings("ul").children("li").children("ul").slideUp();
+        $(this).parent().parent().siblings().children("ul").slideUp();
+        $(this).parent().parent().parent().siblings("ul").children().children("ul").slideUp();
+        $(this).parent().parent().parent().siblings("ul").children().children().children(".icon-down").removeClass("active");
         event.stopPropagation();
-    });
+    })
     $(".menubar__user > i.icon, .menubar__user .menubar__user--login").click(function() {
         $(this).siblings('.menubar__user--member').slideToggle();
         $('.search__block').slideUp();
@@ -129,13 +143,6 @@ $(function() {
         }
         $sliderLi.eq(nowIndex2).addClass('rtl_in');
         return false;
-    });
-    // 手機版搜尋
-    $('.toggleSearchBlock').click(function() {
-        $('form.search').addClass('fadein');
-    });
-    $('form.search .closeTouch').click(function() {
-        $('form.search').removeClass('fadein');
     });
     $(window).load(function() {
         $(window).scroll(function() {

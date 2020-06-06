@@ -8,7 +8,7 @@
     background-color: $gray-100;
     border: 1px solid $gray-200;
     @include transition(bottom 1s);
-    z-index: 3;
+    z-index: 4;
     &.hide {
         bottom: -100%;
     }

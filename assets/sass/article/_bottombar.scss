@@ -3,9 +3,9 @@
     left: 0;
     right: 0;
     bottom: -50px;
-    z-index: 2;
     background-color: $primary;
     @include transition(bottom 0.2s);
+    z-index: 3;
     @include breakpoint(1024px) {
         bottom: -40px;
     }

@@ -13,6 +13,7 @@
 }
 
 .main {
+    position: relative;
     padding-bottom: 40px;
     >* {
         @include breakpoint(768px) {
@@ -46,7 +47,7 @@
             margin-left: 20px;
         }
         @include breakpoint(max-width 767px) {
-            display: none;
+            margin-top: 30px;
         }
         >*,
         .leaflet {
@@ -54,6 +55,11 @@
             @include breakpoint(768px) {
                 margin-bottom: 20px;
             }
+        }
+        .leaflet {
+            margin-left: -1px;
+            margin-right: -1px;
+            border: 1px solid $gray-200;
         }
     }
 }

@@ -54,7 +54,7 @@ $(window).load(function() {
                 articleBody = $(this).children('.article__body'),
                 articleBodyTop = articleBody.offset().top,
                 articleRecommend = $(this).next('.article__foot').children('.article__recommend'),
-                articleRecommendTop = articleRecommend.offset().top + articleRecommend.outerHeight() + 50,
+                articleRecommendTop = articleRecommend.offset().top + 50,
                 articleContentGroupHeight = articleRecommendTop - articleBodyTop;
             next.css({
                 'height': functionGroupHeight
@@ -64,7 +64,7 @@ $(window).load(function() {
             } else {
                 functionGroup.fadeOut(150);
             }
-            if ((scroll >= (articleRecommend.offset().top - (1.5 * height))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+            if ((scroll >= (articleRecommend.offset().top - (2 * height))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 next.children('a').fadeIn({
                     start: function() {
                         $(this).css('display', 'block');

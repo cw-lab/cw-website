@@ -293,7 +293,7 @@ aside.menubar--left {
         >li {
             position: relative;
             display: inline-block;
-            width: calc(100% / 11);
+            width: calc(100% / 10);
             font-size: 1rem;
             >a:hover {
                 color: $primary;
@@ -302,10 +302,10 @@ aside.menubar--left {
                 position: absolute;
                 display: none;
                 top: 100%;
-                width: 140%;
+                width: 116%;
                 background-color: $white;
                 border-top: 1px solid $gray-100;
-                @include listrest(0 auto 0 -20%, 0, none);
+                @include listrest(0 auto 0 -8%, 0, none);
                 @include opacity(0);
                 @include transition(opacity 0.5s);
                 li {

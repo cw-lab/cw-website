@@ -132,31 +132,37 @@
                     color: $gray-300;
                 }
             }
-            .btnGroup a {
-                width: 100%;
-                @include containbtn(inline-block, 0.7rem, $gray-400, 1rem);
-                @include breakpoint(768px) {
-                    width: 200px;
+            .btnGroup {
+                display: block;
+                a {
+                    width: 100%;
+                    @include containbtn(inline-block, 0.7rem, $gray-400, 1rem);
+                    @include breakpoint(768px) {
+                        width: 200px;
+                    }
+                    +a {
+                        margin-top: 10px;
+                    }
                 }
             }
         }
     }
     .articleGroup {
         @include breakpoint(max-width 767px) {
-            margin-top: 1.5em;
+            margin-top: 1.5rem;
         }
         .h2 {
             font-weight: normal;
             @include breakpoint(max-width 767px) {
                 padding: 10px;
-                font-size: 1.125em;
+                font-size: 1.125rem;
                 line-height: 1.25;
                 background-color: $gray-200;
             }
             @include breakpoint(768px) {
                 padding-top: 1em;
                 padding-bottom: 0;
-                font-size: 1.5em;
+                font-size: 1.5rem;
             }
         }
         .subArticle {
@@ -166,6 +172,7 @@
             @include breakpoint(max-width 767px) {
                 margin-top: 0;
                 margin-bottom: 0;
+                border-top-width: 0;
                 .pic {
                     display: none;
                 }
@@ -174,7 +181,7 @@
                         display: none;
                     }
                     h3 a {
-                        font-size: 1.125rem;
+                        font-size: 1.25rem;
                     }
                     p {
                         display: -webkit-box !important;
@@ -183,7 +190,7 @@
             }
             @include breakpoint(768px) {
                 padding: 0;
-                margin-bottom: 1.5em;
+                margin-bottom: 1.5rem;
             }
         }
     }

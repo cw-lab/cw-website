@@ -38,6 +38,23 @@
     padding-top: 5px;
     color: $secondary;
     font-size: 0.875rem;
+    a {
+        color: $secondary;
+        text-decoration: underline;
+        &:hover {
+            color: $secondary-variant;
+        }
+    }
+}
+
+.article__head {
+    position: relative;
+    z-index: 4;
+}
+
+.article__body {
+    position: relative;
+    z-index: 3;
 }
 
 .article__head,
@@ -97,10 +114,6 @@
         &:hover {
             color: $primary;
         }
-    }
-    img {
-        max-width: 100%;
-        height: auto !important;
     }
     blockquote {
         position: relative;
@@ -178,22 +191,18 @@
 @import "article/_keyword";
 article {
     &.article__level--1 {
-        .article__content,
-        .article__detail,
-        .article__extended {
-            h1,
-            .h1 {
-                font-size: 32px;
-                @include breakpoint(1024px) {
-                    font-size: 36px;
-                }
+        h1,
+        .h1 {
+            font-size: 2rem;
+            @include breakpoint(1024px) {
+                font-size: 2.25rem;
             }
-            h2,
-            .h2 {
-                font-size: 24px;
-                @include breakpoint(1024px) {
-                    font-size: 26px;
-                }
+        }
+        h2,
+        .h2 {
+            font-size: 1.5rem;
+            @include breakpoint(1024px) {
+                font-size: 1.625rem;
             }
         }
         .article__detail {
@@ -278,22 +287,18 @@ article {
         }
     }
     &.article__level--2 {
-        .article__content,
-        .article__detail,
-        .article__extended {
-            h1,
-            .h1 {
-                font-size: 36px;
-                @include breakpoint(1024px) {
-                    font-size: 40px;
-                }
+        h1,
+        .h1 {
+            font-size: 2.25rem;
+            @include breakpoint(1024px) {
+                font-size: 2.5rem;
             }
-            h2,
-            .h2 {
-                font-size: 28px;
-                @include breakpoint(1024px) {
-                    font-size: 30px;
-                }
+        }
+        h2,
+        .h2 {
+            font-size: 1.75rem;
+            @include breakpoint(1024px) {
+                font-size: 1.875rem;
             }
         }
         .article__detail {
@@ -386,6 +391,22 @@ article {
 
 @import "article/_card";
 .article__page {
+    .card__img {
+        overflow: hidden;
+        &::after {
+            @include beforeafter('', block);
+            width: 100%;
+            padding-top: 66.984127%;
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: auto;
+            @include translate(-50%, -50%);
+        }
+    }
     @import "article/_list";
     @import "article/_idlebox";
     footer {

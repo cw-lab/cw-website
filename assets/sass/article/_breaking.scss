@@ -39,6 +39,7 @@
     .breaking__news {
         overflow: scroll;
         -ms-overflow-style: none;
+        scrollbar-width: none; //moz scroll bar
         &::-webkit-scrollbar {
             display: none;
         }

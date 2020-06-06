@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import "Compass";
+@import "breakpoint";
+@import "_normalize";
+@import "_variable";
+@import "_mixin";
+body.issue {
+    .main {
+        h1 {
+            margin: 10px 0 20px;
+        }
+        .essaySNS {
+            margin-bottom: 40px;
+            font-size: 1.125rem;
+            line-height: 1.8;
+            &::after {
+                @include clear;
+            }
+            &.desktopUsed {
+                @include breakpoint(max-width 1023px) {
+                    display: none !important;
+                }
+            }
+            &.mobileUsed {
+                @include breakpoint(1024px) {
+                    display: none !important;
+                }
+            }
+            .h1-phase {
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+        }
+        .sns-list {
+            text-align: center;
+            >div {
+                &.fbShare {
+                    margin-left: 0;
+                }
+                &.title-text,
+                &.twitter,
+                &.whatapp {
+                    display: none;
+                }
+                a .txt {
+                    display: none;
+                }
+            }
+        }
+        .article-header {
+            @include breakpoint(max-width 1023px) {
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+            .slider {
+                @include listrest(0, 0, none);
+                border: 0;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+                p {
+                    display: none;
+                }
+            }
+        }
+        >article {
+            .h2 {
+                margin-top: 30px;
+                margin-bottom: 10px;
+                @include breakpoint(768px) {
+                    margin-top: 40px;
+                }
+            }
+            >div:not(.h2):not(.paywallAnnounce) {
+                font-size: 0;
+            }
+            .list-article-item {
+                width: 100%;
+                margin-bottom: 20px;
+                vertical-align: text-top;
+                @include breakpoint(max-width 767px) {
+                    border: 1px solid $gray-200;
+                }
+                @include breakpoint(768px) {
+                    display: inline-block;
+                    width: calc((100% - 40px) / 3);
+                    margin-left: 20px;
+                    margin-bottom: 30px;
+                    &:nth-child(3n+1) {
+                        margin-left: 0;
+                    }
+                }
+                figure.pic {
+                    margin: 0;
+                    >a {
+                        &::before {
+                            z-index: 1;
+                        }
+                        &::after {
+                            @include beforeafter('', block);
+                            width: 100%;
+                            padding-top: 66.984127%;
+                        }
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                figcaption {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include opacity(0);
+                }
+                .txt {
+                    @include breakpoint(768px) {
+                        margin-top: 10px;
+                    }
+                    @include breakpoint(max-width 767px) {
+                        margin: 10px;
+                    }
+                    h2 {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        font-size: 1.125rem;
+                        font-weight: normal;
+                        @include breakpoint(768px) {
+                            font-size: 1rem;
+                        }
+                        a {
+                            display: block;
+                            color: $black;
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        padding-bottom: 70px;
+        @include breakpoint(1024px) {
+            padding-bottom: 90px;
+        }
+    }
+}

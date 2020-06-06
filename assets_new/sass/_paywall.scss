@@ -1,199 +1,197 @@
-.paywallpanelGroup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 1.125em;
-    line-height: 1.5;
-    text-align: center;
-    z-index: 10;
-    * {
-        font-style: normal;
-        text-decoration: none;
-    }
-    p {
-        margin-bottom: 2em;
-        span {
-            color: $primary;
-        }
-        #not_enough_point,
-        #enough_point {
-            font-size: 1.75em;
-            font-weight: normal;
-        }
-    }
-    >.paywallpanel {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: calc(100% - 30px);
-        padding: 30px;
-        background-color: $white;
-        @include translate(-50%, -50%);
-        z-index: 1;
-        @include breakpoint(768px) {
-            width: 500px;
-        }
-    }
-    .paywallContent {
-        ol {
-            @include listrest(0, 0, none);
-            li {
-                font-weight: bold;
-                +li {
-                    margin-top: 20px;
-                    padding-top: 20px;
-                    border-top: 1px solid $gray-300;
-                }
-                span {
-                    display: block;
-                    color: $gray-300;
-                    font-size: 0.875em;
-                    font-weight: normal;
-                }
-                .Btn,
-                .Btn.more {
-                    margin-top: 1rem;
-                }
-                .Btn a {
-                    @include containbtn(inline-block, 0.7rem, $gray-300, 1rem);
-                }
-                .Btn.more a {
-                    @include containbtn(inline-block, 0.7rem, $primary, 1rem);
-                }
-            }
-        }
-        .know_txt {
-            margin-top: 0.25rem;
-            margin-bottom: 0.75rem;
-            font-size: 1.5rem;
-        }
-    }
-}
-
-.Btn,
-.btnGroup {
-    font-size: 0;
-    a {
-        @include containbtn(inline-block, 0.7rem, $primary, 1rem);
-        +a {
-            margin-left: 0.7rem;
-        }
-        &.cancel {
-            @include containbtn(inline-block, 0.7rem, $gray-200, 1rem);
-        }
-    }
-}
-
-.article-page article .paywallBox {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    .paywallBoxFrame {
-        position: relative;
-        max-width: 520px;
-        margin: 0 auto;
-        padding: 45px 15px;
-        text-align: center;
-        background-color: $white;
-        border: 1px solid $gray-100;
-        overflow: hidden;
-        z-index: 1;
-        @include breakpoint(768px) {
-            padding: 50px 30px;
-        }
-        .square {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: $gray-100;
-            width: 100%;
-            height: 170px;
-            z-index: -1;
-            &::before {
-                @include beforeafter('', block);
-                position: absolute;
-                bottom: -65px;
-                left: 50%;
-                width: 0;
-                height: 0;
-                border-top: 65px solid $gray-100;
-                border-left: 260px solid transparent;
-                border-right: 260px solid transparent;
-                @include translateX(-50%);
-            }
-        }
-        h2 {
-            margin: 0;
-            color: $primary;
-            font-size: 1.75em;
-        }
-        h4 {
-            margin: 1em 0;
-            font-size: 1.5em;
-            font-weight: normal;
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 0;
-            line-height: 1.5;
-            @include breakpoint(max-width 767px) {
-                font-size: 1rem;
-            }
-            .tip {
-                color: $primary;
-            }
-        }
-        img {
-            margin: 1rem auto;
-            width: 200px;
-        }
-        a.highLightBtn {
-            @include containbtn(inline-block, 0.7rem, $primary, 1rem);
-            @include breakpoint(max-width 374px) {
-                margin-top: 0.5em !important;
-                margin-bottom: 0.25em !important;
-            }
-        }
-        a.otherBtn {
-            @include containbtn(inline-block, 0.7rem, $gray-300, 1rem);
-            @include breakpoint(max-width 374px) {
-                margin-top: 0 !important;
-                margin-bottom: 0.5em !important;
-            }
-        }
-        a.btnLink {
-            margin: 1em 0 0.5em;
-            font-size: 0.875em;
-            &:hover {
-                color: $white;
-            }
-            @include breakpoint(max-width 374px) {
-                min-width: 13em;
-            }
-            @include breakpoint(768px) {
-                min-width: 11em;
-                padding: 0.7rem 1.4rem;
-            }
-            @include breakpoint(375px) {
-                min-width: 10em;
-                padding: 0.7rem 1rem;
-            }
-            @include breakpoint(414px) {
-                font-size: 1em;
-            }
-        }
-    }
-    .paywallBoxContent>*:last-child {
-        margin-bottom: 0 !important;
-    }
-}
-
+// .paywallpanelGroup {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     font-size: 1.125em;
+//     line-height: 1.5;
+//     text-align: center;
+//     z-index: 10;
+//     * {
+//         font-style: normal;
+//         text-decoration: none;
+//     }
+//     p {
+//         margin-bottom: 2em;
+//         span {
+//             color: $primary;
+//         }
+//         #not_enough_point,
+//         #enough_point {
+//             font-size: 1.75em;
+//             font-weight: normal;
+//         }
+//     }
+//     >.paywallpanel {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         width: calc(100% - 30px);
+//         padding: 30px;
+//         background-color: $white;
+//         @include translate(-50%, -50%);
+//         z-index: 1;
+//         @include breakpoint(768px) {
+//             width: 500px;
+//         }
+//     }
+//     .paywallContent {
+//         ol {
+//             @include listrest(0, 0, none);
+//             li {
+//                 font-weight: bold;
+//                 +li {
+//                     margin-top: 20px;
+//                     padding-top: 20px;
+//                     border-top: 1px solid $gray-300;
+//                 }
+//                 span {
+//                     display: block;
+//                     color: $gray-300;
+//                     font-size: 0.875em;
+//                     font-weight: normal;
+//                 }
+//                 .Btn,
+//                 .Btn.more {
+//                     margin-top: 1rem;
+//                 }
+//                 .Btn a {
+//                     @include containbtn(inline-block, 0.7rem, $gray-300, 1rem);
+//                 }
+//                 .Btn.more a {
+//                     @include containbtn(inline-block, 0.7rem, $primary, 1rem);
+//                 }
+//             }
+//         }
+//         .know_txt {
+//             margin-top: 0.25rem;
+//             margin-bottom: 0.75rem;
+//             font-size: 1.5rem;
+//         }
+//     }
+// }
+// .Btn,
+// .btnGroup {
+//     font-size: 0;
+//     a {
+//         @include containbtn(inline-block, 0.7rem, $primary, 1rem);
+//         +a {
+//             margin-left: 0.7rem;
+//         }
+//         &.cancel {
+//             @include containbtn(inline-block, 0.7rem, $gray-200, 1rem);
+//         }
+//     }
+// }
+// .article-page article .paywallBox {
+//     margin-top: 40px;
+//     margin-bottom: 40px;
+//     .paywallBoxFrame {
+//         position: relative;
+//         max-width: 520px;
+//         margin: 0 auto;
+//         padding: 45px 15px;
+//         text-align: center;
+//         background-color: $white;
+//         border: 1px solid $gray-100;
+//         overflow: hidden;
+//         z-index: 1;
+//         @include breakpoint(768px) {
+//             padding: 50px 30px;
+//         }
+//         .square {
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             background-color: $gray-100;
+//             width: 100%;
+//             height: 170px;
+//             z-index: -1;
+//             &::before {
+//                 @include beforeafter('', block);
+//                 position: absolute;
+//                 bottom: -65px;
+//                 left: 50%;
+//                 width: 0;
+//                 height: 0;
+//                 border-top: 65px solid $gray-100;
+//                 border-left: 260px solid transparent;
+//                 border-right: 260px solid transparent;
+//                 @include translateX(-50%);
+//             }
+//         }
+//         h2 {
+//             margin: 0;
+//             color: $primary;
+//             font-size: 1.75em;
+//         }
+//         h4 {
+//             margin: 1em 0;
+//             font-size: 1.5em;
+//             font-weight: normal;
+//         }
+//         p {
+//             margin-top: 0;
+//             margin-bottom: 0;
+//             line-height: 1.5;
+//             @include breakpoint(max-width 767px) {
+//                 font-size: 1rem;
+//             }
+//             .tip {
+//                 color: $primary;
+//             }
+//         }
+//         img {
+//             margin: 1rem auto;
+//             width: 200px;
+//         }
+//         a.highLightBtn {
+//             @include containbtn(inline-block, 0.7rem, $primary, 1rem);
+//             @include breakpoint(max-width 374px) {
+//                 margin-top: 0.5em !important;
+//                 margin-bottom: 0.25em !important;
+//             }
+//         }
+//         a.otherBtn {
+//             @include containbtn(inline-block, 0.7rem, $gray-300, 1rem);
+//             @include breakpoint(max-width 374px) {
+//                 margin-top: 0 !important;
+//                 margin-bottom: 0.5em !important;
+//             }
+//         }
+//         a.btnLink {
+//             margin: 1em 0 0.5em;
+//             font-size: 0.875em;
+//             &:hover {
+//                 color: $white;
+//             }
+//             @include breakpoint(max-width 374px) {
+//                 min-width: 13em;
+//             }
+//             @include breakpoint(768px) {
+//                 min-width: 11em;
+//                 padding: 0.7rem 1.4rem;
+//             }
+//             @include breakpoint(375px) {
+//                 min-width: 10em;
+//                 padding: 0.7rem 1rem;
+//             }
+//             @include breakpoint(414px) {
+//                 font-size: 1em;
+//             }
+//         }
+//     }
+//     .paywallBoxContent>*:last-child {
+//         margin-bottom: 0 !important;
+//     }
+// }
 .paywallAnnounce {
     position: fixed;
     bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    font-weight: normal;
     z-index: 10;
     @include breakpoint(768px) {
         left: 50%;

@@ -6,7 +6,8 @@
     @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
     @include background-size(800px 100px);
     img {
-        width: 100%;
+        max-width: 100%;
+        height: auto !important;
         @include opacity(0);
         @include transition(opacity 0.3s 0.3s);
     }

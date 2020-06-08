@@ -38,6 +38,9 @@
                 .card__subtitle {
                     margin-top: 10px;
                 }
+                .card__title {
+                    margin-top: 5px;
+                }
             }
             @include breakpoint(max-width 1023px) {
                 +.card__item {

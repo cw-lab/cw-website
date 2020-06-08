@@ -31,9 +31,13 @@
         padding-bottom: 30px;
         background-color: #f7f7f7;
         border: 1px solid $gray-100;
+        z-index: 0;
         @include breakpoint(max-width 1023px) {
             margin-left: -20px;
             margin-right: -20px;
+        }
+        &.ad--first {
+            z-index: 1;
         }
         >span {
             display: block;

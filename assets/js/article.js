@@ -19,6 +19,11 @@ $(window).load(function() {
             $('.black').addClass('opened idlebox__opened');
         }
     }
+
+    // 找到內容的R1
+    $('.article__content > ').each(function() {
+        $(this).parent().find(".ad--300by250").andSelf().filter(".ad--300by250:first").first().addClass('ad--first');
+    });
     $(window).on('scroll', _.throttle(function() {
         var scroll = $(window).scrollTop(),
             headerHeight = $('header').outerHeight();

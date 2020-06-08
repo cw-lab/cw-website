@@ -14,23 +14,23 @@ lazyload();
 // 圖片全螢幕
 function imgZoom() {
     $('.imgzoom').each(function() {
-        var imgcode = $(this).data('zoom');
-        $(this).on('click', function() {
+        $(document).on("click", ".imgzoom", function() {
+            var imgcode = $(this).data('zoom');
             $('body').addClass('opened');
             $('.black').addClass('opened black-fullscreen');
             $('.fullscreen img').attr('src', imgcode);
             $('.fullscreen').fadeIn();
         })
     });
-    $('.fullscreen__content').on('click', function(event) {
-        event.stopPropagation();
-    });
-    $('.fullscreen').on('click', function() {
+    $(document).on("click", ".fullscreen", function() {
         $('body').removeClass('opened');
         $('.black').removeClass('opened black-fullscreen');
         $('.fullscreen img').attr('src', '');
         $('.fullscreen').fadeOut();
-    })
+    });
+    $(document).on("click", ".fullscreen__content", function(event) {
+        event.stopPropagation();
+    });
 }
 imgZoom();
 
@@ -109,14 +109,15 @@ $(function() {
 
     // 打開小辭典
     function openDictionary() {
-        $(".more").each(function() {
+        $('.more').each(function() {
             $(this).click(function() {
                 $(this).siblings('.more__text').slideToggle({
-                    start: function() {
-                        $(this).css('display', 'block');
-                    }
+                    complete: function() {
+                        var status = $(this).is(':visible') ? 'block' : 'none';
+                        $(this).css('display', status);
+                    },
                 });
-            })
+            });
         });
     }
     openDictionary();
@@ -137,7 +138,7 @@ $(function() {
             container = $("header .container").outerWidth(),
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
-        adBlock();
+        // adBlock();
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {

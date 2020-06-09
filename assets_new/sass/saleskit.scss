@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "Compass";
+@import "breakpoint";
+@import "_variable";
+@import "_mixin";
+@charset "utf-8";
+.cookies-info-page {
+    .container {
+        max-width: 960px;
+    }
+    section.header {
+        margin-bottom: 60px;
+        h1 {
+            margin-bottom: 0;
+            font-size: 2rem;
+            line-height: 1.5;
+            font-weight: 500;
+            text-align: center;
+        }
+        h3 {
+            margin-top: 2em;
+            margin-bottom: 0;
+            +p {
+                margin-top: 0;
+            }
+        }
+        h5 {
+            text-align: center;
+        }
+    }
+}

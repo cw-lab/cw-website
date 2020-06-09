@@ -33,6 +33,11 @@
     }
 }
 
+.article__label {
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+
 .source {
     display: block;
     padding-top: 5px;
@@ -57,6 +62,11 @@
     z-index: 3;
 }
 
+.article__foot {
+    position: relative;
+    z-index: 4;
+}
+
 .article__head,
 .article__body,
 .article__foot {
@@ -79,8 +89,10 @@
 }
 
 .article__promotion {
+    position: relative;
     max-width: 700px;
     width: calc(100% - 40px);
+    z-index: 4;
 }
 
 .preface>* {
@@ -438,8 +450,13 @@ article {
         }
         .imgzoom {
             margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
             &::after {
                 display: none;
+            }
+            img {
+                width: 100%;
             }
         }
     }

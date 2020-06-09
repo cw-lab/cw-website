@@ -1,119 +1,167 @@
 footer {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
     background-color: $gray-100;
-    z-index: 1;
-    a {
-        color: $text;
-        &:hover {
-            color: $primary;
+    .container {
+        &:last-child {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        &::before,
+        &::after {
+            display: none;
+        }
+        @include breakpoint(1024px) {
+            &:first-child {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            &:last-child {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
         }
     }
     .channel__group {
-        @include breakpoint(1024px) {
-            display: flex;
-        }
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-    .channel__item {
         @include breakpoint(max-width 1023px) {
             border-bottom: 1px solid $gray-200;
         }
-        .channel__title {
-            position: relative;
-            i.icon {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                margin-top: 5px;
-                @include translateY(-50%);
-                @include transition(transform 0.2s);
-                @include breakpoint(1024px) {
-                    display: none;
-                }
-                &.active {
-                    @include transform(translateY(-50%) rotate(180deg));
-                }
-            }
+        &::after {
+            @include clear();
         }
-        .channel__option {
-            @include breakpoint(1024px) {
-                display: block !important;
-            }
-            @include breakpoint(max-width 1023px) {
-                display: none;
-            }
-            ul {
-                @include listrest(0, 0, none);
-                font-size: 0.875rem;
-                a {
-                    display: block;
+        .channel {
+            @include listrest(0, 0, none);
+            font-size: 0.875em;
+            li {
+                @include breakpoint(1024px) {
+                    margin-bottom: 5px;
+                }
+                @include breakpoint(max-width 1023px) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                 }
             }
+            a {
+                color: $text;
+                text-decoration: none;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                display: none;
+                padding-bottom: 10px;
+                +.channel {
+                    margin-top: -10px;
+                }
+            }
         }
-        &:first-child {
-            .channel__option {
+        h4 {
+            @include breakpoint(max-width 1023px) {
+                position: relative;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 1.5;
+                &::after {
+                    @include beforeafter('\e920', block);
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    font-family: "icomoon";
+                    @include translateY(-50%);
+                    @include transition(transform 0.3s);
+                }
+                &.active::after {
+                    @include transform(translateY(-50%) rotate(180deg));
+                }
+            }
+            @include breakpoint(1024px) {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+        @include breakpoint(1024px) {
+            &:first-child {
+                h4 {
+                    width: 100%;
+                }
                 ul {
-                    @include breakpoint(1024px) {
-                        column-count: 2;
-                        column-gap: 1em;
+                    float: left;
+                    &:last-child {
+                        padding-left: 60px;
                     }
+                }
+            }
+            .channel__group {
+                .channel {
+                    padding-left: 0 !important;
+                }
+            }
+            .channel__group+.channel__group {
+                h4 {
+                    margin-top: 30px;
                 }
             }
         }
     }
-    .cwgroup__copyright {
+    .sns__group {
+        @include listrest(0, 0, none);
+        line-height: 1;
         @include breakpoint(max-width 1023px) {
             text-align: center;
         }
-        ul.sns {
-            @include listrest(0, 0, none);
-            font-size: 0;
-            li {
-                display: inline-block;
-                font-size: 1.5rem;
-                vertical-align: middle;
-                +li {
-                    margin-left: 20px;
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            a {
+                display: block;
+                color: $text;
+                font-size: 1.5em;
+                text-decoration: none;
+                &:hover {
+                    color: $primary;
                 }
-                a {
+                i {
                     display: block;
-                    i.icon {
-                        display: block;
-                    }
-                    &.facebook:hover {
-                        color: $facebook;
-                    }
-                    &.line:hover {
-                        color: $line;
-                    }
-                    &.instagram:hover {
-                        color: $instagram;
-                    }
-                    &.rss:hover {
-                        color: $rss;
-                    }
+                }
+            }
+            &.facebook a:hover {
+                color: $facebook;
+            }
+            &.line a:hover {
+                color: $line;
+            }
+            &.instagram a:hover {
+                color: $instagram;
+            }
+            &.rss a:hover {
+                color: $rss;
+            }
+        }
+    }
+    .contact {
+        font-size: 0.75em;
+        @include breakpoint(max-width 1023px) {
+            text-align: center;
+        }
+        span {
+            display: block;
+            @include breakpoint(1024px) {
+                display: inline-block;
+            }
+            &:last-child {
+                display: block;
+                @include breakpoint(max-width 1023px) {
+                    margin-top: 30px;
                 }
             }
         }
-        .contact,
-        .copyright {
-            span {
-                display: block;
-                font-size: 0.75rem;
-                @include breakpoint(1024px) {
-                    display: inline-block;
-                    &:first-child {
-                        margin-right: 20px;
-                    }
-                }
+        a {
+            color: $text;
+            text-decoration: none;
+            &:hover {
+                color: $primary;
             }
         }
     }

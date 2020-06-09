@@ -8,7 +8,7 @@
     @include transition(background 0.3s);
     cursor: pointer;
     &::before {
-        content: url('https://www.cw.com.tw/assets_new/img/download_arrow.png');
+        content: url('../img/download_arrow.png');
         display: inline-block;
     }
     &:hover {

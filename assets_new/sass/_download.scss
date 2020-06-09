@@ -32,7 +32,7 @@
     }
     .dowloadLink {
         margin-right: 2rem;
-        background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow.png');
+        background-image: url('../img/download_arrow.png');
         @include breakpoint(max-width 767px) {
             margin-left: 1em;
         }
@@ -46,7 +46,7 @@
         }
     }
     .payreadLink {
-        background-image: url('https://www.cw.com.tw/assets_new/img/payread.png');
+        background-image: url('../img/payread.png');
         &.noPay {
             color: $gray-400;
             @include opacity(0.5);
@@ -59,7 +59,7 @@
     .nextArticle {
         padding-right: 35px;
         text-align: right;
-        background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow_right.png');
+        background-image: url('../img/download_arrow_right.png');
         @include breakpoint(768px) {
             width: calc(100% - 240px - 6rem);
             margin-left: 4rem;

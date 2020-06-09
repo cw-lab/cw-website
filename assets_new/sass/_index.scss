@@ -11,9 +11,9 @@
             li {
                 border-left-color: $white;
                 &.userName {
-                    background-image: url('https://www.cw.com.tw/assets_new/img/download_arrow_white.png');
+                    background-image: url('../img/download_arrow_white.png');
                     &.opened {
-                        background-image: url('https://www.cw.com.tw/assets_new/img/upload_arrow_white.png');
+                        background-image: url('../img/upload_arrow_white.png');
                     }
                 }
                 a {

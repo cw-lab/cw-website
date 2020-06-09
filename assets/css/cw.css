@@ -4492,8 +4492,6 @@ header .menubar__user i::before {
   display: block;
 }
 header .menubar__user i::after {
-  content: "";
-  display: block;
   width: 24px;
   height: 3px;
   background-color: #171717;
@@ -4512,25 +4510,41 @@ header .menubar__user i::after {
   transition: all 0.6s cubic-bezier(0.25, 1.7, 0.35, 0.8);
   z-index: -1;
 }
-header .menubar__user i.icon-close {
-  position: relative;
-  display: block;
-  width: 24px;
-  height: 24px;
+@media (min-width: 1024px) {
+  header .menubar__user i::after {
+    content: "";
+    display: block;
+  }
 }
-header .menubar__user i.icon-close::before {
-  content: '';
-  width: 24px;
-  height: 3px;
-  background-color: #171717;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-transform: rotate(45deg) translate(7px, 7px);
-  -ms-transform: rotate(45deg) translate(7px, 7px);
-  -webkit-transform: rotate(45deg) translate(7px, 7px);
-  transform: rotate(45deg) translate(7px, 7px);
-  z-index: -1;
+@media (min-width: 1024px) {
+  header .menubar__user i.icon-close {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  header .menubar__user i.icon-close::before {
+    content: '';
+    width: 24px;
+    height: 3px;
+    background-color: #171717;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-transform: rotate(45deg) translate(7px, 7px);
+    -ms-transform: rotate(45deg) translate(7px, 7px);
+    -webkit-transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(7px, 7px);
+    z-index: -1;
+  }
+}
+@media (max-width: 1023px) {
+  header .menubar__user i.icon-close::before {
+    content: "";
+    font-weight: bold;
+  }
 }
 header .menubar__user i.icon-close::after {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -4596,11 +4610,12 @@ main {
 }
 
 footer {
+  position: relative;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #EEEEEE;
-  z-index: 1;
+  z-index: 4;
 }
 footer a {
   color: #171717;
@@ -5040,6 +5055,14 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.ad.ad--scrollvideo {
+  padding-top: 0;
+  background: none;
+  border: 0;
+}
+.ad.ad--scrollvideo > span.sans-serif {
+  display: none;
 }
 
 main .ad.ad--970by250.opened {
@@ -5521,7 +5544,7 @@ main .ad.ad--970by250.opened {
   -o-transition: bottom 0.2s;
   -webkit-transition: bottom 0.2s;
   transition: bottom 0.2s;
-  z-index: 3;
+  z-index: 4;
 }
 @media (min-width: 1024px) {
   .bottombar {
@@ -5787,6 +5810,11 @@ main .ad.ad--970by250.opened {
   color: #D60C18;
 }
 
+.article__label {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
 .source {
   display: block;
   padding-top: 5px;
@@ -5811,6 +5839,11 @@ main .ad.ad--970by250.opened {
   z-index: 3;
 }
 
+.article__foot {
+  position: relative;
+  z-index: 4;
+}
+
 @media (min-width: 1024px) {
   .article__head,
   .article__body,
@@ -5833,8 +5866,10 @@ main .ad.ad--970by250.opened {
 }
 
 .article__promotion {
+  position: relative;
   max-width: 700px;
   width: calc(100% - 40px);
+  z-index: 4;
 }
 
 .preface > * {
@@ -6189,6 +6224,11 @@ ul.article__provide li span i.icon {
   }
 }
 
+.article__box__group {
+  position: relative;
+  z-index: 4;
+}
+
 .article__box {
   font-size: 0;
   border: 1px solid #D3D5D7;
@@ -6232,7 +6272,7 @@ ul.article__provide li span i.icon {
 
 .article__next {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
 }
 @media (min-width: 1140px) {
   .article__next {
@@ -6325,6 +6365,10 @@ ul.article__provide li span i.icon {
   color: #D60C18;
 }
 
+.article__extended {
+  position: relative;
+  z-index: 4;
+}
 .article__extended .h2 {
   font-weight: 500;
 }
@@ -6353,10 +6397,12 @@ ul.article__provide li span i.icon {
 }
 
 ul.article__keyword {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 0;
+  z-index: 4;
 }
 ul.article__keyword li {
   display: inline-block;
@@ -6897,9 +6943,14 @@ article.article__level--2 ul.article__keyword li a {
 }
 .authorDetail .pic .imgzoom {
   margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 .authorDetail .pic .imgzoom::after {
   display: none;
+}
+.authorDetail .pic .imgzoom img {
+  width: 100%;
 }
 .authorDetail .txt {
   vertical-align: middle;
@@ -6933,9 +6984,11 @@ article.article__level--2 ul.article__keyword li a {
 }
 
 .newsletter {
+  position: relative;
   padding-top: 60px;
   padding-bottom: 20px;
   border-top: 1px solid #EEEEEE;
+  z-index: 4;
 }
 .newsletter .container {
   position: relative;

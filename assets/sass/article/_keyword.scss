@@ -1,6 +1,8 @@
 ul.article__keyword {
+    position: relative;
     @include list(0, 0, none);
     font-size: 0;
+    z-index: 4;
     li {
         display: inline-block;
         margin-right: 10px;

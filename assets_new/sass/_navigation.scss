@@ -139,7 +139,7 @@ nav {
         &.menubar__user--login {
             width: auto;
         }
-        top: 41px;
+        top: 43px;
         right: 0;
     }
     @include breakpoint(max-width 1023px) {
@@ -164,14 +164,25 @@ nav {
 .menubar__user--member,
 aside.menubar--left {
     font-size: 1rem;
-    border: 1px solid $gray-200;
+    border: solid $gray-200;
     background-color: $white;
+    @include breakpoint(1024px) {
+        border-width: 1px;
+    }
+    @include breakpoint(max-width 1023px) {
+        border-width: 1px 0;
+        width: 100vw;
+        overflow: hidden scroll;
+    }
     ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        position: relative;
+        @include listrest(0, 0, none);
         li {
             line-height: 1;
+            &.hr {
+                height: 1px;
+                background-color: $gray-200;
+            }
             .li__group {
                 display: flex;
                 flex-wrap: wrap;
@@ -210,18 +221,23 @@ aside.menubar--left {
         }
     }
     >ul {
-        +ul {
-            border-top: 1px solid $gray-200;
-        }
+        // + ul {
+        // 	border-top: 1px solid $gray-200;
+        // }
         >li {
             .li__group {
                 position: relative;
+                &--id {
+                    padding: 15px 25px;
+                    line-height: 1.25;
+                    span {
+                        display: block;
+                    }
+                }
                 >a {
-                    display: flex;
                     width: 100%;
                     padding: 15px 25px;
                     line-height: 1.25;
-                    align-items: center;
                     &.sns {
                         i+span {
                             margin-left: 5px;

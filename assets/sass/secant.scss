@@ -35,6 +35,104 @@
                 }
             }
         }
+        footer {
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 0.8125rem;
+            background-color: $gray-100;
+            @include breakpoint(768px) {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            @include breakpoint(max-width 767px) {
+                >.container>.flex {
+                    flex-direction: column;
+                }
+            }
+            .copyright {
+                @include breakpoint(768px) {
+                    width: calc(100% - 460px);
+                }
+                @include breakpoint(max-width 767px) {
+                    order: 2;
+                }
+                &__cwlink {
+                    margin-bottom: 1.5em;
+                    margin-right: -275px;
+                    @include breakpoint(max-width 767px) {
+                        display: none;
+                    }
+                    li {
+                        padding: 0 1em;
+                        line-height: 1;
+                        border-left: 1px solid $text;
+                        &:first-child {
+                            padding-left: 0;
+                            border-left: 0;
+                        }
+                    }
+                }
+                &__contact {
+                    span {
+                        display: block;
+                        padding-right: 1em;
+                        @include breakpoint(768px) {
+                            display: inline-block;
+                        }
+                        @include breakpoint(max-width 767px) {
+                            &:nth-child(4) {
+                                margin-top: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+            .imglink {
+                align-items: flex-end;
+                @include breakpoint(768px) {
+                    width: 410px;
+                }
+                @include breakpoint(max-width 767px) {
+                    order: 1;
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                &__sns {
+                    font-size: 30px;
+                    li {
+                        margin-left: 0.33333em;
+                        line-height: 1;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                &__app {
+                    @include breakpoint(768px) {
+                        margin-left: 1em;
+                    }
+                    @include breakpoint(max-width 767px) {
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                    }
+                    &__title {
+                        margin-bottom: 0.5em;
+                        @include breakpoint(768px) {
+                            margin-bottom: 0.75em;
+                            text-align: center;
+                        }
+                    }
+                    &__img {
+                        li+li {
+                            margin-left: 0.5em;
+                        }
+                    }
+                }
+            }
+        }
     }
     &--error {
         &::before {

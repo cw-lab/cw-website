@@ -123,8 +123,8 @@ $(function() {
     openDictionary();
 
     function adBlock() {
-        $('[class*="ad "]').each(function() {
-            if ($(this).height() < 200) {
+        $('[class*="cw__advertising"]').each(function() {
+            if (($(this).height() < 80) && (!$(this).hasClass('ad--scrollvideo'))) {
                 $(this).hide();
             }
         })
@@ -138,7 +138,7 @@ $(function() {
             container = $("header .container").outerWidth(),
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
-        // adBlock();
+        adBlock();
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {
@@ -395,7 +395,6 @@ $(function() {
                 });
             };
         });
-        console.log(searchClick);
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .ad--970by250').outerHeight(),

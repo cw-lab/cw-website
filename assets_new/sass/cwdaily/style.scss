@@ -28,7 +28,7 @@ body {
 .header {
     height: 82.5%;
     min-height: 82.5%;
-    background-image: url('https://www.cw.com.tw/assets_new/img/cwdaily/daily_app_kv.jpg');
+    background-image: url('../../img/cwdaily/daily_app_kv.jpg');
     background-repeat: no-repeat;
     @include background-size(cover);
     @include breakpoint(768px) {
@@ -239,7 +239,7 @@ body {
 }
 
 .testimonial {
-    background-image: url('https://www.cw.com.tw/assets_new/img/cwdaily/shutterstock_229705576_1440bl.jpg');
+    background-image: url('../../img/cwdaily/shutterstock_229705576_1440bl.jpg');
     background-position: 50% 15%;
     background-repeat: no-repeat;
     @include background-size(cover);

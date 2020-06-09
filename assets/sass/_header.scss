@@ -183,7 +183,6 @@ header {
                 display: block;
             }
             &::after {
-                @include beforeafter('', block);
                 width: 24px;
                 height: 3px;
                 background-color: $black;
@@ -192,20 +191,31 @@ header {
                 @include transform(rotate(45deg) translate(-8px, -8px));
                 @include transition(all $duration $easing);
                 z-index: -1;
+                @include breakpoint(1024px) {
+                    @include beforeafter('', block);
+                }
             }
             &.icon-close {
-                position: relative;
-                display: block;
-                width: 24px;
-                height: 24px;
-                &::before {
-                    content: '';
+                @include breakpoint(1024px) {
+                    position: relative;
+                    display: block;
                     width: 24px;
-                    height: 3px;
-                    background-color: $black;
-                    @include border-radius(2px);
-                    @include transform(rotate(45deg) translate(7px, 7px));
-                    z-index: -1;
+                    height: 24px;
+                }
+                &::before {
+                    @include breakpoint(1024px) {
+                        content: '';
+                        width: 24px;
+                        height: 3px;
+                        background-color: $black;
+                        @include border-radius(2px);
+                        @include transform(rotate(45deg) translate(7px, 7px));
+                        z-index: -1;
+                    }
+                    @include breakpoint(max-width 1023px) {
+                        content: $icon-cancel;
+                        font-weight: bold;
+                    }
                 }
                 &::after {
                     @include opacity(1);

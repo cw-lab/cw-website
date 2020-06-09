@@ -65,14 +65,14 @@
         z-index: 2;
         &.prev {
             left: 0;
-            background-image: url('https://www.cw.com.tw/assets_new/img/prev-arrow.gif');
+            background-image: url('../img/prev-arrow.gif');
             &:hover {
                 background-position: 4px center;
             }
         }
         &.next {
             right: 0;
-            background-image: url('https://www.cw.com.tw/assets_new/img/next-arrow.gif');
+            background-image: url('../img/next-arrow.gif');
             &:hover {
                 background-position: 24px center;
             }
@@ -201,14 +201,14 @@
             &.prev {
                 left: 10px;
                 &::before {
-                    background-image: url('https://www.cw.com.tw/assets_new/img/prev-arrow-b.gif');
+                    background-image: url('../img/prev-arrow-b.gif');
                     background-position: center center;
                 }
             }
             &.next {
                 right: 10px;
                 &::before {
-                    background-image: url('https://www.cw.com.tw/assets_new/img/next-arrow-b.gif');
+                    background-image: url('../img/next-arrow-b.gif');
                 }
             }
             &.prev:hover {

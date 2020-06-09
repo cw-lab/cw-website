@@ -1,3 +1,8 @@
+.article__box__group {
+    position: relative;
+    z-index: 4;
+}
+
 .article__box {
     font-size: 0;
     border: 1px solid $gray-200;

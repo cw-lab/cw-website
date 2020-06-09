@@ -1,4 +1,6 @@
 .article__extended {
+    position: relative;
+    z-index: 4;
     .h2 {
         font-weight: 500;
     }

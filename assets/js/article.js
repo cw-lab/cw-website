@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(window).on('load', function() {
     var width = $(window).width(),
         height = $(window).height(),
         idleTime = 0,
@@ -14,15 +14,14 @@ $(window).load(function() {
 
     function timerIncrement() {
         idleTime++;
-        if (idleTime > 5) { // 4:59
+        if (idleTime > 5 && $(".idle-group").html() != '' && show_popup == 'true') { // 4:59
             $('.message--idlebox').fadeIn();
             $('.black').addClass('opened idlebox__opened');
         }
     }
-
     // 找到內容的R1
-    $('.article__content > ').each(function() {
-        $(this).parent().find(".ad--300by250").andSelf().filter(".ad--300by250:first").first().addClass('ad--first');
+    $('.article__content').each(function() {
+        $(this).find(".ad--300by250").first().addClass('ad--first');
     });
     $(window).on('scroll', _.throttle(function() {
         var scroll = $(window).scrollTop(),
@@ -69,7 +68,7 @@ $(window).load(function() {
             } else {
                 functionGroup.fadeOut(150);
             }
-            if ((scroll >= (articleRecommend.offset().top - (2 * height))) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+            if ((scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 next.children('a').fadeIn({
                     start: function() {
                         $(this).css('display', 'block');

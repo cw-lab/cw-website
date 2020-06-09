@@ -74,6 +74,14 @@
             }
         }
     }
+    &.ad--scrollvideo {
+        padding-top: 0;
+        background: none;
+        border: 0;
+        >span.sans-serif {
+            display: none;
+        }
+    }
 }
 
 main {

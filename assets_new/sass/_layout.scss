@@ -47,7 +47,7 @@
             margin-left: 20px;
         }
         @include breakpoint(max-width 767px) {
-            margin-top: 30px;
+            margin-top: 80px;
         }
         >*,
         .leaflet {
@@ -56,10 +56,12 @@
                 margin-bottom: 20px;
             }
         }
-        .leaflet {
-            margin-left: -1px;
-            margin-right: -1px;
-            border: 1px solid $gray-200;
+        @include breakpoint(1024px) {
+            .leaflet {
+                margin-left: -1px;
+                margin-right: -1px;
+                border: 1px solid $gray-200;
+            }
         }
     }
 }

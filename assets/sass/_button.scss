@@ -110,7 +110,8 @@ a {
         &::-moz-focus-inner {
             border: none;
         }
-        &:hover {
+        &:hover,
+        &.active {
             color: $primary-variant;
             border-color: $primary-variant;
         }
@@ -129,7 +130,8 @@ a {
         &::-moz-focus-inner {
             border: none;
         }
-        &:hover {
+        &:hover,
+        &.active {
             background-color: $primary-variant;
             border-color: $primary-variant;
         }

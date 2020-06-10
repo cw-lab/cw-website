@@ -41,6 +41,12 @@ body.message__open {
                         }
                     }
                 }
+                ul,
+                ol {
+                    li+li {
+                        margin-top: 10px;
+                    }
+                }
             }
         }
     }
@@ -175,6 +181,31 @@ body.message__open {
                     padding-right: 50px;
                     margin-top: 0;
                     margin-bottom: 24px;
+                }
+            }
+            &__btn {
+                text-align: right;
+            }
+        }
+    }
+    &--check {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 560px;
+        width: calc(100% - 30px);
+        padding: 30px 24px 24px;
+        background-color: $white;
+        z-index: 12;
+        @include translate(-50%, -50%);
+        .message {
+            &__container {
+                position: relative;
+            }
+            &__txt {
+                padding-bottom: 30px;
+                h3 {
+                    line-height: 1.5;
                 }
             }
             &__btn {

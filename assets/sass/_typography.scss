@@ -81,6 +81,30 @@ $h-lh: 1.5,
     text-align: right;
 }
 
+@include breakpoint(1024px) {
+    .text-d-left {
+        text-align: left;
+    }
+    .text-d-center {
+        text-align: center;
+    }
+    .text-d-right {
+        text-align: right;
+    }
+}
+
+@include breakpoint(max-width 1023px) {
+    .text-m-left {
+        text-align: left;
+    }
+    .text-m-center {
+        text-align: center;
+    }
+    .text-m-right {
+        text-align: right;
+    }
+}
+
 p {
     color: $text;
     word-break: break-word;

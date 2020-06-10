@@ -583,6 +583,32 @@ h5,
   text-align: right;
 }
 
+@media (min-width: 1024px) {
+  .text-d-left {
+    text-align: left;
+  }
+
+  .text-d-center {
+    text-align: center;
+  }
+
+  .text-d-right {
+    text-align: right;
+  }
+}
+@media (max-width: 1023px) {
+  .text-m-left {
+    text-align: left;
+  }
+
+  .text-m-center {
+    text-align: center;
+  }
+
+  .text-m-right {
+    text-align: right;
+  }
+}
 p {
   color: #171717;
   word-break: break-word;
@@ -2115,6 +2141,10 @@ body.message__open {
     color: #9D0505;
   }
 }
+.message--remark .message__txt ul li + li,
+.message--remark .message__txt ol li + li {
+  margin-top: 10px;
+}
 .message--banner {
   width: 100%;
   background-color: #EEEEEE;
@@ -2249,6 +2279,32 @@ body.message__open {
   margin-bottom: 24px;
 }
 .message--dialogs .message__btn {
+  text-align: right;
+}
+.message--check {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 560px;
+  width: calc(100% - 30px);
+  padding: 30px 24px 24px;
+  background-color: #fff;
+  z-index: 12;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.message--check .message__container {
+  position: relative;
+}
+.message--check .message__txt {
+  padding-bottom: 30px;
+}
+.message--check .message__txt h3 {
+  line-height: 1.5;
+}
+.message--check .message__btn {
   text-align: right;
 }
 .message--download {

@@ -224,6 +224,10 @@
     margin-bottom: 40px !important;
 }
 
+.mb60 {
+    margin-bottom: 60px !important;
+}
+
 @include breakpoint(1024px) {
     .px-d-0 {
         padding-left: 0px !important;
@@ -375,6 +379,9 @@
     .mt-d-40,
     .mt40-md {
         margin-top: 40px !important;
+    }
+    .mt-d-60 {
+        margin-top: 60px !important;
     }
     .mb-d-0 {
         margin-bottom: 0px !important;

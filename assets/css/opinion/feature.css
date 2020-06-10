@@ -881,7 +881,8 @@ h1 {
   font-weight: 700;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Noto Serif TC', serif;
@@ -895,7 +896,8 @@ h2 {
   font-weight: 700;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Noto Serif TC', serif;
@@ -909,7 +911,8 @@ h3 {
   font-weight: 700;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Noto Serif TC', serif;
@@ -923,7 +926,8 @@ h4 {
   font-weight: 700;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Noto Serif TC', serif;
@@ -937,7 +941,8 @@ h5 {
   font-weight: 700;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-family: 'Noto Serif TC', serif;

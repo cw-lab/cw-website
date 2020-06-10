@@ -45,12 +45,25 @@ $(function() {
         ipad = navigator.userAgent.match(/iPad/i) != null,
         // 判斷瀏覽器
         chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
-        safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+        safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
+        ie = false,
+        old_ie = window.navigator.userAgent.indexOf('MSIE '),
+        new_ie = window.navigator.userAgent.indexOf('Trident/');
     if (chrome) {
         $("body").addClass("chrome");
     }
     if (android) {
         $("body").addClass("android");
+    }
+    if ((old_ie > -1) || (new_ie > -1)) {
+        ie = true;
+    }
+    if (ie) {
+        $("body").addClass('ie');
+        $("img.lazyload").each(function() {
+            var source = $(this).data('src');
+            $(this).attr('src', source);
+        });
     }
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');
@@ -346,7 +359,7 @@ $(function() {
         // }, 10);
         // 字體大小放大縮小
         fzLevel = 0,
-        fzClass = 'article__level--' + fzLevel;
+            fzClass = 'article__level--' + fzLevel;
         $('main').on("click", '.function__scale', function() {
             fzLevel < 2 ? fzLevel++ : fzLevel = 0;
             fzClass = 'article__level--' + fzLevel;

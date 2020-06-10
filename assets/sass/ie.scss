@@ -1,20 +1,17 @@
 @import "_basic";
 @import "_variable";
-// 無限滾動動畫
-.loader__animate,
-// pdf下載
-.function__download,
-// 收藏
-.function__save,
-// 文章推薦
-.search__item--right,
-// 你可能有興趣內資訊
-.article__recommend>* {
-    display: none;
-}
-
-// 你可能有興趣樣式變為無
-.article__recommend {
-    border: 0;
-    margin-bottom: 0 !important;
+body.ie {
+    // 無限滾動動畫
+    .loader__animate, // pdf下載
+    .function__download, // 收藏
+    .function__save, // 文章推薦
+    .search__item--right, // 你可能有興趣內資訊
+    .article__recommend>* {
+        display: none;
+    }
+    // 你可能有興趣樣式變為無
+    .article__recommend {
+        border: 0;
+        margin-bottom: 0 !important;
+    }
 }

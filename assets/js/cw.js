@@ -345,10 +345,9 @@ $(function() {
         // 	"top": (height / 2)
         // }, 10);
         // 字體大小放大縮小
-        var $fz = $('.function__scale'),
-            fzLevel = 0,
-            fzClass = 'article__level--' + fzLevel;
-        $fz.click(function() {
+        fzLevel = 0,
+        fzClass = 'article__level--' + fzLevel;
+        $('main').on("click", '.function__scale', function() {
             fzLevel < 2 ? fzLevel++ : fzLevel = 0;
             fzClass = 'article__level--' + fzLevel;
             $('article').attr("class", "mt30");

@@ -17,9 +17,12 @@
         }
     }
     .container {
+        display: block;
         width: 100%;
         padding-left: 10px;
         padding-right: 10px;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
         margin-left: auto;
         margin-right: auto;
         @include breakpoint(1024px) {
@@ -55,12 +58,34 @@
                 display: inline-block;
             }
         }
-        .edit__group {
-            padding: 20px;
+        .edit__group,
+        .planning__group {
             border: 1px solid $gray-200;
             background-color: $white;
+        }
+        .edit__group {
+            padding: 20px;
             @include breakpoint(1024px) {
                 padding: 30px;
+            }
+        }
+        .planning__group {
+            .form__group {
+                max-width: none;
+                border-top: 1px solid $gray-200;
+                padding-bottom: 20px;
+                @include breakpoint(1024px) {
+                    padding-bottom: 30px;
+                }
+            }
+            .form {
+                margin-top: 30px;
+                padding-left: 20px;
+                padding-right: 20px;
+                @include breakpoint(1024px) {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
             }
         }
         .form {
@@ -212,6 +237,52 @@
                 top: -4px;
                 right: 0;
                 width: 240px;
+            }
+        }
+        .planning__item {
+            padding: 20px;
+            @include breakpoint(640px) {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            @include breakpoint(max-width 639px) {
+                text-align: center;
+            }
+            @include breakpoint(1024px) {
+                padding: 30px;
+            }
+            .planning__img {
+                @include breakpoint(max-width 639px) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .planning__body {
+                @include breakpoint(640px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: calc(100% - 170px);
+                    padding-left: 20px;
+                }
+                @include breakpoint(max-width 639px) {
+                    width: 100%;
+                    padding-top: 20px;
+                }
+            }
+            .planning__deadline {
+                @include breakpoint(max-width 639px) {
+                    justify-content: center;
+                }
+                .deadline__title {
+                    padding-right: 10px;
+                }
+            }
+            a.btn {
+                @include breakpoint(max-width 639px) {
+                    margin-top: 20px;
+                }
             }
         }
     }

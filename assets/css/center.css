@@ -103,9 +103,12 @@
   background-color: transparent;
 }
 .center__page .container {
+  display: block;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -152,14 +155,38 @@
 .center__page article .phrase span {
   display: inline-block;
 }
-.center__page article .edit__group {
-  padding: 20px;
+.center__page article .edit__group,
+.center__page article .planning__group {
   border: 1px solid #D3D5D7;
   background-color: #fff;
+}
+.center__page article .edit__group {
+  padding: 20px;
 }
 @media (min-width: 1024px) {
   .center__page article .edit__group {
     padding: 30px;
+  }
+}
+.center__page article .planning__group .form__group {
+  max-width: none;
+  border-top: 1px solid #D3D5D7;
+  padding-bottom: 20px;
+}
+@media (min-width: 1024px) {
+  .center__page article .planning__group .form__group {
+    padding-bottom: 30px;
+  }
+}
+.center__page article .planning__group .form {
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 1024px) {
+  .center__page article .planning__group .form {
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 .center__page article .form + .form {
@@ -330,6 +357,60 @@
     top: -4px;
     right: 0;
     width: 240px;
+  }
+}
+.center__page article .planning__item {
+  padding: 20px;
+}
+@media (min-width: 640px) {
+  .center__page article .planning__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 639px) {
+  .center__page article .planning__item {
+    text-align: center;
+  }
+}
+@media (min-width: 1024px) {
+  .center__page article .planning__item {
+    padding: 30px;
+  }
+}
+@media (max-width: 639px) {
+  .center__page article .planning__item .planning__img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 640px) {
+  .center__page article .planning__item .planning__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 170px);
+    padding-left: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .center__page article .planning__item .planning__body {
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 639px) {
+  .center__page article .planning__item .planning__deadline {
+    justify-content: center;
+  }
+}
+.center__page article .planning__item .planning__deadline .deadline__title {
+  padding-right: 10px;
+}
+@media (max-width: 639px) {
+  .center__page article .planning__item a.btn {
+    margin-top: 20px;
   }
 }
 @media (max-width: 1023px) {

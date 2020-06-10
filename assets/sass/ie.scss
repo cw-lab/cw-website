@@ -8,7 +8,13 @@
 .function__save,
 // 文章推薦
 .search__item--right,
-// 你可能有興趣
-.article__recommend {
+// 你可能有興趣內資訊
+.article__recommend>* {
     display: none;
+}
+
+// 你可能有興趣樣式變為無
+.article__recommend {
+    border: 0;
+    margin-bottom: 0 !important;
 }

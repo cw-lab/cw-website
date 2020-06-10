@@ -2,8 +2,13 @@
 .function__download,
 .function__save,
 .search__item--right,
-.article__recommend {
+.article__recommend > * {
   display: none;
+}
+
+.article__recommend {
+  border: 0;
+  margin-bottom: 0 !important;
 }
 
 /*# sourceMappingURL=ie.css.map */

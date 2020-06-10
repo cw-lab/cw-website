@@ -44,3 +44,6 @@
 @import "_tls";
 // 作者頁
 @import "_author";
+iframe[src*='etu.cw.com.tw'] {
+    bottom: 0;
+}

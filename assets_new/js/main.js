@@ -13,7 +13,8 @@ function lazyload() {
 lazyload();
 
 function adBlock() {
-    $('[class*="cw__advertising"]').each(function() {
+    // 沒廣告時，移除
+    $('[class*="cw__advertising"], .banner, .leaflet, .leafletBig').each(function() {
         if (($(this).height() < 80) && (!$(this).hasClass('ad--scrollvideo'))) {
             $(this).hide();
         }

@@ -152,6 +152,10 @@
     max-width: 750px;
   }
 }
+.center__page article.w-100 {
+  float: none;
+  max-width: none;
+}
 .center__page article .phrase span {
   display: inline-block;
 }

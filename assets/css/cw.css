@@ -7160,4 +7160,16 @@ article.article__level--2 ul.article__keyword li a {
   font-weight: 500;
 }
 
+body.ie .loader__animate,
+body.ie .function__download,
+body.ie .function__save,
+body.ie .search__item--right,
+body.ie .article__recommend > * {
+  display: none;
+}
+body.ie .article__recommend {
+  border: 0;
+  margin-bottom: 0 !important;
+}
+
 /*# sourceMappingURL=cw.css.map */

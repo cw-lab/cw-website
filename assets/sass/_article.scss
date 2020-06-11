@@ -207,6 +207,16 @@
 @import "article/_extended";
 @import "article/_keyword";
 article {
+    iframe {
+        max-width: 100%;
+    }
+    .infogram-embed {
+        padding: 10px 20px 0;
+        border: 1px solid $gray-200;
+        @include breakpoint(1024px) {
+            padding: 20px 40px 0;
+        }
+    }
     &.article__level--1 {
         h1,
         .h1 {

@@ -6269,6 +6269,7 @@ ul.article__provide li span i.icon {
 }
 .article__next a {
   display: none;
+  width: 100%;
   font-size: 0;
   background-color: #fff;
   border: 1px solid #D3D5D7;
@@ -6457,6 +6458,18 @@ ul.article__keyword li a::-moz-focus-inner {
   border: none;
 }
 
+article iframe {
+  max-width: 100%;
+}
+article .infogram-embed {
+  padding: 10px 20px 0;
+  border: 1px solid #D3D5D7;
+}
+@media (min-width: 1024px) {
+  article .infogram-embed {
+    padding: 20px 40px 0;
+  }
+}
 article.article__level--1 h1,
 article.article__level--1 .h1 {
   font-size: 2rem;

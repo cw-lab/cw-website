@@ -331,6 +331,13 @@ $(function() {
             menubarUserClick = 0;
             searchClick = 0;
         });
+        // 會員中心暫時用
+        if (location.href.match('/member')) {
+            $('.menubar__user--login i.icon').click(function() {
+                $(this).toggleClass('icon-close');
+                $('.menubar__user--member').slideToggle();
+            });
+        }
         // message: Notification 3 秒後關閉
         // setTimeout(function() {
         // 	$(".message--notification").fadeOut();

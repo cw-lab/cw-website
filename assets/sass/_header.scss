@@ -145,6 +145,7 @@ header {
         position: relative;
         margin-left: 30px;
         i {
+            display: block;
             font-size: 1.3125rem;
             &.icon-close::before {
                 content: $icon-cancel;

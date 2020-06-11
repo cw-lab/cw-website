@@ -105,8 +105,8 @@
 .center__page .container {
   display: block;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   margin-left: auto;
@@ -115,12 +115,6 @@
 @media (min-width: 1024px) {
   .center__page .container {
     width: 1020px;
-  }
-}
-@media (min-width: 375px) {
-  .center__page .container {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 .center__page .container::after {
@@ -403,7 +397,7 @@
 }
 @media (min-width: 1024px) {
   .center__page .planning__item {
-    padding: 30px;
+    padding: 15px 30px;
   }
 }
 @media (max-width: 639px) {

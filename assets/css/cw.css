@@ -4501,6 +4501,7 @@ header .menubar__user {
   margin-left: 30px;
 }
 header .menubar__user i {
+  display: block;
   font-size: 1.3125rem;
 }
 header .menubar__user i.icon-close::before {

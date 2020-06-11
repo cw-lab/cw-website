@@ -2306,7 +2306,7 @@ input[type*='number']::-webkit-outer-spin-button {
   padding-right: 1rem;
   margin-top: 5px;
   color: #939EA7;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   line-height: 1;
 }
@@ -2316,7 +2316,7 @@ input[type*='number']::-webkit-outer-spin-button {
   margin-top: 10px;
   margin-bottom: 20px;
   color: #48545D;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .form__group__help + .form__group__help {
   margin-top: -10px;
@@ -2349,6 +2349,12 @@ input[type*='number']::-webkit-outer-spin-button {
     background-size: 28px;
     background-position: calc(100% - 3.5px) center;
   }
+}
+.select__group--100 {
+  width: 100%;
+}
+.select__group--100 select {
+  width: 100%;
 }
 .select__group--defalt.select__group--filled select {
   background-color: #EEEEEE;
@@ -2400,6 +2406,19 @@ input[type*='number']::-webkit-outer-spin-button {
   background-image: url(../images/common/down--disable.svg) !important;
   border-color: #EEEEEE;
   cursor: not-allowed;
+}
+.select__group .select__group__help {
+  display: block;
+  margin-top: 5px;
+  color: #939EA7;
+  font-size: 0.75rem;
+  font-style: normal;
+  line-height: 1;
+}
+.select__group .select__group__help--strong {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 0.875rem;
 }
 
 button,

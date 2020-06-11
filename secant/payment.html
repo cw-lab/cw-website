@@ -82,7 +82,7 @@
             </section>
             <form class="form">
                 <section class="group">
-                    <h3>付款資料</h3>
+                    <h3>訂單明細</h3>
                     <div class="content__group credit">
                         <ul class="content__list list-reset">
                             <li class="content__item--title">
@@ -101,9 +101,28 @@
                         </ul>
                     </div>
                 </section>
+                <section class="group">
+                    <h3>付款方式</h3>
+                    <div class="content__group">
+                        <div class="content__list">
+                            <div class="content__item__title mb10">信用卡號</div>
+                            <div class="select__group select__group--filled select__group--100 select__group--defalt">
+                                <select name="creditCardNo" id="creditCardNo">
+                                    <option value="" selected disabled>請選擇信用卡號</option>
+                                    <option value="0123">****-****-****-0123</option>
+                                    <option value="1234">****-****-****-1234</option>
+                                    <option value="2345">****-****-****-2345</option>
+                                    <option value="3456">****-****-****-3456</option>
+                                    <option value="new">新增信用卡</option>
+                                </select>
+                                <i class="select__group__help select__group__help--strong mb0">若您選擇新增其他信用卡，請點擊前往付款，將在下一頁請您填寫信用卡號</i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </form>
             <div class="text-right">
-                <button class="btn btn--contained">結帳</button>
+                <button class="btn btn--contained">前往付款</button>
             </div>
             <!-- <div class="loader">
 					<div class="loader__animate">

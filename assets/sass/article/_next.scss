@@ -1,17 +1,26 @@
 .article__next {
     // display: none;
     position: fixed;
+    overflow: hidden;
+    &.show {
+        overflow: visible;
+    }
     @include breakpoint(1140px) {
         top: 50%;
         left: calc(((100% - 700px) / 2) + 700px + 20px);
-        width: 180px;
+        width: 0;
         @include translateY(-50%);
+        &.show {
+            width: 180px;
+        }
     }
     @include breakpoint(max-width 1139px) {
         bottom: 60px;
         left: 20px;
-        right: 20px;
         height: auto !important;
+        &.show {
+            right: 20px;
+        }
     }
     z-index: 5;
     a {

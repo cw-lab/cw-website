@@ -68,13 +68,15 @@ $(window).on('load', function() {
             } else {
                 functionGroup.fadeOut(150);
             }
-            if ((scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+            if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                next.addClass('show');
                 next.children('a').fadeIn({
                     start: function() {
                         $(this).css('display', 'block');
                     }
                 });
             } else {
+                next.removeClass('show');
                 next.children('a').fadeOut();
             }
             if (scroll >= articleImgTop) {

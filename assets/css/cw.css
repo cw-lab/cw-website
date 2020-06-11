@@ -6246,25 +6246,34 @@ ul.article__provide li span i.icon {
 
 .article__next {
   position: fixed;
+  overflow: hidden;
   z-index: 5;
+}
+.article__next.show {
+  overflow: visible;
 }
 @media (min-width: 1140px) {
   .article__next {
     top: 50%;
     left: calc(((100% - 700px) / 2) + 700px + 20px);
-    width: 180px;
+    width: 0;
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+  }
+  .article__next.show {
+    width: 180px;
   }
 }
 @media (max-width: 1139px) {
   .article__next {
     bottom: 60px;
     left: 20px;
-    right: 20px;
     height: auto !important;
+  }
+  .article__next.show {
+    right: 20px;
   }
 }
 .article__next a {

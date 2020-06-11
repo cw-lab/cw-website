@@ -384,7 +384,7 @@
   border: 1px solid #D3D5D7;
 }
 .center__page .planning__group.border-1.active {
-  border: 2px solid #003a9f;
+  border: 1px solid #003a9f;
 }
 .center__page .planning__item {
   padding: 20px;
@@ -418,6 +418,11 @@
     padding-left: 20px;
   }
 }
+@media (max-width: 639px) {
+  .center__page .planning__item .planning__img + .planning__body {
+    padding-top: 20px;
+  }
+}
 .center__page .planning__item .planning__body {
   width: 100%;
 }
@@ -426,11 +431,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-}
-@media (max-width: 639px) {
-  .center__page .planning__item .planning__body {
-    padding-top: 20px;
   }
 }
 @media (max-width: 639px) {

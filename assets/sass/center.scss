@@ -260,7 +260,7 @@
         &.border-1 {
             border: 1px solid $gray-200;
             &.active {
-                border: 2px solid $surface;
+                border: 1px solid $surface;
             }
         }
     }
@@ -287,6 +287,9 @@
                     width: calc(100% - 170px);
                     padding-left: 20px;
                 }
+                @include breakpoint(max-width 639px) {
+                    padding-top: 20px;
+                }
             }
         }
         .planning__body {
@@ -295,9 +298,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-            }
-            @include breakpoint(max-width 639px) {
-                padding-top: 20px;
             }
         }
         .planning__deadline {

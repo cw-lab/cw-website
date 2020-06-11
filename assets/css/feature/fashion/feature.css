@@ -2304,9 +2304,6 @@ body.message__open {
 .message--check .message__txt h3 {
   line-height: 1.5;
 }
-.message--check .message__btn {
-  text-align: right;
-}
 .message--download {
   max-width: 560px;
   width: calc(100% - 30px);

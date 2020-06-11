@@ -215,7 +215,7 @@ $(function() {
             menubarUserClick = 0;
             searchClick = 0;
         });
-        adBlock();
+        // adBlock();
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .banner').outerHeight(),

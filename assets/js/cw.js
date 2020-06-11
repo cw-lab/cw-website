@@ -151,7 +151,7 @@ $(function() {
             container = $("header .container").outerWidth(),
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
-        adBlock();
+        // adBlock();
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {

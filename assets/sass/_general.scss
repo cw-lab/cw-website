@@ -113,11 +113,9 @@ textarea {
 body {
     position: relative;
     min-height: 100%;
-    // padding-bottom: 280px;
-    // @include breakpoint(768px) {
-    //     padding-bottom: 190px;
-    // }
+    // padding-bottom: 500px;
     @include breakpoint(1024px) {
+        padding-bottom: 550px;
         font-family: Roboto, 'Noto Sans TC', sans-serif;
         // font-weight: 300;
     }

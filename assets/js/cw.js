@@ -148,10 +148,16 @@ $(function() {
     });
     $(window).on('load', function() {
         var height = $(window).height(),
+            footerHeight = $('footer').outerHeight(),
             container = $("header .container").outerWidth(),
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
         // adBlock();
+        if (width >= 1024) {
+            $('body').css({ 'padding-bottom': footerHeight });
+        } else {
+            $('body').css({ 'padding-bottom': 0 });
+        }
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {
@@ -437,7 +443,14 @@ $(function() {
         });
         $(window).resize(function(width) {
             var width = $(window).width(),
-                height = $(window).height();
+                height = $(window).height(),
+                footerHeight = $('footer').outerHeight();
+            if (width >= 1024) {
+                $('body').css({ 'padding-bottom': footerHeight });
+            } else {
+                $('body').css({ 'padding-bottom': 0 });
+            }
+
             tabNavWidth(width);
             if (width >= 768) {
                 $(".plan__item__right").height(highestCol);

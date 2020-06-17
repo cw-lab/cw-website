@@ -225,10 +225,11 @@
 }
 .webaccess__page main article .step__group {
   padding-bottom: 20px;
+  justify-content: space-between;
 }
 .webaccess__page main article .step__item {
   position: relative;
-  padding-right: calc((100% - (65px * 3)) / 2);
+  padding-right: calc((100% - (66px * 3)) / 2);
   color: #939EA7;
 }
 .webaccess__page main article .step__item--past {

@@ -298,6 +298,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
+    padding-bottom: 550px;
     font-family: Roboto, 'Noto Sans TC', sans-serif;
   }
 }

@@ -199,10 +199,11 @@
                 &__group {
                     // padding-top: 20px;
                     padding-bottom: 20px;
+                    justify-content: space-between;
                 }
                 &__item {
                     position: relative;
-                    padding-right: calc((100% - (65px * 3)) / 2);
+                    padding-right: calc((100% - (66px * 3)) / 2);
                     color: $secondary;
                     &--past {
                         color: $primary;

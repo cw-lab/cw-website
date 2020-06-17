@@ -426,6 +426,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
+    padding-bottom: 550px;
     font-family: 'Roboto', 'Noto Sans TC', Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', "新細明體", 'PMingLiU', sans-serif;
     font-weight: 300;
   }
@@ -1881,7 +1882,16 @@ header .menubar__user i.icon-close::before {
 }
 
 footer {
+  position: relative;
+  width: 100%;
   background-color: #EEEEEE;
+}
+@media (min-width: 768px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 footer .container:last-child {
   padding-top: 30px;
@@ -1916,6 +1926,11 @@ footer .channel__group .channel {
   padding: 0;
   list-style: none;
   font-size: 0.875em;
+}
+@media (min-width: 1024px) {
+  footer .channel__group .channel {
+    display: block !important;
+  }
 }
 @media (min-width: 1024px) {
   footer .channel__group .channel li {
@@ -1959,7 +1974,7 @@ footer .channel__group .channel a:hover {
     position: absolute;
     top: 50%;
     right: 0;
-    font-family: "icomoon";
+    font-family: "cw_icon";
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);

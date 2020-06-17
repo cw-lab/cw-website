@@ -301,6 +301,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
+    padding-bottom: 550px;
     font-family: Roboto, 'Noto Sans TC', sans-serif;
   }
 }
@@ -2691,6 +2692,13 @@ footer {
   padding-bottom: 30px;
   background-color: #EEEEEE;
   z-index: 4;
+}
+@media (min-width: 1024px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 footer a {
   color: #171717;

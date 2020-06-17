@@ -1,5 +1,12 @@
 footer {
+    position: relative;
+    width: 100%;
     background-color: $gray-100;
+    @include breakpoint(768px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
     .container {
         &:last-child {
             padding-top: 30px;
@@ -31,6 +38,9 @@ footer {
         .channel {
             @include listrest(0, 0, none);
             font-size: 0.875em;
+            @include breakpoint(1024px) {
+                display: block !important;
+            }
             li {
                 @include breakpoint(1024px) {
                     margin-bottom: 5px;
@@ -64,11 +74,11 @@ footer {
                 margin-bottom: 0;
                 line-height: 1.5;
                 &::after {
-                    @include beforeafter('\e920', block);
+                    @include beforeafter($icon-down, block);
                     position: absolute;
                     top: 50%;
                     right: 0;
-                    font-family: "icomoon";
+                    font-family: $icomoon-font-family;
                     @include translateY(-50%);
                     @include transition(transform 0.3s);
                 }

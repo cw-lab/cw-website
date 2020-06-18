@@ -6118,6 +6118,14 @@ ul.article__provide li span i.icon {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
 }
+.article__content strong {
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .article__content strong {
+    font-weight: 500;
+  }
+}
 .article__content h2 {
   margin-top: 40px;
 }
@@ -6137,6 +6145,11 @@ ul.article__provide li span i.icon {
   width: 300px;
   padding: 2px 0;
   margin: 40px auto;
+}
+@media (min-width: 1024px) {
+  .article__content blockquote {
+    width: 500px;
+  }
 }
 .article__content blockquote p {
   font-weight: 600;

@@ -118,6 +118,12 @@
         margin-top: 1.15em;
         margin-bottom: 1.15em;
     }
+    strong {
+        font-weight: 600;
+        @include breakpoint(1024px) {
+            font-weight: 500;
+        }
+    }
     h2 {
         margin-top: 40px;
     }
@@ -137,6 +143,9 @@
         width: 300px;
         padding: 2px 0;
         margin: 40px auto;
+        @include breakpoint(1024px) {
+            width: 500px;
+        }
         p {
             font-weight: 600;
             @include breakpoint(1024px) {

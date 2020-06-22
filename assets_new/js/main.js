@@ -221,6 +221,9 @@ $(function() {
             menubarUserClick = 0;
             searchClick = 0;
         });
+        $('.lightbox .lightboxbg, .lightbox a.close').click(function() {
+            $('.lightbox').fadeOut();
+        });
         // adBlock();
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),

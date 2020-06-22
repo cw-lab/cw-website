@@ -220,10 +220,27 @@ article {
         max-width: 100%;
     }
     .infogram-embed {
-        padding: 10px 20px 0;
-        border: 1px solid $gray-200;
+        position: relative;
+        padding-top: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
         @include breakpoint(1024px) {
-            padding: 20px 40px 0;
+            padding-top: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0px;
+            left: -20px;
+            width: calc(100% + 40px);
+            height: 100%;
+            border: 1px solid $gray-200;
+            @include breakpoint(1024px) {
+                left: -40px;
+                width: calc(100% + 80px);
+            }
         }
     }
     &.article__level--1 {

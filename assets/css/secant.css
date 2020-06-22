@@ -191,6 +191,22 @@
 .webaccess__page header {
   border-bottom: 1px solid #D3D5D7;
 }
+.webaccess__page header .container > .flex {
+  align-items: center;
+}
+.webaccess__page header .container ul.member__list + .member__list {
+  margin-left: 30px;
+}
+.webaccess__page header .container ul.member__list li + li {
+  margin-left: 30px;
+}
+.webaccess__page header .container ul.member__list a {
+  color: #171717;
+  font-size: 1rem;
+}
+.webaccess__page header .container ul.member__list a:hover {
+  color: #D60C18;
+}
 .webaccess__page .message {
   font-size: 0.875em;
   line-height: 30px;

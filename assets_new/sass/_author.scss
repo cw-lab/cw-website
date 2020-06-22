@@ -61,4 +61,91 @@
             }
         }
     }
+    .lightbox {
+        position: relative;
+        z-index: 5;
+        &.statusA {
+            .lightboxbg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $black;
+                @include opacity(0.4);
+            }
+            .lightBoxContnt {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                max-width: 400px;
+                width: calc(100% - 30px);
+                padding: 30px;
+                background: #fff;
+                @include translate(-50%, -50%);
+                .close {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    font-size: 1rem;
+                    padding: 10px;
+                    cursor: pointer;
+                    &::before {
+                        @include beforeafter($icon-cancel, block);
+                        font-family: $icomoon-font-family;
+                        line-height: 1;
+                    }
+                    @include breakpoint(max-width 1023px) {
+                        font-weight: bold;
+                    }
+                    @include breakpoint(1024px) {
+                        top: 10px;
+                        right: 10px;
+                        font-size: 1.5rem;
+                    }
+                }
+                >p {
+                    margin: 0 0 24px;
+                    padding: 0 30px;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    text-align: center;
+                }
+                >.btn a {
+                    @include containbtn(table, 0.725rem, $primary, 1rem);
+                    margin: auto;
+                }
+                >span {
+                    display: block;
+                    padding-top: 10px;
+                    text-align: center;
+                    a {
+                        color: $surface;
+                        text-decoration: underline;
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        &.statusB {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            max-width: 400px;
+            width: calc(100% - 30px);
+            padding: 30px;
+            color: $white;
+            font-size: 1.125rem;
+            line-height: 1.25;
+            background-color: $gray-500;
+            @include translate(-50%, -50%);
+            z-index: 10;
+            p {
+                margin: 0;
+            }
+        }
+    }
 }

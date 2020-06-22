@@ -2686,18 +2686,17 @@ header .menubar__user i.icon-close::before {
 }
 
 footer {
-  position: relative;
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #EEEEEE;
-  z-index: 4;
 }
 @media (min-width: 1024px) {
   footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: 4;
   }
 }
 footer a {

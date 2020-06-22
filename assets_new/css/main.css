@@ -5116,6 +5116,116 @@ ul.article__keyword li a::-moz-focus-inner {
     display: -webkit-box !important;
   }
 }
+.author-page .lightbox {
+  position: relative;
+  z-index: 5;
+}
+.author-page .lightbox.statusA .lightboxbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+.author-page .lightbox.statusA .lightBoxContnt {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  width: calc(100% - 30px);
+  padding: 30px;
+  background: #fff;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.author-page .lightbox.statusA .lightBoxContnt .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+.author-page .lightbox.statusA .lightBoxContnt .close::before {
+  content: "";
+  display: block;
+  font-family: "cw_icon";
+  line-height: 1;
+}
+@media (max-width: 1023px) {
+  .author-page .lightbox.statusA .lightBoxContnt .close {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1024px) {
+  .author-page .lightbox.statusA .lightBoxContnt .close {
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+  }
+}
+.author-page .lightbox.statusA .lightBoxContnt > p {
+  margin: 0 0 24px;
+  padding: 0 30px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+}
+.author-page .lightbox.statusA .lightBoxContnt > .btn a {
+  display: table;
+  padding: 0.725rem 1.45rem;
+  min-width: 120px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+  background-color: #D60C18;
+  border: 1px solid #D60C18;
+  margin: auto;
+}
+.author-page .lightbox.statusA .lightBoxContnt > .btn a:hover {
+  background-color: #be0b15;
+  border-color: #be0b15;
+}
+.author-page .lightbox.statusA .lightBoxContnt > span {
+  display: block;
+  padding-top: 10px;
+  text-align: center;
+}
+.author-page .lightbox.statusA .lightBoxContnt > span a {
+  color: #003a9f;
+  text-decoration: underline;
+}
+.author-page .lightbox.statusA .lightBoxContnt > span a:hover {
+  color: #D60C18;
+}
+.author-page .lightbox.statusB {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 400px;
+  width: calc(100% - 30px);
+  padding: 30px;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.25;
+  background-color: #48545D;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.author-page .lightbox.statusB p {
+  margin: 0;
+}
 
 iframe[src*='etu.cw.com.tw'] {
   bottom: 0;

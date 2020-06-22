@@ -168,6 +168,28 @@
     }
     header {
         border-bottom: 1px solid $gray-200;
+        .container {
+            >.flex {
+                align-items: center;
+            }
+            ul.member__list {
+                +.member__list {
+                    margin-left: 30px;
+                }
+                li {
+                    +li {
+                        margin-left: 30px;
+                    }
+                }
+                a {
+                    color: $black;
+                    font-size: 1rem;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
     }
     .message {
         font-size: 0.875em;

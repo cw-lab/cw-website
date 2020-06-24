@@ -15,7 +15,8 @@ aside.menubar--left ul {
   margin: 0;
 }
 
-.article__group__item__text h1 a, .article__group__item__text h2 a {
+.article__group__item__text h1 a,
+.article__group__item__text h2 a {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -3623,7 +3624,8 @@ a:focus {
   width: 100%;
   height: auto;
 }
-.article__group__item__img > a::before, .article__group__item__img > a > i.icon {
+.article__group__item__img > a::before,
+.article__group__item__img > a > i.icon {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -3686,19 +3688,27 @@ a:focus {
   margin-top: 0;
   margin-bottom: 0;
 }
-.article__group__item__text h1, .article__group__item__text h2, .article__group__item__text .h3 {
+.article__group__item__text h1,
+.article__group__item__text h2,
+.article__group__item__text .h3 {
   width: 100%;
   margin-top: 5px;
 }
-.article__group__item__text h1 a, .article__group__item__text h2 a, .article__group__item__text .h3 a {
+.article__group__item__text h1 a,
+.article__group__item__text h2 a,
+.article__group__item__text .h3 a {
   display: block;
   color: #171717;
 }
-.article__group__item__text h1 a:hover, .article__group__item__text h2 a:hover, .article__group__item__text .h3 a:hover {
+.article__group__item__text h1 a:hover,
+.article__group__item__text h2 a:hover,
+.article__group__item__text .h3 a:hover {
   color: #D60C18;
 }
 @media (max-width: 767px) {
-  .article__group__item__text h1, .article__group__item__text h2, .article__group__item__text .h3 {
+  .article__group__item__text h1,
+  .article__group__item__text h2,
+  .article__group__item__text .h3 {
     font-size: 22px;
   }
 }
@@ -3724,7 +3734,7 @@ a:focus {
   height: 3rem;
   color: #fff;
   font-size: 3rem;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   font-weight: bold;
   line-height: 1;
   text-shadow: 0 0 20px rgba(23, 23, 23, 0.25);
@@ -4002,7 +4012,7 @@ a:focus {
   z-index: -1;
 }
 .label--check span.label__radio__mark::after {
-  content: "\e929";
+  content: "";
   position: absolute;
   display: none;
   top: 50%;
@@ -4010,7 +4020,7 @@ a:focus {
   width: 10px;
   height: 10px;
   color: #fff;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   font-size: 12px;
   font-weight: bold;
   line-height: 1;
@@ -5863,7 +5873,7 @@ main .ad.ad--970by250.opened {
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  z-index: 3;
+  z-index: 5;
 }
 @media (max-width: 1023px) {
   .article__function {
@@ -6099,9 +6109,11 @@ ul.article__provide li span i.icon {
   vertical-align: middle;
 }
 
-.article__content > * {
-  position: relative;
-  z-index: 1;
+@media (min-width: 1024px) {
+  .article__content > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 .article__content p,
 .article__content ul,

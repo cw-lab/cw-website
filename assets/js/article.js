@@ -63,7 +63,7 @@ $(window).on('load', function() {
             next.css({
                 'height': functionGroupHeight
             })
-            if ((scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+            if ((width >= 1024) && (scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 functionGroup.fadeIn(150);
             } else {
                 functionGroup.fadeOut(150);

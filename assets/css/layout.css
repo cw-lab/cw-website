@@ -10,11 +10,23 @@ main .tab--list .tab__content__pane li a {
   overflow: hidden;
 }
 
-main .article__text p a, main .story__set p a, main .article__text ul a, main .story__set ul a, main .article__text ol a, main .story__set ol a, main .article__text blockquote a, main .story__set blockquote a {
+main .article__text p a, main .story__set p a,
+main .article__text ul a,
+main .story__set ul a,
+main .article__text ol a,
+main .story__set ol a,
+main .article__text blockquote a,
+main .story__set blockquote a {
   color: #003a9f;
   text-decoration: underline;
 }
-main .article__text p a:hover, main .story__set p a:hover, main .article__text ul a:hover, main .story__set ul a:hover, main .article__text ol a:hover, main .story__set ol a:hover, main .article__text blockquote a:hover, main .story__set blockquote a:hover {
+main .article__text p a:hover, main .story__set p a:hover,
+main .article__text ul a:hover,
+main .story__set ul a:hover,
+main .article__text ol a:hover,
+main .story__set ol a:hover,
+main .article__text blockquote a:hover,
+main .story__set blockquote a:hover {
   color: #D60C18;
 }
 
@@ -213,7 +225,7 @@ main .article__info__breadcrumb li + li::before {
   display: inline-block;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   font-size: 0.75em;
   vertical-align: middle;
 }
@@ -450,7 +462,7 @@ main .article__text blockquote::before, main .article__text blockquote::after {
   display: block;
   position: absolute;
   font-size: 2em;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   line-height: 2em;
   text-shadow: 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff, 0 0 12px #fff;
 }
@@ -475,7 +487,6 @@ main .article__text hr {
   background: -moz-linear-gradient(90deg, #D60C18 0%, #003a9f 100%);
   background: -webkit-linear-gradient(90deg, #D60C18 0%, #003a9f 100%);
   background: linear-gradient(90deg, #d60c18 0%, #003a9f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary",endColorstr="$surface",GradientType=1);
   border: 0;
 }
 main .article__text .article__box {
@@ -487,7 +498,9 @@ main .article__text .article__box {
 main .article__text .article__box::before, main .article__text .article__box::after {
   clear: both;
 }
-main .article__text .article__box p, main .article__text .article__box ul, main .article__text .article__box ol {
+main .article__text .article__box p,
+main .article__text .article__box ul,
+main .article__text .article__box ol {
   font-size: 1rem;
 }
 @media (min-width: 600px) {
@@ -590,30 +603,42 @@ main .article__keyword ul li a:hover {
   color: #9D0505;
   text-decoration: underline;
 }
-main .tab--list .tab__nav li, main .tab--recommend .tab__nav li, main .tab--video .tab__nav li {
+main .tab--list .tab__nav li,
+main .tab--recommend .tab__nav li,
+main .tab--video .tab__nav li {
   width: 100%;
 }
-main .tab--list.tab--one .tab__nav, main .tab--recommend.tab--one .tab__nav, main .tab--video.tab--one .tab__nav {
+main .tab--list.tab--one .tab__nav,
+main .tab--recommend.tab--one .tab__nav,
+main .tab--video.tab--one .tab__nav {
   position: relative;
   border: solid #D3D5D7;
   border-width: 1px 1px 0;
 }
 @media (min-width: 768px) {
-  main .tab--list.tab--one .tab__nav, main .tab--recommend.tab--one .tab__nav, main .tab--video.tab--one .tab__nav {
+  main .tab--list.tab--one .tab__nav,
+  main .tab--recommend.tab--one .tab__nav,
+  main .tab--video.tab--one .tab__nav {
     border-width: 1px;
   }
 }
-main .tab--list.tab--one .tab__nav > ul, main .tab--recommend.tab--one .tab__nav > ul, main .tab--video.tab--one .tab__nav > ul {
+main .tab--list.tab--one .tab__nav > ul,
+main .tab--recommend.tab--one .tab__nav > ul,
+main .tab--video.tab--one .tab__nav > ul {
   position: relative;
   display: flex;
   padding: 0;
 }
 @media (min-width: 768px) {
-  main .tab--list.tab--one .tab__nav > ul, main .tab--recommend.tab--one .tab__nav > ul, main .tab--video.tab--one .tab__nav > ul {
+  main .tab--list.tab--one .tab__nav > ul,
+  main .tab--recommend.tab--one .tab__nav > ul,
+  main .tab--video.tab--one .tab__nav > ul {
     margin: -1px;
   }
 }
-main .tab--list.tab--one .tab__nav > ul li, main .tab--recommend.tab--one .tab__nav > ul li, main .tab--video.tab--one .tab__nav > ul li {
+main .tab--list.tab--one .tab__nav > ul li,
+main .tab--recommend.tab--one .tab__nav > ul li,
+main .tab--video.tab--one .tab__nav > ul li {
   position: relative;
   width: 100%;
   padding: 5px 1em;
@@ -623,10 +648,15 @@ main .tab--list.tab--one .tab__nav > ul li, main .tab--recommend.tab--one .tab__
   border-bottom: 0;
   cursor: auto;
 }
-main .tab--list.tab--one .tab__nav li:hover, main .tab--list.tab--one .tab__nav li.active, main .tab--recommend.tab--one .tab__nav li:hover, main .tab--recommend.tab--one .tab__nav li.active, main .tab--video.tab--one .tab__nav li:hover, main .tab--video.tab--one .tab__nav li.active {
+main .tab--list.tab--one .tab__nav li:hover, main .tab--list.tab--one .tab__nav li.active,
+main .tab--recommend.tab--one .tab__nav li:hover,
+main .tab--recommend.tab--one .tab__nav li.active,
+main .tab--video.tab--one .tab__nav li:hover,
+main .tab--video.tab--one .tab__nav li.active {
   color: #171717;
 }
-main .tab--list .tab__content__pane ol, main .tab--list .tab__content__pane ul {
+main .tab--list .tab__content__pane ol,
+main .tab--list .tab__content__pane ul {
   margin: 0;
   padding: 0;
 }
@@ -687,7 +717,7 @@ main .tab--recommend .card__group::after {
   main .tab--recommend .card {
     float: left;
     margin-left: 1rem;
-    width: calc( (100% - 2rem) / 3 );
+    width: calc( (100% - 2rem) / 3);
   }
   main .tab--recommend .card:nth-last-child(-n+3) {
     margin-bottom: 0;
@@ -854,7 +884,8 @@ main .story__title--dark {
   color: #fff;
   background-color: rgba(57, 65, 72, 0.25);
 }
-main .story__title--dark h1, main .story__title--dark p {
+main .story__title--dark h1,
+main .story__title--dark p {
   color: #fff;
   text-shadow: 0 0 10px rgba(57, 65, 72, 0.25);
 }
@@ -955,11 +986,11 @@ main .card__group {
   }
 }
 main .card__group--3col .card__item {
-  width: calc( (100% - (2rem)) / 3 );
+  width: calc( (100% - (2rem)) / 3);
 }
 @media (min-width: 768px) {
   main .card__group--3col .card__item {
-    width: calc( (100% - (2rem)) / 3 );
+    width: calc( (100% - (2rem)) / 3);
   }
   main .card__group--3col .card__item:nth-child(3n) {
     margin-right: 0;

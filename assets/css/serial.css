@@ -71,7 +71,7 @@
 }
 .serial__page main article .step__item::before {
   content: "\e933";
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   position: absolute;
   top: 50%;
   left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px);
@@ -290,7 +290,8 @@
 .serial__page section.group .content__group .content__total__amount span {
   padding-left: 1em;
 }
-.serial__page section.group h3, .serial__page section.group .h3 {
+.serial__page section.group h3,
+.serial__page section.group .h3 {
   margin-bottom: 5px;
 }
 .serial__page section.group[class*='--disabled'] h3,

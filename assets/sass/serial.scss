@@ -1,5 +1,6 @@
 @import "_basic";
 @import "_sheet";
+@import "_variable";
 .serial__page {
     position: relative;
     min-height: 100vh;
@@ -58,7 +59,7 @@
                     }
                     &::before {
                         content: "\e933";
-                        font-family: 'icomoon';
+                        font-family: $icomoon-font-family;
                         position: absolute;
                         top: 50%;
                         left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px);
@@ -248,7 +249,8 @@
                     }
                 }
             }
-            h3, .h3 {
+            h3,
+            .h3 {
                 margin-bottom: 5px;
             }
             &[class*='--disabled'] {

@@ -1508,7 +1508,7 @@ a:focus {
   z-index: -1;
 }
 .label--check span.label__radio__mark::after {
-  content: "\e929";
+  content: "";
   position: absolute;
   display: none;
   top: 50%;
@@ -1516,7 +1516,7 @@ a:focus {
   width: 10px;
   height: 10px;
   color: #fff;
-  font-family: 'icomoon';
+  font-family: "cw_icon";
   font-size: 12px;
   font-weight: bold;
   line-height: 1;

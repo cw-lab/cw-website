@@ -12,6 +12,7 @@ body {
 
 .index-page {
     min-width: auto;
+    padding-bottom: 0 !important;
     .container {
         @media (min-width: 768px) {
             width: 750px;
@@ -100,6 +101,10 @@ body {
             width: 100%;
         }
     }
+}
+
+footer {
+    position: static;
 }
 
 .about-page {

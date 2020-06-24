@@ -72,7 +72,6 @@
         .planning__group {
             .form__group {
                 max-width: none;
-                border-top: 1px solid $gray-200;
                 padding-bottom: 20px;
                 @include breakpoint(1024px) {
                     padding-bottom: 30px;
@@ -102,7 +101,7 @@
                     margin-top: 20px;
                 }
             }
-            .form__edit {
+            >.form__edit {
                 font-size: 1rem;
                 >* {
                     line-height: 1.5;
@@ -226,6 +225,28 @@
                 }
             }
         }
+        .form--remark {
+            margin: 30px 20px 20px;
+            padding: 12px 20px;
+            background-color: $gray-100;
+            @include breakpoint(1024px) {
+                margin: 30px 30px 20px;
+            }
+            +.form {
+                margin-top: 20px;
+            }
+            i.icon {
+                margin-right: 10px;
+                color: $surface;
+                font-size: 1.25rem;
+                line-height: 1.2;
+            }
+            >.form__edit>.flex {
+                span {
+                    width: calc(100% - 1.25rem - 10px);
+                }
+            }
+        }
         .search {
             width: 100%;
             font-size: 0;
@@ -273,6 +294,9 @@
         @include breakpoint(1024px) {
             padding: 15px 30px;
         }
+        +.form__group {
+            border-top: 1px solid $gray-200;
+        }
         .planning__img {
             @include breakpoint(max-width 639px) {
                 margin-left: auto;
@@ -280,7 +304,7 @@
             }
             +.planning__body {
                 @include breakpoint(640px) {
-                    width: calc(100% - 170px);
+                    width: calc(100% - 138px);
                     padding-left: 20px;
                 }
                 @include breakpoint(max-width 639px) {

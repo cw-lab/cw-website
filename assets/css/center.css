@@ -168,7 +168,6 @@
 }
 .center__page article .planning__group .form__group {
   max-width: none;
-  border-top: 1px solid #D3D5D7;
   padding-bottom: 20px;
 }
 @media (min-width: 1024px) {
@@ -200,18 +199,18 @@
 .center__page article .form > .form__group label + label {
   margin-top: 20px;
 }
-.center__page article .form .form__edit {
+.center__page article .form > .form__edit {
   font-size: 1rem;
 }
-.center__page article .form .form__edit > * {
+.center__page article .form > .form__edit > * {
   line-height: 1.5;
 }
-.center__page article .form .form__edit > .h3 {
+.center__page article .form > .form__edit > .h3 {
   position: relative;
   padding-right: 1.25em;
   font-weight: 600;
 }
-.center__page article .form .form__edit > .h3 i.icon {
+.center__page article .form > .form__edit > .h3 i.icon {
   position: absolute;
   top: 50%;
   right: 0;
@@ -221,7 +220,7 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.center__page article .form .form__edit:hover {
+.center__page article .form > .form__edit:hover {
   background-color: #fafafa;
 }
 .center__page article .form .form__value {
@@ -340,6 +339,28 @@
   min-width: auto;
   width: 100%;
 }
+.center__page article .form--remark {
+  margin: 30px 20px 20px;
+  padding: 12px 20px;
+  background-color: #EEEEEE;
+}
+@media (min-width: 1024px) {
+  .center__page article .form--remark {
+    margin: 30px 30px 20px;
+  }
+}
+.center__page article .form--remark + .form {
+  margin-top: 20px;
+}
+.center__page article .form--remark i.icon {
+  margin-right: 10px;
+  color: #003a9f;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.center__page article .form--remark > .form__edit > .flex span {
+  width: calc(100% - 1.25rem - 10px);
+}
 .center__page article .search {
   width: 100%;
   font-size: 0;
@@ -400,6 +421,9 @@
     padding: 15px 30px;
   }
 }
+.center__page .planning__item + .form__group {
+  border-top: 1px solid #D3D5D7;
+}
 @media (max-width: 639px) {
   .center__page .planning__item .planning__img {
     margin-left: auto;
@@ -408,7 +432,7 @@
 }
 @media (min-width: 640px) {
   .center__page .planning__item .planning__img + .planning__body {
-    width: calc(100% - 170px);
+    width: calc(100% - 138px);
     padding-left: 20px;
   }
 }

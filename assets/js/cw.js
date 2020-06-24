@@ -39,6 +39,7 @@ $(function() {
         height = $(window).height(),
         originTitle = $('title').text(),
         originLink = window.location.pathname.split("/").pop(),
+        originString = window.location.search,
         // 判斷系統
         iphone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null),
         android = (navigator.userAgent.match(/android/i) != null),
@@ -144,7 +145,7 @@ $(function() {
     }
     $('main').children('article').eq(0).attr({
         'data-title': originTitle,
-        'data-link': originLink
+        'data-link': originLink + originString
     });
     $(window).on('load', function() {
         var height = $(window).height(),

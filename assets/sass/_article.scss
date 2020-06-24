@@ -105,8 +105,10 @@
 @import "article/_detail";
 .article__content {
     >* {
-        position: relative;
-        z-index: 1;
+        @include breakpoint(1024px) {
+            position: relative;
+            z-index: 1;
+        }
     }
     p,
     ul,

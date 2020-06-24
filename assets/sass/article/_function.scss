@@ -4,7 +4,7 @@
     top: 50%;
     left: calc((100% - 970px) / 2);
     @include translateY(-50%);
-    z-index: 3;
+    z-index: 5;
     @include breakpoint(max-width 1023px) {
         display: none !important;
     }

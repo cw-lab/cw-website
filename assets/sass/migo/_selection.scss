@@ -128,7 +128,7 @@
                     z-index: -1;
                 }
                 &::after {
-                    content: "\e929";
+                    content: $icon-check;
                     position: absolute;
                     display: none;
                     top: 50%;
@@ -136,7 +136,7 @@
                     width: 10px;
                     height: 10px;
                     color: $white;
-                    font-family: 'icomoon';
+                    font-family: $icomoon-font-family;
                     font-size: 12px;
                     font-weight: bold;
                     line-height: 1;

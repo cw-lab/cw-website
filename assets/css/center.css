@@ -193,10 +193,11 @@
   max-width: none;
   margin-top: 10px;
 }
-.center__page article .form > .form__group .btn--small {
+.center__page article .form > .form__group label + label {
   margin-top: 20px;
 }
-.center__page article .form > .form__group label + label {
+.center__page article .form > .form__group .btn--small,
+.center__page article .form > .select__group .btn--small {
   margin-top: 20px;
 }
 .center__page article .form > .form__edit {
@@ -341,12 +342,13 @@
 }
 .center__page article .form--remark {
   margin: 30px 20px 20px;
-  padding: 12px 20px;
+  padding: 12px;
   background-color: #EEEEEE;
 }
 @media (min-width: 1024px) {
   .center__page article .form--remark {
     margin: 30px 30px 20px;
+    padding: 12px 20px;
   }
 }
 .center__page article .form--remark + .form {
@@ -358,8 +360,15 @@
   font-size: 1.25rem;
   line-height: 1.2;
 }
-.center__page article .form--remark > .form__edit > .flex span {
-  width: calc(100% - 1.25rem - 10px);
+@media (max-width: 1023px) {
+  .center__page article .form--remark i.icon {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .center__page article .form--remark > .form__edit > .flex span {
+    width: calc(100% - 1.25rem - 10px);
+  }
 }
 .center__page article .search {
   width: 100%;
@@ -468,14 +477,21 @@
     margin-top: 20px;
   }
 }
-.center__page .table__group {
+.center__page .table {
   width: 100%;
   font-size: 1.125rem;
 }
 @media (min-width: 1024px) {
-  .center__page .table__group {
+  .center__page .table {
     display: table;
   }
+}
+.center__page .table__group.border-1 {
+  border: 1px solid #D3D5D7;
+}
+.center__page .table__group .w-100 {
+  display: block;
+  width: 100%;
 }
 @media (min-width: 1024px) {
   .center__page .table__group .table__row {
@@ -528,10 +544,6 @@
 }
 .center__page .table__group .table__item .btn {
   font-size: 1.125rem;
-}
-.center__page .table__note {
-  margin-top: 15px;
-  color: #939EA7;
 }
 .center__page .card__group {
   display: flex;

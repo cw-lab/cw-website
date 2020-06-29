@@ -94,10 +94,13 @@
             >.form__group {
                 max-width: none;
                 margin-top: 10px;
-                .btn--small {
+                label+label {
                     margin-top: 20px;
                 }
-                label+label {
+            }
+            >.form__group,
+            >.select__group {
+                .btn--small {
                     margin-top: 20px;
                 }
             }
@@ -227,10 +230,11 @@
         }
         .form--remark {
             margin: 30px 20px 20px;
-            padding: 12px 20px;
+            padding: 12px;
             background-color: $gray-100;
             @include breakpoint(1024px) {
                 margin: 30px 30px 20px;
+                padding: 12px 20px;
             }
             +.form {
                 margin-top: 20px;
@@ -240,10 +244,15 @@
                 color: $surface;
                 font-size: 1.25rem;
                 line-height: 1.2;
+                @include breakpoint(max-width 1023px) {
+                    display: none;
+                }
             }
             >.form__edit>.flex {
                 span {
-                    width: calc(100% - 1.25rem - 10px);
+                    @include breakpoint(1024px) {
+                        width: calc(100% - 1.25rem - 10px);
+                    }
                 }
             }
         }
@@ -339,11 +348,18 @@
         }
     }
     .table {
+        width: 100%;
+        font-size: 1.125rem;
+        @include breakpoint(1024px) {
+            display: table;
+        }
         &__group {
-            width: 100%;
-            font-size: 1.125rem;
-            @include breakpoint(1024px) {
-                display: table;
+            &.border-1 {
+                border: 1px solid $gray-200;
+            }
+            .w-100 {
+                display: block;
+                width: 100%;
             }
             .table__row {
                 @include breakpoint(1024px) {
@@ -393,10 +409,6 @@
                     font-size: 1.125rem;
                 }
             }
-        }
-        &__note {
-            margin-top: 15px;
-            color: $secondary;
         }
     }
     .card__group {

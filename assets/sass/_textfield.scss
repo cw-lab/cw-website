@@ -299,9 +299,7 @@ input[type*='number']::-webkit-outer-spin-button {
                     background-color: $gray-100;
                     background-image: url(../images/common/down.svg);
                     border-color: $gray-100;
-                }
-                &:hover {
-                    select {
+                    &:hover {
                         color: $white;
                         background-color: $surface;
                         background-image: url(../images/common/down--white.svg);
@@ -313,9 +311,7 @@ input[type*='number']::-webkit-outer-spin-button {
                     background-color: $white;
                     background-image: url(../images/common/down.svg);
                     border-color: $secondary;
-                }
-                &:hover {
-                    select {
+                    &:hover {
                         color: $surface;
                         background-image: url(../images/common/down--surface.svg);
                     }

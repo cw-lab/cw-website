@@ -104,12 +104,6 @@
 @import "article/_function";
 @import "article/_detail";
 .article__content {
-    >* {
-        @include breakpoint(1024px) {
-            position: relative;
-            z-index: 1;
-        }
-    }
     p,
     ul,
     ol {

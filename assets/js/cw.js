@@ -53,6 +53,9 @@ $(function() {
     if (chrome) {
         $("body").addClass("chrome");
     }
+    if (android || ipad || iphone) {
+        $("body").addClass("mobile__device");
+    }
     if (android) {
         $("body").addClass("android");
     }
@@ -88,8 +91,8 @@ $(function() {
             $('.menubar--left').removeClass('opened');
             $('.black').removeClass('opened menubar--left');
         }
-        if ($(this).hasClass("message--dialogs")) {
-            $('.black').removeClass('opened message--dialogs');
+        if ($(this).hasClass("dialogs")) {
+            $('.black').removeClass('opened dialogs');
             $('.message--dialogs').fadeOut(200);
         }
         if ($(this).hasClass("search__opened")) {

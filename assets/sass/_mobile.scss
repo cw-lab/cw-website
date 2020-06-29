@@ -1,3 +1,12 @@
+body.mobile__device {
+    .article__content {
+        >* {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}
+
 body.android {
     font-family: Roboto, 'Noto Sans TC', sans-serif;
     h1 {

@@ -409,6 +409,24 @@
                     font-size: 1.125rem;
                 }
             }
+            .table__btn {
+                display: none;
+            }
+        }
+        &.table__ellipsis {
+            +.table__btn {
+                display: block;
+            }
+            @include breakpoint(1024px) {
+                .table__row:nth-child(6)~.table__row {
+                    display: none;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                .table__row:nth-child(4)~.table__row {
+                    display: none;
+                }
+            }
         }
     }
     .card__group {

@@ -545,6 +545,22 @@
 .center__page .table__group .table__item .btn {
   font-size: 1.125rem;
 }
+.center__page .table__group .table__btn {
+  display: none;
+}
+.center__page .table.table__ellipsis + .table__btn {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .center__page .table.table__ellipsis .table__row:nth-child(6) ~ .table__row {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .center__page .table.table__ellipsis .table__row:nth-child(4) ~ .table__row {
+    display: none;
+  }
+}
 .center__page .card__group {
   display: flex;
   flex-wrap: wrap;

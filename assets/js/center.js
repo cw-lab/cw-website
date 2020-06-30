@@ -1,4 +1,28 @@
 $(function() {
+    var width = $(window).width();
+
+    function tableHistory(width) {
+        if (width >= 1024) {
+            var limit = 5;
+        } else {
+            var limit = 3;
+        }
+        $('.table').each(function() {
+            var tableRowLength = $(this).children('.table__row').length - 1; //剪掉table__header
+            if (tableRowLength >= limit) {
+                $(this).addClass('table__ellipsis');
+                $(this).siblings('.table__btn').show();
+            } else {
+                $(this).removeClass('table__ellipsis');
+                $(this).siblings('.table__btn').hide();
+            }
+        })
+    };
+    tableHistory(width);
+    $('.table__btn').click(function() {
+        $(this).hide();
+        $(this).siblings('.table').removeClass('table__ellipsis');
+    })
     $('.list__item--video').each(function() {
         var ytcode = $(this).data('ytcode');
         $(this).click(function() {
@@ -72,6 +96,8 @@ $(function() {
         $(this).parent().parent().addClass('now');
     });
     $(window).resize(function(width) {
+        var width = $(window).width();
+        tableHistory(width);
         phaseText();
     })
 });

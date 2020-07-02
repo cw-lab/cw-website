@@ -5796,6 +5796,11 @@ main .ad.ad--970by250.opened {
   color: #D60C18;
 }
 
+main {
+  position: relative;
+  z-index: 0;
+}
+
 .article__label {
   margin-top: 10px;
   margin-bottom: -10px;
@@ -6514,6 +6519,7 @@ article .infogram-embed::after {
   width: calc(100% + 40px);
   height: 100%;
   border: 1px solid #D3D5D7;
+  z-index: -1;
 }
 @media (min-width: 1024px) {
   article .infogram-embed::after {

@@ -88,10 +88,16 @@ $(window).on('load', function() {
                 articleIndexTop = articleIndex.offset().top,
                 articleIndexH1 = articleIndex.children('.article__head').children().children('h1').text(),
                 articleIndexTitle = articleIndex.attr('data-title'),
-                articleIndexLink = articleIndex.attr('data-link');
+                articleIndexLink = articleIndex.attr('data-link'),
+                articleIndexShare2fb = articleIndex.attr('data-share-fb'),
+                articleIndexShare2line = articleIndex.attr('data-share-line'),
+                articleIndexShare2mail = articleIndex.attr('data-share-mail');
 
             if ((scroll > articleIndexTop) && (scroll < (articleIndexTop + articleIndex.outerHeight()))) {
                 $('header .title').text(articleIndexH1);
+                $('header .article__share.mobile li.tooltips--facebook a').attr('onclick', articleIndexShare2fb);
+                $('header .article__share.mobile li.tooltips--line a').attr('href', articleIndexShare2line);
+                $('header .article__share.mobile li:last-child a').attr('href', articleIndexShare2mail);
                 $('title').text(articleIndexTitle);
                 history.replaceState('', articleIndexTitle, articleIndexLink);
             }

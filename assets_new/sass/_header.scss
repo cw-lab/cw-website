@@ -67,17 +67,13 @@ header {
                 a.logo {
                     position: absolute;
                     top: 0;
-                    left: 60px;
-                    @include transition(top 0.3s);
-                }
-                &.scroll {
-                    .item__scroll {
-                        top: -40px;
+                    left: 50px;
+                    z-index: 1;
+                    @include breakpoint(375px) {
+                        left: 55px;
                     }
-                    a.logo {
-                        @include breakpoint(max-width 1023px) {
-                            top: -55px;
-                        }
+                    @include breakpoint(1024px) {
+                        left: 60px;
                     }
                 }
             }
@@ -137,13 +133,24 @@ header {
     }
     .btn {
         font-size: 1rem;
-        @include breakpoint(max-width 1023px) {
-            display: none !important;
+        &.btn--small {
+            @include breakpoint(max-width 1023px) {
+                position: absolute;
+                right: 100%;
+                bottom: 50%;
+                @include translateY(50%);
+            }
         }
     }
     .menubar__user {
         position: relative;
-        margin-left: 30px;
+        margin-left: 10px;
+        @include breakpoint(375px) {
+            margin-left: 15px;
+        }
+        @include breakpoint(1024px) {
+            margin-left: 30px;
+        }
         i {
             font-size: 1.3125rem;
             &.icon-close::before {

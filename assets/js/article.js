@@ -27,12 +27,12 @@ $(window).on('load', function() {
         var scroll = $(window).scrollTop(),
             headerHeight = $('header').outerHeight();
         if (scroll >= (articleFirstBodyTop - headerHeight)) {
-            $('header .item--center').addClass('scroll');
+            $('header').addClass('scroll');
             $('.bottombar').css({
                 'bottom': 0
             });
         } else {
-            $('header .item--center').removeClass('scroll');
+            $('header').removeClass('scroll');
             if (width >= 1024) {
                 $('.bottombar').css({
                     'bottom': '-40px'

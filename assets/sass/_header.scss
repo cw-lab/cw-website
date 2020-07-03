@@ -70,16 +70,6 @@ header {
                     @include transition(top 0.3s);
                     z-index: 1;
                 }
-                &.scroll {
-                    .item__scroll {
-                        top: -40px;
-                    }
-                    a.logo {
-                        @include breakpoint(max-width 1023px) {
-                            top: -55px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -137,8 +127,14 @@ header {
     }
     .btn {
         font-size: 1rem;
-        @include breakpoint(max-width 1023px) {
-            display: none !important;
+        &.btn--small {
+            @include breakpoint(max-width 1023px) {
+                position: absolute;
+                right: 100%;
+                bottom: 50%;
+                @include translateY(50%);
+                @include transition(all 0.3s);
+            }
         }
     }
     .menubar__user {
@@ -150,6 +146,24 @@ header {
             &.icon-close::before {
                 content: $icon-cancel;
                 font-weight: bold;
+            }
+        }
+    }
+    &.scroll {
+        .container>.item.item--center {
+            .item__scroll {
+                top: -40px;
+            }
+            a.logo {
+                @include breakpoint(max-width 1023px) {
+                    top: -55px;
+                }
+            }
+        }
+        .btn.btn--small {
+            @include breakpoint(max-width 1023px) {
+                bottom: calc(100% + 1px + 1.3125rem);
+                @include translateY(0%);
             }
         }
     }

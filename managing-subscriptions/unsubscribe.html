@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <!-- add meta for TCR-170 -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=1">
+    <meta name="robots" content="noindex">
+    <title>全閱讀取消自動續訂原因與建議</title>
+    <link rel="stylesheet" href="../assets/css/cw-unsubscribe.css">
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery-1.7.min.js" type="text/javascript"></script>
+    <script src="../assets/js/cw.js" type="text/javascript"></script>
+</head>
+
+<body style="padding-bottom: 0;">
+    <form target="_top" method="post" id="form" class="form" action="">
+        <div id="dform" class="xform container">
+            <input type="hidden" name="tpage" id="tpage" value="1" />
+            <div id="page1">
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_1" accesskey="1" ispk="0" isuk="0">
+                    <label class="label">
+                      <div class="form__group__placeholder">請輸入姓名</div>
+                      <input class="form__group__input" name="n_1" type="text" id="n_1" maxlength="" value=壹貳參 tag="姓名" disabled>
+                    </label>
+                </div>
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_2" accesskey="2" ispk="0" isuk="0">
+                    <label class="label">
+                        <div class="form__group__placeholder">E-mail</div>
+                        <input class="form__group__input" name="n_2" type="text" id="n_2" maxlength="" value="onetwothree@gmail.com" tag="主要電子郵件" isEmail="true" disabled />
+                    </label>
+                </div>
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_3" accesskey="3" ispk="0" isuk="0">
+                    <label class="label">
+                        <div class="form__group__placeholder">全閱讀帳號</div>
+                        <input class="form__group__input" name="n_3" type="text" id="n_3" maxlength="" value="onetwothree@gmail.com" tag="全閱讀帳號" disabled />
+                    </label>
+                </div>
+                <div class="field form__group form__group--outlined" type="1" req="0" id="div_n_4" accesskey="4" ispk="0" isuk="0">
+                    <label class="label">
+                        <div class="form__group__placeholder">請輸入填寫時間</div>
+                        <input class="form__group__input" name="n_4" type="text" id="n_4" maxlength="" value="2020/04/27" tag="填寫時間" disabled />
+                    </label>
+                </div>
+                <div class="field form__group" type="3" req="1" id="div_n_5" accesskey="5" ispk="0">
+                    <div class="field-labelblock">
+                        <span class="error"></span>
+                        <span class="field-label h2 font-weight-500">請問您取消天下全閱讀自動續訂最主要的原因是⋯⋯<span class="req">*</span></span>
+                    </div>
+                    <div class="field-content">
+                        <ul class="mc-select single">
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">內容不符合期待</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">看其他媒體提供的免費內容就夠了</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">改成付費訂閱其他的媒體</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不滿意 APP 功能</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不滿意網站功能</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">習慣於紙本閱讀</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">改訂其他方案</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">價格太貴／續訂沒優惠</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">想多使用一段時間再決定是否續訂</span></a></li>
+                            <li class="mco"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不喜歡自動續訂這種訂閱方式</span></a></li>
+                            <li class="mco">
+                                <div class="form__group form__group--filled">
+                                    <span class="label__radio__mark"></span><span class="label__radio__txt">其他原因</span>
+                                    <a single="true" class="label" onclick="toggleInput(this)">
+                                        <div class="form__group__placeholder">請輸入其他原因</div>
+                                        <input class="specify form__group__input" id="n_5_11_o" name="n_5_11_o" type="text" onkeyup="validateSpecify(this)" />
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <input name="n_5" type="hidden" id="n_5" value=1 />
+                </div>
+                <div class="field form__group" type="2" req="0" id="div_n_6" accesskey="6" ispk="0">
+                    <div class="field-labelblock">
+                        <span class="error"></span>
+                        <span class="field-label h2 font-weight-500">您覺得天下全閱讀有任何需要改善的地方嗎？</span>
+                        <p class="h5">
+                            不論是對於內容、APP 或網站的使用功能等各方面，都誠摯希望您能告訴我們，以做為我們服務改善的依據，謝謝您！
+                        </p>
+                    </div>
+                    <div class="field-content">
+                        <textarea name="n_6" rows="6" cols="65" id="n_6" maxlength="4000"></textarea>
+                    </div>
+                </div>
+                <div class="formfooter">
+                    <div class="ValError"></div>
+                    <input type="button" class="btn btn--contained" value="送出" accesskey="1" id="back" />
+                </div>
+            </div>
+        </div>
+        <div class="clear1"></div>
+        <input id="endDate" name="endDate" type="hidden" value="2021/12/31" />
+        <input id="SID" name="SID" type="hidden" value="11000" />
+        <input id="rURL" name="rURL" type="hidden" value="tks.html" />
+        <input id="clientID" name="clientID" type="hidden" value="cwmarketing" />
+        <input id="campaignID" name="campaignID" type="hidden" value="MKOOSBwebaccess" />
+        <input id="xml" name="xml" type="hidden">
+    </form>
+    <script type="text/javascript">
+        $(function() {
+            $('#back').click(function() {
+                window.location.href = '3_subscription_p+e-2.html';
+            })
+
+        });
+    </script>
+</body>
+
+</html>

@@ -33,11 +33,6 @@
     }
 }
 
-main {
-    position: relative;
-    z-index: 0;
-}
-
 .article__label {
     margin-top: 10px;
     margin-bottom: -10px;
@@ -64,7 +59,10 @@ main {
 
 .article__body {
     position: relative;
-    z-index: 3;
+    z-index: 0;
+    @include breakpoint(1024px) {
+        z-index: 3;
+    }
 }
 
 .article__foot {

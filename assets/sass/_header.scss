@@ -66,9 +66,15 @@ header {
                 a.logo {
                     position: absolute;
                     top: 0;
-                    left: 60px;
+                    left: 50px;
                     @include transition(top 0.3s);
                     z-index: 1;
+                    @include breakpoint(375px) {
+                        left: 55px;
+                    }
+                    @include breakpoint(1024px) {
+                        left: 60px;
+                    }
                 }
             }
         }
@@ -139,7 +145,13 @@ header {
     }
     .menubar__user {
         position: relative;
-        margin-left: 30px;
+        margin-left: 10px;
+        @include breakpoint(375px) {
+            margin-left: 15px;
+        }
+        @include breakpoint(1024px) {
+            margin-left: 30px;
+        }
         i {
             display: block;
             font-size: 1.3125rem;

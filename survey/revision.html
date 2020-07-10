@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=1">
+    <title>天下雜誌網站首頁改版量化問卷</title>
+    <link rel="stylesheet" href="../assets/css/cw-crm.css">
+    <!-- <link rel="stylesheet" href="https://crmt.cw.com.tw/SurveyCollector/css/imageStyle.css"> -->
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery-1.7.min.js"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/Resources.js"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery.tools.min.js"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery.ba-postmessage.min.js"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/survey_var.js"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/preview.js?v=20200709121444"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/info.ashx?clientID=cwreporter&campaignID=OOOOOO&listID=4681&v=20200709121444"></script>
+</head>
+
+<body class="survey__page pb20">
+    <div class="container py40">
+        <form target="_top" method="post" id="form" action="">
+            <div id="dform" class="xform">
+                <input type="hidden" name="tpage" id="tpage" value="5" />
+                <div id="page1">
+                    <div class="section" tabindex="0">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0">一、閱讀習慣：</li>
+                            <li class="sdescription"></li>
+                        </ul>
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_1" accesskey="1" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								1. 您瀏覽天下雜誌網站多久了？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">第一次看</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不滿6個月</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">6個月以上，未滿1年</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">1年以上，未滿3年</span></a></li>
+                                <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">3年以上</span></a></li>
+                            </ul>
+                        </div>
+                        <input name="n_1" type="hidden" id="n_1" />
+                    </div>
+                    <div class="field" type="4" req="1" id="div_n_2" accesskey="2" maxOption=7 ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								2. 您通常會透過什麼管道來到天下雜誌網站？（複選）<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select multiple">
+                                <li class="mco" fid="n_2_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">透過搜尋引擎</span></a></li>
+                                <li class="mco" fid="n_2_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊臉書貼文連結</span></a></li>
+                                <li class="mco" fid="n_2_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊LINE推播</span></a></li>
+                                <li class="mco" fid="n_2_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊瀏覽器的書籤或我的最愛</span></a></li>
+                                <li class="mco" fid="n_2_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊親友分享的連結</span></a></li>
+                                <li class="mco" fid="n_2_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊電子報</span></a></li>
+                                <li class="mco" fid="n_2_7" order="7" onclick="toggleInput(this)">
+                                    <div><a multiple="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_2_7_o" name="n_2_7_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="n_2" id="n_2">
+                        </div>
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_3" accesskey="3" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								3. 平均而言，您每週會瀏覽天下雜誌網站幾天？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">每天都會使用</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">每週使用3天以上</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">每週使用1到2天</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">每週使用不到1天或更少</span></a></li>
+                            </ul>
+                        </div>
+                        <input name="n_3" type="hidden" id="n_3" />
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_4" accesskey="4" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								4. 請問您來到天下雜誌網站時， 以下哪一種方式最符合您平常的使用習慣？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">會先到網站的「首頁」，再進入其他的文章頁</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">會先進入頻道或文章頁 ，之後再到網站的「首頁」</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不會使用網站「首頁」</span></a></li>
+                            </ul>
+                        </div>
+                        <input name="n_4" type="hidden" id="n_4" />
+                    </div>
+                    <div class="field" type="4" req="1" id="div_n_5" accesskey="5" maxOption=12 ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								5. 您瀏覽天下雜誌網站的「首頁」較常的使用目的為何？（複選）<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select multiple">
+                                <li class="mco" fid="n_5_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">沒有特定目的，只是隨意瀏覽</span></a></li>
+                                <li class="mco" fid="n_5_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">看看有什麼最新/最熱門的文章</span></a></li>
+                                <li class="mco" fid="n_5_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">找特定類型文章</span></a></li>
+                                <li class="mco" fid="n_5_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">找收藏過的文章</span></a></li>
+                                <li class="mco" fid="n_5_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">找最新出版的書籍或雜誌</span></a></li>
+                                <li class="mco" fid="n_5_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">訂閱電子報</span></a></li>
+                                <li class="mco" fid="n_5_7" order="7"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">使用搜尋功能來找文章</span></a></li>
+                                <li class="mco" fid="n_5_8" order="8"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">使用會員相關功能（登入／註冊）</span></a></li>
+                                <li class="mco" fid="n_5_9" order="9"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解會員相關權益</span></a></li>
+                                <li class="mco" fid="n_5_10" order="10"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解訂閱相關資訊 </span></a></li>
+                                <li class="mco" fid="n_5_11" order="11"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解活動相關資訊</span></a></li>
+                                <li class="mco" fid="n_5_12" order="12" onclick="toggleInput(this)">
+                                    <div><a multiple="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_5_12_o" name="n_5_12_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="n_5" id="n_5">
+                        </div>
+                    </div>
+                    <div class="field" type="4" req="1" id="div_n_6" accesskey="6" maxOption=12 ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">
+								6. 以下議題文章，哪些是您常看的類型？（複選）<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select multiple">
+                                <li class="mco" fid="n_6_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">財經</span></a></li>
+                                <li class="mco" fid="n_6_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">產業（製造／服務／金融／科技）</span></a></li>
+                                <li class="mco" fid="n_6_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">國際</span></a></li>
+                                <li class="mco" fid="n_6_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">管理（行銷／人才／創新創業／職場）</span></a></li>
+                                <li class="mco" fid="n_6_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">環境（永續發展／氣候變遷／環境／能源）</span></a></li>
+                                <li class="mco" fid="n_6_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">教育（教育趨勢／創新教育／親子教養）</span></a></li>
+                                <li class="mco" fid="n_6_7" order="7"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">人物（人物專訪／大師觀點／ceo觀點）</span></a></li>
+                                <li class="mco" fid="n_6_8" order="8"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">政治（政治／政策／社會現場）</span></a></li>
+                                <li class="mco" fid="n_6_9" order="9"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">健康關係（健康醫療／兩性關係／心靈成長）</span></a></li>
+                                <li class="mco" fid="n_6_10" order="10"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">時尚品味（藝文／設計／影視）</span></a></li>
+                                <li class="mco" fid="n_6_11" order="11"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">運動生活</span></a></li>
+                                <li class="mco" fid="n_6_12" order="12" onclick="toggleInput(this)">
+                                    <div><a multiple="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_6_12_o" name="n_6_12_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul> <input type="hidden" name="n_6" id="n_6">
+                        </div>
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_7" accesskey="7" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">7. 您通常主要是透過什麼管道獲取資訊？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">電視</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">報紙</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">書籍</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">雜誌</span></a></li>
+                                <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">廣播</span></a></li>
+                                <li class="mco" id="6"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">網路</span></a></li>
+                                <li class="mco">
+                                    <div><a single="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_7_7_o" name="n_7_7_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul>
+                        </div> <input name="n_7" type="hidden" id="n_7" />
+                    </div>
+                    <div class="field" type="4" req="1" id="div_n_8" accesskey="8" maxOption=6 ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">8. 您較偏好以下哪類的資訊呈現方式？（複選）<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select multiple">
+                                <li class="mco" fid="n_8_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">純文字</span></a></li>
+                                <li class="mco" fid="n_8_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">文字搭配圖片</span></a></li>
+                                <li class="mco" fid="n_8_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">影音／視頻</span></a></li>
+                                <li class="mco" fid="n_8_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">音頻</span></a></li>
+                                <li class="mco" fid="n_8_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">數據圖表</span></a></li>
+                                <li class="mco" fid="n_8_6" order="6" onclick="toggleInput(this)">
+                                    <div><a multiple="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_8_6_o" name="n_8_6_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul> <input type="hidden" name="n_8" id="n_8">
+                        </div>
+                    </div>
+                    <div class="formfooter">
+                        <div class="ValError" style="height:20px"> </div>
+                        <input type="button" class="btn btn--contained" value="Next" accesskey="1" onclick="nextPage(this)" />
+                    </div>
+                </div>
+                <div id="page2">
+                    <div class="section" tabindex="8">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0">二、天下雜誌網站「首頁」印象：</li>
+                            <li class="sdescription"></li>
+                        </ul>
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_9" accesskey="9" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">9. 您最常使用哪一種載具瀏覽天下雜誌網站的首頁？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single horizontal">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">手機</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">平板</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">電腦</span></a></li>
+                            </ul>
+                        </div> <input name="n_9" type="hidden" id="n_9" />
+                    </div>
+                    <div class="section" tabindex="9">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0"></li>
+                            <li class="sdescription">接下來，要請您就第9題「最常使用天下網站首頁載具的使用經驗，來對天下網站的首頁進行評價。</li>
+                        </ul>
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_10" accesskey="10" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">10. 您對於天下網站首頁設計風格的感覺為何？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 傳統的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 新穎的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_10" type="hidden" id="n_10" accesskey="10" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_11" accesskey="11" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">11. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 複雜混亂的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 乾淨俐落的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_11" type="hidden" id="n_11" accesskey="11" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_12" accesskey="12" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">12. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 不吸引人的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 吸引人的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_12" type="hidden" id="n_12" accesskey="12" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_13" accesskey="13" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">13. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 令人不愉快的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 令人愉快的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_13" type="hidden" id="n_13" accesskey="13" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_14" accesskey="14" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">14. 您對於天下雜誌網站首頁查找資訊過程的感覺為何？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 有阻礙的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 順暢的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_14" type="hidden" id="n_14" accesskey="14" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_15" accesskey="15" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">15. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 不舒適的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 舒適的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_15" type="hidden" id="n_15" accesskey="15" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_16" accesskey="16" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">16. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 花費時間的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 節省時間的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_16" type="hidden" id="n_16" accesskey="16" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_17" accesskey="17" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">17. 您對於天下網站首頁的內容品質感覺為何？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 膚淺的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 深入的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_17" type="hidden" id="n_17" accesskey="17" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_18" accesskey="18" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">18. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 陳舊的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 新鮮的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_18" type="hidden" id="n_18" accesskey="18" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_19" accesskey="19" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">19. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 更新慢的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 更新快的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_19" type="hidden" id="n_19" accesskey="19" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_20" accesskey="20" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">20. 您對於天下網站首頁的整體感覺為何？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 不容易使用的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 容易使用的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_20" type="hidden" id="n_20" accesskey="20" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_21" accesskey="21" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">21. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 不專業的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 專業的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_21" type="hidden" id="n_21" accesskey="21" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_22" accesskey="22" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">22. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 不可信賴的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 可信賴的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_22" type="hidden" id="n_22" accesskey="22" />
+                    </div>
+                    <div class="field" type="5" req="1" id="div_n_23" accesskey="23" ispk="0">
+                        <div class="field-labelblock"> <span class="error"></span> <span class="field-label">23. <span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <table class="scale-rating" cellspacing="0">
+                                <tr>
+                                    <th id="w1" style="text-align: left;" colspan="2"> 令人不滿意的 </th>
+                                    <th> </th>
+                                    <th id="b1" style="text-align: right;" colspan="2"> 令人滿意的 </th>
+                                </tr>
+                                <tr tp="d">
+                                    <td><a class="rate-off">1</a></td>
+                                    <td><a class="rate-off">2</a></td>
+                                    <td><a class="rate-off">3</a></td>
+                                    <td><a class="rate-off">4</a></td>
+                                    <td><a class="rate-off">5</a></td>
+                                </tr>
+                            </table>
+                        </div> <input name="n_23" type="hidden" id="n_23" accesskey="23" />
+                    </div>
+                    <div class="formfooter">
+                        <div class="ValError" style="height:20px"> </div> <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="2" onclick="prevPage(this)" style="float: left" /><input type="button" class="btn btn--contained" value="Next" accesskey="2" onclick="nextPage(this)"
+                        />
+                    </div>
+                </div>
+                <div id="page3">
+                    <div class="section" tabindex="23">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0">三、建議與期待：</li>
+                            <li class="sdescription"></li>
+                        </ul>
+                    </div>
+                    <div class="field" type="4" req="1" id="div_n_24" accesskey="24" maxOption=3 ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">24. 如果天下雜誌網站「首頁」進行改版，以下哪些您最希望調整的部分？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select multiple">
+                                <li class="mco" fid="n_24_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">增加文章更新頻率</span></a></li>
+                                <li class="mco" fid="n_24_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">更多影音</span></a></li>
+                                <li class="mco" fid="n_24_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">更多音頻</span></a></li>
+                                <li class="mco" fid="n_24_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">推薦我會想看的內容</span></a></li>
+                                <li class="mco" fid="n_24_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">乾淨俐落的版面</span></a></li>
+                                <li class="mco" fid="n_24_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">高清漂亮的圖片</span></a></li>
+                                <li class="mco" fid="n_24_7" order="7"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">看到更多文章</span></a></li>
+                                <li class="mco" fid="n_24_8" order="8" onclick="toggleInput(this)">
+                                    <div><a multiple="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_24_8_o" name="n_24_8_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul> <input type="hidden" name="n_24" id="n_24">
+                        </div>
+                    </div>
+                    <div class="formfooter">
+                        <div class="ValError" style="height:20px"> </div> <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="3" onclick="prevPage(this)" style="float: left" /><input type="button" class="btn btn--contained" value="Next" accesskey="3" onclick="nextPage(this)"
+                        />
+                    </div>
+                </div>
+                <div id="page4">
+                    <div class="section" tabindex="24">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0">四、個人資料：</li>
+                            <li class="sdescription"></li>
+                        </ul>
+                    </div>
+                    <div class="field" type="3" req="0" id="div_n_25" accesskey="25" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">25. 性別</span></div>
+                        <div class="field-content pb30 pt0-horizontal">
+                            <ul class="mc-select single horizontal">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">男</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">女</span></a></li>
+                            </ul>
+                        </div> <input name="n_25" type="hidden" id="n_25" />
+                    </div>
+                    <div class="field" type="3" req="0" id="div_n_26" accesskey="26" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">26. 年齡</span></div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">17歲以下</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">18-24歲 </span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">25-34歲</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">35-44歲</span></a></li>
+                                <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">45-54歲</span></a></li>
+                                <li class="mco" id="6"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">55-64歲</span></a></li>
+                                <li class="mco" id="7"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">65歲以上</span></a></li>
+                            </ul>
+                        </div> <input name="n_26" type="hidden" id="n_26" />
+                    </div>
+                    <div class="field" type="3" req="0" id="div_n_27" accesskey="27" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">27. 產業</span></div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">製造業</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">資訊科技業</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">金融業</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">服務業</span></a></li>
+                                <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">醫療保健</span></a></li>
+                                <li class="mco" id="6"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">傳播出版</span></a></li>
+                                <li class="mco" id="7"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">公職人員</span></a></li>
+                                <li class="mco" id="8"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">自由業</span></a></li>
+                                <li class="mco" id="9"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">專業技術與顧問服務</span></a></li>
+                                <li class="mco" id="10"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">教育服務業</span></a></li>
+                                <li class="mco" id="11"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">退休</span></a></li>
+                                <li class="mco" id="12"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">學生</span></a></li>
+                                <li class="mco" id="13"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">家管</span></a></li>
+                                <li class="mco">
+                                    <div><a single="true" onclick="toggleInput(this)">其他&nbsp;<input class="specify" id="n_27_14_o" name="n_27_14_o" type="text" onkeyup="validateSpecify(this)" /></a></div>
+                                </li>
+                            </ul>
+                        </div> <input name="n_27" type="hidden" id="n_27" />
+                    </div>
+                    <div class="field" type="3" req="0" id="div_n_28" accesskey="28" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">28. 居住地</span></div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">北北基、宜蘭</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">桃、新、苗</span></a></li>
+                                <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">中、彰、投</span></a></li>
+                                <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">雲、嘉、南、高、屏</span></a></li>
+                                <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">花、東</span></a></li>
+                                <li class="mco" id="6"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">外島</span></a></li>
+                                <li class="mco" id="7"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">國外地區</span></a></li>
+                            </ul>
+                        </div> <input name="n_28" type="hidden" id="n_28" />
+                    </div>
+                    <div class="formfooter">
+                        <div class="ValError" style="height:20px"> </div> <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="4" onclick="prevPage(this)" style="float: left" /><input type="button" class="btn btn--contained" value="Next" accesskey="4" onclick="nextPage(this)"
+                        />
+                    </div>
+                </div>
+                <div id="page5">
+                    <div class="section" tabindex="28">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0">五、實體訪談意願：</li>
+                            <li class="sdescription">天下雜誌目前正進行網站首頁改版的設計研究，誠摯邀請各位參與面對面訪談，參與本次面對面訪談者，天下雜誌將致贈新台幣 500元現金。<br /><br />訪談日期：<br />訪談地點：台北市中山區南京東路二段139號11樓 (捷運松江南京站)<br />訪談所需時間：約1-1.5小時<br /><br />註：我們會依問卷內容，挑出合適的人選，與您聯繫安排訪談時間。若未符合本研究預設的受訪條件，恕不另行通知。</li>
+                        </ul>
+                    </div>
+                    <div class="field" type="3" req="1" id="div_n_29" accesskey="29" ispk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">29. 你願意接受面對面訪問嗎？<span class="req">*</span>
+                            </span>
+                        </div>
+                        <div class="field-content pb30 pt0">
+                            <ul class="mc-select single horizontal">
+                                <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">願意</span></a></li>
+                                <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不願意</span></a></li>
+                            </ul>
+                        </div> <input name="n_29" type="hidden" id="n_29" />
+                    </div>
+                    <div class="field" type="1" req="0" id="div_n_30" accesskey="30" ispk="0" isuk="0">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">30. 姓名</span></div>
+                        <div class="field-content pb30 pt0"> <input name="n_30" type="text" id="n_30" maxlength="" value="" tag="姓名" /></div>
+                    </div>
+                    <div class="field" type="1" req="0" id="div_n_31" accesskey="31" ispk="0" isuk="1">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">31. 手機</span></div>
+                        <div class="field-content pb30 pt0"> <input name="n_31" type="text" id="n_31" maxlength="" value="" tag="手機" isPhone="true" numbersOnly /></div>
+                    </div>
+                    <div class="field" type="1" req="0" id="div_n_32" accesskey="32" ispk="0" isuk="1">
+                        <div class="field-labelblock">
+                            <span class="error"></span>
+                            <span class="field-label h2 font-weight-500">32. 信箱</span></div>
+                        <div class="field-content pb30 pt0"> <input name="n_32" type="text" id="n_32" maxlength="" value="" tag="信箱" isEmail="true" /></div>
+                    </div>
+                    <div class="section" tabindex="32">
+                        <ul class="stitle list-reset">
+                            <li class="stitle h1 my0"></li>
+                            <li class="sdescription">（以上資料僅供天下雜誌問卷使用，不會用作其他用途）</li>
+                        </ul>
+                    </div>
+                    <div class="formfooter">
+                        <div class="ValError" style="height:20px"> </div> <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="5" onclick="prevPage(this)" style="float: left" /><input type="button" class="btn btn--contained" value="Submit" accesskey="5" onclick="validate(this)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="clear1"></div>
+            <input id="SID" name="SID" type="hidden" value="4681" />
+            <input id="rURL" name="rURL" type="hidden" value="https://crmt.cw.com.tw/data/svr3/cwreporter/wmx_survey/finish/index.html" />
+            <input id="clientID" name="clientID" type="hidden" value="cwreporter" />
+            <input id="campaignID" name="campaignID" type="hidden" value="OOOOOO" />
+            <input id="xml" name="xml" type="hidden">
+        </form>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('#form').attr('action', location.protocol.replace('file:', 'http:') + '//crmt.cw.com.tw/SurveyCollector/sc.aspx');
+        });
+    </script>
+</body>
+
+</html>

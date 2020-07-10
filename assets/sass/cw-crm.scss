@@ -1,0 +1,54 @@
+@import "_basic";
+@import "_general";
+@import "_sheet";
+@import "_space";
+@import "_color";
+@import "_typography";
+@import "_font";
+@import "_iconography";
+@import "_textfield";
+@import "_button";
+@import "migo/_selection";
+.container {
+    max-width: 640px;
+    padding: 50px 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.field-labelblock {
+    .req {
+        color: $primary;
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+    .h5 {
+        margin: 0.5em 0 0;
+        line-height: 1.25;
+    }
+}
+
+.field-content {
+    textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid $secondary;
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.form__group {
+    max-width: none;
+    +.form__group {
+        margin-top: 1.5rem;
+    }
+}
+
+.formfooter {
+    padding-top: 20px;
+    text-align: center;
+}

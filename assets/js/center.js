@@ -83,7 +83,7 @@ $(function() {
     phaseText();
     var url = window.location.href,
         pathSpilt = url.split("/"),
-        pathLastSpilt = pathSpilt[pathSpilt.length - 1],
+        pathLastSpilt = pathSpilt[pathSpilt.length - 1].split("?")[0],
         findLinkElement = $(".menubar__user--member > ul > li > .li__group > a[href$='" + pathLastSpilt + "'], aside.menubar--left > ul > li > .li__group > a[href$='" + pathLastSpilt + "']"),
         find2LinkElement = $(".menubar__user--member > ul > li > ul > li > .li__group > a[href$='" + pathLastSpilt + "'], aside.menubar--left > ul > li > ul > li > .li__group > a[href$='" + pathLastSpilt + "']");
     findLinkElement.parent().parent().addClass('now');
@@ -91,6 +91,7 @@ $(function() {
     find2LinkElement.parent().parent().parent().show();
     find2LinkElement.parent().parent().parent().parent().addClass('now');
     find2LinkElement.parent().parent().parent().siblings('.li__group').children('i.icon').addClass('active');
+    console.log(pathLastSpilt);
     $("a[href$='password']").click(function() {
         $(this).parent().parent().siblings().removeClass('now');
         $(this).parent().parent().addClass('now');
@@ -101,7 +102,3 @@ $(function() {
         phaseText();
     })
 });
-// });// $(window).load(function() {
-// 	$(window).resize(function(width) {
-// 	})
-// });

@@ -393,8 +393,8 @@
                 </div>
             </div>
             <div class="message__btn text-right">
-                <a class="btn btn--outlined btn__close">取消</a>
-                <a onclick="window.history.back();" class="btn btn--contained">確認</a>
+                <button class="btn btn--outlined btn__close">取消</button>
+                <button id="submit" class="btn btn--contained">確認</button>
             </div>
         </div>
     </div>
@@ -418,6 +418,10 @@
                 $('#planCheck').fadeIn();
                 $('.black').addClass('opened');
             });
+            $('#submit').click(function() {
+                var referrer = document.referrer;
+                window.location.href = referrer + '?open';
+            })
         })
     </script>
 </body>

@@ -81,6 +81,28 @@
             margin: 5px 0 0 calc(20px + 0.5rem);
         }
     }
+    &.multiple {
+        display: block;
+        position: relative;
+        font-size: 0;
+        cursor: pointer;
+        z-index: 1;
+        @include user-select(none);
+        li {
+            margin-top: 10px;
+            span {
+                display: inline-block;
+                vertical-align: text-top;
+                @include transition(all 0.3s);
+                &.label__radio__txt {
+                    width: calc(100% - 20px);
+                    padding-left: 0.5em;
+                    font-size: 1rem;
+                    line-height: 1.75;
+                }
+            }
+        }
+    }
     .label--check {
         display: block;
         position: relative;

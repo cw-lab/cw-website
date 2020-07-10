@@ -347,6 +347,11 @@
             }
         }
     }
+    .label__group {
+        label+label {
+            margin-top: 1.25rem;
+        }
+    }
     .table {
         width: 100%;
         font-size: 1.125rem;

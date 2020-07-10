@@ -11,8 +11,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="https://yutinghcw.github.io/design/assets/css/cw.css">
-    <link rel="stylesheet" href="https://yutinghcw.github.io/design/assets/css/center.css">
+    <link rel="stylesheet" href="../assets/css/cw.css">
+    <link rel="stylesheet" href="../assets/css/center.css">
 </head>
 
 <body class="center__page footer--downward">
@@ -185,13 +185,13 @@
                     </li>
                     <li>
                         <div class="li__group">
-                            <a href="2_subscription_pe.html" class="active">訂閱管理</a>
+                            <a href="1_subscription_e.html" class="active">訂閱管理</a>
                             <i class="icon icon-down more active"></i>
                         </div>
                         <ul style="display: block;">
                             <li>
                                 <div class="li__group">
-                                    <a href="2_subscription_pe.html" class="active">訂閱管理</a>
+                                    <a href="1_subscription_e.html" class="active">訂閱管理</a>
                                 </div>
                             </li>
                             <li>
@@ -254,7 +254,7 @@
                                 <div class="planning__title h2 font-weight-500 my0">天下全閱讀（已訂閱）</div>
                                 <div class="planning__deadline flex align-items-center">
                                     <div class="deadline__title font-weight-500">訂閱到期日</div>
-                                    <div class="deadline__day">2020年10月20日</div>
+                                    <div class="deadline__day">2020年8月20日</div>
                                 </div>
                             </div>
                         </div>
@@ -265,32 +265,9 @@
                         <img src="https://yutinghcw.github.io/design/assets/images/secant/webaccess-p@2x.png" width="138" alt="天下紙本雜誌" class="planning__img">
                         <div class="planning__body">
                             <div class="planning__text">
-                                <div class="planning__title h2 font-weight-500 my0">天下紙本雜誌（已訂閱）</div>
-                                <div class="planning__deadline flex align-items-center">
-                                    <div class="deadline__title font-weight-500">訂閱到期期數</div>
-                                    <div class="deadline__day">645期，2020年10月20日出刊</div>
-                                </div>
+                                <div class="planning__title h2 font-weight-500 my0">天下紙本雜誌（未訂閱）</div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="form__group">
-                        <div class="form">
-                            <div class="form__edit flex align-items-center justify-between">
-                                <div class="h3 mtb0">訂戶編號</div>
-                            </div>
-                            <div class="form__value">431482</div>
-                        </div>
-                        <div class="form">
-                            <div class="form__edit flex align-items-center justify-between">
-                                <div class="h3 mtb0">收件人</div>
-                            </div>
-                            <div class="form__value">王小華</div>
-                        </div>
-                        <div class="form">
-                            <div class="form__edit flex align-items-center justify-between">
-                                <div class="h3 mtb0">收件地址</div>
-                            </div>
-                            <div class="form__value">台北市中山區南京東路二段139號</div>
+                            <a class="btn btn--contained">了解更多</a>
                         </div>
                     </div>
                 </div>
@@ -308,14 +285,14 @@
                                 <div class="h3 mtb0">續訂方案</div>
                                 <a href="change-subscription.html" class="btn--text">更改續訂方案</a>
                             </div>
-                            <div class="form__value">天下全閱讀1年＋天下紙本雜誌25期</div>
+                            <div class="form__value">天下全閱讀1個月</div>
                         </div>
                         <div class="form">
                             <div class="form__edit flex align-items-center justify-between">
                                 <div class="h3 mtb0">扣款金額和日期</div>
-                                <a class="btn--text">取消自動續訂</a>
+                                <a class="btn--text" href="unsubscribe.html">取消自動續訂</a>
                             </div>
-                            <div class="form__value">2020年10月20日、2490元</div>
+                            <div class="form__value">2020年8月20日、249元</div>
                         </div>
                         <div class="form">
                             <div class="form__edit flex align-items-center justify-between">
@@ -323,17 +300,32 @@
                                 <a class="btn--text goEdit">更改信用卡號</a>
                                 <a class="btn--text goRevert">取消</a>
                             </div>
-                            <div class="form__value">信用卡 Visa 末四碼 <span id="credit4No">7485</span></div>
+                            <div class="form__value">信用卡 Visa 末四碼 7485</div>
                             <div class="select__group select__group--filled select__group--100 select__group--defalt">
-                                <div class="form__value pb5">若您選擇新增其他信用卡，請點擊確認，將在下一頁請您填寫信用卡號</div>
-                                <select name="creditCardNo" id="creditCardNo">
-                                    <option value="7485">****-****-****-7485</option>
-                                    <option value="1234">****-****-****-1234</option>
-                                    <option value="2345">****-****-****-2345</option>
-                                    <option value="3456" selected>****-****-****-3456</option>
-                                    <option value="new">新增信用卡</option>
-                                </select>
-                                <a class="btn btn--contained btn--small" id="creditCheck">確認</a>
+                                <div class="form__value pb20">若您選擇新增其他信用卡，請點擊確認，將在下一頁請您填寫信用卡號</div>
+                                <div class="label__group">
+                                    <label class="label label--radio">
+										<input type="radio" name="individ" checked value="goDreamer">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">****-****-****-7485</span>
+									</label>
+                                    <label class="label label--radio">
+										<input type="radio" name="individ" value="goDreamer">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">****-****-****-1234</span>
+									</label>
+                                    <label class="label label--radio">
+										<input type="radio" name="individ" value="goDreamer">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">****-****-****-2345</span>
+									</label>
+                                    <label class="label label--radio">
+										<input type="radio" name="individ" value="newCredit">
+										<span class="label__radio__mark"></span>
+										<span class="label__radio__txt">新增信用卡</span>
+									</label>
+                                </div>
+                                <a class="btn btn--contained btn--small">確認</a>
                             </div>
                         </div>
                     </div>
@@ -516,24 +508,10 @@
             </div>
         </div>
     </div>
-    <div class="message message--notification message--center" id="creditEditSuccess" style="display: none;">
-        <div class="message__txt">
-            <p class="my0">
-                您的信用卡號修改成功
-            </p>
-        </div>
-    </div>
-    <div class="message message--notification message--center" id="activateRenewSuccess" style="display: none;">
-        <div class="message__txt">
-            <p class="my0">
-                啟用自動續訂成功
-            </p>
-        </div>
-    </div>
     <script type="text/javascript" src="https://yutinghcw.github.io/design/assets/js/jquery-1.11.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
-    <script type="text/javascript" src="https://yutinghcw.github.io/design/assets/js/cw.js"></script>
-    <script type="text/javascript" src="https://yutinghcw.github.io/design/assets/js/center.js"></script>
+    <script type="text/javascript" src="../assets/js/cw.js"></script>
+    <script type="text/javascript" src="../assets/js/center.js"></script>
     <script type="text/javascript">
         $(function() {
             $('.goRevert, .form > .form__group, .form > .select__group').hide();
@@ -561,24 +539,7 @@
             $('#activateRenewBtn').click(function() {
                 $('#activateRenew').fadeIn();
                 $('.black').addClass('opened dialogs');
-            });
-            $('#creditCheck').click(function() {
-                var credit_card_no = $('#creditCardNo').val();
-                if (credit_card_no != 'new') {
-                    $('#credit4No').text(credit_card_no);
-                    $(this).parent('.form__group,.select__group').parent('.form').siblings().children('.form__edit').children('.btn--text').removeClass('disabled');
-                    $(this).parent('.form__group,.select__group').siblings('.form__edit').children('.goEdit').show();
-                    $(this).parent('.form__group,.select__group').siblings('.form__edit').children('.goRevert').hide();
-                    $(this).parent('.form__group,.select__group').hide();
-                    $(this).parent('.form__group,.select__group').siblings('.form__value').show();
-                    $('#creditEditSuccess').fadeIn().delay(1500).fadeOut();
-                } else {
-                    window.location.href = 'ecpay.html';
-                }
-            });
-            if (window.location.href.indexOf("?open") > -1) {
-                console.log('open');
-            }
+            })
         })
     </script>
 </body>

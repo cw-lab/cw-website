@@ -477,6 +477,9 @@
     margin-top: 20px;
   }
 }
+.center__page .label__group label + label {
+  margin-top: 1.25rem;
+}
 .center__page .table {
   width: 100%;
   font-size: 1.125rem;

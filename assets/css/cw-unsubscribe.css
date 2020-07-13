@@ -1507,6 +1507,11 @@ img {
     padding-bottom: 60px !important;
   }
 }
+.mtb0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
 .mt0-mb1 {
   margin-top: 0 !important;
   margin-bottom: 1em !important;

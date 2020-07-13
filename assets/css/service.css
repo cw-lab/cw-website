@@ -179,6 +179,9 @@
     max-width: 750px;
   }
 }
+.service__page .btn--back {
+  display: inline-block;
+}
 .service__page .feedback__block {
   width: 100%;
 }

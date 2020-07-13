@@ -168,12 +168,8 @@ body.message__open {
                 position: relative;
             }
             &__close {
-                position: absolute;
                 top: -5px;
                 right: -10px;
-                font-weight: bold;
-                padding: 10px;
-                cursor: pointer;
             }
             &__txt {
                 padding-bottom: 30px;
@@ -217,7 +213,7 @@ body.message__open {
         background-color: $white;
         z-index: 12;
         @include breakpoint(1024px) {
-            padding: 80px 50px 50px;
+            padding: 50px;
         }
         .message {
             &__container {

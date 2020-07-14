@@ -1,5 +1,89 @@
 @import "_basic";
-@import "_general";
+@import 'normalize-version';
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+// @import 'normalize/typography';
+@import 'normalize/embeds';
+@import 'normalize/groups';
+@import 'normalize/forms';
+@import 'normalize/tables';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+* {
+    outline: 0;
+}
+
+ul,
+ol {
+    padding-left: 1.15em;
+}
+
+.list-reset {
+    @include list(0,
+    0,
+    none);
+}
+
+.font-weight-500 {
+    font-weight: 500;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.sr-only {
+    position: absolute!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: 0!important;
+    height: 0!important;
+    font-size: 0!important;
+}
+
+*,
+*::before,
+*::after {
+    @include box-sizing(border-box);
+}
+
+body {
+    position: relative;
+    min-height: 100%;
+    @include breakpoint(1024px) {
+        font-family: Roboto, 'Noto Sans TC', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+    @include breakpoint(1024px) {
+        @include transition(color .2s,
+        border .2s,
+        background .2s);
+    }
+}
+
+img {
+    display: block;
+}
+
 @import "_sheet";
 @import "_space";
 @import "_color";
@@ -11,9 +95,41 @@
 @import "migo/_selection";
 .container {
     max-width: 640px;
-    padding: 50px 15px;
+    padding: 15px;
     margin-left: auto;
     margin-right: auto;
+}
+
+header {
+    background: $gray;
+    &.fixed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    a.logo {
+        display: inline-block;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+form {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.field {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.stitle.h3 {
+    line-height: 1.5;
 }
 
 .field-labelblock {
@@ -22,13 +138,33 @@
         font-size: 0.75em;
         vertical-align: super;
     }
+    &.h3 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        em {
+            font-style: normal;
+            text-decoration: underline;
+        }
+    }
     .h5 {
         margin: 0.5em 0 0;
         line-height: 1.25;
     }
+    .field-label {
+        span.number {
+            display: inline-block;
+            width: 35px;
+        }
+    }
 }
 
 .field-content {
+    padding-left: 35px;
+    &.pl-m-0 {
+        @media screen and (max-width: 413px) and (min-width: 375px) {
+            margin: 0 -10px;
+        }
+    }
     textarea {
         width: 100%;
         height: 200px;
@@ -37,6 +173,79 @@
         border: 1px solid $secondary;
         &:focus {
             outline: 0;
+        }
+    }
+}
+
+table.scale-rating {
+    font-size: 1rem;
+    tr {
+        &:hover {
+            background-color: $gray;
+        }
+    }
+    td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        @include breakpoint(1024px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        &:first-child {
+            width: 120px;
+            padding-left: 0;
+            padding-right: 5px;
+            text-align: right;
+            @include breakpoint(1024px) {
+                width: 125px;
+                padding-right: 10px;
+            }
+        }
+        &:last-child {
+            width: 120px;
+            padding-left: 5px;
+            padding-right: 0;
+            text-align: left;
+            @include breakpoint(1024px) {
+                width: 125px;
+                padding-left: 10px;
+            }
+        }
+        a {
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
+            font-size: 0;
+            background-color: transparent;
+            border: 2px solid $gray-500;
+            @include border-radius(50%);
+            &:after {
+                @include beforeafter('',
+                block);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background-color: $primary;
+                @include border-radius(50%);
+                @include translate(-50%,
+                -50%);
+            }
+            &:hover {
+                border-color: $primary;
+            }
+            &.rate-on {
+                border-color: $primary;
+                &:after {
+                    width: 10px;
+                    height: 10px;
+                    background-color: $primary;
+                }
+            }
         }
     }
 }
@@ -51,4 +260,7 @@
 .formfooter {
     padding-top: 20px;
     text-align: center;
+    .btn+.btn {
+        margin-left: 20px;
+    }
 }

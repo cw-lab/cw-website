@@ -8,7 +8,7 @@
         z-index: 1;
         @include user-select(none);
         li {
-            margin-top: 10px;
+            margin-bottom: 10px;
             span {
                 display: inline-block;
                 vertical-align: text-top;
@@ -78,7 +78,7 @@
             }
         }
         .form__group .label {
-            margin: 5px 0 0 calc(20px + 0.5rem);
+            margin: 0 0 0 10px;
         }
     }
     &.multiple {
@@ -89,7 +89,7 @@
         z-index: 1;
         @include user-select(none);
         li {
-            margin-top: 10px;
+            margin-bottom: 10px;
             span {
                 display: inline-block;
                 vertical-align: text-top;
@@ -160,7 +160,30 @@
             }
         }
         .form__group .label {
-            margin: 5px 0 0 calc(20px + 0.5rem);
+            margin: 0 0 0 10px;
+        }
+    }
+    &.horizontal {
+        li {
+            display: inline-block;
+            margin-right: 25px;
+            &[data-opt*='other'] {
+                display: block;
+            }
+        }
+    }
+    li {
+        &[data-opt*='other'] {
+            >div>a {
+                >* {
+                    display: inline-block;
+                    top: auto !important;
+                    vertical-align: middle;
+                }
+                span.label__radio__txt {
+                    width: auto;
+                }
+            }
         }
     }
     .label--check {

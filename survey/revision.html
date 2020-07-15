@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="content-type" content="text/html;charset=utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1,user-scalable=1">
-    <title>天下雜誌網站首頁改版量化問卷</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>天下雜誌網站首頁改版量化問卷－天下雜誌</title>
+    <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../assets/css/cw-crm.css">
     <!-- <link rel="stylesheet" href="https://crmt.cw.com.tw/SurveyCollector/css/imageStyle.css"> -->
     <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery-1.7.min.js"></script>
     <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/Resources.js"></script>
     <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery.tools.min.js"></script>
     <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/jquery.ba-postmessage.min.js"></script>
+
     <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/survey_var.js"></script>
-    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/preview.js?v=20200714103132"></script>
-    <script src="https://crmt.cw.com.tw/SurveyCollector/info.ashx?clientID=cwreporter&campaignID=OOOOOO&listID=4681&v=20200714103132"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/scripts/preview.js?v=20200715121015"></script>
+    <script src="https://crmt.cw.com.tw/SurveyCollector/info.ashx?clientID=cwreporter&campaignID=OOOOOO&listID=4681&v=20200715121015"></script>
     <script src="../assets/js/cw.js"></script>
 </head>
 
 <body class="survey__page pb20">
-    <header>
+    <header class="gray">
         <div class="container">
             <a href="https://www.cw.com.tw/" class="logo"><img src="https://www.cw.com.tw/images/common/logo.png" alt="天下雜誌"></a>
         </div>
@@ -43,7 +46,7 @@
                     </ul>
                 </div>
                 <div class="field" type="3" req="1" id="div_n_1" accesskey="1" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">1. 您瀏覽天下雜誌網站多久了？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">1. </span>您瀏覽天下雜誌網站多久了？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
@@ -56,7 +59,7 @@
                     </div><input name="n_1" type="hidden" id="n_1" />
                 </div>
                 <div class="field" type="4" req="1" id="div_n_2" accesskey="2" maxOption=7 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">2. 您通常會透過什麼管道來到天下雜誌網站？（複選）<span class="req">*</span></span>
+                    <div class="field-labelblock"><span class="error"></span><span class="field-label"><span class="number">2. </span>您通常會透過什麼管道來到天下雜誌網站？（複選）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -66,7 +69,7 @@
                             <li class="mco" fid="n_2_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊瀏覽器的書籤或我的最愛</span></a></li>
                             <li class="mco" fid="n_2_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊親友分享的連結</span></a></li>
                             <li class="mco" fid="n_2_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">點擊電子報</span></a></li>
-                            <li class="mco" fid="n_2_7" order="7" onclick="toggleInput(this)">
+                            <li class="mco" data-opt="other" fid="n_2_7" order="7" onclick="toggleInput(this)">
                                 <div>
                                     <a multiple="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -83,7 +86,7 @@
                     </div>
                 </div>
                 <div class="field" type="3" req="1" id="div_n_3" accesskey="3" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">3. 平均而言，您每週會瀏覽天下雜誌網站幾天？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">3. </span>平均而言，您每週會瀏覽天下雜誌網站幾天？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
@@ -95,7 +98,7 @@
                     </div><input name="n_3" type="hidden" id="n_3" />
                 </div>
                 <div class="field" type="3" req="1" id="div_n_4" accesskey="4" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">4. 請問您來到天下雜誌網站時， 以下哪一種方式最符合您平常的使用習慣？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">4. </span>請問您來到天下雜誌網站時， 以下哪一種方式最符合您平常的使用習慣？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
@@ -106,7 +109,7 @@
                     </div><input name="n_4" type="hidden" id="n_4" />
                 </div>
                 <div class="field" type="4" req="1" id="div_n_5" accesskey="5" maxOption=12 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">5. 您瀏覽天下雜誌網站的「首頁」較常的使用目的為何？ （複選）<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">5. </span>您瀏覽天下雜誌網站的「首頁」較常的使用目的為何？ （複選）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -121,7 +124,7 @@
                             <li class="mco" fid="n_5_9" order="9"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解會員相關權益</span></a></li>
                             <li class="mco" fid="n_5_10" order="10"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解訂閱相關資訊 </span></a></li>
                             <li class="mco" fid="n_5_11" order="11"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">了解活動相關資訊</span></a></li>
-                            <li class="mco" fid="n_5_12" order="12" onclick="toggleInput(this)">
+                            <li class="mco" data-opt="other" fid="n_5_12" order="12" onclick="toggleInput(this)">
                                 <div>
                                     <a multiple="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -138,7 +141,7 @@
                     </div>
                 </div>
                 <div class="field" type="4" req="1" id="div_n_6" accesskey="6" maxOption=12 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">6. 以下議題文章，哪些是您常看的類型？（複選）<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">6. </span>以下議題文章，哪些是您常看的類型？（複選）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -153,7 +156,7 @@
                             <li class="mco" fid="n_6_9" order="9"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">健康關係（健康醫療／兩性關係／心靈成長）</span></a></li>
                             <li class="mco" fid="n_6_10" order="10"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">時尚品味（藝文／設計／影視）</span></a></li>
                             <li class="mco" fid="n_6_11" order="11"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">運動生活</span></a></li>
-                            <li class="mco" fid="n_6_12" order="12" onclick="toggleInput(this)">
+                            <li class="mco" data-opt="other" fid="n_6_12" order="12" onclick="toggleInput(this)">
                                 <div>
                                     <a multiple="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -170,17 +173,17 @@
                     </div>
                 </div>
                 <div class="field" type="3" req="1" id="div_n_7" accesskey="7" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">7. 您通常主要是透過什麼管道獲取資訊？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">7. </span>您通常主要是透過什麼管道獲取資訊？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select single">
+                        <ul class="mc-select single horizontal">
                             <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">電視</span></a></li>
                             <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">報紙</span></a></li>
                             <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">書籍</span></a></li>
                             <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">雜誌</span></a></li>
                             <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">廣播</span></a></li>
                             <li class="mco" id="6"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">網路</span></a></li>
-                            <li class="mco">
+                            <li class="mco" data-opt="other">
                                 <div>
                                     <a single="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -197,16 +200,16 @@
                     </div><input name="n_7" type="hidden" id="n_7" />
                 </div>
                 <div class="field" type="4" req="1" id="div_n_8" accesskey="8" maxOption=6 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">8. 您較偏好以下哪類的資訊呈現方式？（複選）<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">8. </span>您較偏好以下哪類的資訊呈現方式？（複選）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select multiple">
+                        <ul class="mc-select multiple horizontal">
                             <li class="mco" fid="n_8_1" order="1"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">純文字</span></a></li>
                             <li class="mco" fid="n_8_2" order="2"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">文字搭配圖片</span></a></li>
                             <li class="mco" fid="n_8_3" order="3"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">影音／視頻</span></a></li>
                             <li class="mco" fid="n_8_4" order="4"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">音頻</span></a></li>
                             <li class="mco" fid="n_8_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">數據圖表</span></a></li>
-                            <li class="mco" fid="n_8_6" order="6" onclick="toggleInput(this)">
+                            <li class="mco" data-opt="other" fid="n_8_6" order="6" onclick="toggleInput(this)">
                                 <div>
                                     <a multiple="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -223,8 +226,7 @@
                     </div>
                 </div>
                 <div class="formfooter">
-                    <div class="ValError"></div>
-                    <input type="button" class="btn btn--contained" value="Next" accesskey="1" onclick="nextPage(this)" />
+                    <div class="ValError"></div><input type="button" class="btn btn--contained" value="Next" accesskey="1" onclick="nextPage(this)" />
                 </div>
             </div>
             <div id="page2">
@@ -235,7 +237,7 @@
                     </ul>
                 </div>
                 <div class="field" type="3" req="1" id="div_n_9" accesskey="9" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">9. 您最常使用哪一種載具瀏覽天下雜誌網站的首頁？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">9. </span>您最常使用哪一種載具瀏覽天下雜誌網站的首頁？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single horizontal">
@@ -251,10 +253,25 @@
                         <li class="sdescription"></li>
                     </ul>
                 </div>
-                <div class="field mb10" type="5" req="1" id="div_n_10" accesskey="10" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">10. 您對於天下網站首頁<em>設計風格</em>的感覺為何？<span class="req">*</span></span>
+                <div class="field mb0">
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">10. </span>您對於天下網站首頁<em>設計風格</em>的感覺為何？<span class="req">*</span></span>
                     </div>
                     <div class="field-content pl-m-0">
+                        <table class="scale-rating text-center" cellspacing="0">
+                            <tr>
+                                <td id="w1">　</td>
+                                <td><span>1</span></td>
+                                <td><span>2</span></td>
+                                <td><span>3</span></td>
+                                <td><span>4</span></td>
+                                <td><span>5</span></td>
+                                <td id="b1">　</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="field mt0 mb10" type="5" req="1" id="div_n_10" accesskey="10" ispk="0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">傳統的</td>
@@ -269,7 +286,7 @@
                     </div><input name="n_10" type="hidden" id="n_10" accesskey="10" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_11" accesskey="11" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">複雜混亂的</td>
@@ -284,7 +301,7 @@
                     </div><input name="n_11" type="hidden" id="n_11" accesskey="11" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_12" accesskey="12" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">不吸引人的</td>
@@ -299,7 +316,7 @@
                     </div><input name="n_12" type="hidden" id="n_12" accesskey="12" />
                 </div>
                 <div class="field" type="5" req="1" id="div_n_13" accesskey="13" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">令人不愉快的</td>
@@ -313,10 +330,25 @@
                         </table>
                     </div><input name="n_13" type="hidden" id="n_13" accesskey="13" />
                 </div>
-                <div class="field mb10" type="5" req="1" id="div_n_14" accesskey="14" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">11. 您對於天下雜誌網站首頁<em>查找資訊過程</em>的感覺為何？<span class="req">*</span></span>
+                <div class="field mb0">
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">11. </span>您對於天下網站首頁<em>查找資訊過程</em>的感覺為何？<span class="req">*</span></span>
                     </div>
                     <div class="field-content pl-m-0">
+                        <table class="scale-rating text-center" cellspacing="0">
+                            <tr>
+                                <td id="w1">　</td>
+                                <td><span>1</span></td>
+                                <td><span>2</span></td>
+                                <td><span>3</span></td>
+                                <td><span>4</span></td>
+                                <td><span>5</span></td>
+                                <td id="b1">　</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="field mt0 mb10" type="5" req="1" id="div_n_14" accesskey="14" ispk="0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">有阻礙的</td>
@@ -331,7 +363,7 @@
                     </div><input name="n_14" type="hidden" id="n_14" accesskey="14" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_15" accesskey="15" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">不舒適的</td>
@@ -346,7 +378,7 @@
                     </div><input name="n_15" type="hidden" id="n_15" accesskey="15" />
                 </div>
                 <div class="field" type="5" req="1" id="div_n_16" accesskey="16" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">花費時間的</td>
@@ -360,10 +392,25 @@
                         </table>
                     </div><input name="n_16" type="hidden" id="n_16" accesskey="16" />
                 </div>
-                <div class="field mb10" type="5" req="1" id="div_n_17" accesskey="17" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">12. 您對於天下網站首頁的<em>內容品質</em>感覺為何？<span class="req">*</span></span>
+                <div class="field mb0">
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">12. </span>您對於天下網站首頁<em>內容品質</em>的感覺為何？<span class="req">*</span></span>
                     </div>
                     <div class="field-content pl-m-0">
+                        <table class="scale-rating text-center" cellspacing="0">
+                            <tr>
+                                <td id="w1">　</td>
+                                <td><span>1</span></td>
+                                <td><span>2</span></td>
+                                <td><span>3</span></td>
+                                <td><span>4</span></td>
+                                <td><span>5</span></td>
+                                <td id="b1">　</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="field mt0 mb10" type="5" req="1" id="div_n_17" accesskey="17" ispk="0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">膚淺的</td>
@@ -378,7 +425,7 @@
                     </div><input name="n_17" type="hidden" id="n_17" accesskey="17" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_18" accesskey="18" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">陳舊的</td>
@@ -393,7 +440,7 @@
                     </div><input name="n_18" type="hidden" id="n_18" accesskey="18" />
                 </div>
                 <div class="field" type="5" req="1" id="div_n_19" accesskey="19" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">更新慢的</td>
@@ -407,10 +454,25 @@
                         </table>
                     </div><input name="n_19" type="hidden" id="n_19" accesskey="19" />
                 </div>
-                <div class="field mb10" type="5" req="1" id="div_n_20" accesskey="20" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">13. 您對於天下網站首頁的<em>整體</em>感覺為何？<span class="req">*</span></span>
+                <div class="field mb0">
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">13. </span>您對於天下網站首頁<em>整體</em>的感覺為何？<span class="req">*</span></span>
                     </div>
                     <div class="field-content pl-m-0">
+                        <table class="scale-rating text-center" cellspacing="0">
+                            <tr>
+                                <td id="w1">　</td>
+                                <td><span>1</span></td>
+                                <td><span>2</span></td>
+                                <td><span>3</span></td>
+                                <td><span>4</span></td>
+                                <td><span>5</span></td>
+                                <td id="b1">　</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="field mt0 mb10" type="5" req="1" id="div_n_20" accesskey="20" ispk="0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">不容易使用的</td>
@@ -425,7 +487,7 @@
                     </div><input name="n_20" type="hidden" id="n_20" accesskey="20" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_21" accesskey="21" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">不專業的</td>
@@ -440,7 +502,7 @@
                     </div><input name="n_21" type="hidden" id="n_21" accesskey="21" />
                 </div>
                 <div class="field mb10" type="5" req="1" id="div_n_22" accesskey="22" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">不可信賴的</td>
@@ -455,7 +517,7 @@
                     </div><input name="n_22" type="hidden" id="n_22" accesskey="22" />
                 </div>
                 <div class="field" type="5" req="1" id="div_n_23" accesskey="23" ispk="0">
-                    <div class="field-content pl-m-0">
+                    <div class="field-content">
                         <table class="scale-rating" cellspacing="0">
                             <tr tp="d">
                                 <td id="w1">令人不滿意的</td>
@@ -469,13 +531,6 @@
                         </table>
                     </div><input name="n_23" type="hidden" id="n_23" accesskey="23" />
                 </div>
-                <div class="formfooter">
-                    <div class="ValError"></div>
-                    <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="2" onclick="prevPage(this)" />
-                    <input type="button" class="btn btn--contained" value="Next" accesskey="2" onclick="nextPage(this)" />
-                </div>
-            </div>
-            <div id="page3">
                 <div class="section" tabindex="23">
                     <ul class="stitle list-reset">
                         <li class="stitle h2 font-weight-500 my0">三、建議與期待：</li>
@@ -483,7 +538,7 @@
                     </ul>
                 </div>
                 <div class="field" type="4" req="1" id="div_n_24" accesskey="24" maxOption=3 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">24. 如果天下雜誌網站「首頁」進行改版，以下哪些您最希望調整的部分？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">14. </span>如果天下雜誌網站「首頁」進行改版，以下哪些您最希望調整的部分？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -494,7 +549,7 @@
                             <li class="mco" fid="n_24_5" order="5"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">乾淨俐落的版面</span></a></li>
                             <li class="mco" fid="n_24_6" order="6"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">高清漂亮的圖片</span></a></li>
                             <li class="mco" fid="n_24_7" order="7"><a multiple="true"><span class="label__radio__mark"></span><span class="label__radio__txt">看到更多文章</span></a></li>
-                            <li class="mco" fid="n_24_8" order="8" onclick="toggleInput(this)">
+                            <li class="mco" data-opt="other" fid="n_24_8" order="8" onclick="toggleInput(this)">
                                 <div>
                                     <a multiple="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -511,10 +566,10 @@
                     </div>
                 </div>
                 <div class="formfooter">
-                    <div class="ValError"></div><input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="3" onclick="prevPage(this)" /><input type="button" class="btn btn--contained" value="Next" accesskey="3" onclick="nextPage(this)" />
+                    <div class="ValError"></div><input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="2" onclick="prevPage(this)" /><input type="button" class="btn btn--contained" value="Next" accesskey="2" onclick="nextPage(this)" />
                 </div>
             </div>
-            <div id="page4">
+            <div id="page3">
                 <div class="section" tabindex="24">
                     <ul class="stitle list-reset">
                         <li class="stitle h2 font-weight-500 my0">四、個人資料：</li>
@@ -522,22 +577,22 @@
                     </ul>
                 </div>
                 <div class="field" type="3" req="1" id="div_n_25" accesskey="25" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">25. 性別<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">15. </span>性別<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select single">
+                        <ul class="mc-select single horizontal">
                             <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">男</span></a></li>
                             <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">女</span></a></li>
                         </ul>
                     </div><input name="n_25" type="hidden" id="n_25" />
                 </div>
                 <div class="field" type="3" req="1" id="div_n_26" accesskey="26" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">26. 年齡<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">16. </span>年齡<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select single">
+                        <ul class="mc-select single horizontal">
                             <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">17歲以下</span></a></li>
-                            <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">18-24歲</span></a></li>
+                            <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">18-24歲 </span></a></li>
                             <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">25-34歲</span></a></li>
                             <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">35-44歲</span></a></li>
                             <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">45-54歲</span></a></li>
@@ -547,10 +602,10 @@
                     </div><input name="n_26" type="hidden" id="n_26" />
                 </div>
                 <div class="field" type="3" req="1" id="div_n_27" accesskey="27" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">27. 產業<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">17. </span>產業<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select single">
+                        <ul class="mc-select single horizontal">
                             <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">製造業</span></a></li>
                             <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">資訊科技業</span></a></li>
                             <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">金融業</span></a></li>
@@ -564,7 +619,7 @@
                             <li class="mco" id="11"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">退休</span></a></li>
                             <li class="mco" id="12"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">學生</span></a></li>
                             <li class="mco" id="13"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">家管</span></a></li>
-                            <li class="mco">
+                            <li class="mco" data-opt="other">
                                 <div>
                                     <a single="true" onclick="toggleInput(this)">
                                         <span class="label__radio__mark"></span><span class="label__radio__txt">其他</span>
@@ -581,12 +636,12 @@
                     </div><input name="n_27" type="hidden" id="n_27" />
                 </div>
                 <div class="field" type="3" req="1" id="div_n_28" accesskey="28" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">28. 居住地<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">18. </span>居住地<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
-                        <ul class="mc-select single">
+                        <ul class="mc-select single horizontal">
                             <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">北北基、宜蘭</span></a></li>
-                            <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">桃、新、苗</span></a></li>
+                            <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">桃、竹、苗</span></a></li>
                             <li class="mco" id="3"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">中、彰、投</span></a></li>
                             <li class="mco" id="4"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">雲、嘉、南、高、屏</span></a></li>
                             <li class="mco" id="5"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">花、東</span></a></li>
@@ -596,28 +651,41 @@
                     </div><input name="n_28" type="hidden" id="n_28" />
                 </div>
                 <div class="formfooter">
-                    <div class="ValError"></div><input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="4" onclick="prevPage(this)" /><input type="button" class="btn btn--contained" value="Next" accesskey="4" onclick="nextPage(this)" />
+                    <div class="ValError"></div>
+                    <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="3" onclick="prevPage(this)" />
+                    <input type="button" class="btn btn--contained" value="Next" accesskey="3" onclick="nextPage(this)" />
                 </div>
             </div>
-            <div id="page5">
+            <div id="page4">
                 <div class="section" tabindex="28">
                     <ul class="stitle list-reset">
                         <li class="stitle h2 font-weight-500 my0">五、實體訪談意願：</li>
-                        <li class="sdescription">天下雜誌目前正進行網站首頁改版的設計研究，誠摯邀請各位參與面對面訪談，參與本次面對面訪談者，天下雜誌將致贈新台幣 500元現金。<br /><br />訪談日期：<br />訪談地點：台北市中山區南京東路二段139號11樓 (捷運松江南京站)<br />訪談所需時間：約1-1.5小時<br /><br />註：我們會依問卷內容，挑出合適的人選，與您聯繫安排訪談時間。若未符合本研究預設的受訪條件，恕不另行通知。</li>
+                        <li class="sdescription h3 pl-d-40">
+                            <p>
+                                天下雜誌目前正進行網站首頁改版的設計研究，誠摯邀請各位參與面對面訪談，參與本次面對面訪談者，天下雜誌將致贈新台幣 500元現金。
+                            </p>
+                            <p>
+                                訪談日期：8/10-8/14<br /> 訪談地點：台北市中山區南京東路二段139號11樓（捷運松江南京站）
+                                <br /> 訪談所需時間：約1-1.5小時
+                            </p>
+                            <p class="h5">
+                                註：我們會依問卷內容，挑出合適的人選，與您聯繫安排訪談時間。若未符合本研究預設的受訪條件，恕不另行通知。
+                            </p>
+                        </li>
                     </ul>
                 </div>
-                <div class="field" type="3" req="1" id="div_n_29" accesskey="29" ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">29. 你願意接受面對面訪問嗎？<span class="req">*</span></span>
+                <div class="field" type="3" req="1" id="div_n_29" accesskey="29" ispk="0" jump=32>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">19. </span>你願意接受面對面訪問嗎？<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
-                            <li class="mco" id="1"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">願意</span></a></li>
-                            <li class="mco" id="2"><a single="true"><span class="label__radio__mark"></span><span class="label__radio__txt">不願意</span></a></li>
+                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" accesskey="30"><span class="label__radio__mark"></span><span class="label__radio__txt">願意</span></a></li>
+                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" accesskey="32"><span class="label__radio__mark"></span><span class="label__radio__txt">不願意</span></a></li>
                         </ul>
                     </div><input name="n_29" type="hidden" id="n_29" />
                 </div>
                 <div class="field" type="1" req="1" id="div_n_30" accesskey="30" ispk="0" isuk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">30. 姓名<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">20. </span>姓名<span class="req">*</span></span>
                     </div>
                     <div class="field-content form__group form__group--filled">
                         <label class="label">
@@ -627,7 +695,7 @@
                     </div>
                 </div>
                 <div class="field" type="1" req="1" id="div_n_31" accesskey="31" ispk="0" isuk="1">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">31. 手機<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">21. </span>手機<span class="req">*</span></span>
                     </div>
                     <div class="field-content form__group form__group--filled">
                         <label class="label">
@@ -637,7 +705,7 @@
                     </div>
                 </div>
                 <div class="field" type="1" req="1" id="div_n_32" accesskey="32" ispk="0" isuk="1">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label">32. 信箱<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">22. </span>信箱<span class="req">*</span></span>
                     </div>
                     <div class="field-content form__group form__group--filled">
                         <label class="label">
@@ -653,18 +721,20 @@
                     </ul>
                 </div>
                 <div class="formfooter">
-                    <div class="ValError"></div><input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="5" onclick="prevPage(this)" /><input type="button" class="btn btn--contained" value="Submit" accesskey="5" onclick="validate(this)" />
+                    <div class="ValError"></div>
+                    <input type="button" class="btn btn--contained" name="prev" value="Prev" accesskey="4" onclick="prevPage(this)" />
+                    <input type="button" class="btn btn--contained" value="Submit" accesskey="4" onclick="validate(this)" />
                 </div>
             </div>
         </div>
         <div class="clear1"></div>
         <input id="SID" name="SID" type="hidden" value="4681" />
-        <input id="rURL" name="rURL" type="hidden" value="https://crmt.cw.com.tw/data/svr3/cwreporter/wmx_survey/finish/index.html" />
+        <input id="rURL" name="rURL" type="hidden" value="https://yutinghcw.github.io/design/survey/tks.html" />
         <input id="clientID" name="clientID" type="hidden" value="cwreporter" />
         <input id="campaignID" name="campaignID" type="hidden" value="OOOOOO" />
         <input id="xml" name="xml" type="hidden">
     </form>
-    <script type="text/javascript">
+    <script>
         $(function() {
             $('#div_n_9 ul li a').click(function() {
                 var device = $(this).attr('data-val');

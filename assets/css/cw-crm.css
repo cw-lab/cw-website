@@ -3332,6 +3332,10 @@ form .container {
 .sdescription.h3 .h5 {
   line-height: 1.25;
 }
+.stitle.h4,
+.sdescription.h4 {
+  color: #171717;
+}
 
 .field-labelblock .req {
   color: #D60C18;

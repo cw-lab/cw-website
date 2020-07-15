@@ -32,7 +32,7 @@
                 親愛的讀者您好，
             </p>
             <p>
-                感謝您關注天下雜誌。為了提供您更豐富、實用的閱讀內容，歡迎回答以下這份問卷，協助我們進行改善。作答就送你網書禮券50元！
+                感謝您關注天下雜誌。為了提供您更豐富、實用的閱讀內容，歡迎回答以下這份問卷，協助我們進行改善。作答就送你天下網路書店禮券 50 元！
             </p>
         </div>
     </header>
@@ -59,7 +59,7 @@
                     </div><input name="n_1" type="hidden" id="n_1" />
                 </div>
                 <div class="field" type="4" req="1" id="div_n_2" accesskey="2" maxOption=7 ispk="0">
-                    <div class="field-labelblock"><span class="error"></span><span class="field-label"><span class="number">2. </span>您通常會透過什麼管道來到天下雜誌網站？（複選）<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">2. </span>您通常會透過什麼管道來到天下雜誌網站？（複選）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -538,7 +538,7 @@
                     </ul>
                 </div>
                 <div class="field" type="4" req="1" id="div_n_24" accesskey="24" maxOption=3 ispk="0">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">14. </span>如果天下雜誌網站「首頁」進行改版，以下哪些您最希望調整的部分？<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">14. </span>如果天下雜誌網站「首頁」進行改版，以下哪些您最希望調整的部分？（複選，最多三項）<span class="req">*</span></span>
                     </div>
                     <div class="field-content">
                         <ul class="mc-select multiple">
@@ -679,8 +679,8 @@
                     </div>
                     <div class="field-content">
                         <ul class="mc-select single">
-                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" accesskey="30"><span class="label__radio__mark"></span><span class="label__radio__txt">願意</span></a></li>
-                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" accesskey="32"><span class="label__radio__mark"></span><span class="label__radio__txt">不願意</span></a></li>
+                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" data-val="願意" accesskey="30"><span class="label__radio__mark"></span><span class="label__radio__txt">願意</span></a></li>
+                            <li class="mco" onclick="show(this)"><a single="true" onclick="show(this)" data-val="不願意" accesskey="32"><span class="label__radio__mark"></span><span class="label__radio__txt">不願意</span></a></li>
                         </ul>
                     </div><input name="n_29" type="hidden" id="n_29" />
                 </div>
@@ -705,13 +705,18 @@
                     </div>
                 </div>
                 <div class="field" type="1" req="1" id="div_n_32" accesskey="32" ispk="0" isuk="1">
-                    <div class="field-labelblock h3 font-weight-500"><span class="error"></span><span class="field-label"><span class="number">22. </span>信箱<span class="req">*</span></span>
+                    <div class="field-labelblock h3 font-weight-500">
+                        <span class="error"></span>
+                        <span class="field-label"><span class="number">22. </span>信箱<span class="req">*</span></span>
                     </div>
-                    <div class="field-content form__group form__group--filled">
-                        <label class="label">
-                            <div class="form__group__placeholder">請輸入信箱</div>
-                            <input class="form__group__input form__group__input--default" name="n_32" type="text" id="n_32" maxlength="" value="" tag="信箱" isEmail="true" />
-                        </label>
+                    <div class="field-content">
+                        <div id="mailexplain" class="h5 mt0-mb05" style="display: none;">將寄送天下網路書店禮券 50 元到您填寫的信箱</div>
+                        <div class="form__group form__group--filled">
+                            <label class="label">
+                                <div class="form__group__placeholder">請輸入信箱</div>
+                                <input class="form__group__input form__group__input--default" name="n_32" type="text" id="n_32" maxlength="" value="" tag="信箱" isEmail="true" />
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="section" tabindex="32">
@@ -739,6 +744,14 @@
             $('#div_n_9 ul li a').click(function() {
                 var device = $(this).attr('data-val');
                 $('#device').text(device);
+            });
+            $('#div_n_29 ul li a').click(function() {
+                var device = $(this).attr('data-val');
+                if (device == '願意') {
+                    $('#mailexplain').hide();
+                } else {
+                    $('#mailexplain').show();
+                }
             });
             $('#form').attr('action', location.protocol.replace('file:', 'http:') + '//crmt.cw.com.tw/SurveyCollector/sc.aspx');
         });

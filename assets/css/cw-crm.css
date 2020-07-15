@@ -3374,6 +3374,10 @@ form .container {
   outline: 0;
 }
 
+.form__group--filled .form__group__input {
+  background-color: #EEEEEE !important;
+}
+
 table.scale-rating {
   font-size: 1rem;
 }

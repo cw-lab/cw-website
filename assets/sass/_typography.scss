@@ -46,6 +46,11 @@ $h-lh: 1.5,
                 color: $primary;
             }
         }
+        .heading__text {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1.25;
+        }
     }
 }
 

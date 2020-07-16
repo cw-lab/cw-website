@@ -56,23 +56,6 @@
         .h2 {
             font-weight: 500;
         }
-        .embed {
-            position: relative;
-            overflow: hidden;
-            &.embed--16by9 {
-                padding-bottom: 56.25%;
-            }
-            &.embed--4by3 {
-                padding-bottom: 75%;
-            }
-            >* {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-        }
     }
     &.ad--scrollvideo {
         padding-top: 0;

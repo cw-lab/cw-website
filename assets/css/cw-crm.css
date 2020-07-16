@@ -1612,6 +1612,12 @@ h1 .heading__icon--error,
 .h1 .heading__icon--error {
   color: #D60C18;
 }
+h1 .heading__text,
+.h1 .heading__text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
+}
 
 h2 {
   font-weight: 600;
@@ -1645,6 +1651,12 @@ h2 .heading__icon--notice,
 h2 .heading__icon--error,
 .h2 .heading__icon--error {
   color: #D60C18;
+}
+h2 .heading__text,
+.h2 .heading__text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
 }
 
 h3 {
@@ -1680,6 +1692,12 @@ h3 .heading__icon--error,
 .h3 .heading__icon--error {
   color: #D60C18;
 }
+h3 .heading__text,
+.h3 .heading__text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
+}
 
 h4 {
   font-weight: 600;
@@ -1714,6 +1732,12 @@ h4 .heading__icon--error,
 .h4 .heading__icon--error {
   color: #D60C18;
 }
+h4 .heading__text,
+.h4 .heading__text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
+}
 
 h5 {
   font-weight: 600;
@@ -1747,6 +1771,12 @@ h5 .heading__icon--notice,
 h5 .heading__icon--error,
 .h5 .heading__icon--error {
   color: #D60C18;
+}
+h5 .heading__text,
+.h5 .heading__text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.25;
 }
 
 h1,

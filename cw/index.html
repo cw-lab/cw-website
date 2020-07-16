@@ -25,6 +25,90 @@
         <script src="https://www.cw.com.tw/assets_new/js/html5shiv.js"></script>
         <script src="https://www.cw.com.tw/assets_new/js/respond1.4.2.min.js"></script>
     <![endif]-->
+    <style>
+        .survey__icon {
+            display: block;
+        }
+        
+        .survey__icon--link {
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
+            color: #003a9f;
+            background-color: #fff;
+            border: 1px solid transparent;
+            background-color: #fff;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -moz-transition: all 0.2s;
+            -o-transition: all 0.2s;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .survey__icon--img {
+            display: block;
+            width: 1.25rem;
+            margin: 0.625rem auto;
+        }
+        
+        .survey__icon--img path {
+            fill: #003a9f;
+            transition: fill 0.2s;
+        }
+        
+        .tooltips {
+            position: relative;
+            left: -20px;
+        }
+        
+        .tooltips:before {
+            content: attr(data-tooltips);
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            color: #003a9f;
+            font-size: 14px;
+            line-height: 1.45;
+            text-decoration: underline;
+            white-space: nowrap;
+            visibility: hidden;
+            opacity: 0;
+            -moz-transition: color 0.2s, opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -moz-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+            -o-transition: color 0.2s, opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -o-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+            -webkit-transition: color 0.2s, opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), -webkit-transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+            transition: color 0.2s, opacity 0.2s cubic-bezier(0.64, 0.09, 0.08, 1), transform 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+            -moz-transform: translateX(-2px) translateY(-50%);
+            -ms-transform: translateX(-2px) translateY(-50%);
+            -webkit-transform: translateX(-2px) translateY(-50%);
+            transform: translateX(-2px) translateY(-50%);
+            z-index: 2;
+        }
+        
+        .tooltips.active:before {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .survey__icon:hover path {
+            fill: #d60c18;
+        }
+        
+        .tooltips:hover:before {
+            color: #d60c18;
+        }
+        
+        @media screen and((max-width: 767px)) {
+            .tooltips::before,
+            .tooltips:hover:before,
+            .tooltips.active:before {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body class="index-page">
@@ -45,6 +129,9 @@
                 </div>
                 <a href="index.html" class="logo">
                     <img src="https://www.cw.com.tw/assets_new/img/logo.png" alt="天下雜誌">
+                </a>
+                <a href="https://yutinghcw.github.io/design/edm/revision.html" class="survey__icon survey__icon--link tooltips active" data-tooltips="填問卷送購書金" target="_blank" rel="noopener noreferrer">
+                    <svg class="survey__icon survey__icon--img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 512"><path d="M189.77,136.58H405.38a20,20,0,0,0,0-40H189.77a20,20,0,1,0,0,40Z"/><path d="M380,194a20,20,0,0,0-20-20H189.77a20,20,0,0,0,0,40H360A20,20,0,0,0,380,194Z"/><path d="M189.77,251.49a20,20,0,1,0,0,40h121a20,20,0,0,0,0-40Z"/><path d="M354.17,430a20,20,0,0,0,8.12-1.72l78.57-35a20.24,20.24,0,0,0,6-4.13L611.14,224.94a20,20,0,0,0,0-28.29l-43.93-43.92a20,20,0,0,0-28.28,0L488.16,203.5V50.24a47.09,47.09,0,0,0-47-47H154a47.09,47.09,0,0,0-47,47V461.76a47.09,47.09,0,0,0,47,47H441.12a47.09,47.09,0,0,0,47-47V347.92l-40,40v73.84a7,7,0,0,1-7,7H154a7,7,0,0,1-7-7V50.24a7,7,0,0,1,7-7H441.12a7,7,0,0,1,7,7V243.5L374.66,317a20,20,0,0,0-4.16,6.1L335.85,402a20,20,0,0,0,18.32,28Zm198.9-234.86,15.65,15.65-13.66,13.65-15.64-15.64ZM405.61,342.62,511.13,237.09l15.65,15.64L421.22,358.3l-28,12.43Z"/></svg>
                 </a>
                 <div class="item__scroll">
                     <div class="title__share">
@@ -1175,7 +1262,7 @@
             </li>
         </ul>
     </nav>
-    <div class="couplet-wide">
+    <div class="couplet-wide" style="display: none !important;">
         <center><img src="https://tpc.googlesyndication.com/simgad/5046473817278800472" alt=""></center>
     </div>
     <div class="mobile-tab list-inline">
@@ -2838,10 +2925,10 @@
                 </center>
             </div>
         </aside>
-        <div class="couplet-left" id="couplet-left">
+        <div class="couplet-left" id="couplet-left" style="display: none !important;">
             <cnter><img src="https://tpc.googlesyndication.com/simgad/17857936500971542637" alt=""></cnter>
         </div>
-        <div class="couplet-right" id="couplet-right">
+        <div class="couplet-right" id="couplet-right" style="display: none !important;">
             <cnter><img src="https://tpc.googlesyndication.com/simgad/11865461082279349668" alt=""></cnter>
         </div>
     </div>

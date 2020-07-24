@@ -7,7 +7,8 @@
     @include user-select(none);
     span {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
+        line-height: 1.25;
         @include transition(all 0.3s);
         &.label__radio__txt {
             padding-left: 0.5em;
@@ -15,15 +16,16 @@
         }
         &.label__radio__helper {
             display: block;
+            padding-top: 5px;
             padding-left: calc(20px + 0.575rem);
             color: $secondary;
             font-size: 14px;
             font-weight: normal;
-            line-height: 1.5;
+            line-height: 1.25;
         }
         &.label__radio__mark {
             position: relative;
-            top: 0;
+            top: calc((1.25rem - 20px) / 2);
             left: 0;
             width: 20px;
             height: 20px;
@@ -102,7 +104,8 @@
     @include user-select(none);
     span {
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: top;
+        line-height: 1.25;
         @include transition(all 0.3s);
         &.label__radio__txt {
             width: calc(100% - 20px - .5em);
@@ -111,15 +114,16 @@
         }
         &.label__radio__helper {
             display: block;
+            padding-top: 5px;
             padding-left: calc(20px + 0.575rem);
             color: $secondary;
-            font-size: 14px;
+            font-size: 0.875rem;
             font-weight: normal;
-            line-height: 1.5;
+            line-height: 1.25;
         }
         &.label__radio__mark {
             position: relative;
-            top: 0;
+            top: calc((1.25rem - 20px) / 2);
             left: 0;
             width: 20px;
             height: 20px;

@@ -1154,6 +1154,35 @@
                         </div>
                     </form>
                 </div>
+                <div class="flex align-items-baseline justify-between">
+                    <h2 id="creditcard" class="mtb0">信用卡管理</h2>
+                    <button id="addNew" class="btn btn--text">新增信用卡</button>
+                </div>
+                <div class="edit__group mt10-mb20">
+                    <div class="form--remark m0 p20">
+                        <span>天下雜誌並不會留存您的信用卡完整資訊，天下配合的綠界科技股份有限公司符合PCI-DSS 國際安全認證，致力提供安全且便捷的交易環境。</span>
+                    </div>
+                    <div class="label__group label__group--txt label__group--cancel p0 mt-d-30 mt-m-20">
+                        <label class="label--radio">
+							<span class="label__radio__txt w-100 pl0">
+								<img src="../../assets/images/secant/icon-visa@3x.png" alt=""><span>台新國際商業銀行 末四碼 7485</span>
+							</span>
+							<span class="label__radio__helper w-100 pl60">若需刪除此信用卡請先至「訂閱管理」，將您的下次續訂方案取消自動續訂或更改為其他扣款方式。</span>
+						</label>
+                        <label class="label--radio">
+							<span class="label__radio__txt pl0">
+								<img src="../../assets/images/secant/icon-master@3x.png" alt=""><span>玉山國際商業銀行 末四碼 1234</span>
+							</span>
+							<button class="btn btn--text btn--creditCardCancel">刪除</button>
+						</label>
+                        <label class="label--radio">
+							<span class="label__radio__txt pl0">
+								<img src="../../assets/images/secant/icon-jcb@3x.png" alt=""><span>台北富邦銀行 末四碼 4321</span>
+							</span>
+							<button class="btn btn--text btn--creditCardCancel">刪除</button>
+						</label>
+                    </div>
+                </div>
             </article>
         </div>
     </main>
@@ -1341,6 +1370,71 @@
             </div>
         </div>
     </div>
+    <div class="message message--dialogs" id="creditcardNotice" style="display: none;">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>新增信用卡須知</h2>
+                <p class="my0">
+                    新增信用卡時，天下雜誌將會取得一次2元的授權紀錄，以驗證您的卡號資訊，此筆授權紀錄將不會請款
+                </p>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--outlined btn__close">取消</button>
+                <button class="btn btn--contained btn__close" id="addNewCredit">繼續新增</button>
+            </div>
+        </div>
+    </div>
+    <div class="message message--alert" id="deletecreditcardNotice" style="display: none;">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>確定刪除此信用卡？</h2>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--outlined btn__close">取消</button>
+                <button class="btn btn--contained btn__close" id="creditCardCancel">確定刪除</button>
+            </div>
+        </div>
+    </div>
+    <div class="message message--dialogs" id="addNewCreditFalse" style="display: none;">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>信用卡新增失敗</h2>
+                <p class="my0">
+                    您的信用卡新增失敗，可能原因如下：
+                </p>
+                <ol class="my0">
+                    <li>信用卡卡號、末3碼、期限輸入錯誤。</li>
+                    <li>信用卡額度 / 餘額不足。</li>
+                    <li>信用卡尚未開卡。</li>
+                    <li>信用卡已過期。</li>
+                    <li>信用卡發卡銀行系統相關問題。</li>
+                    <li>該信用卡卡號同時刷卡授權中而導致失敗。</li>
+                    <li>網路斷線。</li>
+                    <li>若持續刷卡交易失敗，請立即與您的信用卡發卡銀行進行聯繫。</li>
+                </ol>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--contained btn__close">我知道了</button>
+            </div>
+        </div>
+    </div>
+    <div class="message message--center message--notification" id="addNewCreditSuccess" style="display: none;">
+        <div class="message__txt">
+            <p class="my0">
+                您已成功新增此信用卡
+            </p>
+        </div>
+    </div>
+    <div class="message message--center message--notification" id="deleteNewCreditSuccess" style="display: none;">
+        <div class="message__txt">
+            <p class="my0">
+                您已成功刪除此信用卡
+            </p>
+        </div>
+    </div>
     <script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
     <script type="text/javascript" src="../../assets/js/cw.js"></script>
@@ -1430,6 +1524,31 @@
                 $('#memberRight').fadeIn();
                 $('.black').addClass('opened');
             });
+            $('#addNew').click(function() {
+                $('#creditcardNotice').fadeIn();
+                $('.black').addClass('opened dialogs');
+            })
+            $('#addNewCredit').click(function() {
+                window.location.href = 'ecpay.html';
+            });
+            $('.btn--creditCardCancel').click(function() {
+                var eq = $(this).parent().index();
+                console.log(eq);
+                $('#deletecreditcardNotice').fadeIn();
+                $('.black').addClass('opened');
+                $('#creditCardCancel').click(function() {
+                    $('#deleteNewCreditSuccess').fadeIn().delay(3000).fadeOut();
+                    $('.label__group--cancel').children().eq(eq).hide();
+                });
+            });
+            if (window.location.href.indexOf("addNewCreditSuccess") > -1) {
+                $('#addNewCreditSuccess').fadeIn().delay(3000).fadeOut();
+            }
+            if (window.location.href.indexOf("addNewCreditFalse") > -1) {
+                $('#addNewCreditFalse').fadeIn();
+                $('.black').addClass('opened dialogs');
+            }
+
         })
     </script>
 </body>

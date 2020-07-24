@@ -2395,8 +2395,6 @@ body.message__open {
 }
 .message--remark .message__container {
   position: relative;
-  max-width: 940px;
-  margin: auto;
   padding: 20px;
 }
 .message--remark .message__txt p a {

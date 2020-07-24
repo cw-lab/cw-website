@@ -4335,7 +4335,8 @@ a:focus {
 }
 .label--radio span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  line-height: 1.25;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -4347,15 +4348,16 @@ a:focus {
 }
 .label--radio span.label__radio__helper {
   display: block;
+  padding-top: 5px;
   padding-left: calc(20px + 0.575rem);
   color: #939EA7;
   font-size: 14px;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 .label--radio span.label__radio__mark {
   position: relative;
-  top: 0;
+  top: calc((1.25rem - 20px) / 2);
   left: 0;
   width: 20px;
   height: 20px;
@@ -4441,7 +4443,8 @@ a:focus {
 }
 .label--check span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
+  line-height: 1.25;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -4454,15 +4457,16 @@ a:focus {
 }
 .label--check span.label__radio__helper {
   display: block;
+  padding-top: 5px;
   padding-left: calc(20px + 0.575rem);
   color: #939EA7;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: 1.25;
 }
 .label--check span.label__radio__mark {
   position: relative;
-  top: 0;
+  top: calc((1.25rem - 20px) / 2);
   left: 0;
   width: 20px;
   height: 20px;
@@ -4608,8 +4612,6 @@ body.message__open {
 }
 .message--remark .message__container {
   position: relative;
-  max-width: 940px;
-  margin: auto;
   padding: 20px;
 }
 .message--remark .message__txt p a {

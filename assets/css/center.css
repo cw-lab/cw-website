@@ -166,6 +166,9 @@
     padding: 30px;
   }
 }
+.center__page article a.btn {
+  align-self: inherit;
+}
 .center__page article .planning__group .form__group {
   max-width: none;
   padding-bottom: 20px;
@@ -186,6 +189,14 @@
     padding-right: 30px;
   }
 }
+.center__page article .planning__group .form.form__title {
+  position: relative;
+  margin-top: 0;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #D3D5D7;
+  background-color: #fafafa;
+}
 .center__page article .form + .form {
   margin-top: 30px;
 }
@@ -200,18 +211,23 @@
 .center__page article .form > .select__group .btn--small {
   margin-top: 20px;
 }
-.center__page article .form > .form__edit {
+.center__page article .form .form__edit {
   font-size: 1rem;
 }
-.center__page article .form > .form__edit > * {
+.center__page article .form .form__edit > * {
   line-height: 1.5;
 }
-.center__page article .form > .form__edit > .h3 {
+.center__page article .form .form__edit > .h3 {
   position: relative;
   padding-right: 1.25em;
   font-weight: 600;
 }
-.center__page article .form > .form__edit > .h3 i.icon {
+@media (min-width: 1024px) {
+  .center__page article .form .form__edit > .h3 {
+    font-weight: 500;
+  }
+}
+.center__page article .form .form__edit > .h3 i.icon {
   position: absolute;
   top: 50%;
   right: 0;
@@ -221,7 +237,7 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.center__page article .form > .form__edit:hover {
+.center__page article .form .form__edit:hover {
   background-color: #fafafa;
 }
 .center__page article .form .form__value {
@@ -241,6 +257,15 @@
 }
 .center__page article .form .form__value a:hover {
   color: #D60C18;
+}
+.center__page article .form .form__value img,
+.center__page article .form .form__value span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.center__page article .form .form__value img {
+  width: 3.125rem;
+  margin-right: 10px;
 }
 .center__page article .form .address__group {
   margin-top: 10px;
@@ -341,18 +366,21 @@
   width: 100%;
 }
 .center__page article .form--remark {
-  margin: 30px 20px 20px;
+  margin: 20px 20px 0;
   padding: 12px;
-  background-color: #EEEEEE;
+  background-color: #fafafa;
 }
 @media (min-width: 1024px) {
   .center__page article .form--remark {
-    margin: 30px 30px 20px;
-    padding: 12px 20px;
+    margin: 20px 30px 0;
+    padding: 12px 15px;
   }
 }
 .center__page article .form--remark + .form {
   margin-top: 20px;
+}
+.center__page article .form--remark > .form__edit {
+  width: 100%;
 }
 .center__page article .form--remark i.icon {
   margin-right: 10px;
@@ -360,14 +388,19 @@
   font-size: 1.25rem;
   line-height: 1.2;
 }
-@media (max-width: 1023px) {
-  .center__page article .form--remark i.icon {
-    display: none;
+.center__page article .form--remark span {
+  width: calc(100% - 1.25rem - 10px);
+}
+@media (max-width: 767px) {
+  .center__page article .form--remark span {
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: start;
   }
 }
-@media (min-width: 1024px) {
-  .center__page article .form--remark > .form__edit > .flex span {
-    width: calc(100% - 1.25rem - 10px);
+@media (max-width: 767px) {
+  .center__page article .form--remark a.btn {
+    margin-top: 5px;
   }
 }
 .center__page article .search {
@@ -477,8 +510,47 @@
     margin-top: 20px;
   }
 }
+.center__page .label__group {
+  font-size: 1rem;
+}
 .center__page .label__group label + label {
   margin-top: 1.25rem;
+}
+.center__page .label__group .label__radio__txt {
+  width: calc(100% - 20px);
+}
+.center__page .label__group .label__radio__txt img,
+.center__page .label__group .label__radio__txt span {
+  display: inline-block;
+  vertical-align: top;
+}
+.center__page .label__group .label__radio__txt img {
+  width: 3.125rem;
+  margin-right: 10px;
+}
+.center__page .label__group .label__radio__txt span {
+  width: calc(100% - 3.25rem - 10px);
+}
+.center__page .label__group .label__radio__txt .h5 {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.center__page .label__group.label__group--txt .label__radio__txt {
+  width: 100%;
+}
+.center__page .label__group.label__group--cancel .label--radio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: auto;
+}
+.center__page .label__group.label__group--cancel .label__radio__txt {
+  width: calc(100% - 3rem);
+}
+.center__page .label__group.label__group--cancel .label__radio__txt.w-100 {
+  width: 100%;
 }
 .center__page .table {
   width: 100%;

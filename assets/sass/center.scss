@@ -69,6 +69,9 @@
                 padding: 30px;
             }
         }
+        a.btn {
+            align-self: inherit;
+        }
         .planning__group {
             .form__group {
                 max-width: none;
@@ -84,6 +87,14 @@
                 @include breakpoint(1024px) {
                     padding-left: 30px;
                     padding-right: 30px;
+                }
+                &.form__title {
+                    position: relative;
+                    margin-top: 0;
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                    border-bottom: 1px solid $gray-200;
+                    background-color: $gray;
                 }
             }
         }
@@ -104,7 +115,7 @@
                     margin-top: 20px;
                 }
             }
-            >.form__edit {
+            .form__edit {
                 font-size: 1rem;
                 >* {
                     line-height: 1.5;
@@ -113,6 +124,9 @@
                     position: relative;
                     padding-right: 1.25em;
                     font-weight: 600;
+                    @include breakpoint(1024px) {
+                        font-weight: 500;
+                    }
                     i.icon {
                         position: absolute;
                         top: 50%;
@@ -141,6 +155,15 @@
                     &:hover {
                         color: $primary;
                     }
+                }
+                img,
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                img {
+                    width: 3.125rem;
+                    margin-right: 10px;
                 }
             }
             .address__group {
@@ -229,30 +252,36 @@
             }
         }
         .form--remark {
-            margin: 30px 20px 20px;
+            margin: 20px 20px 0;
             padding: 12px;
-            background-color: $gray-100;
+            background-color: $gray;
             @include breakpoint(1024px) {
-                margin: 30px 30px 20px;
-                padding: 12px 20px;
+                margin: 20px 30px 0;
+                padding: 12px 15px;
             }
             +.form {
                 margin-top: 20px;
+            }
+            >.form__edit {
+                width: 100%;
             }
             i.icon {
                 margin-right: 10px;
                 color: $surface;
                 font-size: 1.25rem;
                 line-height: 1.2;
-                @include breakpoint(max-width 1023px) {
-                    display: none;
+            }
+            span {
+                width: calc(100% - 1.25rem - 10px);
+                @include breakpoint(max-width 767px) {
+                    margin-top: 5px;
+                    flex-direction: column;
+                    align-items: start;
                 }
             }
-            >.form__edit>.flex {
-                span {
-                    @include breakpoint(1024px) {
-                        width: calc(100% - 1.25rem - 10px);
-                    }
+            a.btn {
+                @include breakpoint(max-width 767px) {
+                    margin-top: 5px;
                 }
             }
         }
@@ -348,8 +377,49 @@
         }
     }
     .label__group {
+        font-size: 1rem;
         label+label {
             margin-top: 1.25rem;
+        }
+        .label__radio__txt {
+            width: calc(100% - 20px);
+            img,
+            span {
+                display: inline-block;
+                vertical-align: top;
+            }
+            img {
+                width: 3.125rem;
+                margin-right: 10px;
+            }
+            span {
+                width: calc(100% - 3.25rem - 10px);
+            }
+            .h5 {
+                display: block;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+        &.label__group--txt {
+            .label__radio__txt {
+                width: 100%;
+            }
+        }
+        &.label__group--cancel {
+            .label--radio {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                cursor: auto;
+            }
+            .label__radio__txt {
+                width: calc(100% - 3rem);
+                &.w-100 {
+                    width: 100%;
+                }
+            }
         }
     }
     .table {

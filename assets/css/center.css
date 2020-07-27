@@ -556,6 +556,9 @@
   width: 100%;
   font-size: 1.125rem;
 }
+.center__page .table a.btn {
+  font-size: 1.125rem;
+}
 @media (min-width: 1024px) {
   .center__page .table {
     display: table;
@@ -571,54 +574,89 @@
 @media (min-width: 1024px) {
   .center__page .table__group .table__row {
     display: table-row;
+    padding: 20px;
   }
 }
 @media (max-width: 1023px) {
   .center__page .table__group .table__row {
     padding: 30px 20px;
   }
-  .center__page .table__group .table__row:first-child {
+  .center__page .table__group .table__row.table__header {
     display: none;
   }
 }
 .center__page .table__group .table__row:nth-child(even) {
   background-color: #fafafa;
 }
-.center__page .table__group .table__item {
-  line-height: 1.25;
-}
 @media (min-width: 1024px) {
-  .center__page .table__group .table__item {
-    display: table-cell;
-    padding-left: 35px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-  }
-  .center__page .table__group .table__item:first-child {
-    padding-left: 20px;
-  }
-  .center__page .table__group .table__item:last-child {
-    padding-right: 20px;
-  }
-}
-@media (max-width: 1023px) {
-  .center__page .table__group .table__item + .table__item {
-    margin-top: 15px;
-  }
-}
-.center__page .table__group .table__item span {
-  display: block;
-}
-@media (min-width: 1024px) {
-  .center__page .table__group .table__item span:nth-child(2) + span {
-    margin-top: 5px;
-  }
-  .center__page .table__group .table__item span.cell__title {
+  .center__page .table__group .table__item .cell__title {
     display: none;
   }
 }
-.center__page .table__group .table__item .btn {
-  font-size: 1.125rem;
+@media (max-width: 1023px) {
+  .center__page .table__group .table__item + .table__item .cell__title {
+    margin-top: 25px;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--app {
+    display: none;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--invoice a.btn {
+    display: table;
+    margin-top: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .center__page .table__group .table__item {
+    display: inline-block;
+    vertical-align: text-top;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .center__page .table__group .table__item:first-child {
+    padding-left: 1.875rem;
+  }
+  .center__page .table__group .table__item:last-child {
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell {
+    display: inline-block;
+    vertical-align: text-top;
+    line-height: 1.5;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--date {
+    width: 8.25rem;
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--name {
+    width: 11rem;
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--period {
+    width: 14.75rem;
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--credit {
+    width: 12.75rem;
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--amount {
+    width: 5.25rem;
+    padding-right: 1.875rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--invoice {
+    width: 4.5rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--app ~ .table__cell {
+    display: none;
+  }
+}
+.center__page .table__group .cell__group + .cell__group {
+  margin-top: 15px;
+}
+@media (min-width: 1024px) {
+  .center__page .table__group .cell__group + .cell__group {
+    margin-top: 5px;
+  }
 }
 .center__page .table__group .table__btn {
   display: none;

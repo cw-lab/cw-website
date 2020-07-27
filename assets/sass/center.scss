@@ -424,12 +424,12 @@
     }
     .table {
         width: 100%;
-        font-size: 1.125rem;
-        a.btn {
-            font-size: 1.125rem;
-        }
         @include breakpoint(1024px) {
             display: table;
+            font-size: 1.125rem;
+            a.btn {
+                font-size: 1.125rem;
+            }
         }
         &__group {
             &.border-1 {
@@ -492,24 +492,24 @@
                         vertical-align: text-top;
                         line-height: 1.5;
                         &.table__cell--date {
-                            width: 8.25rem;
-                            padding-right: 1.875rem;
+                            width: 7.725rem;
+                            padding-right: 1.5rem;
                         }
                         &.table__cell--name {
                             width: 11rem;
-                            padding-right: 1.875rem;
+                            padding-right: 1.5rem;
                         }
                         &.table__cell--period {
-                            width: 14.75rem;
-                            padding-right: 1.875rem;
+                            width: 14.5rem;
+                            padding-right: 1.5rem;
                         }
                         &.table__cell--credit {
-                            width: 12.75rem;
-                            padding-right: 1.875rem;
+                            width: 12.5rem;
+                            padding-right: 1.5rem;
                         }
                         &.table__cell--amount {
-                            width: 5.25rem;
-                            padding-right: 1.875rem;
+                            width: 6.25rem;
+                            padding-right: 1.5rem;
                         }
                         &.table__cell--invoice {
                             width: 4.5rem;

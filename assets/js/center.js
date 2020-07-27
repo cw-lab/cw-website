@@ -96,9 +96,9 @@ $(function() {
         $(this).parent().parent().siblings().removeClass('now');
         $(this).parent().parent().addClass('now');
     });
-    $(window).resize(function(width) {
+    $(window).on('resize', _.debounce(function() {
         var width = $(window).width();
         tableHistory(width);
         phaseText();
-    })
+    }));
 });

@@ -554,14 +554,14 @@
 }
 .center__page .table {
   width: 100%;
-  font-size: 1.125rem;
-}
-.center__page .table a.btn {
-  font-size: 1.125rem;
 }
 @media (min-width: 1024px) {
   .center__page .table {
     display: table;
+    font-size: 1.125rem;
+  }
+  .center__page .table a.btn {
+    font-size: 1.125rem;
   }
 }
 .center__page .table__group.border-1 {
@@ -624,24 +624,24 @@
     line-height: 1.5;
   }
   .center__page .table__group .table__item .table__cell.table__cell--date {
-    width: 8.25rem;
-    padding-right: 1.875rem;
+    width: 7.725rem;
+    padding-right: 1.5rem;
   }
   .center__page .table__group .table__item .table__cell.table__cell--name {
     width: 11rem;
-    padding-right: 1.875rem;
+    padding-right: 1.5rem;
   }
   .center__page .table__group .table__item .table__cell.table__cell--period {
-    width: 14.75rem;
-    padding-right: 1.875rem;
+    width: 14.5rem;
+    padding-right: 1.5rem;
   }
   .center__page .table__group .table__item .table__cell.table__cell--credit {
-    width: 12.75rem;
-    padding-right: 1.875rem;
+    width: 12.5rem;
+    padding-right: 1.5rem;
   }
   .center__page .table__group .table__item .table__cell.table__cell--amount {
-    width: 5.25rem;
-    padding-right: 1.875rem;
+    width: 6.25rem;
+    padding-right: 1.5rem;
   }
   .center__page .table__group .table__item .table__cell.table__cell--invoice {
     width: 4.5rem;

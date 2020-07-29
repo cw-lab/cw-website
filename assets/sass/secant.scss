@@ -933,132 +933,83 @@
                 }
             }
         }
-        .credit {
-            .input__group {
-                margin-top: 20px;
-                width: 100%;
-                &:first-child {
-                    margin-top: 0;
-                    @include breakpoint(max-width 767px) {
-                        order: 2;
-                    }
-                    @include breakpoint(768px) {
-                        width: calc(100% - 281px);
-                    }
+        .label__group {
+            font-size: 1rem;
+            label+label {
+                margin-top: 1.25rem;
+            }
+            .label__radio__txt {
+                width: calc(100% - 20px);
+                img,
+                span {
+                    display: inline-block;
+                    vertical-align: top;
                 }
-                &__title {
-                    margin-bottom: 5px;
+                img {
+                    width: 3.125rem;
+                    margin-right: 10px;
+                }
+                span {
+                    width: calc(100% - 3.25rem - 10px);
+                }
+                .h5 {
+                    display: block;
                     font-size: 1rem;
+                    line-height: 1.5;
                 }
-                input {
-                    min-width: auto;
+            }
+            &.label__group--txt {
+                .label__radio__txt {
                     width: 100%;
                 }
-                .select__group-col2 {
+            }
+            &.label__group--cancel {
+                .label--radio {
                     display: flex;
-                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
                     justify-content: space-between;
-                    .select__group {
-                        display: block;
-                        width: calc( (100% - 1rem) / 2);
-                        select {
-                            min-width: auto;
-                            width: 100%;
-                        }
+                    cursor: auto;
+                }
+                .label__radio__txt {
+                    width: calc(100% - 3rem);
+                    &.w-100 {
+                        width: 100%;
                     }
                 }
             }
-            .card__group {
+        }
+        .form--remark {
+            margin: 20px 20px 0;
+            padding: 12px;
+            background-color: $gray;
+            @include breakpoint(1024px) {
+                margin: 20px 30px 0;
+                padding: 12px 15px;
+            }
+            +.form {
+                margin-top: 20px;
+            }
+            >.form__edit {
                 width: 100%;
-                @include breakpoint(768px) {
-                    width: 231px;
+            }
+            i.icon {
+                margin-right: 10px;
+                color: $surface;
+                font-size: 1.25rem;
+                line-height: 1.2;
+            }
+            span {
+                width: calc(100% - 1.25rem - 10px);
+                @include breakpoint(max-width 767px) {
+                    margin-top: 5px;
+                    flex-direction: column;
+                    align-items: start;
                 }
-                .card {
-                    position: relative;
-                    width: 231px;
-                    height: 146px;
-                    background-image: url("../images/secant/credit@3x.png");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    @include background-size(cover);
-                    &__use {
-                        margin-bottom: 20px;
-                        display: flex;
-                        flex-direction: row;
-                        li {
-                            img {
-                                height: 20px;
-                            }
-                            +li {
-                                margin-left: 0.5em;
-                            }
-                        }
-                    }
-                    &__type {
-                        position: absolute;
-                        right: 15px;
-                        top: 15px;
-                        width: 55px;
-                        height: 30px;
-                        background-repeat: no-repeat;
-                        background-position: center right;
-                        @include background-size(contain);
-                        &--visa {
-                            background-image: url("../images/secant/icon-visa@3x.png");
-                        }
-                        &--mastercard {
-                            background-image: url("../images/secant/icon-master@3x.png");
-                        }
-                        &--jcb {
-                            background-image: url("../images/secant/icon-jcb@3x.png");
-                        }
-                    }
-                    &__input {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        input {
-                            position: absolute;
-                            color: $secondary-variant;
-                            font-size: 1rem;
-                            font-weight: 500;
-                            border: 0;
-                            background-color: transparent;
-                            &.card__input {
-                                &--number {
-                                    top: 85px;
-                                    left: 15px;
-                                    width: 201px;
-                                    font-size: 1.125em;
-                                    text-align: center;
-                                    letter-spacing: 0.025em;
-                                }
-                                &--month {
-                                    top: 110px;
-                                    left: 60px;
-                                    width: 30px;
-                                }
-                                &--year {
-                                    top: 110px;
-                                    left: 88px;
-                                    width: 20px;
-                                }
-                                &--code {
-                                    top: 110px;
-                                    left: 187px;
-                                    width: 35px;
-                                }
-                            }
-                        }
-                    }
-                    &__note {
-                        display: none;
-                        color: $primary;
-                        font-size: 0.75em;
-                    }
-                    @include breakpoint(max-width 767px) {
-                        display: none;
-                    }
+            }
+            a.btn {
+                @include breakpoint(max-width 767px) {
+                    margin-top: 5px;
                 }
             }
         }

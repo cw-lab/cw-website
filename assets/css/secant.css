@@ -999,141 +999,84 @@
 .webaccess__page section.group[class*='--disabled'] i {
   color: #D3D5D7 !important;
 }
-.webaccess__page section .credit .input__group {
-  margin-top: 20px;
-  width: 100%;
-}
-.webaccess__page section .credit .input__group:first-child {
-  margin-top: 0;
-}
-@media (max-width: 767px) {
-  .webaccess__page section .credit .input__group:first-child {
-    order: 2;
-  }
-}
-@media (min-width: 768px) {
-  .webaccess__page section .credit .input__group:first-child {
-    width: calc(100% - 281px);
-  }
-}
-.webaccess__page section .credit .input__group__title {
-  margin-bottom: 5px;
+.webaccess__page section .label__group {
   font-size: 1rem;
 }
-.webaccess__page section .credit .input__group input {
-  min-width: auto;
-  width: 100%;
+.webaccess__page section .label__group label + label {
+  margin-top: 1.25rem;
 }
-.webaccess__page section .credit .input__group .select__group-col2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.webaccess__page section .label__group .label__radio__txt {
+  width: calc(100% - 20px);
 }
-.webaccess__page section .credit .input__group .select__group-col2 .select__group {
+.webaccess__page section .label__group .label__radio__txt img,
+.webaccess__page section .label__group .label__radio__txt span {
+  display: inline-block;
+  vertical-align: top;
+}
+.webaccess__page section .label__group .label__radio__txt img {
+  width: 3.125rem;
+  margin-right: 10px;
+}
+.webaccess__page section .label__group .label__radio__txt span {
+  width: calc(100% - 3.25rem - 10px);
+}
+.webaccess__page section .label__group .label__radio__txt .h5 {
   display: block;
-  width: calc( (100% - 1rem) / 2);
+  font-size: 1rem;
+  line-height: 1.5;
 }
-.webaccess__page section .credit .input__group .select__group-col2 .select__group select {
-  min-width: auto;
+.webaccess__page section .label__group.label__group--txt .label__radio__txt {
   width: 100%;
 }
-.webaccess__page section .credit .card__group {
+.webaccess__page section .label__group.label__group--cancel .label--radio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  cursor: auto;
+}
+.webaccess__page section .label__group.label__group--cancel .label__radio__txt {
+  width: calc(100% - 3rem);
+}
+.webaccess__page section .label__group.label__group--cancel .label__radio__txt.w-100 {
   width: 100%;
 }
-@media (min-width: 768px) {
-  .webaccess__page section .credit .card__group {
-    width: 231px;
+.webaccess__page section .form--remark {
+  margin: 20px 20px 0;
+  padding: 12px;
+  background-color: #fafafa;
+}
+@media (min-width: 1024px) {
+  .webaccess__page section .form--remark {
+    margin: 20px 30px 0;
+    padding: 12px 15px;
   }
 }
-.webaccess__page section .credit .card__group .card {
-  position: relative;
-  width: 231px;
-  height: 146px;
-  background-image: url("../images/secant/credit@3x.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
+.webaccess__page section .form--remark + .form {
+  margin-top: 20px;
 }
-.webaccess__page section .credit .card__group .card__use {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: row;
-}
-.webaccess__page section .credit .card__group .card__use li img {
-  height: 20px;
-}
-.webaccess__page section .credit .card__group .card__use li + li {
-  margin-left: 0.5em;
-}
-.webaccess__page section .credit .card__group .card__type {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 55px;
-  height: 30px;
-  background-repeat: no-repeat;
-  background-position: center right;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-.webaccess__page section .credit .card__group .card__type--visa {
-  background-image: url("../images/secant/icon-visa@3x.png");
-}
-.webaccess__page section .credit .card__group .card__type--mastercard {
-  background-image: url("../images/secant/icon-master@3x.png");
-}
-.webaccess__page section .credit .card__group .card__type--jcb {
-  background-image: url("../images/secant/icon-jcb@3x.png");
-}
-.webaccess__page section .credit .card__group .card__input {
-  position: relative;
+.webaccess__page section .form--remark > .form__edit {
   width: 100%;
-  height: 100%;
 }
-.webaccess__page section .credit .card__group .card__input input {
-  position: absolute;
-  color: #48545D;
-  font-size: 1rem;
-  font-weight: 500;
-  border: 0;
-  background-color: transparent;
+.webaccess__page section .form--remark i.icon {
+  margin-right: 10px;
+  color: #003a9f;
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
-.webaccess__page section .credit .card__group .card__input input.card__input--number {
-  top: 85px;
-  left: 15px;
-  width: 201px;
-  font-size: 1.125em;
-  text-align: center;
-  letter-spacing: 0.025em;
-}
-.webaccess__page section .credit .card__group .card__input input.card__input--month {
-  top: 110px;
-  left: 60px;
-  width: 30px;
-}
-.webaccess__page section .credit .card__group .card__input input.card__input--year {
-  top: 110px;
-  left: 88px;
-  width: 20px;
-}
-.webaccess__page section .credit .card__group .card__input input.card__input--code {
-  top: 110px;
-  left: 187px;
-  width: 35px;
-}
-.webaccess__page section .credit .card__group .card__note {
-  display: none;
-  color: #D60C18;
-  font-size: 0.75em;
+.webaccess__page section .form--remark span {
+  width: calc(100% - 1.25rem - 10px);
 }
 @media (max-width: 767px) {
-  .webaccess__page section .credit .card__group .card {
-    display: none;
+  .webaccess__page section .form--remark span {
+    margin-top: 5px;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+@media (max-width: 767px) {
+  .webaccess__page section .form--remark a.btn {
+    margin-top: 5px;
   }
 }
 

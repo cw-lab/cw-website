@@ -3431,7 +3431,7 @@ table.scale-rating td {
   }
 }
 table.scale-rating td:first-child {
-  width: 120px;
+  width: 115px;
   padding-left: 0;
   padding-right: 5px;
   text-align: right;
@@ -3443,16 +3443,20 @@ table.scale-rating td:first-child {
   }
 }
 table.scale-rating td:last-child {
-  width: 120px;
+  width: 115px;
   padding-left: 5px;
   padding-right: 0;
   text-align: left;
 }
 @media (min-width: 1024px) {
   table.scale-rating td:last-child {
-    width: 125px;
+    width: 145px;
     padding-left: 10px;
   }
+}
+table.scale-rating td dd {
+  display: inline-block;
+  margin: 0;
 }
 table.scale-rating td span {
   display: block;

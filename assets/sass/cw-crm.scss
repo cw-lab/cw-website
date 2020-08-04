@@ -213,7 +213,7 @@ table.scale-rating {
             padding-right: 10px;
         }
         &:first-child {
-            width: 120px;
+            width: 115px;
             padding-left: 0;
             padding-right: 5px;
             text-align: right;
@@ -223,14 +223,18 @@ table.scale-rating {
             }
         }
         &:last-child {
-            width: 120px;
+            width: 115px;
             padding-left: 5px;
             padding-right: 0;
             text-align: left;
             @include breakpoint(1024px) {
-                width: 125px;
+                width: 145px;
                 padding-left: 10px;
             }
+        }
+        dd {
+            display: inline-block;
+            margin: 0;
         }
         span {
             display: block;

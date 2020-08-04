@@ -3439,7 +3439,7 @@ table.scale-rating td:first-child {
 }
 @media (min-width: 1024px) {
   table.scale-rating td:first-child {
-    width: 125px;
+    width: 170px;
     padding-right: 10px;
   }
 }
@@ -3451,7 +3451,7 @@ table.scale-rating td:last-child {
 }
 @media (min-width: 1024px) {
   table.scale-rating td:last-child {
-    width: 145px;
+    width: 170px;
     padding-left: 10px;
   }
 }

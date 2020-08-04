@@ -219,7 +219,7 @@ table.scale-rating {
             padding-right: 5px;
             text-align: right;
             @include breakpoint(1024px) {
-                width: 125px;
+                width: 170px;
                 padding-right: 10px;
             }
         }
@@ -229,7 +229,7 @@ table.scale-rating {
             padding-right: 0;
             text-align: left;
             @include breakpoint(1024px) {
-                width: 145px;
+                width: 170px;
                 padding-left: 10px;
             }
         }

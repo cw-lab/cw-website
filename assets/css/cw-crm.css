@@ -247,6 +247,7 @@ textarea {
 body {
   position: relative;
   min-height: 100%;
+  scroll-behavior: auto;
 }
 @media (min-width: 1024px) {
   body {

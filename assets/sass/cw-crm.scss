@@ -66,6 +66,7 @@ textarea {
 body {
     position: relative;
     min-height: 100%;
+    scroll-behavior: auto;
     @include breakpoint(1024px) {
         font-family: Roboto, 'Noto Sans TC', sans-serif;
     }

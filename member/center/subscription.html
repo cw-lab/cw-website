@@ -997,6 +997,25 @@
             </div>
         </div>
     </div>
+    <div class="message message--dialogs" id="changedfail" style="display: none;">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>更換失敗</h2>
+                <p class="mt0">
+                    不好意思，續訂方案更換失敗，請您重新嘗試更換。<br/>若持續失敗，請聯絡客服協助處理，謝謝。
+                </p>
+                <p class="mb0">
+                    E-mail：bill@service.cw.com.tw<br/>
+                    讀者服務專線：886-2-2662-0332<br/>
+                    服務時間：週一～週五 09:00~17:30
+                </p>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--contained btn__close">我知道了</button>
+            </div>
+        </div>
+    </div>
     <div class="message message--dialogs" id="deactivateSuccess" style="display: none;">
         <div class="message__container">
             <i class="icon icon-cancel message__close"></i>
@@ -1129,6 +1148,10 @@
             })
             if (window.location.href.indexOf("changed") > -1) {
                 $('#changed').fadeIn().delay(3000).fadeOut();
+            }
+            if (window.location.href.indexOf("changedfail") > -1) {
+                $('#changedfail').fadeIn();
+                $('.black').addClass('opened dialogs');
             }
             $('.creditcardchange').each(function() {
                 var val = $(this).siblings('label').children('input:checked').val(),

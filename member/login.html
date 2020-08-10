@@ -6,6 +6,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="robots" content="noindex">
 		<meta name="googlebot" content="noindex">
+		<!-- Apple ID -->
+		<meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]">
 		<title>登入｜天下雜誌｜華文世界最優質的財經雜誌</title>
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -29,7 +34,10 @@
 				<form action="https://www.cw.com.tw/">
 					<section class="group">
 						<div class="social_login social_login--facebook">
-							<i class="icon icon-facebook"></i>以 Facebook 帳號繼續
+							<i class="icon icon-facebook"></i>使用 Facebook 登入
+						</div>
+						<div id="appleid-signin" class="social_login social_login--apple" data-color="white" data-border="true" data-type="sign in">
+							<i class="icon icon-apple"></i>使用 Apple 登入
 						</div>
 						<div class="separation separation--or"><span>或</span></div>
 						<div class="flex-container">
@@ -72,6 +80,7 @@
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+        <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
 		<script type="text/javascript" src="../assets/js/cw.js"></script>
 		<script type="text/javascript">
 			$('main').click(function () {

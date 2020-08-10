@@ -997,7 +997,7 @@
             </div>
         </div>
     </div>
-    <div class="message message--dialogs" id="changedfail" style="display: none;">
+    <div class="message message--dialogs" id="changefail" style="display: none;">
         <div class="message__container">
             <i class="icon icon-cancel message__close"></i>
             <div class="message__txt">
@@ -1149,8 +1149,8 @@
             if (window.location.href.indexOf("changed") > -1) {
                 $('#changed').fadeIn().delay(3000).fadeOut();
             }
-            if (window.location.href.indexOf("changedfail") > -1) {
-                $('#changedfail').fadeIn();
+            if (window.location.href.indexOf("changefail") > -1) {
+                $('#changefail').fadeIn();
                 $('.black').addClass('opened dialogs');
             }
             $('.creditcardchange').each(function() {

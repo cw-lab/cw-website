@@ -4,6 +4,9 @@
 .serial__page {
     position: relative;
     min-height: 100vh;
+    @include breakpoint(1024px) {
+        padding-bottom: 420px;
+    }
     .container {
         @include breakpoint(375px) {
             padding-left: 15px;
@@ -41,10 +44,11 @@
                 &__group {
                     // padding-top: 20px;
                     padding-bottom: 20px;
+                    justify-content: space-between;
                 }
                 &__item {
                     position: relative;
-                    padding-right: calc((100% - (65px * 3)) / 2);
+                    padding-right: calc((100% - (66px * 3)) / 2);
                     color: $secondary;
                     &--past {
                         color: $primary;
@@ -58,7 +62,7 @@
                         display: block;
                     }
                     &::before {
-                        content: "\e933";
+                        content: $icon-arrow-right;
                         font-family: $icomoon-font-family;
                         position: absolute;
                         top: 50%;
@@ -263,14 +267,6 @@
                     color: $gray-200 !important;
                 }
             }
-        }
-    }
-    footer {
-        @include breakpoint(768px) {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
         }
     }
 }

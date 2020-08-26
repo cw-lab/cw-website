@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .serial__page .container::before, .serial__page .container::after, .serial__page main form::before, .serial__page main form::after {
   content: '';
   display: block;
@@ -12,6 +13,11 @@
 .serial__page {
   position: relative;
   min-height: 100vh;
+}
+@media (min-width: 1024px) {
+  .serial__page {
+    padding-bottom: 420px;
+  }
 }
 @media (min-width: 375px) {
   .serial__page .container {
@@ -52,10 +58,11 @@
 }
 .serial__page main article .step__group {
   padding-bottom: 20px;
+  justify-content: space-between;
 }
 .serial__page main article .step__item {
   position: relative;
-  padding-right: calc((100% - (65px * 3)) / 2);
+  padding-right: calc((100% - (66px * 3)) / 2);
   color: #939EA7;
 }
 .serial__page main article .step__item--past {
@@ -70,7 +77,7 @@
   display: block;
 }
 .serial__page main article .step__item::before {
-  content: "\e933";
+  content: "";
   font-family: "cw_icon";
   position: absolute;
   top: 50%;
@@ -301,14 +308,6 @@
 .serial__page section.group[class*='--disabled'] a,
 .serial__page section.group[class*='--disabled'] i {
   color: #D3D5D7 !important;
-}
-@media (min-width: 768px) {
-  .serial__page footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
 }
 
 /*# sourceMappingURL=serial.css.map */

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap");
 .btn::before, .btn::after, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .line__page--authorize form .authorize__data ul li + li::before, .line__page--step .step__group .step__icon::before, .line__page--step .step__group .step__right::before, .line__page--step .step__group .step__right::after {
   content: '';
   display: block;
@@ -307,7 +306,7 @@ body.opened {
 }
 
 .serif {
-  font-family: 'Roboto Slab', 'Noto Serif TC', serif;
+  font-family: 'Noto Serif TC', serif;
 }
 
 a {

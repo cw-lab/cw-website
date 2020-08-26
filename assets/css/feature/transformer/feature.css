@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700&display=swap");
 nav.menubar--sub ul.menubar__user::before, button.btn::before, button.btn::after,
 a.btn::before,
 a.btn::after, .board::before, .feature__page .side-menu::before, .feature__page section .card__img::before, .feature__page section .embed:before, .feature__page section .slideshow .slider__thumbnail .thumbnail__img::before, .feature__page section .slideshow--column .slider__item::before, .feature__page section .slideshow--column .slider__item::after, .feature__page p.hidden::before {
@@ -310,7 +309,7 @@ body.opened {
 }
 
 .serif {
-  font-family: 'Roboto Slab', 'Noto Serif TC', serif;
+  font-family: 'Noto Serif TC', serif;
 }
 
 a {

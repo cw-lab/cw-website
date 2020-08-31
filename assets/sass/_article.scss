@@ -10,204 +10,214 @@
 @import "article/_fullscreen";
 @import "article/_paywall";
 .breadcrumb {
-    font-size: 0;
-    li {
-        display: inline-block;
-        +li {
-            &::before {
-                @include beforeafter('>', inline);
-                padding-left: 5px;
-                padding-right: 5px;
-                font-size: 0.875rem;
-            }
-        }
-        a {
-            display: inline-block;
-            color: $text;
-            font-size: 0.875rem;
-            text-decoration: none;
-            &:hover {
-                color: $primary;
-            }
-        }
-    }
+	font-size: 0;
+	li {
+		display: inline-block;
+		+ li {
+			&::before {
+				@include beforeafter(">", inline);
+				padding-left: 5px;
+				padding-right: 5px;
+				font-size: 0.875rem;
+			}
+		}
+		a {
+			display: inline-block;
+			color: $text;
+			font-size: 0.875rem;
+			text-decoration: none;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
 }
 
 .article__label {
-    margin-top: 10px;
-    margin-bottom: -10px;
+	margin-top: 10px;
+	margin-bottom: -10px;
 }
 
 .source {
-    display: block;
-    padding-top: 5px;
-    color: $secondary;
-    font-size: 0.875rem;
-    a {
-        color: $secondary;
-        text-decoration: underline;
-        &:hover {
-            color: $secondary-variant;
-        }
-    }
+	display: block;
+	padding-top: 5px;
+	color: $secondary;
+	font-size: 0.875rem;
+	a {
+		color: $secondary;
+		text-decoration: underline;
+		&:hover {
+			color: $secondary-variant;
+		}
+	}
 }
 
 .article__head {
-    position: relative;
-    z-index: 4;
+	position: relative;
+	z-index: 4;
+	.article__img img {
+		min-height: 66.984127vw;
+		@include breakpoint(768px) {
+			min-height: calc((100vw - 40px) * 0.66984127);
+		}
+		@include breakpoint(1024px) {
+			min-height: 645px;
+		}
+	}
 }
 
 .article__body {
-    position: relative;
-    z-index: 0;
-    @include breakpoint(1024px) {
-        z-index: 3;
-    }
+	position: relative;
+	z-index: 0;
+	@include breakpoint(1024px) {
+		z-index: 3;
+	}
 }
 
 .article__foot {
-    position: relative;
-    background-color: $white;
-    z-index: 4;
+	position: relative;
+	background-color: $white;
+	z-index: 4;
 }
 
 .article__head,
 .article__body,
 .article__foot {
-    @include breakpoint(1024px) {
-        font-weight: 300;
-    }
+	@include breakpoint(1024px) {
+		font-weight: 300;
+	}
 }
 
 .article__body,
 .article__foot,
 .article__promotion {
-    margin-left: auto;
-    margin-right: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .article__body,
 .article__foot {
-    max-width: 740px;
-    width: 100%;
+	max-width: 740px;
+	width: 100%;
 }
 
 .article__promotion {
-    position: relative;
-    max-width: 700px;
-    width: calc(100% - 40px);
-    z-index: 4;
+	position: relative;
+	max-width: 700px;
+	width: calc(100% - 40px);
+	z-index: 4;
 }
 
-.preface>* {
-    font-size: 1.125em;
-    line-height: 1.7;
+.preface > * {
+	font-size: 1.125em;
+	line-height: 1.7;
 }
 
 @import "article/_function";
 @import "article/_detail";
+
 .article__content {
-    p,
-    ul,
-    ol {
-        font-size: 1.125em;
-        line-height: 1.7;
-    }
-    p {
-        margin-top: 1.15em;
-        margin-bottom: 1.15em;
-    }
-    strong {
-        font-weight: 600;
-        @include breakpoint(1024px) {
-            font-weight: 500;
-        }
-    }
-    h2 {
-        margin-top: 40px;
-    }
-    a {
-        min-width: auto;
-        padding: 0;
-        color: $surface;
-        text-decoration: underline;
-        border: 0;
-        cursor: pointer;
-        &:hover {
-            color: $primary;
-        }
-    }
-    blockquote {
-        position: relative;
-        width: 300px;
-        padding: 2px 0;
-        margin: 40px auto;
-        @include breakpoint(1024px) {
-            width: 500px;
-        }
-        p {
-            font-weight: 600;
-            @include breakpoint(1024px) {
-                font-weight: 500;
-            }
-        }
-        &::before,
-        &::after {
-            position: absolute;
-            left: 50%;
-            width: 60px;
-            height: 2px;
-            margin-left: -30px;
-            @include beforeafter('', block);
-            background-color: $primary;
-        }
-        &::before {
-            top: 0;
-        }
-        &::after {
-            bottom: 0;
-        }
-    }
-    // 小辭典
-    .more {
-        position: relative;
-        display: inline-block;
-        padding-right: 1.15em;
-        color: $primary;
-        line-height: 1.5;
-        border-bottom: 1px dashed $primary;
-        cursor: pointer;
-        &::before {
-            @include beforeafter('\e94b', block);
-            position: absolute;
-            top: 50%;
-            right: 0;
-            font-family: $icomoon-font-family;
-            line-height: 1;
-            @include translateY(-50%);
-        }
-        &:hover {
-            color: $primary-variant;
-        }
-    }
-    .more__text {
-        display: none;
-        width: 100%;
-        margin: 10px 0;
-        padding: 20px 40px;
-        background-color: $gray-100;
-        &.active {
-            display: block;
-        }
-    }
-    .lazyload__group {
-        margin-top: 40px;
-        +.source {
-            @include breakpoint(1024px) {
-                margin-bottom: 40px;
-            }
-        }
-    }
+	p,
+	ul,
+	ol {
+		font-size: 1.125em;
+		line-height: 1.7;
+	}
+	p {
+		margin-top: 1.15em;
+		margin-bottom: 1.15em;
+	}
+	strong {
+		font-weight: 600;
+		@include breakpoint(1024px) {
+			font-weight: 500;
+		}
+	}
+	h2 {
+		margin-top: 40px;
+	}
+	a {
+		min-width: auto;
+		padding: 0;
+		color: $surface;
+		text-decoration: underline;
+		border: 0;
+		cursor: pointer;
+		&:hover {
+			color: $primary;
+		}
+	}
+	blockquote {
+		position: relative;
+		width: 300px;
+		padding: 2px 0;
+		margin: 40px auto;
+		@include breakpoint(1024px) {
+			width: 500px;
+		}
+		p {
+			font-weight: 600;
+			@include breakpoint(1024px) {
+				font-weight: 500;
+			}
+		}
+		&::before,
+		&::after {
+			position: absolute;
+			left: 50%;
+			width: 60px;
+			height: 2px;
+			margin-left: -30px;
+			@include beforeafter("", block);
+			background-color: $primary;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+	}
+	// 小辭典
+	.more {
+		position: relative;
+		display: inline-block;
+		padding-right: 1.15em;
+		color: $primary;
+		line-height: 1.5;
+		border-bottom: 1px dashed $primary;
+		cursor: pointer;
+		&::before {
+			@include beforeafter("\e94b", block);
+			position: absolute;
+			top: 50%;
+			right: 0;
+			font-family: $icomoon-font-family;
+			line-height: 1;
+			@include translateY(-50%);
+		}
+		&:hover {
+			color: $primary-variant;
+		}
+	}
+	.more__text {
+		display: none;
+		width: 100%;
+		margin: 10px 0;
+		padding: 20px 40px;
+		background-color: $gray-100;
+		&.active {
+			display: block;
+		}
+	}
+	.lazyload__group {
+		margin-top: 40px;
+		+ .source {
+			@include breakpoint(1024px) {
+				margin-bottom: 40px;
+			}
+		}
+	}
 }
 
 @import "article/_box";
@@ -215,312 +225,312 @@
 @import "article/_extended";
 @import "article/_keyword";
 article {
-    iframe {
-        max-width: 100%;
-    }
-    .infogram-embed {
-        position: relative;
-        padding-top: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-        @include breakpoint(1024px) {
-            padding-top: 20px;
-            margin-left: 40px;
-            margin-right: 40px;
-        }
-        &::after {
-            @include beforeafter('', block);
-            position: absolute;
-            top: 0px;
-            left: -20px;
-            width: calc(100% + 40px);
-            height: 100%;
-            border: 1px solid $gray-200;
-            z-index: -1;
-            @include breakpoint(1024px) {
-                left: -40px;
-                width: calc(100% + 80px);
-            }
-        }
-    }
-    &.article__level--1 {
-        h1,
-        .h1 {
-            font-size: 2rem;
-            @include breakpoint(1024px) {
-                font-size: 2.25rem;
-            }
-        }
-        h2,
-        .h2 {
-            font-size: 1.5rem;
-            @include breakpoint(1024px) {
-                font-size: 1.625rem;
-            }
-        }
-        .article__detail {
-            @include breakpoint(1024px) {
-                padding-right: 100px;
-            }
-        }
-        .breadcrumb {
-            li {
-                +li {
-                    &::before {
-                        font-size: 1.125rem;
-                    }
-                }
-                a {
-                    font-size: 1.125rem;
-                }
-            }
-        }
-        .source {
-            font-size: 1.125rem;
-        }
-        .audio__player .audio__title {
-            font-size: 1.375rem;
-        }
-        .article__detail {
-            >ul {
-                li {
-                    >span {
-                        font-size: 1.125rem;
-                    }
-                    >.author--item {
-                        a,
-                        span {
-                            font-size: 1.125rem;
-                        }
-                        +.author--item::before {
-                            font-size: 1.125rem;
-                        }
-                    }
-                }
-            }
-            >ul.article__author {
-                li::after {
-                    font-size: 1.125rem;
-                }
-            }
-            >ul.article__assort {
-                a,
-                span {
-                    font-size: 1.125rem;
-                }
-            }
-            time {
-                font-size: 1.125rem;
-            }
-        }
-        .article__views {
-            font-size: 1.125rem;
-        }
-        .preface>* {
-            font-size: 1.375rem;
-        }
-        .article__content {
-            p,
-            ul,
-            ol {
-                font-size: 1.375rem;
-            }
-        }
-        .article__extended {
-            ul {
-                font-size: 1.375rem;
-            }
-        }
-        ul.article__keyword {
-            li {
-                a {
-                    font-size: 1.125rem;
-                }
-            }
-        }
-    }
-    &.article__level--2 {
-        h1,
-        .h1 {
-            font-size: 2.25rem;
-            @include breakpoint(1024px) {
-                font-size: 2.5rem;
-            }
-        }
-        h2,
-        .h2 {
-            font-size: 1.75rem;
-            @include breakpoint(1024px) {
-                font-size: 1.875rem;
-            }
-        }
-        .article__detail {
-            @include breakpoint(1024px) {
-                padding-right: 120px;
-            }
-        }
-        .breadcrumb {
-            li {
-                +li {
-                    &::before {
-                        font-size: 1.375rem;
-                    }
-                }
-                a {
-                    font-size: 1.375rem;
-                }
-            }
-        }
-        .source {
-            font-size: 1.375rem;
-        }
-        .audio__player .audio__title {
-            font-size: 1.625rem;
-        }
-        .article__detail {
-            >ul {
-                li {
-                    >span {
-                        font-size: 1.375rem;
-                    }
-                    >.author--item {
-                        a,
-                        span {
-                            font-size: 1.375rem;
-                        }
-                        +.author--item::before {
-                            font-size: 1.375rem;
-                        }
-                    }
-                }
-            }
-            >ul.article__author {
-                li::after {
-                    font-size: 1.375rem;
-                }
-            }
-            >ul.article__assort {
-                a,
-                span {
-                    font-size: 1.375rem;
-                }
-            }
-            time {
-                font-size: 1.375rem;
-            }
-        }
-        .article__views {
-            font-size: 1.375rem;
-        }
-        .preface>* {
-            font-size: 1.625rem;
-        }
-        .article__content {
-            p,
-            ul,
-            ol {
-                font-size: 1.625rem;
-            }
-        }
-        .article__extended {
-            ul {
-                font-size: 1.625rem;
-            }
-        }
-        ul.article__keyword {
-            li {
-                a {
-                    font-size: 1.375rem;
-                }
-            }
-        }
-    }
+	iframe {
+		max-width: 100%;
+	}
+	.infogram-embed {
+		position: relative;
+		padding-top: 10px;
+		margin-left: 20px;
+		margin-right: 20px;
+		@include breakpoint(1024px) {
+			padding-top: 20px;
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+		&::after {
+			@include beforeafter("", block);
+			position: absolute;
+			top: 0px;
+			left: -20px;
+			width: calc(100% + 40px);
+			height: 100%;
+			border: 1px solid $gray-200;
+			z-index: -1;
+			@include breakpoint(1024px) {
+				left: -40px;
+				width: calc(100% + 80px);
+			}
+		}
+	}
+	&.article__level--1 {
+		h1,
+		.h1 {
+			font-size: 2rem;
+			@include breakpoint(1024px) {
+				font-size: 2.25rem;
+			}
+		}
+		h2,
+		.h2 {
+			font-size: 1.5rem;
+			@include breakpoint(1024px) {
+				font-size: 1.625rem;
+			}
+		}
+		.article__detail {
+			@include breakpoint(1024px) {
+				padding-right: 100px;
+			}
+		}
+		.breadcrumb {
+			li {
+				+ li {
+					&::before {
+						font-size: 1.125rem;
+					}
+				}
+				a {
+					font-size: 1.125rem;
+				}
+			}
+		}
+		.source {
+			font-size: 1.125rem;
+		}
+		.audio__player .audio__title {
+			font-size: 1.375rem;
+		}
+		.article__detail {
+			> ul {
+				li {
+					> span {
+						font-size: 1.125rem;
+					}
+					> .author--item {
+						a,
+						span {
+							font-size: 1.125rem;
+						}
+						+ .author--item::before {
+							font-size: 1.125rem;
+						}
+					}
+				}
+			}
+			> ul.article__author {
+				li::after {
+					font-size: 1.125rem;
+				}
+			}
+			> ul.article__assort {
+				a,
+				span {
+					font-size: 1.125rem;
+				}
+			}
+			time {
+				font-size: 1.125rem;
+			}
+		}
+		.article__views {
+			font-size: 1.125rem;
+		}
+		.preface > * {
+			font-size: 1.375rem;
+		}
+		.article__content {
+			p,
+			ul,
+			ol {
+				font-size: 1.375rem;
+			}
+		}
+		.article__extended {
+			ul {
+				font-size: 1.375rem;
+			}
+		}
+		ul.article__keyword {
+			li {
+				a {
+					font-size: 1.125rem;
+				}
+			}
+		}
+	}
+	&.article__level--2 {
+		h1,
+		.h1 {
+			font-size: 2.25rem;
+			@include breakpoint(1024px) {
+				font-size: 2.5rem;
+			}
+		}
+		h2,
+		.h2 {
+			font-size: 1.75rem;
+			@include breakpoint(1024px) {
+				font-size: 1.875rem;
+			}
+		}
+		.article__detail {
+			@include breakpoint(1024px) {
+				padding-right: 120px;
+			}
+		}
+		.breadcrumb {
+			li {
+				+ li {
+					&::before {
+						font-size: 1.375rem;
+					}
+				}
+				a {
+					font-size: 1.375rem;
+				}
+			}
+		}
+		.source {
+			font-size: 1.375rem;
+		}
+		.audio__player .audio__title {
+			font-size: 1.625rem;
+		}
+		.article__detail {
+			> ul {
+				li {
+					> span {
+						font-size: 1.375rem;
+					}
+					> .author--item {
+						a,
+						span {
+							font-size: 1.375rem;
+						}
+						+ .author--item::before {
+							font-size: 1.375rem;
+						}
+					}
+				}
+			}
+			> ul.article__author {
+				li::after {
+					font-size: 1.375rem;
+				}
+			}
+			> ul.article__assort {
+				a,
+				span {
+					font-size: 1.375rem;
+				}
+			}
+			time {
+				font-size: 1.375rem;
+			}
+		}
+		.article__views {
+			font-size: 1.375rem;
+		}
+		.preface > * {
+			font-size: 1.625rem;
+		}
+		.article__content {
+			p,
+			ul,
+			ol {
+				font-size: 1.625rem;
+			}
+		}
+		.article__extended {
+			ul {
+				font-size: 1.625rem;
+			}
+		}
+		ul.article__keyword {
+			li {
+				a {
+					font-size: 1.375rem;
+				}
+			}
+		}
+	}
 }
 
 .article__recommend,
 .article__promotion {
-    border-top: 1px solid $black;
+	border-top: 1px solid $black;
 }
 
 @import "article/_card";
 .article__page {
-    .card__img {
-        overflow: hidden;
-        &::after {
-            @include beforeafter('', block);
-            width: 100%;
-            padding-top: 66.984127%;
-        }
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: auto;
-            @include translate(-50%, -50%);
-        }
-    }
-    @import "article/_list";
-    @import "article/_idlebox";
-    footer {
-        padding-bottom: 70px;
-        @include breakpoint(1024px) {
-            padding-bottom: 90px;
-        }
-    }
+	.card__img {
+		overflow: hidden;
+		&::after {
+			@include beforeafter("", block);
+			width: 100%;
+			padding-top: 66.984127%;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: auto;
+			@include translate(-50%, -50%);
+		}
+	}
+	@import "article/_list";
+	@import "article/_idlebox";
+	footer {
+		padding-bottom: 70px;
+		@include breakpoint(1024px) {
+			padding-bottom: 90px;
+		}
+	}
 }
 
 // 補舊版樣式
 .authorDetail {
-    font-style: normal;
-    font-size: 0;
-    border: 1px solid $gray-200;
-    @include breakpoint(1024px) {
-        padding: 20px;
-    }
-    .pic {
-        vertical-align: middle;
-        width: 100px;
-        margin: auto;
-        @include breakpoint(1024px) {
-            display: inline-block;
-        }
-        .imgzoom {
-            margin-top: 0;
-            margin-left: 0;
-            margin-right: 0;
-            &::after {
-                display: none;
-            }
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .txt {
-        vertical-align: middle;
-        @include breakpoint(max-width 1023px) {
-            padding: 10px 20px 20px;
-        }
-        @include breakpoint(1024px) {
-            display: inline-block;
-            width: calc(100% - 100px);
-            padding-left: 20px;
-        }
-        h2 {
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.25rem;
-            @include breakpoint(1024px) {
-                font-size: 1.375rem;
-            }
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 1.125rem;
-        }
-    }
+	font-style: normal;
+	font-size: 0;
+	border: 1px solid $gray-200;
+	@include breakpoint(1024px) {
+		padding: 20px;
+	}
+	.pic {
+		vertical-align: middle;
+		width: 100px;
+		margin: auto;
+		@include breakpoint(1024px) {
+			display: inline-block;
+		}
+		.imgzoom {
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 0;
+			&::after {
+				display: none;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.txt {
+		vertical-align: middle;
+		@include breakpoint(max-width 1023px) {
+			padding: 10px 20px 20px;
+		}
+		@include breakpoint(1024px) {
+			display: inline-block;
+			width: calc(100% - 100px);
+			padding-left: 20px;
+		}
+		h2 {
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-size: 1.25rem;
+			@include breakpoint(1024px) {
+				font-size: 1.375rem;
+			}
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 1.125rem;
+		}
+	}
 }
 
 @import "article/_newsletter";

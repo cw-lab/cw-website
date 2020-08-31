@@ -6,6 +6,7 @@
     }
     &.ad--970by250 {
         position: relative;
+        min-height: 312px;
         background-color: #f7f7f7;
         border: 1px solid $gray-100;
         &.opened {

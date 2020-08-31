@@ -7,9 +7,9 @@
 @import 'normalize/groups';
 @import 'normalize/forms';
 @import 'normalize/tables';
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap');
 ul,
 ol {
     padding-left: 1.15em;
@@ -123,8 +123,9 @@ body {
     // padding-bottom: 500px;
     @include breakpoint(1024px) {
         padding-bottom: 550px;
-        font-family: Roboto, 'Noto Sans TC', sans-serif;
+        font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
         // font-weight: 300;
+        font-display: swap;
     }
     // &.footer--downward {
     //     padding-bottom: 160px;

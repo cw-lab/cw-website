@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
-    <title>密碼／登入問題 ——《天下雜誌》服務中心</title>
+    <title>付費扣款問題 ——《天下雜誌》服務中心</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
@@ -157,131 +157,51 @@
         <div class="container">
             <article>
                 <a href="index.html" class="btn--back btn--text mb30">＜返回服務中心首頁</a>
-                <h1 class="h2 mtb0">密碼／登入問題</h1>
+                <h1 class="h2 mtb0">發票問題</h1>
                 <div class="accordion__group mt20">
                     <div class="accordion__item">
                         <div class="accordion__item__header">
-                            <span class="number">1.</span><span class="txt">為什麼沒有解除訂閱，卻顯示已經不是全閱讀訂戶，無法登入使用？</span>
+                            <span class="number">1.</span><span class="txt">電子發票開立說明</span>
                             <i class="icon icon-plus"></i>
                         </div>
                         <div class="accordion__item__panel">
                             <p class="mt0">
-                                請您先確認從 App 或網站訂購天下數位全閱讀之後，收到訂單確認信的 email 是哪一個信箱，這個信箱就是您的會員帳號；如果您曾經在訂購天下數位全閱讀以前加入天下知識網會員，您的會員帳號可能不一定是信箱，而是當初您自行設定的英數組合。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">2.</span><span class="txt">使用 Facebook 帳號登入</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                您可以在<a href="javascript:;" @click="checkMemberLogin('login')" class="btn--text">登入天下帳號</a>時選擇「 Facebook 帳號登入」，並輸入您的 Facebook 帳號密碼，就能登入天下。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">3.</span><span class="txt">忘記密碼</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                如果忘記您的密碼，請<a href="https://dev-account.cwg.tw//password/forget/cw" target="_blank" class="btn--text">在這裡</a>重新設定您的密碼。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">4.</span><span class="txt">忘記帳號</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                如果忘記您的會員帳號，請<a href="https://bit.ly/2qshnAY" target="_blank" class="btn--text">點這裡登入</a>天下顧客服務中心，就能查詢您的帳號。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">5.</span><span class="txt">修改密碼</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                如果需要修改登入密碼，請<a href="https://dev-www.cw.com.tw/member/account" target="_blank" class="btn--text">點這裡登入</a>天下會員中心，就能修改您的密碼。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">6.</span><span class="txt">在國外可以登入天下雜誌帳號使用嗎？</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                在海外多數地區，只要能夠上網即可使用天下雜誌 web 與 App 服務。
-                            </p>
-                            <p>
-                                提醒您，在中國地區因網路限制，有可能無法正常使用天下雜誌 web 與 App 服務，建議您先向所在地的「網路服務電信業者」反映此問題並瞭解原因後，再決定是否訂閱。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">7.</span><span class="txt">我的帳號可以同時登入幾個設備？</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                您的天下雜誌帳號能夠同時登入 3 個設備（含瀏覽器），您可以在<a href="javascript:;" @click="checkMemberLogin('login')" class="btn--text">登入</a>天下會員後使用手機、平板與電腦無限暢讀。
-                            </p>
-                            <p>
-                                ※ 當有超過 3 個設備（含瀏覽器）同時登入，畫面上會跳出「您正在其他設備上閱讀，要換成這台裝置嗎？」的提醒訊息，請您直接點選確認，就可以在設備上正常使用。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__item__header">
-                            <span class="number">8.</span><span class="txt">換了手機該怎麼取回天下數位全閱讀的閱讀權限？</span>
-                            <i class="icon icon-plus"></i>
-                        </div>
-                        <div class="accordion__item__panel">
-                            <p class="mt0">
-                                天下數位全閱讀的訂閱權限與您的手機系統（ iPhone 或 Android ）是綁定的。
+                                為響應政府「環保愛地球、節能減碳」政策，本公司已全面開立電子發票，將不主動郵寄電子發票證明聯紙本。
                             </p>
                             <div class="h3 mtb0">
-                                iOS 換 iOS／Android 換 Android
+                                個人式電子發票（二聯式發票）
                             </div>
-                            <p class="mb0">
-                                如果您更換的手機和原本的手機是相同系統（ iOS 換 iOS，或 Android 換 Android ），請依照以下步驟登入您的帳戶：
-                            </p>
-                            <ol class="decimal--step mt0">
+                            <ol>
                                 <li>
-                                    利用您原本手機上的 ID（ Apple ID 或 Google ID ）下載<a href="https://bit.ly/2NLA2Rb" target="_blank" class="btn--text">天下雜誌 App</a> 到您的新手機，並在<a href="https://bit.ly/2NLA2Rb" target="_blank" class="btn--text">天下雜誌 App</a> 中，登入您的天下會員帳號，就可以正常使用。
+                                    依據您所選擇之發票載具類型進行發票開立，您可於發票開立後48小時過後至財政部電子發票整合服務平台查閱，也可在收到電子發票開立通知的E-mail內，檢視您的發票開立資料。
                                 </li>
                                 <li>
-                                    如果您在登入後仍然無法解鎖文章，請在 App 付費畫面中，點選「取回閱讀權限」。
+                                    若您選擇會員載具者，每逢單月26日由本公司為您對獎（已索取取紙本、已捐贈及已作廢發票除外），中獎發票將掛號寄至您訂購時指定之地址，並同步 E-mail 通知您。若訂購時填寫地址不完整或有誤，將影響中獎發票寄送。若對發票寄送地址有疑問，請聯絡客服人員查核。
+                                </li>
+                                <li>
+                                    若您選擇共通性載具者(手機載具/自然人憑證載具)，中獎後可至財政部電子發票整合服務平台或多媒體服務機(如ibon)列印紙本發票兌獎。
+                                </li>
+                                <li>
+                                    選擇電子發票證明聯紙本者，本公司將不再為您進行對獎，請您妥善保管您的電子發票證明聯，避免影響兌獎權益。若證明聯正本遺失，補印發票將無法領獎。電子發票具有與紙本發票相同效力，更不會有紙本遺失無法兌領獎的問題，並享有雲端發票增開獎項等優點，建議您使用電子發票。
                                 </li>
                             </ol>
                             <div class="h3 mtb0">
-                                iOS 換 Android／Android 換 iOS
+                                公司戶電子發票（三聯式發票）
                             </div>
-                            <p class="mb0">
-                                如果您更換的手機和原本的手機是不同系統（ iOS 換 Android，或 Android 換 iOS ），請依照以下步驟登入您的帳戶：
+                            <p>
+                                選擇公司戶電子發票，可於收到電子發票開立通知的E-mail內，依信中所夾附之PDF檔 ，列印電子發票證明聯，據以向公司報帳。
                             </p>
-                            <ol class="decimal--step mt0">
-                                <li>
-                                    請您先在原本手機系統的 App 商店中，設定取消訂閱「天下雜誌」，避免原手機系統商持續進行扣款。
-                                </li>
-                                <li>
-                                    在新手機的 App 商店中，下載最新版的<a href="https://bit.ly/2NLA2Rb" target="_blank" class="btn--text">天下雜誌 App</a>。
-                                </li>
-                                <li>
-                                    在天下雜誌 App 中，登入您的天下會員帳號，就可以正常使用。
-                                </li>
-                            </ol>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            <span class="number">2.</span><span class="txt">選擇「電子發票」後，若中獎怎麼辦？</span>
+                            <i class="icon icon-plus"></i>
+                        </div>
+                        <div class="accordion__item__panel">
+                            <p class="mt0">
+                                依統一發票使用辦法規定，發票兌獎必須使用發票正本。每逢單月26日系統將自動對獎（已索取／已捐贈／已作廢發票除外）。本公司將於開獎後，以電子郵件通知中獎會員，於10個工作日內為您寄送中獎發票至您下單時所填發票收件地址。若原下單時未填寫完整發票地址，將影響您的中獎發票寄送。若對寄送地址有疑慮，或需修改發票寄送地址，請於「雙月2號」前來電確認或修改。
+                            </p>
                         </div>
                     </div>
                 </div>

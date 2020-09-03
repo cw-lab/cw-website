@@ -160,12 +160,10 @@ body {
     font-family: 'Noto Serif TC', serif;
 }
 
-a {
+a, button.btn {
     text-decoration: none;
     @include breakpoint(1024px) {
-        @include transition(color .2s,
-        border .2s,
-        background .2s);
+        @include transition(color .2s, border .2s, background .2s);
     }
 }
 

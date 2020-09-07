@@ -35,7 +35,7 @@ function imgZoom() {
 imgZoom();
 
 WebFontConfig = {
-    google: { families: [ 'Noto+Sans+TC:100,300,400,500,700','Roboto:100,300,400,500,700' ] }
+    google: { families: [ 'Noto+Sans+TC','Noto Serif TC','Roboto' ] }
 };
 (function() {
     var wf = document.createElement('script');

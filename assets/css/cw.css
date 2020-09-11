@@ -3766,13 +3766,13 @@ a:focus {
 .tooltips {
   position: relative;
 }
-.tooltips:before {
+.tooltips::before {
   content: attr(data-tooltips);
   position: absolute;
   padding: 6px 8px;
   max-width: 200px;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.45;
   background: #48545D;
   white-space: nowrap;
@@ -3786,7 +3786,7 @@ a:focus {
   z-index: 2;
 }
 @media (max-width: 767px) {
-  .tooltips:before {
+  .tooltips::before {
     display: none;
   }
 }

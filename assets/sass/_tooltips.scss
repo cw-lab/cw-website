@@ -1,13 +1,13 @@
 $cubic: cubic-bezier(.64, .09, .08, 1);
 .tooltips {
     position: relative;
-    &:before {
+    &::before {
         content: attr(data-tooltips);
         position: absolute;
         padding: 6px 8px;
         max-width: 200px;
         color: $white;
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.45;
         background: $gray-500;
         white-space: nowrap;

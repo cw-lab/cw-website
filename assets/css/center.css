@@ -297,6 +297,18 @@
     width: 140px;
   }
 }
+.center__page article .form .address__group .select__group.select__group--banned {
+  position: relative;
+}
+.center__page article .form .address__group .select__group.select__group--banned::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 .center__page article .form .address__group .select__group select {
   width: 100%;
   min-width: auto;

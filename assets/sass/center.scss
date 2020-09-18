@@ -188,6 +188,17 @@
                     @include breakpoint(768px) {
                         width: 140px;
                     }
+                    &.select__group--banned {
+                        position: relative;
+                        &::after {
+                            @include beforeafter('', block);
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                        }
+                    }
                     select {
                         width: 100%;
                         min-width: auto;

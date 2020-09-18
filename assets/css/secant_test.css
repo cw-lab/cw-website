@@ -256,5 +256,10 @@
   font-weight: normal;
   line-height: 1.5;
 }
+@media (min-width: 768px) {
+  .webaccess__page main .plan .plan__option__txt--complement {
+    height: 1.5rem;
+  }
+}
 
 /*# sourceMappingURL=secant_test.css.map */

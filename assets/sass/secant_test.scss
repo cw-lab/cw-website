@@ -1,0 +1,250 @@
+@import "_basic";
+@import "_sheet";
+@import "_variable";
+.webaccess__page {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    .container {
+        @include breakpoint(375px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &::before,
+        &::after {
+            @include clear;
+        }
+    }
+    header {
+        border-bottom: 1px solid $gray-200;
+        .container {
+            >.flex {
+                align-items: center;
+            }
+            ul.member__list {
+                +.member__list {
+                    margin-left: 30px;
+                }
+                li {
+                    +li {
+                        margin-left: 30px;
+                    }
+                }
+                a {
+                    color: $black;
+                    font-size: 1rem;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        margin-top: 20px;
+        justify-content: center;
+        .plan {
+            margin-bottom: 2.5em;
+            @include breakpoint(max-width 767px) {
+                flex-direction: column;
+            }
+            .plan {
+                &__description {
+                    &--main {
+                        padding-top: 25px;
+                        padding-bottom: 35px;
+                        // border-bottom: 1px solid $gray-200;
+                    }
+                    &--complement {
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+                        line-height: 1.875;
+                    }
+                    a.link-btn {
+                        font-size: 1rem;
+                    }
+                }
+                &__item {
+                    width: 100%;
+                    // border: 1px solid $gray-100;
+                    background-color: $gray;
+                    @include breakpoint(max-width 767px) {
+                        margin-bottom: 10px;
+                    }
+                    @include breakpoint(768px) {
+                        width: 33.3333333%;
+                    }
+                    &--highlight {
+                        position: relative;
+                        background-color: $white;
+                    }
+                    &__complement {
+                        display: block;
+                        padding-top: 5px;
+                        color: $primary;
+                        font-size: 14px;
+                        font-weight: normal;
+                        line-height: 1.5;
+                    }
+                    &__spec {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 75px;
+                        height: 75px;
+                        span {
+                            position: absolute;
+                            display: block;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            color: $white;
+                            font-size: 0.875em;
+                            text-align: center;
+                            @include transform(rotate(-45deg) translate(-25%, -255%));
+                        }
+                        &::before {
+                            @include beforeafter('', block);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 75px 75px 0 0;
+                            border-color: $surface transparent transparent transparent;
+                        }
+                    }
+                    &__title {
+                        @include breakpoint(939px) {
+                            margin-left: -20px;
+                            margin-right: -20px;
+                        }
+                    }
+                    &__group {
+                        padding-left: 35px;
+                        padding-right: 35px;
+                        @include breakpoint(350px) {
+                            padding-left: 25px;
+                            padding-right: 25px;
+                        }
+                        @include breakpoint(375px) {
+                            padding-left: 50px;
+                            padding-right: 50px;
+                        }
+                        @include breakpoint(414px) {
+                            padding-left: 80px;
+                            padding-right: 80px;
+                        }
+                        @include breakpoint(939px) {
+                            padding-left: 60px;
+                            padding-right: 60px;
+                        }
+                        .btn--text {
+                            display: inline-flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding-bottom: 2px;
+                            font-size: 0.875rem;
+                            line-height: 1;
+                            text-decoration: none;
+                            border-bottom: 1px solid $surface;
+                            &:hover {
+                                border-color: $primary;
+                            }
+                            > * {
+                                display: block;
+                            }
+                            i {
+                                margin-left: 5px;
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                    &__img {
+                        height: 150px;
+                        margin-top: 15px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        @media screen and (min-width: 768px) and (max-width: 929px) {
+                            height: 100px;
+                            margin-top: 30px;
+                        }
+                    }
+                    &__option {
+                        margin-bottom: 20px;
+                    }
+                    .select__group {
+                        width: 100%;
+                        &::before {
+                            right: 0.85rem;
+                            font-size: 1.25em;
+                        }
+                        select.plan__item__select {
+                            width: 100%;
+                            padding: 0 2rem 0 1rem;
+                            line-height: 46px;
+                            background-color: $white;
+                        }
+                    }
+                    .btn {
+                        display: block;
+                        width: 100%;
+                        cursor: pointer;
+                        &.active {
+                            background-color: $primary;
+                            border-color: $primary;
+                        }
+                    }
+                    &__right {
+                        display: table;
+                        margin-left: auto;
+                        margin-right: auto;
+                        font-size: 1rem;
+                        line-height: 1.5;
+                        list-style: none;
+                        @include breakpoint(768px) {
+                            min-height: 4.5rem;
+                        }
+                        li {
+                            position: relative;
+                            &::before {
+                                @include beforeafter($icon-check, block);
+                                position: absolute;
+                                top: 50%;
+                                left: -1.35em;
+                                font-family: $icomoon-font-family;
+                                @include translateY(-50%);
+                            }
+                        }
+                        &--narrow {
+                            li {
+                                display: table;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
+                        }
+                    }
+                }
+                &__option {
+                    &__txt {
+                        display: block;
+                        span {
+                            text-decoration: line-through;
+                        }
+                        &--complement {
+                            display: block;
+                            // padding-top: 5px;
+                            padding-left: 1em;
+                            padding-right: 1em;
+                            color: $primary;
+                            font-size: 0.875rem;
+                            font-weight: normal;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -297,10 +297,14 @@
     width: 140px;
   }
 }
-.center__page article .form .address__group .select__group.select__group--banned {
+.center__page article .form .address__group .select__group.select__group--notallowed {
   position: relative;
 }
-.center__page article .form .address__group .select__group.select__group--banned::after {
+.center__page article .form .address__group .select__group.select__group--notallowed select {
+  padding: 1rem;
+  background-image: none !important;
+}
+.center__page article .form .address__group .select__group.select__group--notallowed::after {
   content: "";
   display: block;
   position: absolute;

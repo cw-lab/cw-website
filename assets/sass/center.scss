@@ -188,8 +188,12 @@
                     @include breakpoint(768px) {
                         width: 140px;
                     }
-                    &.select__group--banned {
+                    &.select__group--notallowed {
                         position: relative;
+                        select {
+                            padding: 1rem;
+                            background-image: none !important;
+                        }
                         &::after {
                             @include beforeafter('', block);
                             position: absolute;

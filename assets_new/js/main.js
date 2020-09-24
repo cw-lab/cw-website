@@ -12,6 +12,18 @@ function lazyload() {
 }
 lazyload();
 
+WebFontConfig = {
+    google: { families: [ 'Noto+Sans+TC:100,300,400,500,700','Noto Serif TC:200,300,400,500,600,700','Roboto:300,400,500,700' ] }
+};
+(function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+})();
+
 function adBlock() {
     // 沒廣告時，移除
     $('[class*="cw__advertising"], .banner, .leaflet, .leafletBig').each(function() {

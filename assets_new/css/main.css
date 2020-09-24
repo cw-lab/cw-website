@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500|Noto+Serif+TC:400,500,600|Roboto:300,400,500&display=swap");
 article,
 aside,
 details,
@@ -413,22 +412,26 @@ a.btn[disabled].btn--animate {
   color: #48545D;
 }
 
-body {
-  position: relative;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  line-height: 1.5;
-  -webkit-tap-highlight-color: transparent;
+html {
+  min-height: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
 }
 @media (min-width: 1024px) {
   body {
     padding-bottom: 404px;
-    font-family: 'Roboto', 'Noto Sans TC', Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', "新細明體", 'PMingLiU', sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
+    font-display: swap;
   }
 }
 
@@ -441,7 +444,7 @@ body {
 }
 @media (min-width: 1024px) {
   .sans-serif {
-    font-family: 'Roboto', 'Noto Sans TC', Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', "新細明體", 'PMingLiU', sans-serif;
+    font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
   }
 }
 

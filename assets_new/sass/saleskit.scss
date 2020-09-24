@@ -5,6 +5,9 @@
 @import "_mixin";
 @charset "utf-8";
 .cookies-info-page {
+    footer .container {
+        max-width: 960px;
+    }
     .container {
         max-width: 960px;
     }
@@ -28,4 +31,5 @@
             text-align: center;
         }
     }
+    
 }

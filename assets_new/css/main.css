@@ -426,7 +426,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    padding-bottom: 550px;
+    padding-bottom: 404px;
     font-family: 'Roboto', 'Noto Sans TC', Arial, "微軟正黑體", "繁黑體", 'Microsoft JhengHei', 'Microsoft YaHei', 'Heiti TC', 'LiHei Pro', "新細明體", 'PMingLiU', sans-serif;
     font-weight: 300;
   }
@@ -4192,6 +4192,7 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
 
 .banner {
   position: relative;
+  min-height: 312px;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #f7f7f7;
@@ -4269,6 +4270,11 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
 @media (min-width: 768px) {
   .index-page {
     min-width: 1248px;
+  }
+}
+@media (min-width: 768px) {
+  .index-page .banner.text-center {
+    min-height: 152px;
   }
 }
 .index-page header .subNav {

@@ -2,6 +2,11 @@
     @include breakpoint(768px) {
         min-width: $index;
     }
+    .banner.text-center {
+        @include breakpoint(768px) {
+            min-height: 152px;
+        }
+    }
     header {
         .subNav {
             position: static;

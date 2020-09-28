@@ -27,6 +27,9 @@
                 width: 25%;
             }
             .pic {
+                > a::before {
+                    padding-top: 138.53211%;
+                }
                 @include breakpoint(max-width 413px) {
                     display: inline-block;
                     width: 90px;

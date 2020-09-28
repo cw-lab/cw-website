@@ -76,3 +76,19 @@
 .leaflet {
     text-align: center;
 }
+.leafletBig {
+    width: 302px;
+    height: 602px;
+}
+.leaflet {
+    width: 302px;
+    height: 252px;
+}
+.leafletBig,
+.leaflet {
+    @include breakpoint(1024px) {
+        margin-left: -1px;
+        margin-right: -1px;
+        border: 1px solid $gray-200;
+    }
+}

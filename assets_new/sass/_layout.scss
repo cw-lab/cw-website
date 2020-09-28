@@ -50,17 +50,10 @@
             margin-top: 80px;
         }
         >*,
-        .leaflet {
+        .leaflet, .leafletBig {
             margin-bottom: 10px;
             @include breakpoint(768px) {
                 margin-bottom: 20px;
-            }
-        }
-        @include breakpoint(1024px) {
-            .leaflet {
-                margin-left: -1px;
-                margin-right: -1px;
-                border: 1px solid $gray-200;
             }
         }
     }

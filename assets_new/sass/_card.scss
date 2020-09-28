@@ -20,7 +20,12 @@ section {
             }
         }
         img {
+            position: absolute;
+            top: 0;
+            left: 0;        
             width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
     .informationArea {
@@ -168,7 +173,7 @@ section {
                 &::after {
                     position: absolute;
                     @include beforeafter('', block);
-                    z-index: 1;
+                    z-index: 2;
                 }
                 &::before {
                     bottom: 5px;
@@ -219,7 +224,7 @@ aside {
             &::after {
                 position: absolute;
                 @include beforeafter('', block);
-                z-index: 1;
+                z-index: 2;
             }
             &::before {
                 bottom: 10px;

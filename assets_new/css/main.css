@@ -33,6 +33,17 @@ template {
   display: none;
 }
 
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
 /*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
 a {
   background: transparent;
@@ -426,8 +437,6 @@ html {
 body {
   position: relative;
   min-height: 100%;
-  padding: 0;
-  margin: 0;
 }
 @media (min-width: 1024px) {
   body {
@@ -573,20 +582,13 @@ textarea {
   }
 }
 .main aside > *,
-.main aside .leaflet {
+.main aside .leaflet, .main aside .leafletBig {
   margin-bottom: 10px;
 }
 @media (min-width: 768px) {
   .main aside > *,
-  .main aside .leaflet {
+  .main aside .leaflet, .main aside .leafletBig {
     margin-bottom: 20px;
-  }
-}
-@media (min-width: 1024px) {
-  .main aside .leaflet {
-    margin-left: -1px;
-    margin-right: -1px;
-    border: 1px solid #D3D5D7;
   }
 }
 
@@ -3278,11 +3280,9 @@ aside.menubar--left.opened {
   display: block;
 }
 .pic > a::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 66.984127%;
   content: "";
   display: block;
   background-color: rgba(23, 23, 23, 0.5);
@@ -3293,13 +3293,19 @@ aside.menubar--left.opened {
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 .pic > a:hover::before {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 .pic > a img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .pic .informationArea {
   position: absolute;
@@ -3480,7 +3486,7 @@ aside.menubar--left.opened {
   position: absolute;
   content: "";
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 .articleGroup .subArticle.media .pic::before {
   bottom: 5px;
@@ -3530,7 +3536,7 @@ aside .media .pic::before, aside .media .pic::after {
   position: absolute;
   content: "";
   display: block;
-  z-index: 1;
+  z-index: 2;
 }
 aside .media .pic::before {
   bottom: 10px;
@@ -4032,11 +4038,9 @@ section.list-link > ul.etu-item-list li .interest-list-link-img a {
   position: relative;
 }
 section.list-link > ul.etu-item-list li .interest-list-link-img a::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 66.984127%;
   content: "";
   display: block;
   background-color: rgba(23, 23, 23, 0.5);
@@ -4047,6 +4051,7 @@ section.list-link > ul.etu-item-list li .interest-list-link-img a::before {
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 section.list-link > ul.etu-item-list li .interest-list-link-img img {
   width: 100%;
@@ -4359,11 +4364,9 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
   width: 100%;
 }
 .slider-hr ul li.slider-item-group > ul li a .pic::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 66.984127%;
   content: "";
   display: block;
   background-color: rgba(23, 23, 23, 0.5);
@@ -4374,6 +4377,7 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
   -o-transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 .slider-hr ul li.slider-item-group > ul li a .txt {
   padding-left: 10px;
@@ -4738,6 +4742,25 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
 .leafletBig,
 .leaflet {
   text-align: center;
+}
+
+.leafletBig {
+  width: 302px;
+  height: 602px;
+}
+
+.leaflet {
+  width: 302px;
+  height: 252px;
+}
+
+@media (min-width: 1024px) {
+  .leafletBig,
+  .leaflet {
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 1px solid #D3D5D7;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5195,6 +5218,9 @@ ul.article__keyword li a::-moz-focus-inner {
   .mgz-index-page .mgzIndexList > li {
     width: 25%;
   }
+}
+.mgz-index-page .mgzIndexList > li .pic > a::before {
+  padding-top: 138.53211%;
 }
 @media (max-width: 413px) {
   .mgz-index-page .mgzIndexList > li .pic {

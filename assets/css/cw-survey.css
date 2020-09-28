@@ -309,7 +309,7 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    padding-bottom: 550px;
+    padding-bottom: 404px;
     font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
     font-display: swap;
   }
@@ -319,7 +319,7 @@ body.opened {
 }
 
 .serif {
-  font-family: 'Noto Serif TC', serif;
+  font-family: 'Noto Serif TC', '思源宋體 TC', '思源宋體 TW', '思源宋體', serif;
 }
 
 a, button.btn {
@@ -692,7 +692,7 @@ h5 .heading__text,
 
 h1,
 .h1 {
-  font-size: 1.75rem;
+  font-size: 1.625rem;
 }
 @media (min-width: 1024px) {
   h1,

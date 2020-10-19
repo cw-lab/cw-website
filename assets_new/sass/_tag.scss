@@ -1,0 +1,41 @@
+.tag-page {
+    .banner {
+        min-height: 112px;
+        @include breakpoint(768px) {
+            min-height: 152px;
+        }
+    }
+    article {
+        width: 100%;
+    }
+    .searchDoneTxt {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+        >* {
+            display: inline-block;
+        }
+        h1 {
+            display: block;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 1.75em;
+        }
+    }
+    .articleGroup .subArticle {
+        @include breakpoint(max-width 767px) {
+            .pic {
+                display: none;
+            }
+            .caption {
+                border-width: 1px;
+                h3 a {
+                    // font-size: 1.125rem;
+                }
+                p {
+                    display: -webkit-box !important;
+                }
+            }
+        }
+    }
+}

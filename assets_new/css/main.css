@@ -2779,6 +2779,43 @@ footer .contact a:hover {
   color: #D60C18;
 }
 
+.tag-page .banner {
+  min-height: 112px;
+}
+@media (min-width: 768px) {
+  .tag-page .banner {
+    min-height: 152px;
+  }
+}
+.tag-page article {
+  width: 100%;
+}
+.tag-page .searchDoneTxt {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+.tag-page .searchDoneTxt > * {
+  display: inline-block;
+}
+.tag-page .searchDoneTxt h1 {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.75em;
+}
+@media (max-width: 767px) {
+  .tag-page .articleGroup .subArticle .pic {
+    display: none;
+  }
+  .tag-page .articleGroup .subArticle .caption {
+    border-width: 1px;
+  }
+  .tag-page .articleGroup .subArticle .caption p {
+    display: -webkit-box !important;
+  }
+}
+
 body.slide__open,
 body.opened {
   overflow: hidden;

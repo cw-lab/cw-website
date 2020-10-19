@@ -3,6 +3,7 @@
         min-width: $index;
     }
     .banner.text-center {
+        min-height: 112px;
         @include breakpoint(768px) {
             min-height: 152px;
         }

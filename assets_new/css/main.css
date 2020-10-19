@@ -2663,6 +2663,14 @@ footer .contact a:hover {
   }
 }
 
+.search-page .banner {
+  min-height: 112px;
+}
+@media (min-width: 768px) {
+  .search-page .banner {
+    min-height: 152px;
+  }
+}
 .search-page .main > .searchOption {
   float: left;
   width: calc(100% - 820px);
@@ -4767,6 +4775,9 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
   .index-page {
     min-width: 1248px;
   }
+}
+.index-page .banner.text-center {
+  min-height: 112px;
 }
 @media (min-width: 768px) {
   .index-page .banner.text-center {

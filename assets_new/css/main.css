@@ -443,6 +443,7 @@ body {
     padding-bottom: 404px;
     font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
     font-display: swap;
+    font-weight: 300;
   }
 }
 
@@ -541,6 +542,7 @@ textarea {
 .main {
   position: relative;
   padding-bottom: 40px;
+  z-index: 0;
 }
 @media (min-width: 768px) {
   .main > * {
@@ -3419,19 +3421,25 @@ aside.menubar--left.opened {
   }
 }
 .caption h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-weight: normal;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .caption h3 {
-    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: normal;
   }
 }
 .caption h3 a {
   display: block;
   color: #171717;
-  line-height: 1.5;
+  line-height: 1.25;
+}
+@media (min-width: 768px) {
+  .caption h3 a {
+    line-height: 1.5;
+  }
 }
 .caption h3 a:hover {
   color: #D60C18;

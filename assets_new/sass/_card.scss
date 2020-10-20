@@ -84,16 +84,20 @@ section {
         }
     }
     h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        font-weight: normal;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: 500;
         @include breakpoint(768px) {
-            margin-bottom: 5px;
+            margin-top: 0;
+            font-weight: normal;
         }
         a {
             display: block;
             color: $black;
-            line-height: 1.5;
+            line-height: 1.25;
+            @include breakpoint(768px) {
+                line-height: 1.5;
+            }    
             &:hover {
                 color: $primary;
             }

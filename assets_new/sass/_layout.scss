@@ -15,6 +15,7 @@
 .main {
     position: relative;
     padding-bottom: 40px;
+    z-index: 0;
     >* {
         @include breakpoint(768px) {
             display: block !important;

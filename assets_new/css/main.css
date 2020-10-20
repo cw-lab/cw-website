@@ -3423,7 +3423,6 @@ aside.menubar--left.opened {
 .caption h3 {
   margin-top: 10px;
   margin-bottom: 5px;
-  font-weight: 500;
 }
 @media (min-width: 768px) {
   .caption h3 {

@@ -3423,11 +3423,11 @@ aside.menubar--left.opened {
 .caption h3 {
   margin-top: 10px;
   margin-bottom: 5px;
+  font-weight: normal;
 }
 @media (min-width: 768px) {
   .caption h3 {
     margin-top: 0;
-    font-weight: normal;
   }
 }
 .caption h3 a {
@@ -3455,6 +3455,7 @@ aside.menubar--left.opened {
 @media (max-width: 767px) {
   .caption p {
     display: none !important;
+    color: #48545D;
   }
 }
 

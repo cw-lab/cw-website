@@ -86,9 +86,9 @@ section {
     h3 {
         margin-top: 10px;
         margin-bottom: 5px;
+        font-weight: normal;
         @include breakpoint(768px) {
             margin-top: 0;
-            font-weight: normal;
         }
         a {
             display: block;
@@ -96,7 +96,7 @@ section {
             line-height: 1.25;
             @include breakpoint(768px) {
                 line-height: 1.5;
-            }    
+            }
             &:hover {
                 color: $primary;
             }
@@ -109,6 +109,7 @@ section {
         @include lineclamp(2);
         @include breakpoint(max-width 767px) {
             display: none !important;
+            color: $secondary-variant;
         }
     }
 }

@@ -1328,21 +1328,26 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
 .social_login + .social_login {
   margin-top: 20px;
 }
-.social_login i.icon {
+.social_login i.icon, .social_login img.icon {
   margin-right: 0.375em;
+}
+.social_login i.icon {
   font-size: 1.5em;
+}
+.social_login img.icon {
+  width: 1.5em;
+}
+.social_login:hover {
+  border-color: #171717;
 }
 .social_login--facebook i.icon {
   color: #1877F2;
 }
-.social_login--facebook:hover {
-  border-color: #1877F2;
+.social_login--google i.icon {
+  color: #EA4335;
 }
 .social_login--apple i.icon {
   color: #171717;
-}
-.social_login--apple:hover {
-  border-color: #171717;
 }
 
 input,

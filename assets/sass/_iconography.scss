@@ -218,24 +218,31 @@ a {
     +.social_login {
         margin-top: 20px;
     }
-    i.icon {
+    i.icon, img.icon {
         margin-right: 0.375em;
+    }
+    i.icon {
         font-size: 1.5em;
+    }
+    img.icon {
+        width: 1.5em;
+    }
+    &:hover {
+        border-color: $text;
     }
     &--facebook {
         i.icon {
             color: $facebook;
         }
-        &:hover {
-            border-color: $facebook;
+    }
+    &--google {
+        i.icon {
+            color: $google;
         }
     }
     &--apple {
         i.icon {
             color: $text;
-        }
-        &:hover {
-            border-color: $text;
         }
     }
 }

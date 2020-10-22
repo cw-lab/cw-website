@@ -651,6 +651,9 @@
     width: 7.725rem;
     padding-right: 1.5rem;
   }
+  .center__page .table__group .table__item .table__cell.table__cell--orderid a {
+    color: black;
+  }
   .center__page .table__group .table__item .table__cell.table__cell--name {
     width: 11rem;
     padding-right: 1.5rem;

@@ -14,6 +14,20 @@ section {
         position: relative;
         display: block;
         @include imghover();
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;        
+            right: 0;
+            @include animation(shimmer 1s forwards linear infinite);
+            @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
+            @include background-size(800px 100px);
+            @include opacity(1);
+            @include transition(opacity 0.3s 0.3s);
+            z-index: -1;
+        }
         &:hover {
             &::before {
                 @include opacity(1);
@@ -26,6 +40,17 @@ section {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            &.lazyload {
+                @include opacity(0);
+            }
+        }
+        &.finished {
+            &::after {
+                @include opacity(0);
+            }    
+            img.lazyload {
+                @include opacity(1);
+            }
         }
     }
     .informationArea {
@@ -52,7 +77,14 @@ section {
         }
     }
 }
-
+@include keyframes(shimmer) {
+    0% {
+        background-position: -400px 0;
+    }
+    100% {
+        background-position: 400px 0;
+    }
+}
 .caption {
     position: relative;
     @include breakpoint(max-width 767px) {

@@ -441,6 +441,7 @@
         width: 100%;
         @include breakpoint(1024px) {
             display: table;
+            width: 1110px;
             font-size: 1.125rem;
             a.btn {
                 font-size: 1.125rem;
@@ -448,6 +449,9 @@
         }
         &__group {
             &.border-1 {
+                width: 100%;
+                overflow-x: scroll;
+                overflow-y: visible;
                 border: 1px solid $gray-200;
             }
             .w-100 {
@@ -507,6 +511,10 @@
                         vertical-align: text-top;
                         line-height: 1.5;
                         &.table__cell--date {
+                            width: 7.725rem;
+                            padding-right: 1.5rem;
+                        }
+                        &.table__cell--orderid {
                             width: 7.725rem;
                             padding-right: 1.5rem;
                         }

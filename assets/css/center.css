@@ -574,6 +574,7 @@
 @media (min-width: 1024px) {
   .center__page .table {
     display: table;
+    width: 1110px;
     font-size: 1.125rem;
   }
   .center__page .table a.btn {
@@ -581,6 +582,9 @@
   }
 }
 .center__page .table__group.border-1 {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: visible;
   border: 1px solid #D3D5D7;
 }
 .center__page .table__group .w-100 {
@@ -640,6 +644,10 @@
     line-height: 1.5;
   }
   .center__page .table__group .table__item .table__cell.table__cell--date {
+    width: 7.725rem;
+    padding-right: 1.5rem;
+  }
+  .center__page .table__group .table__item .table__cell.table__cell--orderid {
     width: 7.725rem;
     padding-right: 1.5rem;
   }

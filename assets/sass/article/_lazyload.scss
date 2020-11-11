@@ -10,14 +10,9 @@
         height: auto !important;
         margin-left: auto;
         margin-right: auto;
-        @include opacity(0);
-        @include transition(opacity 0.3s 0.3s);
     }
     &.finished {
         background: $gray-100;
-        img {
-            @include opacity(1);
-        }
     }
 }
 

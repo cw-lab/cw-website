@@ -3388,6 +3388,9 @@ aside.menubar--left.opened {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
+.pic > a.finished {
+  background: none;
+}
 .pic > a.finished::after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;

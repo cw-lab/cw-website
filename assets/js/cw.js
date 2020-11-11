@@ -3,8 +3,10 @@ var width = $(window).width(),
     searchClick = 0;
 
 function lazyload() {
-    $("img.lazyload").each(function() {
-        $(this).lazyload();
+    $(".lazyload").each(function() {
+        $(this).lazyload({
+            effect : "fadeIn"
+        });
         $(this).on('load', function() {
             $(this).parent().addClass('finished');
         })

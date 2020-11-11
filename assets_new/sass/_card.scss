@@ -45,6 +45,7 @@ section {
             }
         }
         &.finished {
+            background: none;
             &::after {
                 @include opacity(0);
             }    

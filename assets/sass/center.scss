@@ -1073,6 +1073,18 @@
         .h1,
         .h2 {
             font-weight: 500;
+        }
+        .h1 {
+            span {
+                @include breakpoint(1024px) {
+                    display: inline-block;
+                }
+                @include breakpoint(max-width 1023px) {
+                    margin: 0 .5em;
+                }
+            }
+        }
+        h1 {
             span {
                 display: inline-block;
                 margin: 0 .5em;

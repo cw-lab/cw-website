@@ -1256,8 +1256,17 @@
 .right__page section .h2 {
   font-weight: 500;
 }
-.right__page section .h1 span,
-.right__page section .h2 span {
+@media (min-width: 1024px) {
+  .right__page section .h1 span {
+    display: inline-block;
+  }
+}
+@media (max-width: 1023px) {
+  .right__page section .h1 span {
+    margin: 0 .5em;
+  }
+}
+.right__page section h1 span {
   display: inline-block;
   margin: 0 .5em;
 }

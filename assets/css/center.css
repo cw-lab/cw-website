@@ -1258,7 +1258,7 @@
 }
 @media (min-width: 1024px) {
   .right__page section .h1 span {
-    display: inline-block;
+    display: block;
   }
 }
 @media (max-width: 1023px) {

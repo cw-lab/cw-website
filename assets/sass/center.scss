@@ -1077,7 +1077,7 @@
         .h1 {
             span {
                 @include breakpoint(1024px) {
-                    display: inline-block;
+                    display: block;
                 }
                 @include breakpoint(max-width 1023px) {
                     margin: 0 .5em;

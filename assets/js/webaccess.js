@@ -64,16 +64,16 @@ $(function() {
 		}, 3000)
 	})
 	// accordion
-	$(".accordion__item__header").on("click", function() {
-	    $(this).parent().siblings().children(".accordion__item__panel").slideUp();
-	    $(this).parent().siblings().children(".accordion__item__header").removeClass("active");
-	    $(this).parent().siblings().children(".accordion__item__header").children("i.icon").addClass("icon-plus");
-	    $(this).parent().siblings().children(".accordion__item__header").children("i.icon").removeClass("icon-minus");
-	    $(this).toggleClass("active");
-	    $(this).children("i.icon").toggleClass("icon-plus");
-	    $(this).children("i.icon").toggleClass("icon-minus");
-	    $(this).siblings(".accordion__item__panel").slideToggle();
-	})
+	// $(".accordion__item__header").on("click", function() {
+	//     $(this).parent().siblings().children(".accordion__item__panel").slideUp();
+	//     $(this).parent().siblings().children(".accordion__item__header").removeClass("active");
+	//     $(this).parent().siblings().children(".accordion__item__header").children("i.icon").addClass("icon-plus");
+	//     $(this).parent().siblings().children(".accordion__item__header").children("i.icon").removeClass("icon-minus");
+	//     $(this).toggleClass("active");
+	//     $(this).children("i.icon").toggleClass("icon-plus");
+	//     $(this).children("i.icon").toggleClass("icon-minus");
+	//     $(this).siblings(".accordion__item__panel").slideToggle();
+	// })
 	$(window).resize(function(){
 		var height = $(window).height();
 		opening(height);

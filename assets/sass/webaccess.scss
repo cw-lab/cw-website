@@ -244,7 +244,7 @@
             background-position: center;
             @include background-size(contain);
             @include translateX(-50%);
-            z-index: 5;
+            z-index: 2;
         }
         .slider {
             position: relative;

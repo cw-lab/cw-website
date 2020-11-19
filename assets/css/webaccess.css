@@ -286,7 +286,7 @@
   -ms-transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 2;
 }
 .webaccess__page .slideshow .slider {
   position: relative;

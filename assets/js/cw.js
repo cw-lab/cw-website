@@ -8,7 +8,7 @@ function lazyload() {
             effect : "fadeIn"
         });
         $(this).on('load', function() {
-            $(this).parent().addClass('finished');
+            $(this).parent().parent().addClass('finished');
         })
     });
 }

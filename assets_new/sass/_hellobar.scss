@@ -1,0 +1,48 @@
+.hello__bar {
+    position: relative;
+    margin: 20px 20px 0;
+    padding: 20px;
+    font-size: 0;
+    background-color: rgba($surface, 0.1);
+    z-index: 0;
+    @include breakpoint(768px) {
+        width: $index;
+        padding: 15px 20px;
+        margin: 30px auto;
+        text-align: center;
+    }
+    > * {
+        display: block;
+        vertical-align: middle;
+        font-size: 1rem;
+        @include breakpoint(768px) {
+            display: inline-block;
+            font-size: 1.125rem;
+        }
+    }
+    div {
+        @include breakpoint(max-width 767px) {
+            margin-bottom: 5px;
+            font-size: 1.25rem;
+        }
+    }
+    a.btn {
+        @include breakpoint(768px) {
+            padding: 0.657em 1.157em;
+        }
+        @include breakpoint(max-width 767px) {
+            display: table;
+            margin-top: 15px;
+        }
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+            @include breakpoint(768px) {
+                font-size: 1.125rem;
+            }
+        }
+        i.icon {
+            margin-left: 5px;
+        }
+    }
+}

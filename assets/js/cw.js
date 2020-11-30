@@ -8,7 +8,11 @@ function lazyload() {
             effect : "fadeIn"
         });
         $(this).on('load', function() {
-            $(this).parent().parent().addClass('finished');
+            if($(this).parent('picture').length) {
+                $(this).parent().parent().addClass('finished');
+            }else{
+                $(this).parent().addClass('finished');
+            }
         })
     });
 }
@@ -75,6 +79,15 @@ $(function() {
     }
     if ((old_ie > -1) || (new_ie > -1)) {
         ie = true;
+    }
+    if (!safari) {
+        $("img.lazyload").each(function() {
+            if($(this).parent('picture').length) {
+                $(this).parent().parent().addClass('finished');
+            }else{
+                $(this).parent().addClass('finished');
+            }
+        });
     }
     if (ie) {
         $("body").addClass('ie');

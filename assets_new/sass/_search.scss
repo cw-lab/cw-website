@@ -76,10 +76,7 @@
 
 .search-page {
     .banner {
-        min-height: 112px;
-        @include breakpoint(768px) {
-            min-height: 152px;
-        }
+        min-height: 312px;
     }
     .main {
         >.searchOption {

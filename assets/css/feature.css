@@ -18,6 +18,7 @@
 .feature__page header {
   position: relative;
   background-color: #fff;
+  border-bottom: 1px solid #EEEEEE;
   z-index: 10;
 }
 .feature__page header .flex {
@@ -35,8 +36,15 @@
     height: 50px;
   }
 }
-.feature__page header > .container-fluid {
-  border-bottom: 1px solid #EEEEEE;
+.feature__page header .container-fluid > .container {
+  height: 30px;
+  padding-left: 40px;
+}
+@media (min-width: 1024px) {
+  .feature__page header .container-fluid > .container {
+    height: 50px;
+    padding-left: 40px;
+  }
 }
 .feature__page header .container {
   max-width: 1260px;
@@ -58,6 +66,26 @@
 }
 .feature__page section:first-child {
   border-top: 0;
+}
+.feature__page section:first-child .slideshow {
+  position: relative;
+}
+.feature__page section:first-child .slideshow::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-top: 149.275362%;
+}
+@media (orientation: landscape) {
+  .feature__page section:first-child .slideshow::before {
+    padding-top: 56.25%;
+  }
+}
+.feature__page section:first-child .slideshow .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .feature__page section > .container, .feature__page section > .container-fluid {
   padding-top: 80px;
@@ -267,19 +295,6 @@
 }
 .feature__page section .embed:before {
   width: 100%;
-}
-.feature__page section .embed.embed--16by9:before {
-  padding-top: 56.25%;
-}
-.feature__page section .embed.embed--4by3:before {
-  padding-top: 75%;
-}
-.feature__page section .embed > .embed__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 .feature__page section .slideshow {
   position: relative;

@@ -2,21 +2,6 @@ var width = $(window).width(),
     menubarUserClick = 0,
     searchClick = 0;
 
-function lazyload() {
-    $(".lazyload").each(function() {
-        $(this).lazyload({
-            effect : "fadeIn"
-        });
-        $(this).on('load', function() {
-            if($(this).parent('picture').length) {
-                $(this).parent().parent().addClass('finished');
-            }else{
-                $(this).parent().addClass('finished');
-            }
-        })
-    });
-}
-lazyload();
 // 圖片全螢幕
 function imgZoom() {
     $('.imgzoom').each(function() {
@@ -79,22 +64,6 @@ $(function() {
     }
     if ((old_ie > -1) || (new_ie > -1)) {
         ie = true;
-    }
-    if (!safari) {
-        $("img.lazyload").each(function() {
-            if($(this).parent('picture').length) {
-                $(this).parent().parent().addClass('finished');
-            }else{
-                $(this).parent().addClass('finished');
-            }
-        });
-    }
-    if (ie) {
-        $("body").addClass('ie');
-        $("img.lazyload").each(function() {
-            var source = $(this).data('src');
-            $(this).attr('src', source);
-        });
     }
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');

@@ -2,17 +2,12 @@
     position: relative;
     display: block;
     cursor: pointer;
-    @include animation(shimmer 1s forwards linear infinite);
-    @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
-    @include background-size(800px 100px);
+    background: $gray-100;
     img {
         max-width: 100%;
         height: auto !important;
         margin-left: auto;
         margin-right: auto;
-    }
-    &.finished {
-        background: $gray-100;
     }
 }
 
@@ -25,26 +20,17 @@
     }
     @include breakpoint(768px) {
         &::after {
-            @include beforeafter('\e94a', block);
+            @include beforeafter($icon-zoom, block);
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 36px;
-            color: #fff;
+            width: 2.25rem;
+            color: $white;
             font-family: $icomoon-font-family;
             font-size: 1.5em;
-            line-height: 36px;
+            line-height: 2.25rem;
             text-align: center;
             background-color: rgba($black, 0.5);
         }
-    }
-}
-
-@include keyframes(shimmer) {
-    0% {
-        background-position: -400px 0;
-    }
-    100% {
-        background-position: 400px 0;
     }
 }

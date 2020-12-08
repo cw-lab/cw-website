@@ -108,23 +108,6 @@
 	z-index: 4;
 }
 
-.article__profile {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	border-top: 1px solid $gray-200;
-	border-bottom: 1px solid $gray-200;
-	h3 {
-		margin-top: 0;
-		margin-bottom: 20px;
-	}
-	ol, ul, p {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-}
-
 .preface > * {
 	font-size: 1.125em;
 	line-height: 1.7;
@@ -235,6 +218,16 @@
 			}
 		}
 	}
+	.article__profile {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		border-top: 1px solid $gray-200;
+		border-bottom: 1px solid $gray-200;
+		h3, ol, ul, p {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}	
 }
 
 @import "article/_box";

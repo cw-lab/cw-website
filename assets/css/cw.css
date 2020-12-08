@@ -6320,6 +6320,23 @@ main .ad.ad--970by250.opened {
   z-index: 4;
 }
 
+.article__profile {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-top: 1px solid #D3D5D7;
+  border-bottom: 1px solid #D3D5D7;
+}
+.article__profile h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.article__profile ol, .article__profile ul, .article__profile p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .preface > * {
   font-size: 1.125em;
   line-height: 1.7;

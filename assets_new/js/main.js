@@ -152,6 +152,18 @@ $(function() {
         $sliderLi.eq(nowIndex2).addClass('rtl_in');
         return false;
     });
+    // width <= 1024，點擊後出現 tooltips
+    if (width <= 1024) {
+        $(".tooltips").click(function() {
+            $(this).toggleClass("active");
+        })
+    }
+    // 當tooltips大於等於15字
+    $(".tooltips").each(function() {
+        if ($(this).data("tooltips").length >= 15) {
+            $(this).addClass("tooltips-wrap");
+        };
+    });
     $(window).on('load', function() {
         var height = $(window).height(),
             footerHeight = $('footer').outerHeight(),

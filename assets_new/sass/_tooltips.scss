@@ -1,0 +1,103 @@
+$cubic: cubic-bezier(.64, .09, .08, 1);
+.tooltips {
+    position: relative;
+    &::before {
+        content: attr(data-tooltips);
+        position: absolute;
+        padding: 6px 8px;
+        max-width: 200px;
+        color: $white;
+        font-size: 0.875rem;
+        line-height: 1.45;
+        background: $gray-500;
+        white-space: nowrap;
+        visibility: hidden;
+        @include opacity(0);
+        @include transition(opacity 0.2s $cubic, transform 0.2s $cubic);
+        z-index: 2;
+        @include breakpoint(max-width 767px) {
+            display: none;
+        }
+    }
+    &:hover,
+    &.active {
+        &:before {
+            display: block;
+            visibility: visible;
+            @include opacity(1);
+            @include breakpoint(max-width 767px) {
+                display: none;
+            }
+        }
+    }
+    &--top {
+        &:before {
+            bottom: 100%;
+            left: 50%;
+            margin-bottom: 10px;
+            @include transform(translateX(-50%) translateY(2px));
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include breakpoint(768px) {
+                    @include transform(translateX(-50%) translateY(0));
+                }
+            }
+        }
+    }
+    &--bottom {
+        &:before {
+            top: 100%;
+            left: 50%;
+            margin-top: 10px;
+            @include transform(translateX(-50%) translateY(-2px));
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include breakpoint(768px) {
+                    @include transform(translateX(-50%) translateY(0));
+                }
+            }
+        }
+    }
+    &--left {
+        &:before {
+            top: 50%;
+            right: 100%;
+            margin-right: 10px;
+            @include transform(translateX(2px) translateY(-50%));
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include breakpoint(768px) {
+                    @include transform(translateX(0) translateY(-50%));
+                }
+            }
+        }
+    }
+    &--right {
+        &:before {
+            top: 50%;
+            left: 100%;
+            margin-left: 10px;
+            @include transform(translateX(-2px) translateY(-50%));
+        }
+        &:hover,
+        &.active {
+            &:before {
+                @include breakpoint(768px) {
+                    @include transform(translateX(0) translateY(-50%));
+                }
+            }
+        }
+    }
+    &-wrap {
+        &:before {
+            width: 200px;
+            white-space: normal;
+        }
+    }
+}

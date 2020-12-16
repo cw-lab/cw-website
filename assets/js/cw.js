@@ -2,6 +2,10 @@ var width = $(window).width(),
     menubarUserClick = 0,
     searchClick = 0;
 
+window.addEventListener(
+    'lazybeforeunveil', callback, false
+);
+
 // 圖片全螢幕
 function imgZoom() {
     $('.imgzoom').each(function() {

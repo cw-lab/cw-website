@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form .form__group {
+  max-width: none;
+  width: calc(100% - 160px);
+}
+
+#sound {
+  display: none;
+}
+
+section.section--btn {
+  font-size: 0;
+}
+@media (max-width: 767px) {
+  section.section--btn button {
+    width: 100%;
+  }
+}
+section.section--sop {
+  display: none;
+}
+
+/*# sourceMappingURL=workshop.css.map */

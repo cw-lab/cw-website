@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EDM公版製作工具</title>
+	<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="../../assets/css/cw.css">
+	<link rel="stylesheet" href="../../assets/css/workshop.css">
+</head>
+<body>
+	<header>
+		<div class="container px20">
+			<a href="https://www.cw.com.tw/" target="_blank" class="logo logo--main">
+				<img src="https://www.cw.com.tw/images/common/logo.svg" alt="">
+			</a>
+			<a class="logo logo--sub">
+				EDM公版製作工具
+			</a>
+		</div>
+	</header>
+	<main class="py40">
+		<div class="container">
+			<h2 class="mt0 mb20">選擇電子報版型</h2>
+			<section class="form mb20">
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="cwedm">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">天下電子報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="cwdaily">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">天下每日報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="webaccess">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">全閱讀週報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="transformers">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">企業突圍電子報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="off">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">Off 學時尚生活電子報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="economist">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">經濟學人電子報</span>
+				</label>
+				<label class="label--radio mr20 mb10">
+					<input type="radio" name="edmType" value="anniv40">
+					<span class="label__radio__mark"></span>
+					<span class="label__radio__txt">天下40週年電子報</span>
+				</label>
+			</section>
+			<div id="sound">
+				<h2 class="mt10 mb20">是否開啟聽天下</h2>
+				<section class="form">
+					<label class="label--radio mr20 mb10">
+						<input type="radio" name="sound" value="soundon">
+						<span class="label__radio__mark"></span>
+						<span class="label__radio__txt">是</span>
+					</label>
+					<label class="label--radio mr20 mb10">
+						<input type="radio" name="sound" value="soundoff">
+						<span class="label__radio__mark"></span>
+						<span class="label__radio__txt">否</span>
+					</label>
+				</section>
+			</div>
+			<hr class="mt30 mb40">
+			<h2 class="mt0 mb20">Google Sheets URL</h2>
+			<section class="form">
+				<div class="form__group form__group--outlined mr20 mb10">
+					<label for="#!" class="label">
+						<div class="form__group__placeholder">請輸入 Google Sheets URL</div>
+						<input type="text" id="dockey" class="form__group__input form__group__input--default" name="dockey" value="https://docs.google.com/spreadsheets/d/1KM_EFEgQlrixqlTIm6qvWdV4Bggi3-TJ8_pm1LCDdBg/edit#gid=0">
+					</label>
+				</div>            
+				<div class="select__group select__group--outlined mb10">
+					<select id="worksheet" name="worksheet" disabled>
+						<option value="1" selected="">第1個工作表</option>
+					</select>
+				</div>
+			</section>
+			<section class="section--note">
+				<ul class="mt10 mb20">
+					<li>
+						Google Spreadsheet 文件的連結，<strong>使用前記得先將文件發佈</strong>。<a href="#sop" class="btn--text">查看工具使用SOP</a>
+					</li>
+					<li>
+						工作表的選定，是由 Google 試算表介面從左往右算的排序，與工作表名稱無關。預設為第1個
+					</li>
+				</ul>
+			</section>
+			<hr class="my40">
+			<section class="section--btn">
+				<button id="preview" class="btn btn--contained mb10 ml-d-0 mr-d-10 mx-m-0">預覽</button>
+				<button id="previewBlank" class="btn btn--contained mb10 ml-d-0 mr-d-10 mx-m-0">新視窗預覽</button>
+				<button id="source" class="btn btn--contained mb10 mx0">發信用原始碼</button>
+			</section>
+		</div>
+		<section class="section--preview mt20">
+			<div id="previewHtml" class="container py20" style="display: none;">
+				<div class="bg-gray-100 pb20"></div>
+			</div>
+			<div id="sourceCode" class="container" style="display: none;">
+				<div class="p20 bg-gray-100">
+					<button id="copySource" class="btn btn--outlined btn--small">複製</button>
+					<textarea cols="30" rows="10"></textarea>
+				</div>
+			</div>
+		</section>
+		<section id="sop" class="section--sop mt60">
+			<div class="container">
+				<div class="bg-gray-100 p30">
+					<h2 class="my0">本工具使用SOP</h2>
+					<ol class="mb0">
+						<li>
+							請利用範列檔案「<a href="https://docs.google.com/spreadsheets/d/1O59Mr_Ku1PjqW6s9HLI376Ih3c-5qXoDjE8AHVlmrdY/" target="_blank" rel="noopener noreferrer" class="btn--text">企業突圍_demo_2019</a>」，複製一份新的檔案，再開始編輯。
+						</li>
+						<li>
+							編輯 Google試算表 檔案(填寫方式請參考範例檔的「<a href="https://docs.google.com/spreadsheets/d/1O59Mr_Ku1PjqW6s9HLI376Ih3c-5qXoDjE8AHVlmrdY/edit#gid=178721158" target="_blank" rel="noopener noreferrer" class="btn--text">欄位說明</a>」工作表)
+						</li>
+						<li>
+							將編輯好的試算表，設定「發佈到網路」。<br/>
+							請在 Google試算表 的功能表中，執行「<strong>檔案 &rarr; 發佈到網路</strong>」，在出現的視窗中點擊「<strong>發佈</strong>」
+						</li>
+						<li>
+							複製 Google Sheets URL，並貼至本頁對應的欄位中。<br/>
+							<ol>
+								<li>
+									點擊本頁「<strong>預覽</strong>」、「<strong>新視窗預覽</strong>」看信件的畫面呈現
+								</li>
+								<li>
+									點擊本頁「<strong>發信用原始碼</strong>」產生HTML
+								</li>
+							</ol>
+						</li>
+						<li>
+							到「<a href="https://crm.cw.com.tw/sys/loginsys.aspx" target="_blank" rel="noopener noreferrer" class="btn--text">功典系統</a>」貼上發信用原始碼，寄出信件。
+						</li>
+					</ol>
+				</div>
+			</div>
+		</section>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="../../assets/js/cw.js"></script>
+	<script src="../../assets/js/workshop.js"></script>
+</body>
+</html>

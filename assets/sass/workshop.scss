@@ -1,0 +1,30 @@
+@import "_basic";
+@import "_sheet";
+@import "_variable";
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    .form__group {
+        max-width: none;
+        width: calc(100% - 160px);
+    }
+}
+
+#sound {
+    display: none;
+}
+
+section {
+    &.section--btn {
+        font-size: 0;
+        button {
+            @include breakpoint(max-width 767px) {
+                width: 100%;
+            }
+        }
+    }
+    &.section--sop {
+        display: none;
+    }
+}

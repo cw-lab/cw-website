@@ -2605,6 +2605,17 @@ nav.menubar--left ul li.now > .li__group > a,
 nav.menubar--left ul li.now > .li__group > i {
   color: #fff;
 }
+nav.menubar--left ul.ctalist {
+  padding: 20px;
+}
+nav.menubar--left ul.ctalist li + li {
+  margin-top: 20px;
+}
+nav.menubar--left ul.ctalist li a.btn {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 nav.menubar--left > ul + ul {
   border-top: 1px solid #D3D5D7;
 }

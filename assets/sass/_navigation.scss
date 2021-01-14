@@ -79,6 +79,19 @@ nav {
                         }
                     }
                 }
+                &.ctalist {
+                    padding: 20px;
+                    li {
+                        + li {
+                            margin-top: 20px;
+                        }
+                        a.btn {
+                            display: block;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
             }
             >ul {
                 +ul {

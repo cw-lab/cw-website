@@ -39,6 +39,7 @@
     article {
         @include breakpoint(768px) {
             float: left;
+            width: 650px;
         }
     }
     aside {

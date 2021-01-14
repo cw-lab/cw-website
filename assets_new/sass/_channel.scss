@@ -10,13 +10,10 @@
     .articleGroup {
         @include breakpoint(768px) {
             float: left;
-            width: ($article - 320 - 40);
+            width: 650px;
         }
     }
     article {
-        @include breakpoint(768px) {
-            width: 650px;
-        }
         >.article {
             margin-bottom: 15px;
             background-color: $white;

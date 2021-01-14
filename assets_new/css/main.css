@@ -3748,6 +3748,9 @@ aside .media .pic::after {
 .card__group .card__item span {
   display: block;
 }
+.card__group .card__item .card__img {
+  position: relative;
+}
 .card__group .card__item .card__img .label {
   position: absolute;
   bottom: 0;

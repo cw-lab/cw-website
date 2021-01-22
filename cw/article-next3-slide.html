@@ -2161,80 +2161,42 @@
         });
     </script>
     <style>
-        .card__group--next {
-            position: relative;
-            margin-bottom: 60px;
-            font-size: 0;
+        .article__next {
+            right: 20px;
+            bottom: 80px;
+            z-index: -1;
         }
-        .card__group--next::before {
-            content: '相關推薦閱讀';
-            display: block;
-            padding: 5px 0 10px;
-            color: #48545D;
-            font-size: 0.875rem;
-            font-weight: normal;
-            border-top: 1px solid #D3D5D7;
+        .article__next.no-bottombar {
+            bottom: 30px;
         }
-        .card__group--next .slick-list {
+        .article__next .slick-list {
             overflow: hidden;
         }
-        .card__group--next a.slick-slide {
-            display: inline-block;
-        }
-        .card__group--next a {
-            text-decoration: none;
-        }
-        .card__group--next a span {
+        .article__next a {
             display: block;
+            float: left;
+            border: 0;
+            opacity: 0;
         }
-        .card__group--next a .next__img {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            width: 150px;
+        .article__next.show {
+            border: 1px solid #D3D5D7;
+            z-index: 5;
         }
-        .card__group--next a .next__img::before {
-            padding-top: 66.984127%;
+        .article__next.show a {
+            opacity: 1;
         }
-        .card__group--next a .next__img img {
-            width: 100%;
-        }
-        .card__group--next a .next__body {
-            display: inline-block;
-            vertical-align: middle;
-            width: calc(100% - 150px);
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .card__group--next a .next__label {
-            margin-bottom: 5px;
-            color: #D60C18;
-            font-size: 0.875rem;
-        }
-        .card__group--next a .next__title {
-            display: -webkit-box;
-            overflow: hidden;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            color: #171717;
-            font-size: 1rem;
-            -moz-transition: color 0.2s;
-            -o-transition: color 0.2s;
-            -webkit-transition: color 0.2s;
-            transition: color 0.2s;
-        }
-        .card__group--next .slick-dots {
+        .article__next .slick-dots {
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
             margin: 0;
-            padding: 0 0 10px;
+            padding: 0;
             list-style: none;
             text-align: center;
-            border-bottom: 1px solid #D3D5D7;
+            border-top: 1px solid #D3D5D7;
         }
-        .card__group--next .slick-dots li {
+        .article__next .slick-dots li {
             display: inline-block;
             width: 10px;
             height: 10px;
@@ -2242,10 +2204,10 @@
             background-color: #D3D5D7;
             border-radius: 50%;
         }
-        .card__group--next .slick-dots li.slick-active {
+        .article__next .slick-dots li.slick-active {
             background-color: #939EA7;
         }
-        .card__group--next .slick-dots li button {
+        .article__next .slick-dots li button {
             padding: 0;
             margin: 0;
             font-size: 0;
@@ -2253,7 +2215,7 @@
         }
     </style>
     <script>
-        $(function () {
+        $(function() {
             var s = document.createElement("script");
                 s.type = "text/javascript";
                 s.src = "https://www.cw.com.tw/assets_new/js/feature/slick.min.js";
@@ -2696,18 +2658,7 @@
                         firstArticleContent.children().eq(i).addClass('half__paragraph');
                     }
                 }
-                var stop = 0;
-                $(window).scroll(function () {
-                    switch (stop) {
-                        case 10:
-                            stop = 10;
-                            $('body > main > article > .article__body .card__group--next').insertAfter(firstArticleContent.children('.half__paragraph'));
-                            break;
-                        default:
-                            stop += 1;
-                            break;
-                    }
-                })
+                $('body > main > article > .article__body .card__group--next').insertAfter(firstArticleContent.children('.half__paragraph'));
                 $('body > main > article > .article__body .card__group--next').ready(function () {
                     $("body > main > article > .article__body .card__group--next").slick({
                         infinite: true,
@@ -2720,7 +2671,7 @@
                     });
                 });
             });
-        })
+        });
     </script>
 </body>
 

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .board::before, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
+nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .board::before, .accordion__item__panel::before, .accordion__item__panel::after, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
   content: '';
   display: block;
 }
@@ -3351,6 +3351,10 @@ input[type*='number']::-webkit-outer-spin-button {
 .form__group .form__group__input:focus {
   border-color: #003a9f;
 }
+.form__group.w-100 {
+  max-width: none;
+  width: 100%;
+}
 .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
   background-color: #EEEEEE;
@@ -5048,6 +5052,101 @@ header.scroll .container > .item.item--center .item__scroll {
 }
 .paginate a:hover {
   color: #D60C18;
+}
+
+.accordion__item::before, .accordion__item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.accordion__item:nth-child(odd) {
+  background-color: #fafafa;
+}
+.accordion__item__header {
+  position: relative;
+  padding: 0.65em 1.125em;
+  color: #171717;
+  cursor: pointer;
+  -moz-transition: background-color, 0.3s;
+  -o-transition: background-color, 0.3s;
+  -webkit-transition: background-color, 0.3s;
+  transition: background-color, 0.3s;
+}
+.accordion__item__header::before, .accordion__item__header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.accordion__item__header a {
+  color: #171717;
+}
+.accordion__item__header.active, .accordion__item__header:hover {
+  color: #D60C18;
+}
+.accordion__item__header.active a, .accordion__item__header:hover a {
+  color: #D60C18;
+}
+.accordion__item__header span {
+  display: inline-block;
+  vertical-align: top;
+}
+.accordion__item__header span.number {
+  position: relative;
+  top: .215em;
+  width: 1.5rem;
+}
+.accordion__item__header span.txt {
+  width: calc(100% - 3rem);
+}
+.accordion__item__header p {
+  color: #fff;
+}
+.accordion__item__header i.icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.9em 1rem;
+}
+.accordion__item__panel {
+  display: none;
+  position: relative;
+  padding: 1rem 1rem 1rem 2.5rem;
+}
+.accordion__item__panel::before, .accordion__item__panel::after {
+  clear: both;
+}
+.accordion__item__panel .h3 {
+  font-weight: 500;
+  line-height: 1.5;
+}
+.accordion__item__panel img {
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+.accordion__item__panel .decimal--step {
+  margin-left: 2.4em;
+}
+@media (min-width: 768px) {
+  .accordion__item__panel .decimal--step {
+    margin-left: 2.1em;
+  }
+}
+.accordion__item__panel .decimal--step li {
+  position: relative;
+}
+.accordion__item__panel .decimal--step li::before {
+  content: "Step";
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: calc(100% + 1.5em);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (min-width: 768px) {
+  .accordion__item__panel .decimal--step li::before {
+    right: calc(100% + 1.2em);
+  }
 }
 
 main {

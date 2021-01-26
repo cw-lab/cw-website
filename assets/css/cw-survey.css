@@ -1410,6 +1410,10 @@ input[type*='number']::-webkit-outer-spin-button {
 .form__group .form__group__input:focus {
   border-color: #003a9f;
 }
+.form__group.w-100 {
+  max-width: none;
+  width: 100%;
+}
 .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
   background-color: #EEEEEE;

@@ -1,9 +1,11 @@
-.accordion__item::before, .accordion__item::after, .accordion__item__header::before, .accordion__item__header::after, .accordion__item__panel::before, .accordion__item__panel::after, .service__page .container::after {
+.accordion__item__panel::before, .accordion__item__panel::after, .service__page .container::after {
   content: '';
   display: block;
 }
 
 .accordion__item::before, .accordion__item::after {
+  content: "";
+  display: block;
   clear: both;
 }
 .accordion__item:nth-child(odd) {
@@ -20,6 +22,8 @@
   transition: background-color, 0.3s;
 }
 .accordion__item__header::before, .accordion__item__header::after {
+  content: "";
+  display: block;
   clear: both;
 }
 .accordion__item__header a {
@@ -80,7 +84,7 @@
   position: relative;
 }
 .accordion__item__panel .decimal--step li::before {
-  content: 'Step';
+  content: "Step";
   display: inline-block;
   position: absolute;
   top: 2px;

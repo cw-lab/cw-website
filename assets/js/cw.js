@@ -146,6 +146,54 @@ $(function() {
         'data-title': originTitle,
         'data-link': originLink + originString
     });
+    $('.search__icon').click(function() {
+        searchClick < 1 ? searchClick++ : searchClick = 0;
+        $(this).toggleClass('opened');
+        $('.search__block').slideToggle();
+        $('.black').toggleClass('opened search__opened');
+        $('.menubar__user--member').slideUp();
+        $('.menubar__user > i.icon').removeClass('icon-close');
+        $('.opacity').removeClass('opened menubar__user');
+        menubarUserClick = 0
+        if (searchClick == 0) {
+            $('header, .ad--970by250').removeClass('opened');
+        } else {
+            $('header, .ad--970by250').addClass('opened');
+        }
+    });
+    $(".menubar__user > i.icon, .menubar__user .menubar__user--member, .opacity").click(function() {
+        menubarUserClick < 1 ? menubarUserClick++ : menubarUserClick = 0;
+        $(this).siblings('.menubar__user--member').slideToggle();
+        $('.desktop i.icon-down').toggleClass('active');
+        $('.search__block').slideUp();
+        $('body, .search__icon').removeClass('opened');
+        $('.opacity, .black').removeClass('opened menubar__user search__opened');
+        searchClick = 0;
+        if (menubarUserClick == 0) {
+            $('.menubar__user > i.icon').removeClass('icon-close');
+            if (($('header').hasClass('fixed')) && (width < 1024)) {
+                setTimeout(function() {
+                    $('body').removeClass('opened');
+                }, 300);
+            }
+        } else {
+            $('.opacity').addClass('opened menubar__user');
+            $('.menubar__user > i.icon').addClass('icon-close');
+            if (($('header').hasClass('fixed')) && (width < 1024)) {
+                setTimeout(function() {
+                    $('body').addClass('opened');
+                }, 300);
+            }
+        }
+    });
+    $('.opacity').click(function() {
+        $('body').removeClass('opened');
+        $('.menubar__user--member').slideUp();
+        $('.menubar__user > i.icon').removeClass('icon-close');
+        $('.opacity').removeClass('opened menubar__user');
+        menubarUserClick = 0;
+        searchClick = 0;
+    });
     $(window).on('load', function() {
         var height = $(window).height(),
             footerHeight = $('footer').outerHeight(),
@@ -289,54 +337,6 @@ $(function() {
             }
         }
         memberHeight(width);
-        $('.search__icon').click(function() {
-            searchClick < 1 ? searchClick++ : searchClick = 0;
-            $(this).toggleClass('opened');
-            $('.search__block').slideToggle();
-            $('.black').toggleClass('opened search__opened');
-            $('.menubar__user--member').slideUp();
-            $('.menubar__user > i.icon').removeClass('icon-close');
-            $('.opacity').removeClass('opened menubar__user');
-            menubarUserClick = 0
-            if (searchClick == 0) {
-                $('header, .ad--970by250').removeClass('opened');
-            } else {
-                $('header, .ad--970by250').addClass('opened');
-            }
-        });
-        $(".menubar__user > i.icon, .menubar__user .menubar__user--member, .opacity").click(function() {
-            menubarUserClick < 1 ? menubarUserClick++ : menubarUserClick = 0;
-            $(this).siblings('.menubar__user--member').slideToggle();
-            $('.desktop i.icon-down').toggleClass('active');
-            $('.search__block').slideUp();
-            $('body, .search__icon').removeClass('opened');
-            $('.opacity, .black').removeClass('opened menubar__user search__opened');
-            searchClick = 0;
-            if (menubarUserClick == 0) {
-                $('.menubar__user > i.icon').removeClass('icon-close');
-                if (($('header').hasClass('fixed')) && (width < 1024)) {
-                    setTimeout(function() {
-                        $('body').removeClass('opened');
-                    }, 300);
-                }
-            } else {
-                $('.opacity').addClass('opened menubar__user');
-                $('.menubar__user > i.icon').addClass('icon-close');
-                if (($('header').hasClass('fixed')) && (width < 1024)) {
-                    setTimeout(function() {
-                        $('body').addClass('opened');
-                    }, 300);
-                }
-            }
-        });
-        $('.opacity').click(function() {
-            $('body').removeClass('opened');
-            $('.menubar__user--member').slideUp();
-            $('.menubar__user > i.icon').removeClass('icon-close');
-            $('.opacity').removeClass('opened menubar__user');
-            menubarUserClick = 0;
-            searchClick = 0;
-        });
         // 會員中心暫時用
         if (location.href.match('/member')) {
             $('.menubar__user--login i.icon').click(function() {

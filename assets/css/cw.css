@@ -6737,6 +6737,9 @@ ul.article__provide li span i.icon {
     left: 20px;
     height: auto !important;
   }
+  .article__next.no__bottombar {
+    bottom: 20px;
+  }
   .article__next.show {
     right: 20px;
   }

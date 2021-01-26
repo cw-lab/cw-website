@@ -24,6 +24,9 @@ function articleInint() {
         $('.article__content').each(function() {
             $(this).find(".ad--300by250").first().addClass('ad--first');
         });
+        if ( $('.bottombar').length == 0 ) {
+            $('.article__next').addClass('no__bottombar');
+        }    
         $(window).on('scroll', _.throttle(function() {
             var scroll = $(window).scrollTop(),
                 headerHeight = $('header').outerHeight();

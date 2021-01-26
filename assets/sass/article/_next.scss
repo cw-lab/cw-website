@@ -18,6 +18,9 @@
         bottom: 60px;
         left: 20px;
         height: auto !important;
+        &.no__bottombar {
+            bottom: 20px;
+        }
         &.show {
             right: 20px;
         }

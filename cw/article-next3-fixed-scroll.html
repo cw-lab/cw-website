@@ -2162,19 +2162,29 @@
     </script>
     <style>
         #card__next {
-            margin: 30px 0;
-            padding-top: 20px;
-            border: solid #D3D5D7;
-            border-width: 1px 0;
+            display: none;
+            position: fixed;
+            left: 0;
+            bottom: 50px;
+            background-color: #fff;
+            z-index: 5;
         }
         #card__next::before {
             content: '相關推薦閱讀';
             display: block;
-            padding-bottom: 10px;
+            padding: 10px 20px;
             font-size: 1rem;
+            border-top: 1px solid #D3D5D7;
         }
         #card__next .card__group--scroll {
             padding-bottom: 20px;
+            margin-left: 0;
+        }
+        #card__next.no-bottombar {
+            bottom: 0px;
+        }
+        #card__next.no-bottombar .card__group--scroll {
+            padding-bottom: 35px;
         }
         #card__next .card__group--next {
             position: relative;
@@ -2228,17 +2238,8 @@
     </style>
     <script>
         $(function () {
-            var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.src = "https://www.cw.com.tw/assets_new/js/feature/slick.min.js";
-            $("body").append(s);
-
-            if ( $('.bottombar').length == 0 ) {
-                $('body > main > article > .article__body .article__next').addClass('no-bottombar')
-            }
             var masterCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(0).children('a').text(),
                 subCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(1).children('a').text();
-
             $(window).load(function () {
                 var firstArticleContent = $('body > main > article > .article__body .article__content'),
                     totalNum = 0,
@@ -2659,7 +2660,7 @@
                     }
                 }
                 $('body > main > article > .article__body .article__next').append(list);
-                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c886');
+                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c887');
                 for (let i = 0; i < firstArticleContent.children().length; i++) {
                     totalNum += firstArticleContent.children().text().length;
                 }
@@ -2670,7 +2671,9 @@
                         firstArticleContent.children().eq(i).addClass('half__paragraph');
                     }
                 }
-                $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
+                if ( $('.paywall').length == 0 ) {
+                    $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
+                }
                 var stop = 0;
                 $(window).scroll(function () {
                     switch (stop) {
@@ -2681,6 +2684,19 @@
                         default:
                             stop += 1;
                             break;
+                    }
+                    var scroll = $(window).scrollTop(),
+                        headerHeight = $('header').outerHeight(),
+                        articleBody = $('body > main > article > .article__body'),
+                        articleBodyTop = $('body > main > article > .article__body').offset().top,
+                        articleBodyHeight = $('body > main > article > .article__body').outerHeight();
+                    if ( scroll >= (articleBodyTop + (articleBodyHeight*0.75)) ) {
+                        $('#card__next').fadeIn();
+                    } else {
+                        $('#card__next').fadeOut();
+                    }
+                    if ( $('.bottombar').length !== 1 ) {
+                        $('body > main > article > .article__body #card__next').addClass('no-bottombar');
                     }
                 })
             });

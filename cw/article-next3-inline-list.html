@@ -2161,27 +2161,27 @@
         });
     </script>
     <style>
-        .card__group--next {
-            position: relative;
-            margin-bottom: 60px;
-            font-size: 0;
+        #card__next {
+            margin: 30px 0;
+            padding-top: 20px;
+            border: solid #D3D5D7;
+            border-width: 1px 0;
         }
-        .card__group--next::before {
+        #card__next::before {
             content: '相關推薦閱讀';
             display: block;
-            padding: 5px 0 10px;
-            color: #48545D;
-            font-size: 0.875rem;
-            font-weight: normal;
-            border-top: 1px solid #D3D5D7;
+            padding-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1;
         }
-        .card__group--next .slick-list {
-            overflow: hidden;
-        }
-        .card__group--next a.slick-slide {
-            display: inline-block;
+        #card__next .card__group--next {
+            position: relative;
+            font-size: 0;
         }
         .card__group--next a {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
             text-decoration: none;
         }
         .card__group--next a span {
@@ -2191,7 +2191,7 @@
             position: relative;
             display: inline-block;
             vertical-align: middle;
-            width: 150px;
+            width: 105px;
         }
         .card__group--next a .next__img::before {
             padding-top: 66.984127%;
@@ -2202,9 +2202,9 @@
         .card__group--next a .next__body {
             display: inline-block;
             vertical-align: middle;
-            width: calc(100% - 150px);
+            width: calc(100% - 105px);
             padding-left: 15px;
-            padding-right: 15px;
+            padding-right: 0;
         }
         .card__group--next a .next__label {
             margin-bottom: 5px;
@@ -2214,7 +2214,7 @@
         .card__group--next a .next__title {
             display: -webkit-box;
             overflow: hidden;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             color: #171717;
             font-size: 1rem;
@@ -2223,45 +2223,9 @@
             -webkit-transition: color 0.2s;
             transition: color 0.2s;
         }
-        .card__group--next .slick-dots {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            margin: 0;
-            padding: 0 0 10px;
-            list-style: none;
-            text-align: center;
-            border-bottom: 1px solid #D3D5D7;
-        }
-        .card__group--next .slick-dots li {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            margin: 10px 3px 0;
-            background-color: #D3D5D7;
-            border-radius: 50%;
-        }
-        .card__group--next .slick-dots li.slick-active {
-            background-color: #939EA7;
-        }
-        .card__group--next .slick-dots li button {
-            padding: 0;
-            margin: 0;
-            font-size: 0;
-            border: 0;
-        }
     </style>
     <script>
         $(function () {
-            var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.src = "https://www.cw.com.tw/assets_new/js/feature/slick.min.js";
-            $("body").append(s);
-
-            if ( $('.bottombar').length == 0 ) {
-                $('body > main > article > .article__body .article__next').addClass('no-bottombar')
-            }
             var masterCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(0).children('a').text(),
                 subCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(1).children('a').text();
 
@@ -2685,7 +2649,7 @@
                     }
                 }
                 $('body > main > article > .article__body .article__next').append(list);
-                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c886');
+                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c888');
                 for (let i = 0; i < firstArticleContent.children().length; i++) {
                     totalNum += firstArticleContent.children().text().length;
                 }
@@ -2696,29 +2660,21 @@
                         firstArticleContent.children().eq(i).addClass('half__paragraph');
                     }
                 }
+                if ( $('.paywall').length == 0 ) {
+                    $('<div id="card__next"></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
+                }
                 var stop = 0;
                 $(window).scroll(function () {
                     switch (stop) {
                         case 10:
                             stop = 10;
-                            $('body > main > article > .article__body .card__group--next').insertAfter(firstArticleContent.children('.half__paragraph'));
+                            $('body > main > article > .article__body #card__next').append($('body > main > article > .article__body .card__group--next'));
                             break;
                         default:
                             stop += 1;
                             break;
                     }
                 })
-                $('body > main > article > .article__body .card__group--next').ready(function () {
-                    $("body > main > article > .article__body .card__group--next").slick({
-                        infinite: true,
-                        autoplay: false,
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        autoplaySpeed: 10000,
-                        dots: true,
-                        arrows: false,
-                    });
-                });
             });
         })
     </script>

@@ -70,7 +70,7 @@ a:focus {
 @media (min-width: 768px) {
   .btn {
     min-width: 144px;
-    padding: 0.8125em 1em;
+    padding: 0.875em 1em;
   }
 }
 .btn.btn--small {

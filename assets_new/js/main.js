@@ -200,6 +200,17 @@ $(function() {
         menubarUserClick = 0;
         searchClick = 0;
     });
+    // message: Dialogs 點擊X關閉
+    $(".message__close").on("click", function() {
+        $(this).parent().parent().fadeOut();
+        $('.black').toggleClass('opened');
+        $('body').removeClass('message__open');
+    });
+    $(".btn__close").on("click", function() {
+        $(this).parent().parent().parent().fadeOut();
+        $('.black').toggleClass('opened');
+        $('body').removeClass('message__open');
+    });
     // width <= 1024，點擊後出現 tooltips
     if (width <= 1024) {
         $(".tooltips").click(function() {
@@ -249,6 +260,28 @@ $(function() {
             $('.lightbox').fadeOut();
         });
         // adBlock();
+        
+        // 判斷有沒有值
+        $("input.form__group__input").each(function() {
+            if (this.value) {
+                $(this).parent().addClass('hasValue');
+            }
+            $(this).on('change keyup copy paste cut', function() {
+                if (!this.value) {
+                    $(this).parent().removeClass('hasValue');
+                } else {
+                    $(this).parent().addClass('hasValue');
+                }
+            })
+        });
+        function input() {
+            $("input.form__group__input").parent().addClass('form__group--defalt');
+            $("input.form__group__input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+        }
+        input();
+        $("input.form__group__input").change(function() {
+            input();
+        })
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .banner').outerHeight(),

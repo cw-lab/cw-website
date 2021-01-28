@@ -254,7 +254,7 @@
                 </form>
             </div>
             <div class="message__btn">
-                <button id="enterMail" class="btn btn--contained">立即訂閱</button>
+                <button id="enterMail" class="btn btn--contained btn__close">立即訂閱</button>
             </div>
         </div>
     </div>
@@ -266,7 +266,7 @@
                 <p>請查看您的信箱，我們將寄送一封驗證信給您，以確保未來信件會確實送到您的信箱。</p>
             </div>
             <div class="message__btn">
-                <button id="closeMessage" class="btn btn--contained">我知道了</button>
+                <button class="btn btn--contained btn__close">我知道了</button>
             </div>
         </div>
     </div>
@@ -284,10 +284,6 @@
             $('#enterMail').click(function(){
                 $('#subscribe').hide();
                 $('#receiveMail').show();
-            });
-            $('#closeMessage').click(function(){
-                $('#subscribe, #receiveMail').hide();
-                $('.black').removeClass('opened');
             });
         })
     </script>

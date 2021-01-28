@@ -1,4 +1,269 @@
 input,
 select {
-    outline: none;
+    @include border-radius(0);
+    @include appearance(none);
+    &::-ms-expand {
+        display: none;
+    }
+    &:focus {
+        outline: 0;
+    }
+}
+
+input[type*='number']::-webkit-inner-spin-button,
+input[type*='number']::-webkit-outer-spin-button {
+    @include opacity(0);
+}
+
+.form {
+    font-size: 0;
+}
+
+.form__group {
+    position: relative;
+    max-width: 290px;
+    >* {
+        display: block;
+    }
+    .label {
+        position: relative;
+        display: block;
+    }
+    .form__group {
+        &__placeholder {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: $secondary;
+            font-size: 14px;
+            @include transition(all 0.3s);
+        }
+        &__input {
+            min-width: 144px;
+            width: 100%;
+            color: $black;
+            font-size: 1rem;
+            border-style: solid;
+            border-color: $secondary;
+            &:focus {
+                border-color: $surface;
+            }
+        }
+    }
+    &.w-100 {
+        max-width: none;
+        width: 100%;
+    }
+    &--filled {
+        .form__group__input {
+            padding: 1.5rem 1rem 0.4rem;
+            background-color: $gray-100;
+            border-width: 0px 0px 1px;
+        }
+        .form__group {
+            &--defalt {
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: 0.2em;
+                    }
+                }
+            }
+            &--correct {
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        color: $surface;
+                    }
+                    .form__group__input {
+                        border-color: $surface;
+                    }
+                }
+            }
+            &--error {
+                // .form__group__input {
+                //     color: $primary;
+                // }
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        color: $primary;
+                    }
+                    .form__group__input {
+                        border-color: $primary;
+                    }
+                }
+            }
+            &--hasicon {
+                .form__group__input {
+                    padding: 1.5rem 3rem 0.4rem 1rem;
+                }
+                i.icon {
+                    top: 1.5rem;
+                }
+            }
+            &--disabled {
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: 0.2em;
+                    }
+                }
+            }
+        }
+    }
+    &--outlined {
+        .form__group__input {
+            padding: 1rem 1rem 0.8rem;
+            background-color: transparent;
+            border-width: 1px;
+        }
+        .form__group {
+            &--defalt {
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: -0.8em;
+                        padding: 0 2px;
+                        font-size: 12px;
+                        background-color: $white;
+                    }
+                }
+            }
+            &--correct {
+                &:hover,
+                &.hasValue {
+                    .form__group__placeholder {
+                        color: $surface;
+                    }
+                    .form__group__input {
+                        border-color: $surface;
+                    }
+                }
+            }
+            &--hasicon {
+                .form__group__input {
+                    padding: 1.1rem 3rem 0.7rem 1rem;
+                }
+            }
+            &--disabled {
+                &.hasValue {
+                    .form__group__placeholder {
+                        top: -0.8em;
+                        padding: 0 2px;
+                        background-color: $white;
+                    }
+                    .form__group__input {
+                        background-color: $white;
+                        border-color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+    &--defalt {
+        &:hover {
+            .form__group__placeholder {
+                color: $surface;
+            }
+        }
+    }
+    &--hasicon {
+        i.icon {
+            position: absolute;
+            top: 1.25rem;
+            right: 1rem;
+            font-size: 1rem;
+            @include transition(all 0.3s);
+        }
+    }
+    &--correct {
+        .form__group__placeholder,
+        .icon,
+        .form__group__help--highlight {
+            color: $surface !important;
+        }
+        .form__group__placeholder,
+        .icon {
+            color: $surface;
+        }
+        .form__group__input {
+            border-color: $surface;
+        }
+    }
+    &--error {
+        .form__group__placeholder,
+        .icon,
+        .form__group__help--highlight {
+            color: $primary !important;
+        }
+        .form__group__input {
+            // color: $primary;
+            border-color: $primary !important;
+        }
+        .select__group::before {
+            color: $primary;
+        }
+    }
+    &--undone {
+        .form__group__placeholder {
+            color: $primary;
+        }
+        .form__group__input {
+            border-color: $primary;
+        }
+        &:hover,
+        .hasValue {
+            .form__group__placeholder {
+                color: $surface;
+            }
+            .form__group__input {
+                border-color: $surface;
+            }
+        }
+    }
+    &--disabled {
+        >* {
+            cursor: not-allowed;
+        }
+        .form__group__placeholder {
+            color: $gray-200;
+        }
+        .form__group__input {
+            color: $secondary;
+            background-color: $gray-100;
+            border-color: $gray-100;
+            cursor: not-allowed;
+        }
+        &.hasValue {
+            .form__group__placeholder {
+                color: $secondary;
+                font-size: 0.75rem;
+            }
+            .form__group__input {
+                color: $secondary;
+                border-color: $secondary;
+            }
+        }
+    }
+    &__help {
+        display: block;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-top: 5px;
+        color: $secondary;
+        font-size: 0.75rem;
+        font-style: normal;
+        line-height: 1;
+        &--strong {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: $secondary-variant;
+            font-size: 0.875rem;
+        }
+        +.form__group__help {
+            margin-top: -10px;
+        }
+    }
 }

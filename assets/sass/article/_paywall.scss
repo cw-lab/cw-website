@@ -14,13 +14,13 @@
         @include background-image(linear-gradient(top, rgba($white, 0) 0%, rgba($white, 1) 100%));
         border-bottom: 40px solid $white;
     }
-    &.paywall--p0 {
+    &.paywall--singleColumn {
         >div[class*='paywall__'] {
             padding-left: 30px;
             padding-right: 30px;
         }
     }
-    &.paywall--p1 {
+    &.paywall--doubleColumn {
         padding: 40px 60px;
         font-size: 0;
         @include breakpoint(1024px) {

@@ -238,6 +238,18 @@
             </div>
         </section>
     </main>
+    <div id="unsubscribe" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt pb20">
+                <h2>取消訂閱成功</h2>
+                <p>此修改將於下個電子報發送日生效，您將不會再收到此份電子報。</p>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--contained btn__close">我知道了</button>
+            </div>
+        </div>
+    </div>
     <div id="subscribe" class="message message--dialogs message--center">
         <div class="message__container">
             <i class="icon icon-cancel message__close"></i>
@@ -285,6 +297,10 @@
                 $('#subscribe').hide();
                 $('#receiveMail').show();
             });
+            if ( window.location.href.indexOf('edm_unsubscribr') > 0 ) {
+                $('#unsubscribe').show();
+                $('.black').addClass('opened');
+            }
         })
     </script>
 </body>

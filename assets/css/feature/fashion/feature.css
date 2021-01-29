@@ -731,18 +731,8 @@ body.feature__page main p {
 
 @font-face {
   font-family: "cw_icon";
-<<<<<<< Updated upstream
   src: url("fonts/cw_icon.eot?d0n253");
   src: url("fonts/cw_icon.eot?d0n253#iefix") format("embedded-opentype"), url("fonts/cw_icon.ttf?d0n253") format("truetype"), url("fonts/cw_icon.woff?d0n253") format("woff"), url("fonts/cw_icon.svg?d0n253#cw_icon") format("svg");
-=======
-<<<<<<< Updated upstream
-  src: url("../fonts/cw_icon.eot?8gm46x");
-  src: url("../fonts/cw_icon.eot?8gm46x#iefix") format("embedded-opentype"), url("../fonts/cw_icon.ttf?8gm46x") format("truetype"), url("../fonts/cw_icon.woff?8gm46x") format("woff"), url("../fonts/cw_icon.svg?8gm46x#cw_icon") format("svg");
-=======
-  src: url("../fonts/cw_icon.eot?d0n253");
-  src: url("../fonts/cw_icon.eot?d0n253#iefix") format("embedded-opentype"), url("../fonts/cw_icon.ttf?d0n253") format("truetype"), url("../fonts/cw_icon.woff?d0n253") format("woff"), url("../fonts/cw_icon.svg?d0n253#cw_icon") format("svg");
->>>>>>> Stashed changes
->>>>>>> Stashed changes
   font-weight: normal;
   font-style: normal;
   font-display: block;

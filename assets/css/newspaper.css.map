@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAGA,gBAAiB;EACb,cAAc,EAAE,YAAY;;AC4D5B,0BAAwB;ED1DpB,mCAAW;IAEH,KAAK,EAAE,KAAK",
-"sources": ["../sass/newspaper.scss","../../../../../.rvm/gems/ruby-2.5.1/gems/breakpoint-2.7.1/stylesheets/_breakpoint.scss"],
+"sources": ["../sass/newspaper.scss","../../../../../../../Library/Ruby/Gems/2.6.0/gems/breakpoint-2.7.1/stylesheets/_breakpoint.scss"],
 "names": [],
 "file": "newspaper.css"
 }

@@ -870,6 +870,7 @@
                     align-self: center;
                     @include breakpoint(768px) {
                         width: 80px;
+                        letter-spacing: -0.025em;
                     }
                     @include breakpoint(max-width 767px) {
                         margin: 0 15px 20px;

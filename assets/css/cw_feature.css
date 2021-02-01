@@ -2168,6 +2168,11 @@ a:focus {
 .btn--100 {
   width: 100%;
 }
+.btn--100 + button.btn--100,
+.btn--100 + a.btn--100 {
+  margin-left: 0;
+  margin-top: 20px;
+}
 .btn[disabled] {
   color: #D3D5D7;
   background: #EEEEEE;

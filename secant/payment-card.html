@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex">
     <meta name="googlebot" content="noindex">
-    <title>選擇付款方式結帳頁</title>
+    <title>選擇信用卡</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
@@ -105,8 +105,39 @@
                     <h3>付款方式</h3>
                     <div class="content__group">
                         <div class="form p20">
-                            <a href="payment-card.html" class="btn btn--outlined btn--100">信用卡付款</a>
-                            <a href="payment-telecom.html" class="btn btn--outlined btn--100">電信支付</a>
+                            <!-- <div class="content__item__title mb10">信用卡號</div> -->
+                            <div class="label__group">
+                                <div class="form--remark m0 px20 py10">天下雜誌並不會留存您的信用卡完整資訊，天下配合的綠界科技股份有限公司符合PCI-DSS 國際安全認證，致力提供安全且便捷的交易環境。</div>
+                                <div class="form p0">
+                                    <label class="label--radio">
+                                        <input type="radio" data-card="visa" value="台新國際商業銀行 末四碼 7485" name="creditcard" checked>
+                                        <span class="label__radio__mark"></span>
+                                        <span class="label__radio__txt"><img src="../assets/images/secant/icon-visa@3x.png" alt=""><span>台新國際商業銀行 末四碼 7485</span></span>
+                                    </label>
+                                    <label class="label--radio">
+                                        <input type="radio" data-card="master" value="玉山國際商業銀行 末四碼 1234" name="creditcard">
+                                        <span class="label__radio__mark"></span>
+                                        <span class="label__radio__txt"><img src="../assets/images/secant/icon-master@3x.png" alt=""><span>玉山國際商業銀行 末四碼 1234</span></span>
+                                    </label>
+                                    <label class="label--radio">
+                                        <input type="radio" data-card="jcb" value="台北富邦銀行 末四碼 4321" name="creditcard">
+                                        <span class="label__radio__mark"></span>
+                                        <span class="label__radio__txt"><img src="../assets/images/secant/icon-jcb@3x.png" alt=""><span>台北富邦銀行 末四碼 4321</span></span>
+                                    </label>
+                                    <label class="label--radio">
+                                        <input type="radio" value="new" name="creditcard">
+                                        <span class="label__radio__mark"></span>
+                                        <span class="label__radio__txt">新增信用卡</span>
+                                        <span class="label__radio__helper">
+											若您選擇新增信用卡，將在下一頁請您填寫信用卡號
+										</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-left pt30">
+                                <a href="success.html" class="btn btn--contained">前往付款</a>
+                                <a href="payment.html" class="btn btn--outlined">其他付款方式</a>
+                            </div>
                         </div>
                     </div>
                 </section>

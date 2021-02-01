@@ -1011,7 +1011,7 @@
 .webaccess__page section .label__group .label__radio__txt img,
 .webaccess__page section .label__group .label__radio__txt span {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
 }
 .webaccess__page section .label__group .label__radio__txt img {
   width: 3.125rem;

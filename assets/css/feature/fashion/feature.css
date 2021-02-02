@@ -756,24 +756,28 @@ body.feature__page main p {
   content: "";
 }
 
+.icon-check:before {
+  content: "";
+}
+
 .icon-check-circle:before {
   content: "";
-}
-
-.icon-exclamation-circle:before {
-  content: "";
-}
-
-.icon-question-circle:before {
-  content: "";
 }
 
 .icon-check-solid:before {
   content: "";
 }
 
+.icon-exclamation-circle:before {
+  content: "";
+}
+
 .icon-exclamation-solid:before {
   content: "";
+}
+
+.icon-question-circle:before {
+  content: "";
 }
 
 .icon-error-solid:before {
@@ -800,26 +804,6 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-facebook:before {
-  content: "";
-}
-
-.icon-instagram:before {
-  content: "";
-}
-
-.icon-line:before {
-  content: "";
-}
-
-.icon-twitter:before {
-  content: "";
-}
-
-.icon-rss:before {
-  content: "";
-}
-
 .icon-left:before {
   content: "";
 }
@@ -844,10 +828,6 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-check:before {
-  content: "";
-}
-
 .icon-cancel:before {
   content: "";
 }
@@ -860,12 +840,32 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-security:before {
-  content: "";
+.icon-dot-single:before {
+  content: "";
 }
 
-.icon-pushpin:before {
-  content: "";
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-line:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-rss:before {
+  content: "";
+}
+
+.icon-apple:before {
+  content: "";
 }
 
 .icon-bookmark-filled:before {
@@ -920,24 +920,32 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-user-filled:before {
-  content: "";
+.icon-security:before {
+  content: "";
 }
 
-.icon-user-outlined:before {
-  content: "";
+.icon-pushpin:before {
+  content: "";
 }
 
-.icon-eyeon:before {
-  content: "";
+.icon-unlock:before {
+  content: "";
 }
 
 .icon-eyeoff:before {
   content: "";
 }
 
-.icon-apple:before {
-  content: "";
+.icon-eyeon:before {
+  content: "";
+}
+
+.icon-user-filled:before {
+  content: "";
+}
+
+.icon-user-outlined:before {
+  content: "";
 }
 
 .icon-play:before {
@@ -986,6 +994,10 @@ body.feature__page main p {
 
 .icon-member-only:before {
   content: "";
+}
+
+.icon-mailing:before {
+  content: "";
 }
 
 .hamburger {

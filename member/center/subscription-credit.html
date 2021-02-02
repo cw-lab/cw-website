@@ -1150,7 +1150,7 @@
                         <div class="form">
                             <div class="form__edit flex align-items-center justify-between">
                                 <div class="h3 mtb0">下次扣款日期</div>
-                                <a class="btn btn--text btn--deactivate">取消自動續訂</a>
+                                <a class="btn btn--text btn--deactivate disabled">取消自動續訂</a>
                             </div>
                             <div class="form__value">2020年10月20日</div>
                         </div>
@@ -2014,10 +2014,16 @@
         $(function() {
             $('.btn--method').each(function(){
                 var link = $(this).attr('href');
-                $(this).attr('href', link + '?offset=' + $(this).offset().top);
+                $(this).attr('href', link + '?offset=' + $(this).parent().parent().parent().offset().top);
             })
             var offsetTop = window.location.href.split('offset=')[1];
             $(Window).scrollTop(offsetTop);
+            if ( window.location.href.indexOf('credit') > 0 ) {
+                $('.btn--method').parent().parent().siblings('.form__value').hide();
+                $('.btn--method').parent().parent().siblings('.label__group').show();
+                $('.btn--method').parent().parent().siblings('.form__edit').children('.goEdit').hide();
+                $('.btn--method').parent().parent().siblings('.form__edit').children('.goRevert').show();
+            }
         })
     </script>    
 </body>

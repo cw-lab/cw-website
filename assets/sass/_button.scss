@@ -144,6 +144,11 @@ a {
     }
     &--100 {
         width: 100%;
+        +button.btn--100,
+        +a.btn--100 {
+            margin-left: 0;
+            margin-top: 20px;
+        }
     }
     &[disabled] {
         color: $gray-200;

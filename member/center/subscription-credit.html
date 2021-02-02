@@ -2014,7 +2014,7 @@
         $(function() {
             $('.btn--method').each(function(){
                 var link = $(this).attr('href');
-                $(this).attr('href', link + '?offset=' + $(this).parent().parent().parent().offset().top);
+                $(this).attr('href', link + '?offset=' + ($(this).parent().parent().parent().offset().top - ($(window).height()/2)));
             })
             var offsetTop = window.location.href.split('offset=')[1];
             $(Window).scrollTop(offsetTop);

@@ -839,6 +839,12 @@
                                     <a href="https://www.cw.com.tw/member/home/MemberLogin.action?source=header_login" class="gtmEvent" gtm-name="header Login">登入</a>
                                 </div>
                             </li>
+                            <li class="hr"></li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="../newsletter/index.html">訂閱電子報</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1088,6 +1094,7 @@
                             <li class="function__scale"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                             <li class="function__download gtmEvent" id="pdf_download" gtm-name="pdf_download"><span><i class="icon icon-download"></i></span></li>
                             <li class="function__paid gtmEvent" id="pay_read" gtm-name="pay_point"><span><i class="icon icon-coin"></i></span></li>
+                            <li class="tooltips tooltips--right function__link function--new" data-tooltips="訂閱電子報"><span><i class="icon icon-mailing"></i></span></li>
                         </ul>
                         <div class="article__views text-center">
                             <span class="h2 my0">12345</span>瀏覽數
@@ -1127,6 +1134,7 @@
                         <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                         <li class="tooltips tooltips--right function__download gtmEvent" id="pdf_download" gtm-name="pdf_download" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
                         <li class="tooltips tooltips--right function__paid gtmEvent" id="pay_read" gtm-name="pay_point" data-tooltips="單篇付費閱讀"><span><i class="icon icon-coin"></i></span></li>
+                        <li class="tooltips tooltips--right function__link function--new" data-tooltips="訂閱電子報"><span><i class="icon icon-mailing"></i></span></li>
                     </ul>
                 </div>
                 <div class="audio__player py20 px10 mb40">
@@ -1389,6 +1397,27 @@
                         <li><a href="#!" class="btn--text" gtm-name="read_more" eventaction="reco_extent_article" target="_blank">為什麼2002年之後，台灣走上「愈賺愈薄」的16年？</a></li>
                     </ul>
                 </div>
+                <section class="newsletter__subscribe p20">
+                    <div>
+                        <i class="icon icon-mailing desktop"></i>
+                        <div class="text">
+                            <div class="h2 desktop">訂閱天下電子報（每週三發送）</div>
+                            <p class="my0 desktop">精選當週熱文、封面故事，天下深度報導不漏接</p>
+                            <div class="h2 mobile">訂閱天下電子報</div>
+                            <p class="my0 mobile">精選當週熱文，週三寄送</p>
+                        </div>
+                    </div>
+                    <button id="openEnterMail" class="btn btn--contained btn--small">訂閱</button>
+                </section>
+                <section class="newsletter__subscribe hide p20" style="display: none;">
+                    <div>
+                        <i class="icon icon-mailing desktop"></i>
+                        <div class="text">
+                            <div class="h2 font-weight-500 my0">感謝您的訂閱！</div>
+                            <p class="my0">請查看您的信箱，我們將寄送驗證信給您，確保未來信件會送到您的信箱</p>
+                        </div>
+                    </div>
+                </section>
                 <ul class="article__keyword mb30">
                     <li>
                         <a href="#!" gtm-name="read_more" eventaction="article_keyword">
@@ -1500,10 +1529,10 @@
                 </div>
             </section>
         </div>
-        <div id="infiniteTriggle" data-morepage="2"></div>
+        <!-- <div id="infiniteTriggle" data-morepage="2"></div>
         <div class="loader__animate loader__animate--triggle">
             <div class="loader__icon"></div>
-        </div>
+        </div> -->
         <div class="article__promotion pb40">
             <div class="h2 font-weight-500 my0 pt20 pb10">最新訊息</div>
             <ul class="dot-list">
@@ -1544,13 +1573,21 @@
         </div>
         <section class="newsletter">
             <div class="container">
-                <div class="newsletter__text">
-                    <div class="h2 font-weight-500 my0">訂閱天下雜誌電子報</div>
-                    <p class="mt10 mb0">天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
+                <div class="h2 font-weight-500 my0">訂閱天下雜誌電子報</div>
+                <p class="mt10">天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
+                <div class="form">
+                    <div class="form__group form__group--filled w-100">
+                        <label for="#!" class="label">
+                            <div class="form__group__placeholder">請輸入 e-mail</div>
+                            <input type="email" class="form__group__input form__group__input--default">
+                        </label>
+                    </div>
+                    <button id="enterMail2" class="btn btn--contained btn--contained">立即訂閱</button>
                 </div>
-                <div class="newsletter__btn mt-m-20">
-                    <a href="#!" target="_blank" class="btn btn--contained">立即訂閱</a>
-                </div>
+            </div>
+            <div class="container" style="display: none;">
+                <div class="h2 font-weight-500 my0">感謝您的訂閱！</div>
+                <p class="mt10 mb0">請查看您的信箱，我們將寄送驗證信給您，確保未來信件會確實送到您的信箱</p>
             </div>
         </section>
     </main>
@@ -1901,6 +1938,26 @@
             </div>
         </div>
     </div>
+    <div id="subscribe" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt pb20">
+                <h2>填寫你的信箱</h2>
+                <p>我們將會於下個電子報發送日，寄送最新一期電子報給您</p>
+                <form class="form">
+                    <div class="form__group form__group--filled w-100">
+                        <label for="#!" class="label">
+                            <div class="form__group__placeholder">請輸入 e-mail</div>
+                            <input type="email" class="form__group__input form__group__input--default">
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="message__btn">
+                <button id="enterMail" class="btn btn--contained btn__close">立即訂閱</button>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
     <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
@@ -2159,6 +2216,23 @@
             const target = document.querySelector('#infiniteTriggle');
             observer.observe(target);
         });
+    </script>
+    <script>
+        $(function(){
+            $('#enterMail2').click(function(){
+                $(this).parent().parent().hide();
+                $(this).parent().parent().siblings().show();
+            });
+            $('#openEnterMail').click(function(){
+                $('#subscribe').show();
+                $('.black').addClass('opened');
+            })
+            $('#enterMail').click(function(){
+                $('#subscribe, .newsletter__subscribe').hide();
+                $('#receiveMail').show();
+                $('.newsletter__subscribe.hide').show();
+            });
+        })
     </script>
 </body>
 

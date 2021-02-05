@@ -860,17 +860,16 @@ body.feature__page main p {
 
 @font-face {
   font-family: "cw_icon";
-  src: url("../fonts/cw_icon.eot?8gm46x");
-  src: url("../fonts/cw_icon.eot?8gm46x#iefix") format("embedded-opentype"), url("../fonts/cw_icon.ttf?8gm46x") format("truetype"), url("../fonts/cw_icon.woff?8gm46x") format("woff"), url("../fonts/cw_icon.svg?8gm46x#cw_icon") format("svg");
+  src: url("../fonts/cw_icon.eot?d0n253");
+  src: url("../fonts/cw_icon.eot?d0n253#iefix") format("embedded-opentype"), url("../fonts/cw_icon.ttf?d0n253") format("truetype"), url("../fonts/cw_icon.woff?d0n253") format("woff"), url("../fonts/cw_icon.svg?d0n253#cw_icon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "cw_icon" !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -885,24 +884,28 @@ body.feature__page main p {
   content: "";
 }
 
+.icon-check:before {
+  content: "";
+}
+
 .icon-check-circle:before {
   content: "";
-}
-
-.icon-exclamation-circle:before {
-  content: "";
-}
-
-.icon-question-circle:before {
-  content: "";
 }
 
 .icon-check-solid:before {
   content: "";
 }
 
+.icon-exclamation-circle:before {
+  content: "";
+}
+
 .icon-exclamation-solid:before {
   content: "";
+}
+
+.icon-question-circle:before {
+  content: "";
 }
 
 .icon-error-solid:before {
@@ -929,26 +932,6 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-facebook:before {
-  content: "";
-}
-
-.icon-instagram:before {
-  content: "";
-}
-
-.icon-line:before {
-  content: "";
-}
-
-.icon-twitter:before {
-  content: "";
-}
-
-.icon-rss:before {
-  content: "";
-}
-
 .icon-left:before {
   content: "";
 }
@@ -973,10 +956,6 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-check:before {
-  content: "";
-}
-
 .icon-cancel:before {
   content: "";
 }
@@ -987,6 +966,34 @@ body.feature__page main p {
 
 .icon-plus:before {
   content: "";
+}
+
+.icon-dot-single:before {
+  content: "";
+}
+
+.icon-facebook:before {
+  content: "";
+}
+
+.icon-instagram:before {
+  content: "";
+}
+
+.icon-line:before {
+  content: "";
+}
+
+.icon-twitter:before {
+  content: "";
+}
+
+.icon-rss:before {
+  content: "";
+}
+
+.icon-apple:before {
+  content: "";
 }
 
 .icon-security:before {
@@ -1049,24 +1056,20 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-user-filled:before {
-  content: "";
-}
-
-.icon-user-outlined:before {
-  content: "";
+.icon-eyeoff:before {
+  content: "";
 }
 
 .icon-eyeon:before {
   content: "";
 }
 
-.icon-eyeoff:before {
-  content: "";
+.icon-user-filled:before {
+  content: "";
 }
 
-.icon-apple:before {
-  content: "";
+.icon-user-outlined:before {
+  content: "";
 }
 
 .icon-play:before {
@@ -1115,6 +1118,10 @@ body.feature__page main p {
 
 .icon-member-only:before {
   content: "";
+}
+
+.icon-mailing:before {
+  content: "";
 }
 
 .hamburger {
@@ -1410,6 +1417,10 @@ input[type*='number']::-webkit-outer-spin-button {
 .form__group .form__group__input:focus {
   border-color: #003a9f;
 }
+.form__group.w-100 {
+  max-width: none;
+  width: 100%;
+}
 .form__group--filled .form__group__input {
   padding: 1.5rem 1rem 0.4rem;
   background-color: #EEEEEE;
@@ -1693,7 +1704,7 @@ a:focus {
 @media (min-width: 768px) {
   .btn {
     min-width: 144px;
-    padding: 0.8125em 1em;
+    padding: 0.875em 1em;
   }
 }
 .btn.btn--small {

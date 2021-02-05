@@ -23,6 +23,28 @@ ul.article__provide {
         text-align: center;
     }
     li {
+        &.function--new {
+            position: relative;
+            &::after {
+                position: absolute;
+                top: -1px;
+                right: -0.5em;
+                @include beforeafter('NEW', block);
+                padding: 2px 2px 3px;
+                color: $primary;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1;
+                background-color: $white;
+                @include scale(0.5);
+                transform-origin: top right;
+                @include breakpoint(768px) {
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                    @include scale(0.83);
+                }
+            }
+        }
         a,
         span {
             display: block;
@@ -37,6 +59,12 @@ ul.article__provide {
                 font-size: 1.125rem;
                 &.icon-fontsize {
                     font-size: 1rem;
+                }
+                &.icon-mailing:before{
+                    font-size: 1.25rem;
+                    @include breakpoint(768px) {
+                        font-size: 1.35rem;
+                    }
                 }
             }
             &:hover {

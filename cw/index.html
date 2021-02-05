@@ -69,6 +69,12 @@
                                     <a href="https://www.cw.com.tw/member/home/MemberLogin.action?source=header_login" class="gtmEvent" gtm-name="header Login">登入</a>
                                 </div>
                             </li>
+                            <li class="hr"></li>
+                            <li>
+                                <div class="li__group">
+                                    <a href="../newsletter/index.html">訂閱電子報</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -565,7 +571,7 @@
         </ul>
         <ul class="ctalist">
             <li>
-                <a href="#!" class="btn btn--outlined" target="_blank" rel="noopener noreferrer">免費訂閱電子報</a>
+                <a href="../newsletter/index.html" class="btn btn--outlined" target="_blank" rel="noopener noreferrer">訂閱電子報</a>
             </li>
             <li>
                 <a href="#!" class="btn btn--outlined" target="_blank" rel="noopener noreferrer">訂閱天下</a>
@@ -1332,6 +1338,27 @@
                         </div>
                     </section>
                 </div>
+                <section class="newsletter__subscribe p20">
+                    <div>
+                        <i class="icon icon-mailing desktop"></i>
+                        <div class="text">
+                            <div class="h2 desktop">訂閱天下每日報（每週一至週五發送）</div>
+                            <p class="my0 desktop">每日精選10則國內外新聞，還能享受語音朗讀，早晨寄送</p>
+                            <div class="h2 mobile">訂閱天下每日報</div>
+                            <p class="my0 mobile">精選10則新聞，早晨寄送</p>
+                        </div>
+                    </div>
+                    <button id="openEnterMail" class="btn btn--contained btn--small">訂閱</button>
+                </section>
+                <section class="newsletter__subscribe hide p20" style="display: none;">
+                    <div>
+                        <i class="icon icon-mailing desktop"></i>
+                        <div class="text">
+                            <div class="h2">感謝您的訂閱！</div>
+                            <p class="my0">請查看您的信箱，我們將寄送驗證信給您，確保未來信件會送到您的信箱</p>
+                        </div>
+                    </div>
+                </section>
                 <div class="articleGroup">
                     <section class="article">
                         <div class="pic">
@@ -3113,6 +3140,26 @@
             </div>
         </div>
     </footer>
+    <div id="subscribe" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt pb20">
+                <h2>填寫你的信箱</h2>
+                <p>我們將會於下個電子報發送日，寄送最新一期電子報給您</p>
+                <form class="form">
+                    <div class="form__group form__group--filled w-100">
+                        <label for="#!" class="label">
+                            <div class="form__group__placeholder">請輸入 e-mail</div>
+                            <input type="email" class="form__group__input form__group__input--default">
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="message__btn">
+                <button id="enterMail" class="btn btn--contained btn__close">立即訂閱</button>
+            </div>
+        </div>
+    </div>
     <div class="paw"></div>
     <script src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
     <script src="https://www.cw.com.tw/assets_new/js/jquery.cookie.js"></script>
@@ -3135,6 +3182,19 @@
                 }
             });
         });
+    </script>
+    <script>
+        $(function(){
+            $('#openEnterMail').click(function(){
+                $('#subscribe').show();
+                $('.black').addClass('opened');
+            })
+            $('#enterMail').click(function(){
+                $('#subscribe, .newsletter__subscribe').hide();
+                $('#receiveMail').show();
+                $('.newsletter__subscribe.hide').show();
+            });
+        })
     </script>
 </body>
 

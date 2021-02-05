@@ -25,7 +25,7 @@ a {
     }
     @include breakpoint(768px) {
         min-width: 144px;
-        padding: 0.8125em 1em;
+        padding: 0.875em 1em;
     }
     &.btn--small {
         min-width: 72px;

@@ -1,0 +1,13 @@
+@import "_basic";
+@import "_sheet";
+
+.newspaper__page {
+    padding-bottom: 0 !important;
+    section {
+        .container {
+            @include breakpoint(1024px) {
+                width: 784px;
+            }
+        }
+    }
+}

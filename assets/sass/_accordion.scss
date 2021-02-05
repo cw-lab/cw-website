@@ -2,8 +2,7 @@
 	&__item {
 		&::before,
 		&::after {
-			@extend %before-after;
-			clear: both;
+			@include clear;
 		}
 		&:nth-child(odd) {
 			background-color: $gray;
@@ -16,8 +15,7 @@
 			@include transition(background-color, 0.3s);
 			&::before,
 			&::after {
-				@extend %before-after;
-				clear: both;
+				@include clear;
 			}
 			a {
 				color: $black;
@@ -77,8 +75,7 @@
 				li {
 					position: relative;
 					&::before {
-						content: 'Step';
-						display: inline-block;
+						@include beforeafter('Step', inline-block);
 						position: absolute;
 						top: 2px;
 						right: calc(100% + 1.5em);

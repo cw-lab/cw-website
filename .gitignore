@@ -1,4 +1,4 @@
-assets/.sass-cache
-assets_new/.sass-cache
-assets/article-next
-cw/article-next.html
+**/.sass-cache
+**/article-next
+**/article-next.html
+**/.DS_Store

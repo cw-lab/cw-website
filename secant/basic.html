@@ -16,18 +16,6 @@
 </head>
 
 <body class="webaccess__page">
-    <div class="message message--banner">
-        <div class="message__container">
-            <div class="message__txt">
-                <p class="mtb0">
-                    為提供您更多優質的內容，本網站使用 cookies 分析技術。若繼續閱覽本網站內容，即表示您同意我們使用 cookies，關於更多 cookies 資訊請閱讀我們的隱私權政策與使用條款。
-                </p>
-            </div>
-            <div class="message__btn">
-                <a href="#!" class="btn btn--outlined">隱私權政策與使用條款</a><a href="#!" class="btn btn--outlined">我知道了</a>
-            </div>
-        </div>
-    </div>
     <header>
         <div class="container">
             <div class="flex justify-between">
@@ -1161,10 +1149,29 @@
                 </div>
             </div>
         </div>
-    </footer>
+	</footer>
+	<div id="app" class="message message--dialogs message--center" style="display: none;">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>您已訂閱天下雜誌App</h2>
+				<p>若您要透過網站訂閱，請先取消天下雜誌App自動續訂扣款功能，否則將被重複扣款。</p>
+				<p>
+					有疑問請聯繫客服<br/>
+					讀者服務專線：<a href="tel:+886226620332" class="btn--text">886-2-2662-0332</a><br/>
+					服務時間：週一～週五 09:00~17:30
+				</p>
+            </div>
+            <div class="message__btn">
+				<a href="#!" class="btn btn--outlined">取消App自動續訂</a>
+				<a href="#!" class="btn btn--contained">仍要訂閱</a>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+	<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+	<script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
+
     <script type="text/javascript" src="../assets/js/cw.js"></script>
     <script type="text/javascript">
         // $("section.address").hide();

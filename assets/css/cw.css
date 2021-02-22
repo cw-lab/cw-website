@@ -3769,6 +3769,11 @@ a:focus {
 .btn--100 {
   width: 100%;
 }
+.btn--100 + button.btn--100,
+.btn--100 + a.btn--100 {
+  margin-left: 0;
+  margin-top: 20px;
+}
 .btn[disabled] {
   color: #D3D5D7;
   background: #EEEEEE;
@@ -7321,6 +7326,23 @@ article.article__level--2 ul.article__keyword li a {
   margin-right: 5px;
   vertical-align: text-top;
   line-height: 1;
+}
+.card__group .card__item .card__subtitle .card__unlock {
+  margin-left: 5px;
+}
+.card__group .card__item .card__subtitle .card__unlock.card__unlock--text {
+  display: inline-block;
+  color: #fff;
+  padding: 4px 5px 3px;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: text-bottom;
+  background-color: #D60C18;
+}
+.card__group .card__item .card__subtitle .card__unlock.card__unlock--icon {
+  color: #D60C18;
+  font-size: 0.875rem;
 }
 .card__group .card__item .card__title:not(.h2) {
   display: -webkit-box;

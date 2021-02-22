@@ -1150,7 +1150,7 @@
                         <div class="form">
                             <div class="form__edit flex align-items-center justify-between">
                                 <div class="h3 mtb0">下次扣款日期</div>
-                                <a class="btn btn--text btn--deactivate">取消自動續訂</a>
+                                <a class="btn btn--text btn--deactivate disabled">取消自動續訂</a>
                             </div>
                             <div class="form__value">2020年10月20日</div>
                         </div>
@@ -1174,33 +1174,14 @@
                                 </div>
                             </div>
                             <div class="label__group">
-                                <div class="form--remark mx0 mt10 mb0 px20 py10">天下雜誌並不會留存您的信用卡完整資訊，天下配合的綠界科技股份有限公司符合PCI-DSS 國際安全認證，致力提供安全且便捷的交易環境。</div>
-                                <form class="form p0">
+                                <div class="form p0">
                                     <label class="label--radio">
-                                        <input type="radio" data-card="visa" value="台新國際商業銀行 末四碼 7485" name="creditcard" checked>
+                                        <input type="radio" data-card="fet" value="遠傳電信帳單支付" name="creditcard" checked>
                                         <span class="label__radio__mark"></span>
-                                        <span class="label__radio__txt"><img src="../../assets/images/secant/icon-visa@3x.png" alt=""><span>台新國際商業銀行 末四碼 7485</span></span>
-                                    </label>
-                                    <label class="label--radio">
-                                        <input type="radio" data-card="master" value="玉山國際商業銀行 末四碼 1234" name="creditcard">
-                                        <span class="label__radio__mark"></span>
-                                        <span class="label__radio__txt"><img src="../../assets/images/secant/icon-master@3x.png" alt=""><span>玉山國際商業銀行 末四碼 1234</span></span>
-                                    </label>
-                                    <label class="label--radio">
-                                        <input type="radio" data-card="jcb" value="台北富邦銀行 末四碼 4321" name="creditcard">
-                                        <span class="label__radio__mark"></span>
-                                        <span class="label__radio__txt"><img src="../../assets/images/secant/icon-jcb@3x.png" alt=""><span>台北富邦銀行 末四碼 4321</span></span>
-                                    </label>
-                                    <label class="label--radio">
-                                        <input type="radio" value="new" name="creditcard">
-                                        <span class="label__radio__mark"></span>
-                                        <span class="label__radio__txt">新增信用卡</span>
-                                        <span class="label__radio__helper">
-											若您選擇新增其他信用卡，將在下一頁請您填寫信用卡號
-										</span>
+                                        <span class="label__radio__txt"><img src="../../assets/images/secant/icon-fet@3x.png" alt=""><span>遠傳電信帳單支付</span></span>
                                     </label>
                                     <a class="btn btn--contained btn--small mt20 creditcardchange">確認</a>
-                                </form>
+                                </div>
                             </div>
                         </div>
                         <div class="form">
@@ -2018,6 +1999,13 @@
             })
             var offsetTop = window.location.href.split('offset=')[1];
             $(Window).scrollTop(offsetTop);
+            if ( window.location.href.indexOf('telecom') > 0 ) {
+                $('.btn--method').parent().parent('.label__group').hide();
+                $('.btn--method').parent().parent().siblings('.form__value').hide();
+                $('.btn--method').parent().parent().siblings('.label__group').show();
+                $('.btn--method').parent().parent().siblings('.form__edit').children('.goEdit').hide();
+                $('.btn--method').parent().parent().siblings('.form__edit').children('.goRevert').show();
+            }
         })
     </script>    
 </body>

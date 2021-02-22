@@ -43,6 +43,23 @@
                 vertical-align: text-top;
                 line-height: 1;
             }
+            .card__unlock {
+                margin-left: 5px;
+                &.card__unlock--text {
+                    display: inline-block;
+                    color: $white;
+                    padding: 4px 5px 3px;
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                    line-height: 1;
+                    vertical-align: text-bottom;
+                    background-color: $primary;
+                }
+                &.card__unlock--icon {
+                    color: $primary;
+                    font-size: 0.875rem;
+                }
+            }
         }
         .card__title {
             &:not(.h2) {

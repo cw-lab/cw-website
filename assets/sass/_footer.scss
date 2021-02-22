@@ -107,7 +107,7 @@ footer {
         }
         .contact,
         .copyright {
-            span {
+            > span {
                 display: block;
                 font-size: 0.75rem;
                 @include breakpoint(1024px) {

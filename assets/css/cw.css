@@ -5287,18 +5287,18 @@ footer .cwgroup__copyright ul.sns li a.instagram:hover {
 footer .cwgroup__copyright ul.sns li a.rss:hover {
   color: #FF5700;
 }
-footer .cwgroup__copyright .contact span,
-footer .cwgroup__copyright .copyright span {
+footer .cwgroup__copyright .contact > span,
+footer .cwgroup__copyright .copyright > span {
   display: block;
   font-size: 0.75rem;
 }
 @media (min-width: 1024px) {
-  footer .cwgroup__copyright .contact span,
-  footer .cwgroup__copyright .copyright span {
+  footer .cwgroup__copyright .contact > span,
+  footer .cwgroup__copyright .copyright > span {
     display: inline-block;
   }
-  footer .cwgroup__copyright .contact span:first-child,
-  footer .cwgroup__copyright .copyright span:first-child {
+  footer .cwgroup__copyright .contact > span:first-child,
+  footer .cwgroup__copyright .copyright > span:first-child {
     margin-right: 20px;
   }
 }

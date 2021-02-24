@@ -369,7 +369,8 @@ aside.menubar--left {
 }
 
 .opacity,
-.black {
+.black,
+.touch__black {
     position: fixed;
     top: 0;
     left: 0;
@@ -385,7 +386,8 @@ aside.menubar--left {
     z-index: 3;
 }
 
-.black {
+.black,
+.touch__black {
     background-color: rgba($black, 0.4);
     @include opacity(0);
     @include transition(opacity 0.3s);

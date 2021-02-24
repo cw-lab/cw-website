@@ -116,6 +116,8 @@ body.message__open {
         color: $white;
         font-size: 1.125rem;
         line-height: 1.25;
+        word-break: keep-all;
+        white-space: nowrap;
         background-color: $gray-500;
         z-index: 10;
         .message {
@@ -125,6 +127,9 @@ body.message__open {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+            }
+            &__txt {
+                padding-bottom: 0;
             }
         }
         p {
@@ -165,7 +170,7 @@ body.message__open {
             &__container {
                 position: relative;
             }
-            &__close {
+            &__close, .touch__close {
                 top: -5px;
                 right: -10px;
             }
@@ -225,7 +230,7 @@ body.message__open {
     }
 }
 
-.message__close {
+.message__close, .touch__close {
     position: absolute;
     top: 10px;
     right: 10px;

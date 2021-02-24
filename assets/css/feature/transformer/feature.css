@@ -1829,7 +1829,8 @@ aside.menubar--left.opened {
 }
 
 .opacity,
-.black {
+.black,
+.touch__black {
   position: fixed;
   top: 0;
   left: 0;
@@ -1837,7 +1838,8 @@ aside.menubar--left.opened {
   height: 0;
 }
 .opacity.opened,
-.black.opened {
+.black.opened,
+.touch__black.opened {
   width: 100%;
   height: 100%;
 }
@@ -1846,7 +1848,8 @@ aside.menubar--left.opened {
   z-index: 4;
 }
 
-.black {
+.black,
+.touch__black {
   background-color: rgba(23, 23, 23, 0.4);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -1856,7 +1859,8 @@ aside.menubar--left.opened {
   transition: opacity 0.3s;
   z-index: 9;
 }
-.black.opened {
+.black.opened,
+.touch__black.opened {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
@@ -2192,6 +2196,8 @@ body.message__open {
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.25;
+  word-break: keep-all;
+  white-space: nowrap;
   background-color: #48545D;
   z-index: 10;
 }
@@ -2201,6 +2207,9 @@ body.message__open {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.message--notification .message__txt {
+  padding-bottom: 0;
 }
 .message--notification p {
   color: #fff;
@@ -2243,7 +2252,7 @@ body.message__open {
 .message--dialogs .message__container {
   position: relative;
 }
-.message--dialogs .message__close {
+.message--dialogs .message__close, .message--dialogs .message .touch__close {
   top: -5px;
   right: -10px;
 }
@@ -2301,7 +2310,7 @@ body.message__open {
   text-align: center;
 }
 
-.message__close {
+.message__close, .touch__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -2310,12 +2319,12 @@ body.message__open {
   cursor: pointer;
 }
 @media (max-width: 1023px) {
-  .message__close {
+  .message__close, .touch__close {
     font-weight: bold;
   }
 }
 @media (min-width: 1024px) {
-  .message__close {
+  .message__close, .touch__close {
     top: 10px;
     right: 10px;
     font-size: 1.5rem;

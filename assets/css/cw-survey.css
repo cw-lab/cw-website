@@ -2713,6 +2713,8 @@ body.message__open {
   color: #fff;
   font-size: 1.125rem;
   line-height: 1.25;
+  word-break: keep-all;
+  white-space: nowrap;
   background-color: #48545D;
   z-index: 10;
 }
@@ -2722,6 +2724,9 @@ body.message__open {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.message--notification .message__txt {
+  padding-bottom: 0;
 }
 .message--notification p {
   color: #fff;
@@ -2764,7 +2769,7 @@ body.message__open {
 .message--dialogs .message__container {
   position: relative;
 }
-.message--dialogs .message__close {
+.message--dialogs .message__close, .message--dialogs .message .touch__close {
   top: -5px;
   right: -10px;
 }
@@ -2822,7 +2827,7 @@ body.message__open {
   text-align: center;
 }
 
-.message__close {
+.message__close, .touch__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -2831,12 +2836,12 @@ body.message__open {
   cursor: pointer;
 }
 @media (max-width: 1023px) {
-  .message__close {
+  .message__close, .touch__close {
     font-weight: bold;
   }
 }
 @media (min-width: 1024px) {
-  .message__close {
+  .message__close, .touch__close {
     top: 10px;
     right: 10px;
     font-size: 1.5rem;

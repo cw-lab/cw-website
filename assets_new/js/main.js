@@ -2,16 +2,6 @@ var width = $(window).width(),
     menubarUserClick = 0,
     searchClick = 0;
 
-function lazyload() {
-    $("img.lazyload").each(function() {
-        $(this).lazyload();
-        $(this).on('load', function() {
-            $(this).parent().addClass('finished');
-        })
-    });
-}
-lazyload();
-
 WebFontConfig = {
     google: { families: [ 'Noto+Sans+TC:100,300,400,500,700','Noto Serif TC:200,300,400,500,600,700','Roboto:300,400,500,700' ] }
 };
@@ -260,7 +250,7 @@ $(function() {
             $('.lightbox').fadeOut();
         });
         // adBlock();
-        
+
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {

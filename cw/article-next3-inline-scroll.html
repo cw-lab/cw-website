@@ -2625,7 +2625,7 @@
             }
             for (var i = 0; i < data.length; i++) {
                 if (($('body > main > article > .article__body .article__next a').attr('href') !== data[i]['url']) && (count < 2)) {
-                    list += '<a href="' + data[i]['url'] + '" gtm-name="read_more" eventaction="reco_next_article">';
+                    list += '<a href="' + data[i]['url'] + '?from=inline_grid" gtm-name="read_more" eventaction="reco_next_article">';
                     list += '<span class="next__img"><picture>';
                     list += '<source type="image/webp" media="(max-width: 767px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=220&format=webp">';
                     list += '<source type="image/webp" media="(max-width: 1279px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=440&format=webp">';
@@ -2636,8 +2636,7 @@
                     count++;
                 }
             }
-            $('body > main > article > .article__body .article__next').append(list);
-            $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c886');
+            $('body > main > article > .article__body .article__next').addClass('sp-custom-c886-1').append(list);
             for (let i = 0; i < firstArticleContent.children().length; i++) {
                 totalNum += firstArticleContent.children().text().length;
             }
@@ -2651,18 +2650,23 @@
             if ($('.paywall').length == 0) {
                 $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
             }
-            var stop = 0;
-            $(window).scroll(function () {
-                switch (stop) {
-                    case 10:
-                        stop = 10;
-                        $('body > main > article > .article__body #card__next .card__group--scroll').append($('body > main > article > .article__body .card__group--next'));
-                        break;
-                    default:
-                        stop += 1;
-                        break;
+            setTimeout(() => {
+                if ( $('body > main > article > .article__body > .article__next a').length > 0 ) {
+                    var stop = 0;
+                    $(window).scroll(function () {
+                        switch (stop) {
+                            case 10:
+                                stop = 10;
+                                $('body > main > article > .article__body #card__next .card__group--scroll').append($('body > main > article > .article__body .article__next'));
+                                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next');
+                                break;
+                            default:
+                                stop += 1;
+                                break;
+                        }
+                    })
                 }
-            })
+            }, 3000);
         })
     </script>
 </body>

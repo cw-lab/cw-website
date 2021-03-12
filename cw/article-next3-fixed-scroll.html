@@ -2195,6 +2195,7 @@
         #card__next .card__group--next {
             position: relative;
             width: calc( (100% - 55px) * 3 );
+            height: auto !important;
             font-size: 0;
         }
         .card__group--next a {
@@ -2240,6 +2241,11 @@
             -o-transition: color 0.2s;
             -webkit-transition: color 0.2s;
             transition: color 0.2s;
+        }
+        #next_article_instance {
+            position: relative;
+            background-color: #fff;
+            z-index: 1;
         }
     </style>
     <script>
@@ -2635,7 +2641,7 @@
             }
             for (var i = 0; i < data.length; i++) {
                 if (($('body > main > article > .article__body .article__next a').attr('href') !== data[i]['url']) && (count < 2)) {
-                    list += '<a href="' + data[i]['url'] + '" gtm-name="read_more" eventaction="reco_next_article">';
+                    list += '<a href="' + data[i]['url'] + '?from=fix" gtm-name="read_more" eventaction="reco_next_article">';
                     list += '<span class="next__img"><picture>';
                     list += '<source type="image/webp" media="(max-width: 767px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=220&format=webp">';
                     list += '<source type="image/webp" media="(max-width: 1279px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=440&format=webp">';
@@ -2646,46 +2652,51 @@
                     count++;
                 }
             }
-            $('body > main > article > .article__body .article__next').append(list);
-            $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c887');
-            for (let i = 0; i < firstArticleContent.children().length; i++) {
-                totalNum += firstArticleContent.children().text().length;
-            }
-            for (let i = 0; i < firstArticleContent.children().length; i++) {
-                if (halfNum <= (totalNum / 2)) {
-                    halfNum += firstArticleContent.children().text().length;
-                    firstArticleContent.children().removeClass('half__paragraph');
-                    firstArticleContent.children().eq(i).addClass('half__paragraph');
+            setTimeout(() => {
+                if ( $('body > main > article > .article__body > .article__next a').length > 0 ) {
+                    $('body > main > article > .article__body > .article__next').addClass('sp-custom-c887-1').append(list);
+                    $('body > main > article > .article__body > .article__next').removeClass('article__next').addClass('card__group card__group--next');
+                    for (let i = 0; i < firstArticleContent.children().length; i++) {
+                        totalNum += firstArticleContent.children().text().length;
+                    }
+                    for (let i = 0; i < firstArticleContent.children().length; i++) {
+                        if (halfNum <= (totalNum / 2)) {
+                            halfNum += firstArticleContent.children().text().length;
+                            firstArticleContent.children().removeClass('half__paragraph');
+                            firstArticleContent.children().eq(i).addClass('half__paragraph');
+                        }
+                    }
+                    if ($('.paywall').length == 0) {
+                        $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
+                    }
+                    if ($('.bottombar').length !== 1) {
+                        $('body > main > article > .article__body #card__next').addClass('no-bottombar');
+                    }
+                    var stop = 0;
+                    $(window).on('scroll', function () {
+                        switch (stop) {
+                            case 10:
+                                stop = 10;
+                                $('body > main > article > .article__body #card__next .card__group--scroll').append($('body > main > article > .article__body .card__group--next'));
+                                break;
+                            default:
+                                stop += 1;
+                                break;
+                        }
+                        var scroll = $(window).scrollTop(),
+                            headerHeight = $('header').outerHeight(),
+                            articleBody = $('body > main > article > .article__body'),
+                            articleBodyTop = $('body > main > article > .article__body').offset().top,
+                            articleBodyHeight = $('body > main > article > .article__body').outerHeight(),
+                            nextArticleTop = $('#next_article_instance').offset().top;
+                        if ((scroll >= (articleBodyTop + (articleBodyHeight * 0.75))) && ( scroll < nextArticleTop)) {
+                            $('#card__next').fadeIn();
+                        } else {
+                            $('#card__next').fadeOut();
+                        }
+                    });
                 }
-            }
-            if ($('.paywall').length == 0) {
-                $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
-            }
-            var stop = 0;
-            $(window).scroll(function () {
-                switch (stop) {
-                    case 10:
-                        stop = 10;
-                        $('body > main > article > .article__body #card__next .card__group--scroll').append($('body > main > article > .article__body .card__group--next'));
-                        break;
-                    default:
-                        stop += 1;
-                        break;
-                }
-                var scroll = $(window).scrollTop(),
-                    headerHeight = $('header').outerHeight(),
-                    articleBody = $('body > main > article > .article__body'),
-                    articleBodyTop = $('body > main > article > .article__body').offset().top,
-                    articleBodyHeight = $('body > main > article > .article__body').outerHeight();
-                if (scroll >= (articleBodyTop + (articleBodyHeight * 0.75))) {
-                    $('#card__next').fadeIn();
-                } else {
-                    $('#card__next').fadeOut();
-                }
-                if ($('.bottombar').length !== 1) {
-                    $('body > main > article > .article__body #card__next').addClass('no-bottombar');
-                }
-            })
+            }, 3000);
         })
     </script>
 </body>

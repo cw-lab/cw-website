@@ -2636,7 +2636,6 @@
                 }
             }
             $('body > main > article > .article__body .article__next').append(list);
-            $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c888');
             for (let i = 0; i < firstArticleContent.children().length; i++) {
                 totalNum += firstArticleContent.children().text().length;
             }
@@ -2650,18 +2649,23 @@
             if ($('.paywall').length == 0) {
                 $('<div id="card__next"></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
             }
-            var stop = 0;
-            $(window).scroll(function () {
-                switch (stop) {
-                    case 10:
-                        stop = 10;
-                        $('body > main > article > .article__body #card__next').append($('body > main > article > .article__body .card__group--next'));
-                        break;
-                    default:
-                        stop += 1;
-                        break;
+            setTimeout(() => {
+                if ( $('body > main > article > .article__body > .article__next a').length > 0 ) {
+                    var stop = 0;
+                    $(window).scroll(function () {
+                        switch (stop) {
+                            case 10:
+                                stop = 10;
+                                $('body > main > article > .article__body #card__next').append($('body > main > article > .article__body .card__group--next'));
+                                $('body > main > article > .article__body .article__next').removeClass('article__next').addClass('card__group card__group--next sp-custom-c888');
+                                break;
+                            default:
+                                stop += 1;
+                                break;
+                        }
+                    })
                 }
-            })
+            }, 3000);
         })
     </script>
 </body>

@@ -2226,7 +2226,7 @@ h5,
   content: "";
 }
 
-.icon-facebook:before {
+.icon-facebook:before, .icon-fb:before {
   content: "";
 }
 

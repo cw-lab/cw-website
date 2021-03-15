@@ -2584,6 +2584,19 @@ header a.logo.logo--sub {
   font-size: 1rem;
   font-weight: 500;
 }
+header a.logo.logo--40 img {
+  padding: 8px ​0;
+}
+@media (min-width: 375px) {
+  header a.logo.logo--40 img {
+    padding: 5px 0;
+  }
+}
+@media (min-width: 1024px) {
+  header a.logo.logo--40 img {
+    padding: 0;
+  }
+}
 header .search__icon {
   margin-left: 30px;
   position: relative;

@@ -99,6 +99,17 @@ header {
             font-size: 1rem;
             font-weight: 500;
         }
+        &.logo--40 {
+            img {
+                padding: 8px ​0;
+                @include breakpoint(375px) {
+                    padding: 5px 0;
+                }
+                @include breakpoint(1024px) {
+                    padding: 0;
+                }
+            }
+        }
     }
     .search__icon {
         margin-left: 30px;

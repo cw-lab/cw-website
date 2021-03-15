@@ -67,6 +67,17 @@ header {
         img {
             height: 40px;
         }
+        &.logo--40 {
+            img {
+                padding: 8px ​0;
+                @include breakpoint(375px) {
+                    padding: 5px 0;
+                }
+                @include breakpoint(1024px) {
+                    padding: 0;
+                }
+            }
+        }
     }
     .search__icon {
         width: 20px;

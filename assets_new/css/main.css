@@ -2508,7 +2508,7 @@ header a.logo.logo--40 img {
 }
 @media (min-width: 1024px) {
   header a.logo.logo--40 img {
-    padding: 0;
+    padding: 3px 0;
   }
 }
 header .search__icon {

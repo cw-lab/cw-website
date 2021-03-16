@@ -48,7 +48,7 @@ header {
                     padding-left: 180px;
                     padding-right: 215px;
                     &.item--40 {
-                        padding-left: 248px;
+                        padding-left: 220px;
                     }
                 }
                 .item__scroll {
@@ -109,7 +109,7 @@ header {
                     padding: 5px 0;
                 }
                 @include breakpoint(1024px) {
-                    padding: 0;
+                    padding: 3px 0;
                 }
             }
         }

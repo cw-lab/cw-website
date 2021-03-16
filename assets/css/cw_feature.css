@@ -2635,7 +2635,7 @@ header .container > .item.item--center {
     padding-right: 215px;
   }
   header .container > .item.item--center.item--40 {
-    padding-left: 248px;
+    padding-left: 220px;
   }
 }
 header .container > .item.item--center .item__scroll {
@@ -2712,7 +2712,7 @@ header a.logo.logo--40 img {
 }
 @media (min-width: 1024px) {
   header a.logo.logo--40 img {
-    padding: 0;
+    padding: 3px 0;
   }
 }
 header .search__icon {

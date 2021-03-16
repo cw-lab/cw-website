@@ -1139,11 +1139,34 @@
         header .container>.item.item--center .title__share .h3 {
             line-height: 40px;
         }
-        
-        header a.logo img {
+
+        header a.logo amp-img {
+            width: 109px;
             height: 40px;
         }
-        
+
+        header a.logo.logo--40 amp-img {
+            width: 112px;
+            height: 40px;
+            padding: 8px 0;
+        }
+
+        @media (min-width: 375px) {
+            header a.logo.logo--40 amp-img {
+                width: 140px;
+                height: 40px;
+                padding: 5px 0;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            header a.logo.logo--40 amp-img {
+                width: 187px;
+                height: 40px;
+                padding: 0;
+            }
+        }
+
         header .search__icon {
             width: 20px;
             height: 20px;
@@ -2822,7 +2845,7 @@
             <div class="item item--center item--40">
                 <div id="item__scroll" class="item__scroll">
                     <a href="index.html" class="logo logo--40">
-                        <amp-img width="109" height="40" src="https://topic.cw.com.tw/yuting/system/assets/file/logo/1_cw-40anniv.svg" alt="天下雜誌"></amp-img>
+                        <amp-img width="186" height="40" src="https://topic.cw.com.tw/yuting/system/assets/file/logo/1_cw-40anniv.svg" layout="responsive" alt="天下雜誌"></amp-img>
                     </a>
                     <div class="title__share">
                         <ul class="article__share text-center">

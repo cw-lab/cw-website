@@ -7743,6 +7743,179 @@ article.article__level--2 ul.article__keyword li a {
   }
 }
 
+.message--anniv {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 375px;
+  width: calc(100% - 30px);
+  padding: 30px 24px 24px;
+  background-color: #fff;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 12;
+}
+.message--anniv .message__head img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.message--anniv .message__head .display__time span {
+  display: inline-block;
+}
+.message--anniv .anniv__group {
+  position: relative;
+}
+.message--anniv .anniv__group .anniv__img {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 52.333333%;
+  overflow: hidden;
+}
+.message--anniv .anniv__group .anniv__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.message--anniv .anniv__group .anniv__txt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: 'Noto Serif TC', '思源宋體 TC', '思源宋體 TW', '思源宋體', serif;
+  font-weight: bold;
+  background-color: rgba(23, 23, 23, 0.5);
+}
+
+.btn--outlined.btn--green {
+  color: #171717;
+  background-color: #fff;
+  border-color: #9CC815;
+}
+.btn--outlined.btn--green:hover, .btn--outlined.btn--green.active {
+  background-color: rgba(156, 200, 21, 0.05);
+  border-color: #8ab113;
+}
+.btn--outlined.btn--green::before {
+  background-color: rgba(156, 200, 21, 0.15);
+}
+.btn--outlined.btn--green::after {
+  background-color: rgba(156, 200, 21, 0.15);
+}
+.btn--outlined.btn--blue {
+  color: #171717;
+  background-color: #fff;
+  border-color: #009fb0;
+}
+.btn--outlined.btn--blue:hover, .btn--outlined.btn--blue.active {
+  background-color: rgba(0, 159, 176, 0.05);
+  border-color: #008897;
+}
+.btn--outlined.btn--blue::before {
+  background-color: rgba(0, 159, 176, 0.15);
+}
+.btn--outlined.btn--blue::after {
+  background-color: rgba(0, 159, 176, 0.15);
+}
+.btn--outlined.btn--yellow {
+  color: #171717;
+  background-color: #fff;
+  border-color: #ffe100;
+}
+.btn--outlined.btn--yellow:hover, .btn--outlined.btn--yellow.active {
+  background-color: rgba(255, 225, 0, 0.05);
+  border-color: #e6cb00;
+}
+.btn--outlined.btn--yellow::before {
+  background-color: rgba(255, 225, 0, 0.15);
+}
+.btn--outlined.btn--yellow::after {
+  background-color: rgba(255, 225, 0, 0.15);
+}
+.btn--outlined.btn--gray {
+  color: #171717;
+  background-color: #fff;
+  border-color: #948f8d;
+}
+.btn--outlined.btn--gray:hover, .btn--outlined.btn--gray.active {
+  background-color: rgba(148, 143, 141, 0.05);
+  border-color: #888280;
+}
+.btn--outlined.btn--gray::before {
+  background-color: rgba(148, 143, 141, 0.15);
+}
+.btn--outlined.btn--gray::after {
+  background-color: rgba(148, 143, 141, 0.15);
+}
+.btn--contained.btn--green {
+  color: #171717;
+  background-color: #9CC815;
+  border-color: #9CC815;
+}
+.btn--contained.btn--green:hover, .btn--contained.btn--green.active {
+  background-color: #93bc14;
+  border-color: #93bc14;
+}
+.btn--contained.btn--green::before {
+  background-color: #9CC815;
+}
+.btn--contained.btn--green::after {
+  background-color: #9CC815;
+}
+.btn--contained.btn--blue {
+  color: #fff;
+  background-color: #009fb0;
+  border-color: #009fb0;
+}
+.btn--contained.btn--blue:hover, .btn--contained.btn--blue.active {
+  background-color: #0093a3;
+  border-color: #0093a3;
+}
+.btn--contained.btn--blue::before {
+  background-color: #009fb0;
+}
+.btn--contained.btn--blue::after {
+  background-color: #009fb0;
+}
+.btn--contained.btn--yellow {
+  color: #171717;
+  background-color: #ffe100;
+  border-color: #ffe100;
+}
+.btn--contained.btn--yellow:hover, .btn--contained.btn--yellow.active {
+  background-color: #f2d600;
+  border-color: #f2d600;
+}
+.btn--contained.btn--yellow::before {
+  background-color: #ffe100;
+}
+.btn--contained.btn--yellow::after {
+  background-color: #ffe100;
+}
+.btn--contained.btn--gray {
+  color: #fff;
+  background-color: #948f8d;
+  border-color: #948f8d;
+}
+.btn--contained.btn--gray:hover, .btn--contained.btn--gray.active {
+  background-color: #8e8986;
+  border-color: #8e8986;
+}
+.btn--contained.btn--gray::before {
+  background-color: #948f8d;
+}
+.btn--contained.btn--gray::after {
+  background-color: #948f8d;
+}
+
 .error__page main {
   padding-top: 50px;
   padding-bottom: 50px;

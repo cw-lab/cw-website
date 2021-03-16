@@ -1,0 +1,189 @@
+.message {
+    &--anniv {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        max-width: 375px;
+        width: calc(100% - 30px);
+        padding: 30px 24px 24px;
+        background-color: $white;
+        @include translate(-50%, -50%);
+        z-index: 12;
+        .message__head {
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .display__time {
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+        .anniv__group {
+            position: relative;
+            .anniv__img {
+                position: relative;
+                width: 100%;
+                height: 0;
+                padding-top: 52.333333%;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .anniv__txt {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 10px 20px;
+                color: $white;
+                font-size: 1.125rem;
+                font-family: 'Noto Serif TC', '思源宋體 TC', '思源宋體 TW', '思源宋體', serif;
+                font-weight: bold;
+                background-color: rgba($black, 0.5);
+            }
+        }
+    }
+}
+
+.btn {
+    &--outlined {
+        &.btn--green {
+            color: $text;
+            background-color: $white;
+            border-color: $anniv-green;
+            &:hover,
+            &.active {
+                background-color: rgba($anniv-green, 0.05);
+                border-color: darken($anniv-green, 5%);
+            }
+            &::before {
+                background-color: rgba($anniv-green, 0.15);
+            }
+            &::after {
+                background-color: rgba($anniv-green, 0.15);
+            }
+        }
+        &.btn--blue {
+            color: $text;
+            background-color: $white;
+            border-color: $anniv-blue;
+            &:hover,
+            &.active {
+                background-color: rgba($anniv-blue, 0.05);
+                border-color: darken($anniv-blue, 5%);
+            }
+            &::before {
+                background-color: rgba($anniv-blue, 0.15);
+            }
+            &::after {
+                background-color: rgba($anniv-blue, 0.15);
+            }
+        }
+        &.btn--yellow {
+            color: $text;
+            background-color: $white;
+            border-color: $anniv-yellow;
+            &:hover,
+            &.active {
+                background-color: rgba($anniv-yellow, 0.05);
+                border-color: darken($anniv-yellow, 5%);
+            }
+            &::before {
+                background-color: rgba($anniv-yellow, 0.15);
+            }
+            &::after {
+                background-color: rgba($anniv-yellow, 0.15);
+            }
+        }
+        &.btn--gray {
+            color: $text;
+            background-color: $white;
+            border-color: $anniv-gray;
+            &:hover,
+            &.active {
+                background-color: rgba($anniv-gray, 0.05);
+                border-color: darken($anniv-gray, 5%);
+            }
+            &::before {
+                background-color: rgba($anniv-gray, 0.15);
+            }
+            &::after {
+                background-color: rgba($anniv-gray, 0.15);
+            }
+        }
+    }
+    &--contained {
+        &.btn--green {
+            color: $text;
+            background-color: $anniv-green;
+            border-color: $anniv-green;
+            &:hover,
+            &.active {
+                background-color: darken($anniv-green, 2.5%);
+                border-color: darken($anniv-green, 2.5%);
+            }
+            &::before {
+                background-color: $anniv-green;
+            }
+            &::after {
+                background-color: $anniv-green;
+            }
+        }
+        &.btn--blue {
+            color: $white;
+            background-color: $anniv-blue;
+            border-color: $anniv-blue;
+            &:hover,
+            &.active {
+                background-color: darken($anniv-blue, 2.5%);
+                border-color: darken($anniv-blue, 2.5%);
+            }
+            &::before {
+                background-color: $anniv-blue;
+            }
+            &::after {
+                background-color: $anniv-blue;
+            }
+        }
+        &.btn--yellow {
+            color: $text;
+            background-color: $anniv-yellow;
+            border-color: $anniv-yellow;
+            &:hover,
+            &.active {
+                background-color: darken($anniv-yellow, 2.5%);
+                border-color: darken($anniv-yellow, 2.5%);
+            }
+            &::before {
+                background-color: $anniv-yellow;
+            }
+            &::after {
+                background-color: $anniv-yellow;
+            }
+        }
+        &.btn--gray {
+            color: $white;
+            background-color: $anniv-gray;
+            border-color: $anniv-gray;
+            &:hover,
+            &.active {
+                background-color: darken($anniv-gray, 2.5%);
+                border-color: darken($anniv-gray, 2.5%);
+            }
+            &::before {
+                background-color: $anniv-gray;
+            }
+            &::after {
+                background-color: $anniv-gray;
+            }
+        }
+    }
+}

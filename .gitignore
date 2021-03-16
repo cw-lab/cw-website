@@ -6,6 +6,6 @@
 ehthumbs.db
 Thumbs.db
 *.map
-.sass-cache
+.sass-cache/
 article-**
-channel.
+channel*

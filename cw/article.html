@@ -2267,6 +2267,9 @@
             if (window.location.href.indexOf('anniv') > 0) {
                 $('body, .black').addClass('opened');
                 $('#anniv__my40').fadeIn();
+                $('#anniv__my40 button').on('click', function(){
+                    $('#anniv__my40').fadeOut();
+                })
             }
         })
     </script>

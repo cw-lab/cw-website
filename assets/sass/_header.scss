@@ -47,6 +47,9 @@ header {
                 @include breakpoint(1024px) {
                     padding-left: 180px;
                     padding-right: 215px;
+                    &.item--40 {
+                        padding-left: 248px;
+                    }
                 }
                 .item__scroll {
                     position: relative;

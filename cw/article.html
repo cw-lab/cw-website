@@ -793,11 +793,11 @@
     </nav>
     <header>
         <div class="container">
-            <div class="item item--center">
+            <div class="item item--center item--40">
                 <div class="hamburger">
                     <span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span><span gtm-name="read_more" eventaction="side_menu_icon"></span>
                 </div>
-                <a href="index.html" class="logo">
+                <a href="index.html" class="logo logo--40">
                     <img src="https://topic.cw.com.tw/yuting/system/assets/file/logo/1_cw-40anniv.svg" alt="天下雜誌">
                 </a>
                 <div class="item__scroll">
@@ -1967,6 +1967,27 @@
             </div>
         </div>
     </div>
+    <div id="anniv__my40" class="message message--anniv message--center" style="display: block;">
+        <div class="message__container">
+            <div class="message__head text-center">
+                <img src="../assets/images/common/cw-40anniv.png" alt="天下雜誌40週年" height="20" class="logo--40">
+                <div class="h2 font-weight-500 mt20 mb0">分享這篇文章</div>
+                <div class="display__time mt0 mb20">
+                    這篇文章在1999年3月28日出現在<span>天下雜誌388期</span>
+                </div>
+            </div>
+            <div class="anniv__group message__body mb20">
+                <div class="anniv__img">
+                    <img src="https://storage.googleapis.com/www-cw-com-tw/article/202007/article-5f117331bc16e.jpg" width="100%" alt="">
+                </div>
+                <div class="anniv__txt">你可以掛念工作，但更該掛念生活！張忠謀：人生的主導權在自己</div>
+            </div>
+            <div class="message__btn text-center">
+                <button class="btn btn--contained btn--green btn--100">分享到臉書</button>
+                <button class="btn btn--outlined btn--green btn--100 mt10">暫時不要分享</button>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
     <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
@@ -2241,6 +2262,9 @@
                 $('#receiveMail').show();
                 $('.newsletter__subscribe.hide').show();
             });
+            $(window).on('load', function(){
+                $('body, .black').addClass('opened');
+            })
         })
     </script>
 </body>

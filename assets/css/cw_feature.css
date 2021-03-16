@@ -2634,6 +2634,9 @@ header .container > .item.item--center {
     padding-left: 180px;
     padding-right: 215px;
   }
+  header .container > .item.item--center.item--40 {
+    padding-left: 248px;
+  }
 }
 header .container > .item.item--center .item__scroll {
   position: relative;

@@ -1967,7 +1967,7 @@
             </div>
         </div>
     </div>
-    <div id="anniv__my40" class="message message--anniv message--center">
+    <div id="anniv__my40" class="message message--anniv message--center" style="display: none;">
         <div class="message__container">
             <div class="message__head text-center">
                 <img src="../assets/images/common/cw-40anniv.png" alt="天下雜誌40週年" height="20" class="logo--40">
@@ -2264,7 +2264,10 @@
                 $('#receiveMail').show();
                 $('.newsletter__subscribe.hide').show();
             });
-            $('body, .black').addClass('opened');
+            if (window.location.href.indexOf('anniv') > 0) {
+                $('body, .black').addClass('opened');
+                $('#anniv__my40').fadeIn();
+            }
         })
     </script>
 </body>

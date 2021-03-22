@@ -80,10 +80,10 @@
     margin-left: 2.1em;
   }
 }
-.accordion__item__panel .decimal--step li {
+.accordion__item__panel .decimal--step > li {
   position: relative;
 }
-.accordion__item__panel .decimal--step li::before {
+.accordion__item__panel .decimal--step > li::before {
   content: "Step";
   display: inline-block;
   position: absolute;
@@ -93,7 +93,7 @@
   line-height: 1.5;
 }
 @media (min-width: 768px) {
-  .accordion__item__panel .decimal--step li::before {
+  .accordion__item__panel .decimal--step > li::before {
     right: calc(100% + 1.2em);
   }
 }

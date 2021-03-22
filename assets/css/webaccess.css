@@ -485,10 +485,10 @@
     margin-left: 2.1em;
   }
 }
-.webaccess__page .accordion__item__panel .decimal--step li {
+.webaccess__page .accordion__item__panel .decimal--step > li {
   position: relative;
 }
-.webaccess__page .accordion__item__panel .decimal--step li::before {
+.webaccess__page .accordion__item__panel .decimal--step > li::before {
   content: 'Step';
   display: inline-block;
   position: absolute;
@@ -498,7 +498,7 @@
   line-height: 1.5;
 }
 @media (min-width: 768px) {
-  .webaccess__page .accordion__item__panel .decimal--step li::before {
+  .webaccess__page .accordion__item__panel .decimal--step > li::before {
     right: calc(100% + 1.2em);
   }
 }

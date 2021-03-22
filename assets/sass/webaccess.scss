@@ -419,7 +419,7 @@
             @include breakpoint(768px) {
                 margin-left: 2.1em;
             }
-            li {
+            > li {
                 position: relative;
                 &::before {
                     content: 'Step';

@@ -445,26 +445,26 @@ nav {
     position: absolute;
     width: 150px;
     word-break: keep-all;
-    @include breakpoint(1024px) {
+    @include breakpoint(768px) {
         &.menubar__user--login {
             width: auto;
         }
         top: 43px;
         right: 0;
     }
-    @include breakpoint(max-width 1023px) {
+    @include breakpoint(max-width 767px) {
         top: 42px;
         right: -20px;
         opacity: 1 !important;
     }
     >ul {
         &.desktop {
-            @include breakpoint(max-width 1023px) {
+            @include breakpoint(max-width 767px) {
                 display: none;
             }
         }
         &.mobile {
-            @include breakpoint(1024px) {
+            @include breakpoint(768px) {
                 display: none;
             }
         }
@@ -476,10 +476,10 @@ aside.menubar--left {
     font-size: 1rem;
     border: solid $gray-200;
     background-color: $white;
-    @include breakpoint(1024px) {
+    @include breakpoint(768px) {
         border-width: 1px;
     }
-    @include breakpoint(max-width 1023px) {
+    @include breakpoint(max-width 767px) {
         border-width: 1px 0;
         width: 100vw;
         overflow: hidden scroll;

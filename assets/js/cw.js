@@ -330,7 +330,7 @@ $(function() {
         });
         // 會員下拉式選單
         function memberHeight(width) {
-            if (width < 1024) {
+            if (width < 768) {
                 $('.menubar__user--member').height(window.innerHeight - $('header').outerHeight());
             } else {
                 $('.menubar__user--member').height('auto');

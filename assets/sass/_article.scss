@@ -97,15 +97,21 @@
 
 .article__body,
 .article__foot {
-	max-width: 740px;
+	max-width: 640px;
 	width: 100%;
+	@include breakpoint(1140px) {
+		max-width: 740px;
+	}
 }
 
 .article__promotion {
 	position: relative;
-	max-width: 700px;
+	max-width: 600px;
 	width: calc(100% - 40px);
 	z-index: 4;
+	@include breakpoint(1140px) {
+		max-width: 700px;
+	}
 }
 
 .preface > * {

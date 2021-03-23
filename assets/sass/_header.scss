@@ -66,7 +66,7 @@ header {
                         @include ellipsis;
                     }
                 }
-                a.logo {
+                .logo__set--40 {
                     position: absolute;
                     top: 0;
                     left: 50px;
@@ -77,6 +77,27 @@ header {
                     }
                     @include breakpoint(1024px) {
                         left: 60px;
+                    }
+                    a.logo {
+                        &.logo--main {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        &.logo--40 {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                        }
+                        img {
+                            padding: 8px ​0;
+                            @include breakpoint(375px) {
+                                padding: 5px 0;
+                            }
+                            @include breakpoint(1024px) {
+                                padding: 3px 0;
+                            }
+                        }
                     }
                 }
             }
@@ -94,6 +115,9 @@ header {
         img {
             height: 40px;
         }
+        &.logo--hide {
+            @include opacity(0);
+        }
         &.logo--main {
             margin-right: 20px;
         }
@@ -101,17 +125,6 @@ header {
             color: $primary;
             font-size: 1rem;
             font-weight: 500;
-        }
-        &.logo--40 {
-            img {
-                padding: 8px ​0;
-                @include breakpoint(375px) {
-                    padding: 5px 0;
-                }
-                @include breakpoint(1024px) {
-                    padding: 3px 0;
-                }
-            }
         }
     }
     .search__icon {
@@ -180,7 +193,7 @@ header {
             .item__scroll {
                 top: -40px;
             }
-            a.logo {
+            .logo__set {
                 @include breakpoint(max-width 1023px) {
                     top: -55px;
                 }

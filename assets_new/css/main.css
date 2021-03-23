@@ -2458,20 +2458,43 @@ header .container > .item.item--center .title__share .h3 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-header .container > .item.item--center a.logo {
+header .container > .item.item--center .logo__set--40 {
   position: absolute;
   top: 0;
   left: 50px;
   z-index: 1;
 }
 @media (min-width: 375px) {
-  header .container > .item.item--center a.logo {
+  header .container > .item.item--center .logo__set--40 {
     left: 55px;
   }
 }
 @media (min-width: 1024px) {
-  header .container > .item.item--center a.logo {
+  header .container > .item.item--center .logo__set--40 {
     left: 60px;
+  }
+}
+header .container > .item.item--center .logo__set--40 a.logo.logo--main {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .container > .item.item--center .logo__set--40 a.logo.logo--40 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+header .container > .item.item--center .logo__set--40 a.logo img {
+  padding: 8px ​0;
+}
+@media (min-width: 375px) {
+  header .container > .item.item--center .logo__set--40 a.logo img {
+    padding: 5px 0;
+  }
+}
+@media (min-width: 1024px) {
+  header .container > .item.item--center .logo__set--40 a.logo img {
+    padding: 3px 0;
   }
 }
 header .hamburger {
@@ -2490,6 +2513,10 @@ header a.logo {
 header a.logo img {
   height: 40px;
 }
+header a.logo.logo--hide {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
 header a.logo.logo--main {
   margin-right: 20px;
 }
@@ -2497,19 +2524,6 @@ header a.logo.logo--sub {
   color: #D60C18;
   font-size: 1rem;
   font-weight: 500;
-}
-header a.logo.logo--40 img {
-  padding: 8px ​0;
-}
-@media (min-width: 375px) {
-  header a.logo.logo--40 img {
-    padding: 5px 0;
-  }
-}
-@media (min-width: 1024px) {
-  header a.logo.logo--40 img {
-    padding: 3px 0;
-  }
 }
 header .search__icon {
   margin-left: 30px;
@@ -4073,24 +4087,6 @@ aside .media .pic::after {
     width: 220px;
     margin-right: 20px;
     margin-bottom: 10px;
-  }
-  .card__group.card__group--grid .card__item:nth-child(1) {
-    order: 1;
-  }
-  .card__group.card__group--grid .card__item:nth-child(2) {
-    order: 2;
-  }
-  .card__group.card__group--grid .card__item:nth-child(3) {
-    order: 4;
-  }
-  .card__group.card__group--grid .card__item:nth-child(4) {
-    order: 5;
-  }
-  .card__group.card__group--grid .card__item:nth-child(5) {
-    order: 6;
-  }
-  .card__group.card__group--grid .card__item:nth-child(6) {
-    order: 3;
   }
 }
 .card__group.card__group--grid .card__item:nth-child(3n+1) {

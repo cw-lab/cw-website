@@ -3280,7 +3280,7 @@ nav.menubar--left.opened {
   width: 150px;
   word-break: keep-all;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .menubar__user--member {
     top: 43px;
     right: 0;
@@ -3289,19 +3289,19 @@ nav.menubar--left.opened {
     width: auto;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .menubar__user--member {
     top: 42px;
     right: -20px;
     opacity: 1 !important;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .menubar__user--member > ul.desktop {
     display: none;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .menubar__user--member > ul.mobile {
     display: none;
   }
@@ -3313,13 +3313,13 @@ aside.menubar--left {
   border: solid #D3D5D7;
   background-color: #fff;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .menubar__user--member,
   aside.menubar--left {
     border-width: 1px;
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .menubar__user--member,
   aside.menubar--left {
     border-width: 1px 0;

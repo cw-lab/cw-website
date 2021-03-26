@@ -1,5 +1,5 @@
 @charset "UTF-8";
-nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .label--radio span.label__radio__mark::before, .label--check span.label__radio__mark::before, .board::before, .accordion__item__panel::before, .accordion__item__panel::after, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
+nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .board::before, .accordion__item__panel::before, .accordion__item__panel::after, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
   content: '';
   display: block;
 }
@@ -1675,6 +1675,34 @@ img {
   color: #48545D;
 }
 
+.color-surface {
+  color: #003a9f;
+}
+
+.color-primary {
+  color: #D60C18;
+}
+
+.color-primary-variant {
+  color: #9D0505;
+}
+
+.color-secondary {
+  color: #939EA7;
+}
+
+.color-secondary-variant {
+  color: #48545D;
+}
+
+.color-error {
+  color: #9D0505;
+}
+
+.color-background {
+  color: #fff;
+}
+
 h1 {
   font-weight: 600;
 }
@@ -1917,7 +1945,7 @@ h5,
 .h5 {
   color: #939EA7;
   font-size: 0.875rem;
-  line-height: 1;
+  line-height: 1.2;
   word-break: break-word;
 }
 
@@ -3615,6 +3643,14 @@ input[type*='number']::-webkit-outer-spin-button {
   font-size: 0.875rem;
 }
 
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #939EA7;
+}
+
 button,
 a {
   background-color: transparent;
@@ -4287,7 +4323,7 @@ a:focus {
   display: none;
 }
 
-.label--radio {
+.label--radio, .label--check {
   display: block;
   position: relative;
   font-size: 0;
@@ -4298,7 +4334,7 @@ a:focus {
   -webkit-user-select: none;
   user-select: none;
 }
-.label--radio span {
+.label--radio span, .label--check span {
   display: inline-block;
   vertical-align: top;
   line-height: 1.25;
@@ -4307,7 +4343,15 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.label--radio .form__group, .label--check .form__group {
+  display: block;
+  max-width: none;
+  margin-top: 10px;
+  padding-left: calc(20px + 0.5rem);
+}
+
 .label--radio span.label__radio__txt {
+  width: calc(100% - 20px - .5em);
   padding-left: 0.5em;
   font-size: 1rem;
 }
@@ -4333,6 +4377,8 @@ a:focus {
   border-radius: 50%;
 }
 .label--radio span.label__radio__mark::before {
+  content: "";
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4371,7 +4417,7 @@ a:focus {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.label--radio input {
+.label--radio input[type="radio"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -4379,48 +4425,28 @@ a:focus {
   opacity: 0;
   cursor: pointer;
 }
-.label--radio input:checked ~ span.label__radio__mark {
+.label--radio input[type="radio"]:checked ~ span.label__radio__mark {
   border-color: #D60C18;
 }
-.label--radio input:checked ~ span.label__radio__mark::after {
+.label--radio input[type="radio"]:checked ~ span.label__radio__mark::after {
   display: block;
 }
-.label--radio:hover input ~ span.label__radio__mark, .label--radio.active input ~ span.label__radio__mark {
+.label--radio:hover input[type="radio"] ~ span.label__radio__mark, .label--radio.active input[type="radio"] ~ span.label__radio__mark {
   border-color: #D60C18;
 }
-.label--radio:hover input:checked ~ span.label__radio__mark::before, .label--radio.active input:checked ~ span.label__radio__mark::before {
+.label--radio:hover input[type="radio"]:checked ~ span.label__radio__mark::before, .label--radio.active input[type="radio"]:checked ~ span.label__radio__mark::before {
   width: 36px;
   height: 36px;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
-.label--check {
-  display: block;
-  position: relative;
-  font-size: 0;
-  cursor: pointer;
-  z-index: 1;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-.label--check span {
-  display: inline-block;
-  vertical-align: top;
-  line-height: 1.25;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.label--check span.label__radio__txt {
+.label--check span.label__check__txt {
   width: calc(100% - 20px - .5em);
   padding-left: 0.5em;
   font-size: 1rem;
 }
-.label--check span.label__radio__helper {
+.label--check span.label__check__helper {
   display: block;
   padding-top: 5px;
   padding-left: calc(20px + 0.575rem);
@@ -4429,7 +4455,7 @@ a:focus {
   font-weight: normal;
   line-height: 1.25;
 }
-.label--check span.label__radio__mark {
+.label--check span.label__check__mark {
   position: relative;
   top: calc((1.25rem - 20px) / 2);
   left: 0;
@@ -4438,7 +4464,9 @@ a:focus {
   background-color: transparent;
   border: 2px solid #48545D;
 }
-.label--check span.label__radio__mark::before {
+.label--check span.label__check__mark::before {
+  content: "";
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -4460,7 +4488,7 @@ a:focus {
   transition: all 0.3s;
   z-index: -1;
 }
-.label--check span.label__radio__mark::after {
+.label--check span.label__check__mark::after {
   content: "";
   position: absolute;
   display: none;
@@ -4478,7 +4506,7 @@ a:focus {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.label--check input {
+.label--check input[type="checkbox"] {
   position: absolute;
   width: 0;
   height: 0;
@@ -4486,17 +4514,17 @@ a:focus {
   opacity: 0;
   cursor: pointer;
 }
-.label--check input:checked ~ span.label__radio__mark {
+.label--check input[type="checkbox"]:checked ~ span.label__check__mark {
   border-color: #D60C18;
   background-color: #D60C18;
 }
-.label--check input:checked ~ span.label__radio__mark::after {
+.label--check input[type="checkbox"]:checked ~ span.label__check__mark::after {
   display: block;
 }
-.label--check:hover input ~ span.label__radio__mark, .label--check.active input ~ span.label__radio__mark {
+.label--check:hover input[type="checkbox"] ~ span.label__check__mark, .label--check.active input[type="checkbox"] ~ span.label__check__mark {
   border-color: #D60C18;
 }
-.label--check:hover input:checked ~ span.label__radio__mark::before, .label--check.active input:checked ~ span.label__radio__mark::before {
+.label--check:hover input[type="checkbox"]:checked ~ span.label__check__mark::before, .label--check.active input[type="checkbox"]:checked ~ span.label__check__mark::before {
   width: 36px;
   height: 36px;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -4519,32 +4547,32 @@ a:focus {
 [class*='--disabled'] .label--radio span.label__radio__mark::after {
   background: #D3D5D7;
 }
-[class*='--disabled'] .label--radio input {
+[class*='--disabled'] .label--radio input[type="radio"] {
   cursor: pointer;
 }
-[class*='--disabled'] .label--radio input:checked ~ span.label__radio__mark {
+[class*='--disabled'] .label--radio input[type="radio"]:checked ~ span.label__radio__mark {
   border-color: #D3D5D7;
 }
-[class*='--disabled'] .label--radio:hover input ~ span.label__radio__mark, [class*='--disabled'] .label--radio.active input ~ span.label__radio__mark {
+[class*='--disabled'] .label--radio:hover input[type="radio"] ~ span.label__radio__mark, [class*='--disabled'] .label--radio.active input[type="radio"] ~ span.label__radio__mark {
   border-color: #D3D5D7;
 }
-[class*='--disabled'] .label--check span.label__radio__helper {
+[class*='--disabled'] .label--check span.label__check__helper {
   color: #D3D5D7;
 }
-[class*='--disabled'] .label--check span.label__radio__mark {
+[class*='--disabled'] .label--check span.label__check__mark {
   border: 2px solid #D3D5D7;
 }
-[class*='--disabled'] .label--check span.label__radio__mark::before {
+[class*='--disabled'] .label--check span.label__check__mark::before {
   background: #fff;
 }
-[class*='--disabled'] .label--check span.label__radio__mark::after {
+[class*='--disabled'] .label--check span.label__check__mark::after {
   color: #fff;
 }
-[class*='--disabled'] .label--check input:checked ~ span.label__radio__mark {
+[class*='--disabled'] .label--check input[type="checkbox"]:checked ~ span.label__check__mark {
   border-color: #D3D5D7;
   background-color: #D3D5D7;
 }
-[class*='--disabled'] .label--check:hover input ~ span.label__radio__mark, [class*='--disabled'] .label--check.active input ~ span.label__radio__mark {
+[class*='--disabled'] .label--check:hover input[type="checkbox"] ~ span.label__check__mark, [class*='--disabled'] .label--check.active input[type="checkbox"] ~ span.label__check__mark {
   border-color: #D3D5D7;
 }
 

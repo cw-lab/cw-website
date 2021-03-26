@@ -3,6 +3,13 @@
 @import "_sheet";
 @import "_space";
 @import "_color";
+
+@each $color, $value in $cw-colors {
+	.color-#{$color} {
+		color: nth($value, 1);
+	}
+}
+
 @import "_typography";
 @import "_font";
 @import "_iconography";

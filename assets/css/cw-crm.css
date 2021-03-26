@@ -1822,7 +1822,7 @@ h5,
 .h5 {
   color: #939EA7;
   font-size: 0.875rem;
-  line-height: 1;
+  line-height: 1.2;
   word-break: break-word;
 }
 
@@ -2758,6 +2758,14 @@ input[type*='number']::-webkit-outer-spin-button {
   margin-top: 10px;
   margin-bottom: 20px;
   font-size: 0.875rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #939EA7;
 }
 
 button,

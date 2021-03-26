@@ -437,3 +437,13 @@
         }
     }
 }
+
+.unsubscribe__page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+    .container {
+        max-width: 350px;
+    }
+}

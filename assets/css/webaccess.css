@@ -503,4 +503,14 @@
   }
 }
 
+.unsubscribe__page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.unsubscribe__page .container {
+  max-width: 350px;
+}
+
 /*# sourceMappingURL=webaccess.css.map */

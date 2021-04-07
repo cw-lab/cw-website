@@ -1,0 +1,86 @@
+@import "_basic";
+@import "_general";
+
+@page {
+    size: A4 portrait;
+    margin: 1cm;
+}  
+* {
+    -webkit-print-color-adjust: exact !important;
+}
+
+@import "_sheet";
+@import "_space";
+@import "_color";
+@import "_typography";
+@import "_font";
+@import "_iconography";
+@import "_textfield";
+@import "_button";
+@import "_header";
+@import "_footer";
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+}
+
+@import "_article";
+
+body {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+header, footer, header .container > .item.item--center .logo__set {
+    position: relative !important;
+}
+header .container > .item.item--center {
+    height: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+header .container > .item.item--center .logo__set {
+    left: 0 !important;
+    img {
+        padding: 0;
+        height: 50px;
+    }
+}
+footer {
+    margin-top: 50px;
+    padding-top: 0 !important;
+    padding-bottom: 30px !important;
+    border-top: 1px solid $gray-100 !important;
+}
+.article__content blockquote::before,
+.article__content blockquote::after {
+    height: 0px !important;
+    background-color: transparent !important;
+    border-top: 2px solid #D60C18 !important;
+}
+.article__body {
+    max-width: 18cm;
+}
+header .hamburger,
+header a.logo.logo--hide,
+header .container > .item.item--center .item__scroll,
+header .container > .item.item--right,
+.menubar--left,
+.breaking,
+.bulletin,
+.article__provideViews,
+.audio__player,
+.imgzoom::after,
+.article__foot,
+.article__promotion,
+.bottombar,
+.newsletter,
+.newsletter__subscribe,
+footer .channel__group,
+.message,
+.cw__advertising {
+    display: none !important;
+}

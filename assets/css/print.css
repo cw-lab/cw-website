@@ -5725,6 +5725,7 @@ header .container > .item.item--center {
 }
 
 header .container > .item.item--center .logo__set {
+  top: 0 !important;
   left: 0 !important;
 }
 header .container > .item.item--center .logo__set img {

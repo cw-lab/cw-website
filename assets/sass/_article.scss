@@ -466,6 +466,15 @@ article {
 .article__recommend,
 .article__promotion {
 	border-top: 1px solid $black;
+	.h2 {
+		position: relative;
+		.circle__btn {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			@include translateY(-50%);
+		}
+	}
 }
 
 @import "article/_card";

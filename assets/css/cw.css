@@ -2079,7 +2079,8 @@ body.feature__page main p {
   font-style: normal;
   font-display: block;
 }
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "cw_icon" !important;
   speak: never;
@@ -2097,32 +2098,36 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-check:before {
-  content: "";
-}
-
 .icon-check-circle:before {
   content: "";
-}
-
-.icon-check-solid:before {
-  content: "";
 }
 
 .icon-exclamation-circle:before {
   content: "";
 }
 
-.icon-exclamation-solid:before {
-  content: "";
-}
-
 .icon-question-circle:before {
   content: "";
 }
 
+.icon-check-solid:before {
+  content: "";
+}
+
+.icon-exclamation-solid:before {
+  content: "";
+}
+
 .icon-error-solid:before {
   content: "";
+}
+
+.icon-eyeoff:before {
+  content: "";
+}
+
+.icon-eyeon:before {
+  content: "";
 }
 
 .icon-sort:before {
@@ -2169,6 +2174,10 @@ body.feature__page main p {
   content: "";
 }
 
+.icon-check:before {
+  content: "";
+}
+
 .icon-cancel:before {
   content: "";
 }
@@ -2181,11 +2190,11 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-dot-single:before {
-  content: "";
+.icon-facebook:before {
+  content: "";
 }
 
-.icon-facebook:before {
+.icon-fb:before {
   content: "";
 }
 
@@ -2198,7 +2207,7 @@ body.feature__page main p {
 }
 
 .icon-twitter:before {
-  content: "";
+  content: "";
 }
 
 .icon-rss:before {
@@ -2206,7 +2215,7 @@ body.feature__page main p {
 }
 
 .icon-apple:before {
-  content: "";
+  content: "";
 }
 
 .icon-security:before {
@@ -2217,6 +2226,18 @@ body.feature__page main p {
   content: "";
 }
 
+.icon-pen:before {
+  content: "";
+}
+
+.icon-mailing:before {
+  content: "";
+}
+
+.icon-link:before {
+  content: "";
+}
+
 .icon-bookmark-filled:before {
   content: "";
 }
@@ -2225,12 +2246,12 @@ body.feature__page main p {
   content: "";
 }
 
-.icon-mail:before {
-  content: "";
-}
-
 .icon-mail-filled:before {
   content: "";
+}
+
+.icon-mail:before {
+  content: "";
 }
 
 .icon-coin:before {
@@ -2267,14 +2288,6 @@ body.feature__page main p {
 
 .icon-pause-solid:before {
   content: "";
-}
-
-.icon-eyeoff:before {
-  content: "";
-}
-
-.icon-eyeon:before {
-  content: "";
 }
 
 .icon-user-filled:before {
@@ -2331,10 +2344,6 @@ body.feature__page main p {
 
 .icon-member-only:before {
   content: "";
-}
-
-.icon-mailing:before {
-  content: "";
 }
 
 .hamburger {
@@ -2568,6 +2577,45 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
 }
 .social_login--apple i.icon {
   color: #171717;
+}
+
+.circle__btn {
+  display: block;
+  color: #6B7780;
+  border: solid #EEEEEE;
+  background-color: #fff;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-width: 1px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+@media (min-width: 1024px) {
+  .circle__btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.circle__btn i.icon {
+  display: block;
+  font-size: 1.125rem;
+  line-height: calc(2.5rem - 2px);
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .circle__btn i.icon {
+    line-height: calc(3rem - 2px);
+  }
+}
+.circle__btn:hover {
+  color: #D60C18;
+  border-color: #D60C18;
 }
 
 body.slide__open {
@@ -7365,6 +7413,20 @@ article.article__level--2 ul.article__keyword li a {
 .article__recommend,
 .article__promotion {
   border-top: 1px solid #171717;
+}
+.article__recommend .h2,
+.article__promotion .h2 {
+  position: relative;
+}
+.article__recommend .h2 .circle__btn,
+.article__promotion .h2 .circle__btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (max-width: 1023px) {

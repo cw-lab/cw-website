@@ -2826,35 +2826,89 @@ footer .sns__group li.instagram a:hover {
 footer .sns__group li.rss a:hover {
   color: #FF5700;
 }
-footer .contact {
-  font-size: 0.75em;
-}
-@media (max-width: 1023px) {
-  footer .contact {
-    text-align: center;
-  }
-}
-footer .contact span {
-  display: block;
+footer .cwgroup__copyright {
+  display: flex;
 }
 @media (min-width: 1024px) {
-  footer .contact span {
-    display: inline-block;
+  footer .cwgroup__copyright {
+    align-items: flex-end;
+    justify-content: space-between;
   }
-}
-footer .contact span:last-child {
-  display: block;
 }
 @media (max-width: 1023px) {
-  footer .contact span:last-child {
-    margin-top: 30px;
+  footer .cwgroup__copyright {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+  footer .cwgroup__copyright > div {
+    width: 100%;
   }
 }
-footer .contact a {
+footer .cwgroup__copyright ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0;
+}
+footer .cwgroup__copyright ul.sns li {
+  display: inline-block;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+footer .cwgroup__copyright ul.sns li + li {
+  margin-left: 20px;
+}
+footer .cwgroup__copyright ul.sns li a {
+  display: block;
+}
+footer .cwgroup__copyright ul.sns li a i.icon {
+  display: block;
+}
+footer .cwgroup__copyright ul.sns li a.facebook:hover {
+  color: #1877F2;
+}
+footer .cwgroup__copyright ul.sns li a.line:hover {
+  color: #00C200;
+}
+footer .cwgroup__copyright ul.sns li a.instagram:hover {
+  color: #dd2a7b;
+}
+footer .cwgroup__copyright ul.sns li a.rss:hover {
+  color: #FF5700;
+}
+footer .cwgroup__copyright ul.app__img li {
+  display: inline-block;
+}
+footer .cwgroup__copyright ul.app__img li + li {
+  margin-left: 10px;
+}
+footer .cwgroup__copyright ul.app__img li a {
+  display: block;
+}
+footer .cwgroup__copyright ul.app__img li a img {
+  width: auto;
+  height: 40px;
+}
+footer .cwgroup__copyright .contact > span,
+footer .cwgroup__copyright .copyright > span {
+  display: block;
+  font-size: 0.75rem;
+}
+@media (min-width: 1024px) {
+  footer .cwgroup__copyright .contact > span,
+  footer .cwgroup__copyright .copyright > span {
+    display: inline-block;
+  }
+  footer .cwgroup__copyright .contact > span:first-child,
+  footer .cwgroup__copyright .copyright > span:first-child {
+    margin-right: 20px;
+  }
+}
+footer .cwgroup__copyright a {
   color: #171717;
   text-decoration: none;
 }
-footer .contact a:hover {
+footer .cwgroup__copyright a:hover {
   color: #D60C18;
 }
 

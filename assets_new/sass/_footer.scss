@@ -150,20 +150,76 @@ footer {
             }
         }
     }
-    .contact {
-        font-size: 0.75em;
-        @include breakpoint(max-width 1023px) {
-            text-align: center;
+    .cwgroup__copyright {
+        display: flex;
+        @include breakpoint(1024px) {
+            align-items: flex-end;
+            justify-content: space-between;
         }
-        span {
-            display: block;
-            @include breakpoint(1024px) {
-                display: inline-block;
+        @include breakpoint(max-width 1023px) {
+            flex-wrap: wrap-reverse;
+            text-align: center;
+            > div {
+                width: 100%;
             }
-            &:last-child {
+        }
+        ul {
+            @include listrest(0, 0, none);
+            font-size: 0;
+            &.sns {
+                li {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    vertical-align: middle;
+                    +li {
+                        margin-left: 20px;
+                    }
+                    a {
+                        display: block;
+                        i.icon {
+                            display: block;
+                        }
+                        &.facebook:hover {
+                            color: $facebook;
+                        }
+                        &.line:hover {
+                            color: $line;
+                        }
+                        &.instagram:hover {
+                            color: $instagram;
+                        }
+                        &.rss:hover {
+                            color: $rss;
+                        }
+                    }
+                }
+            }
+            &.app__img {
+                li {
+                    display: inline-block;
+                    +li {
+                        margin-left: 10px;
+                    }
+                    a {
+                        display: block;
+                        img {
+                            width: auto;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .contact,
+        .copyright {
+            > span {
                 display: block;
-                @include breakpoint(max-width 1023px) {
-                    margin-top: 30px;
+                font-size: 0.75rem;
+                @include breakpoint(1024px) {
+                    display: inline-block;
+                    &:first-child {
+                        margin-right: 20px;
+                    }
                 }
             }
         }

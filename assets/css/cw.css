@@ -5370,12 +5370,25 @@ footer .channel__item .channel__option ul a {
     column-gap: 1em;
   }
 }
-@media (max-width: 1023px) {
+footer .cwgroup__copyright {
+  display: flex;
+}
+@media (min-width: 1024px) {
   footer .cwgroup__copyright {
-    text-align: center;
+    align-items: flex-end;
+    justify-content: space-between;
   }
 }
-footer .cwgroup__copyright ul.sns {
+@media (max-width: 1023px) {
+  footer .cwgroup__copyright {
+    flex-wrap: wrap-reverse;
+    text-align: center;
+  }
+  footer .cwgroup__copyright > div {
+    width: 100%;
+  }
+}
+footer .cwgroup__copyright ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -5406,6 +5419,19 @@ footer .cwgroup__copyright ul.sns li a.instagram:hover {
 }
 footer .cwgroup__copyright ul.sns li a.rss:hover {
   color: #FF5700;
+}
+footer .cwgroup__copyright ul.app__img li {
+  display: inline-block;
+}
+footer .cwgroup__copyright ul.app__img li + li {
+  margin-left: 10px;
+}
+footer .cwgroup__copyright ul.app__img li a {
+  display: block;
+}
+footer .cwgroup__copyright ul.app__img li a img {
+  width: auto;
+  height: 40px;
 }
 footer .cwgroup__copyright .contact > span,
 footer .cwgroup__copyright .copyright > span {

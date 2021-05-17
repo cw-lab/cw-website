@@ -61,37 +61,69 @@ footer {
         }
     }
     .cwgroup__copyright {
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
-        ul.sns {
-            @include list(0, 30px 0 10px, none);
+        margin-top: 30px;
+        > div {
+            width: 100%;
+        }
+        ul {
+            @include list(0, 0, none);
             font-size: 0;
-            li {
-                display: inline-block;
-                font-size: 1.5rem;
-                vertical-align: middle;
-                +li {
-                    margin-left: 20px;
-                }
-                a {
-                    display: block;
-                    i.icon {
+            &.sns {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                li {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    vertical-align: middle;
+                    + li {
+                        margin-left: 20px;
+                    }
+                    a {
                         display: block;
+                        i.icon {
+                            display: block;
+                        }
+                        &.facebook:hover {
+                            color: $facebook;
+                        }
+                        &.line:hover {
+                            color: $line;
+                        }
+                        &.instagram:hover {
+                            color: $instagram;
+                        }
+                        &.rss:hover {
+                            color: $rss;
+                        }
+                    }
+                }
+            }
+            &.app__img {
+                li {
+                    display: inline-block;
+                    vertical-align: middle;
+                    a {
+                        display: block;
+                        width: 122px;
+                    }
+                    +li {
+                        margin-left: 10px;
+                        a {
+                            width: 134px;
+                        }
                     }
                 }
             }
         }
         .contact,
         .copyright {
-            span {
+            > span {
                 display: block;
                 font-size: 0.75rem;
             }
-        }
-        .contact {
-            margin-bottom: 5px;
-        }
-        .copyright {
-            margin-bottom: 30px;
         }
     }
 }

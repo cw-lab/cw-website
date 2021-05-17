@@ -72,35 +72,61 @@ footer {
         }
     }
     .cwgroup__copyright {
-        @include breakpoint(max-width 1023px) {
-            text-align: center;
+        display: flex;
+        @include breakpoint(1024px) {
+            align-items: flex-end;
+            justify-content: space-between;
         }
-        ul.sns {
+        @include breakpoint(max-width 1023px) {
+            flex-wrap: wrap-reverse;
+            text-align: center;
+            > div {
+                width: 100%;
+            }
+        }
+        ul {
             @include list(0, 0, none);
             font-size: 0;
-            li {
-                display: inline-block;
-                font-size: 1.5rem;
-                vertical-align: middle;
-                +li {
-                    margin-left: 20px;
-                }
-                a {
-                    display: block;
-                    i.icon {
+            &.sns {
+                li {
+                    display: inline-block;
+                    font-size: 1.5rem;
+                    vertical-align: middle;
+                    +li {
+                        margin-left: 20px;
+                    }
+                    a {
                         display: block;
+                        i.icon {
+                            display: block;
+                        }
+                        &.facebook:hover {
+                            color: $facebook;
+                        }
+                        &.line:hover {
+                            color: $line;
+                        }
+                        &.instagram:hover {
+                            color: $instagram;
+                        }
+                        &.rss:hover {
+                            color: $rss;
+                        }
                     }
-                    &.facebook:hover {
-                        color: $facebook;
+                }
+            }
+            &.app__img {
+                li {
+                    display: inline-block;
+                    +li {
+                        margin-left: 10px;
                     }
-                    &.line:hover {
-                        color: $line;
-                    }
-                    &.instagram:hover {
-                        color: $instagram;
-                    }
-                    &.rss:hover {
-                        color: $rss;
+                    a {
+                        display: block;
+                        img {
+                            width: auto;
+                            height: 40px;
+                        }
                     }
                 }
             }

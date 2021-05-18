@@ -133,7 +133,7 @@
 		margin-top: 1.15em;
 		margin-bottom: 1.15em;
 	}
-	strong {
+	strong, b {
 		font-weight: 600;
 		@include breakpoint(1024px) {
 			font-weight: 500;
@@ -248,7 +248,11 @@
 			border-width: 0 1px 1px 0;
 		}
 		th {
-			background-color: $gray-100
+			background-color: $gray-100;
+			font-weight: 600;
+			@include breakpoint(1024px) {
+				font-weight: 500;
+			}
 		}
 	}
 }

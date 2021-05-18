@@ -6863,11 +6863,11 @@ ul.article__provide li span i.icon {
   margin-top: 1.15em;
   margin-bottom: 1.15em;
 }
-.article__content strong {
+.article__content strong, .article__content b {
   font-weight: 600;
 }
 @media (min-width: 1024px) {
-  .article__content strong {
+  .article__content strong, .article__content b {
     font-weight: 500;
   }
 }
@@ -6989,6 +6989,12 @@ ul.article__provide li span i.icon {
 }
 .article__content table th {
   background-color: #EEEEEE;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .article__content table th {
+    font-weight: 500;
+  }
 }
 
 .article__box__group {

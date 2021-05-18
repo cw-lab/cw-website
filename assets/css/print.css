@@ -3464,6 +3464,9 @@ footer .cwgroup__copyright {
     flex-wrap: wrap-reverse;
     text-align: center;
   }
+  footer .cwgroup__copyright > div {
+    width: 100%;
+  }
 }
 footer .cwgroup__copyright ul {
   margin: 0;
@@ -4892,6 +4895,23 @@ ul.article__provide li span i.icon {
 .article__content .article__profile h3, .article__content .article__profile ol, .article__content .article__profile ul, .article__content .article__profile p {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.article__content table {
+  width: 100% !important;
+  margin-top: 1.15em;
+  margin-bottom: 1.15em;
+  font-size: 1.125em;
+  line-height: 1.5;
+  border: solid #D3D5D7;
+  border-width: 1px 0 0 1px;
+}
+.article__content table th, .article__content table td {
+  padding: 5px;
+  border: solid #D3D5D7;
+  border-width: 0 1px 1px 0;
+}
+.article__content table th {
+  background-color: #EEEEEE;
 }
 
 .article__box__group {

@@ -233,7 +233,24 @@
 			margin-top: 20px;
 			margin-bottom: 20px;
 		}
-	}	
+	}
+	table {
+		width: 100% !important;
+		margin-top: 1.15em;
+		margin-bottom: 1.15em;
+		font-size: 1.125em;
+		line-height: 1.5;
+		border: solid $gray-200;
+		border-width: 1px 0 0 1px;
+		th, td {
+			padding: 5px;
+			border: solid $gray-200;
+			border-width: 0 1px 1px 0;
+		}
+		th {
+			background-color: $gray-100
+		}
+	}
 }
 
 @import "article/_box";

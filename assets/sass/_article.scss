@@ -235,13 +235,22 @@
 		}
 	}
 	table {
+		position: relative;
 		width: 100% !important;
 		margin-top: 1.15em;
-		margin-bottom: 1.15em;
+		margin-bottom: calc(40px + 1.15em);
 		font-size: 1.125em;
 		line-height: 1.5;
 		border: solid $gray-200;
 		border-width: 1px 0 0 1px;
+		&::before {
+			@include beforeafter(url(https://www.cw.com.tw/images/common/logo.svg), block);
+			position: absolute;
+			top: 100%;
+			right: 0px;
+			margin-top: 5px;
+			width: 90px;
+		}
 		th, td {
 			padding: 5px;
 			border: solid $gray-200;

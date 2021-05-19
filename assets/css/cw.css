@@ -6974,13 +6974,23 @@ ul.article__provide li span i.icon {
   margin-bottom: 20px;
 }
 .article__content table {
+  position: relative;
   width: 100% !important;
   margin-top: 1.15em;
-  margin-bottom: 1.15em;
+  margin-bottom: calc(40px + 1.15em);
   font-size: 1.125em;
   line-height: 1.5;
   border: solid #D3D5D7;
   border-width: 1px 0 0 1px;
+}
+.article__content table::before {
+  content: url(https://www.cw.com.tw/images/common/logo.svg);
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  margin-top: 5px;
+  width: 90px;
 }
 .article__content table th, .article__content table td {
   padding: 5px;

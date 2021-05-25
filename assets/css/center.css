@@ -622,6 +622,9 @@
 .center__page .label__group.label__group--inline label + label {
   margin-top: 0;
 }
+.center__page .label__group.label__group--inline label .label__radio__txt {
+  width: auto;
+}
 .center__page .table {
   width: 100%;
 }

@@ -99,169 +99,24 @@
             }
         }
         .form {
-            +.form {
-                margin-top: 30px;
-            }
-            >.form__group {
-                max-width: none;
-                margin-top: 10px;
-                label+label {
-                    margin-top: 20px;
-                }
-            }
-            >.form__group,
-            >.select__group {
-                .btn--small {
-                    margin-top: 20px;
-                }
-            }
-            .form__edit {
-                font-size: 1rem;
-                >* {
-                    line-height: 1.5;
-                }
-                >.h3 {
-                    position: relative;
-                    padding-right: 1.25em;
-                    font-weight: 600;
-                    @include breakpoint(1024px) {
-                        font-weight: 500;
-                    }
-                    i.icon {
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        cursor: pointer;
-                        @include translateY(-50%);
-                    }
-                }
-                &:hover {
-                    background-color: $gray;
-                }
-            }
-            .form__value {
-                font-size: 1rem;
-                line-height: 1.5;
-                word-break: break-word;
-                &.form__value--blank {
-                    color: $secondary;
-                }
-                &.blank__show {
-                    color: $black;
-                }
-                a {
-                    color: $surface;
-                    text-decoration: underline;
-                    &:hover {
-                        color: $primary;
-                    }
-                }
-                img,
-                span {
-                    display: inline-block;
-                    vertical-align: middle;
-                }
-                img {
-                    width: 3.125rem;
-                    margin-right: 10px;
-                }
-            }
             .address__group {
-                margin-top: 10px;
-                .form__group {
-                    @include breakpoint(375px) {
-                        margin-left: 1rem;
-                    }
-                    max-width: none;
-                    .form__group__input {
-                        min-width: auto;
-                        width: 100%;
-                    }
-                }
                 .select__group {
-                    @include breakpoint(max-width 374px) {
-                        width: 100%;
-                    }
-                    @include breakpoint(375px) {
-                        width: calc( (100% - 1rem) / 2);
-                    }
                     @include breakpoint(768px) {
                         width: 140px;
-                    }
-                    &.select__group--notallowed {
-                        position: relative;
-                        select {
-                            padding: 1rem;
-                            background-image: none !important;
-                        }
-                        &::after {
-                            @include beforeafter('', block);
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                        }
-                    }
-                    select {
-                        width: 100%;
-                        min-width: auto;
-                    }
-                    +.select__group {
-                        @include breakpoint(max-width 374px) {
-                            margin-left: 0;
-                            margin-top: 1rem;
-                        }
                     }
                 }
             }
             .taiwan {
                 .form__group {
-                    max-width: none;
-                    width: 100%;
                     @include breakpoint(768px) {
                         width: calc(100% - 280px - 2rem);
-                    }
-                    @include breakpoint(max-width 767px) {
-                        margin-top: 1rem;
-                        margin-left: 0;
                     }
                 }
             }
             .oversea {
-                margin-top: 20px;
                 .form__group {
-                    width: 100%;
                     @include breakpoint(768px) {
                         width: calc(100% - 140px - 1rem);
-                    }
-                    @include breakpoint(max-width 767px) {
-                        margin-top: 1rem;
-                        margin-left: 0;
-                    }
-                }
-            }
-            .birthday__group {
-                display: flex;
-                .select__group {
-                    width: 100%;
-                    @include breakpoint(768px) {
-                        width: calc( (100% - 2rem) / 3);
-                    }
-                    &:nth-child(2) {
-                        @include breakpoint(max-width 767px) {
-                            margin-left: 0;
-                        }
-                    }
-                    +.select__group {
-                        @include breakpoint(max-width 767px) {
-                            margin-top: 1rem;
-                            width: calc( (100% - 1rem) / 2);
-                        }
-                    }
-                    select {
-                        min-width: auto;
-                        width: 100%;
                     }
                 }
             }
@@ -320,6 +175,200 @@
         }
         .h2 {
             font-size: 18px;
+        }
+    }
+    .form {
+        +.form {
+            margin-top: 30px;
+        }
+        >.form__group {
+            max-width: none;
+            margin-top: 10px;
+            label+label {
+                margin-top: 20px;
+            }
+        }
+        >.form__group,
+        >.select__group {
+            .btn--small {
+                margin-top: 20px;
+            }
+        }
+        .form__edit {
+            font-size: 1rem;
+            >* {
+                line-height: 1.5;
+            }
+            >.h3 {
+                position: relative;
+                padding-right: 1.25em;
+                font-weight: 600;
+                @include breakpoint(1024px) {
+                    font-weight: 500;
+                }
+                i.icon {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    cursor: pointer;
+                    @include translateY(-50%);
+                }
+            }
+            &:hover {
+                background-color: $gray;
+            }
+        }
+        .form__value {
+            font-size: 1rem;
+            line-height: 1.5;
+            word-break: break-word;
+            &.form__value--blank {
+                color: $secondary;
+            }
+            &.blank__show {
+                color: $black;
+            }
+            a {
+                color: $surface;
+                text-decoration: underline;
+                &:hover {
+                    color: $primary;
+                }
+            }
+            img,
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                width: 3.125rem;
+                margin-right: 10px;
+            }
+        }
+        .address__group {
+            margin-top: 10px;
+            .form__group {
+                @include breakpoint(375px) {
+                    margin-left: 1rem;
+                }
+                max-width: none;
+                .form__group__input {
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
+            .select__group {
+                @include breakpoint(max-width 374px) {
+                    width: 100%;
+                }
+                @include breakpoint(375px) {
+                    width: calc( (100% - 1rem) / 2);
+                }
+                @include breakpoint(768px) {
+                    width: 120px;
+                }
+                &.select__group--notallowed {
+                    position: relative;
+                    select {
+                        padding: 1rem;
+                        background-image: none !important;
+                    }
+                    &::after {
+                        @include beforeafter('', block);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+                select {
+                    width: 100%;
+                    min-width: auto;
+                }
+                +.select__group {
+                    @include breakpoint(max-width 374px) {
+                        margin-left: 0;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            &.address__group--taiwan {
+                .form__group {
+                    width: 100%;
+                    max-width: none;
+                    @include breakpoint(768px) {
+                        width: calc(100% - 240px - 2rem);
+                    }
+                    @include breakpoint(max-width 767px) {
+                        margin-top: 1rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+            &.address__group--oversea {
+                .form__group {
+                    width: 100%;
+                    max-width: none;
+                    @include breakpoint(768px) {
+                        width: calc(100% - 120px - 1rem);
+                    }
+                    @include breakpoint(max-width 767px) {
+                        margin-top: 1rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        .taiwan {
+            .form__group {
+                max-width: none;
+                width: 100%;
+                @include breakpoint(768px) {
+                    width: calc(100% - 280px - 2rem);
+                }
+                @include breakpoint(max-width 767px) {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                }
+            }
+        }
+        .oversea {
+            margin-top: 20px;
+            .form__group {
+                width: 100%;
+                @include breakpoint(768px) {
+                    width: calc(100% - 140px - 1rem);
+                }
+                @include breakpoint(max-width 767px) {
+                    margin-top: 1rem;
+                    margin-left: 0;
+                }
+            }
+        }
+        .birthday__group {
+            display: flex;
+            .select__group {
+                width: 100%;
+                @include breakpoint(768px) {
+                    width: calc( (100% - 2rem) / 3);
+                }
+                &:nth-child(2) {
+                    @include breakpoint(max-width 767px) {
+                        margin-left: 0;
+                    }
+                }
+                +.select__group {
+                    @include breakpoint(max-width 767px) {
+                        margin-top: 1rem;
+                        width: calc( (100% - 1rem) / 2);
+                    }
+                }
+                select {
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
         }
     }
     .planning__group {
@@ -433,6 +482,15 @@
                 width: calc(100% - 3rem);
                 &.w-100 {
                     width: 100%;
+                }
+            }
+        }
+        &.label__group--inline {
+            font-size: 0;
+            label {
+                display: inline-block;
+                + label {
+                    margin-top: 0;
                 }
             }
         }

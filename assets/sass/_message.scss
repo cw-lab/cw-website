@@ -228,6 +228,13 @@ body.message__open {
             }
         }
     }
+    .select__group {
+        select {
+            @include breakpoint(max-width 374px) {
+                min-width: 110px;
+            }
+        }
+    }
 }
 
 .message__close, .touch__close {

@@ -4847,6 +4847,11 @@ body.message__open {
   padding-top: 20px;
   text-align: center;
 }
+@media (max-width: 374px) {
+  .message .select__group select {
+    min-width: 110px;
+  }
+}
 
 .message__close, .touch__close {
   position: absolute;

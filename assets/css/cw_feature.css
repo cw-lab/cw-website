@@ -2168,8 +2168,8 @@ a:focus {
 }
 .btn--text {
   display: inline;
-  min-width: auto;
-  padding: 0;
+  min-width: auto !important;
+  padding: 0 !important;
   color: #003a9f;
   text-decoration: underline;
   border: 0;
@@ -2783,7 +2783,7 @@ header a.logo.logo--sub {
   font-weight: 500;
 }
 header .search__icon {
-  margin-left: 30px;
+  margin-left: 1rem;
   position: relative;
   cursor: pointer;
 }

@@ -3802,8 +3802,8 @@ a:focus {
 }
 .btn--text {
   display: inline;
-  min-width: auto;
-  padding: 0;
+  min-width: auto !important;
+  padding: 0 !important;
   color: #003a9f;
   text-decoration: underline;
   border: 0;
@@ -5047,7 +5047,7 @@ header a.logo.logo--sub {
   font-weight: 500;
 }
 header .search__icon {
-  margin-left: 30px;
+  margin-left: 1rem;
   position: relative;
   cursor: pointer;
 }
@@ -6714,6 +6714,7 @@ ul.article__share li a {
 @media (max-width: 1023px) {
   ul.article__share li a {
     padding: 10px;
+    color: #48545D;
   }
 }
 @media (min-width: 1024px) {
@@ -6728,12 +6729,20 @@ ul.article__share li a {
 }
 @media (max-width: 1023px) {
   ul.article__share li a i.icon {
-    font-size: 1.25rem;
+    font-size: 1.475rem;
   }
 }
 @media (min-width: 1024px) {
   ul.article__share li a i.icon {
     line-height: calc(3rem - 2px);
+  }
+}
+@media (max-width: 1023px) {
+  ul.article__share li.tooltips--line a {
+    color: #00C200;
+  }
+  ul.article__share li.tooltips--facebook a {
+    color: #1877F2;
   }
 }
 

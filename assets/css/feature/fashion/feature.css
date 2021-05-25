@@ -2668,7 +2668,7 @@ header a.logo.logo--sub {
   font-weight: 500;
 }
 header .search__icon {
-  margin-left: 30px;
+  margin-left: 1rem;
   position: relative;
   cursor: pointer;
 }

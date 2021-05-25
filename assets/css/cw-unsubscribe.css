@@ -3006,8 +3006,8 @@ a:focus {
 }
 .btn--text {
   display: inline;
-  min-width: auto;
-  padding: 0;
+  min-width: auto !important;
+  padding: 0 !important;
   color: #003a9f;
   text-decoration: underline;
   border: 0;

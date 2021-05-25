@@ -88,8 +88,8 @@ a {
     }
     &--text {
         display: inline;
-        min-width: auto;
-        padding: 0;
+        min-width: auto !important;
+        padding: 0 !important;
         color: $surface;
         text-decoration: underline;
         border: 0;

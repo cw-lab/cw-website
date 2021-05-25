@@ -100,6 +100,7 @@ ul.article__share {
             border-width: 0;
             @include breakpoint(max-width 1023px) {
                 padding: 10px;
+                color: $secondary-variant;
             }
             @include breakpoint(1024px) {
                 width: 3rem;
@@ -109,11 +110,19 @@ ul.article__share {
             }
             i.icon {
                 @include breakpoint(max-width 1023px) {
-                    font-size: 1.25rem;
+                    font-size: 1.475rem;
                 }
                 @include breakpoint(1024px) {
                     line-height: calc(3rem - 2px);
                 }
+            }
+        }
+        @include breakpoint(max-width 1023px) {
+            &.tooltips--line a {
+                color: $line;
+            }
+            &.tooltips--facebook a {
+                color: $facebook;
             }
         }
     }

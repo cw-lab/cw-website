@@ -217,13 +217,18 @@ $(function() {
         var height = $(window).height(),
             footerHeight = $('footer').outerHeight(),
             container = $("header .container").outerWidth(),
+            appOffsetTop = $('#app').offset().top,
+            mainOffsetTop = $('.main').offset().top,
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
-        if (width >= 1024) {
-            $('body').css({ 'padding-bottom': footerHeight });
-        } else {
-            $('body').css({ 'padding-bottom': 0 });
-        }
+        // if (width >= 1024) {
+        //     $('body').css({ 'padding-bottom': footerHeight });
+        // } else {
+        //     $('body').css({ 'padding-bottom': 0 });
+        // }
+        $('#app').css('min-height', (height - appOffsetTop - footerHeight));
+        $('.main').css('min-height', (height - mainOffsetTop - footerHeight));
+
         // sidemenu-left
         $(".menubar--left > ul > li > .li__group > i.more, .menubar__user--member > ul > li > .li__group > i.more").click(function(event) {
             $(this).toggleClass("active");

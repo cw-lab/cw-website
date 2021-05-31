@@ -198,14 +198,17 @@ $(function() {
         var height = $(window).height(),
             footerHeight = $('footer').outerHeight(),
             container = $("header .container").outerWidth(),
+            mainOffsetTop = $('main').offset().top,
             articleContainFluid = $(".article__info").outerWidth(),
             articleTextWidth = $(".article__text").outerWidth();
         // adBlock();
-        if ((width >= 1024) && ($('footer').length !== 0)) {
-            $('body').css({ 'padding-bottom': footerHeight });
-        } else {
-            $('body').css({ 'padding-bottom': 0 });
-        }
+        // if ((width >= 1024) && ($('footer').length !== 0)) {
+        //     $('body').css({ 'padding-bottom': footerHeight });
+        // } else {
+        //     $('body').css({ 'padding-bottom': 0 });
+        // }
+        $('main').css('min-height', (height - mainOffsetTop - footerHeight));
+
         // 判斷有沒有值
         $("input.form__group__input").each(function() {
             if (this.value) {

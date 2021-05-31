@@ -3,12 +3,12 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: $gray-100;
-    @include breakpoint(1024px) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 4;
-    }
+    // @include breakpoint(1024px) {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //     z-index: 4;
+    // }
     a {
         color: $text;
         &:hover {

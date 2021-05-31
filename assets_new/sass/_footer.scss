@@ -2,11 +2,11 @@ footer {
     position: relative;
     width: 100%;
     background-color: $gray-100;
-    @include breakpoint(768px) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-    }
+    // @include breakpoint(768px) {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    // }
     .container {
         &:last-child {
             padding-top: 30px;

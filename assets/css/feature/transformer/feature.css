@@ -305,7 +305,6 @@ body {
 }
 @media (min-width: 1024px) {
   body {
-    padding-bottom: 404px;
     font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
     font-display: swap;
   }
@@ -2797,14 +2796,6 @@ footer {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #EEEEEE;
-}
-@media (min-width: 1024px) {
-  footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 4;
-  }
 }
 footer a {
   color: #171717;

@@ -120,37 +120,11 @@ textarea {
 body {
     position: relative;
     min-height: 100%;
-    // padding-bottom: 500px;
+    padding-bottom: 0 !important;
     @include breakpoint(1024px) {
-        // padding-bottom: 404px;
         font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
-        // font-weight: 300;
         font-display: swap;
     }
-    // &.footer--downward {
-    //     padding-bottom: 160px;
-    //     @include breakpoint(768px) {
-    //         padding-bottom: 228px;
-    //     }
-    //     @include breakpoint(872px) {
-    //         padding-bottom: 209px;
-    //     }
-    //     @include breakpoint(874px) {
-    //         padding-bottom: 190px;
-    //     }
-    // }
-    // &.footer--normal {
-    //     padding-bottom: 280px;
-    //     @include breakpoint(768px) {
-    //         padding-bottom: 228px;
-    //     }
-    //     @include breakpoint(872px) {
-    //         padding-bottom: 209px;
-    //     }
-    //     @include breakpoint(874px) {
-    //         padding-bottom: 190px;
-    //     }
-    // }
     &.opened {
         overflow: hidden;
     }

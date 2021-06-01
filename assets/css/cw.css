@@ -307,6 +307,7 @@ textarea {
 body {
   position: relative;
   min-height: 100%;
+  padding-bottom: 0 !important;
 }
 @media (min-width: 1024px) {
   body {
@@ -7623,6 +7624,35 @@ article.article__level--2 ul.article__keyword li a {
   -webkit-box-orient: vertical;
 }
 
+.article__page header .container > .item.item--right > .btn--black {
+  display: none !important;
+}
+@media (max-width: 1023px) {
+  .article__page .card__group.card__group--grid {
+    display: block;
+  }
+  .article__page .card__group.card__group--grid .card__item {
+    display: block;
+    width: 100%;
+  }
+  .article__page .card__group.card__group--grid .card__img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 110px;
+  }
+  .article__page .card__group.card__group--grid .card__body {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 110px);
+    padding-left: 20px;
+  }
+  .article__page .card__group.card__group--grid .card__body .card__title {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
 .article__page .card__img {
   overflow: hidden;
 }

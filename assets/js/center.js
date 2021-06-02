@@ -19,6 +19,7 @@ $(function() {
         })
     };
     tableHistory(width);
+    // 滑除移入後讓提醒消失
     $('.table__group').mouseover(function(){
         $('.scroll__remind').fadeOut();
     })

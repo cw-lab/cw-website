@@ -631,12 +631,15 @@
 @media (min-width: 1024px) {
   .center__page .table {
     display: table;
-    width: 1110px;
+    width: 1115px;
     font-size: 1.125rem;
   }
   .center__page .table a.btn {
     font-size: 1.125rem;
   }
+}
+.center__page .table__group {
+  position: relative;
 }
 .center__page .table__group.border-1 {
   width: 100%;
@@ -741,6 +744,46 @@
 }
 .center__page .table__group .table__btn {
   display: none;
+}
+.center__page .table__group .scroll__remind {
+  position: absolute;
+  display: none;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#00FAFAFA', endColorstr='#FFFAFAFA');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhZmFmYSIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmYWZhZmEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(250, 250, 250, 0)), color-stop(100%, #fafafa));
+  background-image: -moz-linear-gradient(left, rgba(250, 250, 250, 0) 0%, #fafafa 100%);
+  background-image: -webkit-linear-gradient(left, rgba(250, 250, 250, 0) 0%, #fafafa 100%);
+  background-image: linear-gradient(to right, rgba(250, 250, 250, 0) 0%, #fafafa 100%);
+}
+@media screen and (min-width: 1024px) {
+  .center__page .table__group .scroll__remind {
+    display: block;
+  }
+}
+.center__page .table__group .scroll__remind span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #003a9f;
+  font-size: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 0 #fafafa;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1024px) {
+  .center__page .table__group .scroll__remind span {
+    font-weight: 500;
+  }
 }
 .center__page .table.table__ellipsis + .table__btn {
   display: block;

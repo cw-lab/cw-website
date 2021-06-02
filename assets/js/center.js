@@ -19,6 +19,9 @@ $(function() {
         })
     };
     tableHistory(width);
+    $('.table__group').mouseover(function(){
+        $('.scroll__remind').fadeOut();
+    })
     $('.table__btn').click(function() {
         $(this).hide();
         $(this).siblings('.table').removeClass('table__ellipsis');

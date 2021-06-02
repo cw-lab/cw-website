@@ -502,13 +502,14 @@
         width: 100%;
         @include breakpoint(1024px) {
             display: table;
-            width: 1110px;
+            width: 1115px;
             font-size: 1.125rem;
             a.btn {
                 font-size: 1.125rem;
             }
         }
         &__group {
+            position: relative;
             &.border-1 {
                 width: 100%;
                 overflow-x: scroll;
@@ -614,6 +615,33 @@
             }
             .table__btn {
                 display: none;
+            }
+            .scroll__remind {
+                position: absolute;
+                display: none;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 50%;
+                @include filter-gradient(rgba($gray, 0), $gray, horizontal);
+                @include background-image(linear-gradient(left, rgba($gray, 0) 0%,$gray 100%));
+                @media screen and (min-width: 1024px) {
+                    display: block;
+                }
+                span {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    color: $surface;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    text-shadow: 1px 1px 0 $gray;
+                    @include translate(-50%, -50%);
+                    @include breakpoint(1024px) {
+                        font-weight: 500;
+                    }
+                }
             }
         }
         &.table__ellipsis {

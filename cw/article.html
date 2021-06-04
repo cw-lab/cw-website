@@ -1140,6 +1140,7 @@
                     <ul class="article__provide">
                         <div class="title">其他</div>
                         <li class="tooltips tooltips--right function__save" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
+                        <li class="tooltips tooltips--right function__save2" data-tooltips="收藏文章"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
                         <li class="tooltips tooltips--right function__scale" data-tooltips="字體放大 120%"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                         <li class="tooltips tooltips--right function__download gtmEvent" id="pdf_download" gtm-name="pdf_download" data-tooltips="下載 PDF"><span><i class="icon icon-download"></i></span></li>
                         <li class="tooltips tooltips--right function__paid gtmEvent" id="pay_read" gtm-name="pay_point" data-tooltips="單篇付費閱讀"><span><i class="icon icon-coin"></i></span></li>
@@ -2044,6 +2045,50 @@
             </div>
         </div>
     </div>
+    <div id="verify" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt pb20">
+                <h2>您的帳號尚未驗證！</h2>
+                <p>為提供您更好的服務品質，請先完成 Email 驗證流程。<br/>若您有其它問題可<a href="https://member.cwg.tw/contact" class="btn--text" target="_blank" rel="noopener noreferrer">聯絡客服</a>。</p>
+                <form class="form">
+                    <div class="form__group form__group--filled w-100">
+                        <label for="#!" class="label">
+                            <div class="form__group__placeholder">請輸入 e-mail</div>
+                            <input type="email" class="form__group__input form__group__input--default">
+                        </label>
+                    </div>
+                </form>
+                <!-- 錯誤狀態 -->
+                <form class="form mt10">
+                    <div class="form__group form__group--filled form__group--error w-100">
+                        <label for="#!" class="label">
+                            <div class="form__group__placeholder">請輸入 e-mail</div>
+                            <input type="email" class="form__group__input form__group__input--default" value="account@cw">
+                            <i class="form__group__help form__group__help--highlight">信箱格式錯誤</i>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--outlined btn__close">下次再提醒</button>
+                <button id="submitVerify" class="btn btn--contained">送出驗證</button>
+            </div>
+        </div>
+    </div>
+    <div id="verifyEdm" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt pb20">
+                <h2>已發送驗證信</h2>
+                <p>天下雜誌群已發出驗證信至您的信箱<a href="mailto:alleylin@cw.com.tw" class="btn--text">alleylin@cw.com.tw</a>，請於 2 小時內點擊信件中的驗證連結，即可繼續使用。</p>
+                <p>若您位在信件夾中發現驗證信，請檢查您的垃圾郵件，如您有其它問題可<a href="https://member.cwg.tw/contact" class="btn--text" target="_blank" rel="noopener noreferrer">聯絡客服</a>。</p>
+            </div>
+            <div class="message__btn">
+                <button class="btn btn--contained btn__close">我知道了</button>
+            </div>
+        </div>
+    </div>
     <div id="anniv__my40" class="message message--anniv message--center" style="display: none;">
         <div class="message__container">
             <div class="message__head text-center">
@@ -2100,6 +2145,15 @@
                 setTimeout(function() {
                     $('.message--notification').fadeOut()
                 }, 2000);
+            });
+            $('.function__save2').click(function() {
+                $('#verify').fadeIn();
+                $('.black').addClass('opened');
+            });
+            $('#submitVerify').click(function() {
+                $('#verify').fadeOut();
+                $('#verifyEdm').fadeIn();
+                $('.black').addClass('opened');
             });
         })
     </script>

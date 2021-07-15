@@ -120,21 +120,6 @@ $(function() {
         })
     }
 
-    // 打開小辭典
-    function openDictionary() {
-        $('.more').each(function() {
-            $(this).click(function() {
-                $(this).siblings('.more__text').slideToggle({
-                    complete: function() {
-                        var status = $(this).is(':visible') ? 'block' : 'none';
-                        $(this).css('display', status);
-                    },
-                });
-            });
-        });
-    }
-    openDictionary();
-
     function adBlock() {
         $('[class*="cw__advertising"]').each(function() {
             if (($(this).height() < 80) && (!$(this).hasClass('ad--scrollvideo'))) {
@@ -471,3 +456,17 @@ $(function() {
         })
     })
 });
+
+// 打開小辭典
+function openDictionary() {
+    $('.more').each(function() {
+        $(this).click(function() {
+            $(this).siblings('.more__text').slideToggle({
+                complete: function() {
+                    var status = $(this).is(':visible') ? 'block' : 'none';
+                    $(this).css('display', status);
+                },
+            });
+        });
+    });
+}

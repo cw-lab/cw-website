@@ -4844,7 +4844,7 @@ ul.article__provide li span i.icon {
 .article__content blockquote::after {
   bottom: 0;
 }
-.article__content .more {
+.article__content .more, .article__content .more__btn {
   position: relative;
   display: inline-block;
   padding-right: 1.15em;
@@ -4853,7 +4853,7 @@ ul.article__provide li span i.icon {
   border-bottom: 1px dashed #D60C18;
   cursor: pointer;
 }
-.article__content .more::before {
+.article__content .more::before, .article__content .more__btn::before {
   content: "";
   display: block;
   position: absolute;
@@ -4866,8 +4866,11 @@ ul.article__provide li span i.icon {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.article__content .more:hover {
+.article__content .more:hover, .article__content .more__btn:hover {
   color: #9D0505;
+}
+.article__content .more__input:checked + .more__btn + .more__text {
+  display: block;
 }
 .article__content .more__text {
   display: none;

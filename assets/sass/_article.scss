@@ -185,7 +185,7 @@
 		}
 	}
 	// 小辭典
-	.more {
+	.more, .more__btn {
 		position: relative;
 		display: inline-block;
 		padding-right: 1.15em;
@@ -204,6 +204,11 @@
 		}
 		&:hover {
 			color: $primary-variant;
+		}
+	}
+	.more__input {
+		&:checked + .more__btn + .more__text {
+			display: block;
 		}
 	}
 	.more__text {

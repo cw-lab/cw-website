@@ -68,9 +68,20 @@
 
 .article__body {
 	position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 135px 700px 135px;
+    grid-template-columns: 135px 700px 135px;
 	z-index: 0;
 	@include breakpoint(1024px) {
 		z-index: 3;
+	}
+	.article__left {
+		padding-right: 20px;
+	}
+	.article__right {
+		padding-left: 20px;
+		padding-top: 100vh;
 	}
 }
 
@@ -95,7 +106,7 @@
 	margin-right: auto;
 }
 
-.article__body,
+// .article__body,
 .article__foot {
 	max-width: 640px;
 	width: 100%;

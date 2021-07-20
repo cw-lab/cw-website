@@ -58,4 +58,17 @@
             padding: 0 20px;
         }
     }
+    .form__group--outlined {
+        .form__group__input {
+            background-color: $white;
+        }
+        &:hover, .hasValue {
+            .form__group__placeholder {
+                background: $gray-100;
+                background: -moz-linear-gradient(180deg, rgba($gray-100,1) 64%, rgba($white,0) 64%);
+                background: -webkit-linear-gradient(180deg, rgba($gray-100,1) 64%, rgba($white,0) 64%);
+                background: linear-gradient(180deg, rgba($gray-100,1) 64%, rgba($white,0) 64%);    
+            }
+        }
+    }
 }

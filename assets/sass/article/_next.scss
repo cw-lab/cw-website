@@ -1,25 +1,8 @@
 .article__next {
-    // display: none;
     position: fixed;
-    overflow: hidden;
-    &.show {
-        overflow: visible;
-    }
-    @include breakpoint(1024px) {
-        top: 50%;
-        left: calc(((100% - 600px) / 2) + 600px + 20px);
-        width: 0;
-        @include translateY(-50%);
-        &.show {
-            width: 165px;
-        }
-    }
-    @include breakpoint(1140px) {
-        left: calc(((100% - 700px) / 2) + 700px + 20px);
-        &.show {
-            width: 180px;
-        }
-    }
+    position: -webkit-sticky;
+    position: sticky;
+    margin-right: -65px;
     @include breakpoint(max-width 1023px) {
         bottom: 60px;
         left: 20px;
@@ -33,15 +16,15 @@
     }
     z-index: 5;
     a {
-        display: none;
+        display: block;
         width: 100%;
         font-size: 0;
         background-color: $white;
         border: 1px solid $gray-200;
-        @include breakpoint(1024px) {
-            position: absolute;
-            bottom: 0;
-        }
+        // @include breakpoint(1024px) {
+        //     position: absolute;
+        //     bottom: 0;
+        // }
         span {
             display: block;
         }

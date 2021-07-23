@@ -4,9 +4,8 @@
         position: -webkit-sticky;
         position: sticky;
         display: block !important;
-    }
-	@include breakpoint(1200px) {
-        margin-right: -65px;
+        width: 180px;
+        opacity: 1 !important;
     }
     @include breakpoint(max-width 1023px) {
         display: none;

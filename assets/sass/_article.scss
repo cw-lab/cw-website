@@ -97,12 +97,14 @@
 		}
 	}
 	.article__right {
-		padding-top: 0 !important;
 		@include breakpoint(1024px) {
 			padding-left: 20px;
 			padding-top: 100vh;
 			grid-column: 3;
 			-ms-grid-column: 3;
+		}
+		@include breakpoint(max-width 1023px) {
+			padding-top: 0 !important;
 		}
 	}
 }

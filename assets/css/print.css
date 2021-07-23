@@ -4452,15 +4452,17 @@ main .ad.ad--970by250.opened {
     -ms-grid-column: 2;
   }
 }
-.article__body .article__right {
-  padding-top: 0 !important;
-}
 @media (min-width: 1024px) {
   .article__body .article__right {
     padding-left: 20px;
     padding-top: 100vh;
     grid-column: 3;
     -ms-grid-column: 3;
+  }
+}
+@media (max-width: 1023px) {
+  .article__body .article__right {
+    padding-top: 0 !important;
   }
 }
 
@@ -5022,11 +5024,8 @@ ul.article__provide li span i.icon {
     position: -webkit-sticky;
     position: sticky;
     display: block !important;
-  }
-}
-@media (min-width: 1200px) {
-  .article__next {
-    margin-right: -65px;
+    width: 180px;
+    opacity: 1 !important;
   }
 }
 @media (max-width: 1023px) {

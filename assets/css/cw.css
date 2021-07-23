@@ -6608,6 +6608,13 @@ main .ad.ad--970by250.opened {
     display: none !important;
   }
 }
+.article__function.article__function--ie {
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 ul.article__share,
 ul.article__provide {

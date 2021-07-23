@@ -84,6 +84,7 @@ function articleInint() {
             }
             if(ie) {
                 next.addClass('article__next--ie')
+                functionGroup.addClass('article__function--ie')
             }
             if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 next.addClass('show').fadeIn();

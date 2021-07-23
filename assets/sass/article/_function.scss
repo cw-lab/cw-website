@@ -7,6 +7,10 @@
     @include breakpoint(max-width 1023px) {
         display: none !important;
     }
+    &.article__function--ie {
+        top: 50%;
+        @include translateY(-50%);
+    }
 }
 
 ul.article__share,

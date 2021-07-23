@@ -37,34 +37,38 @@ WebFontConfig = {
     s.parentNode.insertBefore(wf, s);
 })();
 
+// 判斷系統
+var iphone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null),
+    android = (navigator.userAgent.match(/android/i) != null),
+    ipad = navigator.userAgent.match(/iPad/i) != null,
+    // 判斷瀏覽器
+    chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
+    safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
+    ie = false,
+    old_ie = window.navigator.userAgent.indexOf('MSIE '),
+    new_ie = window.navigator.userAgent.indexOf('Trident/');
+if ((old_ie > -1) || (new_ie > -1)) {
+    ie = true;
+}
+if (chrome) {
+    $("body").addClass("chrome");
+}
+if (ie) {
+    $("body").addClass("ie");
+}
+if (android || ipad || iphone) {
+    $("body").addClass("mobile__device");
+}
+if (android) {
+    $("body").addClass("android");
+}
+
 $(function() {
     var width = $(window).width(),
         height = $(window).height(),
         originTitle = $('title').text(),
         originLink = window.location.pathname.split("/").pop(),
-        originString = window.location.search,
-        // 判斷系統
-        iphone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null),
-        android = (navigator.userAgent.match(/android/i) != null),
-        ipad = navigator.userAgent.match(/iPad/i) != null,
-        // 判斷瀏覽器
-        chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
-        safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
-        ie = false,
-        old_ie = window.navigator.userAgent.indexOf('MSIE '),
-        new_ie = window.navigator.userAgent.indexOf('Trident/');
-    if (chrome) {
-        $("body").addClass("chrome");
-    }
-    if (android || ipad || iphone) {
-        $("body").addClass("mobile__device");
-    }
-    if (android) {
-        $("body").addClass("android");
-    }
-    if ((old_ie > -1) || (new_ie > -1)) {
-        ie = true;
-    }
+        originString = window.location.search;
     // 漢堡
     $('body').append('<div class="black"></div><div class="opacity"></div>');
     $('.hamburger').click(function() {

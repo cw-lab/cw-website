@@ -77,11 +77,14 @@ function articleInint() {
             functionGroup.css({
                 'top': ((height - functionGroupHeight) / 2)
             })
-            // if ((width >= 1024) && (scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-            //     functionGroup.fadeIn(150);
-            // } else {
-            //     functionGroup.fadeOut(150);
-            // }
+            if ((ie) && (width >= 1024) && (scroll >= (articleBodyTop - headerHeight)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                functionGroup.fadeIn(150);
+            } else {
+                functionGroup.fadeOut(150);
+            }
+            if(ie) {
+                next.addClass('article__next--ie')
+            }
             if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                 next.addClass('show').fadeIn();
             } else {

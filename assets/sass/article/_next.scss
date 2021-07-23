@@ -3,9 +3,11 @@
     @include breakpoint(1024px) {
         position: -webkit-sticky;
         position: sticky;
-        display: block !important;
         width: 180px;
-        opacity: 1 !important;
+        &:not(.article__next--ie) {
+            display: block !important;
+            opacity: 1 !important;
+        }
     }
     @include breakpoint(max-width 1023px) {
         display: none;

@@ -44,6 +44,7 @@ var iphone = (navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAg
     // 判斷瀏覽器
     chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor),
     safari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
+    firefox = navigator.userAgent.match("Firefox"),
     ie = false,
     old_ie = window.navigator.userAgent.indexOf('MSIE '),
     new_ie = window.navigator.userAgent.indexOf('Trident/');
@@ -55,6 +56,9 @@ if (chrome) {
 }
 if (ie) {
     $("body").addClass("ie");
+}
+if (firefox) {
+    $("body").addClass("firefox");
 }
 if (android || ipad || iphone) {
     $("body").addClass("mobile__device");

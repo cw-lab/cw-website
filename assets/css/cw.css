@@ -6519,11 +6519,19 @@ main .ad.ad--970by250.opened {
   .article__body .article__left {
     padding-right: 20px;
     text-align: center;
+    grid-column: 1;
+    -ms-grid-column: 1;
   }
 }
 @media (min-width: 1200px) {
   .article__body .article__left {
     text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .article__body .article__tracking {
+    grid-column: 2;
+    -ms-grid-column: 2;
   }
 }
 .article__body .article__right {
@@ -6533,6 +6541,8 @@ main .ad.ad--970by250.opened {
   .article__body .article__right {
     padding-left: 20px;
     padding-top: 100vh;
+    grid-column: 3;
+    -ms-grid-column: 3;
   }
 }
 

@@ -8,7 +8,7 @@
         display: none !important;
     }
     &.article__function--ie {
-        top: 50%;
+        top: 50% !important;
         @include translateY(-50%);
     }
 }

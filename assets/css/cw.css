@@ -6609,7 +6609,7 @@ main .ad.ad--970by250.opened {
   }
 }
 .article__function.article__function--ie {
-  top: 50%;
+  top: 50% !important;
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);

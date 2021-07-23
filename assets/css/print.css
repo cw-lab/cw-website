@@ -4415,10 +4415,6 @@ main .ad.ad--970by250.opened {
   }
 }
 
-.article__body {
-  position: relative;
-  z-index: 0;
-}
 @media (min-width: 1024px) {
   .article__body {
     display: -ms-grid;
@@ -4445,6 +4441,10 @@ main .ad.ad--970by250.opened {
   .article__body .article__left {
     text-align: left;
   }
+}
+.article__body .article__tracking {
+  position: relative;
+  z-index: 0;
 }
 @media (min-width: 1024px) {
   .article__body .article__tracking {
@@ -5023,8 +5023,10 @@ ul.article__provide li span i.icon {
   .article__next {
     position: -webkit-sticky;
     position: sticky;
-    display: block !important;
     width: 180px;
+  }
+  .article__next:not(.article__next--ie) {
+    display: block !important;
     opacity: 1 !important;
   }
 }

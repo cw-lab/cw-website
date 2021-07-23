@@ -6497,10 +6497,6 @@ main .ad.ad--970by250.opened {
   }
 }
 
-.article__body {
-  position: relative;
-  z-index: 0;
-}
 @media (min-width: 1024px) {
   .article__body {
     display: -ms-grid;
@@ -6527,6 +6523,10 @@ main .ad.ad--970by250.opened {
   .article__body .article__left {
     text-align: left;
   }
+}
+.article__body .article__tracking {
+  position: relative;
+  z-index: 0;
 }
 @media (min-width: 1024px) {
   .article__body .article__tracking {

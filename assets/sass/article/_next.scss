@@ -1,17 +1,22 @@
 .article__next {
     position: fixed;
-    position: -webkit-sticky;
-    position: sticky;
-    margin-right: -65px;
+    @include breakpoint(1024px) {
+        position: -webkit-sticky;
+        position: sticky;
+        display: block !important;
+    }
+	@include breakpoint(1200px) {
+        margin-right: -65px;
+    }
     @include breakpoint(max-width 1023px) {
+        display: none;
+        top: auto !important;
         bottom: 60px;
         left: 20px;
+        right: 20px;
         height: auto !important;
         &.no__bottombar {
             bottom: 20px;
-        }
-        &.show {
-            right: 20px;
         }
     }
     z-index: 5;

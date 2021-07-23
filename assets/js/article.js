@@ -82,17 +82,11 @@ function articleInint() {
             // } else {
             //     functionGroup.fadeOut(150);
             // }
-            // if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
-            //     next.addClass('show');
-            //     next.children('a').fadeIn({
-            //         start: function() {
-            //             $(this).css('display', 'block');
-            //         }
-            //     });
-            // } else {
-            //     next.removeClass('show');
-            //     next.children('a').fadeOut();
-            // }
+            if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
+                next.addClass('show').fadeIn();
+            } else {
+                next.removeClass('show').fadeOut();
+            }
             if (scroll >= articleImgTop) {
                 $('.bulletin').addClass('hide');
             }

@@ -68,20 +68,32 @@
 
 .article__body {
 	position: relative;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 135px 700px 135px;
-    grid-template-columns: 135px 700px 135px;
 	z-index: 0;
 	@include breakpoint(1024px) {
-		z-index: 3;
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 200px calc(100% - 400px) 200px;
+		grid-template-columns: 200px calc(100% - 400px) 200px;
+	}
+	@include breakpoint(1200px) {
+		-ms-grid-columns: 135px 700px 135px;
+		grid-template-columns: 135px 700px 135px;
 	}
 	.article__left {
-		padding-right: 20px;
+		@include breakpoint(1024px) {
+			padding-right: 20px;
+			text-align: center;
+		}
+		@include breakpoint(1200px) {
+			text-align: left;
+		}
 	}
 	.article__right {
-		padding-left: 20px;
-		padding-top: 100vh;
+		padding-top: 0 !important;
+		@include breakpoint(1024px) {
+			padding-left: 20px;
+			padding-top: 100vh;
+		}
 	}
 }
 

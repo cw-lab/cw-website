@@ -205,6 +205,7 @@ main {
     amp-img {
         margin-left: -20px;
         margin-right: -20px;
+        background-color: $gray-100;
     }
 }
 
@@ -318,9 +319,57 @@ main {
     amp-img {
         margin-left: -20px;
         margin-right: -20px;
+        background-color: $gray-100;
+    }
+    table {
+        position: relative;
+        font-size: 1.125em;
+        line-height: 1.5;
+        border: solid $gray-200;
+        border-width: 1px 0 0 1px;
+        &::before {
+            @include beforeafter(url(https://www.cw.com.tw/images/common/logo.svg), block);
+            position: absolute;
+            top: 100%;
+            right: 0px;
+            margin-top: 5px;
+            width: 90px;
+        }
+        th, td {
+            padding: 5px;
+            border: solid $gray-200;
+            border-width: 0 1px 1px 0;
+        }
+        th {
+            background-color: $gray-100;
+            font-weight: 600;
+            @include breakpoint(1024px) {
+                font-weight: 500;
+            }
+        }
+    }
+    .article__table {
+        width: 100%;
+        margin-top: 1.15em;
+        margin-bottom: 1.15em;
+        padding-bottom: 45px;
+        overflow: scroll;
+        > table {
+            min-width: 100%;
+            width: 120%;
+        }
+    }
+    > table {
+        max-width: 100%;
+		margin-top: 1.15em;
+		margin-bottom: calc(1.15em + 40px);
     }
 }
-
+amp-image-viewer {
+    img {
+        background-color: $gray-100;
+    }
+}
 @import "amp/_next";
 @import "amp/_extended";
 @import "amp/_keyword";

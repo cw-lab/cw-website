@@ -5,6 +5,16 @@ ul.article__share {
         +li {
             margin-left: calc((100% - 120px) / 4);
         }
+        &.facebook {
+            a {
+                color: $facebook;
+            }
+        }
+        &.line {
+            a {
+                color: $line;
+            }
+        }
         a {
             display: block;
             padding: 10px;

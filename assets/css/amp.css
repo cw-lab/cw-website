@@ -1511,6 +1511,7 @@ main {
 .article__head amp-img {
   margin-left: -20px;
   margin-right: -20px;
+  background-color: #EEEEEE;
 }
 
 .article__body,
@@ -1542,6 +1543,12 @@ ul.article__share li {
 }
 ul.article__share li + li {
   margin-left: calc((100% - 120px) / 4);
+}
+ul.article__share li.facebook a {
+  color: #1877F2;
+}
+ul.article__share li.line a {
+  color: #00C200;
 }
 ul.article__share li a {
   display: block;
@@ -1730,6 +1737,57 @@ ul.article__share li a:hover {
 .article__content amp-img {
   margin-left: -20px;
   margin-right: -20px;
+  background-color: #EEEEEE;
+}
+.article__content table {
+  position: relative;
+  font-size: 1.125em;
+  line-height: 1.5;
+  border: solid #D3D5D7;
+  border-width: 1px 0 0 1px;
+}
+.article__content table::before {
+  content: url(https://www.cw.com.tw/images/common/logo.svg);
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  margin-top: 5px;
+  width: 90px;
+}
+.article__content table th, .article__content table td {
+  padding: 5px;
+  border: solid #D3D5D7;
+  border-width: 0 1px 1px 0;
+}
+.article__content table th {
+  background-color: #EEEEEE;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .article__content table th {
+    font-weight: 500;
+  }
+}
+.article__content .article__table {
+  width: 100%;
+  margin-top: 1.15em;
+  margin-bottom: 1.15em;
+  padding-bottom: 45px;
+  overflow: scroll;
+}
+.article__content .article__table > table {
+  min-width: 100%;
+  width: 120%;
+}
+.article__content > table {
+  max-width: 100%;
+  margin-top: 1.15em;
+  margin-bottom: calc(1.15em + 40px);
+}
+
+amp-image-viewer img {
+  background-color: #EEEEEE;
 }
 
 .article__next {

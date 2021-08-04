@@ -27,6 +27,8 @@
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
     <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
     <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+
     <script type=application/ld+json>
         {
             "@context": "https://schema.org",
@@ -762,9 +764,9 @@
                     </div>
                     <div class="title__share">
                         <ul class="article__share text-center">
-                            <li class="tooltips tooltips--right tooltips--facebook" data-tooltips="分享至 Facebook"><a href="#!" target="_blank"><i class="icon icon-facebook"></i></a></li>
-                            <li class="tooltips tooltips--right tooltips--line" data-tooltips="分享至 Line"><a href="#!" target="_blank"><i class="icon icon-line"></i></a></li>
-                            <li class="tooltips tooltips--right" data-tooltips="email 分享"><a href="#!" target="_blank"><i class="icon icon-mail"></i></a></li>
+                            <li data-tooltips="email 分享"><a href="#!" target="_blank"><i class="icon icon-mail"></i></a></li>
+                            <li class="line" data-tooltips="分享至 Line"><a href="#!" target="_blank"><i class="icon icon-line"></i></a></li>
+                            <li class="facebook" data-tooltips="分享至 Facebook"><a href="#!" target="_blank"><i class="icon icon-facebook"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -887,6 +889,110 @@
                     <p>
                         負債比，代表政府一年要用多少所得，才能把累積的債還完。負債比愈低，代表政府能夠償債的能力較強。
                     </p>
+                    <div class="article__table">
+                        <table align="left" border="1" cellpadding="1" cellspacing="1">
+                            <thead>
+                                <tr>
+                                    <th width="150">餐飲品牌</th>
+                                    <th width="90">代理時間</th>
+                                    <th width="150">現有店數</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>双聖美式餐飲連鎖</td>
+                                    <td>1984年</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>茹絲葵經典牛排館</td>
+                                    <td>1993年</td>
+                                    <td>台灣4家、中國3家、日本1家、香港2家、雅加達1家</td>
+                                </tr>
+                                <tr>
+                                    <td>Chili's美式休閒餐飲</td>
+                                    <td>2001年</td>
+                                    <td>台灣4家、日本2家</td>
+                                </tr>
+                                <tr>
+                                    <td>青木定治法式甜點沙龍</td>
+                                    <td>2008年</td>
+                                    <td>0（網購）</td>
+                                </tr>
+                                <tr>
+                                    <td>Nagi凪豚骨拉麵</td>
+                                    <td>2012年</td>
+                                    <td>台灣6家、中國1家、美國2家</td>
+                                </tr>
+                                <tr>
+                                    <td>RAW</td>
+                                    <td>2014年</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>祥雲龍吟</td>
+                                    <td>2014年</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>麥笛昆美式燒烤餐廳</td>
+                                    <td>2016年</td>
+                                    <td>0（辦活動為主）</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table align="left" border="1" cellpadding="1" cellspacing="1" width="100%">
+                        <thead>
+                            <tr>
+                                <th width="150">餐飲品牌</th>
+                                <th width="90">代理時間</th>
+                                <th width="150">現有店數</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>双聖美式餐飲連鎖</td>
+                                <td>1984年</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>茹絲葵經典牛排館</td>
+                                <td>1993年</td>
+                                <td>台灣4家、中國3家、日本1家、香港2家、雅加達1家</td>
+                            </tr>
+                            <tr>
+                                <td>Chili's美式休閒餐飲</td>
+                                <td>2001年</td>
+                                <td>台灣4家、日本2家</td>
+                            </tr>
+                            <tr>
+                                <td>青木定治法式甜點沙龍</td>
+                                <td>2008年</td>
+                                <td>0（網購）</td>
+                            </tr>
+                            <tr>
+                                <td>Nagi凪豚骨拉麵</td>
+                                <td>2012年</td>
+                                <td>台灣6家、中國1家、美國2家</td>
+                            </tr>
+                            <tr>
+                                <td>RAW</td>
+                                <td>2014年</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>祥雲龍吟</td>
+                                <td>2014年</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>麥笛昆美式燒烤餐廳</td>
+                                <td>2016年</td>
+                                <td>0（辦活動為主）</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <p>台灣在1998年實施「<strong>兩稅合一</strong>」，調降金融營業稅率並延長租稅優惠等，導致政府歲入大幅下滑。後來調降營所稅、遺產稅及<button on="tap:more1.toggleVisibility" class="more">贈與稅稅率</button><span id="more1" class="more__text" hidden>遺產及贈與稅新制上路，最高稅率由單一稅率10%改為累進稅率20%，遺產稅各級稅率門檻，遺產淨額5,000萬元以下者，稅率維持現行的10%。</span>，政府財政赤字一路上飆。直到2014年之後推動財政健全方案和檢討補助與退休金制度等稍微改善。
                     </p>
                     <p>台灣政府的負債比雖然較20年前高，但放在國際標準來看，仍很健康。</p>
@@ -911,6 +1017,15 @@
                     <p>
                         2001年中國加入WTO，關稅優惠待遇推升中國成為世界工廠，包括台商在內的資通訊代工業西進，利用中國廉價勞動力成長，帶動中國崛起的同時，也壓抑了台灣企業在台灣該落實的技術升級與員工調薪。
                     </p>
+                    <amp-iframe
+                        width="600"
+                        height="1556"
+                        sandbox="allow-scripts allow-same-origin"
+                        layout="responsive"
+                        frameborder="0"
+                        title="基金持股權重"
+                        src="https://web.cw.com.tw/infogram-projects/949150bc-ff1f-41ab-a3ab-b7efd98840d4.html"
+                    ></amp-iframe>
                     <p>
                         中國進入了台灣擅長的代工製造領域，發動紅海式的低價競爭。台灣出口商品價格逐年下跌，代表生產力雖然提升，卻都是奠基在生產愈來愈低價的產品上。
                     </p>

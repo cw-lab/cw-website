@@ -4526,6 +4526,13 @@ main .ad.ad--970by250.opened {
     display: none !important;
   }
 }
+.article__function.article__function--ie {
+  top: 50% !important;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
 ul.article__share,
 ul.article__provide {
@@ -4937,16 +4944,13 @@ ul.article__provide li span i.icon {
 }
 .article__content table {
   position: relative;
-  width: 100% !important;
-  margin-top: 1.15em;
-  margin-bottom: calc(40px + 1.15em);
   font-size: 1.125em;
   line-height: 1.5;
   border: solid #D3D5D7;
   border-width: 1px 0 0 1px;
 }
 .article__content table::before {
-  content: url(https://www.cw.com.tw/images/common/logo.svg);
+  content: url(../images/common/logo.svg);
   display: block;
   position: absolute;
   top: 100%;
@@ -4967,6 +4971,28 @@ ul.article__provide li span i.icon {
   .article__content table th {
     font-weight: 500;
   }
+}
+.article__content .article__table {
+  width: 100%;
+  margin-top: 1.15em;
+  margin-bottom: 1.15em;
+  padding-bottom: 45px;
+  overflow: scroll;
+}
+@media (min-width: 1024px) {
+  .article__content .article__table > table {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1024px) {
+  .article__content .article__table > table {
+    min-width: 120%;
+  }
+}
+.article__content > table {
+  width: 100% !important;
+  margin-top: 1.15em;
+  margin-bottom: calc(1.15em + 40px);
 }
 
 .article__box__group {
@@ -5326,7 +5352,8 @@ article.article__level--1 .preface > * {
 }
 article.article__level--1 .article__content p,
 article.article__level--1 .article__content ul,
-article.article__level--1 .article__content ol {
+article.article__level--1 .article__content ol,
+article.article__level--1 .article__content table {
   font-size: 1.375rem;
 }
 article.article__level--1 .article__extended ul {
@@ -5400,7 +5427,8 @@ article.article__level--2 .preface > * {
 }
 article.article__level--2 .article__content p,
 article.article__level--2 .article__content ul,
-article.article__level--2 .article__content ol {
+article.article__level--2 .article__content ol,
+article.article__level--2 .article__content table {
   font-size: 1.625rem;
 }
 article.article__level--2 .article__extended ul {

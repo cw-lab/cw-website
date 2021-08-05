@@ -343,9 +343,6 @@ main {
         th {
             background-color: $gray-100;
             font-weight: 600;
-            @include breakpoint(1024px) {
-                font-weight: 500;
-            }
         }
     }
     .article__table {

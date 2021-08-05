@@ -1764,11 +1764,6 @@ ul.article__share li a:hover {
   background-color: #EEEEEE;
   font-weight: 600;
 }
-@media (min-width: 1024px) {
-  .article__content table th {
-    font-weight: 500;
-  }
-}
 .article__content .article__table {
   width: 100%;
   margin-top: 1.15em;

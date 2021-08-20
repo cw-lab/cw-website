@@ -220,13 +220,14 @@
 		}
 	}
 	// 小辭典
-	.more, .more__btn {
+	.more__btn {
 		position: relative;
 		display: inline-block;
 		padding-right: 1.15em;
 		color: $primary;
 		line-height: 1.5;
 		border-bottom: 1px dashed $primary;
+		@include transition(color 0.3s, border-color 0.3s);
 		cursor: pointer;
 		&::before {
 			@include beforeafter("\e94b", block);
@@ -239,6 +240,7 @@
 		}
 		&:hover {
 			color: $primary-variant;
+			border-bottom-color: $primary-variant;
 		}
 	}
 	.more__input {

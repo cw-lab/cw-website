@@ -1693,22 +1693,20 @@ ul.article__share li a:hover {
 .article__content blockquote::after {
   bottom: 0;
 }
-.article__content .more {
+.article__content .more__btn {
   position: relative;
   display: inline-block;
   padding-right: 1.15em;
-  padding-left: 0;
   color: #D60C18;
   line-height: 1.5;
-  border: dashed #D60C18;
-  border-width: 0 0 1px;
-  background-color: transparent;
+  border-bottom: 1px dashed #D60C18;
+  -moz-transition: color 0.3s, border-color 0.3s;
+  -o-transition: color 0.3s, border-color 0.3s;
+  -webkit-transition: color 0.3s, border-color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
   cursor: pointer;
 }
-.article__content .more:focus {
-  outline: 0;
-}
-.article__content .more::before {
+.article__content .more__btn::before {
   content: "";
   display: block;
   position: absolute;
@@ -1721,11 +1719,15 @@ ul.article__share li a:hover {
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.article__content .more:hover {
+.article__content .more__btn:hover {
   color: #9D0505;
+  border-bottom-color: #9D0505;
+}
+.article__content .more__input:checked + .more__btn + .more__text {
+  display: block;
 }
 .article__content .more__text {
-  display: block;
+  display: none;
   width: 100%;
   margin: 10px 0;
   padding: 20px 40px;

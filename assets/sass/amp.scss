@@ -279,43 +279,44 @@ main {
         }
     }
     // 小辭典
-    .more {
-        position: relative;
-        display: inline-block;
-        padding-right: 1.15em;
-        padding-left: 0;
-        color: $primary;
-        line-height: 1.5;
-        border: dashed $primary;
-        border-width: 0 0 1px;
-        background-color: transparent;
-        cursor: pointer;
-        &:focus {
-            outline: 0;
-        }
-        &::before {
-            @include beforeafter('\e94b', block);
-            position: absolute;
-            top: 50%;
-            right: 0;
-            font-family: $icomoon-font-family;
-            line-height: 1;
-            @include translateY(-50%);
-        }
-        &:hover {
-            color: $primary-variant;
-        }
-    }
-    .more__text {
-        display: block;
-        width: 100%;
-        margin: 10px 0;
-        padding: 20px 40px;
-        background-color: $gray-100;
-        &.active {
-            display: block;
-        }
-    }
+	.more__btn {
+		position: relative;
+		display: inline-block;
+		padding-right: 1.15em;
+		color: $primary;
+		line-height: 1.5;
+		border-bottom: 1px dashed $primary;
+		@include transition(color 0.3s, border-color 0.3s);
+		cursor: pointer;
+		&::before {
+			@include beforeafter("\e94b", block);
+			position: absolute;
+			top: 50%;
+			right: 0;
+			font-family: $icomoon-font-family;
+			line-height: 1;
+			@include translateY(-50%);
+		}
+		&:hover {
+			color: $primary-variant;
+			border-bottom-color: $primary-variant;
+		}
+	}
+	.more__input {
+		&:checked + .more__btn + .more__text {
+			display: block;
+		}
+	}
+	.more__text {
+		display: none;
+		width: 100%;
+		margin: 10px 0;
+		padding: 20px 40px;
+		background-color: $gray-100;
+		&.active {
+			display: block;
+		}
+	}
     amp-img {
         margin-left: -20px;
         margin-right: -20px;

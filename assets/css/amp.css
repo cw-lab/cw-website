@@ -1726,6 +1726,10 @@ ul.article__share li a:hover {
   color: #9D0505;
   border-bottom-color: #9D0505;
 }
+.article__content .more__input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
 .article__content .more__input:checked + .more__btn + .more__text {
   display: block;
 }

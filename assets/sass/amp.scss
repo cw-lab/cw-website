@@ -306,6 +306,7 @@ main {
 		}
 	}
 	.more__input {
+        @include appearance(none);
 		&:checked + .more__btn + .more__text {
 			display: block;
 		}

@@ -1693,6 +1693,9 @@ ul.article__share li a:hover {
 .article__content blockquote::after {
   bottom: 0;
 }
+.article__content .more {
+  display: inline;
+}
 .article__content .more__btn {
   position: relative;
   display: inline-block;

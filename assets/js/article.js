@@ -74,14 +74,19 @@ function articleInint() {
                 }
                 if ((scroll >= (articleBodyTop - headerHeight)) && (scroll >= (articleRecommend.offset().top - 1500)) && (scroll < (articleRecommendTop - height + (functionGroupHeight / 2)))) {
                     next.addClass('show');
-                    next.children('a').fadeIn({
+                    next.children('h4, a').fadeIn({
+                        start: function() {
+                            $(this).css('display', 'block');
+                        }
+                    });
+                    next.children('').fadeIn({
                         start: function() {
                             $(this).css('display', 'block');
                         }
                     });
                 } else {
                     next.removeClass('show');
-                    next.children('a').fadeOut();
+                    next.children('h4, a').fadeOut();
                 }
                 if (scroll >= articleImgTop) {
                     $('.bulletin').addClass('hide');

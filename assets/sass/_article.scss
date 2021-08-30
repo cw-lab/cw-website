@@ -536,6 +536,43 @@ article {
 	}
 }
 
+.article__recommend {
+	&.article__recommend--default {
+		.card__group {
+			.card__item {
+				&:nth-child(7),
+				&:nth-child(8) {
+					display: none;
+				}
+			}
+		}
+	}
+	&.article__recommend--algorithm {
+		.card__group {
+			.card__item {
+				&:nth-child(3n+1) {
+					margin-left: 20px;
+				}
+				@media screen and (min-width: 1280px) {
+					&:nth-child(1),
+					&:nth-child(2) {
+						display: none;
+					}
+					&:nth-child(3n) {
+						margin-left: 0;
+					}
+				}
+				@media screen and (max-width: 1279px) {
+					&:nth-child(7),
+					&:nth-child(8) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
 @import "article/_card";
 .article__page {
 	header .container > .item.item--right > .btn--black {

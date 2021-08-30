@@ -32,16 +32,18 @@
         }
     }
     z-index: 5;
+    h4 {
+        display: none;
+        margin-top: 0;
+        margin-bottom: 15px;
+        @media screen and (max-width: 1279px) {
+            display: none !important;
+        }
+    }
     a {
         display: none;
         width: 100%;
         font-size: 0;
-        background-color: $white;
-        border: 1px solid $gray-200;
-        @include breakpoint(1024px) {
-            position: absolute;
-            bottom: 0;
-        }
         span {
             display: block;
         }
@@ -68,9 +70,6 @@
             }
         }
         .next__body {
-            @include breakpoint(1024px) {
-                padding: 20px 15px;
-            }
             @include breakpoint(max-width 1023px) {
                 display: inline-block;
                 width: calc(100% - 150px);
@@ -91,6 +90,71 @@
             .next__body {
                 .next__title {
                     color: $primary;
+                }
+            }
+        }
+    }
+    &.article__next--defalt {
+        a {
+            background-color: $white;
+            border: 1px solid $gray-200;
+            @include breakpoint(1024px) {
+                position: absolute;
+                bottom: 0;
+            }
+            .next__body {
+                @include breakpoint(1024px) {
+                    padding: 20px 15px;
+                }
+            }
+        }
+    }
+    &.article__next--algorithm {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+        @media screen and (min-width: 1280px) {
+            width: 250px;
+        }
+        h4 {
+            color: $black;
+            font-weight: 400;
+            @include breakpoint(1024px) {
+                font-weight: 300;
+            }
+        }
+        a {
+            + a {
+                margin-top: 15px;
+                @media screen and (max-width: 1279px) {
+                    display: none !important;
+                }
+            }
+            @media screen and (max-width: 1279px) {
+                background-color: $white;
+                border: 1px solid $gray-200;
+            }
+
+            > * {
+                @media screen and (min-width: 1280px) {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .next__img {
+                @media screen and (min-width: 1280px) {
+                    width: 100px;
+                }
+            }
+            .next__body {
+                @media screen and (min-width: 1024px) and (max-width: 1279px) {
+                    padding: 20px 15px;
+                }
+                @media screen and (min-width: 1280px) {
+                    width: calc(100% - 100px);
+                    padding-left: 15px;
                 }
             }
         }

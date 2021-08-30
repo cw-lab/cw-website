@@ -1359,6 +1359,9 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
 .social_login--facebook i.icon {
   color: #1877F2;
 }
+.social_login--line i.icon {
+  color: #00C200;
+}
 .social_login--google i.icon {
   color: #EA4335;
 }

@@ -1,15 +1,12 @@
 .article__function {
-    display: table;
-    display: inline-block;
+    display: none;
     position: fixed;
-    position: -webkit-sticky;
-    position: sticky;
+    top: 50%;
+    left: calc((100% - 970px) / 2);
+    @include translateY(-50%);
+    z-index: 5;
     @include breakpoint(max-width 1023px) {
         display: none !important;
-    }
-    &.article__function--ie {
-        top: 50% !important;
-        @include translateY(-50%);
     }
 }
 

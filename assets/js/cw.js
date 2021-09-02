@@ -230,6 +230,8 @@ $(function() {
         function input() {
             $("input.form__group__input").parent().addClass('form__group--defalt');
             $("input.form__group__input[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
+            $("textarea.form__group__textarea").parent().addClass('form__group--defalt');
+            $("textarea.form__group__textarea[disabled]").parent().removeClass('form__group--defalt').addClass('form__group--disabled');
         }
 
         function select() {

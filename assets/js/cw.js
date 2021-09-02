@@ -203,7 +203,7 @@ $(function() {
         $('main').css('min-height', (height - mainOffsetTop - footerHeight));
 
         // 判斷有沒有值
-        $("input.form__group__input").each(function() {
+        $("input.form__group__input, textarea.form__group__textarea").each(function() {
             if (this.value) {
                 $(this).parent().addClass('hasValue');
             }
@@ -238,7 +238,7 @@ $(function() {
         }
         input();
         select();
-        $("input.form__group__input").change(function() {
+        $("input.form__group__input, textarea.form__group__textarea").change(function() {
             input();
         })
         $("select").change(function() {

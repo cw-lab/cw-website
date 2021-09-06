@@ -79,7 +79,7 @@ function articleInint() {
                             $(this).css('display', 'block');
                         }
                     });
-                    next.children('').fadeIn({
+                    next.children().children('a').fadeIn({
                         start: function() {
                             $(this).css('display', 'block');
                         }
@@ -87,6 +87,7 @@ function articleInint() {
                 } else {
                     next.removeClass('show');
                     next.children('h4, a').fadeOut();
+                    next.children().children('a').fadeOut();
                 }
                 if (scroll >= articleImgTop) {
                     $('.bulletin').addClass('hide');

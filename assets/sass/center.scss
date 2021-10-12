@@ -1233,3 +1233,11 @@
         }
     }
 }
+
+.newspaper__page {
+    .list__group.list__group--newsletters .list__item .list__txt {
+        @media screen and (min-width: 768px) {
+            width: calc(100% - 144px);
+        }
+    }
+}

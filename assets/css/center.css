@@ -1430,4 +1430,10 @@
   font-weight: 500;
 }
 
+@media screen and (min-width: 768px) {
+  .newspaper__page .list__group.list__group--newsletters .list__item .list__txt {
+    width: calc(100% - 144px);
+  }
+}
+
 /*# sourceMappingURL=center.css.map */

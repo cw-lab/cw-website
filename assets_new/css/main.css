@@ -648,6 +648,8 @@ body.message__open {
 }
 
 .message p {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -690,6 +692,26 @@ body.message__open {
 }
 .message--notification p {
   color: #fff;
+}
+.message--alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 560px;
+  width: calc(100% - 30px);
+  padding: 30px 24px 24px;
+  background-color: #fff;
+  z-index: 12;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.message--alert .message__txt {
+  padding-bottom: 30px;
+}
+.message--alert .message__btn {
+  text-align: right;
 }
 .message--dialogs {
   display: none;

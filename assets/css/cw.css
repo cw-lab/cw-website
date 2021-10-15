@@ -4632,6 +4632,8 @@ body.message__open {
 }
 
 .message p {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.5;
 }

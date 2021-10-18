@@ -907,18 +907,13 @@
                     }
                 }
                 &.list__item--disabled {
+                    cursor: not-allowed;
                     .list__img img {
                         filter: grayscale(1);
                     }
-                    .list__txt {
-                        color: $gray-500;
-                        .title {
-                            color: $gray-500;
-                        }
-                    }
                     &:hover {
                         .list__img .list__label {
-                            background-color: rgba($black, 0.6);
+                            background-color: rgba($black, 0.4);
                         }
                         .list__txt .title {
                             color: $black;

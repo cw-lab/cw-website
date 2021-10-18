@@ -30,24 +30,30 @@ $(function() {
     $('.list__item--video').each(function() {
         var ytcode = $(this).data('ytcode');
         $(this).click(function() {
-            $('body').addClass('message__open');
-            $('.black').addClass('opened black-theater');
-            $('.theater iframe').attr('src', 'https://www.youtube.com/embed/' + ytcode + '?rel=0');
-            $('.theater').fadeIn();
+            if ( $(this).hasClass('.list__item--disabled') ) {
+                $('body').addClass('message__open');
+                $('.black').addClass('opened black-theater');
+                $('.theater iframe').attr('src', 'https://www.youtube.com/embed/' + ytcode + '?rel=0');
+                $('.theater').fadeIn();
+            }
         })
     });
     $('.list__item--pdf').each(function() {
         var pdfLink = $(this).data('pdflink');
         $(this).click(function() {
-            window.open(pdfLink);
-            return false;
+            if ( $(this).hasClass('.list__item--disabled') ) {
+                window.open(pdfLink);
+                return false;
+            }
         })
     });
     $('.list__item--link').each(function() {
         var txtLink = $(this).data('textlink');
         $(this).click(function() {
-            window.open(txtLink);
-            return false;
+            if ( $(this).hasClass('.list__item--disabled') ) {
+                window.open(txtLink);
+                return false;
+            }
         })
     });
     $('.list__item--vip button[disabled]').each(function() {
@@ -55,9 +61,11 @@ $(function() {
     });
     $('.list__item--vip').each(function() {
         $(this).click(function() {
-            $('body').addClass('message__open');
-            $('.black').addClass('opened');
-            $('.message--vip').fadeIn();
+            if ( $(this).hasClass('.list__item--disabled') ) {
+                $('body').addClass('message__open');
+                $('.black').addClass('opened');
+                $('.message--vip').fadeIn();
+            }
         })
     });
     $('.list__item--disabled .btn--text').each(function() {

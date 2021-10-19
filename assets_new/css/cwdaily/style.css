@@ -62,12 +62,9 @@ body {
 }
 .header h1.home_text img {
   display: block;
+  max-width: 610px;
+  width: 100%;
   margin: auto;
-}
-@media (max-width: 767px) {
-  .header h1.home_text img {
-    width: 100%;
-  }
 }
 .header .download-btn ul {
   margin: 20px 0 0;
@@ -263,8 +260,10 @@ footer {
   transform: translate(-50%, -50%);
 }
 .subscription .separator span {
+  position: relative;
   padding: 0 1em;
   background-color: #fff;
+  z-index: 1;
 }
 
 .testimonial {

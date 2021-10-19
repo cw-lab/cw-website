@@ -1683,22 +1683,10 @@
             <a id="lightbox_a_tag" class="btnLink gtmEvent waBtnLink" gtm-name="Paywall_bar_sub" href="#!" target="_blank">訂閱天下，12週$399，隨時隨地掌握深入觀點</a>
         </div>
         <section class="newsletter">
-            <div class="container">
+            <div class="container text-center">
                 <div class="h2 font-weight-500 my0">訂閱天下雜誌電子報</div>
                 <p class="mt10">天下雜誌當期內容的精華與延伸，每周三發送最具時效性的深度內容</p>
-                <div class="form">
-                    <div class="form__group form__group--filled w-100">
-                        <label for="#!" class="label">
-                            <div class="form__group__placeholder">請輸入 e-mail</div>
-                            <input type="email" class="form__group__input form__group__input--default">
-                        </label>
-                    </div>
-                    <button id="enterMail2" class="btn btn--contained btn--contained">立即訂閱</button>
-                </div>
-            </div>
-            <div class="container" style="display: none;">
-                <div class="h2 font-weight-500 my0">感謝您的訂閱！</div>
-                <p class="mt10 mb0">請查看您的信箱，我們將寄送驗證信給您，確保未來信件會確實送到您的信箱</p>
+                <button id="enterMail2" class="btn btn--contained btn--contained">立即訂閱</button>
             </div>
         </section>
     </main>
@@ -2069,28 +2057,11 @@
         <div class="message__container">
             <i class="icon icon-cancel message__close"></i>
             <div class="message__txt pb20">
-                <h2>填寫你的信箱</h2>
-                <p>我們將會於下個電子報發送日，寄送最新一期電子報給您</p>
-                <form class="form">
-                    <div class="form__group form__group--filled w-100">
-                        <label for="#!" class="label">
-                            <div class="form__group__placeholder">請輸入 e-mail</div>
-                            <input type="email" class="form__group__input form__group__input--default">
-                        </label>
-                    </div>
-                </form>
-                <!-- 錯誤狀態 -->
-                <form class="form mt10">
-                    <div class="form__group form__group--filled form__group--error w-100">
-                        <label for="#!" class="label">
-                            <div class="form__group__placeholder">請輸入 e-mail</div>
-                            <input type="email" class="form__group__input form__group__input--default">
-                            <i class="form__group__help form__group__help--highlight">信箱格式錯誤</i>
-                        </label>
-                    </div>
-                </form>
+                <h2>電子報訂閱服務</h2>
+                <p>電子報為會員活動服務，您將在登入註冊後完成訂閱</p>
             </div>
             <div class="message__btn">
+                <button class="btn btn--outlined btn__close">預覽電子報</button>
                 <button id="enterMail" class="btn btn--contained btn__close">立即訂閱</button>
             </div>
         </div>
@@ -2433,8 +2404,8 @@
     <script>
         $(function(){
             $('#enterMail2').click(function(){
-                $(this).parent().parent().hide();
-                $(this).parent().parent().siblings().show();
+                $('#subscribe').show();
+                $('.black').addClass('opened');
             });
             $('#openEnterMail').click(function(){
                 $('#subscribe').show();

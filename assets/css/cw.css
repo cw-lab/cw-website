@@ -4793,12 +4793,12 @@ body.message__open {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.message--dialogs .message__container {
-  position: relative;
-}
-.message--dialogs .message__close, .message--dialogs .message .touch__close {
+.message--dialogs .message__close, .message--dialogs .touch__close {
   top: -5px;
   right: -10px;
+}
+.message--dialogs .message__container {
+  position: relative;
 }
 .message--dialogs .message__txt {
   padding-bottom: 30px;

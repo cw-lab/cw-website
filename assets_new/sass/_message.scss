@@ -79,13 +79,13 @@ body.message__open {
         background-color: $white;
         z-index: 12;
         @include translate(-50%, -50%);
+        .message__close, .touch__close {
+            top: -5px;
+            right: -10px;
+        }
         .message {
             &__container {
                 position: relative;
-            }
-            &__close, .touch__close {
-                top: -5px;
-                right: -10px;
             }
             &__txt {
                 padding-bottom: 30px;

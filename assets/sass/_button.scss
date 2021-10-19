@@ -17,8 +17,8 @@ a {
     font-size: 1rem;
     line-height: 1.25;
     text-align: center;
+    vertical-align: middle;
     word-break: keep-all;
-    // word-break: break-word;
     overflow: hidden;
     @include breakpoint(375px) {
         min-width: 135px;

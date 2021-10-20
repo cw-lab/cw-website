@@ -92,6 +92,11 @@ body {
     max-width: 180px;
   }
 }
+@media (max-width: 414px) {
+  .header .download-btn ul li {
+    max-width: 150px;
+  }
+}
 .header .download-btn ul li + li {
   margin-left: 20px;
 }

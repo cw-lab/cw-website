@@ -78,6 +78,9 @@ body {
                     width: calc((100% - 20px) / 2);
                     max-width: 180px;
                 }
+                @include breakpoint(max-width 414px) {
+                    max-width: 150px;
+                }
                 +li {
                     margin-left: 20px;
                 }

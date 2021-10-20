@@ -90,7 +90,7 @@ body {
             display: block;
             img {
                 display: block;
-                border: 1px solid $white;
+                border: 1px solid rgba($white, .5);
                 border-radius: 5px;
                 @include breakpoint(max-width 767px) {
                     width: 100%;

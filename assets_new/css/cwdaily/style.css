@@ -151,6 +151,7 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #fff;
+  overflow: hidden;
 }
 .subscription .subscription_title h2 {
   position: relative;
@@ -274,6 +275,7 @@ footer {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+  overflow: hidden;
 }
 .testimonial .section_overlay {
   padding-top: 80px;

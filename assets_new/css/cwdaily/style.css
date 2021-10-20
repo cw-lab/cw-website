@@ -105,7 +105,7 @@ body {
 }
 .header .download-btn a img {
   display: block;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #939EA7;
   border-radius: 5px;
 }
 @media (max-width: 767px) {

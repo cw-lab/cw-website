@@ -63,9 +63,7 @@ body {
     }
     .download-btn {
         ul {
-            @include listrest(20px 0 0,
-            0,
-            none);
+            @include listrest(20px 0 0, 0, none);
             font-size: 0;
             @include breakpoint(768px) {
                 margin-top: 50px;
@@ -78,6 +76,7 @@ body {
                 vertical-align: middle;
                 @include breakpoint(max-width 767px) {
                     width: calc((100% - 20px) / 2);
+                    max-width: 180px;
                 }
                 +li {
                     margin-left: 20px;
@@ -88,9 +87,18 @@ body {
             display: block;
             img {
                 display: block;
-                width: 100%;
+                border: 1px solid $white;
+                border-radius: 5px;
+                @include breakpoint(max-width 767px) {
+                    width: 100%;
+                    height: auto;
+                }
                 @include breakpoint(768px) {
-                    width: 130px;
+                    width: auto;
+                    height: 60px;
+                }
+                @include breakpoint(992px) {
+                    height: 40px;
                 }
             }
         }

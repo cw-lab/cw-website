@@ -156,7 +156,7 @@ $mb_s: 321px;
 						height: 175px;
 						clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
 						position: absolute;
-						bottom: 0;
+						bottom: -1px;
 						left: 0;
 						background-color: $red-500;
 						@include mb-width_l() {

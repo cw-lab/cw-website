@@ -384,7 +384,7 @@ $(function() {
                 $(this).toggleClass("active");
             })
         }
-        $(".accordion__item__header").on("click", function() {
+        $(".accordion__group .accordion__item__header").on("click", function() {
             $(this).parent().siblings().children(".accordion__item__panel").slideUp();
             $(this).parent().siblings().children(".accordion__item__header").removeClass("active");
             $(this).parent().siblings().children(".accordion__item__header").children("i.icon").addClass("icon-plus");

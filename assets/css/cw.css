@@ -1,5 +1,5 @@
 @charset "UTF-8";
-nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .board::before, .accordion__item__panel::before, .accordion__item__panel::after, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
+nav.menubar--sub ul.menubar__user::before, .btn::before, .btn::after, .tab .tab__nav > ul::before, .article__group__item__img > a::before, .board::before, .loader::before, .loader__icon::before, .loader__icon::after, .separation--or::before, .search .search__group .search__submit::before, ul.article__keyword li a::before, ul.article__keyword li a::after {
   content: '';
   display: block;
 }
@@ -5192,15 +5192,15 @@ header.scroll .container > .item.item--center .item__scroll {
   color: #D60C18;
 }
 
-.accordion__item::before, .accordion__item::after {
+.accordion__group .accordion__item::before, .accordion__group .accordion__item::after {
   content: "";
   display: block;
   clear: both;
 }
-.accordion__item:nth-child(odd) {
+.accordion__group .accordion__item:nth-child(odd) {
   background-color: #fafafa;
 }
-.accordion__item__header {
+.accordion__group .accordion__item__header {
   position: relative;
   padding: 0.65em 1.125em;
   color: #171717;
@@ -5210,69 +5210,71 @@ header.scroll .container > .item.item--center .item__scroll {
   -webkit-transition: background-color, 0.3s;
   transition: background-color, 0.3s;
 }
-.accordion__item__header::before, .accordion__item__header::after {
+.accordion__group .accordion__item__header::before, .accordion__group .accordion__item__header::after {
   content: "";
   display: block;
   clear: both;
 }
-.accordion__item__header a {
+.accordion__group .accordion__item__header a {
   color: #171717;
 }
-.accordion__item__header.active, .accordion__item__header:hover {
+.accordion__group .accordion__item__header.active, .accordion__group .accordion__item__header:hover {
   color: #D60C18;
 }
-.accordion__item__header.active a, .accordion__item__header:hover a {
+.accordion__group .accordion__item__header.active a, .accordion__group .accordion__item__header:hover a {
   color: #D60C18;
 }
-.accordion__item__header span {
+.accordion__group .accordion__item__header span {
   display: inline-block;
   vertical-align: top;
 }
-.accordion__item__header span.number {
+.accordion__group .accordion__item__header span.number {
   position: relative;
   top: .215em;
   width: 1.5rem;
 }
-.accordion__item__header span.txt {
+.accordion__group .accordion__item__header span.txt {
   width: calc(100% - 3rem);
 }
-.accordion__item__header p {
+.accordion__group .accordion__item__header p {
   color: #fff;
 }
-.accordion__item__header i.icon {
+.accordion__group .accordion__item__header i.icon {
   position: absolute;
   top: 0;
   right: 0;
   padding: 0.9em 1rem;
 }
-.accordion__item__panel {
+.accordion__group .accordion__item__panel {
   display: none;
   position: relative;
   padding: 1rem 1rem 1rem 2.5rem;
 }
-.accordion__item__panel::before, .accordion__item__panel::after {
+.accordion__group .accordion__item__panel::before, .accordion__group .accordion__item__panel::after {
+  content: "";
+  display: block;
   clear: both;
 }
-.accordion__item__panel .h3 {
+.accordion__group .accordion__item__panel .h3 {
   font-weight: 500;
   line-height: 1.5;
 }
-.accordion__item__panel img {
+.accordion__group .accordion__item__panel img {
   display: inline-block;
   vertical-align: text-bottom;
 }
-.accordion__item__panel .decimal--step {
+.accordion__group .accordion__item__panel .decimal--step {
   margin-left: 2.4em;
 }
 @media (min-width: 768px) {
-  .accordion__item__panel .decimal--step {
+  .accordion__group .accordion__item__panel .decimal--step {
     margin-left: 2.1em;
   }
 }
-.accordion__item__panel .decimal--step > li {
+.accordion__group .accordion__item__panel .decimal--step > li {
   position: relative;
 }
-.accordion__item__panel .decimal--step > li::before {
+.accordion__group .accordion__item__panel .decimal--step > li::before {
   content: "Step";
   display: inline-block;
   position: absolute;
@@ -5282,7 +5284,7 @@ header.scroll .container > .item.item--center .item__scroll {
   line-height: 1.5;
 }
 @media (min-width: 768px) {
-  .accordion__item__panel .decimal--step > li::before {
+  .accordion__group .accordion__item__panel .decimal--step > li::before {
     right: calc(100% + 1.2em);
   }
 }
@@ -6883,8 +6885,27 @@ ul.article__provide li span i.icon {
     font-weight: 500;
   }
 }
-.article__content h2 {
+.article__content h2,
+.article__content .accordion__item__header {
   margin-top: 40px;
+}
+.article__content .accordion__item__header {
+  margin-bottom: 1em;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .article__content .accordion__item__header {
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  .article__content .accordion__item__header {
+    font-size: 1.375rem;
+  }
+}
+.article__content .accordion__item__header .icon-plus {
+  display: none;
 }
 .article__content a {
   min-width: auto;
@@ -6931,9 +6952,6 @@ ul.article__provide li span i.icon {
 }
 .article__content blockquote::after {
   bottom: 0;
-}
-.article__content .accordion__item__header {
-  font-weight: normal;
 }
 .article__content .more {
   display: inline;
@@ -7445,12 +7463,14 @@ article.article__level--1 .h1 {
   }
 }
 article.article__level--1 h2,
-article.article__level--1 .h2 {
+article.article__level--1 .h2,
+article.article__level--1 .accordion__item__header {
   font-size: 1.5rem;
 }
 @media (min-width: 1024px) {
   article.article__level--1 h2,
-  article.article__level--1 .h2 {
+  article.article__level--1 .h2,
+  article.article__level--1 .accordion__item__header {
     font-size: 1.625rem;
   }
 }
@@ -7523,12 +7543,14 @@ article.article__level--2 .h1 {
   }
 }
 article.article__level--2 h2,
-article.article__level--2 .h2 {
+article.article__level--2 .h2,
+article.article__level--2 .accordion__item__header {
   font-size: 1.75rem;
 }
 @media (min-width: 1024px) {
   article.article__level--2 h2,
-  article.article__level--2 .h2 {
+  article.article__level--2 .h2,
+  article.article__level--2 .accordion__item__header {
     font-size: 1.875rem;
   }
 }

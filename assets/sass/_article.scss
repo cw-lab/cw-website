@@ -139,8 +139,20 @@
 			font-weight: 500;
 		}
 	}
-	h2 {
+	h2,
+	.accordion__item__header {
 		margin-top: 40px;
+	}
+	.accordion__item__header {
+		margin-bottom: 1em;
+        font-size: nth($h-m-size, 2);
+        @include typo-weight;
+        @include breakpoint(1024px) {
+			font-size: nth($h-size, 2);
+		}
+		.icon-plus {
+			display: none;
+		}
 	}
 	a {
 		min-width: auto;
@@ -183,9 +195,6 @@
 		&::after {
 			bottom: 0;
 		}
-	}
-	.accordion__item__header {
-		font-weight: normal;
 	}
 	// 小辭典
 	.more {
@@ -338,7 +347,8 @@ article {
 			}
 		}
 		h2,
-		.h2 {
+		.h2,
+		.accordion__item__header {
 			font-size: 1.5rem;
 			@include breakpoint(1024px) {
 				font-size: 1.625rem;
@@ -438,7 +448,8 @@ article {
 			}
 		}
 		h2,
-		.h2 {
+		.h2,
+		.accordion__item__header {
 			font-size: 1.75rem;
 			@include breakpoint(1024px) {
 				font-size: 1.875rem;

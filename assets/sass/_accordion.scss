@@ -1,88 +1,89 @@
-.accordion {
-	&__item {
-		&::before,
-		&::after {
-			@include clear;
-		}
-		&:nth-child(odd) {
-			background-color: $gray;
-		}
-		&__header {
-			position: relative;
-			padding: 0.65em 1.125em;
-			color: $black;
-			cursor: pointer;
-			@include transition(background-color, 0.3s);
+.accordion__group {
+	.accordion {
+		&__item {
 			&::before,
 			&::after {
 				@include clear;
 			}
-			a {
+			&:nth-child(odd) {
+				background-color: $gray;
+			}
+			&__header {
+				position: relative;
+				padding: 0.65em 1.125em;
 				color: $black;
-			}
-			&.active, &:hover {
-				color: $primary;
+				cursor: pointer;
+				@include transition(background-color, 0.3s);
+				&::before,
+				&::after {
+					@include clear;
+				}
 				a {
+					color: $black;
+				}
+				&.active, &:hover {
 					color: $primary;
+					a {
+						color: $primary;
+					}
+				}
+				span {
+					display: inline-block;
+					vertical-align: top;
+					&.number {
+						position: relative;
+						top: .215em;
+						width: 1.5rem;
+					}
+					&.txt {
+						width: calc(100% - 3rem);
+					}
+				}
+				p {
+					color: $white;
+				}
+				i.icon {
+					position: absolute;
+					top: 0;
+					// top: 50%;
+					right: 0;
+					padding: 0.9em 1rem;
+					// @include translateY(-50%);
 				}
 			}
-			span {
-				display: inline-block;
-				vertical-align: top;
-				&.number {
-					position: relative;
-					top: .215em;
-					width: 1.5rem;
+			&__panel {
+				display: none;
+				position: relative;
+				padding: 1rem 1rem 1rem 2.5rem;
+				&::before,
+				&::after {
+					@include clear;
 				}
-				&.txt {
-					width: calc(100% - 3rem);
+				.h3 {
+					font-weight: 500;
+					line-height: 1.5;
 				}
-			}
-			p {
-				color: $white;
-			}
-			i.icon {
-				position: absolute;
-				top: 0;
-				// top: 50%;
-				right: 0;
-				padding: 0.9em 1rem;
-				// @include translateY(-50%);
-			}
-		}
-		&__panel {
-			display: none;
-			position: relative;
-			padding: 1rem 1rem 1rem 2.5rem;
-			&::before,
-			&::after {
-				@extend %before-after;
-				clear: both;
-			}
-			.h3 {
-				font-weight: 500;
-				line-height: 1.5;
-			}
-			img {
-				display: inline-block;
-				vertical-align: text-bottom;
-			}
-			.decimal--step {
-				margin-left: 2.4em;
-				@include breakpoint(768px) {
-					margin-left: 2.1em;
+				img {
+					display: inline-block;
+					vertical-align: text-bottom;
 				}
-				> li {
-					position: relative;
-					&::before {
-						@include beforeafter('Step', inline-block);
-						position: absolute;
-						top: 2px;
-						right: calc(100% + 1.5em);
-						font-size: 1rem;
-						line-height: 1.5;
-						@include breakpoint(768px) {
-							right: calc(100% + 1.2em);
+				.decimal--step {
+					margin-left: 2.4em;
+					@include breakpoint(768px) {
+						margin-left: 2.1em;
+					}
+					> li {
+						position: relative;
+						&::before {
+							@include beforeafter('Step', inline-block);
+							position: absolute;
+							top: 2px;
+							right: calc(100% + 1.5em);
+							font-size: 1rem;
+							line-height: 1.5;
+							@include breakpoint(768px) {
+								right: calc(100% + 1.2em);
+							}
 						}
 					}
 				}

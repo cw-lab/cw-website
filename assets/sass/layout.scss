@@ -921,11 +921,8 @@ main {
             }
         }
     }
+    .accordion__group {}
     .accordion {
-        &__group {
-            // border: solid $dark;
-            // border-width: 1px 0;
-        }
         &__item {
             margin: 0 0 1em;
             &::before,

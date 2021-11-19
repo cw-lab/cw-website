@@ -39,7 +39,7 @@
     <link href="https://www.cw.com.tw/images/common/apple-icon-iPhone@3x.png?id=5843e50462aa41ca0eef" rel="apple-touch-icon" sizes="180x180" />
     <link href="https://www.cw.com.tw/images/common/apple-icon-iPadPro@2x.png?id=7de8673e237e37cc45d4" rel="apple-touch-icon" sizes="167x167" />
     <link href="https://www.cw.com.tw/images/common/apple-icon-iPad@2x.png?id=543c21902aa02fe2fcde" rel="apple-touch-icon" sizes="152x152" />
-    <link rel="stylesheet" href="../assets/css/cw.css">
+    <link rel="stylesheet" href="../../assets/css/cw.css">
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
@@ -164,14 +164,48 @@
         <script src="https://www.cw.com.tw/assets_new/js/html5shiv.js"></script>
         <script src="https://www.cw.com.tw/assets_new/js/respond1.4.2.min.js"></script>
     <![endif]-->
+    <style>
+        .article__next {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            width: 250px !important;
+        }
+        .article__next .h4 {
+            position: absolute;
+            top: calc(-1.2em - 15px);
+            left: 0;
+            color: black;
+        }
+        .article__next a {
+            position: relative;
+            margin-top: 15px;
+            font-size: 0;
+            border: 0;
+        }
+        .article__next a:nth-child(4) {
+            display: none !important;
+        }
+        .article__next a .next__img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100px;
+        }
+        .article__next a .next__body {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 100px);
+            padding: 0 0 0 15px;
+        }
+    </style>
 </head>
 
 <body class="article__page">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXLD77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="ad cw__advertising ad--970by250 py30">
         <a href="#!" target="_blank">
-            <img src="../assets/images/article/ad-970-250.jpg" class="desktop" height="250" alt="">
-            <img src="../assets/images/article/ad-300-250-07.jpg" class="mobile" height="250" alt="">
+            <img src="../../assets/images/article/ad-970-250.jpg" class="desktop" height="250" alt="">
+            <img src="../../assets/images/article/ad-300-250-07.jpg" class="mobile" height="250" alt="">
         </a>
     </section>
     <nav class="menubar menubar--left">
@@ -1028,7 +1062,7 @@
                     <div class="card__group card__group--list">
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e2569206af7f.jpg" alt="節目獲亞洲電視大獎心情沉重　Alana不捨：澳洲野火肆虐我第二個家">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e2569206af7f.jpg" alt="節目獲亞洲電視大獎心情沉重　Alana不捨：澳洲野火肆虐我第二個家">
                         </span>
                             <span class="card__body">
                             <!-- <span class="card__subtitle">環境</span> -->
@@ -1038,7 +1072,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
                             </span>
                             <span class="card__body">
                             <!-- <span class="card__subtitle">企業突圍</span> -->
@@ -1047,7 +1081,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_channel_article">
                             <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
+                                <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
                         </span>
                             <span class="card__body">
                                 <!-- <span class="card__subtitle">國際</span> -->
@@ -1100,14 +1134,16 @@
                         </div>
                     </div>
                     <div class="article__img">
-                        <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97c91871b07.JPG">
+                        <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../../assets/images/main-desktop.png">
                             <picture>
-                                <source type="image/webp" media="(max-width: 767px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fdev-www-cw-com-tw%2Fckeditor%2F202011%2Fckeditor-5fbf209ecbc38.png/?w=630&format=webp" />
-                                <source type="image/webp" media="(max-width: 1279px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5fc0d23145ad9.jpg/?w=1260&format=webp" />
-                                <source type="image/webp" media="(min-width: 1280px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fdev-www-cw-com-tw%2Farticle%2F202011%2Farticle-5fbf21cc0ed04.jpg/?w=1600&format=webp" />
-                                <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=630 630w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=1260 1260w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=1600 1600w" />
-                                <img data-expand="0" class="lazyload" src="../assets/images/common/blank.png" data-sizes="auto" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=630 630w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=1260 1260w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97c91871b07.JPG/?w=1600 1600w" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97c91871b07.JPG" width="100%" alt="" />
+                                <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97eee0819b5.jpg/?w=630&format=webp" type="image/webp" width="100%" media="(max-width: 767px)">
+                                <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97eee0819b5.jpg/?w=1260&format=webp" type="image/webp" width="100%" media="(max-width: 1279px)">
+                                <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202010%2Farticle-5f97eee0819b5.jpg/?w=1600&format=webp" type="image/webp" width="100%" media="(min-width: 1280px)">
+                                <img class="lazyload" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97eee0819b5.jpg" width="100%" alt="投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相">
                             </picture>
+                            <noscript>
+                                <img src="https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97eee0819b5.jpg" width="100%" alt="投資創新高，無薪假卻竄升 5張圖讓你聽懂台灣經濟真相">
+                            </noscript>
                         </span>
                         <span class="source">外國旅客Mike正為平安符過火，體驗台灣傳統寺廟文化。圖片來源：shutterstock</span>
                     </div>
@@ -1136,12 +1172,12 @@
                     </ul>
                 </div>
                 <div class="audio__player py20 px10 mb40">
-                    <img src="../assets/images/listencw500.jpg" alt="聽天下" class="audio__image mx10">
+                    <img src="../../assets/images/listencw500.jpg" alt="聽天下" class="audio__image mx10">
                     <div class="audio__body px10">
                         <div class="audio__title">天下零時差｜天下零時差圍堵病毒失敗！美國和歐洲的醫療系統撐得住嗎？</div>
                         <div class="audio__control">
                             <audio crossorigin preload="none">
-                            <source src="../assets/audio/voice-5e7dd2627b42f.mp3" type="audio/mpeg">
+                            <source src="../../assets/audio/voice-5e7dd2627b42f.mp3" type="audio/mpeg">
                         </audio>
                         </div>
                     </div>
@@ -1198,7 +1234,7 @@
                     <section class="ad cw__advertising ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-14.png" height="250" alt="">
+                            <img src="../../assets/images/article/ad-300-250-14.png" height="250" alt="">
                         </a>
                     </section>
                     <p>
@@ -1208,38 +1244,21 @@
                         再看到勞工工作時數上，台灣勞動者過去最為人詬病的超時工作也有改善，稍微舒緩「過勞之島」的惡名。若以經濟合作暨發展組織的「美好生活指數」，將每週50小時工作時數作為長工時的門檻來看。
                     </p>
                     <p>
-                    <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../assets/images/article/chart.png">
-                        <img loading="lazy" src="../assets/images/article/chart.png" alt="">
+                    <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../../assets/images/article/chart.png">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="../../assets/images/article/chart.png" alt="">
                     </span>
                     <span class="source sans-serif">註：實質薪資累積成長率：（當年數值／1981 年數值）﹣1，每工時實質產出為（名目GDP／受雇人員全年總工時×GDP平減指數），每工時實質薪資為（名目薪資／受雇人員全年總工時×消費者物價指數）。</span>
                     </p>
                     <p>
                         台灣「每週平均總工時達50小時以上」的比例，在歷經2000年第一波勞基法修正，規定每兩週總工時不得逾84小時，和2016年進一步改為單週工時不得逾40小時等，已從2000年的12.9%，降到2018年的5.9%。
                     </p>
-                    <div class="article__profile">
-                        <h3>【小檔案】陳明明</h3>
-                        <ul>
-                            <li>
-                                出生年份：1973年
-                            </li>
-                            <li>
-                                現職：KKday創辦人兼執行長
-                            </li>
-                            <li>
-                                學歷：交通大學電信工程系、中山大學研究所工商管理碩士
-                            </li>
-                            <li>
-                                創業經歷：2000年參與創立易遊網（ezTravel），2003年參與創立燦星旅遊網，2010年接掌易飛網（ezfly），2014年創立KKday。
-                            </li>
-                        </ul>
-                    </div>
                     <p>
                         若和國際比較，台灣的「每週經常工時50小時以上」比率，2016年為8%，優於同為亞洲國家日本的21.8%與韓國的20.8%。然而要推動台灣整體產業升級與環境軟硬體改善，政府是否有穩健的體質來進行國家轉型升級是關鍵。
                     </p>
                     <section class="ad cw__advertising ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-03.jpg" height="250" alt="">
+                            <img src="../../assets/images/article/ad-300-250-03.jpg" height="250" alt="">
                         </a>
                     </section>
                     <h2>財政：政府負債比上升，但仍可控</h2>
@@ -1269,7 +1288,7 @@
                     <section class="ad cw__advertising ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-04.jpg" height="250" alt="">
+                            <img src="../../assets/images/article/ad-300-250-04.jpg" height="250" alt="">
                         </a>
                     </section>
                     <h2>以亞洲國家來看，台灣已算是資優生</h2>
@@ -1285,7 +1304,7 @@
                     <section class="ad cw__advertising ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-05.jpg" height="250" alt="">
+                            <img src="../../assets/images/article/ad-300-250-05.jpg" height="250" alt="">
                         </a>
                     </section>
                     <p>
@@ -1303,14 +1322,16 @@
                     <p>
                         展望未來20年，台灣經濟發展站上一個新拐點：一個由中大型企業驅動的出口型海島經濟，更期盼新投資、新建設，往高附加價值的一端走。
                     </p>
-                    <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../assets/images/main-desktop.png">
+                    <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="../../assets/images/main-desktop.png">
                         <picture>
-                            <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=630&format=webp" type="image/webp" width="100%" media="(max-width: 767px)">
-                            <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1260&format=webp" type="image/webp" width="100%" media="(max-width: 1279px)">
-                            <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1600&format=webp" type="image/webp" width="100%" media="(min-width: 1280px)">
-                            <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=630 630w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1260 1260w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1600 1600w" />
-                            <img data-expand="40" class="lazyload" src="../assets/images/common/blank.png" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=630 630w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1260 1260w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1600 1600w" width="100%" alt="監管大緊縮時代來臨！捏死螞蟻後，中國科技金融業誰能劫後餘生？" />
+                            <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=630&format=webp" type="image/webp" width="100%" media="(max-width: 767px)">
+                            <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1260&format=webp" type="image/webp" width="100%" media="(max-width: 1279px)">
+                            <source srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1600&format=webp" type="image/webp" width="100%" media="(min-width: 1280px)">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-sizes="auto" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=630 630w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1260 1260w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202011%2Farticle-5faa5edb39327.jpg/?w=1600 1600w" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5faa5edb39327.jpg" width="100%" alt="監管大緊縮時代來臨！捏死螞蟻後，中國科技金融業誰能劫後餘生？" />               
                         </picture>
+                        <noscript>
+                            <img src="https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5faa5edb39327.jpg" width="100%" alt="監管大緊縮時代來臨！捏死螞蟻後，中國科技金融業誰能劫後餘生？">
+                        </noscript>
                     </span>
                     <span class="source">監管大緊縮時代來臨！捏死螞蟻後，中國科技金融業誰能劫後餘生？圖片來源：shutterstock</span>
                     <h2>
@@ -1328,7 +1349,7 @@
                     <section class="ad cw__advertising ad--300by250">
                         <span class="sans-serif">廣告</span>
                         <a href="#!" target="_blank">
-                            <img src="../assets/images/article/ad-300-250-06.jpg" height="250" alt="">
+                            <img src="../../assets/images/article/ad-300-250-06.jpg" height="250" alt="">
                         </a>
                     </section>
                     <p>
@@ -1341,16 +1362,10 @@
                 <div class="article__next">
                     <a href="#!" gtm-name="read_more" eventaction="reco_next_article">
                         <span class="next__img">
-                            <picture>
-                                <source type="image/webp" media="(max-width: 767px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=220&format=webp" />
-                                <source type="image/webp" media="(max-width: 1279px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=440&format=webp" />
-                                <source type="image/webp" media="(min-width: 1280px)" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=630&format=webp" />
-                                <source data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=220 220w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=440 440w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=630 630w" />
-                                <img class="lazyload" alt="史上最長寒假，讓這家24歲的社群網站翻身為一條活龍" src="../assets/images/common/blank.png" data-srcset="https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=220 220w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=440 440w, https://image-resizer.cwg.tw/resize/uri/https%3A%2F%2Fstorage.googleapis.com%2Fwww-cw-com-tw%2Farticle%2F202002%2Farticle-5e4f98fe7863c.jpg/?w=630 630w" />
-                            </picture>
+                            <img src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e4f98fe7863c.jpg" alt="史上最長寒假，讓這家24歲的社群網站翻身為一條活龍">
                         </span>
                         <span class="next__body">
-                            <span class="next__label">下一篇</span>
+                            <span class="next__label">主頻</span>
                             <span class="next__title">史上最長寒假，讓這家24歲的社群網站翻身為一條活龍</span>
                         </span>
                     </a>
@@ -1372,7 +1387,7 @@
                     </div>
                     <div class="article__box mb20">
                         <div class="box__img">
-                            <img src="../assets/images/article/cover.jpg" alt="">
+                            <img src="../../assets/images/article/cover.jpg" alt="">
                         </div>
                         <div class="box__body">
                             <div class="box__title h2 font-weight-500 mt0 mb10">書籍資訊</div>
@@ -1441,7 +1456,7 @@
                     <div class="card__group card__group--grid">
                         <a href="article-paywall-p0.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
                         </span>
                             <span class="card__body">
                             <span class="card__subtitle">時尚生活</span>
@@ -1451,7 +1466,7 @@
                         </a>
                         <a href="article-paywall-p1.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
                         </span>
                             <span class="card__body">
                             <span class="card__subtitle"><i class="icon icon-headphones"></i>財經時事</span>
@@ -1460,7 +1475,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
                             </span>
                             <span class="card__body">
                             <span class="card__subtitle">企業突圍</span>
@@ -1469,7 +1484,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
                         </span>
                             <span class="card__body">
                             <span class="card__subtitle">國際</span>
@@ -1478,7 +1493,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                            <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
+                            <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
                         </span>
                             <span class="card__body">
                             <span class="card__subtitle">國際</span>
@@ -1487,7 +1502,7 @@
                         </a>
                         <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                             <span class="card__img lazyload__group">
-                                <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
+                                <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
                                 <span class="label">廣告</span>
                             </span>
                             <span class="card__body">
@@ -1711,7 +1726,7 @@
         <i class="fullscreen__close icon icon-cancel"></i>
         <div class="fullscreen__body">
             <div class="fullscreen__content">
-                <img src="../assets/images/common/blank.png" width="100%" alt="">
+                <img src="../../assets/images/common/blank.png" width="100%" alt="">
             </div>
         </div>
     </div>
@@ -1730,7 +1745,7 @@
             <div class="card__group">
                 <a href="article-paywall-p0.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e57571c8e5e8.jpg" alt="教出八成轉職就業率、技術書籍狂賣15刷，程式教學大神竟是營養系出身！">
                     </span>
                     <span class="card__body">
                         <span class="card__subtitle">時尚生活</span>
@@ -1740,7 +1755,7 @@
                 </a>
                 <a href="article-paywall-p1.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/201909/article-5d6d2e3233a9f.jpg" alt="天下財經週報：台灣無薪假大潮來了？">
                     </span>
                     <span class="card__body">
                         <span class="card__subtitle"><i class="icon icon-headphones"></i>財經時事</span>
@@ -1749,7 +1764,7 @@
                 </a>
                 <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e15d83523c66.jpg" alt="只租不賣！全台小吃、麥當勞、鼎泰豐都用這家公司">
                         <span class="label">廣告</span>
                     </span>
                     <span class="card__body">
@@ -1759,7 +1774,7 @@
                 </a>
                 <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e54e44490132.jpg" alt="桑德斯親台？美國民主黨總統參選人最「親中」與「親台」">
                     </span>
                     <span class="card__body">
                         <span class="card__subtitle">國際</span>
@@ -1768,7 +1783,7 @@
                 </a>
                 <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202001/article-5e0efc48760a6.jpg" alt="美國在伊拉克擊殺伊朗指揮官，中東戰火一觸即發？">
                     </span>
                     <span class="card__body">
                         <span class="card__subtitle">國際</span>
@@ -1777,7 +1792,7 @@
                 </a>
                 <a href="article.html" class="card__item" gtm-name="read_more" eventaction="reco_interest_article">
                     <span class="card__img lazyload__group">
-                        <img class="lazyload" src="../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
+                        <img class="lazyload" src="../../assets/images/common/blank.png" data-src="https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e5392f3c088a.jpg" alt="台灣道地的珍珠奶茶，如何成為美國一整個世代的身分認同">
                         <span class="label">廣告</span>
                     </span>
                     <span class="card__body">
@@ -1871,48 +1886,13 @@
             </div>
         </div>
     </div>
-    <div id="download__member" class="message message--dialogs message--center" style="display: none;">
-        <div class="message__container">
-            <i class="icon icon-cancel message__close"></i>
-            <div class="message__txt">
-                <h2>請先登入天下雜誌會員</h2>
-                <p>文章 PDF 檔案下載為全閱讀專屬功能，若您還不是天下全閱讀訂戶，請先訂閱。</p>
-            </div>
-            <div class="message__btn">
-                <a href="#!" class="btn btn--contained">訂閱天下</a>
-                <a href="#!" class="btn btn--contained">登入會員</a>
-            </div>
-        </div>
-    </div>
-    <div id="download__subscriber" class="message message--dialogs message--center" style="display: none;">
-        <div class="message__container">
-            <i class="icon icon-cancel message__close"></i>
-            <div class="message__txt">
-                <h2>您還不是天下全閱讀訂戶</h2>
-                <p>文章 PDF 檔案下載為全閱讀專屬功能，若您還不是天下全閱讀訂戶，請先訂閱。</p>
-            </div>
-            <div class="message__btn">
-                <a href="#!" class="btn btn--contained">訂閱天下</a>
-            </div>
-        </div>
-    </div>
-    <div id="download__confirm" class="message message--alert" style="display: none;">
-        <div class="message__container">
-            <div class="message__txt">
-                <p class="mt0">文章將以 PDF 格式下載，確認下載此文章嗎？</p>
-            </div>
-            <div class="message__btn">
-                <a href="#!" class="btn btn--outlined">取消</a>
-                <a href="#!" class="btn btn--contained">下載</a>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript" src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
-    <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-    <script type="text/javascript" src="../assets/js/cw.js"></script>
-    <script type="text/javascript" src="../assets/js/article.js"></script>
-    <script type="text/javascript" src="../assets/js/green-audio-player.js"></script>
+    <script type="text/javascript" src="../../assets/js/lazysizes.min.js"></script>
+
+    <script type="text/javascript" src="../../assets/js/cw.js"></script>
+    <script type="text/javascript" src="../../assets/js/article.js"></script>
+    <script type="text/javascript" src="../../assets/js/green-audio-player.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             new GreenAudioPlayer('.audio__control', {
@@ -2119,7 +2099,7 @@
     </script>
     <script>
         // 滾滾滾
-        $.get("../db.json", function(data) {
+        $.get("../../db.json", function(data) {
             var width = $(window).width(),
                 wasAbove = false,
                 pageCount = 0,
@@ -2166,175 +2146,95 @@
             observer.observe(target);
         });
     </script>
-    <style>
-        #card__next {
-            display: none;
-            position: fixed;
-            left: 0;
-            bottom: 50px;
-            background-color: #fff;
-            z-index: 5;
-        }
-        #card__next::before {
-            content: '相關推薦閱讀';
-            display: block;
-            padding: 10px 20px;
-            font-size: 1rem;
-            border-top: 1px solid #D3D5D7;
-        }
-        #card__next .card__group--scroll {
-            padding-bottom: 20px;
-            margin-left: 0;
-        }
-        #card__next.no-bottombar {
-            bottom: 0px;
-        }
-        #card__next.no-bottombar .card__group--scroll {
-            padding-bottom: 35px;
-        }
-        #card__next .card__group--next {
-            position: relative;
-            width: calc( (100% - 55px) * 3 );
-            height: auto !important;
-            font-size: 0;
-        }
-        .card__group--next a {
-            display: inline-block;
-            width: 33%;
-            text-decoration: none;
-        }
-        .card__group--next a span {
-            display: block;
-        }
-        .card__group--next a .next__img {
-            position: relative;
-            display: inline-block;
-            vertical-align: middle;
-            width: 105px;
-        }
-        .card__group--next a .next__img::before {
-            padding-top: 66.984127%;
-        }
-        .card__group--next a .next__img img {
-            width: 100%;
-        }
-        .card__group--next a .next__body {
-            display: inline-block;
-            vertical-align: middle;
-            width: calc(100% - 105px);
-            padding-left: 15px;
-            padding-right: 30px;
-        }
-        .card__group--next a .next__label {
-            margin-bottom: 5px;
-            color: #D60C18;
-            font-size: 0.875rem;
-        }
-        .card__group--next a .next__title {
-            display: -webkit-box;
-            overflow: hidden;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            color: #171717;
-            font-size: 1rem;
-            -moz-transition: color 0.2s;
-            -o-transition: color 0.2s;
-            -webkit-transition: color 0.2s;
-            transition: color 0.2s;
-        }
-        #next_article_instance {
-            position: relative;
-            background-color: #fff;
-            z-index: 1;
-        }
-    </style>
+    <script src="https://www.cw.com.tw/assets_new/js/feature/slick.min.js"></script>
     <script>
-        $(function () {
-            var masterCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(0).children('a').text(),
-                subCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(1).children('a').text();
-            var firstArticleContent = $('body > main > article > .article__body .article__content'),
-                totalNum = 0,
-                halfNum = 0;
+        var masterCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(0).children('a').text(),
+            subCannel = $('body > main > article > .article__head > .container > .breadcrumb > li').eq(1).children('a').text();
+        $(window).load(function () {
             var list = '',
-                count = 0,
-                data = [];
+                data=[];
+            $('body > main > article > .article__body .article__next a').prepend('<div class="h4 my0">相關熱門主題</div>');
             $('body > main > article > .article__body .article__next a .next__label').html(subCannel);
             switch (masterCannel) {
                 case "財經":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5105003",
-                            "subchannel": "投資理財",
-                            "title": "為什麼我一買就跌？ 5大投資觀念，建立成功第一步",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5feaafec8147f.jpg"
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5092445",
+                            "subchannel": "財經焦點",
+                            "title": "亞股緊張！3大指數重挫超過3%，美股為何暴跌？",
+                            "image": "https://cw1.tw/CW/images/article/201802/article-5a7cf5f90709a.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5099299",
+                            "url": "https://www.cw.com.tw/article/5101698",
                             "subchannel": "投資理財",
-                            "title": "「我現在一張0050都無！」ETF佛系理財作家施昇輝變了嗎？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202003/article-5e65d6ee9290a.JPG"
+                            "title": "為什麼他捨棄共同基金，改用退休存款買ETF?",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202008/article-5f47887fdf752.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5107097",
+                            "url": "https://www.cw.com.tw/article/5103048",
                             "subchannel": "投資理財",
-                            "title": "每月被動收入高達46萬 她28歲退休",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-6005e00aa4651.jpg"
+                            "title": "押身家投資比特幣、崩盤還加碼 這家人後來怎麼了？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5fca1316576f1.jpg"
                         }
                     ]
                     break;
                 case "產業":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5107082",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102921",
                             "subchannel": "服務",
-                            "title": "3年稱霸台灣外送市場 專訪熊貓總經理：經營foodpanda跟跑馬拉松一樣",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-6003e8d234a95.jpg"
+                            "title": "3大理由告訴你，日本迴轉壽司為何紛紛來台？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fbf803aaa992.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5107093",
+                            "url": "https://www.cw.com.tw/article/5102780",
                             "subchannel": "科技",
-                            "title": "以特斯拉、Netflix為師 日本電商龍頭樂天，在5G電信戰後來居上",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-600583268c228.JPG"
+                            "title": "台積如果出事，全球一起癱瘓！新美國隊長拜登之盾：台灣",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb394a3db435.png"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5107127",
-                            "subchannel": "服務",
-                            "title": "日本小七之父點名的對手 唐吉訶德連賺32年、讓你手滑爆買四祕訣",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-6007d0edc1c20.jpg"
+                            "url": "https://www.cw.com.tw/article/5090878",
+                            "subchannel": "製造",
+                            "title": "沒賣掉的新車 最後去了哪裡？",
+                            "image": "https://storage.googleapis.com/cw-com-tw/article/201807/article-5b3c7815d0c6b.jpg"
                         }
                     ]
                     break;
                 case "國際":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5105028",
-                            "subchannel": "兩岸四地",
-                            "title": "武裝台灣「刺蝟戰略」 BBC：美國對台軍售背後的盤算",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5fed3e56b8adc.jpg"
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102789",
+                            "subchannel": "美洲",
+                            "title": "「更粗暴版川普」來了　美商務部人事異動，北京有苦頭吃了？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/purchase-reauisition-5fb228627ad2d.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5104675",
+                            "url": "https://www.cw.com.tw/article/5102733",
+                            "subchannel": "兩岸四地",
+                            "title": "中國疫苗400人民幣就能打！台商：他們醫護人員都打了，有什麼好怕的？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb394a3db435.png"
+                        },
+                        {
+                            "url": "https://www.cw.com.tw/article/5102723",
                             "subchannel": "亞洲",
-                            "title": "全球抗疫能力比一比，台灣第三強、菲律賓最差",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5feaf82982028.jpg"
-                        },
-                        {
-                            "url": "https://www.cw.com.tw/article/5104620",
-                            "subchannel": "兩岸四地",
-                            "title": "不拚復甦了嗎？ 中國為什麼大限電？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5fe3aee924100.jpg"
+                            "title": "牽動15國22億人　全球規模最大自貿協議RCEP，將帶來什麼改變？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5facf6429588d.jpg"
                         }
                     ]
                     break;
                 case "管理":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5100165",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102126",
                             "subchannel": "職場競爭力",
-                            "title": "疫情虧掉1800萬 42歲的他後悔提早退休",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5e981e5b531fe.jpg"
+                            "title": "「優越感遲早讓你倒下」　頂尖財務顧問的6個人生建議",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f723d2b20243.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5095758",
-                            "subchannel": "經營管理",
-                            "title": "自我介紹到底要說些什麼？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/201906/article-5d11eb24c72d1.jpg"
+                            "url": "https://www.cw.com.tw/article/5055933",
+                            "subchannel": "職場競爭力",
+                            "title": "「努力工作」是最該被丟棄的職場建議",
+                            "image": "https://cw1.tw/CW/images/article/C1392355592982.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5102914",
@@ -2345,17 +2245,18 @@
                     ]
                     break;
                 case "環境":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5102718",
                             "subchannel": "永續發展",
                             "title": "稻殼多到填滿101，你我過年恐沒飯吃　三好米二代如何神救援？",
                             "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5facc3b59a103.JPG"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5104667",
+                            "url": "https://www.cw.com.tw/article/5080981",
                             "subchannel": "環境",
-                            "title": "文蛤瘦到剩三分之一！漁電共生先行區急上路，威脅七股養殖命脈",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/purchase-reauisition-5fe9864142bc7.jpg"
+                            "title": "台灣四季海鮮指南：如何在對的時間，吃對的海鮮？",
+                            "image": "https://cw1.tw/CW/images/article/201702/article-58a426a573b9f.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5101549",
@@ -2366,17 +2267,18 @@
                     ]
                     break;
                 case "教育":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5100065",
-                            "subchannel": "親子教養",
-                            "title": "你剪斷了孩子的翅膀，卻抱怨他不會飛翔",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea9ff084b399.jpg"
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102794",
+                            "subchannel": "教育趨勢",
+                            "title": "撕掉「名校」標籤，我還剩下什麼？北一女教我的5堂課",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb346d37c17a.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5104617",
+                            "url": "https://www.cw.com.tw/article/5102557",
                             "subchannel": "創新教育",
-                            "title": "哈佛最受歡迎的人生導師：成功不會給孩子一輩子的快樂",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5fe34669c237e.jpg"
+                            "title": "1/4學生立志讀醫　升學名校曉明女中，最紅選修課竟是一堂國文課",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/purchase-reauisition-5f9fc6212e9ec.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5102798",
@@ -2387,38 +2289,40 @@
                     ]
                     break;
                 case "人物":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5102136",
                             "subchannel": "CEO觀點",
                             "title": "92歲減重7公斤 台灣最有錢的老人如何養生？",
                             "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f73074705272.JPG"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5094053",
+                            "url": "https://www.cw.com.tw/article/5102673",
                             "subchannel": "人物特寫",
-                            "title": "台灣是第三世界國家嗎？一位德國記者眼中的台灣",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/201902/article-5c6e201bb6a28.jpg"
+                            "title": "不到30歲年薪700萬　許詮：台灣年輕人不要「輸在只會努力」",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fa8bf6167807.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5100237",
+                            "url": "https://www.cw.com.tw/article/5102569",
                             "subchannel": "人物特寫",
-                            "title": "不甘這輩子就這樣！他放棄台大學歷、外商經歷，負債一百萬重考大學",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202005/article-5ebbbbf4e001e.jpg"
+                            "title": "電商新創營收翻倍　25歲老闆只念到大一，13歲就做生意月入3萬",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/purchase-reauisition-5f9fce69ecba6.jpg"
                         }
                     ]
                     break;
                 case "政治社會":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5105486",
-                            "subchannel": "政治",
-                            "title": "蔡英文也好奇！從8900到5萬票的「高金素梅現象」，她怎麼辦到的？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-5ff56cc6b4f03.jpg"
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102826",
+                            "subchannel": "社會現場",
+                            "title": "先死先賺？阿公阿嬤繳一輩子卻拿不到　往生互助會400億破產危機",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb623de992e1.JPG"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5102795",
                             "subchannel": "政策",
-                            "title": "官員變小偷！史上首宗內部炒股案，4.4兆勞動基金為何管控失靈？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202012/article-5fe06f6757984.JPG"
+                            "title": "大學生尋短人數創新高　國人每年心理健康預算，只值2顆茶葉蛋？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb35a94ccb02.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5102725",
@@ -2429,38 +2333,40 @@
                     ]
                     break;
                 case "健康關係":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5100064",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102749",
                             "subchannel": "健康醫療",
-                            "title": "不好意思 只有一種喝咖啡的方式是健康的",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202004/article-5ea9f5373feb4.jpg"
+                            "title": "預防憂鬱和失智，走路就對了",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5faec3bf2622b.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5101890",
+                            "url": "https://www.cw.com.tw/article/5102811",
                             "subchannel": "心靈成長",
-                            "title": "心理學家：EQ很低的7個跡象",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f59f3c14c4f8.jpg"
+                            "title": "想成為千萬富翁　你該放棄的11件事",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb4e95c1ee3b.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5097234",
+                            "url": "https://www.cw.com.tw/article/5102036",
                             "subchannel": "心靈成長",
-                            "title": "耶魯學生搶爆！3百年來最夯選修課「快樂學」──你快不快樂，都跟這10件事有關！",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/201910/article-5da56537c840b.jpg"
+                            "title": "賈伯斯：極度聰明的人　都有一個特徵",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f6874e91aced.jpg"
                         }
                     ]
                     break;
                 case "調查報導":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5102026",
                             "subchannel": "調查報導",
                             "title": "你愛吃的溫體豬，細菌比馬桶還多？台灣豬美味的5大迷思",
                             "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f685d7930955.JPG"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5101983",
+                            "url": "https://www.cw.com.tw/article/5102048",
                             "subchannel": "調查報導",
-                            "title": "「在＿＿活得比較像個人」 蟬聯5年台灣人「最想移居城市」是？",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f648de05c718.JPG"
+                            "title": "【圖片故事】從養豬場到你的餐盤，台灣豬180天生命之旅",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202009/article-5f69c1d2bc22c.JPG"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5101994",
@@ -2471,7 +2377,8 @@
                     ]
                     break;
                 case "數據圖表":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5101028",
                             "subchannel": "資料新聞",
                             "title": "美國疫情二度爆發！台積電設廠州也淪陷，數據警示這幾州別去",
@@ -2492,7 +2399,8 @@
                     ]
                     break;
                 case "調查排行":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5100335",
                             "subchannel": "經營管理",
                             "title": "天下調查：台灣最強50大集團，誰淪為時代眼淚？誰打敗世界危機？",
@@ -2513,17 +2421,18 @@
                     ]
                     break;
                 case "重磅外媒":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5107089",
-                            "subchannel": "經濟學人",
-                            "title": "台幣匯率狂升仍低估？大麥克指數怎麼說",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202101/article-60053691bd3b0.jpg"
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5101581",
+                            "subchannel": "日經中文",
+                            "title": "漢族人口多10倍，但歷史上為何老是被少數民族統治？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202008/article-5f3cc9f17a96e.jpg"
                         },
                         {
-                            "url": "https://www.cw.com.tw/article/5102484",
-                            "subchannel": "BBC中文網",
-                            "title": "川普是不是好總統？4年來改變了什麼",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97ca73ba5f5.jpg"
+                            "url": "https://www.cw.com.tw/article/5102773",
+                            "subchannel": "經濟學人",
+                            "title": "巴菲特也失算！數位時代，傳統「價值型投資」思維過時了？",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/purchase-reauisition-5fb223b589323.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5102781",
@@ -2534,7 +2443,8 @@
                     ]
                     break;
                 case "時尚品味":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5099721",
                             "subchannel": "旅行",
                             "title": "爬100座山，或爬一座山100次？設計師Hally Chen的陽明山探險",
@@ -2555,11 +2465,12 @@
                     ]
                     break;
                 case "運動生活":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5102911",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5102839",
                             "subchannel": "生活",
-                            "title": "30歲月薪3萬贏過多少人？你的薪水算高嗎？一張表告訴你",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fbf5d54e04bc.jpg"
+                            "title": "158萬元遊艇、60萬元名牌包銷售一空　好市多北台中店開幕搶購潮",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202011/article-5fb734f1970f8.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5005047",
@@ -2576,7 +2487,8 @@
                     ]
                     break;
                 case "聽天下":
-                    data = [{
+                    data = [
+                        {
                             "url": "https://www.cw.com.tw/article/5101217",
                             "subchannel": "重磅封面",
                             "title": "【聽天下】暢聽天下的7種方法",
@@ -2597,11 +2509,12 @@
                     ]
                     break;
                 case "企業突圍":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5102305",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5092379",
                             "subchannel": "傳承接班",
-                            "title": "一年狠瘦20公斤 Dcard共同創辦人林裕欽的減肥管理學",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f8701bb910a6.jpg"
+                            "title": "痛失最大客戶　螺絲老廠如何在危機中啟動傳承轉型",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/201810/article-5bb873f8cba15.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5092569",
@@ -2618,11 +2531,12 @@
                     ]
                     break;
                 case "Off學":
-                    data = [{
-                            "url": "https://www.cw.com.tw/article/5073157",
+                    data = [
+                        {
+                            "url": "https://www.cw.com.tw/article/5094529",
                             "subchannel": "風格",
-                            "title": "學巴黎女人穿出優雅和風格 禁碰這10種裝扮",
-                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/202008/article-5f3b9ffb1ee1a.jpg"
+                            "title": "30歲辭職拔草找到志業　雙年展、董事長、教授都來邀",
+                            "image": "https://storage.googleapis.com/www-cw-com-tw/article/201903/article-5c9c6ef16dcb6.jpg"
                         },
                         {
                             "url": "https://www.cw.com.tw/article/5088167",
@@ -2640,8 +2554,9 @@
                     break;
             }
             for (var i = 0; i < data.length; i++) {
-                if (($('body > main > article > .article__body .article__next a').attr('href') !== data[i]['url']) && (count < 2)) {
-                    list += '<a href="' + data[i]['url'] + '?from=fix" gtm-name="read_more" eventaction="reco_next_article">';
+                if ( $('body > main > article > .article__body .article__next a').attr('href') !== data[i]['url'] ) {
+                    console.log(encodeURIComponent(data[i]['image']));
+                    list += '<a href="' + data[i]['url'] + '" gtm-name="read_more" eventaction="reco_next_article">';
                     list += '<span class="next__img"><picture>';
                     list += '<source type="image/webp" media="(max-width: 767px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=220&format=webp">';
                     list += '<source type="image/webp" media="(max-width: 1279px)" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=440&format=webp">';
@@ -2649,55 +2564,10 @@
                     list += '<img loading="lazy" alt="' + data[i]['title'] + '" src="' + data[i]['image'] + '" srcset="https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=220 220w, https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=440 440w, https://image-resizer.cwg.tw/resize/uri/' + encodeURIComponent(data[i]['image']) + '/?w=630 630w" data-sizes="auto">';
                     list += '</picture></span>';
                     list += '<span class="next__body"><span class="next__label">' + data[i]['subchannel'] + '</span><span class="next__title">' + data[i]['title'] + '</span></span></a>';
-                    count++;
                 }
             }
-            setTimeout(() => {
-                if ( $('body > main > article > .article__body > .article__next a').length > 0 ) {
-                    $('body > main > article > .article__body > .article__next').addClass('sp-custom-c887-1').append(list);
-                    $('body > main > article > .article__body > .article__next').removeClass('article__next').addClass('card__group card__group--next');
-                    for (let i = 0; i < firstArticleContent.children().length; i++) {
-                        totalNum += firstArticleContent.children().text().length;
-                    }
-                    for (let i = 0; i < firstArticleContent.children().length; i++) {
-                        if (halfNum <= (totalNum / 2)) {
-                            halfNum += firstArticleContent.children().text().length;
-                            firstArticleContent.children().removeClass('half__paragraph');
-                            firstArticleContent.children().eq(i).addClass('half__paragraph');
-                        }
-                    }
-                    if ($('.paywall').length == 0) {
-                        $('<div id="card__next"><div class="card__group--scroll"></div></div>').insertAfter(firstArticleContent.children('.half__paragraph'));
-                    }
-                    if ($('.bottombar').length !== 1) {
-                        $('body > main > article > .article__body #card__next').addClass('no-bottombar');
-                    }
-                    var stop = 0;
-                    $(window).on('scroll', function () {
-                        switch (stop) {
-                            case 10:
-                                stop = 10;
-                                $('body > main > article > .article__body #card__next .card__group--scroll').append($('body > main > article > .article__body .card__group--next'));
-                                break;
-                            default:
-                                stop += 1;
-                                break;
-                        }
-                        var scroll = $(window).scrollTop(),
-                            headerHeight = $('header').outerHeight(),
-                            articleBody = $('body > main > article > .article__body'),
-                            articleBodyTop = $('body > main > article > .article__body').offset().top,
-                            articleBodyHeight = $('body > main > article > .article__body').outerHeight(),
-                            nextArticleTop = $('#next_article_instance').offset().top;
-                        if ((scroll >= (articleBodyTop + (articleBodyHeight * 0.75))) && ( scroll < nextArticleTop)) {
-                            $('#card__next').fadeIn();
-                        } else {
-                            $('#card__next').fadeOut();
-                        }
-                    });
-                }
-            }, 3000);
-        })
+            $('body > main > article > .article__body .article__next').addClass('sp-custom-c851').append(list);
+        });
     </script>
 </body>
 

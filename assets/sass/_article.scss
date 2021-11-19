@@ -224,6 +224,10 @@
 		}
 	}
 	.more__input {
+		width: 1px;
+		height: 1px;
+		opacity: 0;
+		border: 0;
 		&:checked + .more__btn + .more__text {
 			display: block;
 		}

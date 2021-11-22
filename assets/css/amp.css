@@ -1614,7 +1614,7 @@ ul.article__share li a:hover {
 .article__detail > ul.article__assort span {
   font-size: 0.875rem;
 }
-.article__detail time {
+.article__detail time:not([hidden]) {
   display: block;
   margin-top: 5px;
   font-size: 0.875rem;

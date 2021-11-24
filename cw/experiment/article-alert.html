@@ -2210,7 +2210,7 @@
             </div>
         </div>
     </div>
-    <div class="insider__webpush--mask">
+    <div class="insider__webpush--mask active">
         <div class="insider__webpush">
             <i class="icon icon-cancel"></i>
             <a class="item__img" href="https://web.cw.com.tw/taipower-2021/" target="_blank" rel="noopener noreferrer">
@@ -2230,8 +2230,13 @@
             top: 30px;
             right: 30px;
             width: 0;
-            animation: mask-open 0.8s 0.5s forwards alternate;
             overflow: hidden;
+        }
+        .insider__webpush--mask.active {
+            animation: mask-open 0.8s 0.5s forwards alternate;
+        }
+        .insider__webpush--mask.out-active {
+            animation: mask-close 1s forwards alternate;
         }
         .insider__webpush {
             position: relative;
@@ -2287,6 +2292,14 @@
             }
             to {
                 width: 450px;
+            }
+        }
+        @keyframes mask-close {
+            from {
+                width: 450px;
+            }
+            to {
+                width: 0;
             }
         }
     </style>

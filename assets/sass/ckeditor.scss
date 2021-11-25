@@ -83,11 +83,16 @@ a {
     }
 }
 
-h2,
-.accordion__item__header {
+.accordion__group--article {
+    padding: 0 20px;
+    border: 1px dashed $gray-300;
+}
+
+h2 {
     margin-top: 40px;
 }
 .accordion__item__header {
+    margin-top: 1em;
     margin-bottom: 1em;
     font-size: nth($h-m-size, 2);
     @include typo-weight;
@@ -97,6 +102,11 @@ h2,
     .icon-plus {
         display: none;
     }
+}
+
+.accordion__item__panel {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 blockquote {

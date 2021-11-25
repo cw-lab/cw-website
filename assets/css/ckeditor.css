@@ -452,12 +452,17 @@ a:hover {
   color: #D60C18;
 }
 
-h2,
-.accordion__item__header {
+.accordion__group--article {
+  padding: 0 20px;
+  border: 1px dashed #939EA7;
+}
+
+h2 {
   margin-top: 40px;
 }
 
 .accordion__item__header {
+  margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1.25rem;
   font-weight: 600;
@@ -474,6 +479,11 @@ h2,
 }
 .accordion__item__header .icon-plus {
   display: none;
+}
+
+.accordion__item__panel {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 blockquote {

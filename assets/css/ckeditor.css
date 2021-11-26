@@ -421,7 +421,8 @@ body {
 
 p,
 ul,
-ol {
+ol,
+.accordion__item__panel {
   font-size: 1.125em;
   line-height: 1.7;
 }

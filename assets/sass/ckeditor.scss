@@ -1,5 +1,71 @@
 @import "_basic";
-@import "_general";
+
+@import 'normalize-version';
+@import 'normalize/html5';
+@import 'normalize/base';
+@import 'normalize/links';
+@import 'normalize/embeds';
+@import 'normalize/groups';
+@import 'normalize/forms';
+@import 'normalize/tables';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700&family=Roboto:wght@300;700&display=swap');
+
+ul,
+ol {
+    padding-left: 1.15em;
+}
+
+html {
+    min-height: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+.sr-only {
+    position: absolute!important;
+    padding: 0!important;
+    margin: 0!important;
+    width: 0!important;
+    height: 0!important;
+    font-size: 0!important;
+}
+
+*,
+*::before,
+*::after {
+    @include box-sizing(border-box);
+}
+
+body {
+    font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
+    font-display: swap;
+}
+
+a, button.btn {
+    text-decoration: none;
+    @include breakpoint(1024px) {
+        @include transition(color .2s, border .2s, background .2s);
+    }
+}
+
+img {
+    display: block;
+}
+
 @import "_sheet";
 
 $h-size: 2rem, 1.375rem, 1.125rem, 1rem, 0.875rem;
@@ -12,17 +78,11 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
 }
 
 @mixin typo-weight {
-    font-weight: 600;
-    @include breakpoint(1024px) {
-        font-weight: 500;
-    }
+    font-weight: 700;
 }
 
 %typo-weight {
-    font-weight: 600;
-    @include breakpoint(1024px) {
-        font-weight: 500;
-    }
+    font-weight: 700;
 }
 
 @for $i from 1 through 5 {
@@ -38,10 +98,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
 @for $i from 1 through 2 {
     h#{$i},
     .h#{$i} {
-        font-size: nth($h-m-size, $i);
-        @include breakpoint(1024px) {
-            font-size: nth($h-size, $i);
-        }
+        font-size: nth($h-size, $i);
     }
 }
 
@@ -62,7 +119,7 @@ p,
 ul,
 ol,
 .accordion__item__panel {
-    font-size: 1.125em;
+    font-size: 1.125rem;
     line-height: 1.7;
 }
 p {

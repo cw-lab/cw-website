@@ -1,10 +1,5 @@
 @charset "UTF-8";
-.list-reset {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700&family=Roboto:wght@300;700&display=swap");
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
 aside,
@@ -193,68 +188,6 @@ ol {
   padding-left: 1.15em;
 }
 
-.upper-latin {
-  list-style-type: upper-alpha;
-}
-
-.decimal {
-  list-style-type: decimal;
-}
-
-.disc {
-  list-style-type: disc;
-}
-
-.number__brackets li {
-  position: relative;
-  padding-left: 2em;
-  line-height: 1.5;
-}
-.number__brackets li span {
-  position: absolute;
-  left: 0;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.align-items-center {
-  align-items: center;
-}
-
-.align-items-baseline {
-  align-items: baseline;
-}
-
-.font-weight-400 {
-  font-weight: 400;
-}
-
-.font-weight-500 {
-  font-weight: 500;
-}
-
-.font-weight-600 {
-  font-weight: 600;
-}
-
-@media (min-width: 768px) {
-  .flex-md {
-    display: flex;
-  }
-}
-@media (min-width: 1024px) {
-  .flex-lg {
-    display: flex;
-  }
-}
-@media (min-width: 1280px) {
-  .flex-xl {
-    display: flex;
-  }
-}
-
 html {
   min-height: 100%;
   height: 100%;
@@ -292,22 +225,8 @@ textarea {
 }
 
 body {
-  position: relative;
-  min-height: 100%;
-  padding-bottom: 0 !important;
-}
-@media (min-width: 1024px) {
-  body {
-    font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
-    font-display: swap;
-  }
-}
-body.opened {
-  overflow: hidden;
-}
-
-.serif {
-  font-family: 'Noto Serif TC', '思源宋體 TC', '思源宋體 TW', '思源宋體', serif;
+  font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
+  font-display: swap;
 }
 
 a, button.btn {
@@ -326,33 +245,6 @@ img {
   display: block;
 }
 
-.clearfix,
-.clearfix::before,
-.clearfix::after {
-  display: table;
-  clear: both;
-}
-
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 1023px) {
-  .desktop {
-    display: none;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mobile {
-    display: none;
-  }
-}
-
 h1,
 .h1, h2,
 .h2, h3,
@@ -364,34 +256,17 @@ h1,
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 600;
-}
-@media (min-width: 1024px) {
-  h1, h2, h3, h4, h5 {
-    font-weight: 500;
-  }
+  font-weight: 700;
 }
 
 h1,
 .h1 {
-  font-size: 1.625rem;
-}
-@media (min-width: 1024px) {
-  h1,
-  .h1 {
-    font-size: 2rem;
-  }
+  font-size: 2rem;
 }
 
 h2,
 .h2 {
-  font-size: 1.25rem;
-}
-@media (min-width: 1024px) {
-  h2,
-  .h2 {
-    font-size: 1.375rem;
-  }
+  font-size: 1.375rem;
 }
 
 h3,
@@ -423,7 +298,7 @@ p,
 ul,
 ol,
 .accordion__item__panel {
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 1.7;
 }
 
@@ -433,12 +308,7 @@ p {
 }
 
 strong, b {
-  font-weight: 600;
-}
-@media (min-width: 1024px) {
-  strong, b {
-    font-weight: 500;
-  }
+  font-weight: 700;
 }
 
 a {
@@ -466,12 +336,7 @@ h2 {
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1.25rem;
-  font-weight: 600;
-}
-@media (min-width: 1024px) {
-  .accordion__item__header {
-    font-weight: 500;
-  }
+  font-weight: 700;
 }
 @media screen and (min-width: 1024px) {
   .accordion__item__header {
@@ -630,12 +495,7 @@ table th, table td {
 }
 table th {
   background-color: #EEEEEE;
-  font-weight: 600;
-}
-@media (min-width: 1024px) {
-  table th {
-    font-weight: 500;
-  }
+  font-weight: 700;
 }
 
 .article__table {

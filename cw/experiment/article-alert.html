@@ -2214,14 +2214,17 @@
         <div class="insider__webpush">
             <i class="icon icon-cancel"></i>
             <a class="item__img" href="https://web.cw.com.tw/taipower-2021/" target="_blank" rel="noopener noreferrer">
-                <img src="https://storage.googleapis.com/www-cw-com-tw/block-item/202109/block-item-614d83206f71a.jpg" alt="數據揭密》日落就缺電？第二尖峰的供電危機">
+                <img src="https://yingyuchen32.github.io/webpush/img/pic.jpg" alt="數據揭密》日落就缺電？第二尖峰的供電危機">
             </a>
-            <a class="item__text" href="https://web.cw.com.tw/taipower-2021/" target="_blank" rel="noopener noreferrer">
+            <div class="item__text">
                 <span class="link">web.cw.com.tw</span>
-                <span class="title">
-                    ​​一天 24 小時，哪個時段最可能跳電？答案不是正中午，而是每天下午 4 點到 8 點。
-                </span>
-            </a>
+                <a class="title" href="https://web.cw.com.tw/taipower-2021/" target="_blank" rel="noopener noreferrer">
+                    數據揭密》日落就缺電？第二尖峰的供電危機
+                </a>
+                <div class="text-right">
+                    <button class="btn btn--outlined btn--small sp-custom-c1563-1">不想再收到通知</button>
+                </div>
+            </div>
         </div>
     </div>
     <style>
@@ -2230,6 +2233,7 @@
             top: 30px;
             right: 30px;
             width: 0;
+            z-index: 6;
             overflow: hidden;
         }
         .insider__webpush--mask.active {
@@ -2240,11 +2244,12 @@
         }
         .insider__webpush {
             position: relative;
-            width: 450px;
+            width: 430px;
+            padding: 1rem 1.55rem 1rem 1rem;
             font-size: 0;
+            line-height: 1.4;
             background-color: #FAFAFA;
             border: 1px solid #EEEEEE;
-            z-index: 6;
         }
         .insider__webpush .icon-cancel {
             position: absolute;
@@ -2258,7 +2263,7 @@
         .insider__webpush .item__img {
             display: inline-block;
             vertical-align: middle;
-            width: 170px;
+            width: 120px;
         }
         .insider__webpush .item__img img {
             display: block;
@@ -2267,36 +2272,47 @@
         .insider__webpush .item__text {
             display: inline-block;
             vertical-align: middle;
-            width: calc(100% - 170px);
+            width: calc(100% - 120px);
             padding-left: 15px;
             color: #000;
-        }
-        .insider__webpush .item__text:hover {
-            color: #D60C18;
         }
         .insider__webpush .item__text span {
             display: block;
             line-height: 1.25;
         }
         .insider__webpush .item__text span.link {
-            margin-bottom: 5px;
+            padding-bottom: 0.25rem;
             color: #939EA7;
             font-size: 0.75rem;
         }
-        .insider__webpush .item__text span.title {
+        .insider__webpush .item__text a.title {
+            display: block;
+            padding-bottom: 0.25rem;
+            color: #000;
             font-size: 1rem;
+            font-weight: 500;
+        }
+        .insider__webpush .item__text a.title:hover {
+            color: #9D0505;
+        }
+        .insider__webpush .item__text .text-right {
+            text-align: right;
+        }
+        .insider__webpush .item__text a.btn.btn--small {
+            font-size: 0.75rem;
+            background-color: transparent;
         }
         @keyframes mask-open {
             from {
                 width: 0;
             }
             to {
-                width: 450px;
+                width: 430px;
             }
         }
         @keyframes mask-close {
             from {
-                width: 450px;
+                width: 430px;
             }
             to {
                 width: 0;

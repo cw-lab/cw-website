@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+    <title>方案選擇 - 請選擇你想看天下的方式｜天下雜誌｜華文世界最優質的財經雜誌</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/cw.css">
+    <link rel="stylesheet" href="../assets/css/secant.css">
+</head>
+
+<body class="webaccess__page webaccess__page--app">
+    <main>
+        <div class="container">
+            <form class="form">
+                <input type="radio" id="annual" name="plan" checked value="一年">
+                <label for="annual">
+                    <div class="label__left">
+                        <div class="h3 my0">一年</div>
+                    </div>
+                    <div class="label__right">
+                        <div class="h3 my0">NT$2490</div>
+                    </div>
+                    <div class="label__more" style="display: block;">
+                        <div class="h5 my0">方案說明</div>
+                        <p class="mt10 mb0">
+                            免費加贈「天下雜誌App」完整功能，每日精選推播，超過百支「聽天下」真人音頻節目隨你聽
+                        </p>
+                    </div>
+                </label>
+                <input type="radio" id="annual2" name="plan" value="兩年">
+                <label for="annual2">
+                    <div class="label__left">
+                        <div class="h3 my0">兩年</div>
+                    </div>
+                    <div class="label__right">
+                        <div class="h3 my0">NT$3999</div>
+                    </div>
+                </label>
+                <input type="radio" id="annual_pe" name="plan" value="一年+紙本閱讀">
+                <label for="annual_pe">
+                    <div class="label__left">
+                        <div class="h3 my0">一年+紙本閱讀</div>
+                    </div>
+                    <div class="label__right">
+                        <div class="spec my0">長訂優惠</div>
+                        <div class="h3 my0">NT$3480</div>
+                    </div>
+                </label>
+                <button class="btn btn--100 btn--contained" type="submit">訂閱</button>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+    <script>
+        $('label').each(function (){
+            $(this).click(function (){
+                $(this).children('.label__more').slideDown();
+                $(this).siblings().children('.label__more').slideUp();
+            })
+        })
+    </script>
+</body>
+
+</html>

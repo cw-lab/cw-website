@@ -1015,3 +1015,63 @@
         }
     }
 }
+
+.webaccess__page--app {
+    min-height: auto;
+    main {
+        margin-top: 30px;
+        min-height: auto !important;
+    }
+    .form {
+        label {
+            display: grid;
+            grid-template-columns: auto auto;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid $secondary;
+            justify-content: space-between;
+            align-items: center;
+            .label__left {
+                .h3 {
+                    line-height: 1.25;
+                }
+            }
+            .label__right {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                white-space: nowrap;
+            }
+            .label__more {
+                position: relative;
+                display: none;
+                grid-column-start: 0;
+                grid-column-end: span 2;
+                margin-top: 20px;
+                padding-top: 10px;
+                border-top: 1px solid $gray-200;
+                .h5, p {
+                    font-size: 0.875rem;
+                    line-height: 1.5;
+                }
+            }
+            .spec {
+                margin-left: 20px;
+                margin-right: 10px;
+                padding: 2px 10px;
+                color: $primary;
+                font-size: 0.875rem;
+                border: 1px solid $primary;
+                border-radius: 30px;
+            }
+        }
+        input[type="radio"]:checked + label {
+            border-color: $primary;
+        }
+        .btn {
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+    }
+}

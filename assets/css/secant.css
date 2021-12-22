@@ -1080,4 +1080,60 @@
   }
 }
 
+.webaccess__page--app {
+  min-height: auto;
+}
+.webaccess__page--app main {
+  margin-top: 30px;
+  min-height: auto !important;
+}
+.webaccess__page--app .form label {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #939EA7;
+  justify-content: space-between;
+  align-items: center;
+}
+.webaccess__page--app .form label .label__left .h3 {
+  line-height: 1.25;
+}
+.webaccess__page--app .form label .label__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.webaccess__page--app .form label .label__more {
+  position: relative;
+  display: none;
+  grid-column-start: 0;
+  grid-column-end: span 2;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #D3D5D7;
+}
+.webaccess__page--app .form label .label__more .h5, .webaccess__page--app .form label .label__more p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.webaccess__page--app .form label .spec {
+  margin-left: 20px;
+  margin-right: 10px;
+  padding: 2px 10px;
+  color: #D60C18;
+  font-size: 0.875rem;
+  border: 1px solid #D60C18;
+  border-radius: 30px;
+}
+.webaccess__page--app .form input[type="radio"]:checked + label {
+  border-color: #D60C18;
+}
+.webaccess__page--app .form .btn {
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
 /*# sourceMappingURL=secant.css.map */

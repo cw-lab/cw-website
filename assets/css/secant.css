@@ -1096,6 +1096,7 @@
   border: 1px solid #939EA7;
   justify-content: space-between;
   align-items: center;
+  transition: border 0.3s;
 }
 .webaccess__page--app .form label .label__left .h3 {
   line-height: 1.25;

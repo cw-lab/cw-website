@@ -1032,6 +1032,7 @@
             border: 1px solid $secondary;
             justify-content: space-between;
             align-items: center;
+            transition: border 0.3s;
             .label__left {
                 .h3 {
                     line-height: 1.25;

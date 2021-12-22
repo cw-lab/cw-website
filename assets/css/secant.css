@@ -1129,6 +1129,11 @@
   border: 1px solid #D60C18;
   border-radius: 30px;
 }
+.webaccess__page--app .form input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
 .webaccess__page--app .form input[type="radio"]:checked + label {
   border-color: #D60C18;
 }

@@ -4822,9 +4822,6 @@ header .container > .item.item--center {
     padding-left: 180px;
     padding-right: 215px;
   }
-  header .container > .item.item--center.item--40 {
-    padding-left: 220px;
-  }
 }
 header .container > .item.item--center .item__scroll {
   position: relative;
@@ -4846,7 +4843,7 @@ header .container > .item.item--center .title__share .h3 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-header .container > .item.item--center .logo__set--40 {
+header .container > .item.item--center a.logo {
   position: absolute;
   top: 0;
   left: 50px;
@@ -4857,36 +4854,13 @@ header .container > .item.item--center .logo__set--40 {
   z-index: 1;
 }
 @media (min-width: 375px) {
-  header .container > .item.item--center .logo__set--40 {
+  header .container > .item.item--center a.logo {
     left: 55px;
   }
 }
 @media (min-width: 1024px) {
-  header .container > .item.item--center .logo__set--40 {
+  header .container > .item.item--center a.logo {
     left: 60px;
-  }
-}
-header .container > .item.item--center .logo__set--40 a.logo.logo--main {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-header .container > .item.item--center .logo__set--40 a.logo.logo--40 {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-header .container > .item.item--center .logo__set--40 a.logo img {
-  padding: 8px 0;
-}
-@media (min-width: 375px) {
-  header .container > .item.item--center .logo__set--40 a.logo img {
-    padding: 5px 0;
-  }
-}
-@media (min-width: 1024px) {
-  header .container > .item.item--center .logo__set--40 a.logo img {
-    padding: 3px 0;
   }
 }
 header .hamburger {
@@ -4904,10 +4878,6 @@ header a.logo {
 }
 header a.logo img {
   height: 40px;
-}
-header a.logo.logo--hide {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 header a.logo.logo--main {
   margin-right: 20px;
@@ -4994,7 +4964,7 @@ header.scroll .container > .item.item--center .item__scroll {
   top: -40px;
 }
 @media (max-width: 1023px) {
-  header.scroll .container > .item.item--center .logo__set {
+  header.scroll .container > .item.item--center a.logo {
     top: -55px;
   }
 }

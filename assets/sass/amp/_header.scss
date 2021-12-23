@@ -51,71 +51,9 @@ header {
                     top: 0;
                     @include transition(top 0.3s);
                 }
-                .logo__set--40 {
+                a.logo {
                     display: inline-block;
-                    position: relative;
-                    padding: 8px 0;
                     margin-left: 20px;
-                    @include breakpoint(375px) {
-                        padding: 5px 0;
-                    }
-                    @include breakpoint(1024px) {
-                        padding: 3px 0;
-                    }
-                    a.logo {
-                        display: block;
-                        amp-img {
-                            width: 112.2px;
-                            height: 24px;
-                            @include breakpoint(375px) {
-                                width: 140.25px;
-                                height: 30px;
-                            }
-                            @include breakpoint(1024px) {
-                                width: 158.95px;
-                                height: 34px;
-                            }
-                        }
-                        &.logo--main {
-                            position: absolute;
-                            top: 50%;
-                            left: 0;
-                            @include translateY(-50%);
-                            amp-img {
-                                width: 65.23px;
-                                height: 24px;
-                                @include breakpoint(375px) {
-                                    width: 81.53px;
-                                    height: 30px;
-                                }
-                                @include breakpoint(1024px) {
-                                    width: 92.41px;
-                                    height: 34px;
-                                }
-                            }
-                        }
-                        &.logo--40 {
-                            position: absolute;
-                            top: 50%;
-                            right: 0;
-                            @include translateY(-50%);
-                            amp-img {
-                                width: 42.05px;
-                                height: 24px;
-                                @include breakpoint(375px) {
-                                    width: 52.56px;
-                                    height: 30px;
-                                }
-                                @include breakpoint(1024px) {
-                                    width: 59.56px;
-                                    height: 34px;
-                                }
-                            }
-                        }
-                        &.logo--hide {
-                            @include opacity(0);
-                        }                
-                    }
                 }
                 .title__share {
                     .h3 {
@@ -123,6 +61,13 @@ header {
                     }
                 }
             }
+        }
+    }
+    a.logo {
+        position: relative;
+        amp-img {
+            width: 109px;
+            height: 40px;
         }
     }
     .search__icon {

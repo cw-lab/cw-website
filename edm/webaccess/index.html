@@ -68,7 +68,11 @@
             background: #555555 !important;
             border-color: #555555 !important;
         }
-        
+        table.stack-column,
+        table.stack-column-center {
+            display: inline-table;
+            vertical-align: top;
+        }
         @media screen and (max-width: 600px) {
             .email-container {
                 width: 100% !important;
@@ -271,11 +275,11 @@
                             <td style="padding: 0 6.25%; font-family: sans-serif; mso-height-rule: exactly; line-height: 1.5;">
                                 <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100% !important; border: 1px solid #d2d5d7;">
                                     <tr>
-                                        <td style="padding: 0 8.9%;">
+                                        <td style="padding: 0 1.5%;">
                                             <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100% !important;">
                                                 <tr>
                                                     <td style="padding-top: 30px;" align="center">
-                                                        <table class="stack-column-center" align="left" border="0" cellspacing="0" cellpadding="0">
+                                                        <table class="stack-column-center" width="300" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
                                                                 <td style="padding-left: 2.955%; line-height: 1.5;">
                                                                     <div style="font-family: Roboto, 'Noto Sans TC', sans-serif; font-size: 1.375rem; font-weight: 500;">天下APP，體驗更佳</div>
@@ -292,7 +296,7 @@
                                                                 </td>
                                                             </tr>
                                                         </table>
-                                                        <table class="stack-column-center" align="right" border="0" cellspacing="0" cellpadding="0">
+                                                        <table class="stack-column-center" width="113" border="0" cellspacing="0" cellpadding="0">
                                                             <tr>
                                                                 <td style="font-size: 0;">
                                                                     <img src="2022/cw-app-screen.png" width="113" alt="天下APP示意圖">

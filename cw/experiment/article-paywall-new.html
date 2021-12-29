@@ -1053,6 +1053,23 @@
                     </p>
                 </div>
                 <div class="paywall paywall--singleColumn paywall--p0 text-center">
+                    <div class="paywall__header">
+                        您已經是訂戶？<a class="btn btn--text otherBtn gtmEvent" gtm-name="Paywall_popup_0_login" href="https://www.cw.com.tw/member/home/MemberLogin.action?site=C_paywall&amp;source=paywall_popup_login" target="_blank">登入</a>
+                    </div>
+                    <div class="paywall__body">
+                        <img src="../../assets/images/secant/webaccess-pe@2x.png" alt="線上+紙本閱讀">
+                        <div class="h1 font-weight-500 mt20 mb0">訂閱天下　無限暢讀</div>
+                        <ul class="check">
+                            <li>天下全閱讀：不限篇數暢讀天下雜誌網站和APP</li>
+                            <li>每日編輯精選推薦：整理全球焦點要聞、產業脈動</li>
+                            <li>串聯頂尖媒體：國際合作夥伴，提供您全面的觀點</li>
+                        </ul>
+                        <a id="paywall_box_l0_a_tag" class="btn btn--contained gtmEvent" gtm-name="Paywall_popup_0_sub" target="_blank" href="https://www.cw.com.tw/payment?source=paywall0">查看訂閱方案</a>
+                    </div>
+                    <div class="separation separation--or"><span>或</span></div>
+                    <div class="paywall__footer">
+                        繼續閱讀此篇文章<a href="#!" class="btn--text">加入會員</a>
+                    </div>
                 </div>
                 <div class="article__next"></div>
             </div>
@@ -1419,6 +1436,11 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
+    <script type="text/javascript" src="../../assets/js/lazysizes.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/cw.js"></script>
+    <script type="text/javascript" src="../../assets/js/article.js"></script>
     <!-- insider start -->
     <style>
         .article__function {
@@ -1426,6 +1448,10 @@
         }
         main {
             overflow: hidden;
+        }
+        .paywall--insider {
+            display: flex;
+            flex-direction: column;
         }
         .paywall--insider::after {
             content: '';
@@ -1439,24 +1465,60 @@
             transform: translateX(-50%);
             z-index: -1;
         }
-        .paywall--insider .essay {
+        .paywall--insider .paywall__header {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            line-height: 1.5;
+            background-color: transparent;
+            order: 2;
+        }
+        .paywall--insider .paywall__body {
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+            order: 1;
+        }
+        .paywall--insider .paywall__body img {
+            order: 1;
+        }
+        .paywall--insider .paywall__body .h1 {
+            order: 0;
+        }
+        .paywall--insider .paywall__body ul.check {
+            order: 2;
+            text-align: center;
+        }
+        .paywall--insider .paywall__body ul.check li {
+            padding: 0;
+            text-indent: 0;
             line-height: 1.5;
         }
-        .paywall--insider .btn__group {
+        .paywall .paywall__body ul.check li + li {
+            margin: 0;
+        }
+        .paywall--insider .paywall__body ul.check li::before {
+            display: none;
+        }
+        .paywall--insider .paywall__body .btn__group {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             font-weight: normal;
+            order: 3;
         }
         .paywall--insider .paywall__body .btn__group .btn {
             min-width: 182px;
         }
+        .paywall--insider .separation,
+        .paywall--insider .paywall__footer {
+            display: none;
+        }
         @media screen and (max-width: 1023px) {
-            .paywall--insider .btn {
+            .paywall--insider .paywall__body .btn__group .btn {
                 order: 1;
             }
-            .paywall--insider .btn + .btn {
+            .paywall--insider .paywall__body .btn__group .btn + .btn {
                 margin-left: 0;
                 margin-bottom: 10px;
                 order: 0;
@@ -1465,31 +1527,15 @@
     </style>
     <script>
         (function() {
-            let str = `<div class="paywall__body pt40">
-                        <div class="h1 font-weight-500 my0">您的閱讀篇數已達上限</div>
-                        <img class="my30" src="../../assets/images/secant/webaccess-pe@2x.png" alt="線上+紙本閱讀">
-                        <div class="essay mt0-mb1">
-                            現在訂閱天下全閱讀<br/>
-                            每天只要7元就能輕鬆提升自己
-                        </div>
-                        <div class="btn__group">
-                            <a class="btn btn--outlined" target="_blank" href="https://www.cw.com.tw/payment?source=paywall0">查看訂閱方案</a>
-                            <a class="btn btn--contained" target="_blank" href="https://www.cw.com.tw/payment?source=paywall0">加入會員再看一篇</a>
-                        </div>
-                    </div>
-                    <div class="paywall__footer py40">
-                        您已經是訂戶？<a class="btn btn--text otherBtn gtmEvent" gtm-name="Paywall_popup_0_login" href="https://www.cw.com.tw/member/home/MemberLogin.action?site=C_paywall&amp;source=paywall_popup_login" target="_blank">登入</a>
-                    </div>`;
-            document.querySelector('.paywall--p0').classList.add('paywall--insider');
-            document.querySelector('.paywall--p0').innerHTML = str;
+            $('.paywall--p0').addClass('paywall--insider');
+            $('.paywall--insider .h1').removeClass('mt20 mb0').addClass('my0');
+            $('.paywall--insider img').addClass('my30');
+            $('.paywall--insider .check').addClass('mt0-mb1');
+            $(`<div class="btn__group"></div>`).insertAfter('.check');
+            $('.paywall--insider .paywall__body .btn').appendTo(".btn__group");
         })();
     </script>
     <!-- insider end -->
-    <script type="text/javascript" src="https://www.cw.com.tw/assets_new/js/jquery1.10.2.js"></script>
-    <script type="text/javascript" src="../../assets/js/lazysizes.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/cw.js"></script>
-    <script type="text/javascript" src="../../assets/js/article.js"></script>
 </body>
 
 </html>

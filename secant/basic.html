@@ -68,8 +68,8 @@
                                 <div class="content__item__amount">399元</div>
                             </li>
                             <li class="content__item">
-                                <div class="content__item__title">2019天下筆記本-PANTONE色</div>
-                                <div class="content__item__amount">贈品</div>
+                                <div class="content__item__title">運費</div>
+                                <div class="content__item__amount">0元</div>
                             </li>
                             <li class="content__item">
                                 <div class="content__item__title">會員帳號</div>
@@ -153,12 +153,12 @@
                     <div class="tab">
                         <div class="tab__nav">
                             <ul class="list-reset">
-                                <li><span>台灣地區</span></li>
-                                <li class="active"><span>國外地區</span></li>
+                                <li class="active"><span>台灣地區</span></li>
+                                <li><span>國外地區</span></li>
                             </ul>
                         </div>
                         <div class="tab__content">
-                            <div class="tab__content__pane tab__content__pane--p20">
+                            <div class="tab__content__pane tab__content__pane--p20 active">
                                 <div class="flex mb-20">
                                     <div class="select__group select__group--col2 select__group--filled select__group--undone">
                                         <select name="country">
@@ -209,7 +209,7 @@
 									</label>
                                 </div>
                             </div>
-                            <div class="tab__content__pane tab__content__pane--p20 active">
+                            <div class="tab__content__pane tab__content__pane--p20">
                                 <div class="flex mb-20 form__group form__group--divide">
                                     <div class="select__group select__group--filled">
                                         <select name="nation">
@@ -1091,6 +1091,17 @@
 						</label>
 					</div>
                 </section>
+                <section class="group group--disabled">
+                    <div class="message message--remark">
+                        <div class="message__container">
+                            <div class="message__txt">
+                                <p class="mtb0">
+                                    當您訂購雜誌即代表您已經詳閱並同意遵守《<a href="https://www.cw.com.tw/privacy" target="_blank">天下雜誌群會員服務條款</a>》與特別聲明。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <div class="price--fixed text-right">
 					<div class="container">
 						<div class="flex justify-between align-items-center">
@@ -1164,6 +1175,15 @@
 					本次修改僅用於訂單使用，若需調整會員資料，請前往會員中心
 				</p>
 				<form>
+					<div class="label form__group form__group--filled form__group--error w-100">
+						<label class="label">
+							<div class="form__group__placeholder">請輸入手機號碼</div>
+							<input type="text" name="telphone" class="form__group__input" value="893475987">
+							<i class="form__group__help form__group__help--strong form__group__help--highlight">
+								台灣讀者請輸入手機號碼，例：0912345678<br>其他地區讀者請輸入國碼，例：+886912345678
+							</i>
+						</label>
+					</div>
 					<div class="label form__group form__group--filled w-100">
 						<label class="label">
 							<div class="form__group__placeholder">請輸入手機號碼</div>

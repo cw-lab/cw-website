@@ -24,6 +24,13 @@
     height: 82px;
   }
 }
+@media (max-width: 1023px) {
+  .webaccess__page--payment.webaccess__page--index .price--fixed .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
 .webaccess__page--payment:not(.webaccess__page--index) .price--fixed .container {
   padding-left: 0;
   padding-right: 0;

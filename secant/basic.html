@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 
 <head>
-    <meta charSet="utf-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../assets/css/secant.css">
 </head>
 
-<body class="webaccess__page">
+<body class="webaccess__page webaccess__page--payment">
     <header>
         <div class="container">
             <div class="flex justify-between">
@@ -56,9 +56,11 @@
                 </div>
             </div>
             <form action="payment.html">
-                <h2>請填寫資料：</h2>
                 <section class="group">
-                    <h3>訂單商品</h3>
+                    <div class="h3 flex">
+						<h3 class="my0">訂單商品確認</h3>
+						<a onclick="window.history.back();" class="link-btn h4 my0">重選</a>
+					</div>
                     <div class="content__group">
                         <ul class="content__list">
                             <li class="content__item">
@@ -69,13 +71,27 @@
                                 <div class="content__item__title">2019天下筆記本-PANTONE色</div>
                                 <div class="content__item__amount">贈品</div>
                             </li>
+                            <li class="content__item">
+                                <div class="content__item__title">會員帳號</div>
+                                <div class="content__item__amount">bilylin66@gmail.com</div>
+                            </li>
+                            <li class="content__item">
+                                <div class="content__item__title">手機</div>
+                                <div class="content__item__amount">
+									<span>0987654321</span>
+									<i class="icon icon-pen"></i>
+								</div>
+                            </li>
                         </ul>
-                        <div class="content__total">
-                            <div class="content__total__reelect">
-                                <a onclick="window.history.back();" class="link-btn">重選</a>
-                            </div>
-                            <div class="content__total__amount">
-                                總金額<span>399</span>元
+                    </div>
+                </section>
+                <section class="group">
+                    <div class="message message--remark">
+                        <div class="message__container">
+                            <div class="message__txt">
+                                <p class="mtb0">
+                                    您選擇的商品為自動續訂，我們將在三個月後以699元為您自動續訂三個月的線上閱讀，您可在訂閱的2個工作天後至會員中心取消自動續訂。
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -129,23 +145,6 @@
                         <div class="label form__group">
                             <button class="btn btn--contained">登入</button>
                             <button class="btn btn--outlined">更換E-mail</button>
-                        </div>
-                    </div>
-                </section>
-                <section class="group">
-                    <h3>聯絡資料</h3>
-                    <div class="flex-container">
-                        <div class="label form__group form__group--filled form__group--undone">
-                            <label class="label">
-								<div class="form__group__placeholder">請輸入姓名</div>
-								<input type="text" class="form__group__input">
-							</label>
-                        </div>
-                        <div class="label form__group form__group--filled">
-                            <label class="label">
-								<div class="form__group__placeholder">請輸入手機號碼</div>
-								<input type="text" name="telphone" class="form__group__input">
-							</label>
                         </div>
                     </div>
                 </section>
@@ -909,7 +908,7 @@
                         <div class="tab__content">
                             <div class="tab__content__pane tab__content__pane--p20 active">
                                 <label class="label label--radio">
-									<input type="radio" name="individ" value="member" checked>
+									<input type="radio" name="individ" value="member">
 									<span class="label__radio__mark"></span>
 									<span class="label__radio__txt">會員載具</span>
 									<span class="label__radio__helper">
@@ -918,7 +917,7 @@
 								</label>
                                 <div class="label form__group form__group--selection form__group--filled">
                                     <label class="label--radio">
-										<input type="radio" name="individ" value="mobile">
+										<input type="radio" name="individ" value="mobile" checked>
 										<span class="label__radio__mark"></span>
 										<span class="label__radio__txt">手機條碼載具</span>
 										<span class="label__radio__helper">手機條碼為“/"開頭之條碼，共8碼</span>
@@ -940,12 +939,6 @@
 										<input type="text" name="cdc" class="form__group__input">
 									</label>
                                 </div>
-                                <label class="label label--radio">
-									<input type="radio" name="individ" value="paper">
-									<span class="label__radio__mark"></span>
-									<span class="label__radio__txt">我仍需索取紙本發票</span>
-									<span class="label__radio__helper">電子發票若中獎將寄送至收件地址，本公司將不再為您主動對獎，請妥善保管電子發票證明聯正本，遺失補印之發票將無法進行兌領獎。</span>
-								</label>
                             </div>
                             <div class="tab__content__pane tab__content__pane--p20">
                                 <div class="label form__group form__group--filled">
@@ -988,9 +981,9 @@
 									<div class="label label--set">
                                         <label class="label">
 											<div class="form__group__placeholder">請輸入愛心碼，限數字</div>
-											<input type="text" name="donate" class="form__group__input" disabled>
+											<input type="text" name="donate" class="form__group__input">
 										</label>
-										<a href="#!" class="btn btn--outlined" disabled>前往財政部查詢</a>
+										<a href="#!" class="btn btn--outlined">前往財政部查詢</a>
                                     </div>
                                 </div>
                             </div>
@@ -1088,70 +1081,42 @@
 						</div>
                     </div>
                 </section>
-                <section class="group group--disabled">
-                    <h3>自動續訂</h3>
-                    <div class="flex-container">
-                        <label class="label--check">
-							<input type="checkbox" name="checkbox" checked disabled>
-							<span class="label__check__mark"></span>
-							<span class="label__check__txt">我同意自動延續訂閱期限</span>
-						</label>
-						<div>
-                            <p class="mb0">
-                                我們將在三個月後以699元為您自動續訂，您可隨時取消自動續訂。
-                            </p>
-                        </div>
-                    </div>
-                </section>
-                <section class="group group--disabled">
+				<section class="group group--disabled">
                     <h3>退貨說明</h3>
                     <div class="flex-container">
                         <label class="label--check">
 							<input type="checkbox" name="checkbox" checked disabled>
 							<span class="label__check__mark"></span>
-							<span class="label__check__txt">我同意辦理退貨時，由天下雜誌網路書店代為處理發票及銷貨退回證明單。</span>
+							<span class="label__check__txt">我同意辦理退貨時，由天下雜誌代為處理發票及銷貨退回證明單。</span>
 						</label>
 					</div>
                 </section>
-                <section class="group group--disabled">
-                    <div class="message message--remark">
-                        <div class="message__container">
-                            <div class="message__txt">
-                                <p class="mtb0">
-                                    當您訂購雜誌即代表您已經詳閱並同意遵守《<a href="https://www.cw.com.tw/privacy" target="_blank">天下雜誌群會員服務條款</a>》與特別聲明。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="text-right">
-                    <button class="btn btn--contained" disabled>下一步</button>
+                <div class="price--fixed text-right">
+					<div class="container">
+						<div class="flex justify-between align-items-center">
+							<h3 class="price--left text-left my0">
+								總金額　399元
+							</h3>
+							<button class="btn btn--contained" disabled>下一步</button>
+						</div>
+					</div>
                 </div>
             </form>
         </article>
     </main>
-    <footer>
-        <div class="container">
-            <div class="flex justify-between">
-                <div class="copyright">
-                    <ul class="copyright__cwlink flex list-reset">
-                        <li><a href="https://www.cw.com.tw/about/" target="_blank">關於天下雜誌群</a></li>
-                        <li><a href="https://www.cwbook.com.tw/member/mcntr/MemberHome!redirect.shtml" target="_blank">顧客服務</a></li>
-                        <li><a href="https://www.cw.com.tw/subscriptions">雜誌訂閱</a></li>
-                        <li><a href="https://www.cw.com.tw/saleskit/" target="_blank">廣告刊登</a></li>
-                        <li><a href="https://www.cw.com.tw/recruit/index.php" target="_blank">人才招募</a></li>
-                        <li><a href="https://www.cw.com.tw/privacy" target="_blank">隱私權政策與使用條款</a></li>
-                    </ul>
-                    <div class="copyright__contact">
-                        <span>讀者服務專線：886-2-2662-0332</span>
-                        <span>傳真電話：886-2-2662-6048</span>
-                        <span>服務時間：週一～週五 09:00~17:30</span>
-                        <span>台北市104南京東路二段139號11樓</span>
-                        <span>Copyright © 2019天下雜誌</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<footer>
+		<div class="container">
+			<div class="cwgroup__copyright">
+				<div class="group--left">
+					<div class="contact mt-m-5">
+						<span>讀者服務專線：886-2-2662-0332</span><span>服務時間：週一～週五 09:00~17:30</span>
+					</div>
+					<div class="copyright mt-m-30">
+						<span>Copyright © 2022天下雜誌</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 	<div id="app" class="message message--dialogs message--center" style="display: none;">
         <div class="message__container">
@@ -1190,6 +1155,29 @@
             </div>
         </div>
     </div>
+	<div id="phone" class="message message--dialogs message--center">
+        <div class="message__container">
+            <i class="icon icon-cancel message__close"></i>
+            <div class="message__txt">
+                <h2>修改手機</h2>
+				<p class="mb5">
+					本次修改僅用於訂單使用，若需調整會員資料，請前往會員中心
+				</p>
+				<form>
+					<div class="label form__group form__group--filled w-100">
+						<label class="label">
+							<div class="form__group__placeholder">請輸入手機號碼</div>
+							<input type="text" name="telphone" class="form__group__input">
+						</label>
+					</div>
+				</form>
+            </div>
+            <div class="message__btn">
+				<button class="btn btn--outlined btn__close">取消</button>
+				<button class="btn btn--contained btn__close">送出</button>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
 	<script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
@@ -1221,6 +1209,31 @@
 				$('#renew').show();
 				$('.black').addClass('opened dialogs');
 			}
+			$(".tab__content__pane input[checked]").parent('label').siblings('label').css({
+				"display": "block"
+			});
+			$(".tab__content__pane > .label").on("click", function() {
+				if (!$(this).parent().parent().parent().parent(".group").hasClass("group--disabled")) {
+					$(this).parent().siblings().children(".label").children(".form__group--input, .label--set").css({
+						"display": "none"
+					});
+					$(this).siblings().children(".label").css({
+						"display": "none"
+					});
+					$(this).children(".form__group--input").css({
+						"display": "block"
+					});
+					if ( width >= 768 ) {
+						$(this).children(".label--set").css({
+							"display": "flex"
+						});
+					}
+				};
+			});
+			$('i.icon-pen').on('click', function(){
+				$('#phone').show();
+				$('.black').addClass('opened dialogs');
+			});
 		})
 	</script>
 </body>

@@ -86,7 +86,10 @@
 			}
 			&--overflow {
 				display: flex;
-				overflow: scroll;
+				@include breakpoint(max-width 767px) {
+					overflow-x: scroll;
+					overflow-y: hidden;
+				}
 				@include breakpoint(768px) {
 					overflow: hidden;
 				}

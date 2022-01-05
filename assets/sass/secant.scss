@@ -4,10 +4,24 @@
 .webaccess__page {
     position: relative;
     min-height: 100vh;
-    &--index {
-        .container {
-            @include breakpoint(1024px) {
-                width: 1020px;
+    &--payment {
+        &::after {
+            @include beforeafter('', block);
+            height: 74px;
+            @media (min-width: 1024px) {
+                height: 82px;
+            }
+        }
+        &:not(.webaccess__page--index) {
+            .price--fixed {
+                .container {
+                    padding-left: 0;
+                    padding-right: 0;
+                    width: 100%;
+                    @include breakpoint(1024px) {
+                        width: 620px;
+                    }
+                }
             }
         }
     }
@@ -280,24 +294,29 @@
         }
         .price {
             &--fixed {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: $gray-100;
+                border: 1px solid $gray-200;
+                z-index: 1;
                 @include breakpoint(max-width 767px) {
                     hr {
                         display: none;
                     }
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    padding: 15px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    background-color: $white;
-                    border: 1px solid $gray-200;
-                    z-index: 1;
                 }
                 @include breakpoint(max-width 374px) {
                     padding: 10px;
+                }
+                .btn[disabled] {
+                    color: $gray-300;
+                    background: $gray-200;
+                    border-color: $gray-200;
                 }
             }
             &--total {
@@ -782,10 +801,7 @@
                             margin-top: 10px;
                             margin-left: calc(20px + 0.575rem);
                             &--set {
-                                display: flex;
-                                @include breakpoint(max-width 767px) {
-                                    display: block;
-                                }
+                                display: none;
                                 label {
                                     width: 100%;
                                     @include breakpoint(max-width 767px) {
@@ -882,7 +898,7 @@
                         padding-bottom: 5px;
                         justify-content: space-between;
                         @include transition(background-color, 0.3s);
-                        @include breakpoint(375px) {
+                        @include breakpoint(360px) {
                             display: flex;
                             line-height: 1.5;
                         }
@@ -893,9 +909,15 @@
                             margin-bottom: 1rem;
                         }
                         &__amount {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
                             word-break: break-all;
-                            @include breakpoint(375px) {
-                                width: 50%;
+                            i.icon-pen {
+                                padding-left: 5px;
+                            }
+                            @include breakpoint(360px) {
+                                max-width: 50%;
                                 text-align: right;
                             }
                         }
@@ -918,6 +940,13 @@
             >h3,
             >.h3 {
                 margin-bottom: 5px;
+                &.flex {
+                    align-items: center;
+                    justify-content: space-between;
+                    a.link-btn {
+                        align-self: center;
+                    }
+                }
             }
             .mb-20 {
                 margin-bottom: 1rem;

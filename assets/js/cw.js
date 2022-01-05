@@ -270,8 +270,8 @@ $(function() {
         function tabNavWidth(width) {
             $(".tab").each(function() {
                 var tabLength = $(this).children(".tab__nav").children("ul").children("li").length,
-                    tabWidth = $(this).width(),
-                    tabLiWidth = $(this).width() / tabLength,
+                    tabWidth = $(this).width() - 2,
+                    tabLiWidth = tabWidth / tabLength,
                     tabUlWidth = (140 * (tabLength)),
                     scrollWidth = Math.floor((tabWidth - 100) / 140),
                     tab_index = 0,
@@ -408,16 +408,6 @@ $(function() {
             $(this).parent().parent().parent().slideUp();
             $(this).parent().parent().parent().siblings(".select-invoicing").slideDown();
         })
-        $(".tab__content__pane.active > .label").on("click", function() {
-            if (!$(this).parent().parent().parent().parent(".group").hasClass("group--disabled")) {
-                $(this).siblings().children(".form__group--input").css({
-                    "display": "none"
-                });
-                $(this).children(".form__group--input").css({
-                    "display": "block"
-                });
-            };
-        });
         $(window).scroll(function() {
             var scroll = $(window).scrollTop(),
                 adFirstHeight = $('body > .ad--970by250').outerHeight(),

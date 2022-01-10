@@ -812,7 +812,10 @@
                             margin-top: 10px;
                             margin-left: calc(20px + 0.575rem);
                             &--set {
-                                display: none;
+                                display: flex;
+                                @include breakpoint(max-width 767px) {
+                                    display: block;
+                                }
                                 label {
                                     width: 100%;
                                     @include breakpoint(max-width 767px) {
@@ -926,6 +929,7 @@
                             word-break: break-all;
                             i.icon-pen {
                                 padding-left: 5px;
+                                cursor: pointer;
                             }
                             @include breakpoint(360px) {
                                 max-width: 50%;

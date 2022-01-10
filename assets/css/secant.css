@@ -844,7 +844,14 @@
 .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set,
 .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set,
 .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set {
-  display: none;
+  display: flex;
+}
+@media (max-width: 767px) {
+  .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set,
+  .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set,
+  .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set {
+    display: block;
+  }
 }
 .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label,
 .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label,
@@ -990,6 +997,7 @@
 }
 .webaccess__page section.group .content__group .content__item__amount i.icon-pen {
   padding-left: 5px;
+  cursor: pointer;
 }
 @media (min-width: 360px) {
   .webaccess__page section.group .content__group .content__item__amount {

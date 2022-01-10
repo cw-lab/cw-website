@@ -995,9 +995,11 @@
   align-items: center;
   word-break: break-all;
 }
+.webaccess__page section.group .content__group .content__item__amount .click__area {
+  cursor: pointer;
+}
 .webaccess__page section.group .content__group .content__item__amount i.icon-pen {
   padding-left: 5px;
-  cursor: pointer;
 }
 @media (min-width: 360px) {
   .webaccess__page section.group .content__group .content__item__amount {

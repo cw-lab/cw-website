@@ -927,9 +927,11 @@
                             flex-wrap: wrap;
                             align-items: center;
                             word-break: break-all;
+                            .click__area {
+                                cursor: pointer;
+                            }
                             i.icon-pen {
                                 padding-left: 5px;
-                                cursor: pointer;
                             }
                             @include breakpoint(360px) {
                                 max-width: 50%;

@@ -79,14 +79,16 @@
                                 <div class="content__item__title">手機</div>
                                 <div class="content__item__amount">
 									<span>0987654321</span>
-									<i class="icon icon-pen"></i>
+									<i class="click__area icon icon-pen"></i>
 								</div>
                             </li>
                             <li class="content__item color-primary">
                                 <div class="content__item__title">手機</div>
                                 <div class="content__item__amount">
-									<span>請輸入手機號碼</span>
-									<i class="icon icon-pen"></i>
+									<div class="click__area">
+										<span>請輸入手機號碼</span>
+										<i class="icon icon-pen"></i>
+									</div>
 								</div>
                             </li>
                         </ul>
@@ -1286,7 +1288,7 @@
 					}
 				};
 			});
-			$('i.icon-pen').on('click', function(){
+			$('.click__area').on('click', function(){
 				$('#phone').show();
 				$('.black').addClass('opened dialogs');
 			});

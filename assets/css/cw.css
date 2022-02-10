@@ -6888,21 +6888,48 @@ ul.article__provide li span i.icon {
     font-weight: 500;
   }
 }
-.article__content .article__table {
+.article__content > .article__table {
   width: 100%;
   margin-top: 1.15em;
   margin-bottom: 1.15em;
   padding-bottom: 45px;
+}
+.article__content > .article__table:not(.article__table--noscroll):not(.article__table--flexible) {
   overflow: scroll;
 }
 @media screen and (min-width: 1024px) {
-  .article__content .article__table > table {
+  .article__content > .article__table:not(.article__table--noscroll):not(.article__table--flexible) > table {
     width: 100% !important;
   }
 }
 @media screen and (max-width: 1023px) {
-  .article__content .article__table > table {
+  .article__content > .article__table:not(.article__table--noscroll):not(.article__table--flexible) > table {
     min-width: 120%;
+  }
+}
+.article__content > .article__table.article__table--noscroll .article__table > table, .article__content > .article__table.article__table--flexible .article__table > table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.article__content > .article__table.article__table--noscroll {
+  overflow: hidden;
+}
+.article__content > .article__table.article__table--noscroll .article__table > table {
+  width: calc(100% - 1px) !important;
+}
+@media screen and (max-width: 1023px) {
+  .article__content > .article__table.article__table--flexible {
+    overflow: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article__content > .article__table.article__table--flexible .article__table > table {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .article__content > .article__table.article__table--flexible .article__table > table {
+    width: calc(100% - 1px);
   }
 }
 .article__content > table {

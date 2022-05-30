@@ -1,13 +1,5 @@
 @import "_basic";
-@import 'normalize-version';
-@import 'normalize/html5';
-@import 'normalize/base';
-@import 'normalize/links';
-// @import 'normalize/typography';
-@import 'normalize/embeds';
-@import 'normalize/groups';
-@import 'normalize/forms';
-@import 'normalize/tables';
+@import 'normalize';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 * {
@@ -20,9 +12,7 @@ ol {
 }
 
 .list-reset {
-    @include list(0,
-    0,
-    none);
+    @include list(0, 0, none);
 }
 
 .font-weight-500 {
@@ -60,24 +50,22 @@ textarea {
 *,
 *::before,
 *::after {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {
     position: relative;
     min-height: 100%;
     scroll-behavior: auto;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-family: Roboto, 'Noto Sans TC', sans-serif;
     }
 }
 
 a {
     text-decoration: none;
-    @include breakpoint(1024px) {
-        @include transition(color .2s,
-        border .2s,
-        background .2s);
+    @media screen and (min-width: 1024px) {
+        transition: color .2s, border .2s, background .2s;
     }
 }
 
@@ -210,7 +198,7 @@ table.scale-rating {
         padding-bottom: 5px;
         padding-left: 5px;
         padding-right: 5px;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             padding-left: 10px;
             padding-right: 10px;
         }
@@ -219,7 +207,7 @@ table.scale-rating {
             padding-left: 0;
             padding-right: 5px;
             text-align: right;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 170px;
                 padding-right: 10px;
             }
@@ -229,7 +217,7 @@ table.scale-rating {
             padding-left: 5px;
             padding-right: 0;
             text-align: left;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 170px;
                 padding-left: 10px;
             }
@@ -251,19 +239,17 @@ table.scale-rating {
             font-size: 0;
             background-color: transparent;
             border: 2px solid $gray-500;
-            @include border-radius(50%);
+            border-radius: 50%;
             &:after {
-                @include beforeafter('',
-                block);
+                @include beforeafter('', block);
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 width: 0;
                 height: 0;
                 background-color: $primary;
-                @include border-radius(50%);
-                @include translate(-50%,
-                -50%);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
             }
             &:hover {
                 border-color: $primary;

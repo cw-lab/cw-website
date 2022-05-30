@@ -33,19 +33,19 @@
                 width: 1px;
                 height: 20px;
                 background-color: $gray-200;
-                @include translateY(-50%);
+                transform: translateY(-50%);
             }
             i.icon {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                @include translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             }
         }
     }
     .search__group--white {
         border: 1px solid $gray-100;
-        @include transition(border 0.3s);
+        transition: border 0.3s;
         &.focus {
             border-color: $black;
         }
@@ -58,14 +58,14 @@
         .search__input {
             width: calc(100% - 60px);
             padding: 1rem;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 padding: 20px 1rem;
             }
         }
         .search__submit {
             width: 60px;
             height: 50px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 60px;
                 height: 60px;
             }

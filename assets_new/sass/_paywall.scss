@@ -30,9 +30,9 @@
 //         width: calc(100% - 30px);
 //         padding: 30px;
 //         background-color: $white;
-//         @include translate(-50%, -50%);
+//         transform: translate(-50%, -50%);
 //         z-index: 1;
-//         @include breakpoint(768px) {
+//         @media screen and (min-width: 768px) {
 //             width: 500px;
 //         }
 //     }
@@ -97,7 +97,7 @@
 //         border: 1px solid $gray-100;
 //         overflow: hidden;
 //         z-index: 1;
-//         @include breakpoint(768px) {
+//         @media screen and (min-width: 768px) {
 //             padding: 50px 30px;
 //         }
 //         .square {
@@ -118,7 +118,7 @@
 //                 border-top: 65px solid $gray-100;
 //                 border-left: 260px solid transparent;
 //                 border-right: 260px solid transparent;
-//                 @include translateX(-50%);
+//                 transform: translateX(-50%);
 //             }
 //         }
 //         h2 {
@@ -135,7 +135,7 @@
 //             margin-top: 0;
 //             margin-bottom: 0;
 //             line-height: 1.5;
-//             @include breakpoint(max-width 767px) {
+//             @media screen and (max-width: 767px) {
 //                 font-size: 1rem;
 //             }
 //             .tip {
@@ -148,14 +148,14 @@
 //         }
 //         a.highLightBtn {
 //             @include containbtn(inline-block, 0.7rem, $primary, 1rem);
-//             @include breakpoint(max-width 374px) {
+//             @media screen and (max-width: 374px) {
 //                 margin-top: 0.5em !important;
 //                 margin-bottom: 0.25em !important;
 //             }
 //         }
 //         a.otherBtn {
 //             @include containbtn(inline-block, 0.7rem, $gray-300, 1rem);
-//             @include breakpoint(max-width 374px) {
+//             @media screen and (max-width: 374px) {
 //                 margin-top: 0 !important;
 //                 margin-bottom: 0.5em !important;
 //             }
@@ -166,18 +166,18 @@
 //             &:hover {
 //                 color: $white;
 //             }
-//             @include breakpoint(max-width 374px) {
+//             @media screen and (max-width: 374px) {
 //                 min-width: 13em;
 //             }
-//             @include breakpoint(768px) {
+//             @media screen and (min-width: 768px) {
 //                 min-width: 11em;
 //                 padding: 0.7rem 1.4rem;
 //             }
-//             @include breakpoint(375px) {
+//             @media screen and (min-width: 375px) {
 //                 min-width: 10em;
 //                 padding: 0.7rem 1rem;
 //             }
-//             @include breakpoint(414px) {
+//             @media screen and (min-width: 414px) {
 //                 font-size: 1em;
 //             }
 //         }
@@ -193,11 +193,11 @@
     padding-bottom: 0;
     font-weight: normal;
     z-index: 10;
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         left: 50%;
-        @include translateX(-50%);
+        transform: translateX(-50%);
     }
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         left: 0;
         padding-left: 0;
         padding-right: 0;

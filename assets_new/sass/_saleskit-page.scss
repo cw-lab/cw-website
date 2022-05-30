@@ -16,7 +16,7 @@
                 padding-top: 20px;
                 padding-bottom: 40px;
                 border-bottom: 1px dotted $gray-300;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding-left: 160px;
                 }
                 .h3 {
@@ -39,21 +39,21 @@
                 }
                 .btn-block {
                     font-size: 0;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         padding-top: 1.5rem;
                         text-align: center;
                     }
                     a {
                         @include outlinebtn(inline-block, 0.5rem, $primary, 1rem);
                         background-color: $white;
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             min-width: 210px;
                         }
                         +a {
-                            @include breakpoint(768px) {
+                            @media screen and (min-width: 768px) {
                                 margin-left: 1rem;
                             }
-                            @include breakpoint(max-width 767px) {
+                            @media screen and (max-width: 767px) {
                                 margin-top: 10px;
                             }
                         }
@@ -61,14 +61,14 @@
                 }
                 img {
                     margin: auto;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         position: absolute;
                         top: 20px;
                         left: 20px;
                         width: 120px;
                         border: 1px solid $gray-100;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         max-width: 220px;
                         margin-top: 1rem;
                     }

@@ -51,7 +51,7 @@
     top: 50%;
     right: 0;
     font-size: 0.875rem;
-    @include translateY(-50%);
+    transform: translateY(-50%);
     span {
         display: block;
         line-height: 1;

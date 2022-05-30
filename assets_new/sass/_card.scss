@@ -1,7 +1,7 @@
 section {
     &.article,
     &.subArticle {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             border: 1px solid $gray-200;
         }
     }
@@ -21,16 +21,16 @@ section {
             bottom: 0;
             left: 0;        
             right: 0;
-            @include animation(shimmer 1s forwards linear infinite);
-            @include background-image(linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%));
-            @include background-size(800px 100px);
-            @include opacity(1);
-            @include transition(opacity 0.3s 0.3s);
+            animation: shimmer 1s forwards linear infinite;
+            background-image: linear-gradient(to right, rgba($secondary, .05) 0%, rgba($secondary, .15) 30%, rgba($secondary, .05) 60%, rgba($secondary, .05) 100%);
+            background-size: 800px 100px;
+            opacity: 1;
+            transition: opacity 0.3s 0.3s;
             z-index: -1;
         }
         &:hover {
             &::before {
-                @include opacity(1);
+                opacity: 1;
             }
         }
         img {
@@ -41,16 +41,16 @@ section {
             height: 100%;
             object-fit: cover;
             &.lazyload {
-                @include opacity(0);
+                opacity: 0;
             }
         }
         &.finished {
             background: none;
             &::after {
-                @include opacity(0);
+                opacity: 0;
             }    
             img.lazyload {
-                @include opacity(1);
+                opacity: 1;
             }
         }
     }
@@ -65,8 +65,8 @@ section {
         justify-content: space-between;
         padding: 10px;
         background-color: rgba($black, .5);
-        @include translateY(100%);
-        @include transition(transform 0.3s);
+        transform: translateY(100%);
+        transition: transform 0.3s;
         z-index: 2;
         .views {
             color: $white;
@@ -74,11 +74,11 @@ section {
     }
     &:hover {
         .informationArea {
-            @include translateY(0%);
+            transform: translateY(0%);
         }
     }
 }
-@include keyframes(shimmer) {
+@keyframes shimmer {
     0% {
         background-position: -400px 0;
     }
@@ -88,7 +88,7 @@ section {
 }
 .caption {
     position: relative;
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         background-color: $white;
     }
     .channelTitle {
@@ -112,7 +112,7 @@ section {
         font-size: 0.875rem;
         font-weight: normal;
         line-height: 1;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             padding-top: 15px;
         }
     }
@@ -120,14 +120,14 @@ section {
         margin-top: 10px;
         margin-bottom: 5px;
         font-weight: normal;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             margin-top: 0;
         }
         a {
             display: block;
             color: $black;
             line-height: 1.25;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 line-height: 1.5;
             }
             &:hover {
@@ -140,7 +140,7 @@ section {
         margin-bottom: 0;
         line-height: 1.4;
         @include lineclamp(2);
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             display: none !important;
             color: $secondary-variant;
         }
@@ -151,12 +151,12 @@ section {
     .article {
         .caption {
             padding: 10px;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding: 15px;
             }
             h3 a {
                 font-size: 22px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     font-size: 28px;
                     @include lineclamp(1);
                 }
@@ -166,12 +166,12 @@ section {
     .subArticle {
         align-items: center;
         margin: 5px 0 15px;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             display: flex;
             margin: 20px 0;
         }
         .pic {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 120px;
             }
             .informationArea {
@@ -179,27 +179,27 @@ section {
             }
         }
         .caption {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: calc(100% - 120px);
                 padding-left: 10px;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 padding: 10px;
             }
             h3 a {
                 font-size: 22px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     @include lineclamp(1);
                 }
             }
             time {
                 right: 10px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding-top: 0;
                 }
             }
             p {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     @include lineclamp(1);
                 }
             }
@@ -218,7 +218,7 @@ section {
                     width: 40px;
                     height: 40px;
                     border: 3px solid $white;
-                    @include border-radius(50%);
+                    border-radius: 50%;
                 }
                 &::after {
                     bottom: 15px;
@@ -237,7 +237,7 @@ section {
 aside {
     .article,
     .media {
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             border: 1px solid $gray-200;
             background-color: $white;
         }
@@ -269,7 +269,7 @@ aside {
                 width: 55px;
                 height: 55px;
                 border: 4px solid $white;
-                @include border-radius(50%);
+                border-radius: 50%;
             }
             &::after {
                 bottom: 25px;
@@ -321,7 +321,7 @@ aside {
         .card__title {
             color: $text;
             font-size: 1rem;
-            @include transition(color 0.2s);
+            transition: color 0.2s;
         }
         &:hover {
             .card__title {
@@ -330,19 +330,19 @@ aside {
         }
     }
     &.card__group--grid {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: flex;
             align-items: flex-start;
         }
         .card__item {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 display: inline-block;
                 vertical-align: top;
                 width: calc((100% - 40px) / 3);
                 margin-left: 20px;
                 margin-bottom: 30px;
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 width: 220px;
                 margin-right: 20px;
                 margin-bottom: 10px;

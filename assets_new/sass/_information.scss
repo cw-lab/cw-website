@@ -6,13 +6,13 @@
         margin-bottom: 0;
         font-size: 12px;
         font-weight: 400;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             font-size: 15px;
         }
     }
     .count {
         font-size: 24px;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             font-size: 40px;
         }
     }
@@ -26,7 +26,7 @@
         display: inline-block;
         font-size: 1rem;
         vertical-align: middle;
-        @include transition(background 0.3s);
+        transition: background 0.3s;
         &.title-text {
             padding-bottom: 10px;
             font-size: 0.875rem;
@@ -41,22 +41,22 @@
             line-height: 36px;
             border: 0;
             background: none;
-            @include transition(color 0.3s, background 0.3s, border 0.3s);
-            @include breakpoint(768px) {
+            transition: color 0.3s, background 0.3s, border 0.3s;
+            @media screen and (min-width: 768px) {
                 padding: 0 .5em;
                 line-height: 40px;
             }
             i {
                 font-size: 1.15em;
                 line-height: 36px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     font-size: 1.5em;
                     line-height: 40px;
                 }
             }
         }
         .txt {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 display: none;
             }
         }
@@ -80,7 +80,7 @@
             top: 0;
             left: 0;
             width: 30px;
-            @include opacity(0);
+            opacity: 0;
             z-index: -1;
         }
         .copy-success {
@@ -95,13 +95,13 @@
             text-align: center;
             word-break: break-all;
             background-color: $gray-600;
-            @include translate(-50%, 50%);
+            transform: translate(-50%, 50%);
         }
     }
     &.origin {
         >div {
             &.title-text {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     display: none;
                 }
             }
@@ -114,7 +114,7 @@
             &:hover {
                 background-color: darken($twitter, 5%);
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: none;
             }
         }
@@ -123,7 +123,7 @@
             &:hover {
                 background-color: darken($whatapp, 5%);
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: none;
             }
         }
@@ -150,9 +150,9 @@
         // background-color: rgba($white, 0.5);
         // border: 1px solid $gray-100;
         z-index: 3;
-        @include opacity(0);
-        @include animation(fadeIn 0.3s 0.3s forwards);
-        @include translateY(-50%);
+        opacity: 0;
+        animation: fadeIn 0.3s 0.3s forwards;
+        transform: translateY(-50%);
         >div {
             margin-top: 5px;
             display: block !important;
@@ -198,7 +198,7 @@
 .collect {
     font-size: 1rem;
     background-color: $primary;
-    @include transition(background 0.3s);
+    transition: background 0.3s;
     a {
         display: flex;
         align-items: center;
@@ -206,7 +206,7 @@
         padding: 0 .55em;
         color: $white;
         line-height: 36px;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             padding: 0 .5em;
             line-height: 40px;
         }
@@ -214,7 +214,7 @@
             font-size: 1.15em;
             font-weight: 600;
             line-height: 36px;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 font-size: 1.5em;
                 line-height: 40px;
             }
@@ -231,11 +231,11 @@
     }
 }
 
-@include keyframes(fadeIn) {
+@keyframes fadeIn {
     0% {
-        @include opacity(0);
+        opacity: 0;
     }
     100% {
-        @include opacity(1);
+        opacity: 1;
     }
 }

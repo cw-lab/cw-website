@@ -5,7 +5,7 @@
     header {
         border-bottom: 1px solid $gray-200;
         nav.menubar--sub2 {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 right: calc( (100% - 1020px) / 2);
             }
             ul.menubar__user {
@@ -25,10 +25,10 @@
         padding-bottom: 0 !important;
         margin-left: auto;
         margin-right: auto;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             width: 1020px;
         }
-        @include breakpoint(375px) {
+        @media screen and (min-width: 375px) {
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -39,7 +39,7 @@
     }
     aside {
         width: 100%;
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             padding-top: 25px;
             border: 0;
             background-color: transparent;
@@ -73,7 +73,7 @@
                 }
             }
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             float: left;
             max-width: 200px;
         }
@@ -81,7 +81,7 @@
     article {
         position: relative;
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             float: right;
             max-width: 750px;
         }
@@ -91,7 +91,7 @@
     }
     .feedback__block {
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             float: right;
             max-width: 750px;
         }
@@ -107,11 +107,11 @@
         border: 1px solid $gray-200;
         .h3 {
             margin: 0 0 10px;
-            @include breakpoint(530px) {
+            @media screen and (min-width: 530px) {
                 margin: 0;
             }
         }
-        @include breakpoint(530px) {
+        @media screen and (min-width: 530px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -121,7 +121,7 @@
 
 .service__master__page {
     .accordion__item {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             &:nth-child(5)~.accordion__item {
                 display: none;
             }
@@ -131,7 +131,7 @@
         padding: 10px 1.125em;
         color: $surface;
         text-decoration: underline;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             display: none;
         }
     }
@@ -139,13 +139,13 @@
 
 .service__sub__page {
     aside {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: none;
         }
     }
     article {
         .btn--back {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 display: none;
             }
         }

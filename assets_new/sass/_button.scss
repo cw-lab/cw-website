@@ -5,7 +5,7 @@
     text-align: center;
     border: 1px solid $gray-200;
     background-color: rgba($gray-100, 0.5);
-    @include transition(background 0.3s);
+    transition: background 0.3s;
     cursor: pointer;
     &::before {
         content: url('../img/download_arrow.png');
@@ -20,8 +20,8 @@ button,
 a {
     background-color: transparent;
     align-self: baseline;
-    @include border-radius(0);
-    @include appearance(none);
+    border-radius: 0;
+    appearance: none;
     &:focus {
         outline: 0;
     }
@@ -37,10 +37,10 @@ a {
         // word-break: break-word;
         text-decoration: none;
         overflow: hidden;
-        @include breakpoint(375px) {
+        @media screen and (min-width: 375px) {
             min-width: 135px;
         }
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             min-width: 144px;
             padding: 0.8125em 1em;
         }
@@ -53,16 +53,15 @@ a {
         +button.btn,
         +a.btn {
             margin-left: 0.5rem;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin-left: 1rem;
             }
         }
         &::before,
         &::after {
-            @include beforeafter('',
-            block);
+            @include beforeafter('', block);
             position: absolute;
-            @include opacity(0);
+            opacity: 0;
             z-index: -1;
         }
         &::before {
@@ -70,7 +69,7 @@ a {
             right: 0;
             top: 0;
             bottom: 0;
-            @include transition(opacity 0.2s);
+            transition: opacity 0.2s;
         }
         &::after {
             left: 50%;
@@ -78,10 +77,9 @@ a {
             padding: 55%;
             width: 32px;
             height: 32px;
-            @include border-radius(50%);
-            @include transform(translate(-50%, -50%) scale(1));
-            @include transition(opacity 2s,
-            transform 0.5s);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            transition: opacity 2s, transform 0.5s;
         }
         &:hover {
             &::before {

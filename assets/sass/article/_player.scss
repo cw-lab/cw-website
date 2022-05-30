@@ -7,14 +7,14 @@
     }
     .audio__body {
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             width: calc(100% - 80px);
         }
     }
     .audio__image {
         width: 60px;
-        @include border-radius(50%);
-        @include breakpoint(max-width 1023px) {
+        border-radius: 50%;
+        @media screen and (max-width: 1023px) {
             display: none;
         }
     }
@@ -26,7 +26,7 @@
     .audio__control {
         i.icon {
             font-size: 1rem;
-            @include transition(color 0.3s);
+            transition: color 0.3s;
         }
     }
 }

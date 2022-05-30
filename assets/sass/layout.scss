@@ -44,7 +44,7 @@ header {
             margin-right: 10px;
             img {
                 height: 30px;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     height: 50px;
                 }
             }
@@ -54,7 +54,7 @@ header {
         border-bottom: 1px solid $gray-100;
     }
     .header__belt {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: none;
         }
     }
@@ -67,7 +67,7 @@ body {
                 align-items: center;
                 a.logo {
                     img {
-                        @include breakpoint(1024px) {
+                        @media screen and (min-width: 1024px) {
                             height: 36px;
                         }
                     }
@@ -94,7 +94,7 @@ body {
 }
 
 .couplet {
-    // @include breakpoint(max-width 1888px) {
+    // @media screen and (max-width: 1888px) {
     // 	display: none;
     // }
     &--wide {
@@ -102,7 +102,7 @@ body {
         top: 0px;
         left: 50%;
         width: 1288px;
-        @include translateX(-50%);
+        transform: translateX(-50%);
     }
     &--left {
         position: absolute;
@@ -134,7 +134,7 @@ main {
     }
     article {
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             width: 610px;
         }
         &.article__level {
@@ -265,14 +265,14 @@ main {
         }
         h1 {
             margin: 0.5em 0 0.25em;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 // padding-right: 150px;
             }
         }
         &__channel {
             align-items: center;
             ul.article__info__subchannel {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     display: none;
                 }
                 li {
@@ -305,15 +305,15 @@ main {
         padding: 1rem 0;
         justify-content: space-between;
         align-items: center;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             display: flex;
         }
         input {
-            @include appearance(none);
+            appearance: none;
             position: absolute;
             top: -10000em;
             left: -10000em;
-            @include opacity(0);
+            opacity: 0;
         }
         &__sns {
             display: flex;
@@ -321,7 +321,7 @@ main {
             li {
                 position: relative;
                 margin-right: 5px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     margin-right: 10px;
                 }
             }
@@ -338,19 +338,19 @@ main {
             line-height: 1.45;
             text-align: center;
             background: $gray-500;
-            @include transform(translateX(-50%) translateY(-2px));
+            transform: translateX(-50%) translateY(-2px);
         }
         .readway {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 justify-content: space-around;
             }
             >* {
                 align-items: center;
                 cursor: pointer;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     margin-right: 50px;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     padding: 0.5em 1em;
                 }
                 >span {
@@ -364,10 +364,10 @@ main {
         .next__article {
             color: $text;
             align-items: center;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: calc(100% - 295px);
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 padding: 0.5em 1em;
             }
             &--icon {
@@ -461,7 +461,7 @@ main {
                     text-align: center;
                     vertical-align: text-bottom;
                     background-color: $surface;
-                    @include border-radius(50%);
+                    border-radius: 50%;
                 }
             }
         }
@@ -479,7 +479,7 @@ main {
             border-top: 1px solid $gray-200;
             border-bottom: 1px solid $gray-200;
             align-items: center;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin: 4em 3em;
             }
             &::before,
@@ -531,7 +531,7 @@ main {
                 font-size: 1rem;
             }
             &--2col {
-                @include breakpoint(600px) {
+                @media screen and (min-width: 600px) {
                     display: flex;
                 }
                 .article__box__img {
@@ -546,7 +546,7 @@ main {
                         width: 100%;
                         height: 275px;
                     }
-                    @include breakpoint(600px) {
+                    @media screen and (min-width: 600px) {
                         width: 275px;
                         iframe {
                             width: 275px;
@@ -555,13 +555,13 @@ main {
                 }
                 .article__box__txt {
                     width: 100%;
-                    @include breakpoint(600px) {
+                    @media screen and (min-width: 600px) {
                         width: calc(100% - 275px);
                     }
                 }
             }
             &--top {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     display: flex;
                 }
                 .article__box__img {
@@ -570,7 +570,7 @@ main {
                         width: 100%;
                         height: auto;
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-right: 1rem;
                         img {
                             width: 250px;
@@ -579,7 +579,7 @@ main {
                 }
                 .article__box__txt {
                     width: 100%;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 1rem - 250px);
                     }
                 }
@@ -643,14 +643,14 @@ main {
                 position: relative;
                 border: solid $gray-200;
                 border-width: 1px 1px 0;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     border-width: 1px;
                 }
                 >ul {
                     position: relative;
                     display: flex;
                     padding: 0;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin: -1px;
                     }
                     li {
@@ -730,14 +730,14 @@ main {
             }
             margin-bottom: 1rem;
             width: 100%;
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 display: flex;
                 align-items: center;
                 &:last-child {
                     margin-bottom: 0;
                 }
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 float: left;
                 margin-left: 1rem;
                 width: calc( (100% - 2rem) / 3);
@@ -756,7 +756,7 @@ main {
                     position: relative;
                     width: 120px;
                     overflow: hidden;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 100%;
                     }
                     img {
@@ -764,7 +764,7 @@ main {
                         top: 50%;
                         left: 50%;
                         width: 100%;
-                        @include translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
                         z-index: 0;
                     }
                     &::before {
@@ -779,15 +779,14 @@ main {
                         width: 100%;
                         height: 100%;
                         background-color: rgba($black, 0);
-                        @include filter-gradient(rgba($black, 0), rgba($black, 0.5), horizontal);
-                        @include background-image(radial-gradient(center, ellipse cover, rgba($black, 0) 0%, rgba($black, 0.5) 100%));
-                        @include opacity(0);
-                        @include transition(opacity 0.3s);
+                        background-image: radial-gradient(center, ellipse cover, rgba($black, 0) 0%, rgba($black, 0.5) 100%);
+                        opacity: 0;
+                        transition: opacity 0.3s;
                         z-index: 1;
                     }
                     &:hover {
                         &::after {
-                            @include opacity(1);
+                            opacity: 1;
                         }
                     }
                 }
@@ -799,10 +798,10 @@ main {
                     &:hover {
                         color: $primary;
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         padding-top: 0.5em;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         width: calc(100% - 120px);
                         padding-left: 1em;
                     }
@@ -821,7 +820,7 @@ main {
     }
     .aside__group {
         width: 100%;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             display: flex;
             justify-content: space-between;
             width: 620px;
@@ -839,7 +838,7 @@ main {
             // 	padding-bottom: 0;
             // }
             &--header {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     height: 90vh;
                     overflow: hidden;
                 }
@@ -851,14 +850,14 @@ main {
         &__background {
             width: auto;
             height: 90vh;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 100%;
                 height: auto;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 position: absolute;
                 left: 50%;
-                @include translateX(-50%);
+                transform: translateX(-50%);
             }
         }
         &__w100 {
@@ -872,11 +871,11 @@ main {
             min-width: 290px;
             max-width: 500px;
             padding: 1rem;
-            @include translateX(-50%);
-            @include breakpoint(768px) {
+            transform: translateX(-50%);
+            @media screen and (min-width: 768px) {
                 top: 50px;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 width: 100%;
             }
             &--dark {
@@ -897,10 +896,10 @@ main {
             h1 {
                 font-size: 36px;
                 font-weight: 300;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 0.5em;
                 }
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     font-size: 48px;
                 }
                 span {
@@ -942,7 +941,7 @@ main {
                 border: solid $secondary;
                 border-width: 1px;
                 background-color: $secondary;
-                @include transition(background-color, 0.3s);
+                transition: background-color, 0.3s;
                 &::before,
                 &::after {
                     @extend %before-after;
@@ -960,7 +959,7 @@ main {
                     top: 50%;
                     right: 0;
                     padding: 1rem;
-                    @include translateY(-50%);
+                    transform: translateY(-50%);
                 }
             }
             &__panel {
@@ -983,20 +982,20 @@ main {
             flex-wrap: wrap;
             justify-content: center;
             &--3col {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     width: 85%;
                     margin-left: auto;
                     margin-right: auto;
                 }
                 .card__item {
                     width: calc( (100% - (2rem)) / 3);
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc( (100% - (2rem)) / 3);
                         &:nth-child(3n) {
                             margin-right: 0;
                         }
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         width: 100%;
                     }
                 }
@@ -1006,7 +1005,7 @@ main {
             margin-bottom: 1rem;
             background-color: $white;
             border: 1px solid $gray-200;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin-right: 1rem;
             }
             a.card__img {
@@ -1023,15 +1022,14 @@ main {
                     width: 100%;
                     height: 100%;
                     background-color: rgba($black, 0);
-                    @include filter-gradient(rgba($black, 0), rgba($black, 0.5), horizontal);
-                    @include background-image(radial-gradient(center, ellipse cover, rgba($black, 0) 0%, rgba($black, 0.5) 100%));
-                    @include opacity(0);
-                    @include transition(opacity 0.3s);
+                    background-image: radial-gradient(center, ellipse cover, rgba($black, 0) 0%, rgba($black, 0.5) 100%);
+                    opacity: 0;
+                    transition: opacity 0.3s;
                     z-index: 1;
                 }
                 &:hover {
                     &::before {
-                        @include opacity(1);
+                        opacity: 1;
                     }
                 }
             }
@@ -1070,10 +1068,10 @@ main {
     }
     aside {
         width: 100%;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: 300px;
         }
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             margin-left: auto;
             margin-right: auto;
         }

@@ -14,13 +14,13 @@
         }
         a {
             width: 300px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 970px;
                 img.mobile {
                     display: none;
                 }
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 img.desktop {
                     display: none;
                 }
@@ -33,7 +33,7 @@
         background-color: #f7f7f7;
         border: 1px solid $gray-100;
         z-index: 0;
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             margin-left: -20px;
             margin-right: -20px;
         }

@@ -15,7 +15,7 @@ body {
     position: relative;
     min-height: 100%;
     padding-bottom: 0 !important;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
         font-display: swap;
         font-weight: 300;
@@ -28,36 +28,34 @@ body {
 
 .sans-serif {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
     }
 }
 
 .desktop {
-    @include breakpoint(max-width 1023px) {
+    @media screen and (max-width: 1023px) {
         display: none !important;
     }
 }
 
 .mobile {
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         display: none !important;
     }
 }
 
 * {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     &::before,
     &::after {
-        @include box-sizing(border-box);
+        box-sizing: border-box;
     }
 }
 
 a {
     text-decoration: none;
-    @include transition(color 0.3s,
-    background 0.3s,
-    border 0.3s);
+    transition: color 0.3s, background 0.3s, border 0.3s;
 }
 
 img {

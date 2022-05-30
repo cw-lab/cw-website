@@ -6,13 +6,13 @@
         font-size: 0;
         cursor: pointer;
         z-index: 1;
-        @include user-select(none);
+        user-select: none;
         li {
             margin-bottom: 10px;
             span {
                 display: inline-block;
                 vertical-align: text-top;
-                @include transition(all 0.3s);
+                transition: all 0.3s;
                 &.label__radio__txt {
                     width: calc(100% - 20px);
                     padding-left: 0.5em;
@@ -27,7 +27,7 @@
                     height: 20px;
                     background-color: transparent;
                     border: 2px solid $gray-500;
-                    @include border-radius(50%);
+                    border-radius: 50%;
                     &::before {
                         @extend %before-after;
                         position: absolute;
@@ -36,10 +36,10 @@
                         width: 20px;
                         height: 20px;
                         background: $red-100;
-                        @include border-radius(50%);
-                        @include translate(-50%, -50%);
-                        @include opacity(0);
-                        @include transition(all 0.3s);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: all 0.3s;
                         z-index: -1;
                     }
                     &::after {
@@ -51,8 +51,8 @@
                         width: 10px;
                         height: 10px;
                         background: $primary;
-                        @include border-radius(50%);
-                        @include translate(-50%, -50%);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
             }
@@ -72,7 +72,7 @@
                     span.label__radio__mark::before {
                         width: 36px;
                         height: 36px;
-                        @include opacity(1);
+                        opacity: 1;
                     }
                 }
             }
@@ -87,13 +87,13 @@
         font-size: 0;
         cursor: pointer;
         z-index: 1;
-        @include user-select(none);
+        user-select: none;
         li {
             margin-bottom: 10px;
             span {
                 display: inline-block;
                 vertical-align: text-top;
-                @include transition(all 0.3s);
+                transition: all 0.3s;
                 &.label__radio__mark {
                     position: relative;
                     top: calc((1.75rem - 20px) / 2);
@@ -110,10 +110,10 @@
                         width: 20px;
                         height: 20px;
                         background: $red-100;
-                        @include translate(-50%, -50%);
-                        @include opacity(0);
-                        @include transition(all 0.3s);
-                        @include border-radius(50%);
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        transition: all 0.3s;
+                        border-radius: 50%;
                         z-index: -1;
                     }
                     &::after {
@@ -127,7 +127,7 @@
                         font-size: 0.75rem;
                         font-weight: bold;
                         line-height: 1;
-                        @include translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
                     }
                 }
                 &.label__radio__txt {
@@ -154,7 +154,7 @@
                     span.label__radio__mark::before {
                         width: 36px;
                         height: 36px;
-                        @include opacity(1);
+                        opacity: 1;
                     }
                 }
             }
@@ -192,11 +192,11 @@
         font-size: 0;
         cursor: pointer;
         z-index: 1;
-        @include user-select(none);
+        user-select: none;
         span {
             display: inline-block;
             vertical-align: middle;
-            @include transition(all 0.3s);
+            transition: all 0.3s;
             &.label__radio__txt {
                 width: calc(100% - 20px - .5em);
                 padding-left: 0.5em;
@@ -226,10 +226,10 @@
                     width: 20px;
                     height: 20px;
                     background: $red-100;
-                    @include border-radius(50%);
-                    @include translate(-50%, -50%);
-                    @include opacity(0);
-                    @include transition(all 0.3s);
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                    transition: all 0.3s;
                     z-index: -1;
                 }
                 &::after {
@@ -245,7 +245,7 @@
                     font-size: 12px;
                     font-weight: bold;
                     line-height: 1;
-                    @include translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
                 }
             }
         }
@@ -277,7 +277,7 @@
                         &::before {
                             width: 36px;
                             height: 36px;
-                            @include opacity(1);
+                            opacity: 1;
                         }
                     }
                 }

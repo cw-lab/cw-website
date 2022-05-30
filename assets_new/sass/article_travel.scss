@@ -1,13 +1,12 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+
 @import "_variable";
 @import "_mixin";
 .article-travel-page {
     .travel-highlight {
         article {
             position: relative;
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 height: 85vh;
             }
             &::before {
@@ -20,11 +19,11 @@
                 z-index: 1;
             }
             img {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     width: 100%;
                     height: auto;
                 }
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     position: absolute;
                     top: 0;
                     left: 0;
@@ -73,12 +72,12 @@
                 padding-left: 20px;
                 padding-right: 20px;
                 text-align: center;
-                @include translateX(-50%);
+                transform: translateX(-50%);
                 z-index: 2;
                 h2 {
                     font-size: 2rem;
                     line-height: 1.25;
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         font-size: 2.5rem;
                     }
                 }
@@ -91,10 +90,10 @@
                 }
             }
             &.dark-m-mode {
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     &::before {
                         background-color: $black;
-                        @include opacity(0.25);
+                        opacity: 0.25;
                     }
                     .path2 ul li {
                         color: $white;
@@ -121,7 +120,7 @@
             &.dark-mode {
                 &::before {
                     background-color: $black;
-                    @include opacity(0.25);
+                    opacity: 0.25;
                 }
                 .path2 ul li {
                     color: $white;
@@ -183,7 +182,7 @@
             margin-top: 40px;
             margin-bottom: 20px;
             font-weight: normal;
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 font-size: 1.75rem;
             }
         }
@@ -212,7 +211,7 @@
                 color: $secondary;
                 font-size: 0.875rem;
                 font-weight: normal;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     font-weight: 300;
                 }
             }
@@ -235,7 +234,7 @@
             padding-bottom: 75px;
             margin-left: auto;
             margin-right: auto;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 padding-top: 50px;
                 padding-bottom: 150px;
             }

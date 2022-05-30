@@ -2,7 +2,7 @@ footer {
     position: relative;
     width: 100%;
     background-color: $gray-100;
-    // @include breakpoint(768px) {
+    // @media screen and (min-width: 768px) {
     //     position: absolute;
     //     bottom: 0;
     //     left: 0;
@@ -16,7 +16,7 @@ footer {
         &::after {
             display: none;
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             &:first-child {
                 display: flex;
                 flex-wrap: wrap;
@@ -29,7 +29,7 @@ footer {
         }
     }
     .channel__group {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             border-bottom: 1px solid $gray-200;
         }
         &::after {
@@ -38,14 +38,14 @@ footer {
         .channel {
             @include listrest(0, 0, none);
             font-size: 0.875em;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 display: block !important;
             }
             li {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     margin-bottom: 5px;
                 }
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     padding-top: 5px;
                     padding-bottom: 5px;
                 }
@@ -57,7 +57,7 @@ footer {
                     color: $primary;
                 }
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 display: none;
                 padding-bottom: 10px;
                 +.channel {
@@ -66,7 +66,7 @@ footer {
             }
         }
         h4 {
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 position: relative;
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -79,19 +79,19 @@ footer {
                     top: 50%;
                     right: 0;
                     font-family: $icomoon-font-family;
-                    @include translateY(-50%);
-                    @include transition(transform 0.3s);
+                    transform: translateY(-50%);
+                    transition: transform 0.3s;
                 }
                 &.active::after {
-                    @include transform(translateY(-50%) rotate(180deg));
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 margin-top: 0;
                 margin-bottom: 10px;
             }
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             &:first-child {
                 h4 {
                     width: 100%;
@@ -118,7 +118,7 @@ footer {
     .sns__group {
         @include listrest(0, 0, none);
         line-height: 1;
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             text-align: center;
         }
         li {
@@ -152,11 +152,11 @@ footer {
     }
     .cwgroup__copyright {
         display: flex;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             align-items: flex-end;
             justify-content: space-between;
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             flex-wrap: wrap-reverse;
             text-align: center;
             > div {
@@ -215,7 +215,7 @@ footer {
             > span {
                 display: block;
                 font-size: 0.75rem;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: inline-block;
                     &:first-child {
                         margin-right: 20px;

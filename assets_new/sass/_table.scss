@@ -17,7 +17,7 @@ section.list-link,
         li {
             padding-top: 10px;
             padding-bottom: 10px;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding-top: 0.5325em;
                 padding-bottom: 0.5325em;
             }
@@ -38,19 +38,19 @@ section.list-link>ul {
     &.etu-item-list {
         font-size: 0;
         border-width: 0;
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             padding-bottom: 10px;
         }
         li {
             padding: 10px 10px 0;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: inline-block;
                 padding: 10px;
                 width: calc(100% / 3);
                 vertical-align: top;
             }
             .interest-list-link-img {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     display: inline-block;
                     width: 120px;
                     vertical-align: middle;
@@ -65,10 +65,10 @@ section.list-link>ul {
                 }
             }
             .interest-list-link-title {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding-top: 0.5rem;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     display: inline-block;
                     width: calc(100% - 120px);
                     padding-left: 10px;
@@ -80,7 +80,7 @@ section.list-link>ul {
             }
             &:hover {
                 .interest-list-link-img a::before {
-                    @include opacity(1);
+                    opacity: 1;
                 }
                 .interest-list-link-title a {
                     color: $primary;
@@ -90,7 +90,7 @@ section.list-link>ul {
     }
     &:not(.etu-item-list) {
         li {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding-top: 0.225em;
                 padding-bottom: 0.225em;
             }

@@ -7,9 +7,9 @@
             width: 80px;
             height: 80px;
             margin-right: 20px;
-            @include border-radius(50%);
+            border-radius: 50%;
             overflow: hidden;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin-left: 20px;
             }
             img {
@@ -22,7 +22,7 @@
         }
         .authorIntroduction {
             width: calc(100% - 105px);
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: calc(100% - 125px);
             }
         }
@@ -46,7 +46,7 @@
         }
     }
     .articleGroup .subArticle {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             .pic {
                 display: none;
             }
@@ -72,7 +72,7 @@
                 width: 100%;
                 height: 100%;
                 background-color: $black;
-                @include opacity(0.4);
+                opacity: 0.4;
             }
             .lightBoxContnt {
                 position: fixed;
@@ -82,7 +82,7 @@
                 width: calc(100% - 30px);
                 padding: 30px;
                 background: #fff;
-                @include translate(-50%, -50%);
+                transform: translate(-50%, -50%);
                 .close {
                     position: absolute;
                     top: 10px;
@@ -95,10 +95,10 @@
                         font-family: $icomoon-font-family;
                         line-height: 1;
                     }
-                    @include breakpoint(max-width 1023px) {
+                    @media screen and (max-width: 1023px) {
                         font-weight: bold;
                     }
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         top: 10px;
                         right: 10px;
                         font-size: 1.5rem;
@@ -141,7 +141,7 @@
             font-size: 1.125rem;
             line-height: 1.25;
             background-color: $gray-500;
-            @include translate(-50%, -50%);
+            transform: translate(-50%, -50%);
             z-index: 10;
             p {
                 margin: 0;

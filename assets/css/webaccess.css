@@ -1,21 +1,25 @@
 .webaccess__page h1 {
   margin-bottom: 5px;
 }
-@media (max-width: 767px) {
+
+@media screen and (max-width: 767px) {
   .webaccess__page h1 {
     font-size: 22px;
   }
 }
+
 .webaccess__page .h1 {
   margin-bottom: 10px;
   font-weight: 500;
 }
-@media (max-width: 767px) {
+
+@media screen and (max-width: 767px) {
   .webaccess__page .h1 {
     font-size: 22px;
   }
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page p span.mark {
     display: block;
     width: 0;
@@ -23,73 +27,89 @@
     overflow: hidden;
   }
 }
+
 .webaccess__page a.btn {
   margin-top: 25px;
   margin-bottom: 25px;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page a.btn {
     margin-top: 30px;
     margin-bottom: 40px;
   }
 }
+
 .webaccess__page header {
   border-bottom: 1px solid #D3D5D7;
 }
+
 .webaccess__page header .align-items-center a.logo {
   margin-left: 10px;
 }
+
 .webaccess__page header .align-items-center .hamburger {
   position: relative;
   top: auto;
   left: 0;
-  -moz-transform: none;
-  -ms-transform: none;
   -webkit-transform: none;
-  transform: none;
+          transform: none;
 }
+
 .webaccess__page main {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .webaccess__page main section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page main section {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
+
 .webaccess__page main section .container-fluid {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .webaccess__page main section .container {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media (min-width: 1024px) {
+
+@media screen and (min-width: 1024px) {
   .webaccess__page main section .container {
     width: 784px;
   }
 }
+
 .webaccess__page .accordion__item__panel .h3 {
   font-weight: 500;
   line-height: 1.5;
 }
+
 .webaccess__page .accordion__item__panel .decimal--step {
   margin-left: 2.4em;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page .accordion__item__panel .decimal--step {
     margin-left: 2.1em;
   }
 }
+
 .webaccess__page .accordion__item__panel .decimal--step > li {
   position: relative;
 }
+
 .webaccess__page .accordion__item__panel .decimal--step > li::before {
   content: 'Step';
   display: inline-block;
@@ -99,20 +119,27 @@
   font-size: 1rem;
   line-height: 1.5;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page .accordion__item__panel .decimal--step > li::before {
     right: calc(100% + 1.2em);
   }
 }
 
 .unsubscribe__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 0;
 }
+
 .unsubscribe__page .container {
   max-width: 350px;
 }
-
 /*# sourceMappingURL=webaccess.css.map */

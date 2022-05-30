@@ -1,12 +1,4 @@
-@import 'normalize-version';
-@import 'normalize/html5';
-@import 'normalize/base';
-@import 'normalize/links';
-// @import 'normalize/typography';
-@import 'normalize/embeds';
-@import 'normalize/groups';
-@import 'normalize/forms';
-@import 'normalize/tables';
+@import 'normalize';
 html {
     min-height: 100%;
     height: 100%;
@@ -34,7 +26,7 @@ textarea {
 *,
 *::before,
 *::after {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {

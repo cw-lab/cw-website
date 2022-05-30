@@ -50,7 +50,7 @@ $value: 0,
     }
 }
 
-@include breakpoint(1024px) {
+@media screen and (min-width: 1024px) {
     @for $i from 1 through length($value) {
         .m-d-#{nth($value,$i)} {
             margin: #{nth($value, $i)}px !important;
@@ -93,7 +93,7 @@ $value: 0,
     }
 }
 
-@include breakpoint(max-width 1023px) {
+@media screen and (max-width: 1023px) {
     @for $i from 1 through length($value) {
         .m-m-#{nth($value,$i)} {
             margin: #{nth($value, $i)}px !important;

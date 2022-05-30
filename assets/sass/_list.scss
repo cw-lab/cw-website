@@ -1,5 +1,5 @@
 .article__group {
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 20px;
         background-color: $white;
         border: 1px solid $gray-200;
@@ -23,7 +23,7 @@
                 }
                 &::before,
                 >i.icon {
-                    @include transition(all 0.3s);
+                    transition: all 0.3s;
                 }
                 &::before {
                     @extend %before-after;
@@ -33,15 +33,14 @@
                     width: 100%;
                     height: 100%;
                     background-color: rgba($black, 0);
-                    @include filter-gradient(rgba($black, 0), rgba($black, 0.5), horizontal);
-                    @include background-image(radial-gradient(center, ellipse farthest-corner, rgba($black, 0) 0%, rgba($black, 0.5) 100%));
-                    @include opacity(0);
+                    background-image: radial-gradient(center, ellipse farthest-corner, rgba($black, 0) 0%, rgba($black, 0.5) 100%);
+                    opacity: 0;
                     z-index: 1;
                 }
             }
             &:hover {
                 >a::before {
-                    @include opacity(1);
+                    opacity: 1;
                 }
             }
             .article__function__sns {
@@ -52,12 +51,12 @@
                 width: 100%;
                 padding: 15px;
                 background-color: rgba($black, 0.75);
-                @include transition(bottom, 0.3s);
+                transition: bottom, 0.3s;
                 z-index: 1;
                 li {
                     position: relative;
                     margin-right: 5px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-right: 10px;
                     }
                 }
@@ -89,7 +88,7 @@
                         color: $primary;
                     }
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     font-size: 22px;
                 }
             }
@@ -149,7 +148,7 @@
         }
         &--main {
             flex-direction: column;
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 margin-bottom: 20px;
                 background-color: $white;
                 border: 1px solid $gray-200;
@@ -164,7 +163,7 @@
                                 width: 4rem;
                                 height: 4rem;
                                 font-size: 4rem;
-                                @include breakpoint(768px) {
+                                @media screen and (min-width: 768px) {
                                     width: 5rem;
                                     height: 5rem;
                                     font-size: 5rem;
@@ -191,26 +190,26 @@
             }
         }
         &--sub {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 flex-direction: column;
                 margin-bottom: 20px;
                 background-color: $white;
                 border: 1px solid $gray-200;
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding: 1rem;
             }
             .article__group {
                 &__item {
                     &__img {
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             width: 120px;
                         }
                         >a {
                             >i.icon {
                                 bottom: 5px;
                                 left: 5px;
-                                @include breakpoint(768px) {
+                                @media screen and (min-width: 768px) {
                                     width: 2rem;
                                     height: 2rem;
                                     font-size: 2rem;
@@ -219,7 +218,7 @@
                         }
                     }
                     &__text {
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             width: calc(100% - 120px);
                             padding-left: 1rem;
                             p {
@@ -228,7 +227,7 @@
                                 overflow: hidden;
                             }
                         }
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             width: 100%;
                             padding: 15px 10px;
                             p {

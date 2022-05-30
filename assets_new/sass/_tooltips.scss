@@ -12,10 +12,10 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
         background: $gray-500;
         white-space: nowrap;
         visibility: hidden;
-        @include opacity(0);
-        @include transition(opacity 0.2s $cubic, transform 0.2s $cubic);
+        opacity: 0;
+        transition: opacity 0.2s $cubic, transform 0.2s $cubic;
         z-index: 2;
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             display: none;
         }
     }
@@ -24,8 +24,8 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
         &:before {
             display: block;
             visibility: visible;
-            @include opacity(1);
-            @include breakpoint(max-width 767px) {
+            opacity: 1;
+            @media screen and (max-width: 767px) {
                 display: none;
             }
         }
@@ -35,13 +35,13 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
             bottom: 100%;
             left: 50%;
             margin-bottom: 10px;
-            @include transform(translateX(-50%) translateY(2px));
+            transform: translateX(-50%) translateY(2px);
         }
         &:hover,
         &.active {
             &:before {
-                @include breakpoint(768px) {
-                    @include transform(translateX(-50%) translateY(0));
+                @media screen and (min-width: 768px) {
+                    transform: translateX(-50%) translateY(0);
                 }
             }
         }
@@ -51,13 +51,13 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
             top: 100%;
             left: 50%;
             margin-top: 10px;
-            @include transform(translateX(-50%) translateY(-2px));
+            transform: translateX(-50%) translateY(-2px);
         }
         &:hover,
         &.active {
             &:before {
-                @include breakpoint(768px) {
-                    @include transform(translateX(-50%) translateY(0));
+                @media screen and (min-width: 768px) {
+                    transform: translateX(-50%) translateY(0);
                 }
             }
         }
@@ -67,13 +67,13 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
             top: 50%;
             right: 100%;
             margin-right: 10px;
-            @include transform(translateX(2px) translateY(-50%));
+            transform: translateX(2px) translateY(-50%);
         }
         &:hover,
         &.active {
             &:before {
-                @include breakpoint(768px) {
-                    @include transform(translateX(0) translateY(-50%));
+                @media screen and (min-width: 768px) {
+                    transform: translateX(0) translateY(-50%);
                 }
             }
         }
@@ -83,13 +83,13 @@ $cubic: cubic-bezier(.64, .09, .08, 1);
             top: 50%;
             left: 100%;
             margin-left: 10px;
-            @include transform(translateX(-2px) translateY(-50%));
+            transform: translateX(-2px) translateY(-50%);
         }
         &:hover,
         &.active {
             &:before {
-                @include breakpoint(768px) {
-                    @include transform(translateX(0) translateY(-50%));
+                @media screen and (min-width: 768px) {
+                    transform: translateX(0) translateY(-50%);
                 }
             }
         }

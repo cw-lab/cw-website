@@ -26,7 +26,7 @@ header {
             &.item--right {
                 position: absolute;
                 top: 50%;
-                @include translateY(-50%);
+                transform: translateY(-50%);
                 z-index: 1;
                 >* {
                     display: inline-block;
@@ -49,7 +49,7 @@ header {
                 .item__scroll {
                     position: relative;
                     top: 0;
-                    @include transition(top 0.3s);
+                    transition: top 0.3s;
                 }
                 a.logo {
                     display: inline-block;

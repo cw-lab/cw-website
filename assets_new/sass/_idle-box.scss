@@ -16,12 +16,12 @@
         width: calc(100% - 30px);
         padding: 30px 30px 0;
         background-color: $white;
-        @include translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 1;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: 580px;
         }
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             padding: 35px 20px 20px;
         }
         h4 {
@@ -33,22 +33,22 @@
     }
     .idle-group {
         font-size: 0;
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             height: 320px;
             overflow: scroll;
         }
-        @include breakpoint(max-width 374px) {
+        @media screen and (max-width: 374px) {
             height: 250px;
         }
         .idle-item {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: inline-block;
                 vertical-align: top;
                 width: calc((100% - 40px) / 3);
                 margin-left: 20px;
                 margin-bottom: 30px;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 +.idle-item {
                     margin-top: 20px;
                 }
@@ -61,7 +61,7 @@
             }
             .idle-img {
                 position: relative;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     display: inline-block;
                     vertical-align: text-top;
                     width: 100px;
@@ -71,7 +71,7 @@
                 }
                 @include imghover();
                 &:hover::before {
-                    @include opacity(1);
+                    opacity: 1;
                 }
                 .pr {
                     display: block;
@@ -86,10 +86,10 @@
                 }
             }
             .idle-body {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding-top: 10px;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     display: inline-block;
                     vertical-align: text-top;
                     width: calc(100% - 100px);

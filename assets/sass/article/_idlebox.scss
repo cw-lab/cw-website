@@ -4,7 +4,7 @@
     padding: 20px 20px 30px;
     background: $white;
     z-index: 11;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         padding: 30px 30px 40px;
         font-weight: 300;
     }
@@ -15,18 +15,18 @@
         line-height: 1.5;
     }
     .card__group {
-        @include breakpoint(max-height 700px) {
+        @media screen and (max-height: 700px) {
             height: 60vh;
             overflow: scroll;
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             max-height: 50vh;
             overflow: scroll;
         }
         .card__item {
             display: inline-block;
             vertical-align: text-top;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: calc((100% - 40px) / 3);
                 margin-left: 20px;
                 &:nth-child(3n+1) {
@@ -42,7 +42,7 @@
                     margin-top: 5px;
                 }
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 +.card__item {
                     margin-top: 20px;
                 }

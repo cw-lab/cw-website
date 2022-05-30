@@ -21,7 +21,7 @@
 				margin-right: 10px;
 				img {
 					height: 30px;
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						height: 50px;
 					}
 				}
@@ -31,7 +31,7 @@
 			> .container {
 				height: 30px;
 				padding-left: 40px;
-				@include breakpoint(1024px) {
+				@media screen and (min-width: 1024px) {
 					height: 50px;
 					padding-left: 40px;
 				}
@@ -42,7 +42,7 @@
 			width: 100%;
 		}
 		nav.menubar--sub2 {
-			@include breakpoint (1260px) {
+			@media screen and (min-width: 1260px) {
 				right: calc((100% - 1260px) / 2);
 			}
 		}
@@ -78,12 +78,12 @@
 		> .container, >.container-fluid {
 			padding-top: 80px;
 			padding-bottom: 80px;
-			@include breakpoint (max-width 767px) {
+			@media screen and (max-width: 767px) {
 				padding-left: 20px;
 				padding-right: 20px;
 			}
 			>.row {
-				@include breakpoint (max-width 767px) {
+				@media screen and (max-width: 767px) {
 					margin-left: -20px;
 					margin-right: -20px;
 				}
@@ -112,7 +112,7 @@
 			}
 		}
 		.img__group {
-			@include breakpoint (max-width 767px) {
+			@media screen and (max-width: 767px) {
 				margin-left: -20px;
 				margin-right: -20px;
 			}
@@ -125,7 +125,7 @@
 				padding-top: 0.4em;
 				color: $secondary;
 				font-size: 0.875rem;
-				@include breakpoint (max-width 767px) {
+				@media screen and (max-width: 767px) {
 					padding-left: 20px;
 					padding-right: 20px;
 				}
@@ -144,7 +144,7 @@
 			&__group {
 				display: flex;
 				flex-wrap: wrap;
-				@include breakpoint (max-width 767px) {
+				@media screen and (max-width: 767px) {
 					margin-left: -20px;
 					margin-right: -20px;
 				}
@@ -155,7 +155,7 @@
 				&:nth-last-child(1) {
 					margin-bottom: 0;
 				}
-				@include breakpoint (768px) {
+				@media screen and (min-width: 768px) {
 					width: calc( (100% - 50px) / 3);
 					margin-left: 25px;
 					margin-bottom: 50px;
@@ -177,7 +177,7 @@
 				margin-bottom: 10px;
 				color: $black;
 				font-size: 1.125em;
-				@include breakpoint (max-width 767px) {
+				@media screen and (max-width: 767px) {
 					padding-left: 20px;
 					padding-right: 20px;
 				}
@@ -210,7 +210,7 @@
 				li {
 					width: 50%;
 					padding: 10px;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						width: 20%;
 					}
 					a {
@@ -221,7 +221,7 @@
 							width: 100%;
 							height: 0;
 							padding-top: 100%;
-							@include border-radius(50%);
+							border-radius: 50%;
 							overflow: hidden;
 							img {
 								position: absolute;
@@ -238,8 +238,8 @@
 							color: $black;
 							font-size: 1.125em;
 							text-align: center;
-							@include transition(color 0.3s);
-							@include breakpoint (max-width 767px) {
+							transition: color 0.3s;
+							@media screen and (max-width: 767px) {
 								padding-left: 20px;
 								padding-right: 20px;
 							}
@@ -261,7 +261,7 @@
 				li {
 					width: 50%;
 					padding: 10px;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						width: 25%;
 					}
 					a {
@@ -306,7 +306,7 @@
 				max-width: 1260px;
 				padding-top: 20px;
 				padding-bottom: 20px;
-				@include breakpoint(768px) {
+				@media screen and (min-width: 768px) {
 					width: 85%;
 					padding-bottom: 30px;
 				}
@@ -330,10 +330,10 @@
 					padding-bottom: 30px;
 					color: $secondary;
 					font-size: 0.875rem;
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						padding-bottom: 1.4em;
 					}
-					@include breakpoint (max-width 767px) {
+					@media screen and (max-width: 767px) {
 						padding-left: 20px;
 						padding-right: 20px;
 					}
@@ -344,17 +344,17 @@
 					position: absolute;
 					top: 50%;
 					height: 100%;
-					@include translateY(-50%);
+					transform: translateY(-50%);
 					z-index: 5;
 					&--prev {
 						left: 5px;
-						@include breakpoint(768px) {
+						@media screen and (min-width: 768px) {
 							left: 50px;
 						}
 					}
 					&--next {
 						right: 5px;
-						@include breakpoint(768px) {
+						@media screen and (min-width: 768px) {
 							right: 50px;
 						}
 					}
@@ -364,7 +364,7 @@
 						color: $white;
 						font-size: 2rem;
 						text-shadow: 1px 1px 0 rgba($black, 0.5);
-						@include breakpoint(768px) {
+						@media screen and (min-width: 768px) {
 							width: 70px;
 						}
 					}
@@ -397,15 +397,14 @@
 					left: 0;
 					bottom: 0;
 					height: 200px;
-					@include filter-gradient(rgba($black, 0), $black, vertical);
-					@include background-image(linear-gradient(top, rgba($black, 0) 0%, $black 100%));
+					background-image: linear-gradient(top, rgba($black, 0) 0%, $black 100%);
 				}
 				.slider__title {
 					position: absolute;
 					bottom: 0;
 					left: 50%;
-					@include translateX(-50%);
-					@include breakpoint(768px) {
+					transform: translateX(-50%);
+					@media screen and (min-width: 768px) {
 					    text-align: center;
 					}
 				}
@@ -416,21 +415,20 @@
 					top: 0;
 					left: 0;
 					height: 100%;
-					@include opacity(0.5);
-					@include transition(opacity 0.3s);
-					@include filter-gradient(rgba($black, 0.5), $black, horizontal);
-					@include background-image(linear-gradient(left, rgba($black, 0.5) 0%, $black 100%));
+					opacity: 0.5;
+					transition: opacity 0.3s;
+					background-image: linear-gradient(left, rgba($black, 0.5) 0%, $black 100%);
 				}
 				.slider__title {
 					position: absolute;
-					@include breakpoint(max-width 1023px) {
+					@media screen and (max-width: 1023px) {
 						bottom: 0;
 						left: 0;
 					}
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						top: 50%;
 						left: 50%;
-						@include translate(-50%, -50%);
+						transform: translate(-50%, -50%);
 					}
 					> * {
 						max-width: 460px;
@@ -440,7 +438,7 @@
 			.slider__navi {
 				position: absolute;
 				top: 50%;
-				@include translateY(-50%);
+				transform: translateY(-50%);
 				z-index: 5;
 				&.slider__navi--prev {
 					left: 0;
@@ -452,8 +450,8 @@
 			.slider__wrap__thumbnail {
 				position: relative;
 				font-size: 0;
-				@include transition(left 0.3s);
-				@include breakpoint (max-width 1023px) {
+				transition: left 0.3s;
+				@media screen and (max-width: 1023px) {
 					padding-left: 30px;
 					padding-right: 30px;
 				}
@@ -463,14 +461,14 @@
 				&.fixed .slick-track {
 					margin-left: auto;
 					margin-right: auto;
-					@include transform(none !important);
+					transform: none !important;
 				}
 				.thumbnail__img {
 					position: relative;
 					display: inline-block;
 					padding-left: 5px;
 					padding-right: 5px;
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						padding-left: 8px;
 						padding-right: 8px;
 					}
@@ -482,20 +480,20 @@
 						width: calc(100% - 10px);
 						height: 100%;
 						background-color: $black;
-						@include breakpoint(1024px) {
+						@media screen and (min-width: 1024px) {
 							left: 8px;
 							width: calc(100% - 16px);
 						}
 					}
 					img {
 						position: relative;
-						@include opacity(0.5);
-						@include transition(opacity 0.3s);
+						opacity: 0.5;
+						transition: opacity 0.3s;
 						z-index: 2;
 					}
 					&.slick-current {
 						img {
-							@include opacity(1);
+							opacity: 1;
 						}
 					}
 				}
@@ -506,7 +504,7 @@
 		position: relative;
 		margin-top: 20px;
 		margin-bottom: 20px;
-		@include transition(height 0.3s);
+		transition: height 0.3s;
 		&.hidden {
 			height: 9em;
 			overflow: hidden;
@@ -517,14 +515,7 @@
 				bottom: 0;
 				width: 100%;
 				height: 100%;
-				@include filter-gradient(rgba($white,
-				0),
-				$white,
-				vertical);
-				@include background-image(linear-gradient(top,
-				rgba($white,
-				0) 0%,
-				$white 100%));
+				background-image: linear-gradient(top, rgba($white, 0) 0%, $white 100%);
 			}
 			+.btn {
 				display: block;
@@ -541,12 +532,12 @@
 		flex-direction: column;
 		bottom: 20px;
 		font-size: 28px;
-		@include opacity(0);
+		opacity: 0;
 		z-index: 5;
-		@include breakpoint(max-width 1023px) {
+		@media screen and (max-width: 1023px) {
 			right: 10px;
 		}
-		@include breakpoint(1024px) {
+		@media screen and (min-width: 1024px) {
 			bottom: 3em;
 			left: calc(910px + (100% - 880px) / 2);
 			font-size: 40px;
@@ -557,23 +548,23 @@
 			}
 			>a.sns {
 				display: block;
-				@include breakpoint(1024px) {
+				@media screen and (min-width: 1024px) {
 					width: 1em;
 					height: 1em;
-					@include background-size(1em);
+					background-size: 1em;
 				}
-				@include breakpoint(max-width 1023px) {
+				@media screen and (max-width: 1023px) {
 					width: 1.4em;
 					height: 1.4em;
-					@include background-size(1.4em);
+					background-size: 1.4em;
 				}
 				background-position: center;
 				background-repeat: no-repeat;
 				&-facebook {
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						background-image: url('../images/common/facebook--secondary.svg')
 					}
-					@include breakpoint(max-width 1023px) {
+					@media screen and (max-width: 1023px) {
 						background-image: url('../images/common/facebook--brand.svg')
 					}
 					&:hover {
@@ -581,10 +572,10 @@
 					}
 				}
 				&-line {
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						background-image: url('../images/common/line--secondary.svg')
 					}
-					@include breakpoint(max-width 1023px) {
+					@media screen and (max-width: 1023px) {
 						background-image: url('../images/common/line--brand.svg')
 					}
 					&:hover {

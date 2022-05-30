@@ -9,7 +9,7 @@
 			position: relative;
 			border: solid $gray-200;
 			border-width: 1px 1px 0;
-			@include breakpoint(max-width 767px) {
+			@media screen and (max-width: 767px) {
 				overflow-x: scroll;
 				overflow-y: hidden;
 			}
@@ -18,7 +18,7 @@
 				display: flex;
 				padding: 0;
 				margin: 0;
-				@include breakpoint(768px) {
+				@media screen and (min-width: 768px) {
 					margin: 0 0 -1px;
 				}
 				&::before {
@@ -29,7 +29,7 @@
 					width: 100%;
 					height: 1px;
 					background-color: $gray-200;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						bottom: 0px;
 					}
 				}
@@ -58,7 +58,7 @@
 				}
 			}
 			&:not(.equal) {
-				@include breakpoint(768px) {
+				@media screen and (min-width: 768px) {
 					display: table;
 				}
 			}
@@ -86,16 +86,16 @@
 			}
 			&--overflow {
 				display: flex;
-				@include breakpoint(max-width 767px) {
+				@media screen and (max-width: 767px) {
 					overflow-x: scroll;
 					overflow-y: hidden;
 				}
-				@include breakpoint(768px) {
+				@media screen and (min-width: 768px) {
 					overflow: hidden;
 				}
 				> ul {
 					padding-left: 50px;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						padding-right: 50px;
 					}
 				}

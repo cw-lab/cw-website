@@ -27,7 +27,7 @@ ul.article__keyword {
                 @include beforeafter('', block);
                 position: absolute;
                 background-color: $red-100;
-                @include opacity(0);
+                opacity: 0;
                 z-index: -1;
             }
             &::before {
@@ -35,7 +35,7 @@ ul.article__keyword {
                 right: 0;
                 top: 0;
                 bottom: 0;
-                @include transition(opacity 0.2s);
+                transition: opacity 0.2s;
             }
             &::after {
                 left: 50%;
@@ -43,9 +43,9 @@ ul.article__keyword {
                 padding: 55%;
                 width: 32px;
                 height: 32px;
-                @include border-radius(50%);
-                @include transform(translate(-50%, -50%) scale(1));
-                @include transition(opacity 2s, transform 0.5s);
+                border-radius: 50%;
+                transform: translate(-50%, -50%) scale(1);
+                transition: opacity 2s, transform 0.5s;
             }
             &:hover {
                 color: $primary;

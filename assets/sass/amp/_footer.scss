@@ -35,10 +35,10 @@ footer {
                 position: absolute;
                 top: 50%;
                 right: 0;
-                @include transform(translateY(calc(-50% + 5px)));
-                @include transition(transform 0.2s);
+                transform: translateY(calc(-50% + 5px));
+                transition: transform 0.2s;
                 &.active {
-                    @include transform(translateY(calc(-50% + 5px)) rotate(180deg));
+                    transform: translateY(calc(-50% + 5px)) rotate(180deg);
                 }
             }
         }
@@ -56,7 +56,7 @@ footer {
         }
         &[expanded] {
             .channel__title i.icon {
-                @include transform(translateY(calc(-50% + 5px)) rotate(180deg));
+                transform: translateY(calc(-50% + 5px)) rotate(180deg);
             }
         }
     }

@@ -1,10 +1,10 @@
 .index-page {
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         min-width: $index;
     }
     .banner.text-center {
         min-height: 112px;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             min-height: 152px;
         }
     }
@@ -13,7 +13,7 @@
             position: static;
             width: 100%;
             background-color: $gray-300;
-            @include translateY(0);
+            transform: translateY(0);
             li {
                 border-left-color: $white;
                 &.userName {
@@ -37,50 +37,50 @@
             }
         }
         .main-header .main-header-body {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 1280px;
             }
             .logo a img {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: 134px;
                 }
             }
         }
     }
     .container {
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: ($index + 40);
         }
     }
     .main {
         margin-top: 20px;
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: ($index + 40);
         }
         article {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: ($index - 640);
             }
         }
         aside {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 display: none;
                 margin-top: 0px;
             }
         }
         .articleGroup {
             margin-bottom: 10px;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin-bottom: 20px;
                 background-color: $white;
                 border: 1px solid $gray-200;
             }
             .subArticle {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding: 0 15px 20px;
                     margin: 0;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 10px;
                 }
             }

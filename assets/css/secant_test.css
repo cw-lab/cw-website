@@ -3,78 +3,104 @@
   position: relative;
   padding-bottom: 100px;
 }
-@media (min-width: 375px) {
+
+@media screen and (min-width: 375px) {
   .webaccess__page .container {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
+
 .webaccess__page .container::before, .webaccess__page .container::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .webaccess__page header {
   border-bottom: 1px solid #D3D5D7;
 }
+
 .webaccess__page header .container > .flex {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .webaccess__page header .container ul.member__list + .member__list {
   margin-left: 30px;
 }
+
 .webaccess__page header .container ul.member__list li + li {
   margin-left: 30px;
 }
+
 .webaccess__page header .container ul.member__list a {
   color: #171717;
   font-size: 1rem;
 }
+
 .webaccess__page header .container ul.member__list a:hover {
   color: #D60C18;
 }
+
 .webaccess__page main {
   margin-top: 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .webaccess__page main .plan {
   margin-bottom: 2.5em;
 }
-@media (max-width: 767px) {
+
+@media screen and (max-width: 767px) {
   .webaccess__page main .plan {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 .webaccess__page main .plan .plan__description--main {
   padding-top: 25px;
   padding-bottom: 35px;
 }
+
 .webaccess__page main .plan .plan__description--complement {
   padding-top: 25px;
   padding-bottom: 25px;
   line-height: 1.875;
 }
+
 .webaccess__page main .plan .plan__description a.link-btn {
   font-size: 1rem;
 }
+
 .webaccess__page main .plan .plan__item {
   width: 100%;
   background-color: #fafafa;
 }
-@media (max-width: 767px) {
+
+@media screen and (max-width: 767px) {
   .webaccess__page main .plan .plan__item {
     margin-bottom: 10px;
   }
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__item {
     width: 33.3333333%;
   }
 }
+
 .webaccess__page main .plan .plan__item--highlight {
   position: relative;
   background-color: #fff;
 }
+
 .webaccess__page main .plan .plan__item__complement {
   display: block;
   padding-top: 5px;
@@ -83,6 +109,7 @@
   font-weight: normal;
   line-height: 1.5;
 }
+
 .webaccess__page main .plan .plan__item__spec {
   position: absolute;
   top: 0;
@@ -90,6 +117,7 @@
   width: 75px;
   height: 75px;
 }
+
 .webaccess__page main .plan .plan__item__spec span {
   position: absolute;
   display: block;
@@ -99,11 +127,10 @@
   color: #fff;
   font-size: 0.875em;
   text-align: center;
-  -moz-transform: rotate(-45deg) translate(-25%, -255%);
-  -ms-transform: rotate(-45deg) translate(-25%, -255%);
   -webkit-transform: rotate(-45deg) translate(-25%, -255%);
-  transform: rotate(-45deg) translate(-25%, -255%);
+          transform: rotate(-45deg) translate(-25%, -255%);
 }
+
 .webaccess__page main .plan .plan__item__spec::before {
   content: "";
   display: block;
@@ -116,97 +143,122 @@
   border-width: 75px 75px 0 0;
   border-color: #003a9f transparent transparent transparent;
 }
-@media (min-width: 939px) {
+
+@media screen and (min-width: 939px) {
   .webaccess__page main .plan .plan__item__title {
     margin-left: -20px;
     margin-right: -20px;
   }
 }
+
 .webaccess__page main .plan .plan__item__group {
   padding-left: 35px;
   padding-right: 35px;
 }
-@media (min-width: 350px) {
+
+@media screen and (min-width: 350px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
-@media (min-width: 375px) {
+
+@media screen and (min-width: 375px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 50px;
     padding-right: 50px;
   }
 }
-@media (min-width: 414px) {
+
+@media screen and (min-width: 414px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 80px;
     padding-right: 80px;
   }
 }
-@media (min-width: 939px) {
+
+@media screen and (min-width: 939px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 60px;
     padding-right: 60px;
   }
 }
+
 .webaccess__page main .plan .plan__item__group .btn--text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 2px;
   font-size: 0.875rem;
   line-height: 1;
   text-decoration: none;
   border-bottom: 1px solid #003a9f;
 }
+
 .webaccess__page main .plan .plan__item__group .btn--text:hover {
   border-color: #D60C18;
 }
+
 .webaccess__page main .plan .plan__item__group .btn--text > * {
   display: block;
 }
+
 .webaccess__page main .plan .plan__item__group .btn--text i {
   margin-left: 5px;
   font-size: 0.75rem;
 }
+
 .webaccess__page main .plan .plan__item__img {
   height: 150px;
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 @media screen and (min-width: 768px) and (max-width: 929px) {
   .webaccess__page main .plan .plan__item__img {
     height: 100px;
     margin-top: 30px;
   }
 }
+
 .webaccess__page main .plan .plan__item__option {
   margin-bottom: 20px;
 }
+
 .webaccess__page main .plan .plan__item .select__group {
   width: 100%;
 }
+
 .webaccess__page main .plan .plan__item .select__group::before {
   right: 0.85rem;
   font-size: 1.25em;
 }
+
 .webaccess__page main .plan .plan__item .select__group select.plan__item__select {
   width: 100%;
   padding: 0 2rem 0 1rem;
   line-height: 46px;
   background-color: #fff;
 }
+
 .webaccess__page main .plan .plan__item .btn {
   display: block;
   width: 100%;
   cursor: pointer;
 }
+
 .webaccess__page main .plan .plan__item .btn.active {
   background-color: #D60C18;
   border-color: #D60C18;
 }
+
 .webaccess__page main .plan .plan__item__right {
   display: table;
   margin-left: auto;
@@ -215,14 +267,17 @@
   line-height: 1.5;
   list-style: none;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__item__right {
     min-height: 4.5rem;
   }
 }
+
 .webaccess__page main .plan .plan__item__right li {
   position: relative;
 }
+
 .webaccess__page main .plan .plan__item__right li::before {
   content: "";
   display: block;
@@ -230,22 +285,24 @@
   top: 50%;
   left: -1.35em;
   font-family: "cw_icon";
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 .webaccess__page main .plan .plan__item__right--narrow li {
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
+
 .webaccess__page main .plan .plan__option__txt {
   display: block;
 }
+
 .webaccess__page main .plan .plan__option__txt span {
   text-decoration: line-through;
 }
+
 .webaccess__page main .plan .plan__option__txt--complement {
   display: block;
   padding-left: 1em;
@@ -255,10 +312,10 @@
   font-weight: normal;
   line-height: 1.5;
 }
-@media (min-width: 768px) {
+
+@media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__option__txt--complement {
     height: 1.5rem;
   }
 }
-
 /*# sourceMappingURL=secant_test.css.map */

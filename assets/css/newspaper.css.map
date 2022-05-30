@@ -1,7 +1,11 @@
 {
-"version": 3,
-"mappings": "AAGA,gBAAiB;EACb,cAAc,EAAE,YAAY;;AC4D5B,0BAAwB;ED1DpB,mCAAW;IAEH,KAAK,EAAE,KAAK",
-"sources": ["../sass/newspaper.scss","../../../../../../../Library/Ruby/Gems/2.6.0/gems/breakpoint-2.7.1/stylesheets/_breakpoint.scss"],
-"names": [],
-"file": "newspaper.css"
+    "version": 3,
+    "mappings": "AAGA,AAAA,gBAAgB,CAAC;EACb,cAAc,EAAE,YAAY;CAQ/B;;AALW,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EAJhD,AAGQ,gBAHQ,CAEZ,OAAO,CACH,UAAU,CAAC;IAEH,KAAK,EAAE,KAAK;GAEnB",
+    "sources": [
+        "../sass/newspaper.scss",
+        "../sass/_basic.scss",
+        "../sass/_sheet.scss"
+    ],
+    "names": [],
+    "file": "newspaper.css"
 }

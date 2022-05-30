@@ -13,7 +13,7 @@
 				padding: 0.65em 1.125em;
 				color: $black;
 				cursor: pointer;
-				@include transition(background-color, 0.3s);
+				transition: background-color, 0.3s;
 				&::before,
 				&::after {
 					@include clear;
@@ -48,7 +48,7 @@
 					// top: 50%;
 					right: 0;
 					padding: 0.9em 1rem;
-					// @include translateY(-50%);
+					// transform: translateY(-50%);
 				}
 			}
 			&__panel {
@@ -69,7 +69,7 @@
 				}
 				.decimal--step {
 					margin-left: 2.4em;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						margin-left: 2.1em;
 					}
 					> li {
@@ -81,7 +81,7 @@
 							right: calc(100% + 1.5em);
 							font-size: 1rem;
 							line-height: 1.5;
-							@include breakpoint(768px) {
+							@media screen and (min-width: 768px) {
 								right: calc(100% + 1.2em);
 							}
 						}

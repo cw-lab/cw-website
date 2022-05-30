@@ -5,7 +5,7 @@
     header {
         border-bottom: 1px solid $gray-200;
         nav.menubar--sub2 {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 right: calc( (100% - 1020px) / 2);
             }
             ul.menubar__user {
@@ -25,7 +25,7 @@
         padding-bottom: 0 !important;
         margin-left: auto;
         margin-right: auto;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             width: 1020px;
         }
         &::after {
@@ -34,10 +34,10 @@
     }
     aside {
         width: 100%;
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: none;
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             float: left;
             max-width: 200px;
         }
@@ -45,7 +45,7 @@
     article {
         position: relative;
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             float: right;
             max-width: 750px;
         }
@@ -65,7 +65,7 @@
         }
         .edit__group {
             padding: 20px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 padding: 30px;
             }
         }
@@ -76,7 +76,7 @@
             .form__group {
                 max-width: none;
                 padding-bottom: 20px;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     padding-bottom: 30px;
                 }
             }
@@ -84,7 +84,7 @@
                 margin-top: 30px;
                 padding-left: 20px;
                 padding-right: 20px;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     padding-left: 30px;
                     padding-right: 30px;
                 }
@@ -101,21 +101,21 @@
         .form {
             .address__group {
                 .select__group {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 140px;
                     }
                 }
             }
             .taiwan {
                 .form__group {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 280px - 2rem);
                     }
                 }
             }
             .oversea {
                 .form__group {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 140px - 1rem);
                     }
                 }
@@ -125,7 +125,7 @@
             margin: 20px 20px 0;
             padding: 12px;
             background-color: $gray;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 margin: 20px 30px 0;
                 padding: 12px 15px;
             }
@@ -143,14 +143,14 @@
             }
             span {
                 width: calc(100% - 1.25rem - 10px);
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 5px;
                     flex-direction: column;
                     align-items: start;
                 }
             }
             a.btn {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 5px;
                 }
             }
@@ -158,10 +158,10 @@
         .search {
             width: 100%;
             font-size: 0;
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 margin-top: 10px
             }
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 position: absolute;
                 top: -4px;
                 right: 0;
@@ -169,7 +169,7 @@
             }
         }
     }
-    @include breakpoint(max-width 1023px) {
+    @media screen and (max-width: 1023px) {
         .h1 {
             font-size: 22px;
         }
@@ -203,7 +203,7 @@
                 position: relative;
                 padding-right: 1.25em;
                 font-weight: 600;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     font-weight: 500;
                 }
                 i.icon {
@@ -211,7 +211,7 @@
                     top: 50%;
                     right: 0;
                     cursor: pointer;
-                    @include translateY(-50%);
+                    transform: translateY(-50%);
                 }
             }
             &:hover {
@@ -248,7 +248,7 @@
         .address__group {
             margin-top: 10px;
             .form__group {
-                @include breakpoint(375px) {
+                @media screen and (min-width: 375px) {
                     margin-left: 1rem;
                 }
                 max-width: none;
@@ -258,13 +258,13 @@
                 }
             }
             .select__group {
-                @include breakpoint(max-width 374px) {
+                @media screen and (max-width: 374px) {
                     width: 100%;
                 }
-                @include breakpoint(375px) {
+                @media screen and (min-width: 375px) {
                     width: calc( (100% - 1rem) / 2);
                 }
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: 120px;
                 }
                 &.select__group--notallowed {
@@ -287,7 +287,7 @@
                     min-width: auto;
                 }
                 +.select__group {
-                    @include breakpoint(max-width 374px) {
+                    @media screen and (max-width: 374px) {
                         margin-left: 0;
                         margin-top: 1rem;
                     }
@@ -297,10 +297,10 @@
                 .form__group {
                     width: 100%;
                     max-width: none;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 240px - 2rem);
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-top: 1rem;
                         margin-left: 0;
                     }
@@ -310,10 +310,10 @@
                 .form__group {
                     width: 100%;
                     max-width: none;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 120px - 1rem);
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-top: 1rem;
                         margin-left: 0;
                     }
@@ -324,10 +324,10 @@
             .form__group {
                 max-width: none;
                 width: 100%;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: calc(100% - 280px - 2rem);
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 1rem;
                     margin-left: 0;
                 }
@@ -337,10 +337,10 @@
             margin-top: 20px;
             .form__group {
                 width: 100%;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: calc(100% - 140px - 1rem);
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 1rem;
                     margin-left: 0;
                 }
@@ -350,16 +350,16 @@
             display: flex;
             .select__group {
                 width: 100%;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: calc( (100% - 2rem) / 3);
                 }
                 &:nth-child(2) {
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-left: 0;
                     }
                 }
                 +.select__group {
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-top: 1rem;
                         width: calc( (100% - 1rem) / 2);
                     }
@@ -372,7 +372,7 @@
         }
     }
     .planning__group {
-        @include transition(border-color 0.3s);
+        transition: border-color 0.3s;
         &.active {
             border-color: $primary-variant;
         }
@@ -385,45 +385,45 @@
     }
     .planning__item {
         padding: 20px;
-        @include breakpoint(640px) {
+        @media screen and (min-width: 640px) {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        @include breakpoint(max-width 639px) {
+        @media screen and (max-width: 639px) {
             text-align: center;
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             padding: 15px 30px;
         }
         +.form__group {
             border-top: 1px solid $gray-200;
         }
         .planning__img {
-            @include breakpoint(max-width 639px) {
+            @media screen and (max-width: 639px) {
                 margin-left: auto;
                 margin-right: auto;
             }
             +.planning__body {
-                @include breakpoint(640px) {
+                @media screen and (min-width: 640px) {
                     width: calc(100% - 138px);
                     padding-left: 20px;
                 }
-                @include breakpoint(max-width 639px) {
+                @media screen and (max-width: 639px) {
                     padding-top: 20px;
                 }
             }
         }
         .planning__body {
             width: 100%;
-            @include breakpoint(640px) {
+            @media screen and (min-width: 640px) {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
             }
         }
         .planning__deadline {
-            @include breakpoint(max-width 639px) {
+            @media screen and (max-width: 639px) {
                 justify-content: center;
             }
             .deadline__title {
@@ -435,7 +435,7 @@
             }
         }
         .btn {
-            @include breakpoint(max-width 639px) {
+            @media screen and (max-width: 639px) {
                 margin-top: 20px;
             }
         }
@@ -500,7 +500,7 @@
     }
     .table {
         width: 100%;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             display: table;
             width: 1115px;
             font-size: 1.125rem;
@@ -521,11 +521,11 @@
                 width: 100%;
             }
             .table__row {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: table-row;
                     padding: 20px;
                 }
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     padding: 30px 20px;
                     &.table__header {
                         display: none;
@@ -537,11 +537,11 @@
             }
             .table__item {
                 .cell__title {
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         display: none;
                     }
                 }
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     +.table__item .cell__title {
                         margin-top: 25px;
                     }
@@ -557,7 +557,7 @@
                         }
                     }
                 }
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: inline-block;
                     vertical-align: text-top;
                     padding-top: 15px;
@@ -609,7 +609,7 @@
             }
             .cell__group+.cell__group {
                 margin-top: 15px;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     margin-top: 5px;
                 }
             }
@@ -623,8 +623,7 @@
                 bottom: 0;
                 right: 0;
                 width: 50%;
-                @include filter-gradient(rgba($gray, 0), $gray, horizontal);
-                @include background-image(linear-gradient(left, rgba($gray, 0) 0%,$gray 100%));
+                background-image: linear-gradient(left, rgba($gray, 0) 0%,$gray 100%);
                 @media screen and (min-width: 1024px) {
                     display: block;
                 }
@@ -637,8 +636,8 @@
                     font-size: 1rem;
                     font-weight: 600;
                     text-shadow: 1px 1px 0 $gray;
-                    @include translate(-50%, -50%);
-                    @include breakpoint(1024px) {
+                    transform: translate(-50%, -50%);
+                    @media screen and (min-width: 1024px) {
                         font-weight: 500;
                     }
                 }
@@ -648,12 +647,12 @@
             +.table__btn {
                 display: block;
             }
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 .table__row:nth-child(6)~.table__row {
                     display: none;
                 }
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 .table__row:nth-child(4)~.table__row {
                     display: none;
                 }
@@ -672,7 +671,7 @@
             padding: 25px 60px 25px 25px;
             margin-bottom: 20px;
             border: 1px solid $gray-200;
-            @include breakpoint(660px) {
+            @media screen and (min-width: 660px) {
                 margin-left: 20px;
                 padding: 25px 60px 25px 30px;
             }
@@ -682,14 +681,14 @@
                     margin-left: 0;
                 }
             }
-            @include breakpoint(920px) {
+            @media screen and (min-width: 920px) {
                 width: calc( (100% - 40px) / 3);
                 &:nth-child(3n + 1) {
                     margin-left: 0;
                 }
             }
             >* {
-                @include transition(color 0.3s);
+                transition: color 0.3s;
             }
             >span {
                 display: block;
@@ -715,7 +714,7 @@
                 right: 20px;
                 color: $gray-200;
                 font-size: 1.45em;
-                @include translateY(-50%);
+                transform: translateY(-50%);
             }
             &:hover {
                 >.card__title {
@@ -749,7 +748,7 @@
                     color: $white;
                     text-align: center;
                     background-color: rgba($black, 0.4);
-                    @include transition(background 0.3s);
+                    transition: background 0.3s;
                     i.icon {
                         margin-right: 5px;
                     }
@@ -760,7 +759,7 @@
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 1.33333333;
-                    @include transition(color 0.3s);
+                    transition: color 0.3s;
                 }
                 .phase {
                     line-height: 1.5;
@@ -776,16 +775,16 @@
                 align-items: center;
                 .title__group {
                     position: relative;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         padding-right: 60px;
                     }
                     .bookmark-btn {
                         position: absolute;
                         right: 0;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             top: 0;
                         }
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             bottom: -3px;
                             width: 25px;
                             height: 25px;
@@ -797,14 +796,14 @@
                 }
                 .list__img {
                     width: 150px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 230px;
                     }
                 }
                 .list__txt {
                     width: calc(100% - 150px);
                     padding: 10px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 230px);
                         padding: 20px;
                     }
@@ -818,7 +817,7 @@
                         &:hover {
                             color: $primary;
                         }
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             -webkit-line-clamp: 1;
                         }
                     }
@@ -826,10 +825,10 @@
                         color: $secondary;
                         font-size: 14px;
                         line-height: 1.5;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             margin-bottom: 5px;
                         }
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             padding-right: 40px;
                         }
                     }
@@ -840,7 +839,7 @@
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             display: none;
                         }
                     }
@@ -850,13 +849,13 @@
         &.list__group--exclusive {
             .list__item {
                 cursor: pointer;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     display: flex;
                     align-items: center;
                 }
                 .list__img {
                     width: 100%;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 230px;
                     }
                     &::before {
@@ -873,13 +872,13 @@
                         max-height: 100%;
                         width: auto;
                         height: auto;
-                        @include translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
                     }
                 }
                 .list__txt {
                     width: 100%;
                     padding: 20px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 230px);
                     }
                     .title {
@@ -924,29 +923,29 @@
         }
         &.list__group--newsletters {
             .list__item {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     display: flex;
                     align-items: center;
                 }
                 .title__group {
                     position: relative;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         padding-right: 60px;
                     }
                 }
                 .list__img {
                     width: 144px;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         display: none;
                     }
                 }
                 .list__txt {
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         display: flex;
                         flex-wrap: wrap;
                         padding: 20px 15px 10px;
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 244px);
                         padding: 20px;
                     }
@@ -963,20 +962,20 @@
                         // &:hover {
                         // 	color: $primary;
                         // }
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             -webkit-line-clamp: 1;
                         }
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             order: 1;
                         }
                     }
                     .phase {
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             order: 3;
                         }
                     }
                     .btn--text {
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             margin-bottom: 5px;
                             order: 2;
                         }
@@ -987,11 +986,11 @@
                     width: calc(100% - 30px);
                     padding: 0.575em 0;
                     align-self: center;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 80px;
                         letter-spacing: -0.025em;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin: 0 15px 20px;
                     }
                 }
@@ -1000,13 +999,13 @@
                         @extend %before-after;
                         position: absolute;
                         z-index: 1;
-                        @include breakpoint(1024px) {
+                        @media screen and (min-width: 1024px) {
                             top: 0;
                             right: 0;
                             width: 120px;
                             height: 100%;
                         }
-                        @include breakpoint(max-width 1023px) {
+                        @media screen and (max-width: 1023px) {
                             bottom: 0;
                             right: 0;
                             width: 100%;
@@ -1034,22 +1033,22 @@
                 align-items: center;
                 flex-wrap: wrap;
                 padding: 20px 15px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding: 20px;
                 }
                 .title__group {
                     position: relative;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         padding-right: 60px;
                     }
                 }
                 .list__img {
                     width: 100px;
                     height: 100px;
-                    @include border-radius(50%);
+                    border-radius: 50%;
                     background-color: $gray;
                     overflow: hidden;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         align-self: center;
                     }
                     img {
@@ -1057,11 +1056,11 @@
                         top: 50%;
                         left: 0;
                         width: 100%;
-                        @include translateY(-50%);
+                        transform: translateY(-50%);
                     }
                 }
                 .list__txt {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 180px);
                         padding: 0 20px;
                     }
@@ -1074,17 +1073,17 @@
                         -webkit-line-clamp: 2;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             margin: 5px 0 10px;
                             text-align: center;
                         }
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             margin-bottom: 5px;
                         }
                         &:hover {
                             color: $primary;
                         }
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             -webkit-line-clamp: 1;
                         }
                     }
@@ -1100,10 +1099,10 @@
                     width: 100%;
                     padding: 0.575em 0;
                     align-self: center;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 80px;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-top: 20px;
                     }
                 }
@@ -1111,7 +1110,7 @@
         }
     }
     .newsletters__btn {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             width: 100%;
         }
     }
@@ -1127,8 +1126,8 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            @include translate(-50%, -50%);
-            @include breakpoint(max-width 1023px) {
+            transform: translate(-50%, -50%);
+            @media screen and (max-width: 1023px) {
                 width: 100vw;
             }
         }
@@ -1173,7 +1172,7 @@
         }
     }
     .message--notification p span {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: block;
         }
     }
@@ -1183,7 +1182,7 @@
     section {
         padding-top: 60px;
         padding-bottom: 60px;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             padding-top: 100px;
             padding-bottom: 100px;
         }
@@ -1196,10 +1195,10 @@
         }
         .h1 {
             span {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: block;
                 }
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     margin: 0 .5em;
                 }
             }
@@ -1212,7 +1211,7 @@
         }
         p {
             span {
-                @include breakpoint(720px) {
+                @media screen and (min-width: 720px) {
                     display: block;
                 }
             }
@@ -1233,10 +1232,10 @@
             position: relative;
             width: 100%;
             padding-left: 70px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: calc(50% - 45px);
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 max-width: 500px;
                 margin: auto;
             }
@@ -1251,8 +1250,8 @@
                 height: 50px;
                 background-color: $white;
                 border: 1px solid $gray-200;
-                @include translateY(-50%);
-                @include border-radius(50%);
+                transform: translateY(-50%);
+                border-radius: 50%;
                 i.icon {
                     font-size: 24px;
                 }

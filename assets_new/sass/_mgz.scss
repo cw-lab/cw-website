@@ -1,7 +1,7 @@
 .mgz-index-page,
 .single-magz-page {
     article {
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: ($article - 350);
         }
     }
@@ -16,21 +16,21 @@
             padding-right: 10px;
             margin-bottom: 20px;
             vertical-align: top;
-            @include breakpoint(414px) {
+            @media screen and (min-width: 414px) {
                 display: inline-block;
                 width: 50%;
             }
-            @include breakpoint(590px) {
+            @media screen and (min-width: 590px) {
                 width: 33.333%;
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 25%;
             }
             .pic {
                 > a::before {
                     padding-top: 138.53211%;
                 }
-                @include breakpoint(max-width 413px) {
+                @media screen and (max-width: 413px) {
                     display: inline-block;
                     width: 90px;
                     vertical-align: top;
@@ -43,10 +43,10 @@
                 position: relative;
                 padding-top: 1.5rem;
                 font-size: 0.875rem;
-                @include breakpoint(414px) {
+                @media screen and (min-width: 414px) {
                     margin-top: 10px;
                 }
-                @include breakpoint(max-width 413px) {
+                @media screen and (max-width: 413px) {
                     display: inline-block;
                     width: calc(100% - 100px);
                     padding-left: 1rem;
@@ -59,7 +59,7 @@
                     margin-top: 0;
                     margin-bottom: 0;
                     color: $primary;
-                    @include breakpoint(414px) {
+                    @media screen and (min-width: 414px) {
                         left: 0;
                     }
                 }
@@ -67,10 +67,10 @@
                     position: absolute;
                     top: 0;
                     color: $gray-300;
-                    @include breakpoint(414px) {
+                    @media screen and (min-width: 414px) {
                         right: 0;
                     }
-                    @include breakpoint(max-width 413px) {
+                    @media screen and (max-width: 413px) {
                         left: 5em;
                     }
                 }
@@ -100,7 +100,7 @@
             display: inline-block;
             width: 45%;
             vertical-align: top;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 35%;
             }
             img {
@@ -113,7 +113,7 @@
             width: 55%;
             padding-left: 10px;
             vertical-align: top;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 width: 65%;
                 padding-left: 20px;
             }
@@ -140,7 +140,7 @@
                 a {
                     width: 100%;
                     @include containbtn(inline-block, 0.7rem, $gray-400, 1rem);
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 200px;
                     }
                     +a {
@@ -151,18 +151,18 @@
         }
     }
     .articleGroup {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             margin-top: 1.5rem;
         }
         .h2 {
             font-weight: normal;
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 padding: 10px;
                 font-size: 1.125rem;
                 line-height: 1.25;
                 background-color: $gray-200;
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding-top: 1em;
                 padding-bottom: 0;
                 font-size: 1.5rem;
@@ -172,7 +172,7 @@
             p {
                 color: $gray-500;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 margin-top: 0;
                 margin-bottom: 0;
                 border-top-width: 0;
@@ -191,7 +191,7 @@
                     }
                 }
             }
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding: 0;
                 margin-bottom: 1.5rem;
             }

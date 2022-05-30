@@ -19,7 +19,7 @@ ul.article__share {
             display: block;
             padding: 10px;
             color: $gray-400;
-            @include transition(all 0.2s);
+            transition: all 0.2s;
             cursor: pointer;
             i.icon {
                 display: block;

@@ -189,7 +189,7 @@
     margin-bottom: 40px;
 }
 
-@include breakpoint(1024px) {
+@media screen and (min-width: 1024px) {
     //     .px-d-0 {
     //         padding-left: 0px;
     //         padding-right: 0px;
@@ -364,7 +364,7 @@
     //     }
 }
 
-@include breakpoint(max-width 1023px) {
+@media screen and (max-width: 1023px) {
     //     .px-m-0 {
     //         padding-left: 0px;
     //         padding-right: 0px;

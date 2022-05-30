@@ -1,8 +1,7 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
 @import "_variable";
-@include keyframes(spin) {
+
+@keyframes spin {
     from {
         transform: rotateZ(0);
     }
@@ -38,7 +37,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    @include translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .green-audio-player .holder .loading .loading__spinner {
@@ -80,7 +79,7 @@
     width: 11px;
     height: 11px;
     background-color: $white;
-    @include border-radius(11px);
+    border-radius: 11px;
     border: 1px solid $secondary;
     pointer-events: all;
 }
@@ -156,7 +155,7 @@
     border: 1px solid $gray-200;
     z-index: 2;
     outline: none;
-    @include transition(all 0.3s);
+    transition: all 0.3s;
 }
 
 .green-audio-player .volume .volume__controls .volume__slider {
@@ -187,7 +186,7 @@
 .green-audio-player .volume .volume__controls.top {
     left: 50%;
     bottom: 100%;
-    @include translate(-50%, -10px);
+    transform: translate(-50%, -10px);
 }
 
 .green-audio-player .volume .volume__controls.middle {
@@ -198,7 +197,7 @@
 .green-audio-player .volume .volume__controls.bottom {
     top: 100%;
     left: 50%;
-    @include translate(-50%, 10px);
+    transform: translate(-50%, 10px);
 }
 
 .green-audio-player .download {

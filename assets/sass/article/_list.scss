@@ -1,6 +1,6 @@
 .dot-list {
     @include list(0, 0, none);
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         column-count: 2;
         column-gap: 20px;
     }
@@ -8,12 +8,12 @@
         padding-top: 5px;
         padding-bottom: 5px;
         border-bottom: 1px solid $gray-100;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             &:nth-child(5n) {
                 border-bottom: 0;
             }
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             &:last-child {
                 border-bottom: 0;
             }
@@ -23,7 +23,7 @@
             padding-top: 5px;
             padding-bottom: 5px;
             color: $text;
-            @include transition(all 0.2s);
+            transition: all 0.2s;
             @include ellipsis();
             &:hover {
                 color: $primary;

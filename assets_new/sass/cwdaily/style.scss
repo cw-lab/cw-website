@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+
 @import "../_variable";
 @import "../_mixin";
 html,
@@ -31,8 +30,8 @@ body {
     min-height: 82.5%;
     background-image: url('../../img/cwdaily/daily_app_kv.jpg');
     background-repeat: no-repeat;
-    @include background-size(cover);
-    @include breakpoint(768px) {
+    background-size: cover;
+    @media screen and (min-width: 768px) {
         height: 100%;
         min-height: 100%;
     }
@@ -65,20 +64,20 @@ body {
         ul {
             @include listrest(20px 0 0, 0, none);
             font-size: 0;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 margin-top: 50px;
             }
-            @include breakpoint(max-width 991px) {
+            @media screen and (max-width: 991px) {
                 text-align: center;
             }
             li {
                 display: inline-block;
                 vertical-align: middle;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     width: calc((100% - 20px) / 2);
                     max-width: 180px;
                 }
-                @include breakpoint(max-width 414px) {
+                @media screen and (max-width: 414px) {
                     max-width: 150px;
                 }
                 +li {
@@ -92,22 +91,22 @@ body {
                 display: block;
                 border: 1px solid $gray-300;
                 border-radius: 5px;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     width: 100%;
                     height: auto;
                 }
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: auto;
                     height: 60px;
                 }
-                @include breakpoint(992px) {
+                @media screen and (min-width: 992px) {
                     height: 40px;
                 }
             }
         }
     }
     .col-md-12 {
-        @include breakpoint(max-width 991px) {
+        @media screen and (max-width: 991px) {
             width: 100%;
         }
     }
@@ -120,7 +119,7 @@ footer {
 .about-page {
     padding-top: 70px;
     background-color: $gray;
-    @include breakpoint(992px) {
+    @media screen and (min-width: 992px) {
         padding-top: 100px;
     }
     .Pc-daily,
@@ -165,12 +164,11 @@ footer {
             font-size: 1.5rem;
             text-align: center;
             text-transform: uppercase;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 font-size: 2.25rem;
             }
             &::after {
-                @include beforeafter('',
-                block);
+                @include beforeafter('', block);
                 position: absolute;
                 top: 100%;
                 left: 50%;
@@ -198,7 +196,7 @@ footer {
         line-height: 1.6;
         text-align: center;
         &.contentM {
-            @include breakpoint(992px) {
+            @media screen and (min-width: 992px) {
                 padding-top: 1.4em;
             }
         }
@@ -212,10 +210,7 @@ footer {
     .btn-action,
     .btn-action-SUBSCRIPTION {
         a {
-            @include containbtn(block,
-            0.65em,
-            $gray-600,
-            1rem);
+            @include containbtn(block, 0.65em, $gray-600, 1rem);
             max-width: 300px;
             margin: auto;
             p {
@@ -223,7 +218,7 @@ footer {
             }
         }
         &.iPHONE a {
-            @include breakpoint(max-width 991px) {
+            @media screen and (max-width: 991px) {
                 margin-bottom: 10px;
             }
         }
@@ -232,20 +227,18 @@ footer {
         position: relative;
         text-align: center;
         margin: 60px 15px;
-        @include breakpoint(992px) {
+        @media screen and (min-width: 992px) {
             display: none;
         }
         &::before {
-            @include beforeafter('',
-            block);
+            @include beforeafter('', block);
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100%;
             height: 1px;
             background-color: $gray-600;
-            @include translate(-50%,
-            -50%);
+            transform: translate(-50%, -50%);
         }
         span {
             position: relative;
@@ -260,7 +253,7 @@ footer {
     background-image: url('../../img/cwdaily/shutterstock_229705576_1440bl.jpg');
     background-position: 50% 15%;
     background-repeat: no-repeat;
-    @include background-size(cover);
+    background-size: cover;
     overflow: hidden;
     .section_overlay {
         padding-top: 80px;
@@ -275,7 +268,7 @@ footer {
                 width: 200px;
                 margin: auto;
                 border: 3px solid $primary;
-                @include border-radius(50%);
+                border-radius: 50%;
             }
             h2 {
                 position: relative;
@@ -285,8 +278,7 @@ footer {
                 font-size: 1.875rem;
                 text-transform: uppercase;
                 &::after {
-                    @include beforeafter('',
-                    block);
+                    @include beforeafter('', block);
                     position: absolute;
                     top: 100%;
                     left: 50%;

@@ -7,7 +7,7 @@
         width: calc(100% - 30px);
         padding: 30px 24px 24px;
         background-color: $white;
-        @include translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         z-index: 12;
         .message__head {
             img {

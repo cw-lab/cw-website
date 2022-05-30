@@ -20,7 +20,7 @@
         }
     }
     .articleGroup .subArticle {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             .pic {
                 display: none;
             }

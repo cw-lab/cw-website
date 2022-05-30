@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+
 @import "_basic";
 @import "_sheet";
 $icomoon-font-family: "audio" !default;
@@ -132,7 +131,7 @@ button > * {
 	}
     i.audio {
         font-size: 1.25rem;
-        @include transition(color 0.3s);
+        transition: color 0.3s;
         cursor: pointer;
         &:hover {
             color: $primary;
@@ -147,14 +146,14 @@ button > * {
             position: absolute;
             top: 50%;
             left: 50%;
-            @include translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 			.loading__spinner {
 				width: 16px;
 				height: 16px;
 				border: 2px solid $gray-200;
 				border-right-color: rgba(0, 0, 0, 0);
 				border-radius: 50%;
-				@include animation(spin 0.3s linear infinite);
+				animation: spin 0.3s linear infinite;
 			}
 		}
 		.play-pause-btn {
@@ -236,7 +235,7 @@ button > * {
 	}
 	.volume {
 		position: relative;
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: none;
         }
         .volume__button {
@@ -262,8 +261,8 @@ button > * {
             border: 1px solid $gray-200;
             z-index: 2;
             outline: 0;
-            @include translateX(-50%);
-            @include transition(all .3s);
+            transform: translateX(-50%);
+			transition: all .3s;
 			.volume__slider {
 				margin-top: 12px;
 				margin-bottom: 12px;
@@ -282,10 +281,10 @@ button > * {
                         width: 11px;
                         height: 11px;
                         background-color: $white;
-                        @include border-radius(11px);
+                        border-radius: 11px;
                         border: 1px solid $secondary;
                         pointer-events: all;
-                        @include translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
                     }
 				}
 			}

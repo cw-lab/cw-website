@@ -13,9 +13,9 @@ nav {
 			border: 1px solid $gray-200;
 			background-color: $white;
 			overflow: scroll;
-			@include transition(all 0.3s);
+			transition: all 0.3s;
 			z-index: 12;
-			@include breakpoint(1024px) {
+			@media screen and (min-width: 1024px) {
 				overflow: hidden scroll;
 			}
 			ul {
@@ -91,9 +91,9 @@ nav {
 							padding: 17px 25px;
 							font-weight: bold;
 							cursor: pointer;
-							@include transition(all 0.3s);
+							transition: all 0.3s;
 							&.active {
-								@include rotate(180deg);
+								transform: rotate(180deg);
 							}
 						}
 					}
@@ -118,18 +118,18 @@ nav {
 			position: relative;
 			font-size: 14px;
 			z-index: 10;
-			@include breakpoint(1024px) {
+			@media screen and (min-width: 1024px) {
 				background-color: $gray-400;
-				@include transition(background-color, 0.3s);
+				transition: background-color, 0.3s;
 				&:hover {
 					background-color: $gray-300;
 				}
 			}
-			@include breakpoint(max-width 1023px) {
+			@media screen and (max-width: 1023px) {
 				position: absolute;
 				top: 50%;
 				right: 10px;
-				@include translateY(-50%);
+				transform: translateY(-50%);
 			}
 			> .container {
 				justify-content: flex-end;
@@ -140,7 +140,7 @@ nav {
 				> ul {
 					justify-content: flex-end;
 					&:first-child {
-						@include breakpoint(max-width 1023px) {
+						@media screen and (max-width: 1023px) {
 							display: none;
 						}
 					}
@@ -153,16 +153,16 @@ nav {
 							color: $black;
 							line-height: 1rem;
 							align-items: center;
-							@include breakpoint(1024px) {
+							@media screen and (min-width: 1024px) {
 								color: $white;
 							}
 							i {
 								margin-left: 7px;
 								height: 0.875em;
 								font-weight: bold;
-								@include transition(transform 0.3s);
+								transition: transform 0.3s;
 								&.deg {
-									@include rotate(180deg);
+									transform: rotate(180deg);
 								}
 							}
 							&:hover {
@@ -180,7 +180,7 @@ nav {
 					top: 10px;
 					left: 0px;
 					background-color: $white;
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						width: 1px;
 						height: 1rem;
 					}
@@ -219,7 +219,7 @@ nav {
 			top: 50%;
 			right: 10px;
 			font-size: 14px;
-			@include translateY(-50%);
+			transform: translateY(-50%);
 			z-index: 10;
 			> .container {
 				width: auto;
@@ -231,7 +231,7 @@ nav {
 				> ul:not(.sns__group) {
 					justify-content: flex-end;
 					&:first-child {
-						@include breakpoint(max-width 1023px) {
+						@media screen and (max-width: 1023px) {
 							display: none;
 						}
 					}
@@ -248,9 +248,9 @@ nav {
 								margin-left: 7px;
 								height: 0.875em;
 								font-weight: bold;
-								@include transition(transform 0.3s);
+								transition: transform 0.3s;
 								&.deg {
-									@include rotate(180deg);
+									transform: rotate(180deg);
 								}
 							}
 							&:hover {
@@ -268,7 +268,7 @@ nav {
 					top: 10px;
 					left: 0px;
 					background-color: $black;
-					@include breakpoint(1024px) {
+					@media screen and (min-width: 1024px) {
 						width: 1px;
 						height: 1rem;
 					}
@@ -314,7 +314,7 @@ nav {
 						display: block;
 						padding: 18px 10px;
 						line-height: 1rem;
-						@include transition(all 0.15s);
+						transition: all 0.15s;
 					}
 				}
 			}
@@ -425,11 +425,11 @@ nav {
 }
 .black {
 	background-color: rgba($black, 0.4);
-	@include opacity(0);
-	@include transition(opacity 0.3s);
+	opacity: 0;
+	transition: opacity 0.3s;
 	z-index: 11;
 	&.opened {
-		@include opacity(1);
+		opacity: 1;
 	}
 }
 .article-page {
@@ -439,8 +439,8 @@ nav {
 				position: absolute;
 				top: 50%;
 				background-color: transparent;
-				@include translateY(-50%);
-				@include breakpoint(max-width 1023px) {
+				transform: translateY(-50%);
+				@media screen and (max-width: 1023px) {
 					right: 0;
 				}
 				> .container {

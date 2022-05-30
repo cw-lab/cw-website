@@ -9,7 +9,7 @@
         vertical-align: middle;
     }
     .container {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: flex;
             justify-content: center;
             padding-right: 0;
@@ -30,9 +30,9 @@
             font-family: $icomoon-font-family;
             font-size: 0.75rem;
             line-height: 10px;
-            @include transform(translateY(-50%) rotate(-90deg));
+            transform: translateY(-50%) rotate(-90deg);
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             white-space: nowrap;
         }
     }
@@ -43,10 +43,10 @@
         &::-webkit-scrollbar {
             display: none;
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             max-width: calc(100% - 120px);
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             padding-right: 20px;
         }
         a {

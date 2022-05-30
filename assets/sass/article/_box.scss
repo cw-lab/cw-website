@@ -7,17 +7,17 @@
     font-size: 0;
     border: 1px solid $gray-200;
     >* {
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             display: inline-block;
             vertical-align: middle;
         }
     }
     .box__img {
         img {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 200px;
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 height: 160px;
                 margin: auto;
             }
@@ -26,7 +26,7 @@
     .box__body {
         padding: 10px 20px 20px;
         line-height: 1.7;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             width: calc(100% - 200px);
             padding: 20px;
         }
@@ -35,7 +35,7 @@
             font-size: 1.125rem;
         }
         .box__btn {
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 text-align: center;
             }
         }

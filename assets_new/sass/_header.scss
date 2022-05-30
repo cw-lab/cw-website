@@ -31,7 +31,7 @@ header {
                 position: absolute;
                 top: 50%;
                 right: 20px;
-                @include translateY(-50%);
+                transform: translateY(-50%);
                 z-index: 1;
                 >* {
                     display: inline-block;
@@ -45,7 +45,7 @@ header {
                 padding-left: 40px;
                 padding-right: 40px;
                 overflow: hidden;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     padding-left: 180px;
                     padding-right: 215px;
                 }
@@ -53,10 +53,10 @@ header {
                     position: relative;
                     top: 0;
                     padding-top: 40px;
-                    @include transition(top 0.3s);
+                    transition: top 0.3s;
                 }
                 .title__share {
-                    @include breakpoint(max-width 1023px) {
+                    @media screen and (max-width: 1023px) {
                         text-align: center;
                     }
                     .h3 {
@@ -69,10 +69,10 @@ header {
                     top: 0;
                     left: 50px;
                     z-index: 1;
-                    @include breakpoint(375px) {
+                    @media screen and (min-width: 375px) {
                         left: 55px;
                     }
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         left: 60px;
                     }
                 }
@@ -83,7 +83,7 @@ header {
         position: absolute;
         top: 50%;
         left: 20px;
-        @include translateY(-50%);
+        transform: translateY(-50%);
     }
     a.logo {
         display: inline-block;
@@ -127,28 +127,28 @@ header {
                 display: block;
             }
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             display: none !important;
         }
     }
     .btn {
         font-size: 1rem;
         &.btn--small {
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 position: absolute;
                 right: 100%;
                 bottom: 50%;
-                @include translateY(50%);
+                transform: translateY(50%);
             }
         }
     }
     .menubar__user {
         position: relative;
         margin-left: 10px;
-        @include breakpoint(375px) {
+        @media screen and (min-width: 375px) {
             margin-left: 15px;
         }
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             margin-left: 30px;
         }
         i {
@@ -173,10 +173,9 @@ header {
         width: 100%;
         height: 3px;
         background-color: $text;
-        @include transition();
-        @include opacity(1);
-        @include rotate(0deg);
-        @include transition(background 0.4s);
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: background 0.4s;
         +span {
             margin-top: 4px;
         }

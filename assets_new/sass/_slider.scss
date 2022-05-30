@@ -21,19 +21,19 @@
                 }
                 &.ltr_in {
                     left: 0;
-                    @include animation(slide_ltr_in .8s linear 1 both);
+                    animation: slide_ltr_in .8s linear 1 both;
                 }
                 &.ltr_out {
                     left: 100%;
-                    @include animation(slide_ltr_out .8s linear 1 both);
+                    animation: slide_ltr_out .8s linear 1 both;
                 }
                 &.rtl_in {
                     left: 0;
-                    @include animation(slide_rtl_in .8s linear 1 both);
+                    animation: slide_rtl_in .8s linear 1 both;
                 }
                 &.rtl_out {
                     left: 100%;
-                    @include animation(slide_rtl_out .8s linear 1 both);
+                    animation: slide_rtl_out .8s linear 1 both;
                 }
                 a {
                     color: $gray-600;
@@ -90,7 +90,7 @@
     border-bottom: 1px solid $gray-100;
     clear: both;
     overflow: auto;
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
     .sliderContent {
@@ -114,19 +114,19 @@
             }
             &.ltr_in {
                 left: 0;
-                @include animation(slide_ltr_in .8s linear 1 both);
+                animation: slide_ltr_in .8s linear 1 both;
             }
             &.ltr_out {
                 left: 100%;
-                @include animation(slide_ltr_out .8s linear 1 both);
+                animation: slide_ltr_out .8s linear 1 both;
             }
             &.rtl_in {
                 left: 0;
-                @include animation(slide_rtl_in .8s linear 1 both);
+                animation: slide_rtl_in .8s linear 1 both;
             }
             &.rtl_out {
                 left: 100%;
-                @include animation(slide_rtl_out .8s linear 1 both);
+                animation: slide_rtl_out .8s linear 1 both;
             }
             >ul li {
                 display: inline-block;
@@ -166,7 +166,7 @@
                     }
                     &:hover {
                         .pic::before {
-                            @include opacity(1);
+                            opacity: 1;
                         }
                     }
                 }
@@ -188,11 +188,10 @@
             bottom: 0;
             display: block;
             width: 30px;
-            @include transition(padding 0.3s);
+            transition: padding 0.3s;
             cursor: pointer;
             &::before {
-                @include beforeafter('',
-                block);
+                @include beforeafter('', block);
                 width: 100%;
                 height: 100%;
                 background-repeat: no-repeat;
@@ -221,7 +220,7 @@
     }
 }
 
-@include keyframes(slide_ltr_in) {
+@keyframes slide_ltr_in {
     0% {
         left: -100%;
     }
@@ -230,7 +229,7 @@
     }
 }
 
-@include keyframes(slide_ltr_out) {
+@keyframes slide_ltr_out {
     0% {
         left: 0;
     }
@@ -239,7 +238,7 @@
     }
 }
 
-@include keyframes(slide_rtl_in) {
+@keyframes slide_rtl_in {
     0% {
         left: 100%;
     }
@@ -248,7 +247,7 @@
     }
 }
 
-@include keyframes(slide_rtl_out) {
+@keyframes slide_rtl_out {
     0% {
         left: 0;
     }

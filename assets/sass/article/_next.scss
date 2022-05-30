@@ -5,22 +5,22 @@
     &.show {
         overflow: visible;
     }
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         top: 50%;
         left: calc(((100% - 600px) / 2) + 600px + 20px);
         width: 0;
-        @include translateY(-50%);
+        transform: translateY(-50%);
         &.show {
             width: 165px;
         }
     }
-    @include breakpoint(1140px) {
+    @media screen and (min-width: 1140px) {
         left: calc(((100% - 700px) / 2) + 700px + 20px);
         &.show {
             width: 180px;
         }
     }
-    @include breakpoint(max-width 1023px) {
+    @media screen and (max-width: 1023px) {
         bottom: 60px;
         left: 20px;
         height: auto !important;
@@ -50,7 +50,7 @@
         .next__img {
             position: relative;
             overflow: hidden;
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 display: inline-block;
                 width: 150px;
                 vertical-align: middle;
@@ -66,11 +66,11 @@
                 left: 50%;
                 width: 100%;
                 height: auto;
-                @include translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             }
         }
         .next__body {
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 display: inline-block;
                 width: calc(100% - 150px);
                 padding: 0 15px;
@@ -98,12 +98,12 @@
         a {
             background-color: $white;
             border: 1px solid $gray-200;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 position: absolute;
                 bottom: 0;
             }
             .next__body {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     padding: 20px 15px;
                 }
             }
@@ -121,7 +121,7 @@
         h4 {
             color: $black;
             font-weight: 400;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 font-weight: 300;
             }
         }

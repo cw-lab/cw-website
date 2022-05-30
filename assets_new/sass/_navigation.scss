@@ -18,9 +18,9 @@ nav {
         border: 1px solid $gray-200;
         background-color: $white;
         overflow: scroll;
-        @include transition(all 0.3s);
+        transition: all 0.3s;
         z-index: 12;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             overflow: hidden scroll;
         }
         ul {
@@ -119,9 +119,9 @@ nav {
                         padding: 17px 25px;
                         font-weight: bold;
                         cursor: pointer;
-                        @include transition(all 0.3s);
+                        transition: all 0.3s;
                         &.active {
-                            @include rotate(180deg);
+                            transform: rotate(180deg);
                         }
                     }
                 }
@@ -148,26 +148,26 @@ nav {
     position: absolute;
     width: 150px;
     word-break: keep-all;
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         &.menubar__user--login {
             width: auto;
         }
         top: 43px;
         right: 0;
     }
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         top: 42px;
         right: -20px;
         opacity: 1 !important;
     }
     >ul {
         &.desktop {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 display: none;
             }
         }
         &.mobile {
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: none;
             }
         }
@@ -179,10 +179,10 @@ aside.menubar--left {
     font-size: 1rem;
     border: solid $gray-200;
     background-color: $white;
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         border-width: 1px;
     }
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         border-width: 1px 0;
         width: 100vw;
         overflow: hidden scroll;
@@ -264,9 +264,9 @@ aside.menubar--left {
                     padding: 15px 25px;
                     font-weight: bold;
                     cursor: pointer;
-                    @include transition(transform 0.3s);
+                    transition: transform 0.3s;
                     &.active {
-                        @include rotate(180deg);
+                        transform: rotate(180deg);
                     }
                 }
             }
@@ -306,12 +306,12 @@ aside.menubar--left {
     // border-top: 1px solid $gray-100;
     border-bottom: 1px solid $gray-100;
     z-index: 1;
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
     &.fixed {
         margin-top: 60px;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             margin-top: 65px;
         }
     }
@@ -335,8 +335,8 @@ aside.menubar--left {
                 background-color: $white;
                 border-top: 1px solid $gray-100;
                 @include listrest(0 auto 0 -8%, 0, none);
-                @include opacity(0);
-                @include transition(opacity 0.5s);
+                opacity: 0;
+                transition: opacity 0.5s;
                 li {
                     a {
                         border-style: solid;
@@ -355,7 +355,7 @@ aside.menubar--left {
             }
             &:hover>ul {
                 display: block;
-                @include opacity(1);
+                opacity: 1;
             }
         }
     }
@@ -389,10 +389,10 @@ aside.menubar--left {
 .black,
 .touch__black {
     background-color: rgba($black, 0.4);
-    @include opacity(0);
-    @include transition(opacity 0.3s);
+    opacity: 0;
+    transition: opacity 0.3s;
     z-index: 9;
     &.opened {
-        @include opacity(1);
+        opacity: 1;
     }
 }

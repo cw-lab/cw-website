@@ -17,7 +17,7 @@
             padding: 15px 20px;
             border: 0;
             background-color: transparent;
-            @include translateY(-50%);
+            transform: translateY(-50%);
             i.icon {
                 display: block;
             }

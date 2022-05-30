@@ -5,7 +5,7 @@
     padding-bottom: 0 !important;
     section {
         .container {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 784px;
             }
         }

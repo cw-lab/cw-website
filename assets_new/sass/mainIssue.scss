@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+
 // @import "_normalize";
 @import "_variable";
 @import "_mixin";
@@ -17,12 +16,12 @@ body.issue {
                 @include clear;
             }
             &.desktopUsed {
-                @include breakpoint(max-width 1023px) {
+                @media screen and (max-width: 1023px) {
                     display: none !important;
                 }
             }
             &.mobileUsed {
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: none !important;
                 }
             }
@@ -48,7 +47,7 @@ body.issue {
             }
         }
         .article-header {
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 margin-left: -20px;
                 margin-right: -20px;
             }
@@ -69,7 +68,7 @@ body.issue {
             .h2 {
                 margin-top: 30px;
                 margin-bottom: 10px;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     margin-top: 40px;
                 }
             }
@@ -80,10 +79,10 @@ body.issue {
                 width: 100%;
                 margin-bottom: 20px;
                 vertical-align: text-top;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     border: 1px solid $gray-200;
                 }
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     display: inline-block;
                     width: calc((100% - 40px) / 3);
                     margin-left: 20px;
@@ -116,13 +115,13 @@ body.issue {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    @include opacity(0);
+                    opacity: 0;
                 }
                 .txt {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-top: 10px;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin: 10px;
                     }
                     h2 {
@@ -130,7 +129,7 @@ body.issue {
                         margin-bottom: 0;
                         font-size: 1.125rem;
                         font-weight: normal;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             font-size: 1rem;
                         }
                         a {
@@ -147,7 +146,7 @@ body.issue {
     }
     footer {
         padding-bottom: 70px;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             padding-bottom: 90px;
         }
     }

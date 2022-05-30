@@ -4,7 +4,7 @@
 		&__navi {
 			position: absolute;
 			top: 50%;
-			@include translateY(-50%);
+			transform: translateY(-50%);
 			z-index: 5;
 			&--prev {
 				left: 0;
@@ -22,10 +22,10 @@
 			color: $white;
 			background-color: rgba($gray-500, 0.5);
 			z-index: 5;
-			// @include border-radius(30px);
+			// border-radius: 30px;
 			> * {
 				vertical-align: text-bottom;
-				@include breakpoint(1024px) {
+				@media screen and (min-width: 1024px) {
 					vertical-align: middle;
 				}
 			}
@@ -44,7 +44,7 @@
 		overflow: hidden;
 		.slider__item {
 			float: left;
-			@include breakpoint(1024px) {
+			@media screen and (min-width: 1024px) {
 				width: 940px;
 			}
 			img {

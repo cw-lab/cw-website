@@ -15,14 +15,14 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
 
 @mixin typo-weight {
     font-weight: 600;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-weight: 500;
     }
 }
 
 %typo-weight {
     font-weight: 600;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-weight: 500;
     }
 }
@@ -65,7 +65,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
     h#{$i},
     .h#{$i} {
         font-size: nth($h-m-size, $i);
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             font-size: nth($h-size, $i);
         }
     }
@@ -93,7 +93,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
     text-align: right;
 }
 
-@include breakpoint(1024px) {
+@media screen and (min-width: 1024px) {
     .text-d-left {
         text-align: left;
     }
@@ -105,7 +105,7 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
     }
 }
 
-@include breakpoint(max-width 1023px) {
+@media screen and (max-width: 1023px) {
     .text-m-left {
         text-align: left;
     }
@@ -181,7 +181,7 @@ body {
             color: $text;
             font-size: 28px;
             line-height: 1.3;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 font-size: 40px;
             }
         }
@@ -190,7 +190,7 @@ body {
             color: $text;
             font-size: 22px;
             line-height: 1.3;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 font-size: 24px;
             }
         }

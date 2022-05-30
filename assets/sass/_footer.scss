@@ -3,7 +3,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: $gray-100;
-    // @include breakpoint(1024px) {
+    // @media screen and (min-width: 1024px) {
     //     position: absolute;
     //     bottom: 0;
     //     left: 0;
@@ -16,14 +16,14 @@ footer {
         }
     }
     .channel__group {
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             display: flex;
         }
         align-items: flex-start;
         justify-content: space-between;
     }
     .channel__item {
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             border-bottom: 1px solid $gray-200;
         }
         .channel__title {
@@ -33,21 +33,21 @@ footer {
                 top: 50%;
                 right: 0;
                 margin-top: 5px;
-                @include translateY(-50%);
-                @include transition(transform 0.2s);
-                @include breakpoint(1024px) {
+                transform: translateY(-50%);
+                transition: transform 0.2s;
+                @media screen and (min-width: 1024px) {
                     display: none;
                 }
                 &.active {
-                    @include transform(translateY(-50%) rotate(180deg));
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
         }
         .channel__option {
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 display: block !important;
             }
-            @include breakpoint(max-width 1023px) {
+            @media screen and (max-width: 1023px) {
                 display: none;
             }
             ul {
@@ -63,7 +63,7 @@ footer {
         &:first-child {
             .channel__option {
                 ul {
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         column-count: 2;
                         column-gap: 1em;
                     }
@@ -73,11 +73,11 @@ footer {
     }
     .cwgroup__copyright {
         display: flex;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             align-items: flex-end;
             justify-content: space-between;
         }
-        @include breakpoint(max-width 1023px) {
+        @media screen and (max-width: 1023px) {
             flex-wrap: wrap-reverse;
             text-align: center;
             > div {
@@ -136,7 +136,7 @@ footer {
             > span {
                 display: block;
                 font-size: 0.75rem;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     display: inline-block;
                     &:first-child {
                         margin-right: 20px;

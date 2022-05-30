@@ -19,7 +19,7 @@ section {
     &.section--btn {
         font-size: 0;
         button {
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 width: 100%;
             }
         }

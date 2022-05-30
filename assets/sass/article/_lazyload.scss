@@ -14,11 +14,11 @@
 .imgzoom {
     position: relative;
     display: block;
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         margin-left: -20px;
         margin-right: -20px;
     }
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         &::after {
             @include beforeafter($icon-zoom, block);
             position: absolute;

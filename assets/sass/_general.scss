@@ -1,12 +1,4 @@
-@import 'normalize-version';
-@import 'normalize/html5';
-@import 'normalize/base';
-@import 'normalize/links';
-// @import 'normalize/typography';
-@import 'normalize/embeds';
-@import 'normalize/groups';
-@import 'normalize/forms';
-@import 'normalize/tables';
+@import 'normalize';
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap');
@@ -66,17 +58,17 @@ ol {
 }
 
 .flex {
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         &-md {
             display: flex;
         }
     }
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         &-lg {
             display: flex;
         }
     }
-    @include breakpoint(1280px) {
+    @media screen and (min-width: 1280px) {
         &-xl {
             display: flex;
         }
@@ -114,14 +106,14 @@ textarea {
 *,
 *::before,
 *::after {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 body {
     position: relative;
     min-height: 100%;
     padding-bottom: 0 !important;
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
         font-display: swap;
     }
@@ -136,8 +128,8 @@ body {
 
 a, button.btn {
     text-decoration: none;
-    @include breakpoint(1024px) {
-        @include transition(color .2s, border .2s, background .2s);
+    @media screen and (min-width: 1024px) {
+        transition: color .2s, border .2s, background .2s;
     }
 }
 
@@ -161,13 +153,13 @@ img {
 }
 
 .desktop {
-    @include breakpoint(max-width 1023px) {
+    @media screen and (max-width: 1023px) {
         display: none;
     }
 }
 
 .mobile {
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         display: none;
     }
 }

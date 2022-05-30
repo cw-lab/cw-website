@@ -15,7 +15,7 @@
         &.webaccess__page--index {
             .price--fixed {
                 .container {
-                    @include breakpoint(max-width 1023px) {
+                    @media screen and (max-width: 1023px) {
                         padding-left: 0;
                         padding-right: 0;
                         width: 100%;
@@ -29,7 +29,7 @@
                     padding-left: 0;
                     padding-right: 0;
                     width: 100%;
-                    @include breakpoint(1024px) {
+                    @media screen and (min-width: 1024px) {
                         width: 620px;
                     }
                 }
@@ -39,12 +39,12 @@
     &--marketing {
         .tab {
             margin-bottom: 30px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 margin-bottom: 40px;
             }
             .tab__content__pane {
                 padding: 20px;
-                @include breakpoint(1024px) {
+                @media screen and (min-width: 1024px) {
                     padding: 30px;
                 }
                 img,
@@ -65,26 +65,26 @@
             padding-bottom: 20px;
             font-size: 0.8125rem;
             background-color: $gray-100;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 >.container>.flex {
                     flex-direction: column;
                 }
             }
             .copyright {
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: calc(100% - 460px);
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     order: 2;
                 }
                 &__cwlink {
                     margin-bottom: 1.5em;
                     margin-right: -275px;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         display: none;
                     }
                     li {
@@ -101,10 +101,10 @@
                     span {
                         display: block;
                         padding-right: 1em;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             display: inline-block;
                         }
-                        @include breakpoint(max-width 767px) {
+                        @media screen and (max-width: 767px) {
                             &:nth-child(4) {
                                 margin-top: 1em;
                             }
@@ -114,10 +114,10 @@
             }
             .imglink {
                 align-items: flex-end;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     width: 410px;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     order: 1;
                     flex-direction: column;
                     align-items: flex-start;
@@ -136,16 +136,16 @@
                     }
                 }
                 &__app {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-left: 1em;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-top: 1em;
                         margin-bottom: 1em;
                     }
                     &__title {
                         margin-bottom: 0.5em;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             margin-bottom: 0.75em;
                             text-align: center;
                         }
@@ -171,16 +171,16 @@
         }
         >* {
             filter: blur(5px);
-            @include user-select(none);
+            user-select: none;
             &.message--dialogs,
             &.black {
                 filter: blur(0);
-                @include user-select(auto);
+                user-select: auto;
             }
         }
     }
     .container {
-        @include breakpoint(375px) {
+        @media screen and (min-width: 375px) {
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -231,11 +231,11 @@
             width: 100%;
             padding-left: 10px;
             padding-right: 10px;
-            @include breakpoint(375px) {
+            @media screen and (min-width: 375px) {
                 padding-left: 15px;
                 padding-right: 15px;
             }
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 620px;
                 margin-left: auto;
                 margin-right: auto;
@@ -269,7 +269,7 @@
                         position: absolute;
                         top: 50%;
                         left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px);
-                        @include translateY(-50%);
+                        transform: translateY(-50%);
                     }
                     &:last-child {
                         padding-right: 0;
@@ -289,7 +289,7 @@
             }
             .select__group {
                 &--col2 {
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         width: calc( ( 100% - 1rem) / 2);
                         select {
                             min-width: auto;
@@ -316,12 +316,12 @@
                 background-color: $gray-100;
                 border: 1px solid $gray-200;
                 z-index: 1;
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     hr {
                         display: none;
                     }
                 }
-                @include breakpoint(max-width 374px) {
+                @media screen and (max-width: 374px) {
                     padding: 10px;
                 }
                 .btn[disabled] {
@@ -334,7 +334,7 @@
                 span {
                     margin-left: 1rem;
                 }
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin: 0;
                     font-size: 1rem;
                     font-weight: 500;
@@ -343,26 +343,26 @@
         }
         .plan {
             margin-bottom: 2.5em;
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 flex-direction: column;
             }
             .plan {
                 &__description {
                     // padding-right: 30px;
                     // padding-left: 30px;
-                    // @include breakpoint(375px) {
+                    // @media screen and (min-width: 375px) {
                     // 	padding-right: 50px;
                     // 	padding-left: 50px;
                     // }
-                    // @include breakpoint(768px) {
+                    // @media screen and (min-width: 768px) {
                     // 	padding-right: 20px;
                     // 	padding-left: 20px;
                     // }
-                    // @include breakpoint(930px) {
+                    // @media screen and (min-width: 930px) {
                     // 	padding-right: 30px;
                     // 	padding-left: 30px;
                     // }
-                    // @include breakpoint(1280px) {
+                    // @media screen and (min-width: 1280px) {
                     // 	padding-right: 65px;
                     // 	padding-left: 65px;
                     // }
@@ -384,10 +384,10 @@
                     width: 100%;
                     // border: 1px solid $gray-100;
                     background-color: $gray;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-bottom: 10px;
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 33.3333333%;
                     }
                     &--highlight {
@@ -417,7 +417,7 @@
                             color: $white;
                             font-size: 0.875em;
                             text-align: center;
-                            @include transform(rotate(-45deg) translate(-25%, -255%));
+                            transform: rotate(-45deg) translate(-25%, -255%);
                         }
                         &::before {
                             @extend %before-after;
@@ -432,7 +432,7 @@
                         }
                     }
                     &__title {
-                        @include breakpoint(939px) {
+                        @media screen and (min-width: 375px) {
                             margin-left: -20px;
                             margin-right: -20px;
                         }
@@ -442,7 +442,7 @@
                         // 		@media screen and (min-width: 768px) and (max-width: 929px) {
                         // 			height: 2.3em;
                         // 		}
-                        // 		@include breakpoint(max-width 767px) {
+                        // 		@media screen and (max-width: 767px) {
                         // 			margin-bottom: 1rem;
                         // 		}
                         // 	}
@@ -459,19 +459,19 @@
                     &__group {
                         padding-left: 35px;
                         padding-right: 35px;
-                        @include breakpoint(350px) {
+                        @media screen and (min-width: 350px) {
                             padding-left: 25px;
                             padding-right: 25px;
                         }
-                        @include breakpoint(375px) {
+                        @media screen and (min-width: 375px) {
                             padding-left: 50px;
                             padding-right: 50px;
                         }
-                        @include breakpoint(414px) {
+                        @media screen and (min-width: 414px) {
                             padding-left: 80px;
                             padding-right: 80px;
                         }
-                        @include breakpoint(939px) {
+                        @media screen and (min-width: 375px) {
                             padding-left: 70px;
                             padding-right: 70px;
                         }
@@ -517,7 +517,7 @@
                         margin-right: auto;
                         font-size: 1rem;
                         list-style: none;
-                        @include breakpoint(768px) {
+                        @media screen and (min-width: 768px) {
                             // min-height: 4.5em;
                         }
                         li {
@@ -558,7 +558,7 @@
                 }
                 &__gift {
                     width: 100%;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-left: 20px;
                     }
                     @media screen and (min-width: 768px) and (max-width: 939px) {
@@ -567,13 +567,13 @@
                             margin-left: 0;
                         }
                     }
-                    @include breakpoint(930px) {
+                    @media screen and (min-width: 930px) {
                         width: calc( (100% - 60px) / 4);
                         &:nth-child(4n+1) {
                             margin-left: 0;
                         }
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         +.plan__gift {
                             margin-top: 1em;
                         }
@@ -583,21 +583,21 @@
                             margin-top: 0.5em;
                             font-size: 1rem;
                             border: 1px solid $gray-100;
-                            @include breakpoint(max-width 767px) {
+                            @media screen and (max-width: 767px) {
                                 display: flex;
                                 align-items: center;
                             }
-                            @include breakpoint(768px) {
+                            @media screen and (min-width: 768px) {
                                 margin-top: 1em;
                             }
                             &__img {
                                 position: relative;
                                 overflow: hidden;
-                                @include breakpoint(max-width 767px) {
+                                @media screen and (max-width: 767px) {
                                     width: 135px;
                                     height: 100px;
                                 }
-                                @include breakpoint(768px) {
+                                @media screen and (min-width: 768px) {
                                     width: 100%;
                                     height: 175px;
                                 }
@@ -607,12 +607,12 @@
                                     margin-right: auto;
                                     width: auto;
                                     height: 100px;
-                                    @include breakpoint(768px) {
+                                    @media screen and (min-width: 768px) {
                                         position: absolute;
                                         top: 0;
                                         left: 50%;
                                         height: 175px;
-                                        @include translateX(-50%);
+                                        transform: translateX(-50%);
                                     }
                                 }
                             }
@@ -631,7 +631,7 @@
                                 >.gift__item__detail {
                                     padding-left: 2em;
                                 }
-                                @include breakpoint(768px) {
+                                @media screen and (min-width: 768px) {
                                     padding-left: 20px;
                                     padding-right: 20px;
                                     padding-bottom: 20px;
@@ -639,7 +639,7 @@
                                         min-height: 50px;
                                     }
                                 }
-                                @include breakpoint(max-width 767px) {
+                                @media screen and (max-width: 767px) {
                                     width: calc(100% - 135px);
                                     padding-top: 10px;
                                     padding-bottom: 10px;
@@ -656,26 +656,26 @@
         }
         .marketing {
             margin-bottom: 10px;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: flex;
                 margin-top: 30px;
                 margin-bottom: 50px;
             }
             h1 {
                 font-size: 1.75em !important;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     font-size: 2em !important;
                 }
             }
             .marketing {
                 &__img {
                     width: 88.5%;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         margin-left: auto;
                         margin-right: auto;
                         margin-bottom: 20px;
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: 400px;
                         margin-right: 70px;
                     }
@@ -684,7 +684,7 @@
                     }
                 }
                 &__copywrite {
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 470px);
                     }
                 }
@@ -724,12 +724,12 @@
             &__group {
                 justify-content: center;
                 align-items: center;
-                @include breakpoint(768px) {
+                @media screen and (min-width: 768px) {
                     padding: 1.25em;
                 }
                 &--left {
                     margin-right: 2.5em;
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         display: none;
                     }
                 }
@@ -738,16 +738,16 @@
                 align-items: center;
                 &--icon {
                     height: 53px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         height: 48px;
                     }
                 }
                 &--text {
                     margin-left: 0.5em;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         margin-left: 1em;
                     }
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         width: calc(100% - 0.5em - 53px);
                     }
                     h3 {
@@ -764,7 +764,7 @@
                 }
                 img {
                     height: 35px;
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         height: 44px;
                     }
                 }
@@ -789,17 +789,17 @@
                     &--inline {
                         width: 100%;
                         label {
-                            @include breakpoint(768px) {
+                            @media screen and (min-width: 768px) {
                                 margin-left: 1rem;
                                 width: calc(100% - 280px - 2rem);
                             }
-                            @include breakpoint(max-width 767px) {
+                            @media screen and (max-width: 767px) {
                                 width: 100%;
                                 margin-top: 1rem;
                             }
                         }
                         .select__group+.select__group {
-                            @include breakpoint(max-width 357px) {
+                            @media screen and (max-width: 357px) {
                                 margin-top: 1rem;
                                 margin-left: 0;
                                 margin-right: 1em;
@@ -813,15 +813,15 @@
                             margin-left: calc(20px + 0.575rem);
                             &--set {
                                 display: flex;
-                                @include breakpoint(max-width 767px) {
+                                @media screen and (max-width: 767px) {
                                     display: block;
                                 }
                                 label {
                                     width: 100%;
-                                    @include breakpoint(max-width 767px) {
+                                    @media screen and (max-width: 767px) {
                                         margin-bottom: 10px;
                                     }
-                                    @include breakpoint(768px) {
+                                    @media screen and (min-width: 768px) {
                                         margin-right: 20px;
                                         width: calc(100% - 167px);
                                     }
@@ -833,15 +833,15 @@
                         >.label {
                             width: 100%;
                             margin-bottom: 0px;
-                            @include breakpoint(768px) {
+                            @media screen and (min-width: 768px) {
                                 margin-left: 1rem;
                                 width: calc( (100% - 2rem) / 2);
                             }
-                            @include breakpoint(max-width 767px) {
+                            @media screen and (max-width: 767px) {
                                 margin-top: 1rem;
                             }
                             +.label {
-                                @include breakpoint(768px) {
+                                @media screen and (min-width: 768px) {
                                     margin-top: 0;
                                 }
                             }
@@ -850,23 +850,23 @@
                             }
                         }
                         .form__group {
-                            @include breakpoint(max-width 767px) {
+                            @media screen and (max-width: 767px) {
                                 width: 100%;
                                 margin-top: 1rem;
                             }
-                            @include breakpoint(768px) {
+                            @media screen and (min-width: 768px) {
                                 margin-left: 1rem;
                             }
                         }
                     }
                 }
                 .col--left {
-                    @include breakpoint(max-width 767px) {
+                    @media screen and (max-width: 767px) {
                         p {
                             margin-bottom: 1em;
                         }
                     }
-                    @include breakpoint(768px) {
+                    @media screen and (min-width: 768px) {
                         width: calc(100% - 200px);
                     }
                 }
@@ -911,8 +911,8 @@
                         padding-top: 5px;
                         padding-bottom: 5px;
                         justify-content: space-between;
-                        @include transition(background-color, 0.3s);
-                        @include breakpoint(360px) {
+                        transition: background-color, 0.3s;
+                        @media screen and (min-width: 360px) {
                             display: flex;
                             line-height: 1.5;
                         }
@@ -933,7 +933,7 @@
                             i.icon-pen {
                                 padding-left: 5px;
                             }
-                            @include breakpoint(360px) {
+                            @media screen and (min-width: 360px) {
                                 max-width: 50%;
                                 text-align: right;
                             }
@@ -1029,7 +1029,7 @@
             margin: 20px 20px 0;
             padding: 12px;
             background-color: $gray;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 margin: 20px 30px 0;
                 padding: 12px 15px;
             }
@@ -1047,14 +1047,14 @@
             }
             span {
                 width: calc(100% - 1.25rem - 10px);
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 5px;
                     flex-direction: column;
                     align-items: start;
                 }
             }
             a.btn {
-                @include breakpoint(max-width 767px) {
+                @media screen and (max-width: 767px) {
                     margin-top: 5px;
                 }
             }

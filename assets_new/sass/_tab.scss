@@ -42,7 +42,7 @@
     padding: 20px 20px 0;
     margin-bottom: -20px;
     overflow: auto;
-    @include breakpoint(768px) {
+    @media screen and (min-width: 768px) {
         display: none;
     }
     >ul {
@@ -52,7 +52,7 @@
 
 .tabGroup {
     @include tab(50%);
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         display: none;
     }
 }

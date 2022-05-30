@@ -34,19 +34,19 @@
                 width: 1px;
                 height: 20px;
                 background-color: $gray-200;
-                @include translateY(-50%);
+                transform: translateY(-50%);
             }
             i.icon {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                @include translate(-50%, -50%);
+                transform: translate(-50%, -50%);
             }
         }
     }
     .search__group--white {
         border: 1px solid $gray-100;
-        @include transition(border 0.3s);
+        transition: border 0.3s;
         &.focus {
             border-color: $black;
         }
@@ -59,14 +59,14 @@
         .search__input {
             width: calc(100% - 60px);
             padding: 1rem;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 padding: 20px 1rem;
             }
         }
         .search__submit {
             width: 60px;
             height: 50px;
-            @include breakpoint(1024px) {
+            @media screen and (min-width: 1024px) {
                 width: 60px;
                 height: 60px;
             }
@@ -82,7 +82,7 @@
         >.searchOption {
             float: left;
             width: calc(100% - 820px);
-            @include breakpoint(max-width 767px) {
+            @media screen and (max-width: 767px) {
                 display: none;
             }
         }
@@ -100,7 +100,7 @@
         }
     }
     article {
-        @include breakpoint(768px) {
+        @media screen and (min-width: 768px) {
             width: 820px;
         }
     }
@@ -108,7 +108,7 @@
         display: none;
     }
     .searchDoneTxt {
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             padding-top: 1em;
         }
         >* {
@@ -116,7 +116,7 @@
         }
         .searchKeyword {
             display: block;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 display: none;
             }
         }
@@ -133,7 +133,7 @@
             color: $primary;
             font-weight: 500;
         }
-        @include breakpoint(max-width 767px) {
+        @media screen and (max-width: 767px) {
             .pic {
                 display: none;
             }
@@ -152,7 +152,7 @@
 
 .searchCag {
     padding-top: 10px;
-    @include breakpoint(max-width 767px) {
+    @media screen and (max-width: 767px) {
         padding-bottom: 10px;
     }
     ul {
@@ -163,7 +163,7 @@
             margin-right: 15px;
             font-size: 1.125rem;
             border-bottom: 2px solid transparent;
-            @include breakpoint(768px) {
+            @media screen and (min-width: 768px) {
                 font-size: 1rem;
             }
             a {

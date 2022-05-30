@@ -1,12 +1,4 @@
-@import 'normalize-version';
-@import 'normalize/html5';
-@import 'normalize/base';
-@import 'normalize/links';
-// @import 'normalize/typography';
-@import 'normalize/embeds';
-@import 'normalize/groups';
-@import 'normalize/forms';
-@import 'normalize/tables';
+@import 'normalize';
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
 @import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
@@ -63,17 +55,17 @@ ul, ol {
 	justify-content: space-between;
 }
 .flex {
-	@include breakpoint(768px) {
+	@media screen and (min-width: 768px) {
 		&-md {
 			display: flex;
 		}
 	}
-	@include breakpoint(1024px) {
+	@media screen and (min-width: 1024px) {
 		&-lg {
 			display: flex;
 		}
 	}
-	@include breakpoint(1280px) {
+	@media screen and (min-width: 1280px) {
 		&-xl {
 			display: flex;
 		}
@@ -98,7 +90,7 @@ button, input, optgroup, select, textarea {
 	font-size: 0!important;
 }
 *, *::before, *::after {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 }
 body {
 	font-family: Roboto, 'Noto Sans TC', sans-serif;
@@ -108,7 +100,7 @@ body {
 }
 a {
 	text-decoration: none;
-	@include breakpoint(1024px) {
+	@media screen and (min-width: 1024px) {
 		transition: color .2s, background-color .2s;
 	};
 }

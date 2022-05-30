@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import "Compass";
-@import "breakpoint";
+
 @import "_variable";
 @import "_mixin";
 .banner {
@@ -20,7 +19,7 @@
     }
     &.fixed {
         margin-bottom: 60px;
-        @include breakpoint(1024px) {
+        @media screen and (min-width: 1024px) {
             margin-bottom: 65px;
         }
     }
@@ -37,7 +36,7 @@
 .couplet-left,
 .couplet-right {
     display: none;
-    @include breakpoint(max-width 1023px) {
+    @media screen and (max-width: 1023px) {
         display: none !important;
     }
 }
@@ -86,7 +85,7 @@
 }
 .leafletBig,
 .leaflet {
-    @include breakpoint(1024px) {
+    @media screen and (min-width: 1024px) {
         margin-left: -1px;
         margin-right: -1px;
         border: 1px solid $gray-200;

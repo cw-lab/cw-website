@@ -10,22 +10,22 @@ body {
 	margin-left: auto;
 	padding-right: 15px;
 	padding-left: 15px;
-	@include breakpoint(576px) {
+	@media screen and (min-width: 576px) {
 		width: 540px;
 	}
-	@include breakpoint(768px) {
+	@media screen and (min-width: 768px) {
 		width: 720px;
 	}
-	@include breakpoint(992px) {
+	@media screen and (min-width: 992px) {
 		width: 100%;
 	}
-	@include breakpoint(1200px) {
+	@media screen and (min-width: 1200px) {
 		width: 1170px;
 	}
-	@include breakpoint(1600px) {
+	@media screen and (min-width: 1600px) {
 		width: 1570px;
 	}
-	@include breakpoint(1920px) {
+	@media screen and (min-width: 1920px) {
 		width: 1890px;
 	}
 }
@@ -37,7 +37,7 @@ body {
 	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-right: -15px;
-	@include breakpoint(768px) {
+	@media screen and (min-width: 768px) {
 		margin-left: -25px;
 		margin-right: -25px;
 	}
@@ -66,19 +66,19 @@ h2 {
 .select-side {
 	position: relative;
 	width: 100%;
-	@include breakpoint(992px) {
+	@media screen and (min-width: 992px) {
 		width: 240px;
 	}
-	@include breakpoint(1200px) {
+	@media screen and (min-width: 1200px) {
 		width: 270px;
 	}
 }
 .content-side {
 	width: 100%;
-	@include breakpoint(992px) {
+	@media screen and (min-width: 992px) {
 		width: calc(100% - 240px);
 	}
-	@include breakpoint(1200px) {
+	@media screen and (min-width: 1200px) {
 		width: calc(100% - 270px);
 	}
 }
@@ -89,10 +89,10 @@ header {
 		padding: 1rem;
 		color: $dark;
 		font-size: 30px;
-		@include breakpoint(375px) {
+		@media screen and (min-width: 375px) {
 			padding: 0;
 		}
-		@include breakpoint(992px) {
+		@media screen and (min-width: 992px) {
 			display: block;
 			padding: 10px 0 10px 35px;
 		}
@@ -101,8 +101,8 @@ header {
 		position: absolute;
 		top: 50%;
 		right: 0;
-		@include translateY(-50%);
-		@include breakpoint(992px) {
+		transform: translateY(-50%);
+		@media screen and (min-width: 992px) {
 			display: none;
 		}
 		span {
@@ -116,7 +116,7 @@ header {
 		}
 	}
 	.subMenuList {
-		@include breakpoint(max-width 991px) {
+		@media screen and (max-width: 991px) {
 			padding-right: 40px;
 		}
 		li {
@@ -138,19 +138,19 @@ header {
 	}
 }
 main {
-	@include transition(all 0.3s);
-	@include breakpoint(992px) {
+	transition: all 0.3s;
+	@media screen and (min-width: 992px) {
 		padding: 1rem 0;
 	}
 }
 section {
 	> .container {
-		@include breakpoint(max-width 374px) {
+		@media screen and (max-width: 374px) {
 			padding: 0;
 		}
 	}
 	.select-side {
-		@include breakpoint(992px) {
+		@media screen and (min-width: 992px) {
 			position: -webkit-sticky;
 			position: sticky;
 			top: 0;
@@ -160,11 +160,11 @@ section {
 			height: 100vh;
 			overflow: scroll;
 		}
-		@include breakpoint(1630px) {
+		@media screen and (min-width: 1630px) {
 			padding-right: 50px;
 		}
 		ul.menu {
-			@include breakpoint(max-width 991px) {
+			@media screen and (max-width: 991px) {
 				position: fixed;
 				top: 0;
 				right: 0;
@@ -172,7 +172,7 @@ section {
 				height: 100%;
 				background-color: #fff;
 				overflow: hidden;
-				@include transition(width 0.3s);
+				transition: width 0.3s;
 				z-index: 10;
 			}
 			&.opened {
@@ -180,10 +180,10 @@ section {
 			}
 			> li {
 				position: relative;
-				@include breakpoint(992px) {
+				@media screen and (min-width: 992px) {
 					padding-left: 35px;
 				}
-				@include breakpoint(max-width 991px) {
+				@media screen and (max-width: 991px) {
 					margin-top: 1rem;
 					width: 210px;
 				}
@@ -192,7 +192,7 @@ section {
 					border-bottom: 1px solid #fcfcfc;
 				}
 				+ li {
-					@include breakpoint(992px) {
+					@media screen and (min-width: 992px) {
 						margin-top: 1rem;
 					}
 				}
@@ -214,7 +214,7 @@ section {
 				a {
 					display: flex;
 					align-items: center;
-					@include breakpoint(max-width 991px) {
+					@media screen and (max-width: 991px) {
 						padding-left: 25px;
 						padding-right: 25px;
 					}
@@ -223,7 +223,7 @@ section {
 						font-size: 14px;
 						line-height: 30px;
 						white-space: nowrap;
-						@include breakpoint(1200px) {
+						@media screen and (min-width: 1200px) {
 							font-size: 16px;
 							line-height: 40px;
 						}
@@ -233,7 +233,7 @@ section {
 						width: 20px;
 						margin-right: 15px;
 						text-align: center;
-						@include breakpoint(max-width 991px) {
+						@media screen and (max-width: 991px) {
 							display: none;
 						}
 					}
@@ -245,13 +245,13 @@ section {
 				}
 				&::before {
 					@extend %before-after;
-					@include breakpoint(992px) {
+					@media screen and (min-width: 992px) {
 						position: absolute;
 						top: 0;
 						left: 0;
 						width: 5px;
 						height: 45px;
-						@include border-radius(0 15px 15px 0);
+						border-radius: 0 15px 15px 0;
 					}
 				}
 				&.now {
@@ -274,10 +274,10 @@ section {
 		padding: 15px;
 		background-color: $white;
 		border: 1px solid $gray-100;
-		@include breakpoint(375px) {
+		@media screen and (min-width: 375px) {
 			padding: 30px 15px;
 		}
-		@include breakpoint(1200px) {
+		@media screen and (min-width: 1200px) {
 			padding: 25px 25px 75px;
 		}
 		p {
@@ -333,7 +333,7 @@ section {
 						left: 50%;
 						font-style: normal;
 						text-shadow: 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white, 0 0 2px $white;
-						@include translate(-50%, -50%);
+						transform: translate(-50%, -50%);
 					}
 					&.dark {
 						border-color: $white;
@@ -436,7 +436,7 @@ section {
 					border-color: $black;
 				}
 			}
-			@include breakpoint(max-width 767px) {
+			@media screen and (max-width: 767px) {
 				margin-bottom: 30px;
 			}
 		}
@@ -447,7 +447,7 @@ section {
 		}
 		.tab__content__pane {
 			width: 100%;
-			@include breakpoint(max-width 767px) {
+			@media screen and (max-width: 767px) {
 				flex-direction: column;
 			}
 			&.active {
@@ -456,14 +456,14 @@ section {
 			.code__block {
 				&--text {
 					width: 100%;
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						width: 33.333333333%;
 					}
 					+ .code__block--text {
-						@include breakpoint(max-width 767px) {
+						@media screen and (max-width: 767px) {
 							border-top: 1px solid $white;
 						}
-						@include breakpoint(768px) {
+						@media screen and (min-width: 768px) {
 							border-left: 1px solid $white;
 						}
 					}
@@ -485,7 +485,7 @@ section {
 			white-space: -o-pre-wrap;
 			word-wrap: break-word;
 			overflow: hidden scroll;
-			@include breakpoint(768px) {
+			@media screen and (min-width: 768px) {
 				height: 400px;
 			}
 			span {
@@ -555,10 +555,10 @@ section {
 					&:last-child {
 						border-right: 1px solid $gray-100;
 					}
-					@include breakpoint(max-width 767px) {
+					@media screen and (max-width: 767px) {
 						font-size: 12px;
 					}
-					@include breakpoint(768px) {
+					@media screen and (min-width: 768px) {
 						padding: 15px 12px;
 					}
 				}
@@ -579,12 +579,12 @@ section {
 						width: 10px;
 						height: 10px;
 						margin-right: 5px;
-						@include breakpoint(max-width 767px) {
+						@media screen and (max-width: 767px) {
 							display: table;
 							margin-left: auto;
 							margin-right: auto;
 						}
-						@include breakpoint(768px) {
+						@media screen and (min-width: 768px) {
 							display: inline-block;
 							margin-right: 5px;
 						}
@@ -693,7 +693,7 @@ section {
 	}
 }
 footer {
-	@include transition(all 0.3s);
+	transition: all 0.3s;
 }
 body {
 	&.opened {

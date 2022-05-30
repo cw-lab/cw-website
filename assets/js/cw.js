@@ -200,7 +200,6 @@ $(function() {
         // } else {
         //     $('body').css({ 'padding-bottom': 0 });
         // }
-        $('main').css('min-height', (height - mainOffsetTop - footerHeight - 40));
 
         // 判斷有沒有值
         $("input.form__group__input, textarea.form__group__textarea").each(function() {

@@ -27,21 +27,6 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .webaccess__page--payment.webaccess__page--index {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .webaccess__page--payment.webaccess__page--index footer {
-    margin-top: auto;
-  }
-}
-
 @media screen and (max-width: 1023px) {
   .webaccess__page--payment.webaccess__page--index .price--fixed .container {
     padding-left: 0;
@@ -276,6 +261,21 @@
      -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
+}
+
+@media (min-width: 1024px) {
+  .webaccess__page--index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .webaccess__page--index footer {
+    margin-top: auto;
+  }
 }
 
 @media screen and (min-width: 375px) {

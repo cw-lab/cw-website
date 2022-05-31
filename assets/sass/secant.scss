@@ -13,13 +13,6 @@
             }
         }
         &.webaccess__page--index {
-            @media (min-width: 1024px) {
-                display: flex;
-                flex-direction: column;
-                footer {
-                    margin-top: auto;
-                }
-            }
             .price--fixed {
                 .container {
                     @media screen and (max-width: 1023px) {
@@ -191,6 +184,15 @@
             &.black {
                 filter: blur(0);
                 user-select: auto;
+            }
+        }
+    }
+    &--index {
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            footer {
+                margin-top: auto;
             }
         }
     }

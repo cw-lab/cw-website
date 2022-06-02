@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .webaccess__page--payment.webaccess__page--index .price--fixed .container {
     padding-left: 0;
     padding-right: 0;
@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .webaccess__page--payment.webaccess__page--index .price--fixed .container .flex .price__group {
     padding-right: 30px;
     width: calc(100% - 135px);
@@ -48,7 +48,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .webaccess__page--payment:not(.webaccess__page--index) .price--fixed .container {
     width: 620px;
   }
@@ -58,7 +58,7 @@
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .webaccess__page--marketing .tab {
     margin-bottom: 40px;
   }
@@ -68,7 +68,7 @@
   padding: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .webaccess__page--marketing .tab .tab__content__pane {
     padding: 30px;
   }
@@ -95,33 +95,33 @@
   background-color: #EEEEEE;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer > .container > .flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer .copyright {
     width: calc(100% - 460px);
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer .copyright {
     -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
 }
 
@@ -130,7 +130,7 @@
   margin-right: -275px;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer .copyright__cwlink {
     display: none;
   }
@@ -152,13 +152,13 @@
   padding-right: 1em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer .copyright__contact span {
     display: inline-block;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer .copyright__contact span:nth-child(4) {
     margin-top: 1em;
   }
@@ -166,28 +166,28 @@
 
 .webaccess__page--marketing footer .imglink {
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer .imglink {
     width: 410px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer .imglink {
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 }
 
@@ -208,13 +208,13 @@
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer .imglink__app {
     margin-left: 1em;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page--marketing footer .imglink__app {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -225,7 +225,7 @@
   margin-bottom: 0.5em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page--marketing footer .imglink__app__title {
     margin-bottom: 0.75em;
     text-align: center;
@@ -247,20 +247,20 @@
 
 .webaccess__page--error > * {
   -webkit-filter: blur(5px);
-          filter: blur(5px);
+  filter: blur(5px);
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .webaccess__page--error > *.message--dialogs, .webaccess__page--error > *.black {
   -webkit-filter: blur(0);
-          filter: blur(0);
+  filter: blur(0);
   -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 @media (min-width: 1024px) {
@@ -270,15 +270,15 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .webaccess__page--index footer {
     margin-top: auto;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 375px) {
   .webaccess__page .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -296,8 +296,8 @@
 
 .webaccess__page header .container > .flex {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .webaccess__page header .container ul.member__list + .member__list {
@@ -330,8 +330,8 @@
 .webaccess__page main {
   margin-top: 20px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .webaccess__page main article {
@@ -340,14 +340,14 @@
   padding-right: 10px;
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 375px) {
   .webaccess__page main article {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .webaccess__page main article {
     width: 620px;
     margin-left: auto;
@@ -360,8 +360,8 @@
 .webaccess__page main article .step__group {
   padding-bottom: 20px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .webaccess__page main article .step__item {
@@ -391,7 +391,7 @@
   top: 50%;
   left: calc( 100% - ((100% - ((65px * 3)) / 2) / 2) - 20px);
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .webaccess__page main article .step__item:last-child {
@@ -407,7 +407,7 @@
   clear: both;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main form .select__group--col2 {
     width: calc( ( 100% - 1rem) / 2);
   }
@@ -432,23 +432,23 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   background-color: #EEEEEE;
   border: 1px solid #D3D5D7;
   z-index: 1;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .price--fixed hr {
     display: none;
   }
 }
 
-@media screen and (max-width: 374px) {
+@media (max-width: 374px) {
   .webaccess__page main .price--fixed {
     padding: 10px;
   }
@@ -468,7 +468,7 @@
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .price--total {
     margin: 0;
     font-size: 1rem;
@@ -487,12 +487,12 @@
   margin-bottom: 2.5em;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -516,13 +516,13 @@
   background-color: #fafafa;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan .plan__item {
     margin-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__item {
     width: 33.3333333%;
   }
@@ -560,7 +560,7 @@
   font-size: 0.875em;
   text-align: center;
   -webkit-transform: rotate(-45deg) translate(-25%, -255%);
-          transform: rotate(-45deg) translate(-25%, -255%);
+  transform: rotate(-45deg) translate(-25%, -255%);
 }
 
 .webaccess__page main .plan .plan__item__spec::before {
@@ -574,7 +574,7 @@
   border-color: #003a9f transparent transparent transparent;
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 939px) {
   .webaccess__page main .plan .plan__item__title {
     margin-left: -20px;
     margin-right: -20px;
@@ -586,28 +586,28 @@
   padding-right: 35px;
 }
 
-@media screen and (min-width: 350px) {
+@media (min-width: 350px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 375px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 50px;
     padding-right: 50px;
   }
 }
 
-@media screen and (min-width: 414px) {
+@media (min-width: 414px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 80px;
     padding-right: 80px;
   }
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 939px) {
   .webaccess__page main .plan .plan__item__group {
     padding-left: 70px;
     padding-right: 70px;
@@ -706,7 +706,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift {
     margin-left: 20px;
   }
@@ -721,7 +721,7 @@
   }
 }
 
-@media screen and (min-width: 930px) {
+@media (min-width: 930px) {
   .webaccess__page main .plan .plan__gift {
     width: calc( (100% - 60px) / 4);
   }
@@ -730,7 +730,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan .plan__gift + .plan__gift {
     margin-top: 1em;
   }
@@ -742,18 +742,18 @@
   border: 1px solid #EEEEEE;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan .plan__gift .gift__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift .gift__item {
     margin-top: 1em;
   }
@@ -764,14 +764,14 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan .plan__gift .gift__item__img {
     width: 135px;
     height: 100px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift .gift__item__img {
     width: 100%;
     height: 175px;
@@ -786,14 +786,14 @@
   height: 100px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift .gift__item__img img {
     position: absolute;
     top: 0;
     left: 50%;
     height: 175px;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
@@ -817,7 +817,7 @@
   padding-left: 2em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .plan .plan__gift .gift__item__text {
     padding-left: 20px;
     padding-right: 20px;
@@ -828,7 +828,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .plan .plan__gift .gift__item__text {
     width: calc(100% - 135px);
     padding-top: 10px;
@@ -844,7 +844,7 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .marketing {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -858,7 +858,7 @@
   font-size: 1.75em !important;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .marketing h1 {
     font-size: 2em !important;
   }
@@ -868,7 +868,7 @@
   width: 88.5%;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .marketing .marketing__img {
     margin-left: auto;
     margin-right: auto;
@@ -876,7 +876,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .marketing .marketing__img {
     width: 400px;
     margin-right: 70px;
@@ -887,7 +887,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .marketing .marketing__copywrite {
     width: calc(100% - 470px);
   }
@@ -898,11 +898,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .webaccess__page main .marketing .marketing__action .action--status {
@@ -931,10 +931,10 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-right: 40px;
 }
 
@@ -945,14 +945,14 @@
 
 .webaccess__page main .app__group {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .app__group {
     padding: 1.25em;
   }
@@ -962,7 +962,7 @@
   margin-right: 2.5em;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .app__group--left {
     display: none;
   }
@@ -970,15 +970,15 @@
 
 .webaccess__page main .app__title {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .webaccess__page main .app__title--icon {
   height: 53px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .app__title--icon {
     height: 48px;
   }
@@ -988,13 +988,13 @@
   margin-left: 0.5em;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .app__title--text {
     margin-left: 1em;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page main .app__title--text {
     width: calc(100% - 0.5em - 53px);
   }
@@ -1018,7 +1018,7 @@
   height: 35px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page main .app__img img {
     height: 44px;
   }
@@ -1053,7 +1053,7 @@
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group--inline label,
   .webaccess__page section.group .tab__content .form__group--inline label,
   .webaccess__page section.group .content__group .form__group--inline label {
@@ -1062,7 +1062,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .form__group--inline label,
   .webaccess__page section.group .tab__content .form__group--inline label,
   .webaccess__page section.group .content__group .form__group--inline label {
@@ -1071,7 +1071,7 @@
   }
 }
 
-@media screen and (max-width: 357px) {
+@media (max-width: 357px) {
   .webaccess__page section.group .flex-container .form__group--inline .select__group + .select__group,
   .webaccess__page section.group .tab__content .form__group--inline .select__group + .select__group,
   .webaccess__page section.group .content__group .form__group--inline .select__group + .select__group {
@@ -1097,7 +1097,7 @@
   display: flex;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set,
   .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set,
   .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set {
@@ -1111,7 +1111,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label,
   .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label,
   .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set label {
@@ -1119,7 +1119,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--selection > .label--set label,
   .webaccess__page section.group .tab__content .form__group.form__group--selection > .label--set label,
   .webaccess__page section.group .content__group .form__group.form__group--selection > .label--set label {
@@ -1135,7 +1135,7 @@
   margin-bottom: 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide > .label,
   .webaccess__page section.group .tab__content .form__group.form__group--divide > .label,
   .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
@@ -1144,7 +1144,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide > .label,
   .webaccess__page section.group .tab__content .form__group.form__group--divide > .label,
   .webaccess__page section.group .content__group .form__group.form__group--divide > .label {
@@ -1152,7 +1152,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide > .label + .label,
   .webaccess__page section.group .tab__content .form__group.form__group--divide > .label + .label,
   .webaccess__page section.group .content__group .form__group.form__group--divide > .label + .label {
@@ -1166,7 +1166,7 @@
   min-width: auto;
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide .form__group,
   .webaccess__page section.group .tab__content .form__group.form__group--divide .form__group,
   .webaccess__page section.group .content__group .form__group.form__group--divide .form__group {
@@ -1175,7 +1175,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .form__group.form__group--divide .form__group,
   .webaccess__page section.group .tab__content .form__group.form__group--divide .form__group,
   .webaccess__page section.group .content__group .form__group.form__group--divide .form__group {
@@ -1183,7 +1183,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section.group .flex-container .col--left p,
   .webaccess__page section.group .tab__content .col--left p,
   .webaccess__page section.group .content__group .col--left p {
@@ -1191,7 +1191,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .webaccess__page section.group .flex-container .col--left,
   .webaccess__page section.group .tab__content .col--left,
   .webaccess__page section.group .content__group .col--left {
@@ -1247,13 +1247,13 @@
   padding-top: 5px;
   padding-bottom: 5px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-transition: background-color, 0.3s;
   transition: background-color, 0.3s;
 }
 
-@media screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .webaccess__page section.group .content__group .content__item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1275,10 +1275,10 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   word-break: break-all;
 }
 
@@ -1290,7 +1290,7 @@
   padding-left: 5px;
 }
 
-@media screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .webaccess__page section.group .content__group .content__item__amount {
     max-width: 50%;
     text-align: right;
@@ -1304,8 +1304,8 @@
   padding: 20px;
   border-top: 1px solid #D3D5D7;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .webaccess__page section.group .content__group .content__total__amount {
@@ -1325,18 +1325,18 @@
 .webaccess__page section.group > h3.flex,
 .webaccess__page section.group > .h3.flex {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .webaccess__page section.group > h3.flex a.link-btn,
 .webaccess__page section.group > .h3.flex a.link-btn {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .webaccess__page section.group .mb-20 {
@@ -1367,7 +1367,7 @@
 .webaccess__page section .label__group .label__radio__txt img,
 .webaccess__page section .label__group .label__radio__txt span {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .webaccess__page section .label__group .label__radio__txt img {
@@ -1394,13 +1394,13 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   cursor: auto;
 }
 
@@ -1418,7 +1418,7 @@
   background-color: #fafafa;
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .webaccess__page section .form--remark {
     margin: 20px 30px 0;
     padding: 12px 15px;
@@ -1444,20 +1444,20 @@
   width: calc(100% - 1.25rem - 10px);
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section .form--remark span {
     margin-top: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .webaccess__page section .form--remark a.btn {
     margin-top: 5px;
   }
@@ -1476,17 +1476,17 @@
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 4px;
   border: 1px solid #939EA7;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-transition: border 0.3s;
   transition: border 0.3s;
 }
@@ -1500,11 +1500,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   white-space: nowrap;
 }
 
@@ -1512,9 +1512,9 @@
   position: relative;
   display: none;
   -ms-grid-column: 0;
-      grid-column-start: 0;
+  grid-column-start: 0;
   -ms-grid-column-span: 2;
-      grid-column-end: span 2;
+  grid-column-end: span 2;
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #D3D5D7;
@@ -1539,6 +1539,9 @@
   position: absolute;
   width: 1px;
   height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
 }
 
 .webaccess__page--app .form input[type="radio"]:checked + label {

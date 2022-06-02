@@ -458,7 +458,7 @@
                         }
                     }
                     &__title {
-                        @media screen and (min-width: 375px) {
+                        @media screen and (min-width: 939px) {
                             margin-left: -20px;
                             margin-right: -20px;
                         }
@@ -497,7 +497,7 @@
                             padding-left: 80px;
                             padding-right: 80px;
                         }
-                        @media screen and (min-width: 375px) {
+                        @media screen and (min-width: 939px) {
                             padding-left: 70px;
                             padding-right: 70px;
                         }
@@ -1020,7 +1020,7 @@
                 img,
                 span {
                     display: inline-block;
-                    vertical-align: middle;
+                    vertical-align: top;
                 }
                 img {
                     width: 3.125rem;
@@ -1148,6 +1148,9 @@
             position: absolute;
             width: 1px;
             height: 1px;
+            padding: 0;
+            border: 0;
+            opacity: 0;          
             &:checked + label {
                 border-color: $primary;
             }

@@ -217,14 +217,17 @@ a {
     +.social_login {
         margin-top: 20px;
     }
-    i.icon, img.icon {
+    i.icon, img.icon, img.icon-cwlc {
         margin-right: 0.375em;
     }
     i.icon {
         font-size: 1.5em;
     }
     img.icon {
-        width: 1.5em;
+        height: 1.5em;
+    }
+    img.icon-cwlc {
+        height: 1em;
     }
     &:hover {
         border-color: $text;

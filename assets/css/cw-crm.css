@@ -2195,7 +2195,7 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
   margin-top: 20px;
 }
 
-.social_login i.icon, .social_login img.icon {
+.social_login i.icon, .social_login img.icon, .social_login img.icon-cwlc {
   margin-right: 0.375em;
 }
 
@@ -2204,7 +2204,11 @@ a.bookmark-btn i:hover, a.bookmark-btn i.active {
 }
 
 .social_login img.icon {
-  width: 1.5em;
+  height: 1.5em;
+}
+
+.social_login img.icon-cwlc {
+  height: 1em;
 }
 
 .social_login:hover {

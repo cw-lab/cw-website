@@ -974,6 +974,14 @@
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .webaccess__page main .app__title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .webaccess__page main .app__title--icon {
   height: 53px;
 }
@@ -994,16 +1002,12 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .webaccess__page main .app__title--text {
-    width: calc(100% - 0.5em - 53px);
-  }
+.webaccess__page main .app__title--text h3 {
+  line-height: 1.5;
 }
 
-.webaccess__page main .app__title--text h3 {
-  margin-top: 0;
-  margin-bottom: 0.25em;
-  line-height: 1;
+.webaccess__page main .app__title--text p {
+  line-height: 1.25;
 }
 
 .webaccess__page main .app__img {
@@ -1350,6 +1354,16 @@
 .webaccess__page section.group[class*='--disabled'] a,
 .webaccess__page section.group[class*='--disabled'] i {
   color: #D3D5D7 !important;
+}
+
+.webaccess__page section.group .btn--app {
+  display: none;
+}
+
+@media screen and (hover: none) and (pointer: coarse) {
+  .webaccess__page section.group .btn--app {
+    display: inline-block;
+  }
 }
 
 .webaccess__page section .label__group {

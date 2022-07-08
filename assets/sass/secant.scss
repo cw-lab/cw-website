@@ -767,6 +767,9 @@
             }
             &__title {
                 align-items: center;
+                @media screen and (max-width: 767px) {
+                    justify-content: center;
+                }
                 &--icon {
                     height: 53px;
                     @media screen and (min-width: 768px) {
@@ -778,13 +781,11 @@
                     @media screen and (min-width: 768px) {
                         margin-left: 1em;
                     }
-                    @media screen and (max-width: 767px) {
-                        width: calc(100% - 0.5em - 53px);
-                    }
                     h3 {
-                        margin-top: 0;
-                        margin-bottom: 0.25em;
-                        line-height: 1;
+                        line-height: 1.5;
+                    }
+                    p {
+                        line-height: 1.25;
                     }
                 }
             }
@@ -1007,6 +1008,12 @@
                 a,
                 i {
                     color: $gray-200 !important;
+                }
+            }
+            .btn--app {
+                display: none;
+                @media screen and (hover: none) and (pointer: coarse) {
+                    display: inline-block;
                 }
             }
         }

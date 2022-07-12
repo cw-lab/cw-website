@@ -1,6 +1,18 @@
 @import "_basic";
 @import "_sheet";
 @import "_accordion";
+
+@mixin btnLink {
+    a {
+        color: $surface;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
 .service__page {
     header {
         border-bottom: 1px solid $gray-200;
@@ -85,6 +97,18 @@
             float: right;
             max-width: 750px;
         }
+        h3 {
+            line-height: 1;
+            &.title {
+                border-left: 3px solid $primary;
+            }
+        }
+        .summary {
+            @include btnLink;
+        }
+    }
+    .search {
+        max-width: 300px;
     }
     .btn--back {
         display: inline-block;
@@ -97,6 +121,24 @@
         }
     }
     .accordion__group {
+        .accordion__item__panel {
+            > * {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+            > *:first-child {
+                margin-top: 0;
+            }
+            > h3 {
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 1.5;
+                + * {
+                    margin-top: 0;
+                }
+            }
+            @include btnLink;
+        }
         ul.accordion__item__header {
             margin: 0 0 0 1.125em;
             padding: 0.8125em 1.125em;
@@ -124,6 +166,35 @@
         @media screen and (max-width: 1023px) {
             &:nth-child(5)~.accordion__item {
                 display: none;
+            }
+        }
+    }
+    .list__group--result {
+        .list__item {
+            padding: 0 0 20px;
+            flex-direction: column;
+            border: 0;
+            + .list__item {
+                padding-top: 20px;
+                border-top: 1px solid $gray-200;
+            }
+            .h4 {
+                display: block;
+                width: 100%;
+                color: $text;
+                font-weight: 600;
+                @media screen and (min-width: 1024px) {
+                    font-weight: 500;
+                }
+                &:hover, span {
+                    color: $primary;
+                }
+            }
+            .retrieval {
+                @include lineclamp(2);
+                span {
+                    color: $primary;
+                }
             }
         }
     }

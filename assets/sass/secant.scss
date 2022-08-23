@@ -10,6 +10,9 @@
             height: 74px;
             @media (min-width: 1024px) {
                 height: 82px;
+                @at-root .webaccess__page--index#{&} {
+                    height: 99px;
+                }
             }
         }
         &.webaccess__page--index {
@@ -191,6 +194,10 @@
         @media (min-width: 1024px) {
             display: flex;
             flex-direction: column;
+            height: 100%;
+            main {
+                flex: 1;
+            }
             footer {
                 margin-top: auto;
             }

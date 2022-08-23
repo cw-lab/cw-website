@@ -25,6 +25,9 @@
   .webaccess__page--payment::after {
     height: 82px;
   }
+  .webaccess__page--index.webaccess__page--payment::after {
+    height: 99px;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -272,6 +275,12 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 100%;
+  }
+  .webaccess__page--index main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .webaccess__page--index footer {
     margin-top: auto;

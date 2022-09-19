@@ -1175,3 +1175,114 @@
         }
     }
 }
+
+.webaccess__page--onboard {
+  display: flex;
+  flex-direction: column;
+  main {
+    flex: 1;
+    article {
+      @media screen and (min-width: 1024px) {
+        width: 680px;
+      }
+    }
+  }
+  ul.check {
+    display: table;
+    @include list(1rem auto 0, 0, none);
+    text-align: left;
+    li {
+        padding-left: calc(1em + 10px);
+        text-indent: calc(-1em - 10px);
+        &::before {
+            content: $icon-check;
+            padding-right: 10px;
+            color: $primary;
+            font-family: '#{$icomoon-font-family}';
+        }
+        +li {
+            margin-top: 10px;
+        }
+    }
+  }
+  h1 span {
+    display: inline-block;
+  }
+  .h3 {
+    line-height: 1.5;
+  }
+  .flex--feature, .flex--line {
+    img {
+      width: 200px;
+    }
+    > img {
+      border-radius: 30px;
+      box-shadow: 0 5px 10px rgba($black, 0.3);
+    }
+  }
+  .flex--feature {
+    gap: 40px;
+  }
+  .flex--line {
+    gap: 60px;
+    .line__search {
+      h5 {
+        color: $primary;
+      }
+    }
+    .line__search--input {
+      border-radius: 50px;
+    }
+  }
+  .card__group.card__group--grid {
+    @media screen and (min-width: 1024px) {
+      .card__item {
+        width: calc((100% - 60px) / 4);
+        &:nth-child(3n+1) {
+          margin-left: 20px;
+        }
+        &:nth-child(4n+1) {
+          margin-left: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 1023px) {
+      display: block;
+      .card__item {
+        display: block;
+        width: 100%;
+      }
+      .card__img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 110px;
+      }
+      .card__body {
+        display: inline-block;
+        vertical-align: middle;
+        width: calc(100% - 110px);
+        padding-left: 20px;
+        .card__title {
+          @include lineclamp(2);
+        }
+      }
+    }
+  }
+	.card__img {
+    position: relative;
+		overflow: hidden;
+		&::after {
+			@include beforeafter("", block);
+			width: 100%;
+			padding-top: 66.984127%;
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: auto;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

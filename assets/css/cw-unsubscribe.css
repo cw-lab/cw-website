@@ -2933,9 +2933,15 @@ a:focus {
 
 .btn--toggle {
   min-width: auto;
-  padding: 20px;
+  padding: 10px;
   color: #171717;
   border: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .btn--toggle {
+    padding: 20px;
+  }
 }
 
 .btn--toggle i.icon {

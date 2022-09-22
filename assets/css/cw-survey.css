@@ -1735,8 +1735,6 @@ textarea {
 button,
 a {
   background-color: transparent;
-  -ms-flex-item-align: baseline;
-      align-self: baseline;
   border-radius: 0;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1910,6 +1908,31 @@ a:focus {
 
 .btn--contained::after {
   background-color: #D60C18;
+}
+
+.btn--toggle {
+  min-width: auto;
+  padding: 20px;
+  color: #171717;
+  border: 0;
+}
+
+.btn--toggle i.icon {
+  display: block;
+  font-size: 1.5em;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.btn--toggle:hover {
+  color: #003a9f;
+}
+
+.btn--toggle.active i.icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .btn--100 {

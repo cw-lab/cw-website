@@ -1,7 +1,6 @@
 button,
 a {
     background-color: transparent;
-    align-self: baseline;
     border-radius: 0;
     appearance: none;
     &:focus {
@@ -140,6 +139,25 @@ a {
         }
         &::after {
             background-color: $primary;
+        }
+    }
+    &--toggle {
+        min-width: auto;
+        padding: 20px;
+        color: $black;
+        border: 0;
+        i.icon {
+            display: block;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+        &:hover {
+            color: $surface;
+        }
+        &.active {
+            i.icon {
+                transform: rotate(180deg);
+            }
         }
     }
     &--100 {

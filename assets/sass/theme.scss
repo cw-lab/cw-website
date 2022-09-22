@@ -1,0 +1,150 @@
+$smilebgcolor: #FCFCFC;
+$smileblue: #3A9AAF;
+$smileblack: #2E3638;
+
+body[class*='theme-'] {
+    a.logo {
+        margin-right: 10px;
+        + a.logo {
+            margin-right: auto;
+            img {
+                height: 35px;
+                @media screen and (max-width: 340px) {
+                    height: 30px;
+                }
+            }
+        }
+    }
+    header {
+        .member__list {
+            > li:first-child {
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.theme--smiletaiwan {
+    background-color: $smilebgcolor;
+
+    h1 .heading__icon--correct,
+    .h1 .heading__icon--correct,
+    h2 .heading__icon--correct,
+    .h2 .heading__icon--correct,
+    h3 .heading__icon--correct,
+    .h3 .heading__icon--correct,
+    h4 .heading__icon--correct,
+    .h4 .heading__icon--correct,
+    h5 .heading__icon--correct,
+    .h5 .heading__icon--correct {
+        color: $smileblue;
+    }
+    .btn--contained {
+        background-color: $smileblue;
+        border-color: $smileblue;
+        &::before, &::after {
+            display: none;
+        }
+        &:hover {
+            color: $smileblue;
+            background-color: $smilebgcolor;
+        }
+    }
+    .btn--text {
+        color: $smileblue;
+        text-decoration: none;
+        background-image: url('https://smiletaiwan.cw.com.tw/images/yellowblock.png');
+        background-repeat: repeat-x;
+        background-size: 12px;
+        background-position: left bottom;
+        &:hover {
+            color: $smileblack;
+            background-image: url('https://smiletaiwan.cw.com.tw/images/blueblock.png');
+            background-size: 1px;
+        }
+    }
+    .tab .tab__nav > ul li {
+        &.active,
+        &:hover {
+            color: $smileblue;
+        }
+        &.active {
+            border-color: $smileblue;
+        }
+    }
+    &.webaccess__page {
+        .message.message__belt--red {
+            background-color: $smileblue;
+        }
+        main {
+            color: $smileblack;
+            .marketing .marketing__action {
+                .action--status, .action--price, .action--notice {
+                    color: $smileblue;
+                    border-color: $smileblue;
+                }
+            }
+        }
+    }
+}
+
+$crossing-primary: #f60;
+$crossing-primary-hover: #f90;
+$crossingblack: #000;
+
+.theme--crossing {
+    h1 .heading__icon--correct,
+    .h1 .heading__icon--correct,
+    h2 .heading__icon--correct,
+    .h2 .heading__icon--correct,
+    h3 .heading__icon--correct,
+    .h3 .heading__icon--correct,
+    h4 .heading__icon--correct,
+    .h4 .heading__icon--correct,
+    h5 .heading__icon--correct,
+    .h5 .heading__icon--correct {
+        color: $crossing-primary;
+    }
+    .btn--contained {
+        background-color: $crossing-primary;
+        border-color: $crossing-primary;
+        &::before, &::after {
+            display: none;
+        }
+        &:hover {
+            background-color: $crossing-primary-hover;
+            border-color: $crossing-primary-hover;
+        }
+    }
+    .btn--text {
+        color: $crossing-primary;
+        &:hover {
+            color: $crossing-primary-hover;
+        }
+    }
+    .tab .tab__nav > ul li {
+        &.active,
+        &:hover {
+            color: $crossing-primary;
+        }
+        &.active {
+            border-color: $crossing-primary;
+        }
+    }
+    &.webaccess__page {
+        .message.message__belt--red {
+            background-color: $crossing-primary;
+        }
+        main {
+            color: $crossingblack;
+            .marketing .marketing__action {
+                .action--status, .action--price, .action--notice {
+                    color: $crossing-primary;
+                    border-color: $crossing-primary;
+                }
+            }
+        }
+    }
+}

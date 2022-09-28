@@ -3749,56 +3749,63 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
   width: 100%;
   height: 40px;
-  padding: 10px 20px;
   margin-bottom: 20px;
   font-size: .875rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: #EEEEEE;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
-@media screen and (min-width: 1024px) {
+@media print {
   .audio__player {
-    width: auto;
+    display: none;
   }
 }
 
-.audio__player.audio__player--disable {
+.audio__player.audio__player--disabled {
+  position: relative;
   color: #939EA7;
 }
 
-.audio__player.audio__player--disable::before {
-  content: "";
+.audio__player.audio__player--disabled::before {
+  content: '';
   display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
-.audio__player.audio__player--standby .preview, .audio__player.audio__player--disable .preview {
+.audio__player svg {
   display: block;
 }
 
-.audio__player.audio__player--standby .controls, .audio__player.audio__player--disable .controls {
-  display: none;
-}
-
-.audio__player .preview {
-  display: none;
+.audio__player .time {
+  margin-right: 10px;
+  text-align: right;
 }
 
 .audio__player .main-function {
-  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.audio__player .main-function .icon {
+.audio__player .play-pause-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3808,102 +3815,160 @@ main .ad.ad--970by250.opened {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 0.75rem;
-  font-size: 0.75rem;
+  width: .75rem;
+  height: .75rem;
+  margin-right: 10px;
   cursor: pointer;
 }
 
-.audio__player .time {
-  margin-right: 10px;
+.audio__player .play-pause-btn path {
+  fill: #fff;
+}
+
+.audio__player .loading {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: .75rem;
+  height: .75rem;
+}
+
+.audio__player .loading .spinner {
+  width: .75rem;
+  height: .75rem;
+  -webkit-animation: spin 0.4s linear infinite;
+          animation: spin 0.4s linear infinite;
+}
+
+.audio__player .loading .spinner svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.audio__player .loading .spinner svg circle {
+  stroke: #939EA7;
+}
+
+.audio__player .slider {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #D3D5D7;
+  cursor: pointer;
+}
+
+.audio__player .slider .progress {
+  position: absolute;
+  background-color: #D60C18;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.audio__player .slider .progress .pin {
+  position: absolute;
+  width: .625rem;
+  height: .625rem;
+  background-color: #D60C18;
+  border-radius: 50%;
+  pointer-events: all;
 }
 
 .audio__player .controls {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 307px;
 }
 
-.audio__player .controls > .slider {
-  position: relative;
-  width: 150px;
+.audio__player .controls .slider {
+  width: 100%;
   height: 3px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  background-color: #D3D5D7;
   border-radius: 5px;
-  cursor: pointer;
 }
 
-.audio__player .controls > .slider .progress {
-  position: absolute;
-  top: 0;
-  left: 0;
+.audio__player .controls .slider .progress {
+  width: 0;
   height: 100%;
-  background-color: #D60C18;
-  border-radius: inherit;
-  pointer-events: none;
 }
 
-.audio__player .controls > .slider .progress .pin {
-  position: absolute;
+.audio__player .controls .slider .progress .pin {
   top: 50%;
   right: 0;
-  height: .625rem;
-  width: .625rem;
-  background-color: #D60C18;
-  border-radius: 50%;
-  pointer-events: all;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
 
-.audio__player .volume {
-  position: relative;
-  display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 15px;
-  margin-right: 15px;
+.audio__player .controls span {
+  cursor: default;
 }
 
-@media screen and (min-width: 1024px) {
-  .audio__player .volume {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.audio__player .volume svg {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  cursor: pointer;
-}
-
-.audio__player .volume .volume-controls {
+.audio__player .speed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.audio__player .volume {
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.audio__player .volume .volume-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.audio__player .volume .volume-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.audio__player .volume .volume-controls {
+  position: absolute;
+  left: -50%;
+  bottom: 27px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  bottom: 26px;
-  left: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 40px;
   height: 100px;
   background-color: #fff;
@@ -3917,48 +3982,44 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player .volume .volume-controls .slider {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   width: 3px;
-  height: 100%;
-  background-color: #D3D5D7;
   border-radius: 3px;
-  cursor: pointer;
 }
 
 .audio__player .volume .volume-controls .slider .progress {
-  position: absolute;
-  left: 0;
   bottom: 0;
-  width: 100%;
   height: 50%;
-  background-color: #D60C18;
-  cursor: pointer;
+  width: 3px;
 }
 
 .audio__player .volume .volume-controls .slider .progress .pin {
-  position: absolute;
   top: 0;
   left: 50%;
-  height: .5rem;
-  width: .5rem;
-  background-color: #D60C18;
-  border-radius: 50%;
-  pointer-events: all;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.audio__player .speed {
-  margin-left: 10px;
-  width: 1.75rem;
-  cursor: pointer;
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(1turn);
+            transform: rotateZ(1turn);
+  }
 }
 
-@media screen and (min-width: 1024px) {
-  .audio__player .speed {
-    margin-left: 0;
+@keyframes spin {
+  from {
+    -webkit-transform: rotateZ(0);
+            transform: rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateZ(1turn);
+            transform: rotateZ(1turn);
   }
 }
 

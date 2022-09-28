@@ -1089,13 +1089,17 @@
                             隨台灣產業結構轉型，逐漸形成大企業獨佔出口額的局面，曾撐起台灣經濟的中小企業榮景不再，讓全民有感的實質薪資則是停滯16年，趕不上經濟成長。
                         </p>
                     </div>
-                    <div class="audio__player audio__player--standby align-items-center">
+                    <div class="audio__player">
                         <div class="main-function">
                             <div class="loading">
-                                <div class="spinner"></div>
+                                <div class="spinner">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                                        <circle cx="50" cy="50" fill="none" stroke-width="8" r="35" stroke-dasharray="164.93361431346415 56.97787143782138"></circle>
+                                    </svg>
+                                </div>
                             </div>
                             <div class="play-pause-btn">  
-                                <i id="playPause" class="icon icon-play-solid"></i>
+                                <i id="playPause" class="play-pause-icon icon icon-play-solid"></i>
                             </div>
                         </div>
                         <div class="preview">
@@ -1103,27 +1107,27 @@
                         </div>
                         <div class="controls">
                             <div class="time">
-                                <span class="current-time">0:00</span> / <span class="total-time">0:00</span>
+                                <span class="current-time">0:00</span>/<span class="total-time">0:00</span>
                             </div>
                             <div class="slider" data-direction="horizontal">
                                 <div class="progress">
                                     <div class="pin" id="progress-pin" data-method="rewind"></div>
                                 </div>
                             </div>
-                            <div class="volume">
-                                <div class="volume-btn">
-                                    <svg id="speaker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 1024"><path d="M637.01,7.4L325.41,276.8H88.41c-16.8,0-30.4,13.6-30.4,30.4v409.6c0,16.8,13.6,30.4,30.4,30.4h237l311.6,269.4c19.6,17,50.2,3,50.2-23V30.4c0-26-30.6-40-50.2-23Z"/><path d="M1047.64,274.89c-30.39-70.9-73.4-126.33-124.38-160.32-14.71-9.8-34.57-5.83-44.38,8.88s-5.83,34.57,8.88,44.38c40.63,27.09,75.58,72.83,101.06,132.29,26.93,62.83,41.17,136.55,41.17,213.17s-13.87,148.42-40.12,210.71c-24.84,58.96-59.04,104.8-98.9,132.57-14.5,10.1-18.07,30.05-7.96,44.55,6.22,8.93,16.17,13.71,26.29,13.71,6.31,0,12.69-1.86,18.26-5.75,49.8-34.69,91.74-90.1,121.29-160.23,29.53-70.08,45.14-151.54,45.14-235.56s-16.03-167.65-46.34-238.39Z"/><path d="M930.27,648.21c15.28-40.41,23.35-87.27,23.35-135.5s-8.29-96.35-23.98-137.14c-16.13-41.94-39.32-75.01-67.06-95.62-14.19-10.54-34.23-7.59-44.77,6.6-10.54,14.19-7.59,34.23,6.6,44.77,32.46,24.12,65.21,89.57,65.21,181.4,0,78.22-25.67,150.71-63.88,180.38-13.96,10.84-16.49,30.94-5.65,44.9,6.31,8.12,15.75,12.37,25.3,12.37,6.86,0,13.77-2.2,19.6-6.73,27.04-21,49.61-54,65.28-95.43Z"/></svg>
-                                </div>
-                                <div class="volume-controls hidden">
-                                    <div class="slider" data-direction="vertical">
-                                        <div class="progress">
-                                            <div class="pin" id="volume-pin" data-method="changeVolume"></div>
-                                        </div>
+                        </div>
+                        <div class="volume">
+                            <div class="volume-btn">
+                                <svg id="speaker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 1024"><path d="M579,1016.6l-311.6-269.4H30.4c-16.8,0-30.4-13.6-30.4-30.4V307.2c0-16.8,13.6-30.4,30.4-30.4h237L579,7.4c19.6-17,50.2-3,50.2,23V993.6c0,26-30.6,40-50.2,23Z"/><path d="M851.28,914.81c-10.12,0-20.06-4.78-26.29-13.71-10.1-14.5-6.54-34.45,7.96-44.55,39.86-27.77,74.06-73.61,98.9-132.57,26.25-62.29,40.12-135.15,40.12-210.71s-14.24-150.34-41.17-213.17c-25.48-59.46-60.43-105.2-101.06-132.29-14.71-9.8-18.68-29.67-8.88-44.38,9.8-14.71,29.67-18.68,44.38-8.88,50.99,33.99,94,89.43,124.38,160.32,30.32,70.73,46.34,153.17,46.34,238.39s-15.61,165.48-45.14,235.56c-29.55,70.13-71.49,125.53-121.29,160.23-5.57,3.88-11.95,5.75-18.26,5.75Z"/><path d="M787.38,750.37c-9.54,0-18.99-4.25-25.3-12.37-10.84-13.96-8.31-34.06,5.65-44.9,38.21-29.67,63.88-102.16,63.88-180.38,0-91.83-32.75-157.27-65.21-181.4-14.18-10.54-17.14-30.59-6.6-44.77,10.54-14.18,30.58-17.14,44.77-6.6,27.74,20.62,50.93,53.68,67.06,95.62,15.69,40.79,23.98,88.22,23.98,137.14s-8.08,95.09-23.35,135.5c-15.66,41.44-38.24,74.44-65.28,95.43-5.84,4.53-12.75,6.73-19.6,6.73Z"/></svg>
+                            </div>
+                            <div class="volume-controls hidden">
+                                <div class="slider" data-direction="vertical">
+                                    <div class="progress">
+                                        <div class="pin" id="volume-pin" data-method="changeVolume"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="speed">1X</div>
                         </div>
+                        <div class="speed">1X</div>
                         <audio crossorigin>
                             <source src="https://files.soundon.fm/1647930643562-a4344dd3-a623-4584-ac58-b426f3463d43.mp3" type="audio/mpeg">
                         </audio>
@@ -2706,7 +2710,7 @@
         })
     </script>
     <script>
-        $('.audio__player--disable').click(function() {
+        $('.audio__player--disabled').click(function() {
             $('.black').addClass('opened dialogs');
             $('body').addClass('message__open');
             $('#webAccessOnly').fadeIn();

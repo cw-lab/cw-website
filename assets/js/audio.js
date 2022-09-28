@@ -42,7 +42,7 @@ player.addEventListener('loadedmetadata', () => {
 });
 player.addEventListener('canplay', makePlay);
 player.addEventListener('ended', function(){
-  playPause.className = 'icon icon-play-solid';
+  playPause.className = "play-pause-icon icon icon-play-solid";
   player.currentTime = 0;
 });
 
@@ -155,14 +155,6 @@ function formatTime(time) {
   return min + ':' + ((sec<10) ? ('0' + sec) : sec);
 }
 
-function backwardPlay() {
-  player.currentTime = player.currentTime - 30;
-}
-
-function forwardPlay() {
-  player.currentTime = player.currentTime + 30;
-}
-
 let speedArray = ['1', '1.25', '1.5', '1.75', '2', '0.5', '0.75'];
 let clickCount = 0;
 function speedPlay() {
@@ -176,14 +168,11 @@ function speedPlay() {
 }
 
 function togglePlay() {
-  $('.audio__player').removeClass('audio__player--standby');
-  $('.preview').animate({width: 'hide'});
-  $('.controls').animate({width: 'show'});
   if(player.paused) {
-    playPause.className = 'icon icon-pause-solid';
+    playPause.className = "play-pause-icon icon icon-pause-solid";
     player.play();
   } else {
-    playPause.className = 'icon icon-play-solid';
+    playPause.className = "play-pause-icon icon icon-play-solid";
     player.pause();
   }  
 }
@@ -201,7 +190,7 @@ function directionAware() {
     volumeControls.style.bottom = '-164px';
     volumeControls.style.left = '-3px';
   } else {
-    volumeControls.style.bottom = '26px';
+    volumeControls.style.bottom = '27px';
     volumeControls.style.left = '50%';
   }
 }

@@ -6199,9 +6199,9 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -6209,7 +6209,6 @@ main .ad.ad--970by250.opened {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 20px;
-  width: 100%;
   height: 40px;
   margin-bottom: 20px;
   font-size: .875rem;
@@ -6225,6 +6224,14 @@ main .ad.ad--970by250.opened {
   .audio__player {
     display: none;
   }
+}
+
+.audio__player.audio__player--standby .preview, .audio__player.audio__player--disabled .preview {
+  display: block;
+}
+
+.audio__player.audio__player--standby .controls, .audio__player.audio__player--standby .volume, .audio__player.audio__player--standby .speed, .audio__player.audio__player--disabled .controls, .audio__player.audio__player--disabled .volume, .audio__player.audio__player--disabled .speed {
+  display: none;
 }
 
 .audio__player.audio__player--disabled {
@@ -6303,6 +6310,10 @@ main .ad.ad--970by250.opened {
   stroke: #939EA7;
 }
 
+.audio__player .preview {
+  display: none;
+}
+
 .audio__player .slider {
   position: relative;
   -webkit-box-flex: 1;
@@ -6344,7 +6355,7 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player .controls .slider {
-  width: 100%;
+  width: 150px;
   height: 3px;
   border-radius: 5px;
 }

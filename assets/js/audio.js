@@ -38,7 +38,6 @@ player.addEventListener('timeupdate', updateProgress);
 player.addEventListener('volumechange', updateVolume);
 player.addEventListener('loadedmetadata', () => {
   previewTime.textContent = formatTime(player.duration);
-  totalTime.textContent = formatTime(player.duration);
 });
 player.addEventListener('canplay', makePlay);
 player.addEventListener('ended', function(){
@@ -168,6 +167,8 @@ function speedPlay() {
 }
 
 function togglePlay() {
+  $('.audio__player').removeClass('audio__player--standby');
+  totalTime.textContent = formatTime(player.duration);
   if(player.paused) {
     playPause.className = "play-pause-icon icon icon-pause-solid";
     player.play();

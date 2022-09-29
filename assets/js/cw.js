@@ -97,6 +97,7 @@ $(function() {
         }
         if ($(this).hasClass("dialogs")) {
             $('.black').removeClass('opened dialogs');
+            $('body').removeClass('message__open');
             $('.message--dialogs').fadeOut(200);
         }
         if ($(this).hasClass("search__opened")) {

@@ -96,8 +96,8 @@ function () {
       this.playPauseBtn.addEventListener('click', this.togglePlay.bind(self));
       this.player.addEventListener('timeupdate', this.updateProgress.bind(self));
       this.player.addEventListener('volumechange', this.updateVolume.bind(self));
-      this.player.addEventListener('loadedmetadata', function () {
-        _this.previewTime.textContent = GreenAudioPlayer.formatTime(self.player.duration);
+      this.player.addEventListener('loadedmetadata', function (e) {
+        _this.previewTime.textContent = e.target.dataset.time;
         _this.totalTime.textContent = GreenAudioPlayer.formatTime(self.player.duration);
       });
       this.player.addEventListener('seeking', this.showLoadingIndicator.bind(self));

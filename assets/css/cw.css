@@ -7287,8 +7287,9 @@ ul.article__provide li span i.icon {
 
 .article__content p,
 .article__content ul,
-.article__content ol {
-  font-size: 1.125em;
+.article__content ol,
+.article__content .accordion__item__panel {
+  font-size: 1.125rem;
   line-height: 1.7;
 }
 
@@ -7471,8 +7472,7 @@ ul.article__provide li span i.icon {
   position: relative;
   font-size: 1.125em;
   line-height: 1.5;
-  border: solid #D3D5D7;
-  border-width: 1px 0 0 1px;
+  border-width: 0;
 }
 
 .article__content table::before {
@@ -7488,18 +7488,22 @@ ul.article__provide li span i.icon {
 .article__content table th, .article__content table td {
   padding: 5px;
   border: solid #D3D5D7;
-  border-width: 0 1px 1px 0;
 }
 
 .article__content table th {
   background-color: #EEEEEE;
   font-weight: 600;
+  border-width: 1px 1px 0;
 }
 
 @media screen and (min-width: 1024px) {
   .article__content table th {
     font-weight: 500;
   }
+}
+
+.article__content table td {
+  border-width: 1px;
 }
 
 .article__content > .article__table {
@@ -7510,7 +7514,7 @@ ul.article__provide li span i.icon {
 }
 
 .article__content > .article__table:not(.article__table--noscroll):not(.article__table--flexible) {
-  overflow: scroll;
+  overflow: auto hidden;
 }
 
 @media screen and (min-width: 1024px) {
@@ -8446,6 +8450,18 @@ article.article__level--2 ul.article__keyword li a {
   height: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.article__page .card__item--i2p .card__img {
+  background-color: #f5f5f5;
+}
+
+.article__page .card__item--i2p .card__img img {
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .article__page .dot-list {

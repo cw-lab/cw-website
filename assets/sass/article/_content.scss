@@ -1,7 +1,8 @@
 p,
 ul,
-ol {
-    font-size: 1.125em;
+ol,
+.accordion__item__panel {
+    font-size: 1.125rem;
     line-height: 1.7;
 }
 p {
@@ -136,8 +137,7 @@ table {
     position: relative;
     font-size: 1.125em;
     line-height: 1.5;
-    border: solid $gray-200;
-    border-width: 1px 0 0 1px;
+    border-width: 0;
     &::before {
         @include beforeafter(url(../images/common/logo.svg), block);
         position: absolute;
@@ -149,14 +149,17 @@ table {
     th, td {
         padding: 5px;
         border: solid $gray-200;
-        border-width: 0 1px 1px 0;
     }
     th {
         background-color: $gray-100;
         font-weight: 600;
+        border-width: 1px 1px 0;
         @media screen and (min-width: 1024px) {
             font-weight: 500;
         }
+    }
+    td {
+        border-width: 1px;
     }
 }
 > .article__table {
@@ -166,7 +169,7 @@ table {
     padding-bottom: 45px;
     &:not(.article__table--noscroll) {
         &:not(.article__table--flexible) {
-            overflow: scroll;
+            overflow: auto hidden;
             > table {
                 @media screen and (min-width: 1024px) {
                     width: 100% !important;

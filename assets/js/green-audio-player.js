@@ -48,7 +48,7 @@ function () {
     this.previewTime = this.audioPlayer.querySelector('.preview__total-time');
     this.totalTime = this.audioPlayer.querySelector('.controls__total-time');
     this.speaker = this.audioPlayer.querySelector('.volume__speaker');
-    this.speedBtn = this.audioPlayer.querySelector('.speed');
+    this.speedBtn = this.audioPlayer.querySelector('.speed span');
     this.draggableClasses = ['pin'];
     this.currentlyDragged = null;
     this.speedArray = ['1', '1.25', '1.5', '1.75', '2', '0.5', '0.75'];
@@ -308,6 +308,7 @@ function () {
               </div>
               <div class="play-pause-btn">
                   <i class="play-pause-icon icon icon-play-solid"></i>
+                  <div class="player__instruction player__instruction--step1">Sky 幫你讀文章</div>
               </div>
               <div class="preview">
                   文章語音朗讀・<span class="preview__total-time">0:00</span>
@@ -332,7 +333,10 @@ function () {
                       </div>
                   </div>
               </div>
-              <div class="speed">1X</div>`;
+              <div class="speed">
+                <span>1X</span>
+                <div class="player__instruction player__instruction--step2">調整朗讀語速</div>
+              </div>`;
     }
   }, {
     key: "formatTime",
@@ -353,6 +357,7 @@ function () {
     value: function playPlayer(player) {
       var playPauseButton = player.parentElement.querySelector('.play-pause-icon');
       player.parentElement.classList.remove("audio__player--standby");
+      player.parentElement.classList.add("audio__player--playing");
       playPauseButton.className = "play-pause-icon icon icon-pause-solid";
       player.play();
     }

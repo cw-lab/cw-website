@@ -52,6 +52,9 @@
             height: 100%;
             z-index: 1;
         }
+        .player__instruction {
+            display: none;
+        }
     }
 
     svg, img, i.icon {
@@ -60,7 +63,8 @@
 
     .play-pause-btn {
         display: none;
-        padding: 10px;
+        position: relative;
+        padding: 13px 10px;
         cursor: pointer;
     }
 
@@ -137,11 +141,12 @@
     }
 
     .speed {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 30px;
-        height: 30px;
+        height: 40px;
         margin-left: 10px;
         cursor: pointer;
         @media screen and (min-width: 1024px) {
@@ -220,6 +225,78 @@
             }
         }
     }
+
+    .player__instruction {
+        position: absolute;
+        top: calc(100% + 13px);
+        padding: 15px 20px;
+        color: $white;
+        font-size: 0.875rem;
+        white-space: nowrap;
+        background-color: $surface;
+        z-index: 1;
+        @media screen and (min-width: 1024px) {
+            transform: translateX(-50%);
+        }
+        &.player__instruction--step1 {
+            left: -10px;
+            @media screen and (min-width: 1024px) {
+                left: 50%;
+            }
+            &::before {
+                left: 26px;
+                @media screen and (min-width: 1024px) {
+                    left: 50%;
+                }
+            }
+        }
+        &.player__instruction--step2 {
+            right: -20px;
+            @media screen and (min-width: 1024px) {
+                left: 50%;
+                right: auto;
+            }
+            &::before {
+                right: 15px;
+                @media screen and (min-width: 1024px) {
+                    left: 50%;
+                    right: auto;
+                }
+            }
+        }
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            top: -13px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 10px 20px 10px;
+            border-color: transparent transparent $surface transparent;
+            transform: translateX(-50%);
+            @media screen and (min-width: 1024px) {
+                left: 50%;
+            }
+        }
+        @at-root .audio__player--playing#{&} {
+            &.player__instruction--step1 {
+                display: none;
+            }
+            &.player__instruction--step2 {
+                animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+                animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+            }
+        }
+        @at-root .audio__player--standby#{&} {
+            &.player__instruction--step1 {
+                animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+                animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+            }
+            &.player__instruction--step2 {
+                display: none;
+            }
+        }
+    }
 }
 
 @keyframes spin {
@@ -228,5 +305,24 @@
     }
     to {
         transform: rotateZ(1turn);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        margin-top: 0;
+    }
+    to {
+        margin-top: 10px;
     }
 }

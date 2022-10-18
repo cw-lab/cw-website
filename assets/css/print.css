@@ -3822,13 +3822,18 @@ main .ad.ad--970by250.opened {
   z-index: 1;
 }
 
+.audio__player.audio__player--disabled .player__instruction {
+  display: none;
+}
+
 .audio__player svg, .audio__player img, .audio__player i.icon {
   display: block;
 }
 
 .audio__player .play-pause-btn {
   display: none;
-  padding: 10px;
+  position: relative;
+  padding: 13px 10px;
   cursor: pointer;
 }
 
@@ -3921,6 +3926,7 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player .speed {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3931,7 +3937,7 @@ main .ad.ad--970by250.opened {
       -ms-flex-pack: center;
           justify-content: center;
   width: 30px;
-  height: 30px;
+  height: 40px;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -4023,6 +4029,106 @@ main .ad.ad--970by250.opened {
           transform: translate(-50%, -50%);
 }
 
+.audio__player .player__instruction {
+  position: absolute;
+  top: calc(100% + 13px);
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  background-color: #003a9f;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.audio__player .player__instruction.player__instruction--step1 {
+  left: -10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction.player__instruction--step1 {
+    left: 50%;
+  }
+}
+
+.audio__player .player__instruction.player__instruction--step1::before {
+  left: 26px;
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction.player__instruction--step1::before {
+    left: 50%;
+  }
+}
+
+.audio__player .player__instruction.player__instruction--step2 {
+  right: -20px;
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction.player__instruction--step2 {
+    left: 50%;
+    right: auto;
+  }
+}
+
+.audio__player .player__instruction.player__instruction--step2::before {
+  right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction.player__instruction--step2::before {
+    left: 50%;
+    right: auto;
+  }
+}
+
+.audio__player .player__instruction::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -13px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #003a9f transparent;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media screen and (min-width: 1024px) {
+  .audio__player .player__instruction::before {
+    left: 50%;
+  }
+}
+
+.audio__player--playing.audio__player .player__instruction.player__instruction--step1 {
+  display: none;
+}
+
+.audio__player--playing.audio__player .player__instruction.player__instruction--step2 {
+  animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+          animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+}
+
+.audio__player--standby.audio__player .player__instruction.player__instruction--step1 {
+  animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+          animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+}
+
+.audio__player--standby.audio__player .player__instruction.player__instruction--step2 {
+  display: none;
+}
+
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotateZ(0);
@@ -4042,6 +4148,42 @@ main .ad.ad--970by250.opened {
   to {
     -webkit-transform: rotateZ(1turn);
             transform: rotateZ(1turn);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 10px;
+  }
+}
+
+@keyframes bounce {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 10px;
   }
 }
 

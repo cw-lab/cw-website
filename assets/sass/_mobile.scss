@@ -4,6 +4,9 @@ body.mobile__device {
             position: relative;
             z-index: 1;
         }
+        >.audio__player {
+          z-index: 2;
+        }
     }
 }
 

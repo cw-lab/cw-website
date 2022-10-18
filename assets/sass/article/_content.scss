@@ -151,15 +151,20 @@ table {
         border: solid $gray-200;
     }
     th {
-        background-color: $gray-100;
         font-weight: 600;
-        border-width: 1px 1px 0;
+        background-color: $gray-100;
+        border-width: 1px;
         @media screen and (min-width: 1024px) {
             font-weight: 500;
         }
     }
     td {
         border-width: 1px;
+    }
+    thead {
+        th {
+            border-width: 1px 1px 0;
+        }
     }
 }
 > .article__table {

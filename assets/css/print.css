@@ -5041,9 +5041,9 @@ ul.article__provide li span i.icon {
 }
 
 .article__content table th {
-  background-color: #EEEEEE;
   font-weight: 600;
-  border-width: 1px 1px 0;
+  background-color: #EEEEEE;
+  border-width: 1px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -5054,6 +5054,10 @@ ul.article__provide li span i.icon {
 
 .article__content table td {
   border-width: 1px;
+}
+
+.article__content table thead th {
+  border-width: 1px 1px 0;
 }
 
 .article__content > .article__table {

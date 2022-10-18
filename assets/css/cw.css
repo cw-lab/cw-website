@@ -6286,8 +6286,7 @@ main .ad.ad--970by250.opened {
 
 .audio__player .play-pause-btn {
   display: none;
-  position: relative;
-  padding: 13px 10px;
+  padding: calc((40px - .875rem) / 2) 10px;
   cursor: pointer;
 }
 
@@ -6391,7 +6390,7 @@ main .ad.ad--970by250.opened {
       -ms-flex-pack: center;
           justify-content: center;
   width: 30px;
-  height: 40px;
+  height: 100%;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -6502,17 +6501,17 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player .player__instruction.player__instruction--step1 {
-  left: -10px;
+  left: 0;
 }
 
 @media screen and (min-width: 1024px) {
   .audio__player .player__instruction.player__instruction--step1 {
-    left: 50%;
+    left: calc((.875rem + 20px) / 2 + 10px);
   }
 }
 
 .audio__player .player__instruction.player__instruction--step1::before {
-  left: 26px;
+  left: calc((.875rem + 20px) / 2 + 10px);
 }
 
 @media screen and (min-width: 1024px) {

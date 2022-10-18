@@ -69,8 +69,7 @@
 
     .play-pause-btn {
         display: none;
-        position: relative;
-        padding: 13px 10px;
+        padding: calc((40px - .875rem) / 2) 10px;
         cursor: pointer;
     }
 
@@ -152,7 +151,7 @@
         align-items: center;
         justify-content: center;
         width: 30px;
-        height: 40px;
+        height: 100%;
         margin-left: 10px;
         cursor: pointer;
         @media screen and (min-width: 1024px) {
@@ -245,12 +244,12 @@
             transform: translateX(-50%);
         }
         &.player__instruction--step1 {
-            left: -10px;
+            left: 0;
             @media screen and (min-width: 1024px) {
-                left: 50%;
+                left: calc((.875rem + 20px) / 2 + 10px);
             }
             &::before {
-                left: 26px;
+                left: calc((.875rem + 20px) / 2 + 10px);
                 @media screen and (min-width: 1024px) {
                     left: 50%;
                 }

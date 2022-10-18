@@ -470,3 +470,10 @@ function openDictionary() {
         });
     });
 }
+
+// 紀錄：TTS 教學階段僅出現一次
+if ( sessionStorage.getItem('player__instruction') ) {
+  $('body').addClass('player__instruction--shown')
+}
+
+sessionStorage.setItem('player__instruction', true);

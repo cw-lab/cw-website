@@ -3784,6 +3784,10 @@ main .ad.ad--970by250.opened {
   margin-bottom: 0;
 }
 
+.player__instruction--shown .audio__player .player__instruction {
+  display: none;
+}
+
 .audio__player.audio__player--standby, .audio__player.audio__player--disabled {
   position: relative;
   width: auto;

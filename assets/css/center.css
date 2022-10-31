@@ -1711,6 +1711,14 @@
   }
 }
 
+.center__page .message--dialogs .card__item {
+  border: 1px solid #D3D5D7;
+}
+
+.center__page .message--dialogs .card__item h3 {
+  line-height: 1.5;
+}
+
 .right__page section {
   padding-top: 60px;
   padding-bottom: 60px;

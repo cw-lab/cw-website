@@ -49,6 +49,11 @@ $(function() {
 		});
 	}
 	naviHeigh(sliderWidth);
+
+	$('.menubar__user--login').on('click', function() {
+		$(this).siblings('.menubar__user--member').slideToggle();
+	});
+
 	$(window).load(function() {
 		var width = $(window).width(),
 			height = $(window).height();
@@ -74,12 +79,17 @@ $(function() {
 		}
 		$(window).scroll(function() {
 			var width = $(window).width(),
-				height = $(window).height(),
-				scroll = $(window).scrollTop();
+					height = $(window).height(),
+					scroll = $(window).scrollTop();
 			if (scroll >= height) {
 				$(".sns__group").css('opacity', 1);
 			} else {
 				$(".sns__group").css('opacity', 0);
+			}
+			if ( scroll >= ((width * .428571428571) - 65) ) {
+				$("header").addClass('behavior--scroll');
+			} else {
+				$("header").removeClass('behavior--scroll');
 			}
 		});
 

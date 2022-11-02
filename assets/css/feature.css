@@ -30,6 +30,8 @@
 .feature__page header {
   position: fixed;
   border-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .mode--dark.feature__page header {
@@ -37,17 +39,13 @@
   background-color: rgba(23, 23, 23, 0.4);
 }
 
-.mode--dark.feature__page header.behavior--scroll {
-  background-color: #171717;
-  border-color: #171717;
-}
-
 .mode--light.feature__page header {
   color: #171717;
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.mode--light.feature__page header.behavior--scroll {
+.feature__page header.behavior--scroll {
+  color: #171717;
   background-color: #fff;
   border-color: #D3D5D7;
 }

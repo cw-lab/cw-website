@@ -78,6 +78,74 @@
       background-color: currentColor;
     }
   }
+  .scroll--down {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    margin: 20px auto 0;
+    font-size: 1rem;
+    border: 1px solid $white;
+    border-radius: .75rem;
+    overflow: hidden; 
+    cursor: pointer;
+    @media only screen and (hover: none) and (pointer: coarse) {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+    }
+    &::before,
+    &::after {
+      @include beforeafter('', block);
+      @media only screen and (hover: none) and (pointer: coarse) {
+        display: none;
+      }
+    }
+    &::before {
+      width: 100%;
+      padding-top: 166.6666666667%;
+    }
+    &::after {
+      position: absolute;
+      top: .5em;
+      left: 50%;
+      width: 2px;
+      height: .5em;
+      margin-left: -1px;
+      background-color: $white;
+      border-radius: 2px;
+      animation: scrollDown 1.2s ease infinite;
+    }
+    i {
+      display: none;
+      color: $white;
+      font-weight: bold;
+      animation: scrollDown 1.2s ease infinite;
+      @media only screen and (hover: none) and (pointer: coarse) {
+        display: block;
+      }
+    }
+  }
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-.25em);
+      opacity: 0;
+    }
+    30% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    70% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(.25em);
+      opacity: 0;
+    }
+  }
 	section {
 		border-top: 1px solid $gray-200;
 		&:first-child {
@@ -422,14 +490,13 @@
 					position: relative;
 					text-shadow: 1px 1px 0 rgba($black, 0.5);
 					z-index: 3;
-					> * {
-						display: block;
-					}
 					h1 {
+						display: block;
 						color: $white;
 						font-weight: 500;
 					}
 					.h2 {
+						display: block;
 						color: $gray-200;
 					}
 				}

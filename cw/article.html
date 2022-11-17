@@ -1089,11 +1089,9 @@
                             隨台灣產業結構轉型，逐漸形成大企業獨佔出口額的局面，曾撐起台灣經濟的中小企業榮景不再，讓全民有感的實質薪資則是停滯16年，趕不上經濟成長。
                         </p>
                     </div>
-                    <div class="audio__player audio__player--standby">
-                        <audio crossorigin data-time="8:42">
-                            <source src="https://storage.googleapis.com/www-cw-com-tw/tts/202209/tts-632fd3a674a72.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
+                    <audio class="audio--tts" data-able="true" crossorigin data-time="08:42">
+                        <source src="https://storage.googleapis.com/www-cw-com-tw/tts/202209/tts-632fd3a674a72.mp3" type="audio/mpeg"/>
+                    </audio>
                     <div class="article__img">
                         <span class="imgzoom lazyload__group" gtm-name="function" eventaction="article_pic_zoom" data-zoom="https://storage.googleapis.com/www-cw-com-tw/article/202010/article-5f97c91871b07.JPG">
                             <picture>
@@ -1174,11 +1172,9 @@
                     </div>
                 </div>
                 <div class="article__content py20">
-                  <div class="audio__player audio__player--disabled">
-                        <audio crossorigin data-time="8:12">
-                            <source src="../assets/images/1_second_of_silence.mp3" type="audio/mpeg"/>
-                        </audio>
-                    </div>
+                    <audio class="audio--tts" data-able="false" crossorigin data-time="08:12">
+                        <source src="../assets/images/1_second_of_silence.mp3" type="audio/mpeg"/>
+                    </audio>
                     <p>
                         台灣，是一座由「中小企業」撐起的海島。手提一卡皮箱，全球跑透透的中小企業頭家們，挹注這座海島賴以為生的國際貿易與經濟發展命脈。「以前資本額8億台幣以上就算大企業，現在可能10億都不算大」中信金融管理學院教授施光訓說。
                     </p>
@@ -2377,7 +2373,7 @@
                 <p>立刻訂閱全閱讀，即可享全站不限篇數閱讀</p>
             </div>
             <div class="message__btn">
-                <button class="btn btn--outlined">瞭解更多</button>
+                <button class="btn btn--outlined">了解更多</button>
                 <button class="btn btn--contained">立即訂閱</button>
             </div>
         </div>
@@ -2387,7 +2383,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <script type="text/javascript" src="../assets/js/cw.js"></script>
     <script type="text/javascript" src="../assets/js/article.js"></script>
-    <script type="text/javascript" src="../assets/js/green-audio-player.js"></script>
+    <script type="text/javascript" src="../assets/js/audioplayer.js"></script>
     <script>
         $(function() {
             var save = $('.function__save').data('tooltips'),
@@ -2669,13 +2665,7 @@
         })
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.audio__player').forEach(element => {
-                new GreenAudioPlayer(`.${element.classList[1]}`, {
-                    stopOthersOnPlay: true
-                });
-            });
-        });
+        $('audio.audio--tts').audioPlayer();
         $('.audio__player--disabled').click(function() {
             $('.black').addClass('opened dialogs');
             $('body').addClass('message__open');

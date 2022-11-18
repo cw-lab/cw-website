@@ -17,8 +17,6 @@
       return !!(audioElement.canPlayType && audioElement.canPlayType('audio/' + file.split('.').pop().toLowerCase() + ';').replace(/no/, ''));
     };
 
-  console.log(speedArray);
-
   $.fn.audioPlayer = function(params) {
     var params = $.extend({
         classPrefix: 'audio__player',

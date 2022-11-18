@@ -216,6 +216,7 @@
     }
 
     .audio__player--speed {
+      position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -280,7 +281,7 @@
                 left: 50%;
             }
         }
-        @at-root .audio__player--playing#{&} {
+        @at-root .audio__player--played#{&} {
             &.player__instruction--step1 {
                 display: none;
             }

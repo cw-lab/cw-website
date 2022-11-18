@@ -4048,6 +4048,7 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player .audio__player--speed {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4149,11 +4150,11 @@ main .ad.ad--970by250.opened {
   }
 }
 
-.audio__player--playing.audio__player .player__instruction.player__instruction--step1 {
+.audio__player--played.audio__player .player__instruction.player__instruction--step1 {
   display: none;
 }
 
-.audio__player--playing.audio__player .player__instruction.player__instruction--step2 {
+.audio__player--played.audio__player .player__instruction.player__instruction--step2 {
   animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
   -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
           animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);

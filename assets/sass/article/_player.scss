@@ -1,10 +1,22 @@
+.article__audio--tts {
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        width: auto;
+    }
+    > div {
+        width: 100%;
+        @media screen and (min-width: 1024px) {
+            width: auto;
+        }
+    }
+}
+
 .audio__player {
     display: inline-flex;
     align-items: center;
     padding: 0 20px 0 10px;
     width: 100%;
     height: 40px;
-    margin-bottom: 20px;
     font-size: .875rem;
     user-select: none;
     background-color: $gray-100;
@@ -286,13 +298,13 @@
                 display: none;
             }
             &.player__instruction--step2 {
-                animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+                animation: bounceInstr .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
                 animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
             }
         }
         @at-root .audio__player--standby#{&} {
             &.player__instruction--step1 {
-                animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+                animation: bounceInstr .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
                 animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
             }
             &.player__instruction--step2 {
@@ -321,7 +333,7 @@
     }
 }
 
-@keyframes bounce {
+@keyframes bounceInstr {
     from {
         margin-top: 0;
     }

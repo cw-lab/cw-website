@@ -86,7 +86,7 @@
           'height': 0,
           'visibility': 'hidden'
         });
-        thePlayer.append('<div class="' + cssClass.previewGroup + '"><div class="' + cssClass.preview + '">文章語音朗讀・</div><div class="' + cssClass.time + ' ' + cssClass.timeDuration + '"></div></div><div class="' + cssClass.functionGroup + '"><div class="' + cssClass.time + ' ' + cssClass.timeCurrent + '"></div> / <div class="' + cssClass.time + ' ' + cssClass.timeDuration + '"></div><div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div><div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '"><i class="icon icon-volume"></i></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div><div class="' + cssClass.speedButton + '"><span>1X</span><div class="player__instruction player__instruction--step2">調整朗讀語速</div></div></div>');
+        thePlayer.append('<div class="' + cssClass.previewGroup + '"><div class="' + cssClass.preview + '">文章語音朗讀・</div><div class="' + cssClass.time + ' ' + cssClass.timeDuration + '">' + durationTime + '</div></div><div class="' + cssClass.functionGroup + '"><div class="' + cssClass.time + ' ' + cssClass.timeCurrent + '"></div> / <div class="' + cssClass.time + ' ' + cssClass.timeDuration + '">' + durationTime + '</div><div class="' + cssClass.bar + '"><div class="' + cssClass.barLoaded + '"></div><div class="' + cssClass.barPlayed + '"></div></div><div class="' + cssClass.volume + '"><div class="' + cssClass.volumeButton + '"><i class="icon icon-volume"></i></div><div class="' + cssClass.volumeAdjust + '"><div><div></div></div></div></div><div class="' + cssClass.speedButton + '"><span>1X</span><div class="player__instruction player__instruction--step2">調整朗讀語速</div></div></div>');
 
         var theBar = thePlayer.find('.' + cssClass.bar),
           barPlayed = thePlayer.find('.' + cssClass.barPlayed),
@@ -119,7 +119,6 @@
         if (Math.round(theAudio.volume * 1000) / 1000 == volumeTestValue) theAudio.volume = volumeTestDefault;
         else thePlayer.addClass(cssClass.noVolume);
 
-        timeDuration.html('&hellip;');
         timeCurrent.text(secondsToTime(0));
 
         theAudio.addEventListener('loadeddata', function() {

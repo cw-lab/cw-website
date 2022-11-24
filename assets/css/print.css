@@ -3748,6 +3748,26 @@ main .ad.ad--970by250.opened {
   color: #D60C18;
 }
 
+.article__audio--tts {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .article__audio--tts {
+    width: auto;
+  }
+}
+
+.article__audio--tts > div {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .article__audio--tts > div {
+    width: auto;
+  }
+}
+
 .audio__player {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3758,7 +3778,6 @@ main .ad.ad--970by250.opened {
   padding: 0 20px 0 10px;
   width: 100%;
   height: 40px;
-  margin-bottom: 20px;
   font-size: .875rem;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -4155,13 +4174,13 @@ main .ad.ad--970by250.opened {
 }
 
 .audio__player--played.audio__player .player__instruction.player__instruction--step2 {
-  animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+  animation: bounceInstr .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
   -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
           animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
 }
 
 .audio__player--standby.audio__player .player__instruction.player__instruction--step1 {
-  animation: bounce .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
+  animation: bounceInstr .7s infinite alternate, fadeIn 0.3s 30s forwards alternate-reverse;
   -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
           animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
 }
@@ -4210,7 +4229,7 @@ main .ad.ad--970by250.opened {
   }
 }
 
-@-webkit-keyframes bounce {
+@-webkit-keyframes bounceInstr {
   from {
     margin-top: 0;
   }
@@ -4219,7 +4238,7 @@ main .ad.ad--970by250.opened {
   }
 }
 
-@keyframes bounce {
+@keyframes bounceInstr {
   from {
     margin-top: 0;
   }
@@ -4604,7 +4623,6 @@ main .ad.ad--970by250.opened {
 
 .article__head {
   position: relative;
-  z-index: 4;
 }
 
 .article__head .article__img img {

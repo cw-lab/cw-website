@@ -962,7 +962,7 @@
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
-                            word-break: break-all;
+                            white-space: nowrap;
                             .click__area {
                                 cursor: pointer;
                             }
@@ -972,6 +972,7 @@
                             @media screen and (min-width: 360px) {
                                 max-width: 50%;
                                 text-align: right;
+                                padding-left: 10px;
                             }
                         }
                     }

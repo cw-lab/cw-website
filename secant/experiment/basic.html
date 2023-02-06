@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../assets/css/cw.css">
     <link rel="stylesheet" href="../../assets/css/secant_test.css">
+    <link rel="stylesheet" href="../../assets/css/secant_abtest.css">
 </head>
 
 <body class="webaccess__page webaccess__page--index">
@@ -127,6 +128,82 @@
     <script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
     <script type="text/javascript" src="../../assets/js/lazysizes.min.js"></script>
     <script type="text/javascript" src="../../assets/js/cw.js"></script>
+    <script>
+        $('form h2').remove();
+        $('.plan .plan__item .btn').addClass('btn--contained').removeClass('btn--outlined');
+        const intro = `<section class="intro">
+            <div class="container">
+                <div class="intro--text">
+                    <h1 class="mt0 mb10">
+                        關鍵時刻<br/>擁有清澈的判斷力
+                    </h1>
+                    <p class="my0">
+                        天下全閱讀是天下雜誌推出的數位訂閱服務。成為訂戶後，即可進入天下網站或是天下雜誌 App，無限閱讀天下雜誌歷年超過四萬篇文章、每日新聞即時解讀、數位多媒體互動專輯等內容。
+                    </p>
+                </div>
+                <div class="intro--img">
+                    <img src="../../assets/images/secant/webaccess-pe@2x.png" alt="紙本+數位">
+                </div>
+            </div>
+        </section>`;
+        const faq = `<section class="faq">
+            <div class="container">
+                <h2 class="text-center mb20">全閱讀問與答</h2>
+                <div class="accordion__group">
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            <span class="number">1.</span><span class="txt">天下數位全閱讀可以試用嗎？</span>
+                            <i class="icon icon-plus"></i>
+                        </div>
+                        <div class="accordion__item__panel">
+                            <p class="mt0">
+                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            <span class="number">2.</span><span class="txt">如何取消訂閱？退款規則是什麼？</span>
+                            <i class="icon icon-plus"></i>
+                        </div>
+                        <div class="accordion__item__panel">
+                            <p class="mt0">
+                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            <span class="number">3.</span><span class="txt">不同管道下單，金額為何不相同？</span>
+                            <i class="icon icon-plus"></i>
+                        </div>
+                        <div class="accordion__item__panel">
+                            <p class="mt0">
+                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <div class="accordion__item__header">
+                            <span class="number">4.</span><span class="txt">自動續訂何時會被扣款？</span>
+                            <i class="icon icon-plus"></i>
+                        </div>
+                        <div class="accordion__item__panel">
+                            <p class="mt0">
+                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>`;
+        $('main').prepend(intro);
+        $('main').append(faq);
+    </script>
 </body>
 
 </html>

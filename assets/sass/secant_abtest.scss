@@ -1,0 +1,124 @@
+@import "_basic";
+@import "_sheet";
+@import "_variable";
+
+.webaccess__page {
+    main {
+        margin-top: 0;
+        .plan {
+            gap: 20px;
+            .text-center {
+                text-align-last: left;
+            }
+            .plan__item {
+                background-color: $white;
+                border: 1px solid $gray-200;
+                @media screen and (min-width: 768px) {
+                    width: calc((100% - 40px) / 3);
+                }
+                &.plan__item--highlight {
+                    border-color: $surface;
+                    @media screen and (max-width: 767px) {
+                        order: -1;
+                    }
+                }
+            }
+            .plan__description--main {
+                padding: 30px;
+            }
+            .plan__item__img {
+                display: none;
+            }
+            .plan__item__spec {
+                width: auto;
+                height: auto;
+                padding: 5px 1rem;
+                background-color: $surface;
+                transform: translate(-.5rem, -50%);
+                &::before {
+                    top: 100%;
+                    border-width: 0 8px 6px 0;
+                    border-color: transparent $surface transparent transparent;
+                }
+                span {
+                    position: static;
+                    transform: none;
+                }
+            }
+            .plan__item__title {
+                margin: 0;
+                font-size: 1rem;
+                font-weight: normal;
+            }
+            .plan__option__txt {
+                font-size: 1.625rem;
+                line-height: 1;
+                @media screen and (min-width: 1024px) {
+                    font-size: 2rem;
+                }
+            }
+            .plan__item__group {
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+            .plan__item__right {
+                margin-left: 0;
+                margin-top: 20px !important;
+                margin-bottom: 0 !important;
+                order: 1;
+            }
+            .plan__option__txt--complement {
+                padding-left: 0;
+                padding-right: 0;
+                height: 1.5em;
+            }
+            .btn+div {
+                display: none;
+            }
+        }
+    }
+    form.container {
+        @media screen and (max-width: 767px) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    section.intro {
+        padding-top: 40px;
+        padding-bottom: 112px;
+        margin-bottom: -70px;
+        background-color: $gray;
+        @media screen and (min-width: 768px) {
+            padding-bottom: 160px;
+            margin-bottom: -80px;
+        }
+        .container {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 90px;
+            grid-row-gap: 0px;
+            align-items: center;
+            @media screen and (min-width: 768px) {
+                display: grid;
+            }
+        }
+        .intro--text {
+            grid-area: 1 / 1 / 2 / 3;
+        }
+        .intro--img {
+            grid-area: 1 / 3 / 2 / 4;
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    section.faq {
+        .container {
+            max-width: 630px;
+        }
+    }
+}

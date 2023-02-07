@@ -124,13 +124,22 @@
 			</div>
 		</div>
 	</footer>
-    <script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
-    <script type="text/javascript" src="../../assets/js/lazysizes.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/cw.js"></script>
+    
     <script>
-        $('form h2').remove();
-        $('.plan .plan__item .btn').addClass('btn--contained').removeClass('btn--outlined');
+        WebFontConfig = {
+            google: { families: [ 'Noto+Sans+TC:100,300,400,500,700','Noto Serif TC:200,300,400,500,600,700','Roboto:300,400,500,700' ] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+    <script>
         const intro = `<section class="intro">
             <div class="container">
                 <div class="intro--text">
@@ -142,67 +151,90 @@
                     </p>
                 </div>
                 <div class="intro--img">
-                    <img src="../../assets/images/secant/webaccess-pe@2x.png" alt="紙本+數位">
+                    <img src="https://storage.googleapis.com/www-cw-com-tw/article/202302/article-63e1d4294b3b3.png" alt="紙本+數位">
                 </div>
             </div>
         </section>`;
-        const faq = `<section class="faq">
+        const faq = `<section class="faq mb40">
             <div class="container">
                 <h2 class="text-center mb20">全閱讀問與答</h2>
-                <div class="accordion__group">
+                <form class="accordion__group">
                     <div class="accordion__item">
-                        <div class="accordion__item__header">
+                        <input type="radio" id="webaccess_faq_1" name="webaccess_faq" value="webaccess_faq_1">
+                        <label for="webaccess_faq_1" class="accordion__item__header">
                             <span class="number">1.</span><span class="txt">天下數位全閱讀可以試用嗎？</span>
                             <i class="icon icon-plus"></i>
-                        </div>
+                        </label>
                         <div class="accordion__item__panel">
-                            <p class="mt0">
-                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
-                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
-                            </p>
+                            <div class="text">
+                                <p class="mt0">
+                                會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                                <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <div class="accordion__item__header">
+                        <input type="radio" id="webaccess_faq_2" name="webaccess_faq" value="webaccess_faq_2">
+                        <label for="webaccess_faq_2" class="accordion__item__header">
                             <span class="number">2.</span><span class="txt">如何取消訂閱？退款規則是什麼？</span>
                             <i class="icon icon-plus"></i>
-                        </div>
+                        </label>
                         <div class="accordion__item__panel">
-                            <p class="mt0">
-                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
-                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
-                            </p>
+                            <div class="text">
+                                <p class="mt0">
+                                會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                                <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <div class="accordion__item__header">
+                        <input type="radio" id="webaccess_faq_3" name="webaccess_faq" value="webaccess_faq_3">
+                        <label for="webaccess_faq_3" class="accordion__item__header">
                             <span class="number">3.</span><span class="txt">不同管道下單，金額為何不相同？</span>
                             <i class="icon icon-plus"></i>
-                        </div>
+                        </label>
                         <div class="accordion__item__panel">
-                            <p class="mt0">
-                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
-                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
-                            </p>
+                            <div class="text">
+                                <p class="mt0">
+                                會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                                <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="accordion__item">
-                        <div class="accordion__item__header">
+                        <input type="radio" id="webaccess_faq_4" name="webaccess_faq" value="webaccess_faq_4">
+                        <label for="webaccess_faq_4" class="accordion__item__header">
                             <span class="number">4.</span><span class="txt">自動續訂何時會被扣款？</span>
                             <i class="icon icon-plus"></i>
-                        </div>
+                        </label>
                         <div class="accordion__item__panel">
-                            <p class="mt0">
-                            會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
-                            <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
-                            </p>
+                            <div class="text">
+                                <p class="mt0">
+                                會員每月可享免費閱讀文章篇數，會員限定精華內容下載，新入會會員立即可得 100 元購書折價券、免費暢讀會員限定文章、會員專屬通知，以及 200 元生日折價券等權益。
+                                <a href="https://www.cw.com.tw/member/benefits" target="_blank" class="btn--text">更多會員權益</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </section>`;
-        $('main').prepend(intro);
-        $('main').append(faq);
+
+        const main = document.querySelector('main');
+        const titleLv2 = document.querySelector('.plan__section');
+        titleLv2.removeChild(titleLv2.children[0])
+        
+        main.insertAdjacentHTML('beforebegin', intro);
+        main.insertAdjacentHTML('afterend', faq);
+
+        const btnList = document.querySelectorAll('.webaccess__page main .plan .plan__item .btn');
+        btnList.forEach(element => {
+          element.classList.add('btn--contained');
+          element.classList.remove('btn--outlined');
+        });
     </script>
 </body>
 

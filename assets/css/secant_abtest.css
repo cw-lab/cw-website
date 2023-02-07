@@ -1,5 +1,7 @@
+@charset "UTF-8";
 .webaccess__page main {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .webaccess__page main .plan {
@@ -58,6 +60,9 @@
 
 .webaccess__page main .plan .plan__item__spec span {
   position: static;
+  max-width: 5em;
+  height: 1.5em;
+  overflow: hidden;
   -webkit-transform: none;
           transform: none;
 }
@@ -66,6 +71,7 @@
   margin: 0;
   font-size: 1rem;
   font-weight: normal;
+  line-height: 1;
 }
 
 .webaccess__page main .plan .plan__option__txt {
@@ -102,7 +108,14 @@
 .webaccess__page main .plan .plan__option__txt--complement {
   padding-left: 0;
   padding-right: 0;
-  height: 1.5em;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 768px) {
+  .webaccess__page main .plan .plan__option__txt--complement {
+    height: 1.5em;
+  }
 }
 
 .webaccess__page main .plan .btn + div {
@@ -177,5 +190,42 @@
 
 .webaccess__page section.faq .container {
   max-width: 630px;
+}
+
+.webaccess__page .accordion__group .accordion__item {
+  overflow: hidden;
+}
+
+.webaccess__page .accordion__group .accordion__item input {
+  position: absolute;
+}
+
+.webaccess__page .accordion__group .accordion__item input:checked + label .icon-plus::before {
+  content: "";
+}
+
+.webaccess__page .accordion__group .accordion__item input:checked ~ .accordion__item__panel .text {
+  max-height: 100vh;
+  padding: 1rem 1rem 1rem 2.5rem;
+  opacity: 1;
+  -webkit-transition: .3s opacity, .6s max-height;
+  transition: .3s opacity, .6s max-height;
+}
+
+.webaccess__page .accordion__group .accordion__item__header {
+  display: block;
+}
+
+.webaccess__page .accordion__group .accordion__item__panel {
+  display: block;
+  padding: 0;
+}
+
+.webaccess__page .accordion__group .accordion__item__panel .text {
+  contain: layout;
+  will-change: max-height;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 /*# sourceMappingURL=secant_abtest.css.map */

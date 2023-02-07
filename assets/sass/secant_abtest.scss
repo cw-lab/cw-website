@@ -5,6 +5,7 @@
 .webaccess__page {
     main {
         margin-top: 0;
+        margin-bottom: 0;
         .plan {
             gap: 20px;
             .text-center {
@@ -42,6 +43,9 @@
                 }
                 span {
                     position: static;
+                    max-width: 5em;
+                    height: 1.5em;
+                    overflow: hidden;
                     transform: none;
                 }
             }
@@ -49,6 +53,7 @@
                 margin: 0;
                 font-size: 1rem;
                 font-weight: normal;
+                line-height: 1;
             }
             .plan__option__txt {
                 font-size: 1.625rem;
@@ -71,7 +76,11 @@
             .plan__option__txt--complement {
                 padding-left: 0;
                 padding-right: 0;
-                height: 1.5em;
+                margin-top: 10px;
+                line-height: 1.2;
+                @media screen and (min-width: 768px) {
+                    height: 1.5em;
+                }
             }
             .btn+div {
                 display: none;
@@ -119,6 +128,41 @@
     section.faq {
         .container {
             max-width: 630px;
+        }
+    }
+    .accordion__group {
+        .accordion__item {
+            overflow: hidden;
+            input {
+                position: absolute;
+                &:checked {
+                    + label {
+                        .icon-plus::before {
+                            content: $icon-minus;
+                        }
+                    }
+                    ~ .accordion__item__panel .text {
+                        max-height: 100vh;
+                        padding: 1rem 1rem 1rem 2.5rem;
+                        opacity: 1;
+                        transition: .3s opacity, .6s max-height;
+                    }
+                }
+            }
+        }
+        .accordion__item__header {
+            display: block;
+        }
+        .accordion__item__panel {
+            display: block;
+            padding: 0;
+            .text {
+                contain: layout;
+                will-change: max-height;
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+            }
         }
     }
 }

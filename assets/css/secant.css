@@ -365,6 +365,12 @@
   }
 }
 
+.webaccess__page main article.article--sm {
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .webaccess__page main article .step__group {
   padding-bottom: 20px;
   -webkit-box-pack: justify;

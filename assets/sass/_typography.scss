@@ -5,7 +5,7 @@
 // 標題
 $h-color: $text, $text, $text, $primary, $secondary;
 $h-size: 2rem, 1.375rem, 1.125rem, 1rem, 0.875rem;
-$h-m-size: 1.625rem, 1.25rem;
+$h-m-size: 1.625rem, 1.25rem, 1.125rem, 1rem, 0.875rem;
 $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
 
 %typo-margin {
@@ -58,6 +58,15 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
     .h#{$i} {
         @extend %typo-margin;
         @extend %heading-icon;
+    }
+}
+
+@for $i from 1 through length($h-size) {
+    .fontsize--#{$i} {
+        font-size: nth($h-m-size, $i);
+        @media screen and (min-width: 1024px) {
+            font-size: nth($h-size, $i);
+        }
     }
 }
 

@@ -1616,6 +1616,56 @@ h1 .heading__text, .h1 .heading__text, h2 .heading__text, .h2 .heading__text, h3
   line-height: 1.25;
 }
 
+.fontsize--1 {
+  font-size: 1.625rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fontsize--1 {
+    font-size: 2rem;
+  }
+}
+
+.fontsize--2 {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fontsize--2 {
+    font-size: 1.375rem;
+  }
+}
+
+.fontsize--3 {
+  font-size: 1.125rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fontsize--3 {
+    font-size: 1.125rem;
+  }
+}
+
+.fontsize--4 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fontsize--4 {
+    font-size: 1rem;
+  }
+}
+
+.fontsize--5 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .fontsize--5 {
+    font-size: 0.875rem;
+  }
+}
+
 h1,
 .h1 {
   font-size: 1.625rem;

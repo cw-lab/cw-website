@@ -1492,6 +1492,12 @@
   }
 }
 
+.webaccess__page .frequently-used__group > label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+}
+
 .webaccess__page .podcast__block {
   display: -webkit-box;
   display: -ms-flexbox;

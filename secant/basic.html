@@ -223,16 +223,21 @@
 										</select>
                                     </div>
                                 </div>
-                                <div class="form__group form__group--filled">
+                                <div class="form__group form__group--filled mb-20">
                                     <label class="label">
 										<div class="form__group__placeholder">請輸入詳細地址</div>
-										<input type="text" name="address" class="form__group__input">
+										<input type="text" value="台北市中山區****化路82號" name="address" class="form__group__input">
 									</label>
-                                    <label class="label label--check">
-										<input type="checkbox" name="checkbox">
-										<span class="label__radio__mark"></span>
-										<span class="label__radio__txt">同步更新會員資料</span>
-									</label>
+                                </div>
+                                <div class="frequently-used__group flex justify-between">
+                                    <label>
+                                        <span class="label--check">
+                                            <input type="checkbox" name="frequently-used_addresses">
+                                            <span class="label__check__mark"></span>
+                                            <span class="label__check__txt">新增為常用地址</span>
+                                        </span>
+                                    </label>
+                                    <button type="button" class="btn--text">清除重填</button>
                                 </div>
                             </div>
                             <div class="tab__content__pane tab__content__pane--p20">
@@ -917,11 +922,16 @@
 										<input type="text" name="address" class="form__group__input">
 										<i class="form__group__help form__group__help--strong">請正確填寫您的海外地址，我們將為您計算運費，運費另計</i>
 									</label>
-                                    <label class="label label--check">
-										<input type="checkbox" name="checkbox">
-										<span class="label__radio__mark"></span>
-										<span class="label__radio__txt">同步更新會員資料</span>
-									</label>
+                                </div>
+                                <div class="frequently-used__group flex justify-between">
+                                    <label>
+                                        <span class="label--check">
+                                            <input type="checkbox" name="frequently-used_addresses">
+                                            <span class="label__check__mark"></span>
+                                            <span class="label__check__txt">新增為常用地址</span>
+                                        </span>
+                                    </label>
+                                    <button type="button" class="btn--text">清除重填</button>
                                 </div>
                             </div>
                         </div>
@@ -942,7 +952,7 @@
                                 <label class="label label--radio">
 									<input type="radio" name="individ" value="member">
 									<span class="label__radio__mark"></span>
-									<span class="label__radio__txt">會員載具</span>
+									<span class="label__radio__txt">個人電子發票</span>
 									<span class="label__radio__helper">
 										電子發票若中獎將寄送至收件地址
 									</span>
@@ -956,8 +966,15 @@
 									</label>
                                     <label class="label form__group--input">
 										<div class="form__group__placeholder">請輸入手機條碼</div>
-										<input type="text" name="barcode" class="form__group__input">
+										<input type="text" value="/IO***6Q" name="barcode" class="form__group__input">
 									</label>
+                                    <label class="label pt5">
+                                        <span class="label--check">
+                                            <input type="checkbox" name="frequently-used_addresses">
+                                            <span class="label__check__mark"></span>
+                                            <span class="label__check__txt">新增為常用手機條碼載具</span>
+                                        </span>
+                                    </label>
                                 </div>
                                 <div class="label form__group form__group--selection form__group--filled">
                                     <label class="label--radio">
@@ -970,6 +987,13 @@
 										<div class="form__group__placeholder">請輸入自然人憑證條碼</div>
 										<input type="text" name="cdc" class="form__group__input">
 									</label>
+                                    <label class="label pt5">
+                                        <span class="label--check">
+                                            <input type="checkbox" name="frequently-used_addresses">
+                                            <span class="label__check__mark"></span>
+                                            <span class="label__check__txt">新增為常用自然人憑證載具</span>
+                                        </span>
+                                    </label>
                                 </div>
                             </div>
                             <div class="tab__content__pane tab__content__pane--p20">
@@ -1023,7 +1047,7 @@
                     </div>
                 </section>
                 <section class="group">
-                    <h3>發票寄送地址</h3>
+                    <h3>中獎發票寄送地址</h3>
                     <div class="flex-container">
                         <div class="flex label form__group form__group--filled form__group--inline">
                             <div class="select__group select__group--filled select__group--undone">
@@ -1064,9 +1088,19 @@
 							</div>
                             <label class="label">
 								<div class="form__group__placeholder">請輸入詳細地址</div>
-								<input type="text" name="address" class="form__group__input">
+								<input type="text" value="***********12樓" name="address" class="form__group__input">
 							</label>
 						</div>
+                        <div class="frequently-used__group flex justify-between mt20">
+                            <label>
+                                <span class="label--check">
+                                    <input type="checkbox" name="frequently-used_addresses">
+                                    <span class="label__check__mark"></span>
+                                    <span class="label__check__txt">新增為常用地址</span>
+                                </span>
+                            </label>
+                            <button type="button" class="btn--text">清除重填</button>
+                        </div>
                     </div>
                     <div class="flex-container">
                         <div class="flex label form__group form__group--filled form__group--inline form__group--undone">
@@ -1111,6 +1145,16 @@
 								<input type="text" name="address" class="form__group__input">
 							</label>
 						</div>
+                        <div class="frequently-used__group flex justify-between mt20">
+                            <label>
+                                <span class="label--check">
+                                    <input type="checkbox" name="frequently-used_addresses">
+                                    <span class="label__check__mark"></span>
+                                    <span class="label__check__txt">新增為常用地址</span>
+                                </span>
+                            </label>
+                            <button type="button" class="btn--text">清除重填</button>
+                        </div>
                     </div>
                 </section>
 				<section class="group group--disabled">
@@ -1272,7 +1316,7 @@
 					$(this).siblings().children(".label").css({
 						"display": "none"
 					});
-					$(this).children(".form__group--input").css({
+					$(this).children(".form__group--input, .label").css({
 						"display": "block"
 					});
 					if ( width >= 768 ) {

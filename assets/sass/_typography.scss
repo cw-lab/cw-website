@@ -209,3 +209,7 @@ body {
         }
     }
 }
+
+strong, b {
+    @include typo-weight;
+}

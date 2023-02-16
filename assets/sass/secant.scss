@@ -769,7 +769,7 @@
                 }
                 &--left {
                     margin-right: 2.5em;
-                    @media screen and (max-width: 767px) {
+                    @media screen and (hover: none) and (pointer: coarse) {
                         display: none;
                     }
                 }
@@ -967,7 +967,6 @@
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
-                            white-space: nowrap;
                             .click__area {
                                 cursor: pointer;
                             }

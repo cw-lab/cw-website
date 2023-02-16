@@ -161,6 +161,27 @@ header {
             }
         }
     }
+    .message {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        padding: 20px;
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        &.message--tos {
+            width: 260px;
+            cursor: inherit !important;
+            .h3 {
+                line-height: 1.5;
+            }
+            p {
+                font-size: 0.875rem;
+                @media screen and (min-width: 1024px) {
+                    font-weight: 300;
+                }
+            }
+        }
+    }
     &.scroll {
         .container>.item.item--center {
             .item__scroll {

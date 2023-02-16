@@ -733,6 +733,16 @@ body.feature__page main p {
   line-height: 1.8;
 }
 
+strong, b {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  strong, b {
+    font-weight: 500;
+  }
+}
+
 @font-face {
   font-family: "cw_icon";
   src: url("../fonts/cw_icon.eot?d0n253");

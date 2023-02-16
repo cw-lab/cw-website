@@ -3056,6 +3056,34 @@ header .menubar__user i.icon-close::before {
   font-weight: bold;
 }
 
+header .message {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  background-color: #EEEEEE;
+  border: 1px solid #D3D5D7;
+}
+
+header .message.message--tos {
+  width: 260px;
+  cursor: inherit !important;
+}
+
+header .message.message--tos .h3 {
+  line-height: 1.5;
+}
+
+header .message.message--tos p {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1024px) {
+  header .message.message--tos p {
+    font-weight: 300;
+  }
+}
+
 header.scroll .container > .item.item--center .item__scroll {
   top: -40px;
 }

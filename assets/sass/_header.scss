@@ -131,18 +131,6 @@ header {
             display: none !important;
         }
     }
-    .btn {
-        font-size: 1rem;
-        &.btn--small {
-            @media screen and (max-width: 1023px) {
-                position: absolute;
-                right: 100%;
-                bottom: 50%;
-                transform: translateY(50%);
-                transition: all 0.3s;
-            }
-        }
-    }
     .menubar__user {
         position: relative;
         margin-left: 10px;
@@ -191,12 +179,6 @@ header {
                 @media screen and (max-width: 1023px) {
                     top: -55px;
                 }
-            }
-        }
-        .btn.btn--small {
-            @media screen and (max-width: 1023px) {
-                bottom: calc(100% + 1px + 1.3125rem);
-                transform: translateY(0%);
             }
         }
     }

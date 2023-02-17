@@ -5337,22 +5337,6 @@ header .search__icon.opened .handle {
   }
 }
 
-header .btn {
-  font-size: 1rem;
-}
-
-@media screen and (max-width: 1023px) {
-  header .btn.btn--small {
-    position: absolute;
-    right: 100%;
-    bottom: 50%;
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-}
-
 header .menubar__user {
   position: relative;
   margin-left: 10px;
@@ -5415,14 +5399,6 @@ header.scroll .container > .item.item--center .item__scroll {
 @media screen and (max-width: 1023px) {
   header.scroll .container > .item.item--center a.logo {
     top: -55px;
-  }
-}
-
-@media screen and (max-width: 1023px) {
-  header.scroll .btn.btn--small {
-    bottom: calc(100% + 1px + 1.3125rem);
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
   }
 }
 

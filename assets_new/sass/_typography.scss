@@ -1,18 +1,7 @@
-$h-color: $text,
-$text,
-$text,
-$primary,
-$secondary;
-$h-size: 2rem,
-1.375rem,
-1.125rem,
-1rem,
-0.875rem;
-$h-lh: 1.5,
-1.5,
-2,
-1.2,
-1;
+$h-color: $text, $text, $text, $primary, $secondary;
+$h-size: 2rem, 1.375rem, 1.125rem, 1rem, 0.875rem;
+$h-lh: 1.5, 1.5, 2, 1.2, 1;
+
 @for $i from 1 through 5 {
     h#{$i},
     .h#{$i} {
@@ -20,4 +9,15 @@ $h-lh: 1.5,
         line-height: nth($h-lh, $i);
         font-weight: 500;
     }
+}
+
+@mixin typo-weight {
+  font-weight: 600;
+  @media screen and (min-width: 1024px) {
+      font-weight: 500;
+  }
+}
+
+strong, b {
+  @include typo-weight;
 }

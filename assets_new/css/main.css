@@ -2144,6 +2144,16 @@ h5,
   font-weight: 500;
 }
 
+strong, b {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  strong, b {
+    font-weight: 500;
+  }
+}
+
 @font-face {
   font-family: "cw_icon";
   src: url("../fonts/cw_icon.eot?d0n253");
@@ -2563,20 +2573,6 @@ header .search__icon.opened .handle {
     display: none !important;
   }
 }
-header .btn {
-  font-size: 1rem;
-}
-@media (max-width: 1023px) {
-  header .btn.btn--small {
-    position: absolute;
-    right: 100%;
-    bottom: 50%;
-    -moz-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -webkit-transform: translateY(50%);
-    transform: translateY(50%);
-  }
-}
 header .menubar__user {
   position: relative;
   margin-left: 10px;
@@ -2597,6 +2593,34 @@ header .menubar__user i {
 header .menubar__user i.icon-close::before {
   content: "";
   font-weight: bold;
+}
+
+header .message {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 20px;
+  background-color: #EEEEEE;
+  border: 1px solid #D3D5D7;
+}
+
+header .message.message--tos {
+  width: 260px;
+  cursor: inherit !important;
+}
+
+header .message.message--tos .h3 {
+  line-height: 1.5;
+}
+
+header .message.message--tos p {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 1024px) {
+  header .message.message--tos p {
+    font-weight: 300;
+  }
 }
 
 .hamburger {

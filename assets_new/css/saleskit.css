@@ -1,12 +1,15 @@
 .cookies-info-page footer .container {
   max-width: 960px;
 }
+
 .cookies-info-page .container {
   max-width: 960px;
 }
+
 .cookies-info-page section.header {
   margin-bottom: 60px;
 }
+
 .cookies-info-page section.header h1 {
   margin-bottom: 0;
   font-size: 2rem;
@@ -14,15 +17,17 @@
   font-weight: 500;
   text-align: center;
 }
+
 .cookies-info-page section.header h3 {
   margin-top: 2em;
   margin-bottom: 0;
 }
+
 .cookies-info-page section.header h3 + p {
   margin-top: 0;
 }
+
 .cookies-info-page section.header h5 {
   text-align: center;
 }
-
 /*# sourceMappingURL=saleskit.css.map */

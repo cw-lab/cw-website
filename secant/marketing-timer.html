@@ -16,14 +16,29 @@
             #timer + .message {
                 display: none;
             }
+            #timer {
+                padding: 4px 5px 3px 0;
+                font-size: .875rem;
+            }
+            #timer > b {
+                margin: 0 2px 0 5px;
+                font-size: 1.375rem;
+                font-weight: 600;
+            }
+            @media screen and (min-width: 1024px) {
+                #timer > b {
+                    font-weight: 500;
+                }
+            }
             @media screen and (max-width: 767px) {
                 .webaccess__page main .marketing .marketing__action--left {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                grid-template-rows: auto auto auto;
-                grid-column-gap: 0px;
-                grid-row-gap: 0px;
-                justify-items: start;
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    grid-template-rows: auto auto auto;
+                    grid-column-gap: 0px;
+                    grid-row-gap: 0px;
+                    justify-items: start;
+                    padding-right: 20px;
                 }
             }
             .webaccess__page main .marketing .marketing__action .action--status {
@@ -86,7 +101,6 @@
 							<div class="marketing__action--left">
 								<div class="action--status">販售中</div>
 								<strong class="action--price">$2,980</strong>
-								<strong class="action--anchoring color-secondary fontsize--2">$4,350</strong>
 								<div class="action--notice">首購限定，如帳號非首購將以原價購買</div>
 							</div>
 							<div class="marketing__action--right">
@@ -281,7 +295,7 @@
 		</footer>
 		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
-		    <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
+		<script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
 
 		<script type="text/javascript" src="../assets/js/cw.js"></script>
 		<script type="text/javascript">
@@ -333,33 +347,48 @@
 				}).change();
 			})
 		</script>
-    <script>
-      const belt = `<div id="timer" class="message message__belt message__belt--red text-center"><div class="container"></div></div>`;
-      $(belt).insertAfter('header');
+        <script>
+            $('<strong class="action--anchoring color-secondary fontsize--2">$4,350</strong>').insertAfter('.action--price');
+            const belt = `<div id="timer" class="message message__belt message__belt--red text-center"><div class="container"></div></div>`;
+            $(belt).insertAfter('header');
 
-      var countDownDate = new Date("Feb 25, 2023 00:00:00").getTime();
+            var countDownDate = new Date("Feb 25, 2023 00:00:00").getTime();
 
-      function timerUpdate() {
-          var now = new Date().getTime();
-          var distance = countDownDate - now;
+            function timerUpdate() {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                if ( days < 10 ) {
+                    days = `0${days}`;
+                }
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                if ( hours < 10 ) {
+                    hours = `0${hours}`;
+                }
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                if ( minutes < 10 ) {
+                    minutes = `0${minutes}`;
+                }
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if ( seconds < 10 ) {
+                    seconds = `0${seconds}`;
+                }
+
+                const string = `
+                    <b>${days}</b>天<b>${hours}</b>時<b>${minutes}</b>分<b>${seconds}</b>秒　優惠倒數中
+                `;
+                $('#timer').html(string);
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    $('#timer').hide();
+                    // document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+            }
+            timerUpdate();
             
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          const string = `${days}天 ${hours}時 ${minutes}分 ${seconds}秒 優惠倒數中`;
-          $('#timer').html(string);
-    
-          if (distance < 0) {
-            clearInterval(x);
-            $('#timer').hide();
-            // document.getElementById("demo").innerHTML = "EXPIRED";
-          }
-      }
-      timerUpdate();
-      
-      var x = setInterval(timerUpdate(), 1000);
-    </script>
+            var x = setInterval(timerUpdate, 1000);
+        </script>
 	</body>
 </html>

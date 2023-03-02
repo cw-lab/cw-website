@@ -2643,7 +2643,7 @@ body.message__open {
 
 .message--banner .message__container {
   position: relative;
-  max-width: 940px;
+  max-width: 920px;
   margin: auto;
   padding: 20px;
   display: -webkit-box;
@@ -3116,6 +3116,10 @@ header .message.message--tos p {
   header .message.message--tos p {
     font-weight: 300;
   }
+}
+
+header .message.message--tos .btn.btn--small {
+  z-index: 0;
 }
 
 header.scroll .container > .item.item--center .item__scroll {

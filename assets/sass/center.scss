@@ -8,11 +8,20 @@
             @media screen and (min-width: 1024px) {
                 right: calc( (100% - 1020px) / 2);
             }
+            > .container {
+                @media screen and (max-width: 1023px) {
+                    padding-right: 0 !important;
+                    margin-right: 20px;
+                }
+            }
             ul.menubar__user {
                 display: block !important;
                 &::before {
                     background-color: transparent;
                 }
+            }
+            i {
+                padding: 7px;
             }
         }
     }

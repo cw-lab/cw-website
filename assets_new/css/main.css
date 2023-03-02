@@ -2596,6 +2596,10 @@ header .message.message--tos p {
   }
 }
 
+header .message.message--tos .btn.btn--small {
+  z-index: 0;
+}
+
 .hamburger {
   position: relative;
   width: 20px;

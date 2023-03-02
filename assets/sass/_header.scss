@@ -168,6 +168,9 @@ header {
                     font-weight: 300;
                 }
             }
+            .btn.btn--small {
+                z-index: 0;
+            }
         }
     }
     &.scroll {

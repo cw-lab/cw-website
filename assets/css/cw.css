@@ -5392,6 +5392,10 @@ header .message.message--tos p {
   }
 }
 
+header .message.message--tos .btn.btn--small {
+  z-index: 0;
+}
+
 header.scroll .container > .item.item--center .item__scroll {
   top: -40px;
 }

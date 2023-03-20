@@ -153,19 +153,21 @@
 					<h2>資格驗證</h2>
 					<div class="select__group select__group--filled mb20">
 						<select>
-							<option selected disabled>請選擇您的年級</option>
+							<option selected disabled>選擇您的學生身份</option>
 							<option value="大學生">大學生</option>
 							<option value="碩士生">碩士生</option>
 							<option value="在職專班">在職專班</option>
 							<option value="博班生">博班生</option>
 							<option value="EMBA">EMBA</option>
 						</select>
+						<i class="form__group__help" style="display: none;">請選擇您的學生身份</i>
 					</div>
 					<div class="form__group form__group--filled w-100 mb20">
 						<label class="label form__group--default">
 							<input type="email" class="form__group__input form__group__input--default">
 							<div class="form__group__placeholder">請輸入您的校園信箱</div>
 						</label>
+						<i class="form__group__help" style="display: none;">請輸入有效的校園信箱</i>
 					</div>
 					<p class="fontsize--5">
 						訂閱此優惠方案，需要您提供您的學生資料（學生身份及有效的校園信箱資料），我們會將優惠方案寄送到您的校園信箱，只要您點擊信件內的確認連結，即可完成訂閱享有學生優惠方案。<br/>
@@ -188,14 +190,14 @@
 					</p>
 				</div>
 				<div class="message__btn">
-					<button type="button" class="btn btn--contained">我知道了</button>
+					<button type="button" class="btn btn--contained btn__close">我知道了</button>
 				</div>
 			</div>
 		</div>
 		<div id="verification-finished" class="message message--notification message--center" style="display: none;">
 			<div class="message__txt">
 				<p class="my0">
-					你已成功通過驗證！
+					您已成功通過驗證！
 				</p>
 			</div>
 		</div>		  
@@ -205,8 +207,7 @@
 		<script type="text/javascript" src="../assets/js/cw.js"></script>
 		<script>
 			let path = window.location.search.split('?')[1];
-	        $(function(){
-				console.log(path === 'finished');
+			$(function(){
 				if (path === 'finished') {
 					$('#verification-finished').fadeIn();
 					setTimeout(function() {
@@ -216,8 +217,43 @@
 					$('#verification').fadeIn();
 					$('.black').addClass('opened');
 					$('#verification button').on('click', function() {
-						$('#verification').fadeOut();
-						$('#verification-letter').fadeIn();
+						const identity = $('#verification select').val();
+						const mail = $('#verification input[type="email"]').val();
+						if(!identity || mail === '' || mail.indexOf('@edu') < 0) {
+							if(!identity) {
+								$('.select__group').addClass('select__group--undone');
+								$('.select__group .form__group__help').show();
+							} else {
+								$('.select__group').removeClass('select__group--undone');
+							}
+							if(mail === '') {
+								$('.form__group').addClass('form__group--undone');
+								$('.form__group .form__group__help').text('請輸入您的校園信箱');
+								$('.form__group .form__group__help').show();
+							} else if(mail.indexOf('.edu') < 0) {
+								$('.form__group').addClass('form__group--error');
+								$('.form__group .form__group__help').text('請輸入有效的校園信箱');
+								$('.form__group .form__group__help').addClass('form__group__help--highlight').show();
+							} else {
+								$('.form__group').removeClass('form__group--undone');
+								$('.form__group').removeClass('form__group--error');
+							}
+						} else {
+							$('#verification').fadeOut();
+							$('#verification-letter').fadeIn();
+						}
+					});
+					$('#verification select').change(function() {
+						if($(this).val() !== '') {
+							$('.select__group').removeClass('select__group--undone');
+							$('.select__group .form__group__help').hide();
+						}
+					});
+					$('#verification .form__group input[type="email"]').on('change keyup copy paste cut', function() {
+						if($(this).val() !== '') {
+							$(this).parent().parent().removeClass('form__group--undone');
+							$(this).parent().siblings('.form__group__help').hide();
+						}
 					});
 				}
 			});

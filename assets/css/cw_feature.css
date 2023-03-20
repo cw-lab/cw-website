@@ -2566,8 +2566,11 @@ body.message__open {
 .message p {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 1rem;
   line-height: 1.5;
+}
+
+.message p:not(.fontsize--1):not(.fontsize--2):not(.fontsize--3):not(.fontsize--5) {
+  font-size: 1rem;
 }
 
 .message p + p {
@@ -2643,7 +2646,7 @@ body.message__open {
 
 .message--banner .message__container {
   position: relative;
-  max-width: 920px;
+  max-width: 940px;
   margin: auto;
   padding: 20px;
   display: -webkit-box;

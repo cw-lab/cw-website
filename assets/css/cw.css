@@ -2429,6 +2429,7 @@ nav.menubar--left {
   top: 0;
   left: -300px;
   width: 300px;
+  height: 100%;
   max-height: 100%;
   font-size: 1rem;
   border: 1px solid #D3D5D7;
@@ -4835,6 +4836,7 @@ header a.logo {
 }
 header a.logo img {
   height: 40px;
+  max-width: 100px;
 }
 header a.logo.logo--main {
   margin-right: 20px;

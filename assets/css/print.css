@@ -3014,6 +3014,7 @@ header a.logo {
 }
 header a.logo img {
   height: 40px;
+  max-width: 100px;
 }
 header a.logo.logo--main {
   margin-right: 20px;

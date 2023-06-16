@@ -1,5 +1,5 @@
 $col: 12;
-$width: 100% / $col;
+$width: calc(100% / $col);
 $column: () !default;
 $column: map-merge((
 	"1": ($width * 1),

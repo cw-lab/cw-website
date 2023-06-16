@@ -1,11 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAGA,AAAA,gBAAgB,CAAC;EACb,cAAc,EAAE,YAAY;CAQ/B;;AALW,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EAJhD,AAGQ,gBAHQ,CAEZ,OAAO,CACH,UAAU,CAAC;IAEH,KAAK,EAAE,KAAK;GAEnB",
-    "sources": [
-        "../sass/newspaper.scss",
-        "../sass/_basic.scss",
-        "../sass/_sheet.scss"
-    ],
-    "names": [],
-    "file": "newspaper.css"
-}
+{"version":3,"sources":["../sass/newspaper.scss","newspaper.css"],"names":[],"mappings":"AAGA;EACI,4BAAA;ACFJ;ADKY;EADJ;IAEQ,YAAA;ECFd;AACF","file":"newspaper.css"}

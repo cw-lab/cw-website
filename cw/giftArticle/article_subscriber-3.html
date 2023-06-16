@@ -1127,7 +1127,7 @@
                             <li class="function__save"><span><i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i></span></li>
                             <li class="function__scale"><span><i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i></span></li>
                             <!-- 禮物文章：出現登入/註冊會員提示 -->
-                            <li class="tooltips tooltips--right tooltips--gift mobile" data-tooltips="禮物文章">
+                            <li class="tooltips tooltips--right tooltips--gift" data-tooltips="禮物文章">
                                 <span><i class="icon icon-gift function__gift" gtm-name="function" eventaction="click_gift_share"></i></span>
                                 <div class="gift--hint">
                                     <p>訂戶獨享：送好文給好友</p>
@@ -1158,7 +1158,7 @@
                     <ul class="article__share">
                         <div class="title">分享</div>
                         <!-- 禮物文章：出現登入/註冊會員提示 -->
-                        <li class="tooltips tooltips--right tooltips--gift desktop" data-tooltips="禮物文章">
+                        <li class="tooltips tooltips--right tooltips--gift" data-tooltips="禮物文章">
                             <span><i class="icon icon-gift function__gift" gtm-name="function" eventaction="click_gift_share"></i></span>
                             <div class="gift--hint">
                                 <p>訂戶獨享：送好文給好友</p>
@@ -1171,7 +1171,7 @@
                                         瞭解更多
                                     </a>
                                     <a class="btn btn--contained btn--small gtmEvent" id="" gtm-name="" target="_blank" href="">
-                                        立即訂閱
+                                        登入/註冊
                                     </a>
                                 </div>
                             </div>
@@ -2470,30 +2470,33 @@
             });
             
 
-            // 禮物文章，因為用js寫，所以要避免重複名稱，才會要刪除，但在vue應該不需要
-            if(window.innerWidth < 1024){
-                let deleteVersion = document.querySelector('.tooltips--gift.desktop');
-                deleteVersion.parentNode.removeChild(deleteVersion)
-            }else{
-                let deleteVersion = document.querySelector('.tooltips--gift.mobile');
-                deleteVersion.parentNode.removeChild(deleteVersion)
-            }
-
             // 禮物文章 hint 消失，如果要加上cookie，也是這裡要加上
-            document.querySelector('.tooltips--gift').classList.add("active");
+            $('.tooltips--gift').addClass('active');
             setTimeout(()=>{
-                document.querySelector('.gift--hint').classList.add("hide");
-                document.querySelector('.tooltips--gift').classList.remove("active");
+                $('.gift--hint').fadeOut();
+                $('.tooltips--gift').removeClass('active');
             },30000) 
 
             // 禮物文章
-            document.querySelector('.function__gift').addEventListener('click',() => {
-                if(!document.querySelector('.gift--hint').classList.contains('hide')){
-                    document.querySelector('.tooltips--gift').classList.remove("active");  
+            let giftStatus = false;
+            $('.function__gift').click(function(){
+                if(!giftStatus){
+                    giftStatus = true;
+                    $('.gift--hint').fadeOut();
+                    $('.tooltips--gift').addClass('active');
+                    $('.gift--lightbox').fadeIn();
+                }else{
+                    giftStatus = false;
+                    $('.gift--lightbox').fadeOut();
+                    $('.tooltips--gift').removeClass('active');
                 }
-                document.querySelector('.gift--hint').classList.add("hide");
-                document.querySelector('.tooltips--gift').classList.toggle("active");  
-                document.querySelector('.gift--lightbox').classList.toggle("active");
+            });
+
+            // 禮物文章關閉
+            $('.gift--close').click(function(){
+                giftStatus = false;
+                $('.tooltips--gift').removeClass('active');
+                $('.gift--lightbox').fadeOut();
             });
         })
     </script>

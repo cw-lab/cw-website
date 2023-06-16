@@ -2472,15 +2472,18 @@
             });
 
 
+            // 禮物文章
+            let giftStatus = false;
+
             // 禮物文章 hint 消失，如果要加上cookie，也是這裡要加上
             $('.tooltips--gift').addClass('active');
             setTimeout(()=>{
                 $('.gift--hint').fadeOut();
-                $('.tooltips--gift').removeClass('active');
+                if(!giftStatus){
+                    $('.tooltips--gift').removeClass('active');
+                }
             },30000) 
 
-            // 禮物文章
-            let giftStatus = false;
             $('.function__gift').click(function(){
                 if(!giftStatus){
                     giftStatus = true;

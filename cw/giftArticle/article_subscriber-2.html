@@ -2474,7 +2474,9 @@
             $('.tooltips--gift').addClass('active');
             setTimeout(()=>{
                 $('.gift--hint').fadeOut();
-                $('.tooltips--gift').removeClass('active');
+                if(!giftStatus){
+                    $('.tooltips--gift').removeClass('active');
+                }
             },30000) 
 
             // 禮物文章

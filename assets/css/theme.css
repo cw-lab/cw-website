@@ -1,23 +1,19 @@
-body[class*='theme-'] a.logo {
+body[class*=theme-] a.logo {
   margin-right: 10px;
 }
-
-body[class*='theme-'] a.logo + a.logo {
+body[class*=theme-] a.logo + a.logo {
   margin-right: auto;
 }
-
-body[class*='theme-'] a.logo + a.logo img {
+body[class*=theme-] a.logo + a.logo img {
   height: 35px;
 }
-
 @media screen and (max-width: 340px) {
-  body[class*='theme-'] a.logo + a.logo img {
+  body[class*=theme-] a.logo + a.logo img {
     height: 30px;
   }
 }
-
 @media screen and (max-width: 767px) {
-  body[class*='theme-'] header .member__list > li:first-child {
+  body[class*=theme-] header .member__list > li:first-child {
     display: none;
   }
 }
@@ -25,7 +21,6 @@ body[class*='theme-'] a.logo + a.logo img {
 .theme--smiletaiwan {
   background-color: #FCFCFC;
 }
-
 .theme--smiletaiwan h1 .heading__icon--correct,
 .theme--smiletaiwan .h1 .heading__icon--correct,
 .theme--smiletaiwan h2 .heading__icon--correct,
@@ -38,21 +33,17 @@ body[class*='theme-'] a.logo + a.logo img {
 .theme--smiletaiwan .h5 .heading__icon--correct {
   color: #3A9AAF;
 }
-
 .theme--smiletaiwan .btn--contained {
   background-color: #3A9AAF;
   border-color: #3A9AAF;
 }
-
 .theme--smiletaiwan .btn--contained::before, .theme--smiletaiwan .btn--contained::after {
   display: none;
 }
-
 .theme--smiletaiwan .btn--contained:hover {
   color: #3A9AAF;
   background-color: #FCFCFC;
 }
-
 .theme--smiletaiwan .btn--text {
   color: #3A9AAF;
   text-decoration: none;
@@ -61,29 +52,23 @@ body[class*='theme-'] a.logo + a.logo img {
   background-size: 12px;
   background-position: left bottom;
 }
-
 .theme--smiletaiwan .btn--text:hover {
   color: #2E3638;
   background-image: url("https://smiletaiwan.cw.com.tw/images/blueblock.png");
   background-size: 1px;
 }
-
 .theme--smiletaiwan .tab .tab__nav > ul li.active, .theme--smiletaiwan .tab .tab__nav > ul li:hover {
   color: #3A9AAF;
 }
-
 .theme--smiletaiwan .tab .tab__nav > ul li.active {
   border-color: #3A9AAF;
 }
-
 .theme--smiletaiwan.webaccess__page .message.message__belt--red {
   background-color: #3A9AAF;
 }
-
 .theme--smiletaiwan.webaccess__page main {
   color: #2E3638;
 }
-
 .theme--smiletaiwan.webaccess__page main .marketing .marketing__action .action--status, .theme--smiletaiwan.webaccess__page main .marketing .marketing__action .action--price, .theme--smiletaiwan.webaccess__page main .marketing .marketing__action .action--notice {
   color: #3A9AAF;
   border-color: #3A9AAF;
@@ -101,47 +86,36 @@ body[class*='theme-'] a.logo + a.logo img {
 .theme--crossing .h5 .heading__icon--correct {
   color: #f60;
 }
-
 .theme--crossing .btn--contained {
   background-color: #f60;
   border-color: #f60;
 }
-
 .theme--crossing .btn--contained::before, .theme--crossing .btn--contained::after {
   display: none;
 }
-
 .theme--crossing .btn--contained:hover {
   background-color: #f90;
   border-color: #f90;
 }
-
 .theme--crossing .btn--text {
   color: #f60;
 }
-
 .theme--crossing .btn--text:hover {
   color: #f90;
 }
-
 .theme--crossing .tab .tab__nav > ul li.active, .theme--crossing .tab .tab__nav > ul li:hover {
   color: #f60;
 }
-
 .theme--crossing .tab .tab__nav > ul li.active {
   border-color: #f60;
 }
-
 .theme--crossing.webaccess__page .message.message__belt--red {
   background-color: #f60;
 }
-
 .theme--crossing.webaccess__page main {
   color: #000;
 }
-
 .theme--crossing.webaccess__page main .marketing .marketing__action .action--status, .theme--crossing.webaccess__page main .marketing .marketing__action .action--price, .theme--crossing.webaccess__page main .marketing .marketing__action .action--notice {
   color: #f60;
   border-color: #f60;
-}
-/*# sourceMappingURL=theme.css.map */
+}/*# sourceMappingURL=theme.css.map */

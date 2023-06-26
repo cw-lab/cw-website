@@ -37,7 +37,7 @@
         }
         &.label__radio__mark {
             position: relative;
-            top: (1.25rem - 1.125rem) / 2;
+            top: calc(1.25rem - 1.125rem) / 2;
             left: 0;
             width: 1.125rem;
             height: 1.125rem;
@@ -125,7 +125,7 @@
         }
         &.label__check__mark {
             position: relative;
-            top: (1.25rem - 1.125rem) / 2;
+            top: calc(1.25rem - 1.125rem) / 2;
             left: 0;
             width: 1.125rem;
             height: 1.125rem;

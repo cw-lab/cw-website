@@ -5,7 +5,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .form .form__group {
   max-width: none;
   width: calc(100% - 160px);
@@ -18,14 +17,11 @@
 section.section--btn {
   font-size: 0;
 }
-
 @media screen and (max-width: 767px) {
   section.section--btn button {
     width: 100%;
   }
 }
-
 section.section--sop {
   display: none;
-}
-/*# sourceMappingURL=workshop.css.map */
+}/*# sourceMappingURL=workshop.css.map */

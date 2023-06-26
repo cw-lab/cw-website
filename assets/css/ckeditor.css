@@ -1,6 +1,6 @@
 @charset "UTF-8";
-/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;700&family=Roboto:wght@300;700&display=swap");
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
 aside,
 details,
@@ -108,9 +108,9 @@ select {
 }
 
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+html input[type=button],
+input[type=reset],
+input[type=submit] {
   -webkit-appearance: button;
   cursor: pointer;
 }
@@ -130,26 +130,26 @@ input {
   line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type=checkbox],
+input[type=radio] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
-input[type="search"] {
+input[type=search] {
   -webkit-appearance: textfield;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -227,18 +227,17 @@ textarea {
 }
 
 body {
-  font-family: 'Roboto', 'Noto Sans TC', '思源黑體 TC', '思源黑體 TW', '思源黑體', '微軟正黑體', '繁黑體', 'Microsoft JhengHei', 'Lato', 'Arial', 'Segoe UI Emoji', 'Segoe UI Symbol', '新細明體', sans-serif;
+  font-family: "Roboto", "Noto Sans TC", "思源黑體 TC", "思源黑體 TW", "思源黑體", "微軟正黑體", "繁黑體", "Microsoft JhengHei", "Lato", "Arial", "Segoe UI Emoji", "Segoe UI Symbol", "新細明體", sans-serif;
   font-display: swap;
 }
 
 a, button.btn {
   text-decoration: none;
 }
-
 @media screen and (min-width: 1024px) {
   a, button.btn {
-    -webkit-transition: color .2s, border .2s, background .2s;
-    transition: color .2s, border .2s, background .2s;
+    -webkit-transition: color 0.2s, border 0.2s, background 0.2s;
+    transition: color 0.2s, border 0.2s, background 0.2s;
   }
 }
 
@@ -246,17 +245,17 @@ img {
   display: block;
 }
 
-h1,
-.h1, h2,
-.h2, h3,
-.h3, h4,
-.h4, h5,
-.h5 {
+h5,
+.h5, h4,
+.h4, h3,
+.h3, h2,
+.h2, h1,
+.h1 {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-h1, h2, h3, h4, h5 {
+h5, h4, h3, h2, h1 {
   font-weight: 700;
 }
 
@@ -320,7 +319,6 @@ a {
   border: 0;
   cursor: pointer;
 }
-
 a:hover {
   color: #D60C18;
 }
@@ -340,13 +338,11 @@ h2 {
   font-size: 1.25rem;
   font-weight: 700;
 }
-
 @media screen and (min-width: 1024px) {
   .accordion__item__header {
     font-size: 1.375rem;
   }
 }
-
 .accordion__item__header .icon-plus {
   display: none;
 }
@@ -362,23 +358,19 @@ blockquote {
   padding: 2px 0;
   margin: 40px auto;
 }
-
 @media screen and (min-width: 1024px) {
   blockquote {
     width: 500px;
   }
 }
-
 blockquote p {
   font-weight: 600;
 }
-
 @media screen and (min-width: 1024px) {
   blockquote p {
     font-weight: 500;
   }
 }
-
 blockquote::before, blockquote::after {
   position: absolute;
   left: 50%;
@@ -389,11 +381,9 @@ blockquote::before, blockquote::after {
   display: block;
   background-color: #D60C18;
 }
-
 blockquote::before {
   top: 0;
 }
-
 blockquote::after {
   bottom: 0;
 }
@@ -409,7 +399,6 @@ blockquote::after {
   transition: color 0.3s, border-color 0.3s;
   cursor: pointer;
 }
-
 .more__btn::before {
   content: "註";
   display: -webkit-box;
@@ -433,7 +422,6 @@ blockquote::after {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
 .more__btn:hover {
   color: #9D0505;
   border-bottom-color: #9D0505;
@@ -446,7 +434,6 @@ blockquote::after {
   opacity: 0;
   border: 0;
 }
-
 .more__input:checked + .more__btn + .more__text {
   display: block;
 }
@@ -458,7 +445,6 @@ blockquote::after {
   padding: 20px 40px;
   background-color: #EEEEEE;
 }
-
 .more__text.active {
   display: block;
 }
@@ -475,12 +461,10 @@ img {
   color: #939EA7;
   font-size: 0.875rem;
 }
-
 .source a {
   color: #939EA7;
   text-decoration: underline;
 }
-
 .source a:hover {
   color: #48545D;
 }
@@ -491,7 +475,6 @@ img {
   border-top: 1px solid #D3D5D7;
   border-bottom: 1px solid #D3D5D7;
 }
-
 .article__profile h3, .article__profile ol, .article__profile ul, .article__profile p {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -504,7 +487,6 @@ table {
   border: solid #D3D5D7;
   border-width: 1px 0 0 1px;
 }
-
 table::before {
   content: url("https://www.cw.com.tw/images/common/logo.svg");
   display: block;
@@ -514,13 +496,11 @@ table::before {
   margin-top: 5px;
   width: 90px;
 }
-
 table th, table td {
   padding: 5px;
   border: solid #D3D5D7;
   border-width: 0 1px 1px 0;
 }
-
 table th {
   background-color: #EEEEEE;
   font-weight: 700;
@@ -532,7 +512,6 @@ table th {
   margin-bottom: 1.15em;
   padding-bottom: 45px;
 }
-
 .article__table > table {
   width: 100% !important;
 }
@@ -541,5 +520,4 @@ body > table {
   width: 100% !important;
   margin-top: 1.15em;
   margin-bottom: calc(1.15em + 40px);
-}
-/*# sourceMappingURL=ckeditor.css.map */
+}/*# sourceMappingURL=ckeditor.css.map */

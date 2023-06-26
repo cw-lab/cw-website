@@ -68,7 +68,7 @@
   min-height: 1px;
 }
 
-[dir="rtl"] .slick-slide {
+[dir=rtl] .slick-slide {
   float: right;
 }
 
@@ -105,7 +105,6 @@
 .mb_only {
   display: none;
 }
-
 @media all and (max-width: 440px) {
   .mb_only {
     display: block;
@@ -115,7 +114,6 @@
 .webaccess__page--ldp header {
   position: fixed;
 }
-
 .webaccess__page--ldp header .hamburger {
   position: relative;
   top: auto;
@@ -123,77 +121,63 @@
   -webkit-transform: none;
           transform: none;
 }
-
 .webaccess__page--ldp header a.logo {
   margin-left: 10px;
 }
-
 .webaccess__page--ldp header a.btn {
   position: relative;
   right: auto;
   bottom: auto;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   -webkit-transform: none;
           transform: none;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp h1 {
     font-size: 32px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp h2 {
     font-size: 22px;
     line-height: 2rem;
   }
 }
-
 .webaccess__page--ldp .bottombar {
   bottom: 0 !important;
 }
-
 .webaccess__page--ldp .list__group a.btn_header {
   position: relative;
   right: initial;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp .list__group a.btn_header {
     margin-top: 0px !important;
   }
 }
-
 .webaccess__page--ldp main section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
 @media all and (min-width: 768px) {
   .webaccess__page--ldp main section {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
-
 .webaccess__page--ldp main section.mend {
   background-color: #9D0505;
   overflow: hidden;
 }
-
 .webaccess__page--ldp main section.mend .h1, .webaccess__page--ldp main section.mend h2 {
   color: #fff;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section.mend .h1 {
     font-size: 32px;
   }
 }
-
 .webaccess__page--ldp main section .container p.direc {
   font-size: 18px;
   color: #c4c4c4;
@@ -206,35 +190,29 @@
   width: 100%;
   padding: 0px 0 0 20px;
 }
-
 .webaccess__page--ldp main section .container p.direc i {
   font-size: 25px;
   margin-right: 20px;
 }
-
 @media all and (min-width: 1024px) {
   .webaccess__page--ldp main section .container {
     width: 950px;
   }
 }
-
 .webaccess__page--ldp main section#access h2 {
   font-weight: 400;
   margin-top: 20px;
 }
-
 .webaccess__page--ldp main section#access:not(.sp) {
   padding-top: 120px;
   padding-bottom: 200px;
   position: relative;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#access:not(.sp) {
     padding-bottom: 130px;
   }
 }
-
 .webaccess__page--ldp main section#access:not(.sp)::before {
   content: "";
   width: 100%;
@@ -246,22 +224,18 @@
   left: 0;
   background-color: #9D0505;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#access:not(.sp)::before {
     -webkit-clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
             clip-path: polygon(100% 50%, 0% 100%, 100% 100%);
   }
 }
-
 .webaccess__page--ldp main section#edit {
   background-color: #9D0505;
 }
-
 .webaccess__page--ldp main section#edit .container {
   display: block;
 }
-
 .webaccess__page--ldp main section#edit .container .flex {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -272,7 +246,6 @@
   padding: 42px 0 0;
   position: relative;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#edit .container .flex {
     -webkit-box-align: center;
@@ -281,44 +254,37 @@
     padding: 42px 0 0;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex {
     padding: 22px 0 0;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .flex {
     padding: 0;
   }
 }
-
 .webaccess__page--ldp main section#edit .container .flex .appbox {
   width: 30%;
   overflow: hidden;
   margin-top: 70px;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox {
     margin-top: 0px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox {
     position: absolute;
     width: 85px;
   }
 }
-
 .webaccess__page--ldp main section#edit .container .flex .appbox img {
   margin-bottom: 20px;
   width: 130px;
   padding: 5px;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox img {
     width: 100%;
@@ -326,33 +292,28 @@
     padding: 0px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox--1 {
     left: -10%;
     top: 60px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox--2 {
     right: -10%;
     top: 30px;
   }
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#edit .container .flex .appbox--2 .direc {
     display: none;
   }
 }
-
 .webaccess__page--ldp main section#edit .container .flex .iphonebox {
   width: 270px;
   overflow: hidden;
   position: relative;
 }
-
 .webaccess__page--ldp main section#edit .container .flex .iphonebox::before {
   content: "";
   background: url(../../images/webaccess/iphone.png) center no-repeat;
@@ -364,20 +325,17 @@
   left: 0;
   z-index: 3;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#edit .container .flex .iphonebox {
     margin-top: 0px !important;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .flex .iphonebox {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
 }
-
 .webaccess__page--ldp main section#edit .container .flex .iphonebox video {
   display: block;
   width: 100%;
@@ -386,21 +344,17 @@
   margin: auto;
   border-radius: 40px;
 }
-
 .webaccess__page--ldp main section#edit .container .time {
   margin: 15px 0 0;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#edit .container .time {
     margin: -15px 0 0;
   }
 }
-
 .webaccess__page--ldp main section#edit .container .time img {
   margin: auto;
 }
-
 .webaccess__page--ldp main section#itnl .device {
   position: relative;
   width: 100%;
@@ -408,59 +362,50 @@
   padding: 35% 0;
   margin: 42px 0 0 0;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#itnl .device {
     padding: 50% 0;
     margin: 42px 0 50% 0;
   }
 }
-
 .webaccess__page--ldp main section#itnl .device__pc, .webaccess__page--ldp main section#itnl .device__pad, .webaccess__page--ldp main section#itnl .device__mb {
   position: absolute;
 }
-
 .webaccess__page--ldp main section#itnl .device__pc {
   width: 100%;
   max-width: 660px;
   top: 130px;
   left: 0;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#itnl .device__pc {
     top: 210px;
     left: -150px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#itnl .device__pc {
     top: 310px;
     left: -70px;
   }
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#itnl .device__pc p.direc {
     display: none;
   }
 }
-
 .webaccess__page--ldp main section#itnl .device__pad {
   width: 100%;
   max-width: 230px;
   top: 40px;
   left: 70%;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#itnl .device__pad {
     top: -10px;
     left: 65%;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#itnl .device__pad {
     top: 0px;
@@ -468,21 +413,18 @@
     max-width: 180px;
   }
 }
-
 .webaccess__page--ldp main section#itnl .device__mb {
   width: 100%;
   max-width: 105px;
   top: 65%;
   right: 0%;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#itnl .device__mb {
     top: 75%;
     right: 0%;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#itnl .device__mb {
     top: 35%;
@@ -490,19 +432,16 @@
     max-width: 76px;
   }
 }
-
 .webaccess__page--ldp main section#anytime {
   position: relative;
   overflow: hidden;
   width: 100%;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 {
   position: relative;
   z-index: 1;
   width: 100%;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 .anytime__bg {
   position: absolute;
   top: -70px;
@@ -512,11 +451,9 @@
   max-height: 530px;
   overflow: hidden;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 .anytime__bg .slider img {
   width: 100%;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 .anytime__main {
   width: 100%;
   max-width: 210px;
@@ -524,34 +461,28 @@
   position: relative;
   z-index: 2;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 .anytime__main img {
   width: 100%;
   margin: auto;
 }
-
 .webaccess__page--ldp main section#anytime .container--2 .direc {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#anytime .container--2 .direc {
     display: none;
   }
 }
-
 .webaccess__page--ldp main section#anywhere .container--2 {
   position: relative;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#anywhere .container--2 {
     margin-bottom: 30px;
   }
 }
-
 .webaccess__page--ldp main section#anywhere .container--2::before {
   content: "";
   position: absolute;
@@ -562,14 +493,12 @@
   background: url(../../images/webaccess/1-4-off.svg) center no-repeat;
   background-size: contain;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp main section#anywhere .container--2::before {
     width: 225px;
     height: 130px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#anywhere .container--2::before {
     bottom: -51px;
@@ -578,34 +507,28 @@
     height: 70px;
   }
 }
-
 .webaccess__page--ldp main section#anywhere .container--2 .anywhere__main {
   width: 100%;
   margin: 30px auto 0;
 }
-
 .webaccess__page--ldp main section#anywhere .container--2 .anywhere__main img {
   width: 100%;
 }
-
 .webaccess__page--ldp main section#anywhere .container--2 p.direc {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#anywhere .container--2 p.direc {
     display: none;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .container--2 {
   position: relative;
   width: 100%;
   max-width: 460px;
 }
-
 .webaccess__page--ldp main section#everyweek .container--2::before {
   content: "";
   width: 460px;
@@ -617,7 +540,6 @@
   left: 0;
   z-index: 1;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .container--2::before {
     width: 310px;
@@ -626,31 +548,26 @@
     left: 63px;
   }
 }
-
 @media all and (max-width: 376px) {
   .webaccess__page--ldp main section#everyweek .container--2::before {
     left: 35px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .container--2 p.direc {
     display: none;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .everyweek__main {
   width: 100%;
   margin: 40px auto 200px;
   position: relative;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .everyweek__main {
     margin: 40px auto 0;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -659,7 +576,6 @@
       justify-content: space-around;
   position: relative;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item {
     -ms-flex-wrap: wrap;
@@ -669,7 +585,6 @@
             justify-content: flex-start;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item img {
   width: 200px;
   -webkit-clip-path: polygon(25% 0%, 70% 10%, 73% 100%, 20% 90%);
@@ -677,7 +592,6 @@
   -webkit-transform: skew(20deg, -20deg);
           transform: skew(20deg, -20deg);
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item img {
     width: 140px;
@@ -686,13 +600,11 @@
     margin-top: 15px;
   }
 }
-
 @media all and (max-width: 376px) {
   .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item img {
     margin-left: 32px;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item p.direc {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
@@ -704,7 +616,6 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item p.direc {
     margin-left: 0px;
@@ -714,14 +625,12 @@
     text-align: center;
   }
 }
-
 .webaccess__page--ldp main section#everyweek .everyweek__main .slider-item--2 .item p.direc span {
   font-size: 30px;
   font-family: "Roboto";
   opacity: 0.4;
   letter-spacing: 2px;
 }
-
 .webaccess__page--ldp main section#everyweek p.direc {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -729,24 +638,20 @@
   z-index: 2;
   position: relative;
 }
-
 .webaccess__page--ldp #award {
   position: relative;
   background-color: #fafafa;
 }
-
 @media all and (min-width: 768px) {
   .webaccess__page--ldp #award {
     padding-top: 200px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award {
     padding-top: 150px;
   }
 }
-
 .webaccess__page--ldp #award::before {
   content: "";
   width: 100%;
@@ -758,18 +663,15 @@
   left: 0;
   background-color: #9d0505;
 }
-
 .webaccess__page--ldp #award h3 {
   line-height: 1.5;
   margin-bottom: 30px;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award h3 {
     font-weight: 400;
   }
 }
-
 .webaccess__page--ldp #award ul {
   list-style: none;
   display: -webkit-box;
@@ -786,7 +688,6 @@
   padding: 0;
   margin: 25px auto 70px;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp #award ul {
     -webkit-box-pack: center;
@@ -794,93 +695,76 @@
             justify-content: center;
   }
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp #award ul li {
     margin: 10px;
   }
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award ul li {
     width: 184px;
     height: auto;
   }
 }
-
 .webaccess__page--ldp #award ul li img {
   width: auto;
   height: 63px;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award ul li img {
     width: 100%;
     height: auto;
   }
 }
-
 .webaccess__page--ldp #award .award {
   width: 260px;
   overflow: hidden;
 }
-
 .webaccess__page--ldp #award .award .award__img {
   width: 100%;
   background: none;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award .award .award__img {
     padding: 0;
     margin: 0 auto;
   }
 }
-
 .webaccess__page--ldp #award .award .award__img img {
   width: 100%;
 }
-
 .webaccess__page--ldp #award .award .award__txt h4 {
   color: #171717;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award .award .award__txt h4 {
     margin: 15px auto 5px;
   }
 }
-
 .webaccess__page--ldp #award .award .award__txt span {
   font-size: 16px;
 }
-
 .webaccess__page--ldp #award a.btn {
   margin-top: 60px;
 }
-
 .webaccess__page--ldp #award .testimony {
   width: 100%;
   max-width: 400px;
   margin: 95px auto 0;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award .testimony {
     padding: 0 60px;
   }
 }
-
 @media all and (max-width: 376px) {
   .webaccess__page--ldp #award .testimony {
     padding: 0 40px;
   }
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 h2 {
   text-align: justify;
 }
-
 @media all and (max-width: 440px) {
   .webaccess__page--ldp #award .testimony .slider-item--3 h2 {
     font-size: 16px;
@@ -888,17 +772,14 @@
     line-height: 1.6rem;
   }
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 h5 {
   text-align: right;
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 h5 span {
   border: 1px solid #939ea7;
   padding: 2px 7px;
   margin: 0 8px 0 0;
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 .slick-arrow {
   position: absolute;
   top: 0;
@@ -908,7 +789,6 @@
   border: none;
   outline: none;
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 .slick-arrow i.icon {
   display: block;
   position: absolute;
@@ -917,33 +797,27 @@
           transform: translateY(-50%);
   font-size: 1.75rem;
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 .slick-prev {
   right: calc(100% + 20px);
 }
-
 @media all and (min-width: 768px) {
   .webaccess__page--ldp #award .testimony .slider-item--3 .slick-prev {
     right: calc(100% + 40px);
   }
 }
-
 .webaccess__page--ldp #award .testimony .slider-item--3 .slick-next {
   left: calc(100% + 20px);
 }
-
 @media all and (min-width: 768px) {
   .webaccess__page--ldp #award .testimony .slider-item--3 .slick-next {
     left: calc(100% + 40px);
   }
 }
-
 .webaccess__page--ldp #award .award__gruop {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp #award .award__gruop {
     -webkit-box-pack: space-evenly;
@@ -951,7 +825,6 @@
             justify-content: space-evenly;
   }
 }
-
 @media all and (max-width: 769px) {
   .webaccess__page--ldp #award .award__gruop .award {
     margin: 20px;
@@ -974,5 +847,4 @@
   100% {
     left: -100%;
   }
-}
-/*# sourceMappingURL=intro.css.map */
+}/*# sourceMappingURL=intro.css.map */

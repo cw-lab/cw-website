@@ -2394,10 +2394,15 @@
             });
 
             // 禮物文章關閉
-            $('.gift--close').click(function(){
+            $('.article__body .gift--close,.article__head .gift--close').click(function(){
                 giftStatus = false;
-                $('.tooltips--gift').removeClass('active');
-                $('.gift--lightbox').fadeOut();
+                $('.article__body .tooltips--gift,.article__head .tooltips--gift').removeClass('active');
+                $('.article__body .gift--lightbox,.article__head .gift--lightbox').fadeOut();
+            });
+
+             // header 禮物文章關閉
+             $('header .gift--close,.article__head .gift--close').click(function(){
+                $('header .gift--lightbox').fadeOut();
             });
         })
     </script>

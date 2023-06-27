@@ -1,5 +1,6 @@
 $easing: cubic-bezier(.25, 1.7, .35, .8);
 $duration: 0.6s;
+
 header {
     position: relative;
     width: 100%;
@@ -8,70 +9,89 @@ header {
     background-color: $white;
     border-bottom: 1px solid $gray-100;
     z-index: 5;
+
     &.opened {
         z-index: 10;
     }
+
     &.fixed {
         position: fixed;
         top: 0;
         left: 0;
     }
+
     .container {
         position: relative;
         font-size: 0;
+
         &::after {
             @include clear;
         }
+
         >.item {
             display: inline-block;
             vertical-align: middle;
             font-size: 0;
+
             &.item--right {
                 position: absolute;
                 top: 50%;
                 right: 20px;
                 transform: translateY(-50%);
                 z-index: 1;
+
                 >* {
                     display: inline-block;
                     vertical-align: middle;
                     cursor: pointer;
                 }
+
+                .btn {
+                    transition: transform 0.3s;
+                }
             }
+
             &.item--center {
                 width: 100%;
                 height: 40px;
                 padding-left: 40px;
                 padding-right: 40px;
                 overflow: hidden;
+
                 @media screen and (min-width: 1024px) {
                     padding-left: 180px;
                     padding-right: 215px;
                 }
+
                 .item__scroll {
                     position: relative;
                     top: 0;
                     padding-top: 40px;
                     transition: top 0.3s;
                 }
+
                 .title__share {
                     @media screen and (max-width: 1023px) {
                         text-align: center;
                     }
+
                     .h3 {
                         line-height: 40px;
                         @include ellipsis;
                     }
                 }
+
                 a.logo {
                     position: absolute;
                     top: 0;
                     left: 50px;
                     transition: top 0.3s;
                     z-index: 1;
+
                     @media screen and (min-width: 375px) {
                         left: 55px;
                     }
+
                     @media screen and (min-width: 1024px) {
                         left: 60px;
                     }
@@ -79,77 +99,96 @@ header {
             }
         }
     }
+
     .hamburger {
         position: absolute;
         top: 50%;
         left: 20px;
         transform: translateY(-50%);
     }
+
     a.logo {
         display: inline-block;
         vertical-align: middle;
+
         img {
             height: 40px;
             max-width: 100px;
         }
+
         &.logo--main {
             margin-right: 20px;
         }
+
         &.logo--sub {
             color: $primary;
             font-size: 1rem;
             font-weight: 500;
         }
     }
+
     .search__icon {
         margin-left: 1rem;
         position: relative;
         cursor: pointer;
+
         .circle,
         .handle {
             font-family: $icomoon-font-family;
             font-size: 1.3125rem;
         }
+
         .circle::before {
             @include beforeafter($icon-search, block);
         }
+
         .handle {
             display: none;
             font-weight: bold;
+
             &::before {
                 @include beforeafter($icon-cancel, block);
             }
         }
+
         &.opened {
             .circle {
                 display: none;
             }
+
             .handle {
                 display: block;
             }
         }
+
         @media screen and (max-width: 1023px) {
             display: none !important;
         }
     }
+
     .menubar__user {
         position: relative;
         margin-left: 10px;
+
         @media screen and (min-width: 375px) {
             margin-left: 15px;
         }
+
         @media screen and (min-width: 1024px) {
             margin-left: 30px;
         }
+
         i {
             display: block;
             font-size: 1.3125rem;
+
             &.icon-close::before {
                 content: $icon-cancel;
                 font-weight: bold;
             }
         }
     }
+
     .message {
         position: absolute;
         top: 50px;
@@ -157,32 +196,46 @@ header {
         padding: 20px;
         background-color: $gray-100;
         border: 1px solid $gray-200;
+
         &.message--tos {
             width: 260px;
             cursor: inherit !important;
+
             .h3 {
                 line-height: 1.5;
             }
+
             p {
                 font-size: 0.875rem;
+
                 @media screen and (min-width: 1024px) {
                     font-weight: 300;
                 }
             }
+
             .btn.btn--small {
                 z-index: 0;
             }
         }
     }
+
     &.scroll {
         .container>.item.item--center {
             .item__scroll {
                 top: -40px;
             }
+
             a.logo {
                 @media screen and (max-width: 1023px) {
                     top: -55px;
                 }
+            }
+        }
+
+        @media screen and (max-width: 1023px) {
+            // 訂閱天下按鈕
+            .container>.item--right .btn {
+                transform: translateY(-55px);
             }
         }
     }
@@ -197,11 +250,13 @@ header {
     margin-top: 1px;
     background-color: $white;
     border-bottom: 1px solid $gray-100;
+
     .search__item--left {
         float: left;
         width: calc(100% - 400px);
         padding-right: 30px;
     }
+
     .search__item--right {
         float: right;
         width: 400px;

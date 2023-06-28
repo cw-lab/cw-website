@@ -2385,19 +2385,20 @@
 
 
             // 禮物文章 hint 消失，如果要加上cookie，也是這裡要加上
-            let giftStatus = false;
+            let giftStatus_i = false;
+            let giftStatus_img = false;
             $('.article__body .tooltips--gift,.article__head .tooltips--gift').addClass('active');
             setTimeout(()=>{
                 $('.article__body .gift--hint,.article__head .gift--hint').fadeOut();
-                if(!giftStatus){
+                if(!giftStatus_i){
                     $('.article__body .tooltips--gift,.article__head .tooltips--gift').removeClass('active');
                 }
             },30000) 
 
             // 禮物文章
             $('i.function__gift').click(function(){
-                if(!giftStatus){
-                    giftStatus = true;
+                if(!giftStatus_i){
+                    giftStatus_i = true;
                     $('.article__body .gift--hint,.article__head .gift--hint').fadeOut();
                     $('.article__body .tooltips--gift,.article__head .tooltips--gift').addClass('active');
                     $('.article__body .gift--lightbox,.article__head .gift--lightbox').fadeIn();
@@ -2406,13 +2407,24 @@
                         'popup_type': "請參考上面埋碼規則"
                     });
                 }else{
-                    giftStatus = false;
+                    giftStatus_i = false;
                     $('.article__body .gift--lightbox,.article__head .gift--lightbox').fadeOut();
                     $('.article__body .tooltips--gift,.article__head .tooltips--gift').removeClass('active');
                 }
             });
+            
             $('header .tooltips--gift').click(function(){
-                $('header .gift--lightbox').fadeToggle();
+                if(!giftStatus_img){
+                    giftStatus_img = true;
+                    $('header .gift--lightbox').fadeIn();
+                    dataLayer.push({
+                        'event':'article_gift_popup',
+                        'popup_type': "請參考上面埋碼規則"
+                    });
+                }else{
+                    giftStatus_img = false;
+                    $('header .gift--lightbox').fadeOut();
+                }
             });
 
             // 禮物文章，複製連結

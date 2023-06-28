@@ -37,6 +37,7 @@ function articleInint() {
                 });
             } else {
                 $('header').removeClass('scroll');
+                $('header .gift--lightbox').fadeOut();
                 if (width >= 1024) {
                     $('.bottombar').css({
                         'bottom': '-40px'

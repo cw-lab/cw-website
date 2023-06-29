@@ -2483,6 +2483,12 @@
             $('.black').addClass('opened dialogs');
             $('.message--gift').css('display','block');
 
+            // header 禮物文章關閉
+            $('.message--gift .message__btn ,.message--gift .message__close').click(function(){
+                $('.black').removeClass('opened dialogs');
+                $('.message--gift').fadeOut();
+            });
+
         })
     </script>
     <script>

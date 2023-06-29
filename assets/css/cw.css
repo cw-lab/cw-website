@@ -5816,6 +5816,7 @@ main .ad.ad--970by250.opened {
   display: flex;
   list-style-type: none;
   margin: 0;
+  padding: 0;
 }
 .storyLine__items ul li {
   padding: 0 15px;

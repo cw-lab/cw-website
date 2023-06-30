@@ -2711,11 +2711,13 @@ header .container > .item.item--center .title__share .h3 {
 }
 header .container > .item.item--center a.logo {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50px;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   z-index: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 @media screen and (min-width: 375px) {
   header .container > .item.item--center a.logo {
@@ -2739,8 +2741,9 @@ header a.logo {
   vertical-align: middle;
 }
 header a.logo img {
-  height: 40px;
-  max-width: 100px;
+  height: auto;
+  max-width: 108px;
+  width: 108px;
 }
 header a.logo.logo--main {
   margin-right: 20px;

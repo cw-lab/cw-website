@@ -45,6 +45,7 @@
         font-size: 0.875rem;
         font-weight: 600;
         white-space: pre;
+        font-size: 15px;
         &::before {
             @include beforeafter('', block);
             width: 20px;
@@ -140,7 +141,7 @@
                     font-size: 0.875rem;
                     white-space: nowrap;
                     text-decoration: none;
-                    text-decoration: underline;
+                    font-weight: 500;
                 }
             }
         }

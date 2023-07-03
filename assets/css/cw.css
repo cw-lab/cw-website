@@ -5752,6 +5752,7 @@ main .ad.ad--970by250.opened {
   font-size: 0.875rem;
   font-weight: 600;
   white-space: pre;
+  font-size: 15px;
 }
 .storyLine__title::before {
   content: "";
@@ -5852,7 +5853,7 @@ main .ad.ad--970by250.opened {
   font-size: 0.875rem;
   white-space: nowrap;
   text-decoration: none;
-  text-decoration: underline;
+  font-weight: 500;
 }
 
 .article__audio--tts {

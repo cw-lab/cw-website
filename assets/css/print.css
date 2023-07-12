@@ -4700,6 +4700,8 @@ ul.article__provide li.tooltips--line a:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    z-index: 2;
+    position: relative;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -6556,6 +6558,9 @@ article.article__level--2 ul.article__keyword li a {
 }
 
 .message--giftCopyLink {
+  display: none;
+}
+.message--afterCopyLink {
   display: none;
 }
 .message--gift {

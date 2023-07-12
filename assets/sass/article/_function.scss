@@ -87,6 +87,8 @@ ul.article__share {
     @media screen and (max-width: 1023px) {
         display: flex;
         justify-content: space-evenly;
+        z-index: 2;
+        position: relative;
     }
     li {
         @media screen and (max-width: 1023px) {

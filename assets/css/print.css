@@ -6368,7 +6368,7 @@ article.article__level--2 ul.article__keyword li a {
   width: 270px;
   left: 20px;
   top: 50px;
-  z-index: 1;
+  z-index: 2;
   background-color: #f7f7f7;
   display: none;
   position: absolute;

@@ -196,6 +196,9 @@
     @media screen and (min-width: 768px) {
         left: 50%;
         transform: translateX(-50%);
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
     }
     @media screen and (max-width: 767px) {
         left: 0;

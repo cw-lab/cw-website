@@ -1,0 +1,52 @@
+.openInApp {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: -60px;
+    background-color: $surface;
+    transition: 0.2s;
+    z-index: 6;
+    width: 100%;
+
+    @media screen and (min-width: 501px) {
+        display: none;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $white;
+        font-weight: 400;
+        line-height: 50px;
+        background-color: $surface;
+        @include ellipsis();
+
+        &:hover {
+            background-color: $primary-variant;
+        }
+    }
+
+    &.show{
+        bottom: 0;
+    }
+
+    &.small.show {
+        transition: 0.2s bottom, 0.2s width;
+        width: fit-content;
+        right: 10px;
+        left: unset;
+        bottom: 34px;
+        a{
+            line-height: 36px;
+            span{
+                display: none
+            };
+        }
+    }
+
+    &.small.show.hasBtb {
+        bottom: 60px;
+    }
+}

@@ -35,26 +35,6 @@ function articleInint() {
       $(".article__next").addClass("no__bottombar");
     }
 
-    // 判斷載入的載具
-    let userAgent = navigator.userAgent.toLowerCase();
-    let isFacebookApp = userAgent.includes("fb");
-    let isLineApp = userAgent.includes("line");
-    let isInAppBrowser =
-      /safari|chrome|crios|firefox|fxios|opera|opr|ucbrowser|samsungbrowser|edge|edg|brave|vivaldi|duckduckgo/i.test(
-        userAgent
-      );
-
-    // 輸出結果
-    if (isFacebookApp) {
-      alert("正在在 Facebook 中開啟。");
-    } else if (isLineApp) {
-      alert("正在在 Line 中開啟。");
-    } else if (isInAppBrowser) {
-      alert("正在在其他應用程式（內建瀏覽器）中開啟。");
-    } else {
-      alert("正在在普通瀏覽器中開啟。");
-    }
-
     $(window).on(
       "scroll",
       _.throttle(function () {

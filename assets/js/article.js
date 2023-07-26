@@ -141,23 +141,23 @@ function articleInint() {
             $(".openInApp").fadeOut(150);
 
             // 如果有 btb
-            if ($(".bottombar").length !== 0) {
-              $(".bottombar").css({
-                bottom: "-50px",
-              });
-            }
+            // if ($(".bottombar").length !== 0) {
+            //   $(".bottombar").css({
+            //     bottom: "-50px",
+            //   });
+            // }
           } else if (width < 1028) {
             $(".openInApp").fadeIn(150);
 
             // 如果有 btb
-            if (
-              $(".bottombar").length !== 0 &&
-              scroll >= articleTtsTop - headerHeight + window.innerHeight * 1.75
-            ) {
-              $(".bottombar").css({
-                bottom: 0,
-              });
-            }
+            // if (
+            //   $(".bottombar").length !== 0 &&
+            //   scroll >= articleTtsTop - headerHeight + window.innerHeight * 1.75
+            // ) {
+            //   $(".bottombar").css({
+            //     bottom: 0,
+            //   });
+            // }
           }
 
           if (
@@ -228,3 +228,4 @@ function articleInint() {
   });
 }
 articleInint();
+

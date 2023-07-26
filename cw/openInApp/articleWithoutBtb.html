@@ -2609,16 +2609,15 @@
         let isFacebookApp = userAgent.includes("fb");
         let isLineApp = userAgent.includes("line");
         let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
-
         // 輸出結果
         if (isFacebookApp) {
-            alert("正在在 Facebook 中開啟。");
+            alert("fb");
         } else if (isLineApp) {
-            alert("正在在 Line 中開啟。");
+            alert("line");
         } else if (isMobileApp) {
-            alert("正在手機中開啟。");
+            alert("browser");
         } else {
-            alert("正在瀏覽器中開啟。");
+            alert("others");
         }
     </script>
 

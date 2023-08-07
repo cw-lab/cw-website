@@ -276,7 +276,7 @@ footer {
   background-color: #FAFAFA;
   overflow: hidden;
 }
-.subscription .subscription_title h2 {
+.subscription .subscription_title h3 {
   position: relative;
   margin: 0 0 50px;
   padding-bottom: 5px;
@@ -286,11 +286,11 @@ footer {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .subscription .subscription_title h2 {
+  .subscription .subscription_title h3 {
     font-size: 2.25rem;
   }
 }
-.subscription .subscription_title h2::after {
+.subscription .subscription_title h3::after {
   content: "";
   display: block;
   position: absolute;
@@ -417,16 +417,17 @@ footer {
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.testimonial .carousel .carousel-inner h2 {
+.testimonial .carousel .carousel-inner .title {
   position: relative;
   margin: 1.5rem 0 5px;
   padding-bottom: 5px;
   color: #fff;
   font-size: 1.875rem;
   letter-spacing: 2px;
+  font-weight: 500;
   text-transform: uppercase;
 }
-.testimonial .carousel .carousel-inner h2::after {
+.testimonial .carousel .carousel-inner .title::after {
   content: "";
   display: block;
   position: absolute;

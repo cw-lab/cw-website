@@ -42,7 +42,7 @@ function articleInint() {
           headerHeight = $("header").outerHeight();
 
         // 設定斷點和 next 一致
-        if (width >= 1028) {
+        if (width > 1024) {
           if (scroll >= articleFirstBodyTop - headerHeight) {
             $("header").addClass("scroll");
             $(".bottombar").css({
@@ -134,7 +134,7 @@ function articleInint() {
           }
 
           if (
-            width < 1028 &&
+            width <= 1024 &&
             scroll >= articleBodyTop - headerHeight &&
             scroll >= articleRecommend.offset().top - 1500
           ) {
@@ -146,7 +146,7 @@ function articleInint() {
             //     bottom: "-50px",
             //   });
             // }
-          } else if (width < 1028) {
+          } else if (width <= 1024) {
             $(".openInApp").fadeIn(150);
 
             // 如果有 btb

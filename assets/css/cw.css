@@ -6384,7 +6384,7 @@ main .ad.ad--970by250.opened {
   z-index: 6;
   width: 100%;
 }
-@media screen and (min-width: 1028px) {
+@media screen and (min-width: 1025px) {
   .openInApp {
     display: none;
   }

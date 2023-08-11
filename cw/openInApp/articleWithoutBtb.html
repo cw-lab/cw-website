@@ -2604,27 +2604,6 @@
     <script type="text/javascript" src="./../../assets/js/audioplayer.js"></script>
 
     <script>
-        // 判斷載入的載具
-        let userAgent = navigator.userAgent.toLowerCase();
-        let isFacebookApp = userAgent.includes("fb");
-        let isLineApp = userAgent.includes("line");
-        let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
-        // 輸出結果
-        if (isFacebookApp) {
-            alert("fb");
-        } else if (isLineApp) {
-            alert("line");
-        } else if (isMobileApp) {
-            alert("browser");
-        } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
-            // ios13 的 ipad
-            alert("browser");
-        } else {
-            alert("others");
-        }
-    </script>
-
-    <script>
         // 滾滾滾
         $.get("./../../db.json", function (data) {
             var width = $(window).width(),

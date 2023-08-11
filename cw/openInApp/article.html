@@ -2604,27 +2604,34 @@
     <script type="text/javascript" src="./../../assets/js/audioplayer.js"></script>
 
     <script>
-        // 判斷載入的載具
-        let userAgent = navigator.userAgent.toLowerCase();
-        let isFacebookApp = userAgent.includes("fb");
-        let isLineApp = userAgent.includes("line");
-        let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
+        // $(function () {
+        //     // 判斷載入的載具
+        //     let userAgent = navigator.userAgent.toLowerCase();
+        //     let isFacebookApp = userAgent.includes("fb");
+        //     let isLineApp = userAgent.includes("line");
+        //     let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
 
-        alert(userAgent)
-        
-        // 輸出結果
-        if (isFacebookApp) {
-            alert("fb");
-        } else if (isLineApp) {
-            alert("line");
-        } else if (isMobileApp) {
-            alert("browser");
-        } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
-            // ios13 的 ipad
-            alert("browser");
-        } else {
-            alert("others");
-        }
+        //     alert(userAgent)
+
+        //     // 輸出結果
+        //     if (isFacebookApp) {
+        //         alert("fb");
+        //         $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'fb' })
+        //     } else if (isLineApp) {
+        //         alert("line");
+        //         $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'line' })
+        //     } else if (isMobileApp) {
+        //         alert("browser");
+        //         $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+        //     } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+        //         // ios13 的 ipad
+        //         alert("browser");
+        //         $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+        //     } else {
+        //         alert("others");
+        //         $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'others' })
+        //     }
+        // });
     </script>
 
     <script>

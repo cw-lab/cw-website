@@ -1,5 +1,30 @@
 function articleInint() {
   $(window).on("load", function () {
+
+    let userAgent = navigator.userAgent.toLowerCase();
+    let isFacebookApp = userAgent.includes("fb");
+    let isLineApp = userAgent.includes("line");
+    let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
+
+    // 輸出結果
+    if (isFacebookApp) {
+      alert("fb");
+      $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'fb' })
+    } else if (isLineApp) {
+      alert("line");
+      $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'line' })
+    } else if (isMobileApp) {
+      alert("browser");
+      $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+    } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+      // ios13 的 ipad
+      alert("browser");
+      $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+    } else {
+      alert("others");
+      $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'others' })
+    }
+
     var width = $(window).width(),
       height = $(window).height(),
       idleTime = 0,
@@ -73,8 +98,32 @@ function articleInint() {
 
           if (scroll >= articleTtsTop - headerHeight + window.innerHeight) {
             $(".openInApp").addClass("small");
+            if (isFacebookApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'fb' })
+            } else if (isLineApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'line' })
+            } else if (isMobileApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
+            } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+              // ios13 的 ipad
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
+            } else {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'others' })
+            }
           } else {
             $(".openInApp").removeClass("small");
+            if (isFacebookApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'fb' })
+            } else if (isLineApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'line' })
+            } else if (isMobileApp) {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+            } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+              // ios13 的 ipad
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
+            } else {
+              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'others' })
+            }
           }
 
           // 如果有 btb
@@ -98,8 +147,8 @@ function articleInint() {
 
         $("article").each(function () {
           var next = $(this)
-              .children(".article__body")
-              .children(".article__next"),
+            .children(".article__body")
+            .children(".article__next"),
             nextAHeight = next.children("a").outerHeight(),
             functionGroup = $(this)
               .children(".article__body")

@@ -76,7 +76,13 @@
         });
       } else if (canPlayType(audioFile)) isSupport = true;
 
-      var thePlayer = $('<div class="' + params.classPrefix + ' ' + (audioDisabled === 'true' ? cssClass.standby : cssClass.disabled) + '">' + (isSupport ? $('<div>').append($this.eq(0).clone()).html() : '<embed src="' + audioFile + '" width="0" height="0" volume="100" autostart="' + isAutoPlay.toString() + '" loop="' + isLoop.toString() + '" />') + '<div class="' + cssClass.playPause + '"><i class="icon icon-play-solid">' + params.strPlay + '</i><div class="player__instruction player__instruction--step1">Sky 幫你讀文章</div></div></div>'),
+      // sky 提示
+      // var thePlayer = $('<div class="' + params.classPrefix + ' ' + (audioDisabled === 'true' ? cssClass.standby : cssClass.disabled) + '">' + (isSupport ? $('<div>').append($this.eq(0).clone()).html() : '<embed src="' + audioFile + '" width="0" height="0" volume="100" autostart="' + isAutoPlay.toString() + '" loop="' + isLoop.toString() + '" />') + '<div class="' + cssClass.playPause + '"><i class="icon icon-play-solid">' + params.strPlay + '</i><div class="player__instruction player__instruction--step1">Sky 幫你讀文章</div></div></div>'),
+      // theAudio = isSupport ? thePlayer.find('audio') : thePlayer.find('embed'),
+      // theAudio = theAudio.get(0);
+
+      // 拔掉 sky 提示
+      var thePlayer = $('<div class="' + params.classPrefix + ' ' + (audioDisabled === 'true' ? cssClass.standby : cssClass.disabled) + '">' + (isSupport ? $('<div>').append($this.eq(0).clone()).html() : '<embed src="' + audioFile + '" width="0" height="0" volume="100" autostart="' + isAutoPlay.toString() + '" loop="' + isLoop.toString() + '" />') + '<div class="' + cssClass.playPause + '"><i class="icon icon-play-solid">' + params.strPlay + '</i></div></div>'),
         theAudio = isSupport ? thePlayer.find('audio') : thePlayer.find('embed'),
         theAudio = theAudio.get(0);
 

@@ -2616,6 +2616,9 @@
             alert("line");
         } else if (isMobileApp) {
             alert("browser");
+        } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+            // ios13 的 ipad
+            alert("browser");
         } else {
             alert("others");
         }

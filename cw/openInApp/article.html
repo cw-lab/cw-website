@@ -2047,7 +2047,7 @@
             </ul>
         </div>
 
-        
+
         <div class="bottombar text-center">
             <a id="lightbox_a_tag" class="btnLink gtmEvent waBtnLink" gtm-name="Paywall_bar_sub" href="#!"
                 target="_blank">訂閱天下，12週$399，隨時隨地掌握深入觀點</a>
@@ -2609,12 +2609,18 @@
         let isFacebookApp = userAgent.includes("fb");
         let isLineApp = userAgent.includes("line");
         let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
+
+        alert(userAgent)
+        
         // 輸出結果
         if (isFacebookApp) {
             alert("fb");
         } else if (isLineApp) {
             alert("line");
         } else if (isMobileApp) {
+            alert("browser");
+        } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+            // ios13 的 ipad
             alert("browser");
         } else {
             alert("others");

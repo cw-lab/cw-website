@@ -6,6 +6,8 @@ function articleInint() {
     let isLineApp = userAgent.includes("line");
     let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
 
+    alert(userAgent)
+
     // 輸出結果
     if (isFacebookApp) {
       alert("fb");

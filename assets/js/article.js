@@ -6,24 +6,22 @@ function articleInint() {
     let isLineApp = userAgent.includes("line");
     let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
 
-    alert(userAgent)
-
     // 輸出結果
     if (isFacebookApp) {
-      alert("fb");
+      // alert("fb");
       $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'fb' })
     } else if (isLineApp) {
-      alert("line");
+      // alert("line");
       $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'line' })
     } else if (isMobileApp) {
-      alert("browser");
+      // alert("browser");
       $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
     } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
       // ios13 的 ipad
-      alert("browser");
+      // alert("browser");
       $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
     } else {
-      alert("others");
+      // alert("others");
       $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'others' })
     }
 

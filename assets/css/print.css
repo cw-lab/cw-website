@@ -5815,6 +5815,23 @@ article.article__level--2 ul.article__keyword li a {
 .card__group .card__item:hover .card__title {
   color: #D60C18;
 }
+.card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0 {
+  width: 100%;
+  height: 228px;
+}
+@media (max-width: 1023px) {
+  .card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0 {
+    height: 80px;
+  }
+}
+.card__group .card__item #div-gpt-ad-1687336828598-0 div, .card__group .card__item #div-gpt-ad-1689575314734-0 div {
+  width: 100%;
+  height: 100%;
+}
+.card__group .card__item #div-gpt-ad-1687336828598-0 iframe, .card__group .card__item #div-gpt-ad-1689575314734-0 iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
 @media screen and (max-width: 1023px) {
   .card__group.card__group--grid {
     display: -webkit-box;

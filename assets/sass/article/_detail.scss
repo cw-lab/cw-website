@@ -11,6 +11,7 @@
             display: inline-block;
             >* {
                 display: inline-block;
+                vertical-align: text-bottom;
             }
             >span {
                 font-size: 0.875rem;
@@ -45,6 +46,7 @@
         &::before {
             @include beforeafter('．', inline-block);
             font-size: 0.875rem;
+            vertical-align: text-bottom;
         }
         a,
         span {

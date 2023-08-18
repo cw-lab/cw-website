@@ -42,8 +42,7 @@
     &__title {
         position: relative;
         padding-right: 15px;
-        font-size: 0.875rem;
-        font-weight: 600;
+        font-weight: 500;
         white-space: pre;
         font-size: 15px;
         &::before {
@@ -107,6 +106,7 @@
                 padding: 0 15px;
                 position: relative;
                 line-height: 14px;
+                font-weight: 300;
 
                 +li {
                     &::after {
@@ -141,7 +141,7 @@
                     font-size: 0.875rem;
                     white-space: nowrap;
                     text-decoration: none;
-                    font-weight: 500;
+                    font-weight: 400;
                 }
             }
         }

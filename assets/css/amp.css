@@ -1490,6 +1490,7 @@ ul.article__share li a:hover {
 }
 .article__detail > ul li > * {
   display: inline-block;
+  vertical-align: text-bottom;
 }
 .article__detail > ul li > span {
   font-size: 0.875rem;
@@ -1511,6 +1512,7 @@ ul.article__share li a:hover {
   content: "．";
   display: inline-block;
   font-size: 0.875rem;
+  vertical-align: text-bottom;
 }
 .article__detail > ul.article__assort a,
 .article__detail > ul.article__assort span {

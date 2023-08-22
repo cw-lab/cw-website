@@ -9,6 +9,12 @@ body {
   min-width: auto;
   padding-bottom: 0 !important;
 }
+.index-page .container .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media (min-width: 768px) {
   .index-page .container {
     width: 750px;
@@ -28,23 +34,23 @@ body {
 .header {
   height: 82.5%;
   min-height: 82.5%;
-  background-image: url("../../img/cwdaily/daily_app_kv.jpg");
   background-repeat: no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
+  background-image: url("../../img/cwdaily/daily_app_kv.png"), url(../../img/cwdaily/daily_app_kv--daily.svg), linear-gradient(#EAEAEA 0%, #BBBBBB 200%);
+  background-position: center 82.5%, center 74%, center 82.5%;
+  background-attachment: fixed;
+  background-size: 180%, contain , contain;
 }
 @media (min-width: 768px) {
   .header {
     height: 100%;
     min-height: 100%;
+    background-position: center bottom;
+    background-size: contain;
   }
 }
 .header .section_overlay {
   height: 100%;
   min-height: 100%;
-  background-color: rgba(23, 23, 23, 0.75);
 }
 .header .section_overlay > .container {
   height: 100%;
@@ -55,10 +61,57 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
+}
+.header .section_overlay > .container > .row >div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .header h1.home_text {
   margin: 0;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+.header h1.home_text span {
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+@media (min-width: 768px) {
+  .header h1.home_text {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    padding: 0 0 0 116px;
+  }
+  .header h1.home_text span {
+    font-size: 27px;
+    letter-spacing: 11px;
+  }
+}
+.header h1.home_text::before {
+  content: '';
+  background-image: url(../../img/cwdaily/icon--appDaily.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 96px;
+  height: 96px;
+  display: inline-block;
+  position: absolute;
+  margin: -4px -116px;
+}
+@media (max-width: 768px) {
+  .header h1.home_text::before {
+    display: none;
+  }
 }
 .header h1.home_text img {
   display: block;
@@ -72,9 +125,16 @@ body {
   list-style: none;
   font-size: 0;
 }
+.appIcon {
+  display: flex;
+  justify-content: flex-end;
+}
 @media (min-width: 768px) {
   .header .download-btn ul {
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+  .appIcon {
+    padding-right: 30px;
   }
 }
 @media (max-width: 991px) {
@@ -105,8 +165,12 @@ body {
 }
 .header .download-btn a img {
   display: block;
-  border: 1px solid #939EA7;
-  border-radius: 5px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+.header .download-btn a img:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 767px) {
   .header .download-btn a img {
@@ -133,15 +197,55 @@ body {
 
 footer {
   position: static;
+  padding-bottom: 40px;
 }
 
 .about-page {
   padding-top: 70px;
   background-color: #fafafa;
 }
+.about-page .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.about-page .item-box {
+  margin-bottom: 56px;
+  padding: 0 32px;
+}
+.about-page .item-box .item-box__img {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-page .item-box .item-box__img img {
+  width: 100%;
+  max-width: 320px;
+}
+.about-page .item-box .item-box__text .title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.about-page .item-box .item-box__text .d p {
+  font-size: 1rem;
+  color: #4A4A4A;
+  text-align: center;
+  margin: 0;
+}
 @media (min-width: 992px) {
   .about-page {
-    padding-top: 100px;
+    padding: 100px 0;
+  }
+  .about-page .item-box {
+    width: calc(100%/3);
+    padding: 0 2%;
+    margin-bottom: 0;
   }
 }
 .about-page .Pc-daily,
@@ -169,10 +273,10 @@ footer {
 .subscription {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #fff;
+  background-color: #FAFAFA;
   overflow: hidden;
 }
-.subscription .subscription_title h2 {
+.subscription .subscription_title h3 {
   position: relative;
   margin: 0 0 50px;
   padding-bottom: 5px;
@@ -182,11 +286,11 @@ footer {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  .subscription .subscription_title h2 {
+  .subscription .subscription_title h3 {
     font-size: 2.25rem;
   }
 }
-.subscription .subscription_title h2::after {
+.subscription .subscription_title h3::after {
   content: "";
   display: block;
   position: absolute;
@@ -306,22 +410,24 @@ footer {
 }
 .testimonial .carousel .carousel-inner img {
   display: block;
-  width: 200px;
+  width: 180px;
   margin: auto;
   border: 3px solid #D60C18;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
-.testimonial .carousel .carousel-inner h2 {
+.testimonial .carousel .carousel-inner .title {
   position: relative;
   margin: 1.5rem 0 5px;
   padding-bottom: 5px;
   color: #fff;
   font-size: 1.875rem;
+  letter-spacing: 2px;
+  font-weight: 500;
   text-transform: uppercase;
 }
-.testimonial .carousel .carousel-inner h2::after {
+.testimonial .carousel .carousel-inner .title::after {
   content: "";
   display: block;
   position: absolute;
@@ -335,7 +441,7 @@ footer {
 .testimonial .carousel .carousel-inner p {
   margin: 0;
   padding-top: 30px;
-  color: #D3D5D7;
+  color: #fff;
   font-size: 1.125rem;
   line-height: 1.5;
 }
@@ -377,5 +483,36 @@ footer {
 .call_to_action .more-app a:hover {
   color: #D60C18;
 }
+.testimonial .section_overlay {
+  background-color: rgba(23, 23, 23, 0.7);
+}
 
+/* bottom bar */
+.bottombar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  background-color: #d60c18;
+  -webkit-transition: bottom .2s;
+  transition: bottom .2s;
+  z-index: 5;
+}
+.bottombar a {
+  display: block;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  font-weight: 400;
+  line-height: 50px;
+  background-color: #d60c18;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .bottombar a {
+    line-height: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

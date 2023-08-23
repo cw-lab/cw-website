@@ -6760,7 +6760,7 @@ main .ad.ad--970by250.opened {
 .article__function {
   display: none;
   position: fixed;
-  top: 50%;
+  top: calc(50% + 20px);
   left: calc((100% - 970px) / 2);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);

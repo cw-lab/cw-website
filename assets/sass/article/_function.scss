@@ -1,7 +1,7 @@
 .article__function {
     display: none;
     position: fixed;
-    top: 50%;
+    top: calc(50% + 20px);
     left: calc((100% - 970px) / 2);
     transform: translateY(-50%);
     z-index: 5;

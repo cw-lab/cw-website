@@ -4737,7 +4737,7 @@ header {
   padding-bottom: 12px;
   background-color: #fff;
   border-bottom: 1px solid #EEEEEE;
-  z-index: 5;
+  z-index: 6;
 }
 header.opened {
   z-index: 10;

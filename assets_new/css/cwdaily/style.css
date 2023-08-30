@@ -43,13 +43,13 @@ html, body { height: 100%; min-height: 100%; font-weight: normal; }
 
 .header .section_overlay .sloganbox > * { -ms-flex: 0 0 100%; flex: 0 0 100%; position: relative; }
 
-.header .section_overlay .sloganbox .keywords { margin: 0; display: -ms-flexbox; display: flex; list-style: none; padding: 0; font-family: Jura; font-size: 38px; font-style: normal; font-weight: 700; line-height: 1; letter-spacing: 1.9px; }
+.header .section_overlay .sloganbox .keywords { margin: 0; display: -ms-flexbox; display: flex; list-style: none; padding: 0; font-family: Jura; font-size: 30px; font-style: normal; font-weight: 700; line-height: 1; letter-spacing: 1px; }
 
-@media (max-width: 1300px) { .header .section_overlay .sloganbox .keywords { font-size: 31px; } }
+@media (max-width: 1300px) { .header .section_overlay .sloganbox .keywords { font-size: 25px; } }
 
-@media (max-width: 1100px) { .header .section_overlay .sloganbox .keywords { font-size: 27px; } }
+@media (max-width: 1100px) { .header .section_overlay .sloganbox .keywords { font-size: 22px; } }
 
-@media (max-width: 900px) { .header .section_overlay .sloganbox .keywords { -ms-flex: 0 0 280px; flex: 0 0 280px; font-size: 20px; -ms-flex-pack: justify; justify-content: space-between; } }
+@media (max-width: 900px) { .header .section_overlay .sloganbox .keywords { -ms-flex: 0 0 215px; flex: 0 0 215px; font-size: 16px; -ms-flex-pack: justify; justify-content: space-between; } }
 
 .header .section_overlay .sloganbox .keywords li { margin-left: 25px; }
 
@@ -57,13 +57,13 @@ html, body { height: 100%; min-height: 100%; font-weight: normal; }
 
 .header .section_overlay .sloganbox .keywords li:first-child { margin-left: 0; }
 
-.header .section_overlay .sloganbox h1 { font-size: 53px; font-style: normal; font-weight: 500; line-height: 100%; letter-spacing: 7px; margin: 15px 0; }
+.header .section_overlay .sloganbox h1 { font-size: 42px; font-style: normal; font-weight: 500; line-height: 100%; letter-spacing: 4px; margin: 15px 0; }
 
-@media (max-width: 1300px) { .header .section_overlay .sloganbox h1 { font-size: 47px; } }
+@media (max-width: 1300px) { .header .section_overlay .sloganbox h1 { font-size: 38px; } }
 
-@media (max-width: 1100px) { .header .section_overlay .sloganbox h1 { font-size: 40px; } }
+@media (max-width: 1100px) { .header .section_overlay .sloganbox h1 { font-size: 32px; } }
 
-@media (max-width: 900px) { .header .section_overlay .sloganbox h1 { line-height: 1.45; letter-spacing: 8px; font-weight: 400; margin: 12px 0; } }
+@media (max-width: 900px) { .header .section_overlay .sloganbox h1 { line-height: 1.45; letter-spacing: 4.5px; font-weight: 400; margin: 8px 0; } }
 
 .header .section_overlay .sloganbox h1 span { margin-left: 25px; }
 
@@ -71,11 +71,11 @@ html, body { height: 100%; min-height: 100%; font-weight: normal; }
 
 @media (max-width: 900px) { .header .section_overlay .sloganbox h1 span { display: block; margin-left: 0; } }
 
-.header .section_overlay .sloganbox .product { font-size: 30px; font-style: normal; font-weight: 400; line-height: 67px; letter-spacing: 8px; padding-left: 84px; margin-top: 9px; }
+.header .section_overlay .sloganbox .product { font-size: 24px; font-style: normal; font-weight: 400; line-height: 67px; letter-spacing: 4px; padding-left: 84px; margin-top: 9px; }
 
-@media (max-width: 1100px) { .header .section_overlay .sloganbox .product { font-size: 26px; margin-top: 0; padding-left: 70px; line-height: 57px; } }
+@media (max-width: 1100px) { .header .section_overlay .sloganbox .product { font-size: 21px; margin-top: 0; padding-left: 70px; line-height: 57px; } }
 
-@media (max-width: 900px) { .header .section_overlay .sloganbox .product { font-size: 20px; letter-spacing: 8px; padding-left: 66px; line-height: 52px; } }
+@media (max-width: 900px) { .header .section_overlay .sloganbox .product { font-size: 16px; letter-spacing: 2.5px; padding-left: 56px; line-height: 42px; } }
 
 @media (max-width: 768px) { .header .section_overlay .sloganbox .product { -ms-flex: 0 0 fit-content; flex: 0 0 fit-content; } }
 
@@ -83,13 +83,13 @@ html, body { height: 100%; min-height: 100%; font-weight: normal; }
 
 @media (max-width: 1100px) { .header .section_overlay .sloganbox .product::before { width: 55px; height: 55px; } }
 
-@media (max-width: 900px) { .header .section_overlay .sloganbox .product::before { width: 50px; height: 50px; } }
+@media (max-width: 900px) { .header .section_overlay .sloganbox .product::before { width: 45px; height: 45px; } }
 
 .header .section_overlay .sloganbox .cta { margin-top: 24px; }
 
-.header .section_overlay .sloganbox .cta span { color: #000; text-shadow: none; background-color: #87E2FF; border: 1px solid #87E2FF; padding: 6px 25px; font-size: 17px; font-weight: 500; line-height: 1.5; letter-spacing: 3px; display: inline-block; cursor: pointer; }
+.header .section_overlay .sloganbox .cta span { color: #000; text-shadow: none; background-color: #87E2FF; border: 1px solid #87E2FF; padding: 6px 25px; font-size: 17px; font-weight: 500; line-height: 1.5; letter-spacing: 2px; display: inline-block; cursor: pointer; }
 
-@media (max-width: 900px) { .header .section_overlay .sloganbox .cta span { font-size: 20px; font-weight: 400; } }
+@media (max-width: 900px) { .header .section_overlay .sloganbox .cta span { font-size: 16px; font-weight: 400; } }
 
 .header .section_overlay .sloganbox .cta span:hover { background-color: transparent; color: #87E2FF; }
 
@@ -121,11 +121,11 @@ html, body { height: 100%; min-height: 100%; font-weight: normal; }
 
 @media (max-width: 768px) { .header .section_overlay .circle span { background-image: url(../../img/cwdaily/scan1_mb.png); background-color: transparent; background-repeat: no-repeat; background-size: contain; animation: 5s ani_circle infinite linear; } }
 
-.header .section_overlay .inspire { width: 18px; height: 18px; background-color: #BBF8FF; position: absolute; border-radius: 18px; left: calc(6.9% + 500px); top: calc(50% - 157px); transform: translateY(-50%); }
+.header .section_overlay .inspire { width: 18px; height: 18px; background-color: #BBF8FF; position: absolute; border-radius: 18px; left: calc(6.9% + 390px); top: calc(50% - 150px); transform: translateY(-50%); }
 
-@media (max-width: 1300px) { .header .section_overlay .inspire { left: calc(5% + 420px); top: calc(50% - 152px); } }
+@media (max-width: 1300px) { .header .section_overlay .inspire { left: calc(5% + 335px); top: calc(50% - 148px); } }
 
-@media (max-width: 1100px) { .header .section_overlay .inspire { left: calc(5% + 350px); top: calc(50% - 140px); width: 14px; height: 14px; } }
+@media (max-width: 1100px) { .header .section_overlay .inspire { left: calc(5% + 283px); top: calc(50% - 136px); width: 14px; height: 14px; } }
 
 @media (max-width: 900px) { .header .section_overlay .inspire { left: calc(5% + 280px); top: calc(50% - 10px); } }
 

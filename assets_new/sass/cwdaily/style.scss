@@ -658,7 +658,7 @@ footer {
 
     .item-box__text {
       .title {
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 500;
         line-height: 1.4;
         text-align: center;
@@ -758,13 +758,28 @@ footer {
     font-size: 1.75rem;
     text-align: center;
     text-transform: uppercase;
+    @media (max-width:768px) {
+      font-size: 1.25rem;
+    }
   }
 
   p {
     font-size: 1.125rem;
     line-height: 1.6;
     text-align: center;
-
+    @media (max-width:768px) {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+    &.content {
+      @media (max-width:768px) {
+        margin-bottom: 1rem;
+        &.contentM {
+          margin: 0;
+        }
+      }
+    }
     span {
       display: block;
       color: #6B7780;
@@ -889,13 +904,13 @@ footer {
       padding: .2rem 1.5rem;
       background-color: #5e676f;
       color: #fff;
-      font-size: 1rem;
+      font-size: 14px;
       max-width: 700px;
       margin: auto;
       .title {
         text-align: center;
         font-weight: 600;
-        font-size: 1.125rem;
+        font-size: 1rem;
         // color: #000;
       }
       strong {
@@ -909,6 +924,9 @@ footer {
       text-align: center;
       max-width: 700px;
       margin: auto;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
       strong {
         font-size: 110%;
         font-weight: 600;
@@ -972,6 +990,11 @@ footer {
             border-color: #87E2FF;
             color: #000;
             font-weight: 400;
+            @media (max-width: 768px) {
+              font-size: 1rem;
+              width: 180px;
+              padding: 6px 0;
+            }
             &:hover {
               background-color: transparent;
               color: #87E2FF;
@@ -1178,7 +1201,7 @@ footer {
 }
 @media (min-width: 768px) {
   .subscription .subscription_title h3,.apply .apply_title h3 {
-    font-size: 2.25rem;
+    font-size: 2rem;
     padding-bottom: 0;
   }
 }
@@ -1238,10 +1261,14 @@ footer {
         margin: 1.5rem 0 5px;
         padding-bottom: 5px;
         color: #fff;
-        font-size: 1.875rem;
+        font-size: 2rem;
         letter-spacing: 2px;
         font-weight: 500;
+        line-height: 2;
         text-transform: uppercase;
+        @media (max-width:768px) {
+          font-size: 1.5rem;
+        }
 
         &::after {
           content: "";
@@ -1260,7 +1287,7 @@ footer {
         margin: 0;
         padding-top: 30px;
         color: #fff;
-        font-size: 1.125rem;
+        font-size: 1rem;
         line-height: 1.5;
       }
     }
@@ -1286,14 +1313,21 @@ footer {
   h3 {
     margin-top: 0px;
     color: #171717;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 1.25;
+    @media (max-width:768px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
     margin-top: 0;
     color: #48545D;
     font-size: 1.125rem;
+    line-height: 1.5;
+    @media (max-width:768px) {
+      font-size: 1rem;
+    }
   }
 
   .more-app {

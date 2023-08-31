@@ -5700,7 +5700,7 @@ main .ad.ad--970by250.opened {
 }
 .storyLine.fixed {
   position: fixed;
-  top: 65px;
+  top: 64px;
   left: 0;
   width: 100%;
   background-color: #fff;
@@ -6402,9 +6402,6 @@ main .ad.ad--970by250.opened {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.openInApp a:hover {
-  background-color: #9D0505;
-}
 .openInApp.show {
   bottom: 0;
 }
@@ -6443,6 +6440,9 @@ main .ad.ad--970by250.opened {
 }
 .bulletin.hide {
   bottom: -100%;
+}
+.bulletin#cookie-bar {
+  z-index: 6;
 }
 @media screen and (min-width: 1024px) {
   .bulletin {

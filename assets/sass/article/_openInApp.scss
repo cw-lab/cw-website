@@ -23,9 +23,10 @@
         background-color: $surface;
         @include ellipsis();
 
-        &:hover {
-            background-color: $primary-variant;
-        }
+        // 因為只需要手機版出現，故不需要hover
+        // &:hover {
+        //     background-color: $primary-variant;
+        // }
     }
 
     &.show{

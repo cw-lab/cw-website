@@ -12,6 +12,9 @@
     &.hide {
         bottom: -100%;
     }
+    &#cookie-bar{
+        z-index: 6;
+    }
     @media screen and (min-width: 1024px) {
         width: 265px;
         padding: 30px 25px 20px;

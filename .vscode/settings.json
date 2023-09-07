@@ -6,11 +6,19 @@
       "savePath": "~/../css/"
     }
   ],
-  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**","**/assets_new/**", "**/assets/sass/article/**","**/assets/sass/amp/**","**/assets/sass/feature/fashion/**","**/assets/sass/feature/transformer/**","**/assets/sass/migo/**","**/assets/sass/opinion/**","**/assets/sass/feature/webaccess/**"],
-  "liveSassCompile.settings.generateMap": true,
-  "liveSassCompile.settings.autoprefix": [
-    "> 1%",
-    "last 2 versions"
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+    "**/assets_new/**",
+    "**/assets/sass/article/**",
+    "**/assets/sass/amp/**",
+    "**/assets/sass/feature/fashion/**",
+    "**/assets/sass/feature/transformer/**",
+    "**/assets/sass/migo/**",
+    "**/assets/sass/opinion/**",
+    "**/assets/sass/feature/webaccess/**"
   ],
-  "liveServer.settings.port": 5502
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveServer.settings.port": 5503
 }

@@ -43,7 +43,7 @@
         position: relative;
         padding-right: 15px;
         font-weight: 500;
-        white-space: pre;
+        white-space: nowrap;
         font-size: 15px;
         &::before {
             @include beforeafter('', block);
@@ -80,7 +80,7 @@
     }
 
     &__items {
-        overflow: auto;
+        overflow-x: auto;
         -ms-overflow-style: none;
         scrollbar-width: none; //moz scroll bar
 
@@ -144,6 +144,67 @@
                     font-weight: 400;
                 }
             }
+        }
+    }
+
+    &__hint{
+        position: absolute;
+        left: 100%;
+        top: calc(100% + 20px);
+        z-index: 2;
+        background-color: #003a9f;
+        padding: 15px 20px;
+        transition: all 0.2s;
+        width: max-content;
+        animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+        display: none;
+        &.active{
+            display: inline-flex;
+            animation: storyline_hint 0.7s infinite alternate;
+        }
+
+        @media screen and (max-width: 1023px) {
+            white-space: break-spaces;
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 350px) {
+            max-width: 150px;
+        }
+
+        @media screen and (max-width: 330px) {
+            max-width: 130px;
+        }
+        
+        @keyframes storyline_hint {
+            0% {
+                transform: translateY(15px);
+            }
+
+            100% {
+                transform: translateY(5px);
+            }
+        }
+
+        p {
+            color: #fff;
+            padding: 0;
+            margin: 0;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #003a9f transparent transparent;
+            top: -15px;
+            left: 30px;
+            transform: rotate(90deg);
         }
     }
 }

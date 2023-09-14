@@ -3619,7 +3619,7 @@ main .ad.ad--970by250.opened {
   position: relative;
   padding-right: 15px;
   font-weight: 500;
-  white-space: pre;
+  white-space: nowrap;
   font-size: 15px;
 }
 .storyLine__title::before {
@@ -3660,7 +3660,7 @@ main .ad.ad--970by250.opened {
   }
 }
 .storyLine__items {
-  overflow: auto;
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -3723,6 +3723,86 @@ main .ad.ad--970by250.opened {
   white-space: nowrap;
   text-decoration: none;
   font-weight: 400;
+}
+.storyLine__hint {
+  position: absolute;
+  left: 100%;
+  top: calc(100% + 20px);
+  z-index: 2;
+  background-color: #003a9f;
+  padding: 15px 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+          animation-timing-function: cubic-bezier(0, 0.35, 0.7, 1);
+  display: none;
+}
+.storyLine__hint.active {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-animation: storyline_hint 0.7s infinite alternate;
+          animation: storyline_hint 0.7s infinite alternate;
+}
+@media screen and (max-width: 1023px) {
+  .storyLine__hint {
+    white-space: break-spaces;
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .storyLine__hint {
+    max-width: 150px;
+  }
+}
+@media screen and (max-width: 330px) {
+  .storyLine__hint {
+    max-width: 130px;
+  }
+}
+@-webkit-keyframes storyline_hint {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+@keyframes storyline_hint {
+  0% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+.storyLine__hint p {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+.storyLine__hint::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #003a9f transparent transparent;
+  top: -15px;
+  left: 30px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .article__audio--tts {

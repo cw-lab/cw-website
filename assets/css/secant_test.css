@@ -1,49 +1,39 @@
-@charset "UTF-8";
 .webaccess__page {
   position: relative;
   padding-bottom: 100px;
 }
-
 @media screen and (min-width: 375px) {
   .webaccess__page .container {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
-
 .webaccess__page .container::before, .webaccess__page .container::after {
   content: "";
   display: block;
   clear: both;
 }
-
 .webaccess__page header {
   border-bottom: 1px solid #D3D5D7;
 }
-
 .webaccess__page header .container > .flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
 .webaccess__page header .container ul.member__list + .member__list {
   margin-left: 30px;
 }
-
 .webaccess__page header .container ul.member__list li + li {
   margin-left: 30px;
 }
-
 .webaccess__page header .container ul.member__list a {
   color: #171717;
   font-size: 1rem;
 }
-
 .webaccess__page header .container ul.member__list a:hover {
   color: #D60C18;
 }
-
 .webaccess__page main {
   margin-top: 0;
   margin-bottom: 0;
@@ -51,12 +41,10 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .webaccess__page main .plan {
   margin-bottom: 2.5em;
   gap: 20px;
 }
-
 @media screen and (max-width: 767px) {
   .webaccess__page main .plan {
     -webkit-box-orient: vertical;
@@ -65,44 +53,36 @@
             flex-direction: column;
   }
 }
-
 .webaccess__page main .plan .plan__description--main {
   padding: 30px;
 }
-
 .webaccess__page main .plan .plan__description--complement {
   padding-top: 25px;
   padding-bottom: 25px;
   line-height: 1.875;
 }
-
 .webaccess__page main .plan .plan__description a.link-btn {
   font-size: 1rem;
 }
-
 .webaccess__page main .plan .plan__item {
   position: relative;
   width: 100%;
   border: 1px solid #D3D5D7;
   background-color: #fff;
 }
-
 @media screen and (max-width: 767px) {
   .webaccess__page main .plan .plan__item {
     margin-bottom: 10px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__item {
     width: calc((100% - 40px) / 3);
   }
 }
-
 .webaccess__page main .plan .plan__item--highlight {
   border: 1px solid #003a9f;
 }
-
 .webaccess__page main .plan .plan__item__complement {
   display: block;
   padding-top: 5px;
@@ -111,7 +91,6 @@
   font-weight: normal;
   line-height: 1.5;
 }
-
 .webaccess__page main .plan .plan__item__spec {
   position: absolute;
   top: 0;
@@ -121,7 +100,6 @@
   -webkit-transform: translate(-0.5rem, -50%);
           transform: translate(-0.5rem, -50%);
 }
-
 .webaccess__page main .plan .plan__item__spec span {
   display: block;
   max-width: 5em;
@@ -131,7 +109,6 @@
   text-align: center;
   overflow: hidden;
 }
-
 .webaccess__page main .plan .plan__item__spec::before {
   content: "";
   display: block;
@@ -144,11 +121,9 @@
   border-width: 0 8px 6px 0;
   border-color: transparent #003a9f transparent transparent;
 }
-
 .webaccess__page main .plan .plan__item__title {
   line-height: 1;
 }
-
 .webaccess__page main .plan .plan__item__group .btn--text {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -165,20 +140,16 @@
   text-decoration: none;
   border-bottom: 1px solid #003a9f;
 }
-
 .webaccess__page main .plan .plan__item__group .btn--text:hover {
   border-color: #D60C18;
 }
-
 .webaccess__page main .plan .plan__item__group .btn--text > * {
   display: block;
 }
-
 .webaccess__page main .plan .plan__item__group .btn--text i {
   margin-left: 5px;
   font-size: 0.75rem;
 }
-
 .webaccess__page main .plan .plan__item__img {
   display: none;
   height: 150px;
@@ -186,85 +157,70 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 @media screen and (min-width: 768px) and (max-width: 929px) {
   .webaccess__page main .plan .plan__item__img {
     height: 100px;
     margin-top: 30px;
   }
 }
-
 .webaccess__page main .plan .plan__item__option {
   margin-bottom: 20px;
 }
-
 .webaccess__page main .plan .plan__item .select__group {
   width: 100%;
 }
-
 .webaccess__page main .plan .plan__item .select__group::before {
   right: 0.85rem;
   font-size: 1.25em;
 }
-
 .webaccess__page main .plan .plan__item .select__group select.plan__item__select {
   width: 100%;
   padding: 0 2rem 0 1rem;
   line-height: 46px;
   background-color: #fff;
 }
-
 .webaccess__page main .plan .plan__item .btn {
   display: block;
   width: 100%;
   cursor: pointer;
 }
-
 .webaccess__page main .plan .plan__item .btn.active {
   background-color: #D60C18;
   border-color: #D60C18;
 }
-
 .webaccess__page main .plan .plan__item__right {
   font-size: 1rem;
   line-height: 1.5;
   list-style: none;
 }
-
 @media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__item__right {
     min-height: 4.5rem;
   }
 }
-
 .webaccess__page main .plan .plan__item__right li {
   position: relative;
 }
-
 .webaccess__page main .plan .plan__item__right li::before {
-  content: "";
+  content: "\e929";
   display: block;
   position: absolute;
   top: 0;
   left: -1.35em;
   font-family: "cw_icon";
 }
-
 .webaccess__page main .plan .plan__item__right--narrow li {
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
-
 .webaccess__page main .plan .plan__option__txt {
   display: block;
   line-height: 1;
 }
-
 .webaccess__page main .plan .plan__option__txt span {
   display: none;
 }
-
 .webaccess__page main .plan .plan__option__txt--complement {
   display: block;
   margin-top: 10px;
@@ -273,17 +229,14 @@
   font-weight: normal;
   line-height: 1.2;
 }
-
 @media screen and (min-width: 768px) {
   .webaccess__page main .plan .plan__option__txt--complement {
     height: 1.5rem;
   }
 }
-
 .webaccess__page main .plan__section .student-plan {
   text-align: right;
 }
-
 @media screen and (max-width: 767px) {
   .webaccess__page main .plan__section .student-plan {
     text-align: center;
@@ -291,79 +244,57 @@
     margin-top: -10px;
   }
 }
-
 .webaccess__page main .plan__section .icon {
   display: inline-block;
   width: 23px;
   vertical-align: text-top;
   margin-right: 4px;
 }
-
 .webaccess__page section.intro {
   padding-top: 40px;
   padding-bottom: 112px;
   margin-bottom: -70px;
   background-color: #fafafa;
 }
-
 @media screen and (min-width: 768px) {
   .webaccess__page section.intro {
     padding-bottom: 160px;
     margin-bottom: -80px;
   }
 }
-
 .webaccess__page section.intro .container {
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 90px;
   grid-row-gap: 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
 @media screen and (min-width: 768px) {
   .webaccess__page section.intro .container {
-    display: -ms-grid;
     display: grid;
   }
 }
-
 .webaccess__page section.intro .intro--text {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 1 / 1 / 2 / 3;
+  grid-area: 1/1/2/3;
 }
-
 .webaccess__page section.intro .intro--text .icon {
   display: inline-block;
   width: 23px;
   vertical-align: text-top;
   margin-right: 4px;
 }
-
 .webaccess__page section.intro .intro--img {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-area: 1 / 3 / 2 / 4;
+  grid-area: 1/3/2/4;
 }
-
 @media screen and (max-width: 767px) {
   .webaccess__page section.intro .intro--img {
     display: none;
   }
 }
-
 .webaccess__page section.intro .intro--img img {
   width: 100%;
 }
-
 .webaccess__page section.faq .container {
   max-width: 630px;
-}
-/*# sourceMappingURL=secant_test.css.map */
+}/*# sourceMappingURL=secant_test.css.map */

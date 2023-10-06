@@ -4737,7 +4737,7 @@ header {
   padding-bottom: 12px;
   background-color: #fff;
   border-bottom: 1px solid #EEEEEE;
-  z-index: 5;
+  z-index: 7;
 }
 header.opened {
   z-index: 10;
@@ -5611,10 +5611,6 @@ hr {
   border: 0;
   z-index: 0 !important;
 }
-.ad.ad--scrollvideo > span.sans-serif {
-  display: none;
-}
-
 main .ad.ad--970by250.opened {
   z-index: 1;
 }

@@ -805,27 +805,27 @@
 }
 @media screen and (min-width: 1024px) {
   .feature__page .sns__group li > a.sns-facebook {
-    background-image: url("../../img/feature/facebook--secondary.svg");
+    background-image: url("../images/common/facebook--secondary.svg");
   }
 }
 @media screen and (max-width: 1023px) {
   .feature__page .sns__group li > a.sns-facebook {
-    background-image: url("../../img/feature/facebook--brand.svg");
+    background-image: url("../images/common/facebook--brand.svg");
   }
 }
 .feature__page .sns__group li > a.sns-facebook:hover {
-  background-image: url("../../img/feature/facebook--brand.svg");
+  background-image: url("../images/common/facebook--brand.svg");
 }
 @media screen and (min-width: 1024px) {
   .feature__page .sns__group li > a.sns-line {
-    background-image: url("../../img/feature/line--secondary.svg");
+    background-image: url("../images/common/line--secondary.svg");
   }
 }
 @media screen and (max-width: 1023px) {
   .feature__page .sns__group li > a.sns-line {
-    background-image: url("../../img/feature/line--brand.svg");
+    background-image: url("../images/common/line--brand.svg");
   }
 }
 .feature__page .sns__group li > a.sns-line:hover {
-  background-image: url("../../img/feature/line--brand.svg");
+  background-image: url("../images/common/line--brand.svg");
 }/*# sourceMappingURL=feature.css.map */

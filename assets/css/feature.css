@@ -373,27 +373,16 @@
 }
 .feature__page section .card__title h3 {
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
   color: #171717;
-  font-size: 1.125em;
+  font-size: 18px;
   font-weight: normal;
   line-height: unset;
-}
-@media screen and (max-width: 767px) {
-  .feature__page section .card__title h3 {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  margin: 0;
 }
 .feature__page section .card__title {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: #171717;
-  font-size: 1.125em;
-  font-weight: normal;
-  line-height: unset;
 }
 @media screen and (max-width: 767px) {
   .feature__page section .card__title {
@@ -509,6 +498,19 @@
 }
 .feature__page section .embed:before {
   width: 100%;
+}
+.feature__page section .embed.embed--16by9:before {
+  padding-top: 56.25%;
+}
+.feature__page section .embed.embed--4by3:before {
+  padding-top: 75%;
+}
+.feature__page section .embed > .embed__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .feature__page section .slideshow {
   position: relative;

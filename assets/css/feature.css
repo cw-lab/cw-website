@@ -24,7 +24,7 @@
   }
 }
 .feature__page header {
-  position: fixed;
+  position: relative;
   border-color: transparent;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
@@ -53,8 +53,23 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+.feature__page header .flex a.logo img {
+  height: 30px;
+  width: auto;
+  max-width: unset;
+}
+@media screen and (min-width: 1260px) {
+  .feature__page header .flex a.logo img {
+    height: 50px;
+  }
+}
 .feature__page header .container-fluid > .container {
-  padding-left: 40px;
+  padding-left: 10px;
+}
+@media screen and (min-width: 1260px) {
+  .feature__page header .container-fluid > .container {
+    padding-left: 40px;
+  }
 }
 .feature__page header .container {
   max-width: 1260px;
@@ -68,7 +83,8 @@
 .feature__page header nav.menubar--sub2 .menubar__user {
   color: currentColor;
 }
-.feature__page header nav.menubar--sub2 .menubar__user .menubar__user--signin, .feature__page header nav.menubar--sub2 .menubar__user .menubar__user--login {
+.feature__page header nav.menubar--sub2 .menubar__user .menubar__user--signin,
+.feature__page header nav.menubar--sub2 .menubar__user .menubar__user--login {
   color: currentColor;
 }
 .feature__page .edit__department {
@@ -86,10 +102,10 @@
 }
 
 .feature__page .hamburger {
-  color: currentColor;
+  color: #D60C18;
 }
 .feature__page .hamburger span {
-  background-color: currentColor;
+  background-color: #D60C18;
 }
 .feature__page .scroll--down {
   position: relative;
@@ -219,7 +235,7 @@
 }
 @media (orientation: landscape) {
   .feature__page section:first-child .slideshow::before {
-    padding-top: 42.8571428571%;
+    padding-top: 56.25%;
   }
 }
 .feature__page section:first-child .slideshow .slider {
@@ -232,21 +248,6 @@
   content: "";
   display: block;
   width: 100%;
-  padding-top: 149.275362%;
-}
-@media (orientation: landscape) {
-  .feature__page section:first-child .slideshow .slider__item::after {
-    padding-top: 42.8571428571%;
-  }
-}
-.feature__page section:first-child .slideshow .slider__item img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .feature__page section:nth-last-child(2) > .container {
   padding-bottom: 40px;
@@ -255,18 +256,21 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.feature__page section > .container, .feature__page section > .container-fluid {
+.feature__page section > .container,
+.feature__page section > .container-fluid {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 @media screen and (max-width: 767px) {
-  .feature__page section > .container, .feature__page section > .container-fluid {
+  .feature__page section > .container,
+  .feature__page section > .container-fluid {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 @media screen and (max-width: 767px) {
-  .feature__page section > .container > .row, .feature__page section > .container-fluid > .row {
+  .feature__page section > .container > .row,
+  .feature__page section > .container-fluid > .row {
     margin-left: -20px;
     margin-right: -20px;
   }
@@ -305,6 +309,24 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+.feature__page section .img__group h3 {
+  display: block;
+  padding-top: 0.4em;
+  color: #939EA7;
+  font-size: 0.875rem;
+  line-height: unset;
+  font-weight: normal;
+  margin: unset;
+}
+@media screen and (max-width: 767px) {
+  .feature__page section .img__group h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.feature__page section .img__group.img__group--default h3 {
+  padding-bottom: 1.4em;
 }
 .feature__page section .img__group.img__group--default span {
   padding-bottom: 1.4em;
@@ -349,12 +371,29 @@
 .feature__page section .card__item:hover .card__title {
   color: #D60C18;
 }
+.feature__page section .card__title h3 {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #171717;
+  font-size: 1.125em;
+  font-weight: normal;
+  line-height: unset;
+}
+@media screen and (max-width: 767px) {
+  .feature__page section .card__title h3 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .feature__page section .card__title {
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
   color: #171717;
   font-size: 1.125em;
+  font-weight: normal;
+  line-height: unset;
 }
 @media screen and (max-width: 767px) {
   .feature__page section .card__title {
@@ -470,6 +509,19 @@
 }
 .feature__page section .embed:before {
   width: 100%;
+}
+.feature__page section .embed.embed--16by9:before {
+  padding-top: 56.25%;
+}
+.feature__page section .embed.embed--4by3:before {
+  padding-top: 75%;
+}
+.feature__page section .embed > .embed__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .feature__page section .slideshow {
   position: relative;

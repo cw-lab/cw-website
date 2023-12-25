@@ -7,7 +7,7 @@
     }
     .searchDoneTxt {
         padding-top: 1em;
-        padding-bottom: 1em;
+        // padding-bottom: 1em;
         text-align: center;
         >* {
             display: inline-block;
@@ -19,6 +19,11 @@
             font-size: 1.75em;
         }
     }
+    .article__keyword--description{
+        p{
+            margin: 20px 0;
+        }
+    }
     .articleGroup .subArticle {
         @media screen and (max-width: 767px) {
             .pic {
@@ -26,9 +31,6 @@
             }
             .caption {
                 border-width: 1px;
-                h3 a {
-                    // font-size: 1.125rem;
-                }
                 p {
                     display: -webkit-box !important;
                 }

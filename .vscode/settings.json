@@ -9,7 +9,6 @@
   "liveSassCompile.settings.excludeList": [
     "**/node_modules/**",
     ".vscode/**",
-    "**/assets_new/**",
     "**/assets/sass/article/**",
     "**/assets/sass/amp/**",
     "**/assets/sass/feature/fashion/**",

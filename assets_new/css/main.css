@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC:300,400,500,600,700");
 /*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
 aside,
@@ -3006,7 +3009,6 @@ footer .cwgroup__copyright a:hover {
 }
 .tag-page .searchDoneTxt {
   padding-top: 1em;
-  padding-bottom: 1em;
   text-align: center;
 }
 .tag-page .searchDoneTxt > * {
@@ -3017,6 +3019,9 @@ footer .cwgroup__copyright a:hover {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 1.75em;
+}
+.tag-page .article__keyword--description p {
+  margin: 20px 0;
 }
 @media screen and (max-width: 767px) {
   .tag-page .articleGroup .subArticle .pic {
@@ -5036,6 +5041,9 @@ section.list-link > ul:not(.etu-item-list) li a:hover {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+    width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media screen and (max-width: 767px) {

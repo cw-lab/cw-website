@@ -1,1 +1,11 @@
-{"version":3,"sources":["../sass/slider.scss","slider.css"],"names":[],"mappings":"AAEA;EACC,gBAAA;ACDD;;ADGA;EACC,kBAAA;EACA,UAAA;ACAD;;ADEA;EACC,kBAAA;EACA,WAAA;ACCD;;ADCA;EACC,UAAA;ACED;;ADAA;EACC,eAAA;ACGD","file":"slider.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,aAAa,CAAC;EACb,QAAQ,EAAE,MAAM;CAChB;;AACD,AAAA,WAAW,CAAC;EACX,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;CACV;;AACD,AAAA,aAAa,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,IAAI;CACX;;AACD,AAAA,YAAY,CAAC;EACZ,OAAO,EAAE,CAAC;CACV;;AACD,AAAA,kBAAkB,CAAC,YAAY,CAAC;EAC/B,MAAM,EAAE,OAAO;CACf",
+    "sources": [
+        "../sass/slider.scss",
+        "../sass/_basic.scss",
+        "../sass/_sheet.scss"
+    ],
+    "names": [],
+    "file": "slider.css"
+}

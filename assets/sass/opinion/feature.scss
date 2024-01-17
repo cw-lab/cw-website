@@ -422,8 +422,8 @@ footer {
                         z-index: 1;
                         overflow: visible;
                         @media screen and (min-width: 1024px) {
-                            display: inline-block;
-                            width: 62.5%;
+                            // display: inline-block;
+                            // width: 62.5%;
                             height: calc(100vh - 100px);
                             vertical-align: bottom;
                         }
@@ -458,8 +458,14 @@ footer {
                         width: 100%;
                         vertical-align: bottom;
                         @media screen and (min-width: 1024px) {
-                            width: 37.5%;
-                            max-width: 650px;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            z-index: 1;
+                            background-color: #f2f2f2;
+                            // width: 37.5%;
+                            // max-width: 650px;
+                            padding-top: 15px;
                             padding-left: 40px;
                             padding-right: 40px;
                             padding-bottom: 90px;
@@ -468,7 +474,7 @@ footer {
                             padding-top: 20px;
                             padding-left: 20px;
                             padding-right: 20px;
-                            padding-bottom: 70px;
+                            padding-bottom: 30px;
                         }
                         h1 {
                             font-weight: 600;
@@ -478,27 +484,30 @@ footer {
                         }
                         .phrase {
                             color: $black;
+                            margin-top: 10px;
                             font-size: 18px;
                             @media screen and (min-width: 1024px) {
+                                margin-top: 5px;
                                 font-size: 22px;
                             }
                         }
                     }
                     .slick-dots {
                         position: absolute;
+                        display: none !important;
                         @media screen and (max-width: 1023px) {
-                            top: 100%;
-                            left: 0;
-                            width: 100%;
-                            padding-left: 20px;
-                            padding-right: 20px;
+                            // top: 100%;
+                            // left: 0;
+                            // width: 100%;
+                            // padding-left: 20px;
+                            // padding-right: 20px;
                         }
                         @media screen and (min-width: 1024px) {
-                            left: 100%;
-                            bottom: 40px;
-                            width: 37.5%;
-                            padding-left: 40px;
-                            padding-right: 40px;
+                            
+                            // bottom: 20px;
+                            // width: 37.5%;
+                            // padding-left: 40px;
+                            // padding-right: 40px;
                         }
                     }
                 }

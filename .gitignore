@@ -2,6 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
+.cw/
 .DS_Store
 
 */article-next*

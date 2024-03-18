@@ -272,6 +272,10 @@
       font-weight: 600;
       color: #171717;
       word-break: break-word;
+
+      @media screen and (min-width: 1024px) {
+        font-weight: 500;
+      }
     }
 
     >p {

@@ -2,7 +2,7 @@
 *.css.map
 *.sass.map
 *.scss.map
-.cw/
+.compiler/build/
 .DS_Store
 
 */article-next*

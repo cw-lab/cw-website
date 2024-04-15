@@ -1,10 +1,13 @@
 function articleInint() {
+  const root = document.querySelector(':root');
   $(window).on("load", function () {
 
     let userAgent = navigator.userAgent.toLowerCase();
     let isFacebookApp = userAgent.includes("fb");
     let isLineApp = userAgent.includes("line");
     let isMobileApp = /android|iphone|ipad|ipod/i.test(userAgent);
+
+    const sky_assistant_group = document.querySelector(".sky-assistant-group");
 
     // 輸出結果
     if (isFacebookApp) {
@@ -32,6 +35,13 @@ function articleInint() {
         .children(".article__body")
         .offset().top,
       articleTtsTop = $("#article-tts").offset().top;
+
+    if (width > 1024) {
+      sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
+    } else {
+      sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
+    }
+
     // 閒置五分鐘
     var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
     $(this).mousemove(function (e) {
@@ -68,11 +78,13 @@ function articleInint() {
 
         // 設定斷點和 next 一致
         if (width > 1024) {
+          sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
           if (scroll >= articleFirstBodyTop - headerHeight) {
             $("header").addClass("scroll");
             $(".bottombar").css({
               bottom: 0,
             });
+            sky_assistant_group.style.setProperty("--sky-bottom-offset', '2rem");
           } else {
             $("header").removeClass("scroll");
             giftStatus_img = false;
@@ -80,8 +92,10 @@ function articleInint() {
             $(".bottombar").css({
               bottom: "-40px",
             });
+            sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
           }
         } else {
+          sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
           if (scroll >= articleFirstBodyTop - headerHeight) {
             $("header").addClass("scroll");
           } else {
@@ -96,34 +110,17 @@ function articleInint() {
             $(".openInApp").removeClass("show");
           }
 
-          if (scroll >= articleTtsTop - headerHeight + window.innerHeight) {
-            $(".openInApp").addClass("small");
-            if (isFacebookApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'fb' })
-            } else if (isLineApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'line' })
-            } else if (isMobileApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
-            } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
-              // ios13 的 ipad
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
-            } else {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'others' })
-            }
+          if (isFacebookApp) {
+            $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'fb' })
+          } else if (isLineApp) {
+            $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'line' })
+          } else if (isMobileApp) {
+            $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
+          } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
+            // ios13 的 ipad
+            $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'browser' })
           } else {
-            $(".openInApp").removeClass("small");
-            if (isFacebookApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'fb' })
-            } else if (isLineApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'line' })
-            } else if (isMobileApp) {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
-            } else if ((navigator.userAgent.match(/(iPad)/) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1))) {
-              // ios13 的 ipad
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'browser' })
-            } else {
-              $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_big", "eventlabel": 'others' })
-            }
+            $('.openInApp a').attr({ 'eventaction': 'open_in_app_click', "gtm-name": "button_small", "eventlabel": 'others' })
           }
 
           // 如果有 btb
@@ -136,11 +133,13 @@ function articleInint() {
                 bottom: 0,
               });
               $(".openInApp").addClass("hasBtb");
+              sky_assistant_group.style.setProperty("--sky-bottom-offset', '2.375rem");
             } else {
               $(".bottombar").css({
                 bottom: "-50px",
               });
               $(".openInApp").removeClass("hasBtb");
+              sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
             }
           }
         }
@@ -180,6 +179,12 @@ function articleInint() {
             functionGroup.fadeIn(150);
           } else {
             functionGroup.fadeOut(150);
+          }
+
+          if (scroll < articleRecommendTop - height + functionGroupHeight / 2) {
+            $('#skyAssistant').fadeIn(150);
+          } else {
+            $('#skyAssistant').fadeOut(150);
           }
 
           if (
@@ -235,6 +240,7 @@ function articleInint() {
           }
           if (scroll >= articleImgTop) {
             $(".bulletin").addClass("hide");
+            $("#skyAssistant").addClass("z-10");
           }
         });
         for (var index = 0; index < $("article").length; index++) {

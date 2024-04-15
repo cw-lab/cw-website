@@ -13,13 +13,6 @@ $h-lh: 1.5, 1.5, 2, 1.2, 1.2;
     margin-bottom: 1em;
 }
 
-@mixin typo-weight {
-    font-weight: 600;
-    @media screen and (min-width: 1024px) {
-        font-weight: 500;
-    }
-}
-
 %typo-weight {
     font-weight: 600;
     @media screen and (min-width: 1024px) {

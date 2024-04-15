@@ -1,12 +1,13 @@
 .openInApp {
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: -60px;
+    left: 50%;
+    bottom: -3.75rem;
+    width: fit-content;
+    font-size: .875rem;
     background-color: $surface;
-    transition: 0.2s;
+    translate: -50% 0;
+    transition: 0.2s bottom, 0.2s width;
     z-index: 6;
-    width: 100%;
 
     @media screen and (min-width: 1025px) {
         display: none;
@@ -15,11 +16,11 @@
     a {
         display: block;
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: .5rem;
+        padding-right: .5rem;
         color: $white;
         font-weight: 400;
-        line-height: 50px;
+        line-height: 36px;
         background-color: $surface;
         @include ellipsis();
 
@@ -29,25 +30,11 @@
         // }
     }
 
-    &.show{
-        bottom: 0;
-    }
-
-    &.small.show {
-        transition: 0.2s bottom, 0.2s width;
-        width: fit-content;
-        right: 10px;
-        left: unset;
-        bottom: 34px;
-        a{
-            line-height: 36px;
-            span{
-                display: none
-            };
+    &.show {
+        bottom: 2.125rem;
+        &.hasBtb {
+            bottom: 3.75rem;
         }
     }
 
-    &.small.show.hasBtb {
-        bottom: 60px;
-    }
 }

@@ -26,7 +26,6 @@
 
     @at-root {
         .sky-assistant-group-start-animation-step1-out#{&} {
-            right: .625rem;
             bottom: var(--sky-bottom-offset);
         }
         .sky-assistant-group-start-animation-step2-in#{&},
@@ -34,9 +33,9 @@
             right: 50%;
             bottom: 2.75rem;
             translate: 50% 0;
+            z-index: 10;
         }
         .sky-assistant-group-start-animation-step1-in#{&} {
-            right: .625rem;
             bottom: var(--sky-bottom-offset);
             translate: 0 0;
         }
@@ -194,7 +193,7 @@
 .sky-assistant-notification-popup {
     position: absolute;
     bottom: 100%;
-    right: 0;
+    right: .9375rem;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -203,10 +202,41 @@
     background-color: $white;
     border-radius: .3125rem;
 
+    @media screen and (min-width: 1024px) {
+        right: 0;
+    }
+
     .popup-close {
         padding: .625rem;
         font-size: 1.25rem;
         border: 0;
+    }
+}
+
+.sky-assistant-visitor-onboarding-popup {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    translate: 0 -50%;
+    width: max-content;
+    padding: .9375rem 1.25rem;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #003A9F;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        translate: -0.3125rem -50%;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 10px 0 10px 17.3px;
+        border-color: transparent transparent transparent #003A9F;
+        transform: rotate(0deg);
     }
 }
 

@@ -37,9 +37,9 @@ function articleInint() {
       articleTtsTop = $("#article-tts").offset().top;
 
     if (width > 1024) {
-      sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
+      sky_assistant_group.style.setProperty('--sky-bottom-offset', '.625rem');
     } else {
-      sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
+      sky_assistant_group.style.setProperty('--sky-bottom-offset', '.75rem');
     }
 
     // 閒置五分鐘
@@ -78,13 +78,13 @@ function articleInint() {
 
         // 設定斷點和 next 一致
         if (width > 1024) {
-          sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
+          sky_assistant_group.style.setProperty('--sky-bottom-offset', '.625rem');
           if (scroll >= articleFirstBodyTop - headerHeight) {
             $("header").addClass("scroll");
             $(".bottombar").css({
               bottom: 0,
             });
-            sky_assistant_group.style.setProperty("--sky-bottom-offset', '2rem");
+            sky_assistant_group.style.setProperty('--sky-bottom-offset', '2rem');
           } else {
             $("header").removeClass("scroll");
             giftStatus_img = false;
@@ -92,10 +92,10 @@ function articleInint() {
             $(".bottombar").css({
               bottom: "-40px",
             });
-            sky_assistant_group.style.setProperty("--sky-bottom-offset', '.625rem");
+            sky_assistant_group.style.setProperty('--sky-bottom-offset', '.625rem');
           }
         } else {
-          sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
+          sky_assistant_group.style.setProperty('--sky-bottom-offset', '.75rem');
           if (scroll >= articleFirstBodyTop - headerHeight) {
             $("header").addClass("scroll");
           } else {
@@ -133,13 +133,13 @@ function articleInint() {
                 bottom: 0,
               });
               $(".openInApp").addClass("hasBtb");
-              sky_assistant_group.style.setProperty("--sky-bottom-offset', '2.375rem");
+              sky_assistant_group.style.setProperty('--sky-bottom-offset', '2.375rem');
             } else {
               $(".bottombar").css({
                 bottom: "-50px",
               });
               $(".openInApp").removeClass("hasBtb");
-              sky_assistant_group.style.setProperty("--sky-bottom-offset', '.75rem");
+              sky_assistant_group.style.setProperty('--sky-bottom-offset', '.75rem');
             }
           }
         }

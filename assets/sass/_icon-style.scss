@@ -1,0 +1,72 @@
+
+@import './icon-style/regular-variables';
+@import './icon-style/light-variables';
+@import './icon-style/medium-variables';
+
+[class^='ci-'],
+[class*='ci-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin fontFace($value) {
+    $icomoon-font-family: "cw-icon-#{$value}" !default;
+    $icomoon-font-path: "../fonts" !default;
+
+    .ci-#{$value} {
+        font-family: '#{$icomoon-font-family}';
+        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv');
+        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv#iefix') format('embedded-opentype'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?mv8awv') format('truetype'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?mv8awv') format('woff'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?mv8awv##{$icomoon-font-family}') format('svg');
+    }
+}
+@include fontFace('light');
+@include fontFace('regular');
+@include fontFace('medium');
+
+.icon-cross {
+    &:before {
+        content: $icon-cross;
+    }
+}
+.icon-down {
+    &:before {
+        content: $icon-down;
+    }
+}
+.icon-left {
+    &:before {
+        content: $icon-left;
+    }
+}
+.icon-minus {
+    &:before {
+        content: $icon-minus;
+    }
+}
+.icon-plus {
+    &:before {
+        content: $icon-plus;
+    }
+}
+.icon-right {
+    &:before {
+        content: $icon-right;
+    }
+}
+.icon-up {
+    &:before {
+        content: $icon-up;
+    }
+}

@@ -5,6 +5,13 @@
     display: block;
 }
 
+@mixin typo-weight {
+    font-weight: 600;
+    @media screen and (min-width: 1024px) {
+        font-weight: 500;
+    }
+}
+
 @mixin text-fill-color($color) {
     -moz-text-fill-color: $color;
     -ms-text-fill-color: $color;

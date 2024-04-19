@@ -1,75 +1,72 @@
-$icomoon-font-path: "../fonts";
+
+@import './icon-style/regular-variables';
+@import './icon-style/light-variables';
+@import './icon-style/medium-variables';
+
+[class^='ci-'],
+[class*='ci-'] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 @mixin fontFace($value) {
-    @font-face {
-        font-family: 'cw-icon-#{$value}';
-        src: url('#{$icomoon-font-path}/cw-icon-#{$value}.eot?r5vpmo');
-        src: url('#{$icomoon-font-path}/cw-icon-#{$value}.eot?r5vpmo#iefix')
-            format('embedded-opentype'),
-            url('#{$icomoon-font-path}/cw-icon-#{$value}.ttf?r5vpmo') format('truetype'),
-            url('#{$icomoon-font-path}/cw-icon-#{$value}.woff?r5vpmo') format('woff'),
-            url('#{$icomoon-font-path}/cw-icon-#{$value}.svg?r5vpmo#cw-icon-#{$value}')
-            format('svg');
-        font-weight: normal;
-        font-style: normal;
-        font-display: block;
-    }
+    $icomoon-font-family: "cw-icon-#{$value}" !default;
+    $icomoon-font-path: "../fonts" !default;
 
     .ci-#{$value} {
-        /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'cw-icon-#{$value}' !important;
-        speak: never;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        font-family: '#{$icomoon-font-family}';
+        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv');
+        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv#iefix') format('embedded-opentype'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?mv8awv') format('truetype'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?mv8awv') format('woff'),
+            url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?mv8awv##{$icomoon-font-family}') format('svg');
     }
 }
 @include fontFace('light');
 @include fontFace('regular');
 @include fontFace('medium');
 
-@import './icon-style/regular-variables';
-@import './icon-style/light-variables';
-@import './icon-style/medium-variables';
-
-.ci-cross {
+.icon-cross {
     &:before {
-        content: var(--ci-cross);
+        content: $icon-cross;
     }
 }
-.ci-down {
+.icon-down {
     &:before {
-        content: var(--ci-down);
+        content: $icon-down;
     }
 }
-.ci-left {
+.icon-left {
     &:before {
-        content: var(--ci-left);
+        content: $icon-left;
     }
 }
-.ci-minus {
+.icon-minus {
     &:before {
-        content: var(--ci-minus);
+        content: $icon-minus;
     }
 }
-.ci-plus {
+.icon-plus {
     &:before {
-        content: var(--ci-plus);
+        content: $icon-plus;
     }
 }
-.ci-right {
+.icon-right {
     &:before {
-        content: var(--ci-right);
+        content: $icon-right;
     }
 }
-.ci-up {
+.icon-up {
     &:before {
-        content: var(--ci-up);
+        content: $icon-up;
     }
 }

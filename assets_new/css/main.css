@@ -938,6 +938,8 @@ textarea {
 .main aside > *,
 .main aside .leaflet, .main aside .leafletBig {
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .main aside > *,

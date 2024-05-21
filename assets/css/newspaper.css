@@ -1,8 +1,10 @@
 .newspaper__page {
   padding-bottom: 0 !important;
 }
+
 @media screen and (min-width: 1024px) {
   .newspaper__page section .container {
     width: 784px;
   }
-}/*# sourceMappingURL=newspaper.css.map */
+}
+/*# sourceMappingURL=newspaper.css.map */

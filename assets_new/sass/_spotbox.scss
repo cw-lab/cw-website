@@ -1,0 +1,211 @@
+.spotbox {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  border-bottom: 1px solid #D3D5D7;
+  overflow: hidden;
+  padding-bottom: 10px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    margin: 30px auto;
+    width: calc(100% - 40px);
+    border: 1px solid #D3D5D7;
+    padding-bottom: 0;
+  }
+  @media screen and (min-width: 1310px) {
+    max-width: 1248px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    &.pc {
+      display: none;
+    }
+    @media screen and (min-width: 768px) {
+      &.pc {
+        display: block;
+      }
+      &.mb {
+        display: none;
+      }
+    }
+  }
+  a {
+    display: block;
+  }
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000;
+    font-weight: 400;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    a {
+      color: #000;
+      &:hover {
+        color: #D60C18;
+      }
+    }
+  }
+  p {
+    margin: 0;
+    a {
+      color: #000;
+      &:hover {
+        color: #D60C18;
+      }
+    }
+  }
+  .more {
+    width: calc(100% - 40px);
+    padding-top: 8px;
+    padding-bottom: 2px;
+    text-align: center;
+    border: 1px solid #d3d5d7;
+    background-color: rgba(238, 238, 238, .5);
+    transition: background .3s;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: none;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url(../img/download_arrow.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &:hover {
+      background-color: rgba($gray-200, 0.5);
+    }
+    &.show {
+      &::before {
+        padding-top: 7px;
+        padding-bottom: 3px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .imgbox {
+    position: relative;
+    a {
+      &::before {
+        content: "";
+        background-color: rgba(23, 23, 23, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .card {
+    position: relative;
+    &.first {
+      @media screen and (min-width: 768px) {
+        padding-right: 320px;
+      }
+      .txtbox {
+        padding: 10px 20px;
+      }
+      h3 {
+        font-size: 26px;
+        @media screen and (min-width: 768px) {
+          font-size: 32px;
+          font-weight: 500;
+          -webkit-line-clamp: 2;
+        }
+        a {
+          span:nth-child(1) {
+            color: #D60C18;
+          }
+        }
+      }
+      p {
+        display: none;
+        @media screen and (min-width: 768px) {
+          display: block;
+          margin-top: 8px;
+          line-height: 1.4;
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+    }
+  }
+  .listbox {
+    position: relative;
+    padding: 0 15px;
+    max-height: 288px;
+    overflow: hidden;
+    transition: all .3s ease;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      padding: 15px 10px;
+      // flex: 0 0 300px;
+      width: 300px;
+      max-height: inherit;
+      height: calc(100% - 4px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      right: 2px;
+      top: 2px;
+    }
+    &.show {
+      max-height: inherit;
+      transition: all .3s ease;
+    }
+    .card {
+      padding: 10px 5px;
+      // height: 122px;
+      border-top: 1px solid #D3D5D7;
+      @media screen and (min-width: 768px) {
+        padding: 10px;
+        &:first-child {
+          border-top: none;
+        }
+      }
+      h3 {
+        height: 75px;
+        @media screen and (min-width: 768px) {
+          height: 102px;
+          -webkit-line-clamp: 4;
+        }
+        a {
+          height: 100%;
+          span {
+            font-size: 14px;
+            color: #D60C18;
+            display: block;
+          }
+        }
+      }
+    }
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: #FFF; 
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #D3D5D7;
+    }
+  }
+}

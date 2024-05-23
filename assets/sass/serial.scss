@@ -140,6 +140,7 @@
                 }
             }
         }
+        
     }
     section {
         &.group {
@@ -265,6 +266,76 @@
                 a,
                 i {
                     color: $gray-200 !important;
+                }
+            }
+            // 2024週年慶一沐日區塊專用樣式
+            &.anniversary2024 {
+                .app__group--left {
+                    flex: 0 0 90px;
+                    width: 90px;
+                    height: 90px;
+                    font-size: 39px;
+                    color: #FFF;
+                    background-color: #003A9F;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto 10px auto;
+                    @media screen and (min-width: 768px) {
+                        flex: 0 0 120px;
+                        width: 120px;
+                        height: 120px;
+                        font-size: 47px;
+                        margin-right: 30px;
+                        margin-bottom: 0;
+                    }
+                }
+                h2 {
+                    span {
+                        display: block;
+                        @media screen and (min-width: 768px) {
+                            &::after {
+                                content:"，";
+                            }
+                        }
+                    }
+                }
+                .app__title--text {
+                    width: 100%;
+                    margin-left: 0;
+                    text-align: center;
+                    @media screen and (min-width: 768px) {
+                        text-align: left;
+                    }
+                }
+                .app__group.flex {
+                    justify-content: start;
+                    padding: 10px;
+                }
+                .app__group--right {
+                    @media screen and (min-width: 768px) {
+                        width: calc(100% - 150px);
+                    }
+                    p {
+                        font-size: 14px;
+                        color: #003A9F;
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                    }
+                }
+            }
+            // 2024週年慶一沐日區塊專用樣式
+            &.anniversary2024-btn {
+                .btn {
+                    display: block;
+                    width: 164px;
+                    margin: 0 auto 15px auto;
+                    @media screen and (min-width: 768px) {
+                        display: inline-block;
+                        width: auto;
+                        margin-bottom: 0;
+                        margin-left: 1rem;
+                    }
                 }
             }
         }

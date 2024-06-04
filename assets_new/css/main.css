@@ -6249,7 +6249,7 @@ ul.article__keyword li a::-moz-focus-inner {
   border-bottom: 1px solid #D3D5D7;
   overflow: hidden;
   padding-bottom: 10px;
-  display: none;
+  min-height: 177px;
 }
 
 @media screen and (min-width: 768px) {
@@ -6258,6 +6258,7 @@ ul.article__keyword li a::-moz-focus-inner {
     width: calc(100% - 40px);
     border: 1px solid #D3D5D7;
     padding-bottom: 0;
+    min-height: 75px;
   }
 }
 

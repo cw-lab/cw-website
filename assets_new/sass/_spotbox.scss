@@ -5,12 +5,14 @@
   border-bottom: 1px solid #D3D5D7;
   overflow: hidden;
   padding-bottom: 10px;
-  display: none;
+  min-height: 177px;
+  // display: none;
   @media screen and (min-width: 768px) {
     margin: 30px auto;
     width: calc(100% - 40px);
     border: 1px solid #D3D5D7;
     padding-bottom: 0;
+    min-height: 75px;
   }
   @media screen and (min-width: 1310px) {
     max-width: 1248px;
@@ -95,6 +97,10 @@
   }
   .imgbox {
     position: relative;
+    // min-height: 124vw;
+    // @media screen and (min-width: 768px) {
+    //   min-height: 620px;
+    // }
     a {
       &::before {
         content: "";

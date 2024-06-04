@@ -1,5 +1,23 @@
 // Your API key from the Developer Console
-let API_KEY = 'AIzaSyDXlrTai-Jkpv3TpZtiLxTURschmUKSdIw';
+const API_KEY = 'AIzaSyDXlrTai-Jkpv3TpZtiLxTURschmUKSdIw';
+const thisSpreadsheetId = '1lqTWZPgu9eMeKOMLTHHKY0NulhZPorzn3GO2S00zxT8';
+// 獲取當前頁面的 URL
+const currentUrl = window.location.href;
+// 判斷 URL 中是否包含 "dev"
+const isDev = currentUrl.includes('dev');
+// 根據是否是開發環境來選擇不同的工作表名稱
+const sheetName = isDev ? '正式機資料' : '測試機資料';
+const thisRange = `${sheetName}!A:G`;
+
+const spotboxLoader = document.querySelector('.spotbox_loader');
+const spotbox = document.querySelector('.spotbox');
+const helloBAR = document.querySelector('.hello__bar');
+
+// 顯示 loading 畫面
+spotboxLoader.style.display = 'block';
+// spotbox.style.display = 'none';
+helloBAR.style.display = 'none';
+
 
 function handleClientLoad() {
     gapi.load('client', initClient);
@@ -18,9 +36,11 @@ function initClient() {
 
 function listMajors() {
     gapi.client.sheets.spreadsheets.values.get({
-        spreadsheetId: '1lqTWZPgu9eMeKOMLTHHKY0NulhZPorzn3GO2S00zxT8',
-        range: '正式機資料!A:F',  // 更新範圍以包含 A 到 F 欄
+
+        spreadsheetId: thisSpreadsheetId,
+        range: thisRange,  // 更新範圍以包含 A 到 F 欄
     }).then(function(response) {
+        
         let range = response.result;
         if (range.values.length > 1) { // 確保至少有一行資料（排除標題行）
           let spot_row = range.values[1]; // 取得第二行數據
@@ -45,22 +65,24 @@ function listMajors() {
           // A+B 欄對應到 .imgbox 和 .txtbox 裡 a 的 title & event_label
           let spot_first_combinedContent = `${spot_first_h3Span1.textContent} ${spot_first_h3Span2.textContent}`.trim();
           spot_first_aImg.title = spot_first_combinedContent;
-          spot_first_aImg.setAttribute('eventlabel', spot_first_combinedContent + '/首頁');
-          spot_first_aH3.setAttribute('eventlabel', spot_first_combinedContent + '/首頁');
+          spot_first_aImg.setAttribute('eventlabel', spot_first_combinedContent);
+          spot_first_aH3.setAttribute('eventlabel', spot_first_combinedContent);
           
 
           // C 欄對應到 .txtbox 裡 p
           let spot_first_p = spot_first_card.querySelector('.txtbox p a');
           spot_first_p.textContent = spot_row[2] || '';
-          spot_first_aP.setAttribute('eventlabel', spot_first_p.textContent + '/首頁');
+          spot_first_aP.setAttribute('eventlabel', spot_first_p.textContent);
 
           // E 欄對應到 .imgbox 裡 img.pc 的 src
-          let imgPc = spot_first_card.querySelector('.imgbox img.pc');
-          imgPc.src = spot_row[4] || '';
+          let imgPc = spot_first_card.querySelector('.imgbox #source-pc');
+          let imgDefault = spot_first_card.querySelector('.imgbox img');
+          imgPc.srcset = spot_row[4] || '';
+          imgDefault.src = spot_row[4] || '';
 
           // F 欄對應到 .imgbox 裡 img.mb 的 src
-          let imgMb = spot_first_card.querySelector('.imgbox img.mb');
-          imgMb.src = spot_row[5] || '';
+          let imgMb = spot_first_card.querySelector('.imgbox #source-mb');
+          imgMb.srcset = spot_row[5] || '';
 
           // listbox content build
           let listbox = document.querySelector('.spotbox .listbox');
@@ -89,7 +111,7 @@ function listMajors() {
               let list_eventLabelValue = list_row[1] || ''; // 預防空值
               list_a.setAttribute('gtm-name', '天下官網-首頁');
               list_a.setAttribute('eventaction', '首頁特殊策展_click');
-              list_a.setAttribute('eventlabel', list_eventLabelValue + '/首頁');
+              list_a.setAttribute('eventlabel', list_eventLabelValue);
             }
             // 檢查 .card 元素數量並在螢幕寬小於 768px 時顯示 .more
             if (window.innerWidth < 768) {
@@ -106,9 +128,31 @@ function listMajors() {
                 }
                 
             }
-            document.querySelector('.spotbox').style.display = 'block';
+            // 隱藏 loading 畫面並顯示 spotbox
+            spotboxLoader.style.display = 'none';
+            spotbox.style.display = 'block';
+            helloBAR.style.display = 'none';
+            // 向 dataLayer 推送 首頁特殊策展impression 數據
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'eventCategory':'天下官網-首頁',
+                'eventAction':'首頁特殊策展_impression',
+                'eventLabel':'homepage_special_event',
+                'event': 'GAEventTrigger'
+            });
         } else {
-            console.log('No data found.');
+            spotboxLoader.style.display = 'none';
+            spotbox.style.display = 'none';
+            helloBAR.style.display = 'block';
+            // console.log('No data found.');
+            // 向 dataLayer 推送 hello bar impression 數據
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+                'eventCategory':'天下官網-首頁',
+                'eventAction':'impression',
+                'eventLabel':'onsite-hellobar',
+                'event': 'GAEventTrigger'
+            });
         }
     }, function(response) {
         console.log('Error: ' + response.result.error.message);

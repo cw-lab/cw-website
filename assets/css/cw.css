@@ -8887,22 +8887,7 @@ article.article__level--2 ul.article__keyword li a {
 }
 
 .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(3n+1) {
-  margin-left: 20px;
-}
-
-@media screen and (min-width: 1280px) {
-  .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(1), .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(2) {
-    display: none;
-  }
-  .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(3n) {
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 1279px) {
-  .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(7), .article__recommend.article__recommend--algorithm .card__group .card__item:nth-child(8) {
-    display: none;
-  }
+  margin-left: 0px;
 }
 
 @media screen and (max-width: 1023px) {

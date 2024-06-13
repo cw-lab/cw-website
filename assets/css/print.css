@@ -6504,23 +6504,23 @@ article.article__level--2 ul.article__keyword li a {
   color: #D60C18;
 }
 
-.card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0 {
+.card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0, .card__group .card__item #div-gpt-ad-1716532002712-0, .card__group .card__item #div-gpt-ad-1716532437798-0, .card__group .card__item #div-gpt-ad-1716532763285-0, .card__group .card__item #div-gpt-ad-1716532370990-0, .card__group .card__item #div-gpt-ad-1716532508768-0, .card__group .card__item #div-gpt-ad-1716532835129-0 {
   width: 100%;
   height: 228px;
 }
 
 @media (max-width: 1023px) {
-  .card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0 {
+  .card__group .card__item #div-gpt-ad-1687336828598-0, .card__group .card__item #div-gpt-ad-1689575314734-0, .card__group .card__item #div-gpt-ad-1716532002712-0, .card__group .card__item #div-gpt-ad-1716532437798-0, .card__group .card__item #div-gpt-ad-1716532763285-0, .card__group .card__item #div-gpt-ad-1716532370990-0, .card__group .card__item #div-gpt-ad-1716532508768-0, .card__group .card__item #div-gpt-ad-1716532835129-0 {
     height: 80px;
   }
 }
 
-.card__group .card__item #div-gpt-ad-1687336828598-0 div, .card__group .card__item #div-gpt-ad-1689575314734-0 div {
+.card__group .card__item #div-gpt-ad-1687336828598-0 div, .card__group .card__item #div-gpt-ad-1689575314734-0 div, .card__group .card__item #div-gpt-ad-1716532002712-0 div, .card__group .card__item #div-gpt-ad-1716532437798-0 div, .card__group .card__item #div-gpt-ad-1716532763285-0 div, .card__group .card__item #div-gpt-ad-1716532370990-0 div, .card__group .card__item #div-gpt-ad-1716532508768-0 div, .card__group .card__item #div-gpt-ad-1716532835129-0 div {
   width: 100%;
   height: 100%;
 }
 
-.card__group .card__item #div-gpt-ad-1687336828598-0 iframe, .card__group .card__item #div-gpt-ad-1689575314734-0 iframe {
+.card__group .card__item #div-gpt-ad-1687336828598-0 iframe, .card__group .card__item #div-gpt-ad-1689575314734-0 iframe, .card__group .card__item #div-gpt-ad-1716532002712-0 iframe, .card__group .card__item #div-gpt-ad-1716532437798-0 iframe, .card__group .card__item #div-gpt-ad-1716532763285-0 iframe, .card__group .card__item #div-gpt-ad-1716532370990-0 iframe, .card__group .card__item #div-gpt-ad-1716532508768-0 iframe, .card__group .card__item #div-gpt-ad-1716532835129-0 iframe {
   width: 100% !important;
   height: 100% !important;
 }

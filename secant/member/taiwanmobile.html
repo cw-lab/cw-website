@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>開通序號｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../../assets/css/cw.css">
+		<link rel="stylesheet" href="../../assets/css/secant.css">
+	</head>
+	<body class="webaccess__page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+				</div>
+			</div>
+		</header>
+		<!-- CUSTOM CSS -->
+		<style>
+			.webaccess__page main article .step__item {
+				padding-right: calc(50% - 100px);
+			}
+		</style>
+		<main>
+			<article>
+				<div class="step__group flex">
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">綁定說明</span>
+					</div>
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">註冊/登入</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">綁定完成</span>
+					</div>
+				</div>
+				<form action="payment.html">
+					<h2>開通序號</h2>
+					<section class="group">
+						<ul>
+							<li class="mb-20">綁定即成為天下數位全閱讀訂戶，享有天下雜誌官網，天下雜誌APP不限次數閱讀權益。</li>
+							<li class="mb-20">每位台哥大付費用戶僅能綁定一個天下會員帳號，未來使用綁定會員帳號登入即可使用。</li>
+							<li class="mb-20">若有其他使用問題，請洽<a class="link-btn" href="https://member.cwg.tw/contact">天下雜誌客服中心</a>。</li>
+						</ul>
+						<div class="text-left" style="margin-top: 80px;">
+							<button class="btn btn--contained" style="width: 200px;">開始綁定</button>
+						</div>
+					</section>
+				</form>
+			</article>
+			<div class="message message--dialogs noemail">
+				<div class="message__container">
+					<div class="icon-btn normal-status message__close click__close">
+						<i class="icon icon-cancel"></i>
+					</div>
+					<div class="message__txt">
+						<h2>我沒有E-mail</h2>
+						<p>
+							天下雜誌提供電話訂購雜誌服務<br>
+							請撥打：886-2-2662-0332<br>
+							服務時間：週一～週五 09:00~17:30
+						</p>
+					</div>
+					<div class="message__btn click__close">
+						<a href="#!" class="btn btn--contained">我知道了</a>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="container">
+				<div class="flex justify-between">
+					<div class="copyright">
+						<ul class="copyright__cwlink flex list-reset">
+							<li><a href="https://www.cw.com.tw/about/" target="_blank">關於天下雜誌群</a></li>
+							<li><a href="https://www.cwbook.com.tw/member/mcntr/MemberHome!redirect.shtml" target="_blank">顧客服務</a></li>
+							<li><a href="https://www.cw.com.tw/subscriptions">雜誌訂閱</a></li>
+							<li><a href="https://www.cw.com.tw/saleskit/" target="_blank">廣告刊登</a></li>
+							<li><a href="https://www.cw.com.tw/recruit/index.php" target="_blank">人才招募</a></li>
+							<li><a href="https://www.cw.com.tw/privacy" target="_blank">隱私權政策與使用條款</a></li>
+						</ul>
+						<div class="copyright__contact">
+							<span>讀者服務專線：886-2-2662-0332</span>
+							<span>傳真電話：886-2-2662-6048</span>
+							<span>服務時間：週一～週五 09:00~17:30</span>
+							<span>台北市104南京東路二段139號11樓</span>
+							<span>Copyright © 2019天下雜誌</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/jquery.creditCardValidator.js"></script>
+		    <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
+
+		<script type="text/javascript" src="../../assets/js/cw.js"></script>
+		<script type="text/javascript">
+			$("section.address").hide();
+			$(".tab .tab__nav > ul li:nth-child(2), .tab .tab__nav > ul li:nth-child(3)").click(function () {
+				$("section.address").hide();
+			})
+			$(".tab .tab__nav > ul li:nth-child(1)").click(function () {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			})
+			$(".label--radio input").change(function() {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			}).change();
+		</script>
+	</body>
+</html>

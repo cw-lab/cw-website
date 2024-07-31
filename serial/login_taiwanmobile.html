@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charSet="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+		<title>開通序號｜天下雜誌｜華文世界最優質的財經雜誌</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="shortcut icon" href="https://www.cw.com.tw/assets_new/img/favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="../assets/css/cw.css">
+		<link rel="stylesheet" href="../assets/css/serial.css">
+	</head>
+	<body class="serial__page">
+		<header>
+			<div class="container">
+				<div class="flex justify-between">
+					<a href="https://www.cw.com.tw" class="logo">
+						<img src="https://www.cw.com.tw/assets_new/img/logo.png" height="40" alt="天下雜誌">
+					</a>
+					<div class="list__group flex">
+						<ul class="list-reset flex member__list">
+							<li><a href="#!">登入</a></li>
+							<li><a href="#!">註冊</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+      <!-- 2024台哥大 收簡訊後進入登入頁 start -->
+      <style>
+        .serial__page main article .step__item {
+          padding-right: calc(50% - 100px);
+        }
+        .serial__page main article .mb-20 {
+          margin-bottom: 20px;
+        }
+      </style>
+			<article>
+				<div class="step__group flex">
+					<div class="step__item step__item--past">
+						<span class="stap__number">STEP 1</span>
+						<span class="stap__txt">綁定說明</span>
+					</div>
+					<div class="step__item step__item--now">
+						<span class="stap__number">STEP 2</span>
+						<span class="stap__txt">註冊/登入</span>
+					</div>
+					<div class="step__item">
+						<span class="stap__number">STEP 3</span>
+						<span class="stap__txt">綁定完成</span>
+					</div>
+				</div>
+				<form action="loggedin.html">
+					<h2>開通序號</h2>
+					<ul>
+            <li class="mb-20">綁定即成為天下數位全閱讀訂戶，享有天下雜誌官網，天下雜誌APP不限次數閱讀權益（價值290元/月）。</li>
+            <li class="mb-20">每位台哥大付費用戶僅能綁定一個天下會員帳號，未來使用綁定會員帳號登入即可使用。</li>
+            <li class="mb-20">若有其他使用問題，請洽<a class="link-btn" href="https://member.cwg.tw/contact" target="_blank">讀者服務中心</a>。</li>
+          </ul>
+					<div class="mt20">
+						<a href="#" class="btn btn--contained " style="min-width: 200px;">開始綁定</a>
+					</div>
+				</form>
+			</article>
+      <!-- 2024台哥大 收簡訊後進入登入頁 end -->
+		</main>
+		<footer>
+			<div class="container">
+				<div class="flex justify-between">
+					<div class="copyright">
+						<div class="copyright__contact">
+							<span><a href="https://member.cwg.tw/contact">讀者服務中心</a></span>
+						</div>
+					</div>
+          <span>Copyright © 2024天下雜誌</span>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../assets/js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../assets/js/jquery.creditCardValidator.js"></script>
+		    <script type="text/javascript" src="../assets/js/lazysizes.min.js"></script>
+
+		<script type="text/javascript" src="../assets/js/cw.js"></script>
+		<script type="text/javascript">
+			// $("section.address").hide();
+			$(".tab .tab__nav > ul li:nth-child(2), .tab .tab__nav > ul li:nth-child(3)").click(function () {
+				$("section.address").hide();
+			})
+			$(".tab .tab__nav > ul li:nth-child(1)").click(function () {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			})
+			$(".label--radio input").change(function() {
+				if ( ($(".label--radio input:checked").val() == "member") || ($(".label--radio input:checked").val() == "paper") ) {
+					$("section.address").show();
+				} else {
+					$("section.address").hide();
+				}
+			}).change();
+		</script>
+	</body>
+</html>

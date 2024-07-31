@@ -387,4 +387,55 @@
 .serial__page section.group[class*='--disabled'] i {
   color: #D3D5D7 !important;
 }
+
+.serial__page section .form--remark {
+  margin: 20px 20px 0;
+  padding: 12px;
+  background-color: #fafafa;
+}
+
+@media screen and (min-width: 1024px) {
+  .serial__page section .form--remark {
+    margin: 20px 30px 0;
+    padding: 12px 15px;
+  }
+}
+
+.serial__page section .form--remark + .form {
+  margin-top: 20px;
+}
+
+.serial__page section .form--remark > .form__edit {
+  width: 100%;
+}
+
+.serial__page section .form--remark i.icon {
+  margin-right: 10px;
+  color: #003a9f;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.serial__page section .form--remark span {
+  width: calc(100% - 1.25rem - 10px);
+}
+
+@media screen and (max-width: 767px) {
+  .serial__page section .form--remark span {
+    margin-top: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .serial__page section .form--remark a.btn {
+    margin-top: 5px;
+  }
+}
 /*# sourceMappingURL=serial.css.map */

@@ -1,66 +1,121 @@
-.message--idlebox {
+.message-idlebox-wrapper {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 23, 23, 0.4);
+  z-index: 100;
+
+  .message--idlebox {
     max-width: 760px;
     width: calc(100% - 30px);
-    padding: 20px 20px 30px;
+    padding: 30px 30px 40px;
     background: $white;
     z-index: 11;
-    @media screen and (min-width: 1024px) {
-        padding: 30px 30px 40px;
-        font-weight: 300;
+    font-weight: 300;
+    overflow: hidden;
+
+    @media screen and (max-width: 639px) {
+      padding: 20px 20px 30px;
     }
+
     .idle__title {
-        padding-right: 30px;
-        margin-bottom: 24px;
-        font-weight: 500;
-        line-height: 1.5;
+      padding-right: 30px;
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 1.5;
     }
+
+    .idle-body {
+      height: 3em;
+      margin-top: 0.4rem;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      line-clamp: 2;
+      -webkit-line-clamp: 2;
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #171717;
+      overflow: hidden;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .idle-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+    }
+
+    .idle-img {
+      img {
+        width: 100%;
+      }
+    }
+
     .card__group {
-        @media screen and (max-height: 700px) {
-            height: 60vh;
-            overflow: scroll;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1rem;
+      max-height: 70vh;
+      overflow: auto;
+
+      @media screen and (max-width: 639px) {
+        max-height: 50vh;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card__item {
+        display: inline-block;
+        vertical-align: text-top;
+
+        @media screen and (min-width: 1024px) {
+          width: calc((100% - 40px) / 3);
+          margin-left: 20px;
+
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+
+          &:nth-child(n+4) {
+            margin-top: 30px;
+          }
+
+          .card__subtitle {
+            margin-top: 10px;
+          }
+
+          .card__title {
+            margin-top: 5px;
+          }
         }
+
         @media screen and (max-width: 1023px) {
-            max-height: 50vh;
-            overflow: scroll;
-        }
-        .card__item {
+          +.card__item {
+            margin-top: 20px;
+          }
+
+          >span {
             display: inline-block;
-            vertical-align: text-top;
-            @media screen and (min-width: 1024px) {
-                width: calc((100% - 40px) / 3);
-                margin-left: 20px;
-                &:nth-child(3n+1) {
-                    margin-left: 0;
-                }
-                &:nth-child(n+4) {
-                    margin-top: 30px;
-                }
-                .card__subtitle {
-                    margin-top: 10px;
-                }
-                .card__title {
-                    margin-top: 5px;
-                }
+            vertical-align: middle;
+
+            &.card__img {
+              width: 110px;
             }
-            @media screen and (max-width: 1023px) {
-                +.card__item {
-                    margin-top: 20px;
-                }
-                >span {
-                    display: inline-block;
-                    vertical-align: middle;
-                    &.card__img {
-                        width: 110px;
-                    }
-                    &.card__body {
-                        width: calc(100% - 110px);
-                        padding-left: 20px;
-                        .card__title {
-                            @include lineclamp(2);
-                        }
-                    }
-                }
+
+            &.card__body {
+              width: calc(100% - 110px);
+              padding-left: 20px;
+
+              .card__title {
+                @include lineclamp(2);
+              }
             }
+          }
         }
+      }
     }
+  }
 }

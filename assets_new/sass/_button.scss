@@ -1,15 +1,21 @@
 #more {
     width: 100%;
-    padding-top: 12px;
-    padding-bottom: 5px;
+    padding-top: 8px;
+    padding-bottom: 2px;
     text-align: center;
     border: 1px solid $gray-200;
     background-color: rgba($gray-100, 0.5);
     transition: background 0.3s;
     cursor: pointer;
     &::before {
-        content: url('../img/download_arrow.png');
+        content: "";
         display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url(../img/download_arrow.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
     }
     &:hover {
         background-color: rgba($gray-200, 0.5);

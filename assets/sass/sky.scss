@@ -2,6 +2,10 @@
 @import "_sheet";
 @import "_icon-style";
 
+#cookie-bar {
+    z-index: 8 !important;
+}
+
 .sky-assistant-group {
     --sky-bottom-offset: .75rem;
     position: fixed;
@@ -12,7 +16,7 @@
     justify-content: center;
     width: 5rem;
     height: 5rem;
-    z-index: 3;
+    z-index: 8;
     @at-root .z-10 #{&} {
         z-index: 10;
     }
@@ -257,8 +261,13 @@
     }
     input {
         position: absolute;
-        + span {
+        + span.label-text {
             cursor: pointer;
+
+            &:hover {
+                color: $primary-variant;
+                border-color: $primary-variant;
+            }
 
             span {
                 font-size: .875rem;
@@ -270,12 +279,17 @@
                     font-size: 1.25rem;
                 }
                 &::before {
-                    content: var(--ci-plus);
+                    content: $icon-plus;
                 }
             }
         }
-        &:checked + span i.ci-regular::before {
-            content: var(--ci-minus);
+        &:checked + span.label-text {
+            color: white;
+            background-color: #6D6D6D;
+            border-color: #6D6D6D;
+            i.ci-regular::before {
+                content: $icon-check;
+            }
         }
     }
     span.label-text {
@@ -604,7 +618,7 @@
             pointer-events: unset;
         }
         &.opened-half {
-            background: linear-gradient(180deg, rgba(#666, 0) 0%, rgba($black, 0.5) 100%);
+            background: linear-gradient(180deg, rgba($black, 0) 70%, rgba($black, 0.7) 100%);
         }
     }
 

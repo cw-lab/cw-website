@@ -172,7 +172,6 @@
   }
 }
 
-.icon-fb,
 .icon-facebook {
   &:before {
     content: $icon-facebook;
@@ -398,5 +397,11 @@
 .icon-zoom {
   &:before {
     content: $icon-zoom;
+  }
+}
+
+.icon-forward {
+  &:before {
+    content: $icon-forward;
   }
 }

@@ -22,7 +22,8 @@ header {
 
   .container {
     position: relative;
-    font-size: 0;
+    display: flex;
+    align-items: center;
 
     &::after {
       @include clear;
@@ -34,11 +35,15 @@ header {
       font-size: 0;
 
       &.item--right {
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        align-items: center;
+        column-gap: 0.75rem;
+        flex-shrink: 0;
+
+        @media screen and (max-width: 1023px) {
+          grid-template-columns: repeat(2, auto);
+        }
 
         >* {
           display: inline-block;
@@ -54,47 +59,43 @@ header {
       &.item--center {
         width: 100%;
         height: 40px;
-        padding-left: 40px;
-        padding-right: 40px;
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
         overflow: hidden;
 
-        @media screen and (min-width: 1024px) {
-          padding-left: 180px;
-          padding-right: 215px;
+        @media screen and (max-width: 1023px) {
+          gap: 0.625rem;
         }
 
         .item__scroll {
-          position: relative;
-          top: 0;
-          padding-top: 40px;
-          transition: top 0.3s;
+          display: flex;
+          align-items: center;
+          gap: 0.9375rem;
+          overflow: hidden;
+          transition: transform .3s;
+
+          @media screen and (max-width: 1023px) {
+            flex-direction: column;
+            align-self: flex-start;
+            align-items: flex-start;
+            gap: 0;
+          }
         }
 
         .title__share {
-          @media screen and (max-width: 1023px) {
-            text-align: center;
+          overflow: hidden;
+
+          .icon {
+            color: black;
           }
 
           .h3 {
+            padding: 0 3rem 0 2rem;
             line-height: 40px;
+            transform: translateY(100%);
+            transition: all .3s;
             @include ellipsis;
-          }
-        }
-
-        a.logo {
-          position: absolute;
-          top: 50%;
-          left: 50px;
-          transition: top 0.3s;
-          z-index: 1;
-          transform: translateY(-50%);
-
-          @media screen and (min-width: 375px) {
-            left: 55px;
-          }
-
-          @media screen and (min-width: 1024px) {
-            left: 60px;
           }
         }
       }
@@ -102,10 +103,7 @@ header {
   }
 
   .hamburger {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
+    flex-shrink: 0;
   }
 
   a.logo {
@@ -129,9 +127,12 @@ header {
     }
   }
 
+  .search__icon,
+  .menubar__user {
+    padding: 0.25rem;
+  }
+
   .search__icon {
-    margin-left: 1rem;
-    position: relative;
     cursor: pointer;
 
     .circle,
@@ -169,17 +170,6 @@ header {
   }
 
   .menubar__user {
-    position: relative;
-    margin-left: 10px;
-
-    @media screen and (min-width: 375px) {
-      margin-left: 15px;
-    }
-
-    @media screen and (min-width: 1024px) {
-      margin-left: 30px;
-    }
-
     i {
       display: block;
       font-size: 1.3125rem;
@@ -230,23 +220,13 @@ header {
   }
 
   &.scroll {
-    .container>.item.item--center {
-      .item__scroll {
-        top: -40px;
-      }
-
-      a.logo {
-        @media screen and (max-width: 1023px) {
-          top: -55px;
-        }
-      }
+    .item.item--center .title__share .h3 {
+      transform: translateY(0);
     }
 
     @media screen and (max-width: 1023px) {
-
-      // 訂閱天下按鈕
-      .container>.item--right .btn {
-        transform: translateY(-55px);
+      .item__scroll {
+        transform: translateY(-50%);
       }
     }
   }

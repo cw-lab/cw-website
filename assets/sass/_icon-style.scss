@@ -35,6 +35,11 @@
 @include fontFace('regular');
 @include fontFace('medium');
 
+.icon-check {
+    &:before {
+        content: $icon-check;
+    }
+}
 .icon-cross {
     &:before {
         content: $icon-cross;

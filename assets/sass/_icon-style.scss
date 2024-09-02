@@ -1,7 +1,4 @@
-
-@import './icon-style/regular-variables';
-@import './icon-style/light-variables';
-@import './icon-style/medium-variables';
+@import './icon-style/variables';
 
 [class^='ci-'],
 [class*='ci-'] {
@@ -22,55 +19,61 @@
     $icomoon-font-family: "cw-icon-#{$value}" !default;
     $icomoon-font-path: "../fonts" !default;
 
+    @font-face {
+        font-family: '#{$icomoon-font-family}';
+        src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yeb8sp');
+        src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yeb8sp#iefix') format('embedded-opentype'),
+              url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yeb8sp') format('truetype'),
+              url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yeb8sp') format('woff'),
+              url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yeb8sp##{$icomoon-font-family}') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+    }
     .ci-#{$value} {
         font-family: '#{$icomoon-font-family}';
-        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv');
-        src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?mv8awv#iefix') format('embedded-opentype'),
-            url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?mv8awv') format('truetype'),
-            url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?mv8awv') format('woff'),
-            url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?mv8awv##{$icomoon-font-family}') format('svg');
     }
 }
 @include fontFace('light');
 @include fontFace('regular');
 @include fontFace('medium');
 
-.icon-check {
+.ci-check {
     &:before {
         content: $icon-check;
     }
 }
-.icon-cross {
+.ci-cross {
     &:before {
         content: $icon-cross;
     }
 }
-.icon-down {
+.ci-down {
     &:before {
         content: $icon-down;
     }
 }
-.icon-left {
+.ci-left {
     &:before {
         content: $icon-left;
     }
 }
-.icon-minus {
+.ci-minus {
     &:before {
         content: $icon-minus;
     }
 }
-.icon-plus {
+.ci-plus {
     &:before {
         content: $icon-plus;
     }
 }
-.icon-right {
+.ci-right {
     &:before {
         content: $icon-right;
     }
 }
-.icon-up {
+.ci-up {
     &:before {
         content: $icon-up;
     }

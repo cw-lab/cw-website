@@ -25,6 +25,10 @@ header {
     display: flex;
     align-items: center;
 
+    &.main-header {
+      display: block;
+    }
+
     &::after {
       @include clear;
     }
@@ -46,6 +50,7 @@ header {
         }
 
         >* {
+          margin: 0;
           display: inline-block;
           vertical-align: middle;
           cursor: pointer;

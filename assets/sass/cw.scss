@@ -1,9 +1,9 @@
-@import "_basic";
+@import '_basic';
 @import 'functions/parent-append';
-@import "_general";
-@import "_sheet";
-@import "_space";
-@import "_color";
+@import '_general';
+@import '_sheet';
+@import '_space';
+@import '_color';
 
 @each $color, $value in $cw-colors {
   .color-#{$color} {
@@ -11,29 +11,29 @@
   }
 }
 
-@import "_typography";
-@import "_font";
-@import "_iconography";
-@import "_navigation";
-@import "_sidemenu"; //天下原版
-@import "_textfield";
-@import "_button";
-@import "_tooltips";
-@import "_tabs";
-@import "_list";
-@import "_selection";
-@import "_message";
-@import "_header";
-@import "_paginate";
-@import "_accordion";
+@import '_typography';
+@import '_font';
+@import '_iconography';
+@import '_navigation';
+@import '_sidemenu'; //天下原版
+@import '_textfield';
+@import '_button';
+@import '_tooltips';
+@import '_tabs';
+@import '_list';
+@import '_selection';
+@import '_message';
+@import '_header';
+@import '_paginate';
+@import '_accordion';
 
 main {
   margin-bottom: 40px;
   justify-content: space-between;
 }
 
-@import "_footer";
-@import "_container";
+@import '_footer';
+@import '_container';
 
 p {
   font-size: 1em;
@@ -188,9 +188,10 @@ hr {
   }
 }
 
-@import "_embed";
-@import "_article";
-@import "article/_anniv";
-@import "_error";
-@import "_mobile";
-@import "_ie";
+@import '_embed';
+@import '_article';
+@import 'article/_anniv';
+@import '_error';
+@import '_mobile';
+@import '_ie';
+@import '_payment';

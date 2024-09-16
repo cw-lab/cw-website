@@ -1,0 +1,8 @@
+header.payment-header {
+  .payment-header-left {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.9375rem;
+  }
+}

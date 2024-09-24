@@ -1,11 +1,14 @@
 .article__next {
-  // display: none;
   position: fixed;
   overflow: hidden;
   z-index: 5;
 
   &.show {
     overflow: visible;
+
+    a {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 1024px) {

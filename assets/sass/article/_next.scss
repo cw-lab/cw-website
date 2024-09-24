@@ -129,19 +129,16 @@
     }
   }
 
-  &.article__next--defalt {
+  &.article__next--default {
     a {
       background-color: $white;
       border: 1px solid $gray-200;
 
-      @media screen and (min-width: 1024px) {
-        position: absolute;
-        bottom: 0;
-      }
-
       .next__body {
+        padding: 0 15px;
+
         @media screen and (min-width: 1024px) {
-          padding: 20px 15px;
+          padding: 10px 15px;
         }
       }
     }

@@ -135,7 +135,10 @@
   &.article__next--default {
     a {
       background-color: $white;
-      border: 1px solid $gray-200;
+
+      @media screen and (min-width: 1024px) {
+        border: 1px solid $gray-200;
+      }
 
       .next__body {
         padding: 0 15px;

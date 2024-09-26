@@ -33,7 +33,11 @@ header {
       @include clear;
     }
 
-    >.item {
+    .gift--main {
+      display: none;
+    }
+
+    &>.item {
       display: inline-block;
       vertical-align: middle;
       font-size: 0;

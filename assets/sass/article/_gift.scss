@@ -192,10 +192,6 @@
       padding: 20px;
       outline: 1px solid #eeeeee;
 
-      @media screen and (min-width: 700px) {
-        left: calc(-42.5px + (100vw - 160px - 174.4px) / 5);
-      }
-
       &::after {
         @include beforeafter('', block);
         position: absolute;
@@ -205,13 +201,8 @@
         border-width: 10px 15px 10px 0;
         border-color: transparent #f7f7f7 transparent transparent;
         top: -16px;
-        left: calc((100vw - 40px) / 5 + 3.7px);
-        transform: rotate(90deg);
-
-        @media screen and (min-width: 700px) {
-          left: calc(50% - 3px);
-          transform: translateX(-50%) rotate(90deg);
-        }
+        left: calc(30px + 1.3625rem);
+        transform: translateX(-50%) rotate(90deg);
       }
 
       &::before {
@@ -223,13 +214,8 @@
         border-width: 10px 15px 10px 0;
         border-color: transparent #eeeeee transparent transparent;
         top: -18px;
-        left: calc((100vw - 40px) / 5 + 3.7px);
-        transform: rotate(90deg);
-
-        @media screen and (min-width: 700px) {
-          left: calc(50% - 3px);
-          transform: translateX(-50%) rotate(90deg);
-        }
+        left: calc(30px + 1.3625rem);
+        transform: translateX(-50%) rotate(90deg);
       }
 
       @media screen and (min-width: 1023px) {

@@ -1,59 +1,78 @@
 .error__page {
-    main {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        @media screen and (min-width: 1024px) {
-            padding-top: 100px;
-            padding-bottom: 100px;
-        }
-        .content {
-            position: relative;
-            padding-top: 100px;
-            padding-bottom: 100px;
-            overflow: hidden;
-            z-index: 1;
-            @media screen and (min-width: 1024px) {
-                padding-top: 150px;
-                padding-bottom: 150px;
-            }
-            &::before,
-            &::after {
-                @include beforeafter('', block);
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                z-index: -1;
-            }
-            &::before {
-                background-image: url('../images/error-gray.svg');
-                animation: rotate 30s infinite;
-            }
-            &::after {
-                background-image: url('../images/error-white.svg');
-                animation: rotate 20s infinite;
-            }
-            .h1 {
-                font-size: 3.125rem;
-            }
-            p {
-                @media screen and (min-width: 1024px) {
-                    font-size: 1.125rem;
-                }
-            }
-        }
+  header .container {
+    .item--right {
+      grid-template-columns: repeat(4, auto);
+
+      @media screen and (max-width: 1023px) {
+        grid-template-columns: repeat(3, auto);
+      }
     }
+  }
+
+  main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 1024px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .content {
+      position: relative;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      overflow: hidden;
+      z-index: 1;
+
+      @media screen and (min-width: 1024px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
+
+      &::before,
+      &::after {
+        @include beforeafter('', block);
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+      }
+
+      &::before {
+        background-image: url('../images/error-gray.svg');
+        animation: rotate 30s infinite;
+      }
+
+      &::after {
+        background-image: url('../images/error-white.svg');
+        animation: rotate 20s infinite;
+      }
+
+      .h1 {
+        font-size: 3.125rem;
+      }
+
+      p {
+        @media screen and (min-width: 1024px) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
 }
 
 @keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

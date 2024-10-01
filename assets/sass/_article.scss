@@ -152,6 +152,10 @@
 @import "article/_keyword";
 
 article {
+  a {
+    scroll-margin-top: 7.5rem;
+  }
+
   iframe {
     max-width: 100%;
   }

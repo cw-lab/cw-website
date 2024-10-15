@@ -18,18 +18,21 @@
 
   &.full {
     height: 70vh;
-    max-height: 460px;
     padding: 0;
     align-items: center;
     border-width: 0 0 1px;
     background: none;
 
-    @media screen and (min-width: 1024px) {
+    &.top-ad-970x460 {
+      max-height: 460px;
+    }
+
+    &.top-ad-1536x544 {
       min-height: 460px;
       max-height: 544px;
     }
 
-    @media screen and (min-width: 1920px) {
+    &.top-ad-1920x680 {
       min-height: 544px;
       max-height: 680px;
     }

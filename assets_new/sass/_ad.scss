@@ -2,92 +2,145 @@
 
 @import "_variable";
 @import "_mixin";
+
+.top-ad {
+  min-height: 210px;
+  max-height: 310px;
+  padding: 30px 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eee;
+  background-color: #f7f7f7;
+  overflow: hidden;
+
+  &.full {
+    height: 70vh;
+    padding: 0;
+    align-items: center;
+    border-width: 0 0 1px;
+    background: none;
+
+    &.top-ad-970x460 {
+      max-height: 460px;
+    }
+
+    &.top-ad-1536x544 {
+      min-height: 460px;
+      max-height: 544px;
+    }
+
+    &.top-ad-1920x680 {
+      min-height: 544px;
+      max-height: 680px;
+    }
+  }
+
+  &>.google-ads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}
+
 .banner {
-    position: relative;
-    min-height: 312px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #f7f7f7;
-    border: 1px solid $gray-100;
-    &.opened {
-        z-index: 10;
+  position: relative;
+  min-height: 312px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f7f7f7;
+  border: 1px solid $gray-100;
+
+  &.opened {
+    z-index: 10;
+  }
+
+  img {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &.fixed {
+    margin-bottom: 60px;
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 65px;
     }
-    img {
-        margin: auto;
-        max-width: 100%;
-        height: auto;
-    }
-    &.fixed {
-        margin-bottom: 60px;
-        @media screen and (min-width: 1024px) {
-            margin-bottom: 65px;
-        }
-    }
+  }
 }
 
 #div-incover-ad+.banner {
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: transparent;
-    border: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: transparent;
+  border: 0;
 }
 
 .couplet-wide,
 .couplet-left,
 .couplet-right {
-    display: none;
-    @media screen and (max-width: 1023px) {
-        display: none !important;
-    }
+  display: none;
+
+  @media screen and (max-width: 1023px) {
+    display: none !important;
+  }
 }
 
 .couplet-left,
 .couplet-right {
-    position: absolute;
-    top: -250px;
-    width: 300px;
+  position: absolute;
+  top: -250px;
+  width: 300px;
 }
 
 .couplet-left {
-    left: calc((100% - #{$index}) / 2 - 320px);
+  left: calc((100% - #{$index}) / 2 - 320px);
 }
 
 .couplet-right {
-    right: calc((100% - #{$index}) / 2 - 320px);
+  right: calc((100% - #{$index}) / 2 - 320px);
 }
 
 .bottom-banner {
-    margin-top: -1.5em;
-    margin-bottom: 50px;
+  margin-top: -1.5em;
+  margin-bottom: 50px;
 }
 
 .index-page {
-    .couplet-wide,
-    .couplet-left,
-    .couplet-right {
-        display: block;
-    }
+
+  .couplet-wide,
+  .couplet-left,
+  .couplet-right {
+    display: block;
+  }
 }
 
 // 所有廣告置中
 .cw__advertising,
 .leafletBig,
 .leaflet {
-    text-align: center;
+  text-align: center;
 }
+
 .leafletBig {
-    width: 302px;
-    height: 602px;
+  width: 302px;
+  height: 602px;
 }
+
 .leaflet {
-    width: 302px;
-    height: 252px;
+  width: 302px;
+  height: 252px;
 }
+
 .leafletBig,
 .leaflet {
-    @media screen and (min-width: 1024px) {
-        margin-left: -1px;
-        margin-right: -1px;
-        border: 1px solid $gray-200;
-    }
+  @media screen and (min-width: 1024px) {
+    margin-left: -1px;
+    margin-right: -1px;
+    border: 1px solid $gray-200;
+  }
 }

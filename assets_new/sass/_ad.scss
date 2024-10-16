@@ -4,7 +4,7 @@
 @import "_mixin";
 
 .top-ad {
-  min-height: 210px;
+  min-height: 250px;
   max-height: 310px;
   padding: 30px 0;
   display: flex;
@@ -15,6 +15,10 @@
   border-color: #eee;
   background-color: #f7f7f7;
   overflow: hidden;
+
+  &.mini {
+    min-height: auto;
+  }
 
   &.full {
     height: 70vh;

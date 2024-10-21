@@ -134,7 +134,7 @@
 			span {
 				display: block;
 				padding-top: 0.4em;
-				color: $secondary;
+				color: $secondary-text;
 				font-size: 0.875rem;
 				@media screen and (max-width: 767px) {
 					padding-left: 20px;
@@ -341,7 +341,7 @@
 					display: block;
 					padding-top: 0.4em;
 					padding-bottom: 1.4em;
-					color: $secondary;
+					color: $secondary-text;
 					font-size: 0.875rem;
 					@media screen and (max-width: 767px) {
 						padding-left: 20px;

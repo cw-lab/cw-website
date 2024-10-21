@@ -249,7 +249,7 @@ footer {
             a.icon-btn {
                 width: 40px;
                 height: 60px;
-                color: $secondary;
+                color: secondary-text;
                 @media screen and (min-width: 1024px) {
                     width: 60px;
                     height: 80px;
@@ -275,7 +275,7 @@ footer {
                 display: block;
                 padding-top: 0.4em;
                 padding-bottom: 1.4em;
-                color: $secondary;
+                color: secondary-text;
                 font-size: 0.875rem;
                 @media screen and (max-width: 767px) {
                     padding-left: 20px;
@@ -534,7 +534,7 @@ footer {
                     > span {
                         display: block;
                         padding-top: 0.4em;
-                        color: $secondary;
+                        color: secondary-text;
                         font-size: 0.875rem;
                     }
                 }

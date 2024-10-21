@@ -118,7 +118,7 @@ button {
 a {
 	&.sns {
 		display: block;
-		color: $secondary;
+		color: $secondary-text;
 		&-facebook {
 			&:hover, &.active {
 				color: $facebook;

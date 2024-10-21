@@ -100,7 +100,7 @@
                         a {
                             color: $white;
                             &:hover {
-                                color: $secondary;
+                                color: $secondary-text;
                             }
                         }
                     }
@@ -127,7 +127,7 @@
                     a {
                         color: $white;
                         &:hover {
-                            color: $secondary;
+                            color: $secondary-text;
                         }
                     }
                 }
@@ -208,7 +208,7 @@
             h3 {
                 margin: 0;
                 padding: 0;
-                color: $secondary;
+                color: $secondary-text;
                 font-size: 0.875rem;
                 font-weight: normal;
                 @media screen and (min-width: 1024px) {

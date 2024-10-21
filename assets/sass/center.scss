@@ -232,7 +232,7 @@
             line-height: 1.5;
             word-break: break-word;
             &.form__value--blank {
-                color: $secondary;
+                color: $secondary-text;
             }
             &.blank__show {
                 color: $black;
@@ -455,7 +455,7 @@
                 font-size: 1.125rem;
             }
             .deadline__mean {
-                color: $secondary;
+                color: $secondary-text;
             }
         }
         .btn--toggle {
@@ -856,8 +856,8 @@
                         }
                     }
                     .time {
-                        color: $secondary;
-                        font-size: 14px;
+                        color: $secondary-text;
+                        font-size: 0.875rem;
                         line-height: 1.5;
                         @media screen and (min-width: 768px) {
                             margin-bottom: 5px;

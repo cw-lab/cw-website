@@ -35,7 +35,7 @@ input[type*='number']::-webkit-outer-spin-button {
             position: absolute;
             top: 1rem;
             left: 1rem;
-            color: $secondary;
+            color: $secondary-text;
             font-size: 14px;
             transition: all 0.3s;
         }
@@ -230,14 +230,14 @@ input[type*='number']::-webkit-outer-spin-button {
             color: $gray-200;
         }
         .form__group__input {
-            color: $secondary;
+            color: $secondary-text;
             background-color: $gray-100;
             border-color: $gray-100;
             cursor: not-allowed;
         }
         &.hasValue {
             .form__group__placeholder {
-                color: $secondary;
+                color: $secondary-text;
                 font-size: 0.75rem;
             }
             .form__group__input {
@@ -251,7 +251,7 @@ input[type*='number']::-webkit-outer-spin-button {
         padding-left: 1rem;
         padding-right: 1rem;
         margin-top: 5px;
-        color: $secondary;
+        color: $secondary-text;
         font-size: 0.75rem;
         font-style: normal;
         line-height: 1;

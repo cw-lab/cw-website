@@ -250,10 +250,10 @@ img {
 .source {
 	display: block;
 	padding-top: 5px;
-	color: $secondary;
+	color: $secondary-text;
 	font-size: 0.875rem;
 	a {
-		color: $secondary;
+		color: $secondary-text;
 		text-decoration: underline;
 		&:hover {
 			color: $secondary-variant;

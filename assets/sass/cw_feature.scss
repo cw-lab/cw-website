@@ -46,9 +46,9 @@ main {
 p {
     font-size: 1em;
     &.emphasis {
-        color: $secondary;
+        color: $secondary-text;
         a {
-            color: $secondary;
+            color: $secondary-text;
             &:hover {
                 color: $secondary-variant;
             }

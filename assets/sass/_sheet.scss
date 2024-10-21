@@ -1,6 +1,7 @@
 $gray-100: #EEEEEE !default;
 $gray-200: #D3D5D7 !default;
 $gray-300: #939EA7 !default; //secondary
+$gray-350: #7A838B !default; //secondary-font
 $gray-400: #6B7780 !default;
 $gray-500: #48545D !default; //secondary-variant
 
@@ -24,6 +25,7 @@ $surface: #003a9f;
 $primary: $red-300 !default;
 $primary-variant: $red-500 !default;
 $secondary: $gray-300 !default;
+$secondary-text: $gray-350 !default;
 $secondary-variant: $gray-500 !default;
 $error: $red-500 !default;
 $background: $white !default;

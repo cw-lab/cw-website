@@ -202,7 +202,7 @@ section {
 						a {
 							display: block;
 							padding: 5px 0 5px 35px;
-							color: $secondary;
+							color: $secondary-text;
 							font-size: 1rem;
 							line-height: 25px;
 							&:hover, &.active {
@@ -629,7 +629,7 @@ section {
 		}
 		.form__group__help {
 			display: block;
-			color: $secondary;
+			color: $secondary-text;
 			font-size: 12px;
 			font-style: normal;
 			line-height: 1;

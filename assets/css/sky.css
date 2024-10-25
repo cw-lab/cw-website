@@ -108,11 +108,11 @@
 
 .assistant-step { position: relative; margin: 0 1.25rem 1.25rem; border-radius: .3125rem; overflow: hidden; }
 
-.assistant-step-wrap { position: relative; left: calc(var(--step-order) * -100%); display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[6]; grid-template-columns: repeat(6, 1fr); -ms-flex-align: start; align-items: start; width: 600%; height: var(--step-item-height); transition: left 0.4s, height 0.4s; }
+.assistant-step-wrap { position: relative; left: calc(var(--step-order) * -100%); display: -ms-grid; display: grid; grid-template-columns: repeat(6, 1fr); -ms-flex-align: start; align-items: start; width: 600%; height: var(--step-item-height); transition: left 0.4s, height 0.4s; }
 
 .assistant-step-item { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; gap: 1.25rem; }
 
-.assistant-step-item .step-process { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[4]; grid-template-columns: repeat(4, 1fr); gap: .125rem; height: .125rem; }
+.assistant-step-item .step-process { display: -ms-grid; display: grid; grid-template-columns: repeat(4, 1fr); gap: .125rem; height: .125rem; }
 
 .assistant-step-item .step-process span { background-color: #E9E9E9; }
 
@@ -130,7 +130,7 @@
 
 .assistant-step-item .item-title span.title-order { color: #D60C18; }
 
-.assistant-step-item ul.option-group { display: -ms-grid; display: grid; -ms-grid-columns: (1fr)[2]; grid-template-columns: repeat(2, 1fr); gap: .625rem; margin-top: 0; margin-bottom: 0; padding: 0; list-style: none; }
+.assistant-step-item ul.option-group { display: -ms-grid; display: grid; grid-template-columns: repeat(2, 1fr); gap: .625rem; margin-top: 0; margin-bottom: 0; padding: 0; list-style: none; }
 
 .assistant-step-item ul.option-group li { position: relative; margin: 0; font-size: 1.125rem; line-height: 1.5; aspect-ratio: 1 / 1; }
 

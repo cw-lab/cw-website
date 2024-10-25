@@ -956,9 +956,9 @@ header .container > .item.item--right, header .container > .item.item--center { 
 
 header .container > .item.item--right .item__scroll, header .container > .item.item--center .item__scroll { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; gap: 0.9375rem; overflow: hidden; transition: transform .3s; }
 
-header .container > .item.item--right { display: -ms-grid; display: grid; -ms-grid-columns: (auto)[3]; grid-template-columns: repeat(3, auto); -ms-flex-align: center; align-items: center; column-gap: 0.75rem; -ms-flex-negative: 0; flex-shrink: 0; overflow: hidden; }
+header .container > .item.item--right { display: -ms-grid; display: grid; grid-template-columns: repeat(3, auto); -ms-flex-align: center; align-items: center; column-gap: 0.75rem; -ms-flex-negative: 0; flex-shrink: 0; overflow: hidden; }
 
-@media screen and (max-width: 1023px) { header .container > .item.item--right { -ms-grid-columns: (auto)[2]; grid-template-columns: repeat(2, auto); } }
+@media screen and (max-width: 1023px) { header .container > .item.item--right {  grid-template-columns: repeat(2, auto); } }
 
 header .container > .item.item--right > * { margin: 0; display: inline-block; vertical-align: middle; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; cursor: pointer; }
 

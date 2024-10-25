@@ -829,9 +829,9 @@ header .container::after { content: ""; display: table; clear: both; }
 
 header .container > .item { display: inline-block; vertical-align: middle; font-size: 0; }
 
-header .container > .item.item--right { display: -ms-grid; display: grid; -ms-grid-columns: (auto)[4]; grid-template-columns: repeat(4, auto); -ms-flex-align: center; align-items: center; column-gap: 0.75rem; -ms-flex-negative: 0; flex-shrink: 0; overflow: hidden; }
+header .container > .item.item--right { display: -ms-grid; display: grid; grid-template-columns: repeat(4, auto); -ms-flex-align: center; align-items: center; column-gap: 0.75rem; -ms-flex-negative: 0; flex-shrink: 0; overflow: hidden; }
 
-@media screen and (max-width: 1023px) { header .container > .item.item--right { -ms-grid-columns: (auto)[2]; grid-template-columns: repeat(2, auto); } }
+@media screen and (max-width: 1023px) { header .container > .item.item--right {grid-template-columns: repeat(2, auto); } }
 
 header .container > .item.item--right > * { margin: 0; display: inline-block; vertical-align: middle; -ms-flex-item-align: center; -ms-grid-row-align: center; align-self: center; cursor: pointer; }
 

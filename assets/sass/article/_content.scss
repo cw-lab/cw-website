@@ -82,15 +82,7 @@ blockquote {
     border-bottom: 1px dashed $primary;
     transition: color 0.3s, border-color 0.3s;
     cursor: pointer;
-    &::before {
-        @include beforeafter("\e94b", block);
-        position: absolute;
-        top: 50%;
-        right: 0;
-        font-family: $icomoon-font-family;
-        line-height: 1;
-        transform: translateY(-50%);
-    }
+
     &:hover {
         color: $primary-variant;
         border-bottom-color: $primary-variant;
@@ -101,6 +93,7 @@ blockquote {
     height: 1px;
     opacity: 0;
     border: 0;
+
     &:checked + .more__btn + .more__text {
         display: block;
     }

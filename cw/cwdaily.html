@@ -1127,6 +1127,7 @@
     <script src="https://www.cw.com.tw/assets_new/js/bootstrap.min.js"></script>
     <script src="https://www.cw.com.tw/assets_new/js/wow.min.js"></script>
     <script>
+        document.querySelector("header").classList.add("fixed");
         new WOW().init();
         // page scrolling check
         var _earth_show_fromtop = $(".card.earth").offset().top - $(window).height()*0.5 - 50;

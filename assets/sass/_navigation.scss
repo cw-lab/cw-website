@@ -551,8 +551,9 @@ nav {
   }
 
   @media screen and (max-width: 767px) {
-    top: 42px;
-    right: -20px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     opacity: 1 !important;
   }
 

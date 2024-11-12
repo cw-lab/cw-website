@@ -75,13 +75,20 @@ blockquote {
 }
 .more__btn {
     position: relative;
-    display: inline-block;
-    padding-right: 1.15em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1em;
     color: $primary;
     line-height: 1.5;
     border-bottom: 1px dashed $primary;
     transition: color 0.3s, border-color 0.3s;
     cursor: pointer;
+
+    &::after {
+        @include beforeafter($icon-note, block);
+        font-family: $icomoon-font-family;
+        line-height: 1;
+    }
 
     &:hover {
         color: $primary-variant;

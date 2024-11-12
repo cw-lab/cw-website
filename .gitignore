@@ -2,9 +2,8 @@
 *.css.map
 *.sass.map
 *.scss.map
-.compiler/build/
+.compiler/*/build/
 .DS_Store
 
 */article-next*
 channel*
-build/*

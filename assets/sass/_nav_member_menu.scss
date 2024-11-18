@@ -1,12 +1,18 @@
 :root {
-  --member-menu-duration: 300ms;
+  --member-menu-duration: 400ms;
 }
 
 .member-menu {
   font-size: 1rem;
+  line-height: 1;
 
   i {
     font-size: 1.3125rem;
+
+    &.icon-close::before {
+      content: $icon-cancel !important;
+      font-weight: 700;
+    }
   }
 
   .member-menu-container {
@@ -59,7 +65,7 @@
     width: 150px;
     max-height: 0;
     position: absolute;
-    top: 0;
+    top: 12px;
     right: 0;
     overflow: hidden;
     transition-property: max-height;
@@ -95,7 +101,7 @@
     transition: opacity 300ms;
 
     @media screen and (max-width: 1023px) {
-      background-color: rgba(23, 23, 23, 0.4);
+      background-color: rgba(23, 23, 23, 0.5);
     }
   }
 }

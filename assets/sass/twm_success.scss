@@ -94,3 +94,25 @@
     margin-top: 1.25rem;
   }
 }
+
+.twm-app-promote-desktop {
+  .twm-app-qrcode {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 12.5rem;
+    }
+  }
+
+  @media screen and (max-width: 699px) {
+    display: none;
+  }
+}
+
+.twm-app-promote-mobile {
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}

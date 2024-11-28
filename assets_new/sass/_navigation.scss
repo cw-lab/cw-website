@@ -21,7 +21,7 @@ nav {
     background-color: $white;
     overflow: scroll;
     transition: all 0.3s;
-    z-index: 12;
+    z-index: 14;
 
     @media screen and (min-width: 1024px) {
       overflow: hidden scroll;
@@ -179,18 +179,17 @@ nav {
   word-break: keep-all;
 
   @media screen and (min-width: 768px) {
-    top: 43px;
-    right: 0;
-
     &.menubar__user--login {
       width: auto;
     }
+
+    top: 43px;
+    right: 0;
   }
 
   @media screen and (max-width: 767px) {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    top: 42px;
+    right: -20px;
     opacity: 1 !important;
   }
 
@@ -466,9 +465,13 @@ aside.menubar--left {
   background-color: rgba($black, 0.4);
   opacity: 0;
   transition: opacity 0.3s;
-  z-index: 9;
+  z-index: 13;
 
   &.opened {
     opacity: 1;
+  }
+
+  &.search__opened {
+    z-index: 11;
   }
 }

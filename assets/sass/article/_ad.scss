@@ -7,48 +7,62 @@
 
   &.top-ad {
     min-height: 250px;
-    max-height: 310px;
-    padding: 30px 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #eee;
-    background-color: #f7f7f7;
-    overflow: hidden;
 
-    &.mini {
+    &.compelted {
       min-height: auto;
     }
 
-    &.full {
-      height: 70vh;
-      padding: 0;
-      align-items: center;
-      border-width: 0 0 1px;
-      background: none;
-
-      &.top-ad-970x460 {
-        max-height: 460px;
-      }
-
-      &.top-ad-1536x544 {
-        min-height: 460px;
-        max-height: 544px;
-      }
-
-      &.top-ad-1920x680 {
-        min-height: 544px;
-        max-height: 680px;
-      }
-    }
-  
     &>.google-ads {
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+    }
+
+    .top-ad-gdn,
+    .top-ad-super {
+      display: none;
+      align-items: stretch;
+      justify-content: center;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #eee;
+      background-color: #f7f7f7;
+      overflow: hidden;
+
+      &.active {
+        display: flex;
+      }
+
+      .top-ad-gdn {
+        padding: 30px 0;
+        min-height: 110px;
+        max-height: 310px;
+      }
+
+      .top-ad-super {
+        height: 70vh;
+        min-height: 460px;
+        max-height: 680px;
+        padding: 0;
+        align-items: center;
+        border-width: 0 0 1px;
+        background: none;
+
+        &.super-top-970x460 {
+          max-height: 460px;
+        }
+
+        &.super-top-1536x544 {
+          min-height: 460px;
+          max-height: 544px;
+        }
+
+        &.super-top-1920x680 {
+          min-height: 544px;
+          max-height: 680px;
+        }
+      }
     }
   }
 

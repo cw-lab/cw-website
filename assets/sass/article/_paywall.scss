@@ -4,14 +4,16 @@
     font-size: 1.125rem;
     background-color: #f7f7f7;
     z-index: 1;
-    &::before {
-        @include beforeafter('', block);
-        position: absolute;
-        left: 0;
-        bottom: 100%;
-        width: 100%;
-        height: 300px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    &.paywall--mask {
+        &::before {
+            @include beforeafter('', block);
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        }
     }
     &.paywall--singleColumn {
         >div[class*='paywall__'] {

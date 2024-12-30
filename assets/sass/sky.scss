@@ -14,7 +14,8 @@
   height: 5rem;
   z-index: 14;
 
-  &.standby {
+  &.standby,
+  &.notification {
     z-index: 11;
   }
 
@@ -683,6 +684,7 @@
     }
 
     &.opened-half {
+      z-index: 10;
       background: linear-gradient(180deg, rgba($black, 0) 70%, rgba($black, 0.7) 100%);
     }
   }

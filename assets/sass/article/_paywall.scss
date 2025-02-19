@@ -133,11 +133,15 @@
 // 202502 paywall with plan
 // TODO: remove or keep when a/b test ended
 .paywall-wrapper {
-  padding: 1.875rem 1.875rem 3.75rem;
+  padding: 1.875rem 1.875rem 3rem;
   font-weight: 500;
   line-height: 1.5;
   background-color: #F7F7F7;
   color: #000;
+
+  a {
+    cursor: pointer;
+  }
 
   .paywall-header {
     font-size: 1.375rem;
@@ -189,11 +193,12 @@
     }
     
     .paywall-card-label {
-      padding: 0.1875rem 0.9375rem;
+      padding: 0.35rem 0.9375rem;
       position: absolute;
       top: 0;
       left: 0;
       background: #003A9F;
+      font-size: 0.875rem;
       color: white;
       translate: -8px 0;
 

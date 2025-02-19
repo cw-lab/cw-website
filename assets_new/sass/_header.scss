@@ -127,6 +127,22 @@ header {
     }
   }
 
+  a.language {
+    display: none;
+    @media screen and (min-width: 768px) {
+      color: #171717;
+      font-size: 1rem;
+      line-height: 1;
+      display: inline-block;
+      align-self: center;
+    }
+    &:hover {
+      @media screen and (min-width: 768px) {
+        color: #d60c18;
+      }
+    }
+  }
+  
   .search__icon,
   .menubar__user {
     padding: 0.25rem;

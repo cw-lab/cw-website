@@ -399,10 +399,10 @@ aside.menubar--left {
         position: absolute;
         display: none;
         top: 100%;
-        width: 116%;
+        width: 126%;
         background-color: $white;
         border-top: 1px solid $gray-100;
-        @include listrest(0 auto 0 -8%, 0, none);
+        @include listrest(0 auto 0 -13%, 0, none);
         opacity: 0;
         transition: opacity 0.5s;
 

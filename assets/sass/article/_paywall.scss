@@ -134,9 +134,10 @@
 // TODO: remove or keep when a/b test ended
 .paywall-wrapper {
   padding: 1.875rem 1.875rem 3rem;
+  position: relative;
+  background-color: #F7F7F7;
   font-weight: 500;
   line-height: 1.5;
-  background-color: #F7F7F7;
   color: #000;
 
   &::before {
@@ -174,34 +175,12 @@
     padding: 0.9375rem 0;
     position: relative;
 
-    &.default {
-      .paywall-card-title {
-        font-size: 1.375rem;
-      }
-
-      .paywall-card-subtitle {
-        min-height: 1.5em;
-        flex-grow: 1;
-        font-size: 1rem;
-      }
-    }
-
-    &.plan {
-      .paywall-card-title {
-        font-size: 0.875rem;
-      }
-
-      .paywall-card-price {
-        font-size: 1.375rem;
-      }
-    }
-
     &.discount {
       .paywall-card-inner {
         border-color: #003B82;
       }
     }
-    
+
     .paywall-card-label {
       padding: 0.35rem 0.9375rem;
       position: absolute;
@@ -232,10 +211,21 @@
       display: flex;
       flex-direction: column;
       gap: 0.625rem;
-      background-color: #FFFFFF;
       border-width: 1px;
       border-style: solid;
       border-color: #D3D5D7;
+      background-color: #FFFFFF;
+      text-align: center;
+    }
+
+    .paywall-card-title {
+      font-size: 1.375rem;
+    }
+
+    .paywall-card-price {
+      min-height: 1.5em;
+      flex-grow: 1;
+      font-size: 1rem;
     }
 
     .paywall-card-footer {

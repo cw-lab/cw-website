@@ -40,6 +40,13 @@
     font-size: 15px;
     font-weight: 500;
     white-space: nowrap;
+    color: $text;
+    a {
+      color: $text;
+      &:hover {
+        color: $primary;
+      }
+    }
 
     &::before {
       @include beforeafter('', block);

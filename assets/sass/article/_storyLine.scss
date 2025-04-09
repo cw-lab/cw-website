@@ -40,6 +40,14 @@
     font-size: 15px;
     font-weight: 500;
     white-space: nowrap;
+    color: $text;
+    line-height: 1;
+    a {
+      color: $text;
+      &:hover {
+        color: $primary;
+      }
+    }
 
     &::before {
       @include beforeafter('', block);
@@ -60,6 +68,7 @@
 
     i.icon-caret-right {
       color: $primary;
+      vertical-align: text-top;
     }
 
     @media screen and (max-width: 1023px) {

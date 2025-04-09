@@ -6734,7 +6734,8 @@ main .ad.ad--970by250.opened {
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-  color: #171717
+  color: #171717;
+  line-height: 1;
 }
 
 .storyLine__title a {
@@ -6765,7 +6766,8 @@ main .ad.ad--970by250.opened {
 }
 
 .storyLine__title i.icon-caret-right {
-  color: #d60c18
+  color: #d60c18;
+  vertical-align: text-top;
 }
 
 @media screen and (max-width: 1023px) {

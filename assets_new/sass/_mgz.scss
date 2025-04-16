@@ -94,62 +94,83 @@
 }
 
 .single-magz-page {
-    .mgzIndex {
-        font-size: 0;
-        .pic {
-            display: inline-block;
-            width: 45%;
-            vertical-align: top;
-            @media screen and (min-width: 768px) {
-                width: 35%;
-            }
+    .mgz-index {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 35% auto;
+        grid-template-areas:
+            'picture title'
+            'picture body';
+
+        @media screen and (max-width: 767px) {
+            column-gap: 0.625rem;
+            row-gap: 1rem;
+            grid-template-rows: auto;
+            grid-template-columns: 45% auto;
+            grid-template-areas:
+                'picture title'
+                'body body';
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .mgz-picture {
+            grid-area: picture;
+
             img {
                 width: 100%;
-                border: 1px solid $gray-100;
             }
         }
-        .txt {
-            display: inline-block;
-            width: 55%;
-            padding-left: 10px;
-            vertical-align: top;
-            @media screen and (min-width: 768px) {
-                width: 65%;
-                padding-left: 20px;
-            }
+
+        .mgz-title {
             h1 {
-                margin-top: 0;
-                margin-bottom: 0;
+                margin: 0;
                 font-size: 2rem;
                 font-weight: normal;
                 line-height: 1.25;
             }
+
             p {
-                margin-top: 0;
-                font-size: 1rem;
-                .mgzNum {
-                    color: $primary;
-                }
-                time {
-                    padding-left: 1rem;
-                    color: $gray-300;
-                }
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                color: $primary;
             }
-            .btnGroup {
-                display: block;
-                a {
-                    width: 100%;
-                    @include containbtn(inline-block, 0.7rem, $gray-400, 1rem);
-                    @media screen and (min-width: 768px) {
-                        width: 200px;
-                    }
-                    +a {
-                        margin-top: 10px;
-                    }
-                }
+
+            time {
+                color: $gray-300;
+            }
+        }
+
+        .mgz-body {
+            grid-area: body;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mgz-preface {
+            flex-grow: 1;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .maz-cta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            a {
+                flex-grow: 1;
             }
         }
     }
+
     .articleGroup {
         @media screen and (max-width: 767px) {
             margin-top: 1.5rem;

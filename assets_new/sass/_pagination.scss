@@ -1,67 +1,71 @@
+$controls-translate: 0.25em;
+
 .pagination {
-    @include listrest(40px 0 0, 0, none);
-    font-size: 0;
-    text-align: center;
-    li {
-        display: inline-block;
-        font-size: 1rem;
-        vertical-align: middle;
-        +li {
-            margin-left: 5px;
-        }
-        a,
-        span {
-            display: block;
-            width: 30px;
-            height: 30px;
-            padding: 4px 0;
-            color: $black;
-            text-align: center;
-            line-height: 22px;
-        }
-        &:hover,
-        &.active {
-            a,
-            span {
-                color: $white;
-                background-color: $gray-300;
-            }
-        }
-        &.prev,
-        &.next,
-        &.disabled {
-            a,
-            span {
-                background-color: transparent;
-            }
-        }
-        &.prev {
-            a,
-            span {
-                background-image: url('../img/prev-arrow-b.gif');
-                background-position: center center;
-                background-repeat: no-repeat;
-            }
-            &:hover {
-                a,
-                span {
-                    background-position: left center;
-                }
-            }
-        }
-        &.next {
-            a,
-            span {
-                background-image: url('../img/next-arrow-b.gif');
-                background-position: center center;
-                background-repeat: no-repeat;
-            }
-            &:hover {
-                a,
-                span {
-                    background-position: right center;
-                }
-            }
-        }
+  @include listrest(40px 0 0, 0, none);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+
+  li {
+    display: inline-block;
+    font-size: 1rem;
+    transition: translate 0.3s;
+
+    a,
+    span {
+      width: 30px;
+      height: 30px;
+      padding: 4px 0;
+      display: block;
+      line-height: 22px;
+      text-align: center;
+      color: $black;
     }
+
+    &:hover,
+    &.active {
+      a,
+      span {
+        background-color: $gray-300;
+        color: $white;
+      }
+    }
+
+    &.prev,
+    &.next,
+    &.disabled {
+      a,
+      span {
+        background-color: transparent;
+      }
+    }
+
+    &.prev {
+      &:hover {
+        translate: -$controls-translate 0;
+      }
+
+      a,
+      span {
+        background-image: url('../img/prev-arrow-b.gif');
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.next {
+      &:hover {
+        translate: $controls-translate 0;
+      }
+
+      a,
+      span {
+        background-image: url('../img/next-arrow-b.gif');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }

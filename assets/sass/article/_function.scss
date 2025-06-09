@@ -45,11 +45,16 @@ ul.article__provide {
                 }
             }
         }
-        > a,
+
+        & > a {
+            display: inline-block;
+        }
+
         span {
             display: block;
             color: $gray-400;
-            border: solid $gray-100;
+            border: 1px solid $gray-100;
+            border-radius: 50%;
             background-color: $white;
             transition: all 0.2s;
             cursor: pointer;

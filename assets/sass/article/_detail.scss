@@ -1,81 +1,92 @@
 .article__detail {
-    position: relative;
-    font-size: 0;
-    @media screen and (min-width: 1024px) {
-        padding-right: 90px;
-    }
-    >ul {
+  position: relative;
+  font-size: 0;
+
+  @media screen and (min-width: 1024px) {
+    padding-right: 90px;
+  }
+
+  & > ul {
+    display: inline-block;
+    @include list(0, 0, none);
+
+    li {
+      display: inline-block;
+
+      & > * {
         display: inline-block;
-        @include list(0, 0, none);
-        li {
-            display: inline-block;
-            >* {
-                display: inline-block;
-                vertical-align: text-bottom;
-            }
-            >span {
-                font-size: 0.875rem;
-                &::after {
-                    @include beforeafter('—', inline-block);
-                }
-            }
-            >.author--item {
-                a,
-                span {
-                    font-size: 0.875rem;
-                }
-                +.author--item::before {
-                    @include beforeafter('、', inline-block);
-                    font-size: 0.875rem;
-                }
-            }
-        }
-    }
-    >ul.article__author {
-        li {
-            &::after {
-                @include beforeafter('．', inline-block);
-                font-size: 0.875rem;
-            }
-            &:last-child::after {
-                content: '';
-            }
-        }
-    }
-    >ul.article__assort {
-        &::before {
-            @include beforeafter('．', inline-block);
-            font-size: 0.875rem;
-            vertical-align: text-bottom;
-        }
+        vertical-align: text-bottom;
+      }
+
+      & > span {
+        font-size: 0.875rem;
+      }
+
+      & > .author--item {
         a,
         span {
-            font-size: 0.875rem;
+          font-size: 0.875rem;
         }
+        + .author--item::before {
+          @include beforeafter('、', inline-block);
+          font-size: 0.875rem;
+        }
+      }
     }
-    time:not([hidden]) {
-        display: block;
-        font-size: 0.875rem;
+  }
+
+  & > ul.article__author {
+    li {
+      &:not(:last-child) {
+        &::after {
+          @include beforeafter('．', inline-block);
+          font-size: 0.875rem;
+        }
+      }
+
+      & > span::after {
+        @include beforeafter('—', inline-block);
+      }
     }
+  }
+
+  & > ul.article__assort {
+    &::before {
+      @include beforeafter('．', inline-block);
+      font-size: 0.875rem;
+      vertical-align: text-bottom;
+    }
+    a,
+    span {
+      font-size: 0.875rem;
+    }
+  }
+
+  time:not([hidden]) {
+    display: block;
+    font-size: 0.875rem;
+  }
 }
 
 .article__views {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    font-size: 0.875rem;
-    transform: translateY(-50%);
-    span {
-        display: block;
-        line-height: 1;
-    }
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 0.875rem;
+  transform: translateY(-50%);
+
+  span {
+    display: block;
+    line-height: 1;
+  }
 }
 
 .article__provideViews {
-    position: relative;
-    font-size: 0;
-    >* {
-        display: inline-block;
-        vertical-align: middle;
-    }
+  position: relative;
+  font-size: 0;
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }

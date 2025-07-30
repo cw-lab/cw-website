@@ -1,40 +1,47 @@
 .tag-page {
-    .banner {
-        min-height: 312px;
+  .banner {
+    min-height: 312px;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .searchDoneTxt {
+    padding-top: 1.25rem;
+    text-align: center;
+
+    & > * {
+      display: inline-block;
     }
-    article {
-        width: 100%;
+
+    h1 {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1.75em;
     }
-    .searchDoneTxt {
-        padding-top: 1em;
-        // padding-bottom: 1em;
-        text-align: center;
-        >* {
-            display: inline-block;
+  }
+
+  .article__keyword--description {
+    p {
+      margin: 1.25rem 0;
+    }
+  }
+
+  .articleGroup .subArticle {
+    @media screen and (max-width: 767px) {
+      .pic {
+        display: none;
+      }
+
+      .caption {
+        border-width: 1px;
+
+        p {
+          display: -webkit-box !important;
         }
-        h1 {
-            display: block;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: 1.75em;
-        }
+      }
     }
-    .article__keyword--description{
-        p{
-            margin: 20px 0;
-        }
-    }
-    .articleGroup .subArticle {
-        @media screen and (max-width: 767px) {
-            .pic {
-                display: none;
-            }
-            .caption {
-                border-width: 1px;
-                p {
-                    display: -webkit-box !important;
-                }
-            }
-        }
-    }
+  }
 }

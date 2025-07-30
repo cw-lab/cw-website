@@ -1,0 +1,134 @@
+$tag-border-color: #d3d5d7;
+$tag-hover-color: #d60c18;
+
+// homepage focus tag
+.focus-tag {
+  padding: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d3d5d7;
+
+  .focus-tag-title {
+    margin: 0;
+  }
+
+  .focus-tag-items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.625rem;
+    list-style: none;
+
+    a {
+      padding: 0.625rem;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $tag-border-color;
+      color: black;
+      cursor: pointer;
+
+      &:hover,
+      &:active {
+        border-color: $tag-hover-color;
+        color: $tag-hover-color;
+      }
+    }
+  }
+
+  .focus-tag-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      text-decoration: none;
+    }
+  }
+}
+
+// tab categories page
+.tag-category-tabs {
+  margin: 1.25rem 0;
+  padding: 0;
+  display: flex !important;
+  align-items: center;
+  gap: 1.25rem;
+  list-style: none;
+
+  li {
+    a {
+      padding: 0.25rem;
+      padding-bottom: 0.125rem;
+      display: inline-block;
+      border-width: 0 0 0.125rem;
+      border-style: solid;
+      border-color: transparent;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: black;
+
+      &:hover,
+      &:active {
+        border-color: $tag-hover-color;
+      }
+    }
+  }
+}
+
+.tag-categories {
+  display: flex !important;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  .tag-category {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    scroll-margin-top: 7.5rem;
+
+    h2 {
+      margin: 0;
+      font-size: 1.375rem;
+    }
+
+    .tag-category-items {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.625rem;
+
+      a {
+        padding: 0.75rem 0.625rem;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $tag-border-color;
+        text-align: center;
+        color: #171717;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+          border-color: $tag-hover-color;
+          color: $tag-hover-color;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

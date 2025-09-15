@@ -299,7 +299,8 @@
     }
 
     .btn {
-      padding: 12px 23.25px;
+      padding: 12px;
+      flex-grow: 1;
 
       +a.btn {
         margin-left: 0;

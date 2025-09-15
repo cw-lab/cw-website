@@ -1,4 +1,4 @@
-$easing: cubic-bezier(.25, 1.7, .35, .8);
+$easing: cubic-bezier(0.25, 1.7, 0.35, 0.8);
 $duration: 0.6s;
 
 header {
@@ -31,7 +31,7 @@ header {
       display: none;
     }
 
-    &>.item {
+    & > .item {
       display: inline-block;
       vertical-align: middle;
       font-size: 0;
@@ -45,7 +45,7 @@ header {
           align-items: center;
           gap: 0.9375rem;
           overflow: hidden;
-          transition: transform .3s;
+          transition: transform 0.3s;
         }
       }
 
@@ -61,7 +61,7 @@ header {
           grid-template-columns: repeat(2, auto);
         }
 
-        >* {
+        > * {
           margin: 0;
           display: inline-block;
           vertical-align: middle;
@@ -84,7 +84,7 @@ header {
           align-items: flex-end;
           gap: 0;
 
-          &>a {
+          & > a {
             margin: 0.2em 0;
           }
         }
@@ -112,8 +112,23 @@ header {
             padding: 0 3rem 0 2rem;
             line-height: 40px;
             transform: translateY(100%);
-            transition: all .3s;
+            transition: all 0.3s;
             @include ellipsis;
+          }
+
+          .article__share {
+            gap: 0;
+
+            li {
+              border: 0;
+            }
+
+            a {
+              width: auto;
+              height: auto;
+              padding: 10px;
+              font-size: 1.475rem;
+            }
           }
         }
 
@@ -156,14 +171,16 @@ header {
 
   a.language {
     display: none;
+
     @media screen and (min-width: 768px) {
       color: #171717;
       font-size: 1rem;
       line-height: 1;
       display: inline-block;
       align-self: center;
-      white-space:nowrap;
+      white-space: nowrap;
     }
+
     &:hover {
       @media screen and (min-width: 768px) {
         color: #d60c18;

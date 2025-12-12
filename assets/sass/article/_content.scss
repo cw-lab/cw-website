@@ -21,6 +21,13 @@ h2,
     margin-top: 40px;
 }
 
+ul li,
+ol li {
+    p {
+        margin: 0;
+    }
+}
+
 .accordion__item__header {
     margin-bottom: 1em;
     font-size: nth($h-m-size, 2);
@@ -87,6 +94,11 @@ blockquote {
 }
 
 // 小辭典
+
+p:has(.more__input) {
+    // background-color: blue;
+}
+
 .more {
     display: inline;
 }
@@ -140,13 +152,7 @@ blockquote {
 
 // ::todo 待確認content文末box 內圖片lazyload樣式
 .lazyload__group {
-    // margin-top: 40px;
-
-    // +.source {
-    //     @media screen and (min-width: 1024px) {
-    //         margin-bottom: 40px;
-    //     }
-    // }
+    background: transparent;
 }
 
 .article__profile {
@@ -222,6 +228,16 @@ table {
     margin-top: 1.15em;
     margin-bottom: 1.15em;
     padding-bottom: 45px;
+
+    /* 表格大小標題  */
+    h3,
+    p {
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
 
     &:not(.article__table--noscroll) {
         &:not(.article__table--flexible) {

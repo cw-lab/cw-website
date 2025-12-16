@@ -5,28 +5,43 @@ ol,
     font-size: 1.125rem;
     line-height: 1.7;
 }
+
 p {
     margin-top: 1.15em;
     margin-bottom: 1.15em;
 }
-strong, b {
+
+strong,
+b {
     @include typo-weight;
 }
+
 h2,
 .accordion__item__header {
     margin-top: 40px;
 }
+
+ul li,
+ol li {
+    p {
+        margin: 0;
+    }
+}
+
 .accordion__item__header {
     margin-bottom: 1em;
     font-size: nth($h-m-size, 2);
     @include typo-weight;
+
     @media screen and (min-width: 1024px) {
         font-size: nth($h-size, 2);
     }
+
     .icon-plus {
         display: none;
     }
 }
+
 a {
     min-width: auto;
     padding: 0;
@@ -34,24 +49,30 @@ a {
     text-decoration: underline;
     border: 0;
     cursor: pointer;
+
     &:hover {
         color: $primary;
     }
 }
+
 blockquote {
     position: relative;
     width: 300px;
     padding: 2px 0;
     margin: 40px auto;
+
     @media screen and (min-width: 1024px) {
         width: 500px;
     }
+
     p {
         font-weight: 600;
+
         @media screen and (min-width: 1024px) {
             font-weight: 500;
         }
     }
+
     &::before,
     &::after {
         position: absolute;
@@ -62,17 +83,26 @@ blockquote {
         @include beforeafter("", block);
         background-color: $primary;
     }
+
     &::before {
         top: 0;
     }
+
     &::after {
         bottom: 0;
     }
 }
+
 // 小辭典
+
+p:has(.more__input) {
+    // background-color: blue;
+}
+
 .more {
     display: inline;
 }
+
 .more__btn {
     position: relative;
     display: inline-flex;
@@ -95,49 +125,64 @@ blockquote {
         border-bottom-color: $primary-variant;
     }
 }
+
 .more__input {
     width: 1px;
     height: 1px;
     opacity: 0;
     border: 0;
 
-    &:checked + .more__btn + .more__text {
+    &:checked+.more__btn+.more__text {
         display: block;
     }
 }
+
 .more__text {
     display: none;
     width: 100%;
     margin: 10px 0;
     padding: 20px 40px;
     background-color: $gray-100;
+
     &.active {
         display: block;
     }
 }
+
+
+// ::todo 待確認content文末box 內圖片lazyload樣式
 .lazyload__group {
-    margin-top: 40px;
-    + .source {
-        @media screen and (min-width: 1024px) {
-            margin-bottom: 40px;
-        }
-    }
+    background: transparent;
 }
+
 .article__profile {
     margin-top: 40px;
     margin-bottom: 40px;
     border-top: 1px solid $gray-200;
     border-bottom: 1px solid $gray-200;
-    h3, ol, ul, p {
+
+    h3,
+    ol,
+    ul,
+    p {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    ul li,
+    ol li {
+        p {
+            margin: 0;
+        }
+    }
 }
+
 table {
     position: relative;
     font-size: 1.125em;
     line-height: 1.5;
     border-width: 0;
+
     &::before {
         @include beforeafter(url(../images/common/logo.svg), block);
         position: absolute;
@@ -146,71 +191,101 @@ table {
         margin-top: 5px;
         width: 90px;
     }
-    th, td {
+
+    th,
+    td {
         padding: 5px;
         border: solid $gray-200;
     }
+
     th {
         font-weight: 600;
         background-color: $gray-100;
         border-width: 1px;
+
         @media screen and (min-width: 1024px) {
             font-weight: 500;
         }
     }
+
     td {
         border-width: 1px;
     }
+
     thead {
         th {
             border-width: 1px 1px 0;
         }
     }
+
+    p {
+        margin: 0;
+    }
 }
-> .article__table {
+
+>.article__table {
     width: 100%;
     margin-top: 1.15em;
     margin-bottom: 1.15em;
     padding-bottom: 45px;
+
+    /* 表格大小標題  */
+    h3,
+    p {
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
     &:not(.article__table--noscroll) {
         &:not(.article__table--flexible) {
             overflow: auto hidden;
-            > table {
+
+            >table {
                 @media screen and (min-width: 1024px) {
                     width: 100% !important;
                 }
+
                 @media screen and (max-width: 1023px) {
                     min-width: 120%;
                 }
             }
         }
     }
+
     &.article__table--noscroll,
     &.article__table--flexible {
         .article__table {
-            > table {
+            >table {
                 margin-left: auto;
                 margin-right: auto;
             }
         }
     }
+
     &.article__table--noscroll {
         overflow: hidden;
+
         .article__table {
-            > table {
+            >table {
                 width: calc(100% - 1px) !important;
             }
         }
     }
+
     &.article__table--flexible {
         @media screen and (max-width: 1023px) {
             overflow: auto;
         }
+
         .article__table {
-            > table {
+            >table {
                 @media screen and (min-width: 1024px) {
                     width: 100% !important;
                 }
+
                 @media screen and (max-width: 1023px) {
                     width: calc(100% - 1px);
                 }
@@ -218,7 +293,8 @@ table {
         }
     }
 }
-> table {
+
+>table {
     width: 100% !important;
     margin-top: 1.15em;
     margin-bottom: calc(1.15em + 40px);

@@ -230,12 +230,12 @@ table {
     padding-bottom: 45px;
 
     /* 表格大小標題  */
-    h3,
-    p {
+    >h3,
+    >p {
         text-align: center;
     }
 
-    p {
+    >p {
         margin-bottom: 0;
     }
 
@@ -291,6 +291,19 @@ table {
                 }
             }
         }
+    }
+
+    .article__table {
+        td {
+            p {
+                text-align: initial;
+            }
+
+            .source:not(:first-child) {
+                padding-top: 0px;
+            }
+        }
+
     }
 }
 

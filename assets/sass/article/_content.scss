@@ -293,17 +293,14 @@ table {
         }
     }
 
-    .article__table {
-        td {
-            p {
-                text-align: initial;
-            }
-
-            .source:not(:first-child) {
-                padding-top: 0px;
-            }
+    table td {
+        p {
+            text-align: initial;
         }
 
+        .source:not(:first-child) {
+            padding-top: 0px;
+        }
     }
 }
 

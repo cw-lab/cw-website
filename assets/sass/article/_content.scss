@@ -223,11 +223,11 @@ table {
     }
 }
 
->.article__table {
+.article__table {
+    position: relative;
     width: 100%;
     margin-top: 1.15em;
     margin-bottom: 1.15em;
-    padding-bottom: 45px;
 
     /* 表格大小標題  */
     >h3,
@@ -293,6 +293,14 @@ table {
         }
     }
 
+    .article__table {
+        margin: 0;
+
+        table {
+            margin-top: 0;
+        }
+    }
+
     table td {
         p {
             text-align: initial;
@@ -305,8 +313,8 @@ table {
     }
 }
 
->table {
+table {
     width: 100% !important;
     margin-top: 1.15em;
-    margin-bottom: calc(1.15em + 40px);
+    margin-bottom: 40px;
 }

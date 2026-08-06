@@ -1166,25 +1166,110 @@
                         </span>
                         <span class="source">外國旅客Mike正為平安符過火，體驗台灣傳統寺廟文化。圖片來源：shutterstock</span>
                     </div>
-                    <div class="article__provideViews mt30 mb0 mobile">
-                        <ul class="article__provide">
-                            <li class="function__save"><span><i class="icon icon-bookmark-outlined" gtm-name="function"
-                                        eventaction="article_save"></i></span></li>
-                            <li class="function__save2"><span><i class="icon icon-bookmark-outlined" gtm-name="function"
-                                        eventaction="article_save"></i></span></li>
-                            <li class="function__scale"><span><i class="icon icon-fontsize" gtm-name="function"
-                                        eventaction="article_text_zoom"></i></span></li>
-                            <li class="function__download gtmEvent" id="pdf_download" gtm-name="pdf_download"><span><i
-                                        class="icon icon-download"></i></span></li>
-                            <li class="function__paid gtmEvent" id="pay_read" gtm-name="pay_point"><span><i
-                                        class="icon icon-coin"></i></span></li>
-                            <li class="tooltips tooltips--right function__link function--new" data-tooltips="訂閱電子報">
-                                <span><i class="icon icon-mailing"></i></span>
-                            </li>
-                        </ul>
-                        <div class="article__views text-center">
-                            <span class="h2 my0">12345</span>瀏覽數
+                     <div class="article__provideViews my20 mobile">
+                        <div class="article__provide">
+                            <ul>
+                                <li class="function__save mobile" data-id="5142310" data-status="false" data-tooltips="收藏文章">
+                                    <a aria-label="save-article">
+                                        <i class="icon icon-bookmark-outlined" gtm-name="function" eventaction="article_save"></i>
+                                    </a>
+                                </li>
+                                <li class="function__scale">
+                                    <a aria-label="font-scale">
+                                        <i class="icon icon-fontsize" gtm-name="function" eventaction="article_text_zoom"></i>
+                                    </a>
+                                </li>
+                                <li class="function__share">
+                                    <a aria-label="article-share" gtm-name="function" eventaction="article_share" onclick="
+                                            navigator.share({
+                                                title: '日圓大漲，這次干預不一樣　接下來會漲到哪？',
+                                                text: '美國、日本政府罕見聯合出手干預走勢疲軟的日圓，引發市場關注。分析師指出，出手原因是擔心美國公債市場以及日本金融系統的穩定性。',
+                                                url: 'https://www.cw.com.tw/article/5142310?utm_campaign=share_icon&amp;utm_medium=share&amp;utm_source=web_cw',
+                                            });
+                                        ">
+                                        <i class="icon icon-forward"></i>
+                                    </a>
+                                </li>
+                                <li class="tooltips tooltips--right tooltips--gift mobile" data-tooltips="禮物文章">
+                                    <a aria-label="share-by-facebook" class="gift--main function__gift">
+                        <i class="icon icon-gift"></i>
+                    </a>
+
+
+                    <div class="gift--login" style="display: none;">
+                        <div class="gift--lightbox _side">
+                            <div class="gift--title">訂戶獨享：送好文給好友</div>
+                            <p>登入/註冊會員，即可贈送文章給朋友。</p>
+                            <div class="btn__con">
+                                <a class="btn btn--outlined btn--small" target="_blank" href="https://www.cw.com.tw/member/help/faq?main=3&amp;sub=41#mutqmu7">
+                                    瞭解更多
+                                </a>
+                                <a class="btn btn--contained btn--small" target="_blank" href="https://www.cw.com.tw/member/login">
+                                    登入/註冊
+                                </a>
+                            </div>
                         </div>
+                    </div>
+
+
+                    <div class="gift--enough" style="display: none;">
+                        <div class="gift--lightbox _side">
+                            <div class="gift--title">訂戶獨享：送好文給好友</div>
+                            <p>您本月還可贈送 <remain class="remain_point">5</remain> 篇文章給朋友，在時效內，任何人都可免費閱讀您贈送的禮物文章。</p>
+                            <a href="https://www.cw.com.tw/member/help/faq?main=3&amp;sub=41#mutqmu7" target="_blank">瞭解更多</a>
+                            <div class="btn__con social">
+                                <a class="gift-icon-mail" href="javascript:;" onclick="getGiftUrl('5142310','mail')" target="_blank">
+                                    <i class="icon icon-mail" gtm-name="function" eventaction="article_gift_share" data-share-type="mail" eventlabel="mail"></i>
+                                </a>
+                                <a class="gift-icon-line" href="javascript:;" onclick="getGiftUrl('5142310','line')" target="_blank">
+                                    <i class="icon icon-line" gtm-name="function" eventaction="article_gift_share" data-share-type="line" eventlabel="line"></i>
+                                </a>
+                                <div class="gift-icon-link" data-href="" onclick="getGiftUrl('5142310', 'copylink')">
+                                    <i class="icon icon-link" gtm-name="function" eventaction="article_gift_share" data-share-type="link" eventlabel="link"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gift--out--of" style="display: none;">
+                        <div class="gift--lightbox _side">
+                            <div class="gift--title">訂戶獨享：送好文給好友</div>
+                            <p>您本月的禮物文章已贈送完畢。</p>
+                            <div class="btn__con">
+                                <a class="btn btn--outlined btn--small" target="_blank" href="https://www.cw.com.tw/member/help/faq?main=3&amp;sub=41#mutqmu7">
+                                    瞭解更多
+                                </a>
+                                <div class="btn btn--contained btn--small gift--close">
+                                    我知道了
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gift--purchase" style="display: none;">
+                        <div class="gift--lightbox _side">
+                            <div class="gift--title iconless">成為訂戶<br>贈送禮物文章</div>
+                            <p>全閱讀訂戶每月可贈送5篇文章給朋友，任何人都可免費閱讀文章。</p>
+                            <div class="btn__con">
+                                <a class="btn btn--outlined btn--small" target="_blank" href="https://www.cw.com.tw/member/help/faq?main=3&amp;sub=41#mutqmu7">
+                                    瞭解更多
+                                </a>
+                                <a class="btn btn--contained btn--small" target="_blank" href="https://www.cw.com.tw/payment">
+                                    立即訂閱
+                                </a>
+                            </div>
+                            <i class="icon icon-cancel gift--close"></i>
+                        </div>
+                    </div>
+                                </li>
+                                        </ul>
+                        </div>
+                         <div class="prefer__btn mobile mt10">
+                            <a href="https://www.google.com/preferences/source?q=cw.com.tw" target="_blank"><i class="icon_google"></i>加入Google偏好來源</a>
+                        </div>
+                        <time class="pt10 pr20">瀏覽數：5224</time>
                     </div>
                 </div>
             </div>
@@ -1251,9 +1336,15 @@
                             <a class="btn--text" href="#!" target="_blank">天下雜誌689期</a>
                         </li>
                     </ul>
-                    <time class="mt5">2019-09-12</time>
-                    <div class="article__views text-center desktop">
-                        <span class="h2 my0">12345</span>瀏覽數
+                    <div class="pt10">
+                        <time class="pr20">
+                            發布時間：2026-08-03
+                        </time>
+                    </div>
+                    <time class="pt10 pr20">瀏覽數：5224</time>
+                    <div class="prefer__btn desktop">
+                        <a href="https://www.google.com/preferences/source?q=cw.com.tw" target="_blank"><i class="icon_google"></i>加入Google偏好來源</a>
+                        <span class="tooltips">在Google搜尋優先看到天下</span>
                     </div>
                 </div>
                 <div class="article__content py20">

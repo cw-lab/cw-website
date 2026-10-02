@@ -3,11 +3,11 @@
   font-size: 0;
 
   @media screen and (min-width: 1024px) {
-    padding-right: 90px;
+    padding-right: 200px;
   }
 
   & > ul {
-    display: inline-block;
+    display: inline;
     @include list(0, 0, none);
 
     li {
